@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016-11-02 10:18:23.778.pas,C:\Users\Chen\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\Unit1.pas</Transaction>
+    <Transaction>2016-11-02 10:18:23.778.dfm,C:\Users\Chen\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Chen\Desktop\新建文件夹 (3)\Unit1.dfm</Transaction>
+    <Transaction>2016-11-02 10:18:26.643.bdsproj,C:\Users\Chen\Documents\RAD Studio\Projects\Project1.bdsproj=C:\Users\Chen\Desktop\新建文件夹 (3)\Project1.bdsproj</Transaction>
+    <Transaction>2016-11-03 19:28:17.989.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wzhelper.pas</Transaction>
+    <Transaction>2016-11-04 11:07:12.535.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wzRecord.pas</Transaction>
+    <Transaction>2016-11-04 13:05:14.237.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wzReader.pas</Transaction>
+    <Transaction>2016-11-04 13:08:13.047.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wzStringCrypto.pas</Transaction>
+    <Transaction>2016-11-04 13:20:34.027.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\MapleContentItem.pas</Transaction>
+    <Transaction>2016-11-04 13:22:16.286.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\MapleContentItem.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wzMapleContentItem.pas</Transaction>
+    <Transaction>2016-11-04 13:26:53.388.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wzFile.pas</Transaction>
+    <Transaction>2016-11-05 14:59:29.938.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit3.pas=C:\Users\Chen\Desktop\新建文件夹 (3)\wideStrList.pas</Transaction>
+    <Transaction>2016-11-05 16:27:31.685.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\wzFile.pas=</Transaction>
+    <Transaction>2016-11-05 16:27:31.686.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\wzRecord.pas=</Transaction>
+    <Transaction>2016-11-05 16:28:07.597.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\wzMapleContentItem.pas=</Transaction>
+    <Transaction>2016-11-05 16:28:17.766.pas,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.pas=</Transaction>
+    <Transaction>2016-11-05 16:28:17.766.dfm,C:\Users\Chen\Desktop\新建文件夹 (3)\Unit2.dfm=</Transaction>
+    <Transaction>2016-11-05 17:22:24.467.pas,C:\Users\Chen\Desktop\WzExporter\Unit2.pas=C:\Users\Chen\Desktop\WzExporter\wzImageReader.pas</Transaction>
+    <Transaction>2016-11-07 01:04:04.690.pas,C:\Users\Chen\Desktop\WzExporter\Unit2.pas=C:\Users\Chen\Desktop\WzExporter\wzConst.pas</Transaction>
+  </Transactions>
+</BorlandProject>

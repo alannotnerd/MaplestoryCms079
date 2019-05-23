@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: slf4j-api.jar mina-core.jar rhino-js-engine-1.7.7.1.jar rh
+ ino-1.7.7.1.jar slf4j-jdk14.jar mysql-connector-java-bin.jar
+Main-Class: net.sf.cherry.server.Start
+

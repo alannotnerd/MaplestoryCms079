@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{EAAA2ED1-00B5-42B7-A1E5-EC7A94C59957}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>laboratory</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="libwz.net" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="angelic_burster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="animation_host.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archive_host.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="batch.cs" />
+    <Compile Include="FMOD\ADVANCEDSETTINGS.cs" />
+    <Compile Include="FMOD\ASYNCREADINFO.cs" />
+    <Compile Include="FMOD\CAPS.cs" />
+    <Compile Include="FMOD\CB_3D_ROLLOFFCALLBACK.cs" />
+    <Compile Include="FMOD\CDTOC.cs" />
+    <Compile Include="FMOD\Channel.cs" />
+    <Compile Include="FMOD\ChannelGroup.cs" />
+    <Compile Include="FMOD\CHANNELINDEX.cs" />
+    <Compile Include="FMOD\CHANNEL_CALLBACK.cs" />
+    <Compile Include="FMOD\CHANNEL_CALLBACKTYPE.cs" />
+    <Compile Include="FMOD\CREATESOUNDEXINFO.cs" />
+    <Compile Include="FMOD\DEBUGLEVEL.cs" />
+    <Compile Include="FMOD\DELAYTYPE.cs" />
+    <Compile Include="FMOD\DELAYTYPE_UTILITY.cs" />
+    <Compile Include="FMOD\DSP.cs" />
+    <Compile Include="FMOD\DSPConnection.cs" />
+    <Compile Include="FMOD\DSP_CHORUS.cs" />
+    <Compile Include="FMOD\DSP_COMPRESSOR.cs" />
+    <Compile Include="FMOD\DSP_CREATECALLBACK.cs" />
+    <Compile Include="FMOD\DSP_DELAY.cs" />
+    <Compile Include="FMOD\DSP_DESCRIPTION.cs" />
+    <Compile Include="FMOD\DSP_DIALOGCALLBACK.cs" />
+    <Compile Include="FMOD\DSP_DISTORTION.cs" />
+    <Compile Include="FMOD\DSP_ECHO.cs" />
+    <Compile Include="FMOD\DSP_FFT_WINDOW.cs" />
+    <Compile Include="FMOD\DSP_FLANGE.cs" />
+    <Compile Include="FMOD\DSP_GETPARAMCALLBACK.cs" />
+    <Compile Include="FMOD\DSP_HIGHPASS.cs" />
+    <Compile Include="FMOD\DSP_ITECHO.cs" />
+    <Compile Include="FMOD\DSP_ITLOWPASS.cs" />
+    <Compile Include="FMOD\DSP_LOWPASS.cs" />
+    <Compile Include="FMOD\DSP_LOWPASS_SIMPLE.cs" />
+    <Compile Include="FMOD\DSP_NORMALIZE.cs" />
+    <Compile Include="FMOD\DSP_OSCILLATOR.cs" />
+    <Compile Include="FMOD\DSP_PARAMEQ.cs" />
+    <Compile Include="FMOD\DSP_PARAMETERDESC.cs" />
+    <Compile Include="FMOD\DSP_PITCHSHIFT.cs" />
+    <Compile Include="FMOD\DSP_READCALLBACK.cs" />
+    <Compile Include="FMOD\DSP_RELEASECALLBACK.cs" />
+    <Compile Include="FMOD\DSP_RESAMPLER.cs" />
+    <Compile Include="FMOD\DSP_RESETCALLBACK.cs" />
+    <Compile Include="FMOD\DSP_SETPARAMCALLBACK.cs" />
+    <Compile Include="FMOD\DSP_SETPOSITIONCALLBACK.cs" />
+    <Compile Include="FMOD\DSP_SFXREVERB.cs" />
+    <Compile Include="FMOD\DSP_STATE.cs" />
+    <Compile Include="FMOD\DSP_TREMOLO.cs" />
+    <Compile Include="FMOD\DSP_TYPE.cs" />
+    <Compile Include="FMOD\Error.cs" />
+    <Compile Include="FMOD\EVENT_MEMBITS.cs" />
+    <Compile Include="FMOD\Factory.cs" />
+    <Compile Include="FMOD\FILE_ASYNCCANCELCALLBACK.cs" />
+    <Compile Include="FMOD\FILE_ASYNCREADCALLBACK.cs" />
+    <Compile Include="FMOD\FILE_CLOSECALLBACK.cs" />
+    <Compile Include="FMOD\FILE_OPENCALLBACK.cs" />
+    <Compile Include="FMOD\FILE_READCALLBACK.cs" />
+    <Compile Include="FMOD\FILE_SEEKCALLBACK.cs" />
+    <Compile Include="FMOD\Geometry.cs" />
+    <Compile Include="FMOD\GUID.cs" />
+    <Compile Include="FMOD\INITFLAGS.cs" />
+    <Compile Include="FMOD\MEMBITS.cs" />
+    <Compile Include="FMOD\Memory.cs" />
+    <Compile Include="FMOD\MEMORY_TYPE.cs" />
+    <Compile Include="FMOD\MEMORY_USAGE_DETAILS.cs" />
+    <Compile Include="FMOD\MODE.cs" />
+    <Compile Include="FMOD\OPENSTATE.cs" />
+    <Compile Include="FMOD\OUTPUTTYPE.cs" />
+    <Compile Include="FMOD\PLUGINTYPE.cs" />
+    <Compile Include="FMOD\PRESET.cs" />
+    <Compile Include="FMOD\RESULT.cs" />
+    <Compile Include="FMOD\Reverb.cs" />
+    <Compile Include="FMOD\REVERB_CHANNELFLAGS.cs" />
+    <Compile Include="FMOD\REVERB_CHANNELPROPERTIES.cs" />
+    <Compile Include="FMOD\REVERB_FLAGS.cs" />
+    <Compile Include="FMOD\REVERB_PROPERTIES.cs" />
+    <Compile Include="FMOD\Sound.cs" />
+    <Compile Include="FMOD\SoundGroup.cs" />
+    <Compile Include="FMOD\SOUNDGROUP_BEHAVIOR.cs" />
+    <Compile Include="FMOD\SOUND_FORMAT.cs" />
+    <Compile Include="FMOD\SOUND_NONBLOCKCALLBACK.cs" />
+    <Compile Include="FMOD\SOUND_PCMREADCALLBACK.cs" />
+    <Compile Include="FMOD\SOUND_PCMSETPOSCALLBACK.cs" />
+    <Compile Include="FMOD\SOUND_TYPE.cs" />
+    <Compile Include="FMOD\SPEAKER.cs" />
+    <Compile Include="FMOD\SPEAKERMAPTYPE.cs" />
+    <Compile Include="FMOD\SPEAKERMODE.cs" />
+    <Compile Include="FMOD\System.cs" />
+    <Compile Include="FMOD\SYSTEM_CALLBACK.cs" />
+    <Compile Include="FMOD\SYSTEM_CALLBACKTYPE.cs" />
+    <Compile Include="FMOD\TAG.cs" />
+    <Compile Include="FMOD\TAGDATATYPE.cs" />
+    <Compile Include="FMOD\TAGTYPE.cs" />
+    <Compile Include="FMOD\TIMEUNIT.cs" />
+    <Compile Include="FMOD\VECTOR.cs" />
+    <Compile Include="FMOD\VERSION.cs" />
+    <Compile Include="gif_encoder.cs" />
+    <Compile Include="laboratory_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laboratory_child_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laboratory_component_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laboratory_host.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laboratory_language.cs" />
+    <Compile Include="laboratory_settings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="laboratory_host.resources" />
+    <EmbeddedResource Include="settings.resx">
+      <DependentUpon>settings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
