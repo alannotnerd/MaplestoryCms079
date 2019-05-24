@@ -25,7 +25,7 @@
             <vector name="origin" x="25" y="85"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
     <imgdir name="smile">
         <canvas name="0" width="50" height="85">
@@ -40,6 +40,6 @@
             <vector name="origin" x="25" y="85"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
 </imgdir>

@@ -1,24 +1,3 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /* 	Noel
 	Singapore Random Face Changer
 	Credits to aaron and cody
@@ -31,46 +10,39 @@ var fface = Array(21001, 21002, 21003, 21004, 21005, 21006, 21008, 21012, 21014,
 var facenew = Array();
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    status = -1;
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 0 && status == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendSimple("If you use this regular coupon, your face may transform into a random new look...do you still want to do it using #b#t5152037##k, I will do it anyways for you. But don't forget, it will be random!\r\n\#L0##bOK!#k#l");
-		} else if (status == 1) {
-			facenew = Array();
-			if (cm.getPlayer().getGender() == 0) {
-				for (var i = 0; i < mface.length; i++) {
-					facenew.push(mface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
-				}
-			}
-			if (cm.getPlayer().getGender() == 1) {
-				for(var i = 0; i < fface.length; i++) {
-					facenew.push(fface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
-				}
-			}
-			cm.sendYesNo("If you use the regular coupon, your face may transform into a random new look...do you still want to do it using #b#t5152037##k?");
-		} else if (status == 2){	
-			cm.dispose();
-			if (cm.haveItem(5152037) == true){
-				cm.gainItem(5152037 , -1);
-				cm.setFace(facenew[Math.floor(Math.random() * facenew.length)]);
-				cm.sendOk("Enjoy your new and improved face!");
-			} else {
-				cm.sendOk("Hmm ... it looks like you don't have the coupon specifically for this place. Sorry to say this, but without the coupon, there's no plastic surgery for you...");
-			}
-		}
+    if (mode == 0 && status == 0) {
+	cm.dispose();
+	return;
+    }
+    if (mode == 1)
+	status++;
+    else
+	status--;
+    if (status == 0) {
+	cm.sendSimple("使用#b#t5152037##k的话，你只能随机更换脸型喔...你想要使用 #b#t5152037##k来整形嘛？ 不过别忘记喔，这是是随机的\r\n\#L2#来吧！！#l");
+    } else if (selection == 2) {
+	facenew = Array();
+	if (cm.getChar().getGender() == 0) {
+	    for(var i = 0; i < mface.length; i++) {
+		facenew.push(mface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+	    }
 	}
-}
+	if (cm.getChar().getGender() == 1) {
+	    for(var i = 0; i < fface.length; i++) {
+		facenew.push(fface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+	    }
+	}
+	cm.sendYesNo("如果使用一般的会员卡，你只能随机更换脸型，请问你还是想要使用 #b#t5152037##k 来更换脸型嘛？");
+    } else if (status == 2) {
+	if (cm.setAvatar(5152037, facenew[Math.floor(Math.random() * facenew.length)]) == 1){
+	    cm.sendOk("享受你新的造型吧！");
+	} else {
+	    cm.sendOk("嗯 ... 你好像没有这里的整形会员卡欸？很抱歉，如果你没有会员卡，我不能够为你服务喔！");
+	}
+    }
+}	

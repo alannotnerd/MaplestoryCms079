@@ -805,7 +805,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../1/default"/>
+            <uol name="../1/default" value="../1/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -830,7 +830,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="default" value="../../proneStab/0/default"/>
+            <uol name="../../proneStab/0/default" value="../../proneStab/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">

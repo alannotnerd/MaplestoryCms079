@@ -1,57 +1,29 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /**
--- Odin JavaScript --------------------------------------------------------------------------------
 	Orbis Magic Spot - Orbis Tower <1st Floor>(200082100)
--- By ---------------------------------------------------------------------------------------------
-	Unknown
--- Version Info -----------------------------------------------------------------------------------
-	1.1 - Official Text and Method [Information]
-	1.0 - First Version by Unknown
----------------------------------------------------------------------------------------------------
 **/
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    status = -1;
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == 0) {
-		cm.dispose();
-		return;
+    if (mode == 0) {
+	cm.dispose();
+	return;
+    }
+    status++;
+    if (status == 0) {
+	if(cm.haveItem(4001019)) {
+	    cm.sendYesNo("Äã¿ÉÒÔÊ¹ÓÃ #b#t4001019#k ¼¤»î #b#p2012014##k. ÊÇ·ñÏë´«ËÍµ½ #b#p2012015##k £¿£¿");
+	} else {
+	    cm.sendOk("Õâ¸öÄ§·¨Ê¯¿ÉÒÔ°ïÄã¿ìËÙµ½±ùÔ­Ñ©Óò¡£");
+	    cm.dispose();
 	}
-	status++;
-	if (status == 0) {
-		if(cm.haveItem(4001019)) {
-			cm.sendYesNo("ä½¿ç”¨ #b#t4001019# å¯åŠ¨ #b#p2012014##k.ä½ å°†ä¼šè¢«å¿«é€Ÿçš„ä¼ é€åˆ° #b#p2012015##k æ—ï¼Œæ˜¯å¦ä½¿ç”¨ï¼Ÿ");
-		} else {
-			cm.sendOk("æ‹¥æœ‰ç¥æ°”åŠ›é‡çš„ #b#p2012014##k ä¼šå°†ä½ å¿«é€Ÿçš„ä¼ é€åˆ° #b#p2012015##k æ—ï¼Œä½†æ˜¯æ²¡æœ‰å·è½´ç›®å‰æ— æ³•å¯åŠ¨é­”æ³•çŸ³ã€‚");
-			cm.dispose();
-		}
-	}
-	if (status == 1) {
-			cm.gainItem(4001019, -1);
-			cm.warp(200082100,0);
-			cm.dispose();
-	}
+    }
+    if (status == 1) {
+	cm.gainItem(4001019, -1);
+	cm.warp(200082100,0);
+	cm.dispose();
+    }
 }

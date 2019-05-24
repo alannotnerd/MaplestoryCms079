@@ -5,11 +5,6 @@
 */
 
 function start(){
-	if (cm.isQuestActive(3335)) {
-	    cm.sendNext("Quest complete.");
-	    cm.forceCompleteQuest(3335);
-	} else {
-	    cm.sendNext("I want to be a human, a human being with a warm heart...so that maybe I can hold her hand. Unfortunately, that's not possible right now.");
-	}
+	cm.sendNext("我想是一个人，一个人有着温暖的心脏......这样也许我可以牵她的手。不幸的是，现在这是不可能的.");
 	cm.dispose();
-}
+	}

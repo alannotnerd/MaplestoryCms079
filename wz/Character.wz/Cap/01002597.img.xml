@@ -729,7 +729,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../1/default"/>
+            <uol name="../1/default" value="../1/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -799,7 +799,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../1/default"/>
+            <uol name="../1/default" value="../1/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -824,12 +824,12 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="default" value="../../proneStab/0/default"/>
+            <uol name="../../proneStab/0/default" value="../../proneStab/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="37" height="32">
@@ -841,7 +841,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../1/default"/>
+            <uol name="../1/default" value="../1/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

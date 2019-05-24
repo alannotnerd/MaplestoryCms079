@@ -118,8 +118,8 @@
             <int name="z" value="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="8" value="0"/>
-        <uol name="9" value="7"/>
+        <uol name="0" value="0"/>
+        <uol name="7" value="7"/>
         <canvas name="10" width="60" height="77">
             <vector name="origin" x="30" y="77"/>
             <int name="z" value="0"/>

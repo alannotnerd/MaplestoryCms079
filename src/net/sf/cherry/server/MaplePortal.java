@@ -1,35 +1,34 @@
 package net.sf.cherry.server;
 
-import java.awt.Point;
-
 import net.sf.cherry.client.MapleClient;
 
-public abstract interface MaplePortal
-{
-  public static final int MAP_PORTAL = 2;
-  public static final int DOOR_PORTAL = 6;
-  public static final boolean OPEN = true;
-  public static final boolean CLOSE = false;
+import java.awt.*;
 
-  public abstract int getType();
+public interface MaplePortal {
+  int MAP_PORTAL = 2;
+  int DOOR_PORTAL = 6;
+  boolean OPEN = true;
+  boolean CLOSE = false;
 
-  public abstract int getId();
+  int getType();
 
-  public abstract Point getPosition();
+  int getId();
 
-  public abstract String getName();
+  Point getPosition();
 
-  public abstract String getTarget();
+  String getName();
 
-  public abstract String getScriptName();
+  String getTarget();
 
-  public abstract void setScriptName(String paramString);
+  String getScriptName();
 
-  public abstract int getTargetMapId();
+  void setScriptName(String paramString);
 
-  public abstract void enterPortal(MapleClient paramMapleClient);
+  int getTargetMapId();
 
-  public abstract void setPortalState(boolean paramBoolean);
+  void enterPortal(MapleClient paramMapleClient);
 
-  public abstract boolean getPortalState();
+  boolean getPortalState();
+
+  void setPortalState(boolean paramBoolean);
 }

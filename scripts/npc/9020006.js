@@ -9,7 +9,7 @@ function action(mode, type, selection) {
 				}
 				cm.gainExp_PQ(200, 1.5);
 				cm.gainItem(4001534, 1);
-				cm.gainNX(2000);
+				//cm.gainNX(2000);
 				cm.warp(921160000,0);
 				cm.dispose();
 			} else {

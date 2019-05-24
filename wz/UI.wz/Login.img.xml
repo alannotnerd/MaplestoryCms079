@@ -7387,11 +7387,11 @@
                     <int name="z" value="0"/>
                     <string name="delay" value="50"/>
                 </canvas>
-                <uol name="1" value="../keyFocused/0"/>
-                <uol name="2" value="../keyFocused/0"/>
-                <uol name="3" value="../keyFocused/0"/>
-                <uol name="4" value="../keyFocused/0"/>
-                <uol name="5" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="BtNew">
@@ -7425,11 +7425,11 @@
                     <int name="z" value="0"/>
                     <string name="delay" value="50"/>
                 </canvas>
-                <uol name="1" value="../keyFocused/0"/>
-                <uol name="2" value="../keyFocused/0"/>
-                <uol name="3" value="../keyFocused/0"/>
-                <uol name="4" value="../keyFocused/0"/>
-                <uol name="5" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="BtDelete">
@@ -7463,11 +7463,11 @@
                     <int name="z" value="0"/>
                     <string name="delay" value="50"/>
                 </canvas>
-                <uol name="1" value="../keyFocused/0"/>
-                <uol name="2" value="../keyFocused/0"/>
-                <uol name="3" value="../keyFocused/0"/>
-                <uol name="4" value="../keyFocused/0"/>
-                <uol name="5" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
+                <uol name="../keyFocused/0" value="../keyFocused/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="icon">

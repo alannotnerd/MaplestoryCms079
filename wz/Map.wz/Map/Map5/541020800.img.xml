@@ -37,7 +37,7 @@
             <string name="id" value="5411001"/>
             <int name="x" value="-176"/>
             <int name="y" value="-218"/>
-            <int name="reactorTime" value="900"/>
+            <int name="reactorTime" value="0"/>
             <int name="f" value="0"/>
             <string name="name" value="boss"/>
         </imgdir>

@@ -12,22 +12,22 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNext("……现在你的能力是什么程度，我大概了解了……呵呵……没想到我这把老骨头还能有今天……真是感动得要流眼泪……不，是鼻涕……");
+	qm.sendNext("�����������������ʲô�̶ȣ��Ҵ���˽��ˡ����Ǻǡ���û�뵽������Ϲ�ͷ�����н��졭�����Ǹж���Ҫ�����ᡭ�������Ǳ��顭��");
     } else if (status == 1) {
-	qm.sendNextPrev("#b(……也没怎么修炼嘛……)#k", 2);
+	qm.sendNextPrevS("#b(����Ҳû��ô�������)#k", 2);
     } else if (status == 2) {
-	qm.sendNextPrev("好，现在让我们开始第3阶段的最后一阶段的锻炼。这次修炼的对象是……#r#o9300343##k！猪猪！你了解他们吗？");
+	qm.sendNextPrev("�ã����������ǿ�ʼ��3�׶ε����һ�׶εĶ�������������Ķ����ǡ���#r#o9300343##k�����������˽�������");
     } else if (status == 3) {
-	qm.sendNextPrev("一点点……", 2);
+	qm.sendNextPrevS("һ��㡭��", 2);
     } else if (status == 4) {
-	qm.sendNextPrev("他们是天生的战士！从出生的那一刻起，对食物就充满了无穷的愤怒，凡是他们经过的地方都不会留下任何食物。很可怕吧？");
+	qm.sendNextPrev("������������սʿ���ӳ�������һ���𣬶�ʳ��ͳ���������ķ�ŭ���������Ǿ����ĵط������������κ�ʳ��ܿ��°ɣ�");
     } else if (status == 5) {
-	qm.sendNextPrev("#b(他不是在开玩笑吧？)#k", 2);
+	qm.sendNextPrevS("#b(�������ڿ���Ц�ɣ�)#k", 2);
     } else if (status == 6) {
-	qm.sendAcceptDecline("来，快点#b再次进入修炼场#k，去和那些天生的战士们修炼用的猪中战斗吧，打倒#r30只#k后，你的能力将会有一个质的飞跃。全力以赴地去战斗吧！超越我这个老师！");
+	qm.askAcceptDecline("�������#b�ٴν���������#k��ȥ����Щ������սʿ�������õ�����ս���ɣ���#r30ֻ#k���������������һ���ʵķ�Ծ��ȫ���Ը���ȥս���ɣ���Խ�������ʦ��");
     } else if (status == 7) {
 	qm.forceStartQuest();
-	qm.sendOk("快走吧！去打倒那些#o9300343#！");
+	qm.sendOk("���߰ɣ�ȥ����Щ#o9300343#��");
 	qm.dispose();
     }
 }
@@ -44,21 +44,21 @@ function end(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNext("这么快就打倒了30只#o9300343#……我这老头子果然没有看错。虽然你失去了曾经的记忆，失去了曾经的能力，但你仍然是个英雄！只要手上的长矛还在！");
+	qm.sendNext("��ô��ʹ���30ֻ#o9300343#����������ͷ�ӹ�Ȼû�п�������Ȼ��ʧȥ�������ļ��䣬ʧȥ��������������������Ȼ�Ǹ�Ӣ�ۣ�ֻҪ���ϵĳ�ì���ڣ�");
     } else if (status == 1) {
-	qm.sendNextPrev("#b(这么说是为了安慰我吗？)#k", 2);
+	qm.sendNextPrevS("#b(��ô˵��Ϊ�˰�ο����)#k", 2);
     } else if (status == 2) {
-	qm.sendYesNo("我已经没什么可继续教你的了。你已经超越了我这个老头子。你可以下山了……唉，没什么好忧郁的。我这老头子能够有机会指导你，已经很满足了。");
+	qm.sendYesNo("���Ѿ�ûʲô�ɼ���������ˡ����Ѿ���Խ���������ͷ�ӡ��������ɽ�ˡ�������ûʲô�������ġ�������ͷ���ܹ��л���ָ���㣬�Ѿ��������ˡ�");
     } else if (status == 3) {
 	if (qm.getQuestStatus(21703) == 1) {
-	    qm.completeQuest();
+	    qm.forceCompleteQuest();
 	    qm.teachSkill(21000000, qm.getPlayer().getSkillLevel(21000000), 10);   // Combo Ability Skill
 	    qm.gainExp(2800);
 	}
-	qm.sendNext("我想起了技能#b连击能力#k！ 我还想跟着有点痴呆的老头子训练有没有效果呢，没想到真的有效！)", 2);
+	qm.sendNextS("�������˼���#b��������#k�� �һ�������е�մ�����ͷ��ѵ����û��Ч���أ�û�뵽�����Ч��)", 2);
 	qm.AranTutInstructionalBubble("Effect/BasicEff.img/AranGetSkill");
     } else if (status == 4) {
-	qm.sendPrev("现在你回去找#p1201000#吧。他看到你的进步会很高兴的！");
+	qm.sendPrev("�������ȥ��#p1201000#�ɡ���������Ľ�����ܸ��˵ģ�");
 	qm.dispose();
     }
 }

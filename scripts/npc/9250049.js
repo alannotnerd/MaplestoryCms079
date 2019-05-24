@@ -28,54 +28,51 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendSimple("Welcome to the Floating market hair shop. If you have #bFloating Market Hairstyle Coupon (VIP)#k, allow me to take care of your hairdo. \r\n#L0##bHaircut(VIP coupon)#k#l \r\n#L1##bDye your hair(VIP coupon)#k#l");
+			cm.sendSimple("您好，我是#r #p9250049##k 欢迎来到黄金寺庙的美发厅 如果您有\r\n#b#t5150042##k, 或者 #b#t5151032##k 我就可以免费帮您弄 \r\n#L0##b使用#t5150042##k#l \r\n#L1##b使用#t5151032##k#l");
 		} else if (status == 1) {
 			if (selection == 0) {
 				beauty = 1;
 				hairnew = Array();
 				if (cm.getChar().getGender() == 0) {
 					for(var i = 0; i < mhair.length; i++) {
-						hairnew.push(mhair[i] + parseInt(cm.getChar().getHair()
- % 10));
+						hairnew.push(mhair[i] + parseInt(cm.getChar().getHair() % 10));
 					}
 				}
 				if (cm.getChar().getGender() == 1) {
 					for(var i = 0; i < fhair.length; i++) {
-						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair()
- % 10));
+						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair() % 10));
 					}
 				}
-				cm.sendStyle("I can totally change up your hairstyle and make it look so good. Choose the one to your liking with #bFloating Market Hairstyle Coupon (VIP).#k Why don't you change it up a bit? I'll change it for you. Take your time~", hairnew);
+				cm.sendStyle("选择一个喜欢的", hairnew);
 			} else if (selection == 1) {
 				beauty = 2;
 				haircolor = Array();
-				var current = parseInt(cm.getChar().getHair()
-/10)*10;
+				var current = parseInt(cm.getChar().getHair()/10)*10;
 				for(var i = 0; i < 8; i++) {
 					haircolor.push(current + i);
 				}
-				cm.sendStyle("I can totally change your haircolor and make it look so good. Why don't you change it up a bit? With #bFloating Market Hair Color Coupon (VIP)#k I'll change it for you. Choose the one to your liking.", haircolor);
+				cm.sendStyle("选择一个喜欢的", haircolor);
 			}
-		}
-		else if (status == 2){
+		} else if (status == 2){
 			if (beauty == 1){
-				if (cm.haveItem(5150037) == true){
-					cm.gainItem(5150037, -1);
+				if (cm.haveItem(5150042) == true){
+					cm.gainItem(5150042, -1);
 					cm.setHair(hairnew[selection]);
-					cm.sendOk("Enjoy your new and improved hairstyle!");
+					cm.sendOk("享受！");
 				} else {
-					cm.sendNext("Hmmm...it looks like you don't have our designated coupon. I'm afraid I can't give you a haircut without it. I'm sorry.");
+					cm.sendNext("痾...貌似没有#t5150042#");
 				}
 			}
 			if (beauty == 2){
-				if (cm.haveItem(5151031) == true){
-					cm.gainItem(5151031, -1);
+				if (cm.haveItem(5151032) == true){
+					cm.gainItem(5151032, -1);
 					cm.setHair(haircolor[selection]);
-					cm.sendOk("Enjoy your new and improved haircolor!");
+					cm.sendOk("享受！");
 				} else {
-					cm.sendNext("Hmmm...it looks like you don't have our designated coupon. I'm afraid I can't dye your hair without it. I'm sorry.");
+					cm.sendNext("痾...貌似没有#t5151032#");
 				}
 			}
+			cm.dispose();
 		}
 	}
 }

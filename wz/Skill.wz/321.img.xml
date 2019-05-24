@@ -514,8 +514,8 @@
                         <vector name="lt" x="-32" y="-94"/>
                         <vector name="rb" x="32" y="0"/>
                     </canvas>
-                    <uol name="3" value="1"/>
-                    <uol name="4" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="0" value="0"/>
                     <canvas name="5" width="81" height="96">
                         <vector name="origin" x="35" y="96"/>
                         <int name="delay" value="150"/>
@@ -1271,9 +1271,9 @@
                     <string name="hs" value="h30"/>
                     <int name="mobCount" value="6"/>
                     <int name="mpCon" value="28"/>
-                    <int name="damage" value="160"/>
-                    <vector name="lt" x="-210" y="-100"/>
-                    <vector name="rb" x="210" y="100"/>
+                    <int name="damage" value="100"/>
+                    <vector name="lt" x="-350" y="-100"/>
+                    <vector name="rb" x="350" y="100"/>
                 </imgdir>
             </imgdir>
             <imgdir name="effect">
@@ -1333,12 +1333,12 @@
                     </canvas>
                 </imgdir>
                 <int name="x" value="0"/>
-                <int name="y" value="-150"/>
-                <int name="fall" value="150"/>
+                <int name="y" value="-200"/>
+                <int name="fall" value="200"/>
                 <int name="start" value="0"/>
-                <int name="interval" value="90"/>
-                <int name="count" value="3"/>
-                <int name="duration" value="500"/>
+                <int name="interval" value="45"/>
+                <int name="count" value="6"/>
+                <int name="duration" value="800"/>
             </imgdir>
             <imgdir name="hit">
                 <imgdir name="0">
@@ -2126,8 +2126,8 @@
                 <imgdir name="30">
                     <string name="hs" value="h30"/>
                     <int name="mpCon" value="32"/>
-                    <int name="damage" value="100"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="damage" value="70"/>
+                    <int name="bulletCount" value="6"/>
                 </imgdir>
             </imgdir>
         </imgdir>

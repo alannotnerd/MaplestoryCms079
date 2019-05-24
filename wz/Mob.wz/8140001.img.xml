@@ -227,12 +227,12 @@
             <vector name="head" x="-4" y="-87"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="12" value="../move/0"/>
-        <uol name="13" value="../move/1"/>
-        <uol name="14" value="../move/2"/>
-        <uol name="15" value="../move/3"/>
-        <uol name="16" value="../move/4"/>
-        <uol name="17" value="../move/5"/>
+        <uol name="../move/0" value="../move/0"/>
+        <uol name="../move/1" value="../move/1"/>
+        <uol name="../move/2" value="../move/2"/>
+        <uol name="../move/3" value="../move/3"/>
+        <uol name="../move/4" value="../move/4"/>
+        <uol name="../move/5" value="../move/5"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="81" height="103">

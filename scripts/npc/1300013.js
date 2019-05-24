@@ -1,13 +1,13 @@
 function start() {
-    cm.sendSimple("#b\r\n#L0#Yeti (Requires Party)#l\r\n#L1#Violetta#l#k");
+    cm.sendSimple("移动到#b#m106021500##k 要前往到哪里呢？ #b\r\n#L0#挑战雪人三兄弟 (需要组队)#l\r\n#L1#拯救菲欧娜#l#k");
 }
 
 function action(mode,type,selection) {
-    if (mode == 1) { //or 931000400 + selection..?
+    if (mode == 1) {
 	switch(selection) {
 	    case 0:
 	    if (cm.getPlayer().getParty() == null || !cm.isLeader()) {
-		cm.sendOk("The leader of the party must be here.");
+		cm.sendOk("请找你的队长来和我说话。");
 	    } else {
 		var party = cm.getPlayer().getParty().getMembers();
 		var mapId = cm.getPlayer().getMapId();
@@ -31,9 +31,9 @@ function action(mode,type,selection) {
 		    		return;
 			}
 	    	    }
-			cm.sendOk("Another party quest has already entered this channel.");
+			cm.sendOk("已经有另一个队伍在挑战，请稍后再尝试。");
 		} else {
-			cm.sendOk("All 3+ members of your party must be here.");
+			cm.sendOk("队伍里需要三个人以上。");
 		}
 	    }
 		break;

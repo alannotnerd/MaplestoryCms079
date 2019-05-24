@@ -1,59 +1,59 @@
 package net.sf.cherry.client;
 
-public abstract interface IEquip extends IItem {
+public interface IEquip extends IItem {
 
-    public abstract void setUpgradeSlots(int paramInt);
+  byte getUpgradeSlots();
 
-    public abstract void setVicious(int paramInt);
+  void setUpgradeSlots(int paramInt);
 
-    public abstract byte getUpgradeSlots();
+  byte getLocked();
 
-    public abstract byte getLocked();
+  byte getLevel();
 
-    public abstract byte getLevel();
+  boolean isRing();
 
-    public abstract boolean isRing();
+  short getStr();
 
-    public abstract short getStr();
+  short getDex();
 
-    public abstract short getDex();
+  short getInt();
 
-    public abstract short getInt();
+  short getLuk();
 
-    public abstract short getLuk();
+  short getHp();
 
-    public abstract short getHp();
+  short getMp();
 
-    public abstract short getMp();
+  short getWatk();
 
-    public abstract short getWatk();
+  short getMatk();
 
-    public abstract short getMatk();
+  short getWdef();
 
-    public abstract short getWdef();
+  short getMdef();
 
-    public abstract short getMdef();
+  short getAcc();
 
-    public abstract short getAcc();
+  short getAvoid();
 
-    public abstract short getAvoid();
+  short getHands();
 
-    public abstract short getHands();
+  short getSpeed();
 
-    public abstract short getSpeed();
+  short getJump();
 
-    public abstract short getJump();
+  int getPartnerUniqueId();
 
-    public abstract int getPartnerUniqueId();
+  int getPartnerId();
 
-    public abstract int getPartnerId();
+  String getPartnerName();
 
-    public abstract String getPartnerName();
+  short getVicious();
 
-    public abstract short getVicious();    
+  void setVicious(int paramInt);
 
-    public static enum ScrollResult {
+  enum ScrollResult {
 
-        SUCCESS, FAIL, CURSE; //成功 失败 诅咒
-    }
+    SUCCESS, FAIL, CURSE //成功 失败 诅咒
+  }
 }

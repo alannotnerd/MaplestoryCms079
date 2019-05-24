@@ -1,58 +1,65 @@
 /*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	Shuri the Tour Guide - Orbis (200000000)
 */
 
-/**
--- Odin JavaScript --------------------------------------------------------------------------------
-	Orbis Magic Spot - Orbis Tower <1st Floor>(200082100)
--- By ---------------------------------------------------------------------------------------------
-	Unknown
--- Version Info -----------------------------------------------------------------------------------
-	1.1 - Official Text and Method [Information]
-	1.0 - First Version by Unknown
----------------------------------------------------------------------------------------------------
-**/
-
-function start() {
-	status = -1;
-	action(1, 0, 0);
-}
+var pay = 2000;
+var ticket = 4031134;
+var msg;
+var check;
+var status = -1;
+var access;
 
 function action(mode, type, selection) {
-	if (mode == 0) {
-		cm.dispose();
-		return;
-	}
+    if (mode == 1) {
 	status++;
-	if (status == 0) {
-		if(cm.haveItem(4001110)) {
-                cm.sendYesNo("ä»€ä¹ˆæˆ‘æ²¡å¬é”™æŠŠï¼Œæ‚¨è¦åŽ»æŒ‘æˆ˜ç»¯çº¢éª‘å£«å›¢å—ï¼Œä»–ä»¬å¯æ˜¯å†’é™©ä¸–ç•Œé‡Œæœ€å¼ºå¤§çš„ç»„ç»‡ï¼Œæ²¡æœ‰è¶³å¤Ÿçš„å®žåŠ›åŽ»äº†ä¹Ÿæ˜¯é€æ­»ï¼Œæ‚¨çœŸçš„å†³å®šè¦åŽ»äº†å—"); 
-		} else {
-			cm.sendOk("#k#eæ‰¾æˆ‘æœ‰äº‹å—ï¼Ÿ");
-			cm.dispose();
-		}
-	}
+    } else {
 	if (status == 1) {
-			cm.gainItem(4001035, 1);
-			cm.gainItem(4031120, 1);
-			cm.gainItem(4001110, -100);
-			cm.dispose();
+	    cm.sendNext("ÐèÒªÈ¥ÔÙÀ´ÕÒÎÒ°É!");
+	    cm.safeDispose();
+	    return;
 	}
+	status--;
+    }
+    if (status == 0) {
+	cm.sendSimple("ÄãÓÐÃ»ÓÐÌý¹ýº£Ì²ÓëËùÎ½µÄ #b»Æ½ðº£Ì²#k, Õâ¸öµØ·½ÔÚÎ¬¶àÀûÑÇÄØ?? ÎÒ¿ÉÒÔÏÖÔÚ°ïÖúÄãµ½ÄÇ¸öµØ·½Ö»ÐèÒª #b2000#k ·ã±Ò »òÕßÈç¹ûÄãÓÐÒ»ÕÅ #b#t"+ ticket +"##k ÄÇÃ´¾Í¿ÉÒÔÃâ·ÑÈ¥..#k\r\n\r\n#L0##bÎÒÔ¸Òâ¸¶ "+pay+" ·ã±Ò.#k#l\r\n#L1##bÎÒÓÐ #t"+ticket+"##k#l\r\n#L2##bÊ²Ã´ÊÇ #t"+ticket+"#?#k#l");
+    } else if (status == 1) {
+	if (selection == 0 || selection == 1) {
+	    check = selection;
+	    if (selection == 0) {
+		msg = "ËùÒÔÄãÏë¸¶ #b"+pay+" ·ã±Ò#k È»ºóÈ¥ #m110000000#?";
+	    } else if (selection == 1) {
+		msg = "ËùÒÔÄãÓÐÒ»ÕÅ #b#t"+ticket+"##k µ½ #m110000000#?";
+	    }
+	    cm.sendYesNo(msg+" ÄÇÃ´ÏÖÔÚ¾Í×ß°É£¡");
+	} else if (selection == 2) {
+		status = 2;
+	    cm.sendNext("ÄãÒ»¶¨ºÃÆæÊ²Ã´ÊÇ #b#t"+ticket+"##k. ¹þ¹þ£¬ÕâÊÇ·Ç³£¿ÉÒÔÀí½âµÄ¡£¹ó±öÃÅÆ±µ½¸¥ÂåÀïÄÉº£Ì²ÊÇÒ»¸öÏîÄ¿ÔÚÄÄÀï£¬Ö»ÒªÄãÔÚÉíÉÏ£¬Äã¿ÉÒÔÓÃ×Ô¼ºµÄ·½Ê½À´¸¥ÂåÀïÄÉº£Ì²Ãâ·Ñ¡£ÄÇ¾ÍÊÇ£¬¼´Ê¹ÎÒÃÇ²»µÃ²»ÂòÕâÐ©£¬µ«²»ÐÒµÄÊÇÎÒÔÚÎÒµÄ±¦¹óµÄÊî¼ÙÊ§È¥ÁËÒ»¸öÀ×¼¸ÖÜÇ°ÕâÑùÒ»¸öÄÑµÃµÄµÀ¾ß.");
+	}
+    } else if (status == 2) {
+	if (check == 0) {
+	    if (cm.getMeso() < pay) {
+		cm.sendOk("ÄãºÃÏñÃ»ÓÐ×ã¹»µÄ·ã±Ò¡£¡£");
+		cm.safeDispose();
+	    } else {
+		cm.gainMeso(-pay);
+		access = true;
+	    }
+	} else if (check == 1) {
+	    if (!cm.haveItem(ticket)) {
+		cm.sendOk("ÄãºÃÏñÃ»ÓÐ #b#t"+ticket+"##k¡£¡£¡£¡£");
+		cm.safeDispose();
+	    } else {
+		access = true;
+	    }
+	}
+	if (access == true) {
+	    cm.saveLocation("FLORINA");
+	    cm.warp(110000000, 0);
+	    cm.dispose();
+	}
+    } else if (status == 3) {
+	cm.sendNext("ÎÒ»ØÀ´Ã»ÓÐËü£¬ÎÒ¾Í¾õµÃ¿ÉÅÂÃ»ÓÐËü¡£Ï£ÍûÓÐÈË°ÑËü¼ñÆðÀ´£¬²¢°ÑËü°²È«µÄµØ·½¡£·´ÕýÕâÊÇÎÒµÄ¹ÊÊÂ£¬Ë­ÖªµÀ£¬Äã¿ÉÒÔ°ÑËü¼ñÆðÀ´£¬²¢°ÑËüÓÃºÃ¡£Èç¹ûÄúÓÐÈÎºÎÎÊÌâ£¬ÇëËæÊ±ÎÊ");
+    } else if (status == 4) {
+	cm.dispose();
+    }
 }

@@ -32,7 +32,7 @@ function end(mode, type, selection) {
 	    qm.dispose();
 	    return;
 	}
-	    qm.completeQuest();
+	    qm.forceCompleteQuest();
 	    if (qm.getJob() == 1111) {
 		qm.changeJob(1112);
 	    } else if (qm.getJob() == 1211) {

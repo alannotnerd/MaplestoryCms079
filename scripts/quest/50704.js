@@ -1,12 +1,12 @@
 /*
-	ä»»åŠ¡: å‘ç€æ­¦é™µ - é™é­”åå­—æ—…å›¢
-	æè¿°: æ¥åˆ°äº†åå­—æ—…å›¢å¸®åŠ©æ­¦é™µåœ°åŒºçš„æŒ‡ä»¤ã€‚å»è§è§æ­¦é™µçš„#b#p9120214##kå§ã€‚
+	ÈÎÎñ: Ïò×ÅÎäÁê - ½µÄ§Ê®×ÖÂÃÍÅ
+	ÃèÊö: ½Óµ½ÁËÊ®×ÖÂÃÍÅ°ïÖúÎäÁêµØÇøµÄÖ¸Áî¡£È¥¼û¼ûÎäÁêµÄ#b#p9120214##k°É¡£
 */
 var status = -1;
 
 function start(mode, type, selection) {
-    qm.sendOk("å»æ­¦é™µè§#b#p9120214##k");
-    qm.completeQuest();
+    qm.sendOk("È¥ÎäÁê¼û#b#p9120214##k");
+    qm.forceCompleteQuest();
     qm.dispose();
 }
 function end(mode, type, selection) {

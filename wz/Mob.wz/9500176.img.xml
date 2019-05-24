@@ -67,7 +67,7 @@
             <vector name="rb" x="59" y="-35"/>
             <vector name="head" x="-8" y="-149"/>
         </canvas>
-        <uol name="5" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
     <imgdir name="stand">
         <canvas name="0" width="119" height="110">
@@ -202,7 +202,7 @@
         </canvas>
     </imgdir>
     <imgdir name="skill1">
-        <uol name="0" value="../stand/0"/>
+        <uol name="../stand/0" value="../stand/0"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="118" height="140">

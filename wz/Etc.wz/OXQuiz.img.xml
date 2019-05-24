@@ -486,9 +486,9 @@
             <string name="d" value="泪水更咸。汗水中99%是水，而泪水中有98%的成分是水。"/>
         </imgdir>
         <imgdir name="131">
-            <string name="q" value="被蚊子咬了之后会感到痒，是因为&amp;lt;念珠菌&gt;的缘故。"/>
+            <string name="q" value="被蚊子咬了之后会感到痒，是因为&lt;念珠菌&gt;的缘故。"/>
             <int name="a" value="0"/>
-            <string name="d" value="被蚊子咬了之后会感到痒，是因为&amp;lt;组织胺&gt;的缘故。"/>
+            <string name="d" value="被蚊子咬了之后会感到痒，是因为&lt;组织胺&gt;的缘故。"/>
         </imgdir>
         <imgdir name="132">
             <string name="q" value="围棋的白棋和黑棋是在棋盘上争斗。围棋棋盘的交点一共有361个。"/>
@@ -920,12 +920,12 @@
             <string name="d" value="必须要完成5个阶段的任务，也有不同阶段的奖励。"/>
         </imgdir>
         <imgdir name="12">
-            <string name="q" value="在&amp;lt;炼金术士简&gt;任务中，会3次要求玩家帮助搜集材料。"/>
+            <string name="q" value="在&lt;炼金术士简&gt;任务中，会3次要求玩家帮助搜集材料。"/>
             <int name="a" value="1"/>
             <string name="d" value="只有3次全都搜集齐，才能完成任务。"/>
         </imgdir>
         <imgdir name="13">
-            <string name="q" value="&amp;lt;萨比特拉玛的减肥药&gt;任务中，如果找错药草完成了的话，会获得EXP 500。"/>
+            <string name="q" value="&lt;萨比特拉玛的减肥药&gt;任务中，如果找错药草完成了的话，会获得EXP 500。"/>
             <int name="a" value="1"/>
             <string name="d" value="完成后获得500的经验值。"/>
         </imgdir>
@@ -940,7 +940,7 @@
             <string name="d" value="多边形内角和计算是180×（N-2），那么五边形内角和就是540度哦"/>
         </imgdir>
         <imgdir name="16">
-            <string name="q" value="组队任务&amp;lt;时空裂缝&gt;一共由9个阶段组成，只有6人的组队才能执行。"/>
+            <string name="q" value="组队任务&lt;时空裂缝&gt;一共由9个阶段组成，只有6人的组队才能执行。"/>
             <int name="a" value="1"/>
             <string name="d" value="等级限制是35~50。"/>
         </imgdir>
@@ -950,19 +950,19 @@
             <string name="d" value="从玛亚那里可以获得“褐色斗笠”。"/>
         </imgdir>
         <imgdir name="100">
-            <string name="q" value="&amp;lt;简和野猪&gt;任务完成后，可以随机获得100%、60%、10%武器攻击卷轴。"/>
+            <string name="q" value="&lt;简和野猪&gt;任务完成后，可以随机获得100%、60%、10%武器攻击卷轴。"/>
             <int name="a" value="0"/>
             <string name="d" value="可以获得EXP 500、60%武器攻击卷轴。"/>
         </imgdir>
         <imgdir name="101">
             <string name="q" value="任务地图忍苦树林一共有5个阶段组成。"/>
             <int name="a" value="1"/>
-            <string name="d" value="配制减肥药&amp;lt;1.2阶段&gt;，配制变年轻的药&amp;lt;3.4.5阶段&gt;"/>
+            <string name="d" value="配制减肥药&lt;1.2阶段&gt;，配制变年轻的药&lt;3.4.5阶段&gt;"/>
         </imgdir>
         <imgdir name="102">
-            <string name="q" value="休咪的任务按&amp;lt;休咪丢失的钱团→钱袋→钱包&gt;的顺序执行。"/>
+            <string name="q" value="休咪的任务按&lt;休咪丢失的钱团→钱袋→钱包&gt;的顺序执行。"/>
             <int name="a" value="0"/>
-            <string name="d" value="第2个任务是&amp;lt;休咪丢失的钞票&gt;。"/>
+            <string name="d" value="第2个任务是&lt;休咪丢失的钞票&gt;。"/>
         </imgdir>
         <imgdir name="103">
             <string name="q" value="泰素夫任务中需要的特制烤鳗鱼的材料是猴子的香蕉、风独眼兽尾巴和猪的头。"/>
@@ -990,27 +990,27 @@
             <string name="d" value="目前为止确实如此，乒乓球因其在中国的普及率和国人的整体水平，被誉为中国的“国球”。"/>
         </imgdir>
         <imgdir name="108">
-            <string name="q" value="&amp;lt;萨比特拉玛的年轻的药&gt;任务完成后，人气度会提高2。"/>
+            <string name="q" value="&lt;萨比特拉玛的年轻的药&gt;任务完成后，人气度会提高2。"/>
             <int name="a" value="1"/>
             <string name="d" value="可以获得人气度和经验值道具。"/>
         </imgdir>
         <imgdir name="109">
-            <string name="q" value="&amp;lt;查里中士和物物交换&gt;任务所有的人都可以执行，和角色等级无关。"/>
+            <string name="q" value="&lt;查里中士和物物交换&gt;任务所有的人都可以执行，和角色等级无关。"/>
             <int name="a" value="1"/>
             <string name="d" value="是新手也可以执行的任务。"/>
         </imgdir>
         <imgdir name="110">
-            <string name="q" value="&amp;lt;阿尔法部队联络网&gt;任务中登场的NPC有珀斯上尉、巴伯中士、查里下士、伊吉上等兵。"/>
+            <string name="q" value="&lt;阿尔法部队联络网&gt;任务中登场的NPC有珀斯上尉、巴伯中士、查里下士、伊吉上等兵。"/>
             <int name="a" value="0"/>
             <string name="d" value="登场的是珀斯上尉、巴伯下士、查里中士、伊吉上等兵。"/>
         </imgdir>
         <imgdir name="111">
-            <string name="q" value="50级以上才能执行的&amp;lt;寻找上古魔书&gt;任务，是除新手之外所有职业都可以执行的任务。"/>
+            <string name="q" value="50级以上才能执行的&lt;寻找上古魔书&gt;任务，是除新手之外所有职业都可以执行的任务。"/>
             <int name="a" value="0"/>
             <string name="d" value="除新手到55级以下的玩家外，所有的职业都可以执行。"/>
         </imgdir>
         <imgdir name="112">
-            <string name="q" value="要提炼黑暗水晶，必须完成&amp;lt;寻找上古魔书&gt;任务的一部分。"/>
+            <string name="q" value="要提炼黑暗水晶，必须完成&lt;寻找上古魔书&gt;任务的一部分。"/>
             <int name="a" value="1"/>
             <string name="d" value="必须完成任务中的阿尔卡斯特和黑暗水晶。"/>
         </imgdir>

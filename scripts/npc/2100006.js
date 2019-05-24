@@ -1,36 +1,16 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/* Author: aaroncsn (MapleSea Like)
+	NPC Name: 		Mazra
+	Map(s): 		The Burning Road: Ariant(2600000000)
+	Description: 	Hair Salon Owner
 */
 
-/* Author: Elkin
-      NPC Name: 	Mazra(2100006)
-      Location:         Araint
-      Description:      VIP Hair Stylist
-*/
 var status = 0;
 var beauty = 0;
-var hairprice = 1000000;
-var haircolorprice = 1000000;
-var mhair = Array(30820, 30460, 30110, 30140, 30230, 30750);
-var fhair = Array(31340, 31230, 31220, 31090, 31110, 31330, 31120, 31780, 31660);
+var mhair = Array(30030, 30020, 30000, 30130, 30350, 30190, 30110, 30180, 30050, 30040, 30160);
+var fhair = Array(31050, 31040, 31000, 31060, 31090, 31020, 31130, 31120, 31140, 31330, 31010);
 var hairnew = Array();
+
+
 
 function start() {
 	status = -1;
@@ -41,7 +21,7 @@ function action(mode, type, selection) {
 	if (mode == -1) {
 		cm.dispose();
 	} else {
-		if (mode == 0 && status == 0) {
+		if (mode == 0 && status >= 0) {
 			cm.dispose();
 			return;
 		}
@@ -50,36 +30,30 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendSimple("Welcome to the Ariant hair shop. If you have a #b#t5150027##k, or a #b#t5151022##k, allow me to take care of your hairdo. Please choose the one you want.\r\n#L0#I want to buy a coupon!#l\r\n#L1#Haircut: #i5150027##t5150027##l\r\n#L2#Dye your hair: #i5151022##t5151022##l");						
+			cm.sendSimple("嗨，我是#p2100006# 如果你有 #b#t5150027##k 或者 #b#t5151022##k, 可以找我谈谈。 \r\n#L0#使用:#b#t5150027##k#l \r\n#L1#使用:#b#t5151022##k#l");
 		} else if (status == 1) {
 			if (selection == 0) {
-				beauty = 0;
-				cm.sendSimple("Which coupon would you like to buy?\r\n#L0#Haircut for " + hairprice + " mesos: #i5150027##t5150027##l\r\n#L1#Dye your hair for " + haircolorprice + " mesos: #i5151022##t5151022##l");
-			} else if (selection == 1) {
 				beauty = 1;
 				hairnew = Array();
 				if (cm.getChar().getGender() == 0) {
 					for(var i = 0; i < mhair.length; i++) {
-						hairnew.push(mhair[i] + parseInt(cm.getChar().getHair()
- % 10));
+						hairnew.push(mhair[i] + parseInt(cm.getChar().getHair() % 10));
 					}
 				} 
 				if (cm.getChar().getGender() == 1) {
 					for(var i = 0; i < fhair.length; i++) {
-						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair()
- % 10));
+						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair() % 10));
 					}
 				}
-				cm.sendStyle("I can totally change up your hairstyle and make it look so good. Why don't you change it up a bit? With #b#t5150027##k, I'll take care of the rest for you. Choose the style of your liking!", hairnew);
-			} else if (selection == 2) {
+				cm.sendStyle("选择一个你想要的。", hairnew);
+			} else if (selection == 1) {
 				beauty = 2;
 				haircolor = Array();
-				var current = parseInt(cm.getChar().getHair()
-/10)*10;
+				var current = parseInt(cm.getChar().getHair()/10)*10;
 				for(var i = 0; i < 8; i++) {
 					haircolor.push(current + i);
 				}
-				cm.sendStyle("I can totally change your haircolor and make it look so good. Why don't you change it up a bit? With #b#t5151022##k, I'll take care of the rest. Choose the color of your liking!", haircolor);
+				cm.sendStyle("选择一个你想要的。", haircolor);
 			}
 		}
 		else if (status == 2){
@@ -88,31 +62,18 @@ function action(mode, type, selection) {
 				if (cm.haveItem(5150027) == true){
 					cm.gainItem(5150027, -1);
 					cm.setHair(hairnew[selection]);
-					cm.sendOk("Enjoy your new and improved hairstyle!");
+					cm.sendOk("享受！");
 				} else {
-					cm.sendOk("Hmmm...it looks like you don't have our designated coupon...I'm afraid I can't give you a haircut without it. I'm sorry...");
+					cm.sendNext("痾.... 貌似没有#t5150027#。");
 				}
 			}
 			if (beauty == 2){
 				if (cm.haveItem(5151022) == true){
 					cm.gainItem(5151022, -1);
 					cm.setHair(haircolor[selection]);
-					cm.sendOk("Enjoy your new and improved haircolor!");
+					cm.sendOk("享受！");
 				} else {
-					cm.sendOk("Hmmm...it looks like you don't have our designated coupon...I'm afraid I can't dye your hair without it. I'm sorry...");
-				}
-			}
-			if (beauty == 0){
-				if (selection == 0 && cm.getMeso() >= hairprice) {
-					cm.gainMeso(-hairprice);
-					cm.gainItem(5150027, 1);
-					cm.sendOk("Enjoy!");
-				} else if (selection == 1 && cm.getMeso() >= haircolorprice) {
-					cm.gainMeso(-haircolorprice);
-					cm.gainItem(5151022, 1);
-					cm.sendOk("Enjoy!");
-				} else {
-					cm.sendOk("You don't have enough mesos to buy a coupon!");
+					cm.sendNext("痾.... 貌似没有#t5151022#。");
 				}
 			}
 		}

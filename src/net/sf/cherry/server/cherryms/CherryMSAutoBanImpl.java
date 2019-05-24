@@ -1,9 +1,8 @@
- package net.sf.cherry.server.cherryms;
- 
- public class CherryMSAutoBanImpl
- {
-   private static CherryMSAutoBanImpl instance = null;
- }
+package net.sf.cherry.server.cherryms;
+
+public class CherryMSAutoBanImpl {
+  private static CherryMSAutoBanImpl instance = null;
+}
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar
  * Qualified Name:     net.sf.cherry.server.cherryms.CherryMSAutoBanImpl

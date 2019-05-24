@@ -12,7 +12,7 @@
             <int name="maxLevel" value="199"/>
         </imgdir>
         <imgdir name="spec">
-            <int name="exp" value="100000"/>
+            <int name="exp" value="10000000"/>
         </imgdir>
     </imgdir>
     <imgdir name="02370001">

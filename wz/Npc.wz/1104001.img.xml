@@ -65,29 +65,29 @@
             <int name="z" value="0"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="6" value="0"/>
-        <uol name="7" value="1"/>
-        <uol name="8" value="2"/>
-        <uol name="9" value="3"/>
-        <uol name="10" value="4"/>
-        <uol name="11" value="5"/>
-        <uol name="12" value="0"/>
-        <uol name="13" value="1"/>
-        <uol name="14" value="2"/>
-        <uol name="15" value="3"/>
-        <uol name="16" value="4"/>
-        <uol name="17" value="5"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="5" value="5"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="5" value="5"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>
         </imgdir>
     </imgdir>
     <imgdir name="bounce">
-        <uol name="0" value="../stand/0"/>
-        <uol name="1" value="../stand/1"/>
-        <uol name="2" value="../stand/2"/>
-        <uol name="3" value="../stand/3"/>
-        <uol name="4" value="../stand/4"/>
-        <uol name="5" value="../stand/5"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
     </imgdir>
 </imgdir>

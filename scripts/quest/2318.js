@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Scarrs
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  Â•áÊãâËòëËèáÂ≠¢Â≠ê(2)
+	Description: 	Quest -  ∆Ê¿≠ƒ¢πΩÊﬂ◊”(2)
 */
 
 importPackage(Packages.client);
@@ -21,7 +21,7 @@ function start(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendYesNo("Hmmm... I looked into the making of the Spores while you were gathering up the Poison Mushroom Caps, and realised that we'll need more materials for it. I want you to gather up one more set of items. Can you do it?");
+        qm.sendAcceptDecline("Hmmm... I looked into the making of the Spores while you were gathering up the Poison Mushroom Caps, and realised that we'll need more materials for it. I want you to gather up one more set of items. Can you do it?");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.sendOk("Okay, I want you to defeat the Regenade Spores and bring back #b50 Mutated Spores#k in return.");
@@ -45,7 +45,7 @@ function end(mode, type, selection) {
         qm.gainExp(11500);
         qm.gainItem(4000499, -50);
         qm.sendNext("Okay, these should be enough for me to make the #bKiller Mushroom Spores.#k Please hold on for a bit.");
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.gainItem(2430014, 1);
     } else if (status == 2) {
         qm.sendPrev("Okay, here are the Killer Mushroom Spores. Hopefully this will be enough for you to save our princess and help regain our kingdom. Good luck!");

@@ -1,8 +1,7 @@
 package net.sf.cherry.scripting.portal;
 
-public abstract interface PortalScript
-{
-  public abstract boolean enter(PortalPlayerInteraction paramPortalPlayerInteraction);
+public interface PortalScript {
+  boolean enter(PortalPlayerInteraction paramPortalPlayerInteraction);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

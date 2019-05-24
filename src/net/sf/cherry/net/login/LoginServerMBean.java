@@ -1,24 +1,23 @@
 package net.sf.cherry.net.login;
 
-public abstract interface LoginServerMBean
-{
-  public abstract int getNumberOfSessions();
+public interface LoginServerMBean {
+  int getNumberOfSessions();
 
-  public abstract int getPossibleLogins();
+  int getPossibleLogins();
 
-  public abstract int getLoginInterval();
+  int getLoginInterval();
 
-  public abstract String getEventMessage();
+  String getEventMessage();
 
-  public abstract int getFlag();
+  void setEventMessage(String paramString);
 
-  public abstract void setEventMessage(String paramString);
+  int getFlag();
 
-  public abstract void setFlag(int paramInt);
+  void setFlag(int paramInt);
 
-  public abstract int getUserLimit();
+  int getUserLimit();
 
-  public abstract void setUserLimit(int paramInt);
+  void setUserLimit(int paramInt);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

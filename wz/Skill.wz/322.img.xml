@@ -2568,20 +2568,20 @@
                         <int name="mobCount" value="4"/>
                         <int name="attackAfter" value="1440"/>
                     </imgdir>
-                    <uol name="0" value="../die/0"/>
-                    <uol name="1" value="../die/1"/>
-                    <uol name="2" value="../die/2"/>
-                    <uol name="3" value="../die/3"/>
-                    <uol name="4" value="../die/4"/>
+                    <uol name="../die/0" value="../die/0"/>
+                    <uol name="../die/1" value="../die/1"/>
+                    <uol name="../die/2" value="../die/2"/>
+                    <uol name="../die/3" value="../die/3"/>
+                    <uol name="../die/4" value="../die/4"/>
                     <canvas name="5" width="1" height="1">
                         <vector name="origin" x="0" y="0"/>
                         <int name="delay" value="930"/>
                     </canvas>
-                    <uol name="6" value="../die/4"/>
-                    <uol name="7" value="../die/3"/>
-                    <uol name="8" value="../die/2"/>
-                    <uol name="9" value="../die/1"/>
-                    <uol name="10" value="../die/0"/>
+                    <uol name="../die/4" value="../die/4"/>
+                    <uol name="../die/3" value="../die/3"/>
+                    <uol name="../die/2" value="../die/2"/>
+                    <uol name="../die/1" value="../die/1"/>
+                    <uol name="../die/0" value="../die/0"/>
                 </imgdir>
                 <imgdir name="die">
                     <canvas name="0" width="89" height="121">

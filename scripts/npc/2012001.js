@@ -1,38 +1,43 @@
-var bm;
+/*
+	NPC Name: 		Rini
+	Map(s): 		Orbis: Station<To Ellinia> (200000111)
+	Description: 		Orbis Ticketing Usher
+*/
+var status = 0;
 
 function start() {
-	status = -1;
-	bm = cm.getEventManager("Boats");
-	action(1, 0, 0);
+    status = -1;
+    boat = cm.getEventManager("Boats");
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-		return;
+    status++;
+    if(mode == 0) {
+	cm.sendNext("µÈÄã¿¼ÂÇºÃÔÙÀ´ÕÒÎÒ¡£");
+	cm.dispose();
+	return;
+    }
+    if (status == 0) {
+	if(boat == null) {
+	    cm.sendNext("ÕÒ²»µ½½Å±¾ÇëÁªÏµGM£¡");
+	    cm.dispose();
+	} else if(boat.getProperty("entry").equals("true")) {
+	    cm.sendYesNo("ÄãÏëÒª´î´¬£¿£¿");
+	} else if(boat.getProperty("entry").equals("false") && boat.getProperty("docked").equals("true")) {
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬×¼±¸¿ª×ß,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	} else {
-		status++;
-		if(mode == 0) {
-			cm.sendNext("ä½ è¿˜æœ‰ä»€ä¹ˆäº‹æƒ…å†è¿™é‡Œæ²¡æœ‰å®Œæˆå—ï¼Ÿ");
-			cm.dispose();
-			return;
-		}
-		if (status == 0) {
-			if(bm == null) {
-				cm.sendNext("è„šæœ¬å‘ç”Ÿé”™è¯¯ï¼Œè¯·è”ç³»ç®¡ç†å‘˜è§£å†³ã€‚");
-				cm.dispose();
-			} else if(bm.getProperty("entry").equals("true")) {
-				cm.sendYesNo("éå¸¸å¥½ï¼Œèˆ¹ä¸Šè¿˜æœ‰è¶³å¤Ÿçš„ä½ç½®ï¼Œè¯·å‡†å¤‡å¥½ä½ çš„èˆ¹ç¥¨ï¼Œæˆ‘ä»¬å°†è¿›å…¥æ¼«é•¿çš„æ—…è¡Œï¼Œä½ æ˜¯ä¸æ˜¯æƒ³ç™»èˆ¹ï¼Ÿ");
-			} else if(bm.getProperty("entry").equals("false") && bm.getProperty("docked").equals("true")) {
-				cm.sendNext("æœ¬æ¬¡èˆªç­å·²ç»å‡ºå»ï¼Œè¯·ç­‰å¾…ä¸‹ä¸€æ¬¡èˆªç­ã€‚");
-				cm.dispose();
-			} else {
-				cm.sendNext("é£èˆ¹èµ·é£å‰5åˆ†é’Ÿå†…åœæ­¢å‰ªç¥¨ï¼Œè¯·æ³¨æ„æ—¶é—´ã€‚");
-				cm.dispose();
-			}
-		} else if(status == 1) {
-			cm.warp(200000112);
-			cm.dispose();
-		}
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬ÒÑ¾­×ßÁË,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	}
+    } else if(status == 1) {
+	if(!cm.haveItem(4031047)) {
+	    cm.sendNext("²»! ÄãÃ»ÓĞ#b#t4031047##k ËùÒÔÎÒ²»ÄÜ·ÅÄã×ß!");
+	} else {
+	    cm.gainItem(4031047, -1);
+	    cm.warp(200000112, 0);
+	}
+	cm.dispose();
+    }
 }

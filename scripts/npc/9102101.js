@@ -1,8 +1,8 @@
 /*
-	This file is part of the cherry Maple Story Server
+	This file is part of the OdinMS Maple Story Server
     Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
+                       Matthias Butz <matze@odinms.de>
+                       Jan Christian Meyer <vimes@odinms.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License version 3
@@ -26,35 +26,21 @@
 	Xterminator
 -- Version Info -----------------------------------------------------------------------------------
 	1.0 - First Version by Xterminator
+        2.0 - Second Version by Moogra
 ---------------------------------------------------------------------------------------------------
 **/
 
-var status = 0;
-
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    cm.sendYesNo("#b(我能看到的东西覆盖在草丛中。我应该拉出来？)");
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-	if (status >= 0 && mode == 0) {
-		cm.sendNext("#b(I didn't think much of it, so I didn't touch it.)");
-		cm.dispose();
-		return;
-	}	
-	if (mode == 1)
-		status++;
-	else
-		status--;
-	if (status == 0) {
-		cm.sendYesNo("#b(I can see something covered in grass. Should I pull it out?)");
-	} else if (status == 1) {
-		cm.sendNext("#b(Yuck... it's pet poop!)");
-		cm.gainItem(4031922, 1);
-		cm.dispose();
-		}
-	}
+    if (mode == -1) {
+    } else if (mode == 0) {
+        cm.sendNext("#b(我没有想太多，所以我没有去碰它。)");
+    } else if (mode == 1) {
+        cm.sendNext("#b(呸...这是宠物便便!)");
+        cm.gainItem(4031922, 1);
+    }
+    cm.dispose();
 }

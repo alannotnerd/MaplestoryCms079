@@ -241,15 +241,15 @@
             <vector name="head" x="-22" y="-42"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="13" value="../skill1/0"/>
-        <uol name="14" value="../skill1/1"/>
-        <uol name="15" value="../skill1/2"/>
-        <uol name="16" value="../skill1/3"/>
-        <uol name="17" value="../skill1/4"/>
-        <uol name="18" value="../skill1/3"/>
-        <uol name="19" value="../skill1/2"/>
-        <uol name="20" value="../skill1/1"/>
-        <uol name="21" value="../skill1/0"/>
+        <uol name="../skill1/0" value="../skill1/0"/>
+        <uol name="../skill1/1" value="../skill1/1"/>
+        <uol name="../skill1/2" value="../skill1/2"/>
+        <uol name="../skill1/3" value="../skill1/3"/>
+        <uol name="../skill1/4" value="../skill1/4"/>
+        <uol name="../skill1/3" value="../skill1/3"/>
+        <uol name="../skill1/2" value="../skill1/2"/>
+        <uol name="../skill1/1" value="../skill1/1"/>
+        <uol name="../skill1/0" value="../skill1/0"/>
     </imgdir>
     <imgdir name="skill1">
         <canvas name="0" width="98" height="75">

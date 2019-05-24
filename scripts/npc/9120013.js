@@ -1,134 +1,84 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-					   Matthias Butz <matze@cherry.de>
-					   Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation version 3 as published by
-    the Free Software Foundation. You may not use, modify or distribute
-    this program under any other version of the GNU Affero General Public
-    License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /* Boss Kitty
 	Zipangu : Showa Town (801000000)
 	
 	Quiz for quest 8012 (Sakura, the Kitty, and the Orange Marble)
 */
 
-importPackage(net.sf.cherry.client);
-
-var status;
-var questions;
-var answers;
-var correctAnswer;
+var status = -1;
+var questions = new Array("下面物品不是狸猫所掉出的物品?","古代神社中，写有『香菇』的地方有几处？","古代神社的贩卖物品里，何者是提升攻击力的？?","下列物品中，那个物品是存在的东西？?","那个物品不存在??","在昭和镇蔬菜店老板叫什么名字?","这些物品的那个存在?","昭和村卖鱼的铺子外面写着哪几个字?","哪种道具的说明有错误？?","何者不是古代神社的元泰卖的拉面？?","昭和电影院门前的NPC 是谁？?");;
+var answers  = new Array(new Array("狸猫柴火","独角狮的硬角","红色的砖"),new Array("6","5","4"),new Array("章鱼烧","福建面","面粉"),new Array("乌鸦屎","黄色雨伞","骆驼蛋"),new Array("冻冻鱼","寒冰破魔枪","苍蝇拍"),new Array("萨米","卡米","由美"),new Array("云狐的牙齿","花束","狐狸的尾巴"),new Array("商荣繁盛","全场一折","欢迎光临"),new Array("竹矛-战士唯一的武器","橡皮榔头-单手剑","龙背刃-双手剑"),new Array("蛋炒面","日本炒面","蘑菇特制拉面"),new Array("武大郎","樱桃小丸子","绘里香"));;
+var correctAnswer = new Array(1,1,0,1,2,2,2,0,0,2,2);
 var questionNum;
 
-function start() {
-	status = -1;
-	questions = new Array("Which of these items does the Flaming Raccoon NOT drop?","Which NPC is responsible for transporting travellers from Kerning City to Zipangu, and back?","Which of the items sold at the Mushroom Shrine increases your attack power?","Which of these items do the Extras NOT drop?","Which of these items DO NOT exist??","What's the name of the vegetable store owner in Showa Town?","Which of these items DO exist?","What is the name of the strongest boss in the Mushroom Shrine?","Which one of these items has a mis-matched class or level description?","Which of these noodles are NOT being sold by Robo at the Mushroom Shrine?","Which of these NPCs do NOT stand in front of Showa Movie Theater?")
-	answers = new Array(new Array("Raccoon Firewood","Solid Horn","Red Brick"),new Array("Peli","Spinel","Poli"),new Array("Takoyaki","Yakisoba","Tempura"),new Array("Extra A's Badge","Extra B's Corset","Extra C's Necklace"),new Array("Frozen Tuna","Fan","Fly Swatter"),new Array("Sami","Kami","Umi"),new Array("Cloud Fox's Tooth","Ghost's Bouquet","Dark Cloud Fox's Tail"),new Array("Black Crow","Blue Mushmom","Himegami"),new Array("Bamboo Spear - Warrior-only Weapon","Pico-Pico Hammer - One-handed Sword","Mystic Cane - Level 51 equip"),new Array("Kinoko Ramen (Pig Skull)","Kinoko Ramen (Salt)","Mushroom Miso Ramen"),new Array("Skye","Furano","Shinta"));
-	correctAnswer = new Array(1,1,0,1,2,2,2,0,0,2,2);
-	action(1, 0, 0);
-}
-
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	}		
-	else {
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0 && mode == 1) {
-			if (cm.getQuestStatus(8012).equals(MapleQuestStatus.Status.STARTED) && !cm.haveItem(4031064)){ //quest in progress
-				cm.sendYesNo("Did you get them all? Are you going to try to answer all of my questions?");
-			} else { //quest not started or already completed
-				cm.sendOk("Meeeoooowww!");
-				cm.dispose();
-			}
-		}
-		else if (status == 1 && mode == 1) {
-			var hasChicken = true;
-			
-			var count = 0;
-			var iter = cm.getChar().getInventory(MapleInventoryType.USE).listById(2020001).iterator();
-			while (iter.hasNext()) {
-				count += iter.next().getQuantity();
-			}
-			if (count < 300)
-				hasChicken = false;
-			
-			if (!hasChicken) {
-				cm.sendOk("What? No! 300! THREE. HUNDRED. No less. Hand over more if you want, but I need at least 300. Not all of us can be as big and as fed as you...");
-				cm.dispose();
-			}
-			else {
-				cm.gainItem(2020001, -300)
-				cm.sendNext("Good job! Now hold on a sec... Hey look! I got some food here! Help yourselves. Okay, now it's time for me to ask you some questions. I'm sure you're aware of this, but remember, if you're wrong, it's over. It's all or nothing!");
-			}
-		}
-		else if (status == 7 && mode == 1) { //2-6 are the questions
-			if (selection != correctAnswer.pop()){
-				cm.sendNext("Hmmm...all humans make mistakes anyway! If you want to take another crack at it, then bring me 300 Fried Chicken.")
-				cm.dispose();
-			}
-			else {
-				cm.sendNext("Dang, you answered all the questions right. I may not like humans in general, but I HATE breaking a promise, so, as promised, here's the Orange Marble.")
-			}
-		}
-		else if (status == 8 && mode == 1) { //gain marble
-			cm.gainItem(4031064, 1);
-			cm.sendOk("Our business is concluded, thank you very much! You can leave now!");
-			cm.dispose();
-		}
-		else if (status >= 2 && status <= 6 && mode == 1) {//questions
-			var cont = true;
-			if (status > 2) {
-				if (selection != correctAnswer.pop()){
-					cm.sendNext("Hmmm...all humans make mistakes anyway! If you want to take another crack at it, then bring me 300 Fried Chicken.")
-					cm.dispose();
-					cont = false;
-				}
-			}
-			
-			if (cont) {
-				questionNum = Math.floor(Math.random() * questions.length);
-				if (questionNum != (questions.length - 1)){
-					var temp;
-					temp = questions[questionNum];
-					questions[questionNum] = questions[questions.length - 1];
-					questions[questions.length - 1] = temp;
-					temp = answers[questionNum];
-					answers[questionNum] = answers[questions.length - 1];
-					answers[questions.length - 1] = temp;
-					temp = correctAnswer[questionNum];
-					correctAnswer[questionNum] = correctAnswer[questions.length - 1];
-					correctAnswer[questions.length - 1] = temp;
-				}
-				
-				var question = questions.pop();
-				var answer = answers.pop();
-				var prompt = "Question no." + (status - 1) + ": " + question;
-				
-				for (var i = 0; i < answer.length; i++)
-				{
-					prompt += "\r\n#b#L" + i + "#" + answer[i] + "#l#k"
-				}
-				
-				cm.sendSimple(prompt);
-			}
-		}
+    if (mode == 1) {
+	status++;
+    } else {
+	status--;
+    }
+    if (status == 0) {
+	if (cm.getQuestStatus(8012) == 1 && !cm.haveItem(4031064)){ //quest in progress
+	    cm.sendYesNo("你得到他们了吗？你准备回答我所有的问题吗?");
+	} else { //quest not started or already completed
+	    cm.sendOk("喵喵喵~!");
+	    cm.safeDispose();
 	}
+    } else if (status == 1) {
+	var hasChicken = cm.haveItem(2020001, 300);
+
+	if (!hasChicken) {
+	    cm.sendOk("什么？不!我需要300个炸鸡。如果你想要的话，你要交更多的朋友，但我至少需要300个.并不是所有的人都能像你一样伟大...");
+	    cm.safeDispose();
+	} else {
+	    cm.gainItem(2020001, -300)
+	    cm.sendNext("干得好!现在开始答题!我这里有一些食物!帮助自己. 好吧，现在是时候让我问你一些问题了。我相信你会意识到这一点，但记住，如果你错了，那就结束了。这一切或什么都没有!");
+	}
+    } else if (status == 7) { //2-6 are the questions
+	if (selection != correctAnswer.pop()){
+	    cm.sendNext("嗯，反正所有人类犯错误! 如果你想再来回答一次，那就给我带300个炸鸡.")
+	    cm.safeDispose();
+	}
+	else {
+	    cm.sendNext("喵~，你回答了所有的问题。我可能不喜欢人类，但我不喜欢破坏一个承诺，所以，正如所承诺的，这里的橙色大理石.")
+	}
+    } else if (status == 8) { //gain marble
+	cm.gainItem(4031064, 1);
+	cm.sendOk("我们的生意结束了，非常感谢你！你现在可以走了!");
+	cm.safeDispose();
+    } else if (status >= 2 && status <= 6 && mode == 1) {//questions
+	var cont = true;
+	if (status > 2) {
+	    if (selection != correctAnswer.pop()){
+		cm.sendNext("嗯，反正所有人类犯错误！如果你想再来回答一次，那就给我带300个炸鸡.")
+		cm.safeDispose();
+		cont = false;
+	    }
+	}
+			
+	if (cont) {
+	    questionNum = Math.floor(Math.random() * questions.length);
+	    if (questionNum != (questions.length - 1)){
+		var temp;
+		temp = questions[questionNum];
+		questions[questionNum] = questions[questions.length - 1];
+		questions[questions.length - 1] = temp;
+		temp = answers[questionNum];
+		answers[questionNum] = answers[questions.length - 1];
+		answers[questions.length - 1] = temp;
+		temp = correctAnswer[questionNum];
+		correctAnswer[questionNum] = correctAnswer[questions.length - 1];
+		correctAnswer[questions.length - 1] = temp;
+	    }
+				
+	    var question = questions.pop();
+	    var answer = answers.pop();
+	    var prompt = "问题." + (status - 1) + ": " + question;
+				
+	    for (var i = 0; i < answer.length; i++) {
+		prompt += "\r\n#b#L" + i + "#" + answer[i] + "#l#k"
+	    }
+				
+	    cm.sendSimple(prompt);
+	}
+    }
 }

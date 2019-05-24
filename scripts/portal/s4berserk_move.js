@@ -1,23 +1,11 @@
-/**
--- Krypto JavaScript ------------------------------------------------------------------------------
-	4th Job Quest
--- By ---------------------------------------------------------------------------------------------
-	?
--- Description ------------------------------------------------------------------------------------
-	Warrior Berserk Skill Quest
--- Version Info -----------------------------------------------------------------------------------
-	1.0 - First Version
--- Additional Comments ----------------------------------------------------------------------------
-	Check the text neither is official or not
----------------------------------------------------------------------------------------------------
-**/
-
 function enter(pi) {
-	if(pi.getPlayer().getEventInstance().getProperty("canWarp")) {
-		pi.warp(910500200, "out01");
-		return true;
-	} else {
-		pi.playerMessage("You must defeat all the monsters first.");
-		return true;
-	}
+    var num = pi.getMap(910500200).getSpawnedMonstersOnMap();
+
+    if (num <= 0) {
+//pi.playPortalSE();
+        pi.warp(910500200, "pt00");
+        return true;
+    }
+    pi.playerMessage("�Ѿ��رյĴ��Ϳڡ�");
+    return true;
 }

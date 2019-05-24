@@ -117,7 +117,7 @@
                 <int name="state" value="2"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="2">
         <canvas name="0" width="118" height="71">
@@ -130,7 +130,7 @@
                 <int name="state" value="3"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="3">
         <canvas name="0" width="145" height="68">
@@ -143,7 +143,7 @@
                 <int name="state" value="4"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="4">
         <canvas name="0" width="145" height="68">
@@ -156,7 +156,7 @@
                 <int name="state" value="5"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="5">
         <canvas name="0" width="1" height="1">

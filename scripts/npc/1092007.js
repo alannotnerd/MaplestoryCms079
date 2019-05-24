@@ -1,51 +1,13 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/*
--- JavaScript -----------------
-Muirhat - Nautilus' Port
--- Created By --
-Cody/Cyndicate
--- Function --
-No specific function, useless text.
--- GMS LIKE --
-*/
-var status = 0;
-
 function start() {
-	status = -1;
-	action(1, 0, 0);
+	if (cm.isQuestActive(2175)) {
+	cm.sendOk("Äã×¼±¸¸ÉºÚÄ§·¨Ê¦µÄÊÖÏÂÁËÂğ?? ÎÒ½«°ÑÄã´«ËÍ¹ıÈ¥...");
+    } else {
+    cm.sendOk("ÕâºÚÄ§Ê¦ÕæËüÂèµÄ¸ÃËÀ!!");
+    cm.dispose();
+}
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-	if (mode == 1)
-		status++;
-	else
-		status--;
-	if (status == 0) {
-		cm.sendOk("é»‘é­”æœ¯å¸ˆå’Œä»–çš„è¿½éšè€…ã€‚Kyrinå’ŒNautilusçš„èˆ¹å‘˜ã€‚ä»–ä»¬å°†è¿½é€ï¼Œç›´åˆ°å…¶ä¸­ä¸€äººä¸å­˜åœ¨ï¼Œè¿™æ˜¯è‚¯å®šçš„ã€‚");
-		cm.dispose();
-		}
-	}
+    cm.warp(912000000,0);
+    cm.dispose();
 }

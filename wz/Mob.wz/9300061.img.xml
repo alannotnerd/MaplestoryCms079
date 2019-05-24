@@ -2,7 +2,7 @@
 <imgdir name="9300061.img">
     <imgdir name="info">
         <int name="level" value="30"/>
-        <int name="maxHP" value="5000"/>
+        <int name="maxHP" value="50000"/>
         <int name="maxMP" value="200"/>
         <int name="speed" value="5"/>
         <int name="PADamage" value="0"/>

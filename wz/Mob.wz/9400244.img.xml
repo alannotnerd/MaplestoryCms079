@@ -138,14 +138,14 @@
             <vector name="head" x="-10" y="-153"/>
             <int name="delay" value="90"/>
         </canvas>
-        <uol name="7" value="../stand/0"/>
-        <uol name="8" value="../stand/1"/>
-        <uol name="9" value="../stand/2"/>
-        <uol name="10" value="../stand/1"/>
-        <uol name="11" value="../stand/0"/>
-        <uol name="12" value="../stand/1"/>
-        <uol name="13" value="../stand/2"/>
-        <uol name="14" value="../stand/1"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/1" value="../stand/1"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="258" height="172">

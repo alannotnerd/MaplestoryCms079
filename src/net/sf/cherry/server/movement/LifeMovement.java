@@ -1,16 +1,15 @@
 package net.sf.cherry.server.movement;
 
-import java.awt.Point;
+import java.awt.*;
 
-public abstract interface LifeMovement extends LifeMovementFragment
-{
-  public abstract Point getPosition();
+public interface LifeMovement extends LifeMovementFragment {
+  Point getPosition();
 
-  public abstract int getNewstate();
+  int getNewstate();
 
-  public abstract int getDuration();
+  int getDuration();
 
-  public abstract int getType();
+  int getType();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

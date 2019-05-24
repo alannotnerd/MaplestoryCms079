@@ -182,14 +182,14 @@
                 <int name="state" value="3"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../1/hit"/>
-        <uol name="0" value="../1/0"/>
-        <uol name="1" value="../1/1"/>
-        <uol name="2" value="../1/2"/>
-        <uol name="3" value="../1/3"/>
-        <uol name="4" value="../1/4"/>
-        <uol name="5" value="../1/5"/>
-        <uol name="6" value="../1/6"/>
+        <uol name="../1/hit" value="../1/hit"/>
+        <uol name="../1/0" value="../1/0"/>
+        <uol name="../1/1" value="../1/1"/>
+        <uol name="../1/2" value="../1/2"/>
+        <uol name="../1/3" value="../1/3"/>
+        <uol name="../1/4" value="../1/4"/>
+        <uol name="../1/5" value="../1/5"/>
+        <uol name="../1/6" value="../1/6"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="3">
@@ -199,14 +199,14 @@
                 <int name="state" value="4"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../1/hit"/>
-        <uol name="0" value="../1/0"/>
-        <uol name="1" value="../1/1"/>
-        <uol name="2" value="../1/2"/>
-        <uol name="3" value="../1/3"/>
-        <uol name="4" value="../1/4"/>
-        <uol name="5" value="../1/5"/>
-        <uol name="6" value="../1/6"/>
+        <uol name="../1/hit" value="../1/hit"/>
+        <uol name="../1/0" value="../1/0"/>
+        <uol name="../1/1" value="../1/1"/>
+        <uol name="../1/2" value="../1/2"/>
+        <uol name="../1/3" value="../1/3"/>
+        <uol name="../1/4" value="../1/4"/>
+        <uol name="../1/5" value="../1/5"/>
+        <uol name="../1/6" value="../1/6"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="4">
@@ -258,13 +258,13 @@
                 <int name="delay" value="130"/>
             </canvas>
         </imgdir>
-        <uol name="0" value="../1/0"/>
-        <uol name="1" value="../1/1"/>
-        <uol name="2" value="../1/2"/>
-        <uol name="3" value="../1/3"/>
-        <uol name="4" value="../1/4"/>
-        <uol name="5" value="../1/5"/>
-        <uol name="6" value="../1/6"/>
+        <uol name="../1/0" value="../1/0"/>
+        <uol name="../1/1" value="../1/1"/>
+        <uol name="../1/2" value="../1/2"/>
+        <uol name="../1/3" value="../1/3"/>
+        <uol name="../1/4" value="../1/4"/>
+        <uol name="../1/5" value="../1/5"/>
+        <uol name="../1/6" value="../1/6"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="5">

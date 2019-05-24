@@ -49,8 +49,8 @@
         </canvas>
     </imgdir>
     <imgdir name="skill1">
-        <uol name="0" value="../stand/0"/>
-        <uol name="1" value="../stand/1"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
     </imgdir>
     <imgdir name="die1">
         <canvas name="0" width="215" height="195">

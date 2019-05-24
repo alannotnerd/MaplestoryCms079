@@ -9,59 +9,62 @@ package donggua.zdhf;
 import java.io.Serializable;
 
 /**
- *
  * @author apple
  */
-public class MemberInfo implements Serializable{
-    
-    /**玩家ID*/
-    private int charId;
-    
-    /**剩余的血量和蓝量存储*/
-    private int storeHp;
-    private int storeMp;
+public class MemberInfo implements Serializable {
 
-    /**
-     * @return the storeHp
-     */
-    public int getStoreHp() {
-        return storeHp;
-    }
+  /**
+   * 玩家ID
+   */
+  private int charId;
 
-    /**
-     * @param storeHp the storeHp to set
-     */
-    public void setStoreHp(int storeHp) {
-        this.storeHp = storeHp;
-    }
+  /**
+   * 剩余的血量和蓝量存储
+   */
+  private int storeHp;
+  private int storeMp;
 
-    /**
-     * @return the storeMp
-     */
-    public int getStoreMp() {
-        return storeMp;
-    }
+  /**
+   * @return the storeHp
+   */
+  public int getStoreHp() {
+    return storeHp;
+  }
 
-    /**
-     * @param storeMp the storeMp to set
-     */
-    public void setStoreMp(int storeMp) {
-        this.storeMp = storeMp;
-    }
+  /**
+   * @param storeHp the storeHp to set
+   */
+  public void setStoreHp(int storeHp) {
+    this.storeHp = storeHp;
+  }
 
-    /**
-     * @return the charId
-     */
-    public int getCharId() {
-        return charId;
-    }
+  /**
+   * @return the storeMp
+   */
+  public int getStoreMp() {
+    return storeMp;
+  }
 
-    /**
-     * @param charId the charId to set
-     */
-    public void setCharId(int charId) {
-        this.charId = charId;
-    }
-    
-    
+  /**
+   * @param storeMp the storeMp to set
+   */
+  public void setStoreMp(int storeMp) {
+    this.storeMp = storeMp;
+  }
+
+  /**
+   * @return the charId
+   */
+  public int getCharId() {
+    return charId;
+  }
+
+  /**
+   * @param charId the charId to set
+   */
+  public void setCharId(int charId) {
+    this.charId = charId;
+  }
+
+
 }

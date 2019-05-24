@@ -1,30 +1,20 @@
-/*
-	This file was written by "StellarAshes" <stellar_dust@hotmail.com> 
-			as a part of the Guild package for
-			the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
+function start() {
+	//cm.sendSimple("<3 <3");
+	cm.sendSimple("#b你好 #k#h  ##e  #b我是排名系统.#k\r\n#L0##r家族排名\n\#l\r\n#L1##g玩家排名\n\#l\r\n#L2##b金币排名#l");//\r\n#L2##b金币排名#l
+}
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/* Honorable Rock */
-
-function start()
-{
+function action(mode, type, selection) {
+	cm.dispose();
+	if (selection == 0) {	
 	cm.displayGuildRanks();
 	cm.dispose();
+	}
+	else if (selection == 1) {
+	cm.showlvl();
+	cm.dispose();
+	}
+	else if (selection == 2) {
+	cm.showmeso();
+	cm.dispose();
+	}
 }

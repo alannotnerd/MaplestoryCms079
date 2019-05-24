@@ -8,6 +8,6 @@ function enter(pi) {
 	else if (pi.isQuestActive(1044))
 		pi.warp(1010400, 4);
 	else
-		pi.playerMessage("鎺ュ彈楹﹀姞鐨勪慨鐐肩殑鍐掗櫓瀹舵墠鍙互鍏ュ満.");
+		pi.playerMessage("接受麦加的修炼的冒险家才可以入场.");
 	return false;
 }

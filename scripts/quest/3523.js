@@ -1,18 +1,40 @@
+/*
+	NPC Name: 		Grendel the really old
+	Description: 		Quest - In search of the lost memory
+*/
 var status = -1;
 
 function start(mode, type, selection) {
-	if (mode == -1) {
-		qm.dispose();
-	} else {
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			qm.sendAcceptDecline("å•Šï¼ŒåŸæ¥æ˜¯ä½ ã€‚æ²¡æƒ³åˆ°å¾ˆä¹…ä¹‹åè¿˜èƒ½çœ‹åˆ°ä½ ã€‚æˆ‘å¾ˆé«˜å…´çœ‹åˆ°æ›¾ç»æ˜¯é’æ¶©çš„æ–°æ‰‹çš„ä½ æˆä¸ºäº†å‡ºè‰²çš„æˆ˜å£«ã€‚çœ‹åˆ°å¾ˆä¹…ä¸è§ä½†è¿˜è®°å¾—æˆ‘çš„ä½ ï¼Œæˆ‘çš„å¿ƒé‡Œå……æ»¡äº†æ¸©æš–ã€‚ä½ æ˜¯åœ¨å¯»æ‰¾é—å¿˜çš„è®°å¿†å—ï¼Ÿæƒ³èµ·æ¥é‚£å·²ç»æ˜¯å¾ˆä¹…å¾ˆä¹…ä»¥å‰çš„äº‹äº†ï¼Œäº‹éš”å¤šå¹´ï¼ŒçœŸæ˜¯è®©äººæ€€å¿µå•Šã€‚è¿™æ ·å§ã€‚ä½ å†å»#bæ—è§‚è€…#kå§ã€‚ç›¸ä¿¡ä»–ä¼šå¸®åŠ©ä½ ã€‚é‚£ä¹ˆå†è§â€¦â€¦");
-		} else if (status == 1) {
-			qm.completeQuest();
-			qm.dispose();
-		}
-	}
+    if (mode == -1) {
+        qm.dispose();
+    } else {
+        if (mode == 1) {
+            status++;
+        } else {
+            status--;
+        }
+        if (status == 0) {
+            qm.sendNext("°¡£¬Ô­À´ÊÇÄã¡£Ã»Ïëµ½ºÜ¾ÃÖ®ºó»¹ÄÜ¿´µ½Äã¡£ÎÒºÜ¸ßĞË¿´µ½Ôø¾­ÊÇÇàÉ¬µÄĞÂÊÖµÄÄã³ÉÎªÁË³öÉ«µÄÕ½Ê¿¡£¿´µ½ºÜ¾Ã²»¼ûµ«»¹¼ÇµÃÎÒµÄÄã£¬ÎÒµÄĞÄÀï³äÂúÁËÎÂÅ¯¡£ÄãÊÇÔÚÑ°ÕÒÒÅÍüµÄ¼ÇÒäÂğ£¿ÏëÆğÀ´ÄÇÒÑ¾­ÊÇºÜ¾ÃºÜ¾ÃÒÔÇ°µÄÊÂÁË£¬ÊÂ¸ô¶àÄê£¬ÕæÊÇÈÃÈË»³Äî°¡¡£ÕâÑù°É¡£ÄãÔÙÈ¥#bÅÔ¹ÛÕß#k°É¡£ÏàĞÅËû»á°ïÖúÄã¡£ÄÇÃ´ÔÙ¼û¡­¡­");
+            qm.forceCompleteQuest();
+            qm.forceCompleteQuest(3507);
+            qm.dispose();
+        }
+        //qm.forceStartQuest();
+    }
+}
+
+function end(mode, type, selection) {
+    if (mode == -1) {
+        qm.dispose();
+    } else {
+        if (mode == 1) {
+            status++;
+        } else {
+            status--;
+        }
+        if (status == 0) {
+            qm.sendNextPrev("Test");
+            qm.dispose();
+        }
+    }
 }

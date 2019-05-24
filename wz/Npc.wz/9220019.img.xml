@@ -28,14 +28,14 @@
             <vector name="origin" x="22" y="66"/>
             <int name="delay" value="600"/>
         </canvas>
-        <uol name="4" value="1"/>
-        <uol name="5" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
         <canvas name="6" width="46" height="66">
             <vector name="origin" x="22" y="66"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="7" value="1"/>
-        <uol name="8" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="46" height="66">

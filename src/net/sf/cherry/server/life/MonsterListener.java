@@ -2,9 +2,8 @@ package net.sf.cherry.server.life;
 
 import net.sf.cherry.client.MapleCharacter;
 
-public abstract interface MonsterListener
-{
-  public abstract void monsterKilled(MapleMonster paramMapleMonster, MapleCharacter paramMapleCharacter);
+public interface MonsterListener {
+  void monsterKilled(MapleMonster paramMapleMonster, MapleCharacter paramMapleCharacter);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

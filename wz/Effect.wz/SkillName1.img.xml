@@ -27,7 +27,7 @@
     </imgdir>
     <imgdir name="1100003">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1100002/0"/>
+        <uol name="../1100002/0" value="../1100002/0"/>
     </imgdir>
     <imgdir name="1101004">
         <int name="fixed" value="1"/>
@@ -59,15 +59,15 @@
     </imgdir>
     <imgdir name="1200002">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1100002/0"/>
+        <uol name="../1100002/0" value="../1100002/0"/>
     </imgdir>
     <imgdir name="1200003">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1100002/0"/>
+        <uol name="../1100002/0" value="../1100002/0"/>
     </imgdir>
     <imgdir name="1201004">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1101004/0"/>
+        <uol name="../1101004/0" value="../1101004/0"/>
     </imgdir>
     <imgdir name="1201005">
         <int name="fixed" value="1"/>
@@ -85,15 +85,15 @@
     </imgdir>
     <imgdir name="1201007">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1101007/0"/>
+        <uol name="../1101007/0" value="../1101007/0"/>
     </imgdir>
     <imgdir name="1300002">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1100002/0"/>
+        <uol name="../1100002/0" value="../1100002/0"/>
     </imgdir>
     <imgdir name="1300003">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../1100002/0"/>
+        <uol name="../1100002/0" value="../1100002/0"/>
     </imgdir>
     <imgdir name="1301004">
         <int name="fixed" value="1"/>

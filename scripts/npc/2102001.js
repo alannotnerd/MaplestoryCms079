@@ -1,24 +1,26 @@
+/*
+	Slyn - Before Takeoff To Orbis(260000110)
+*/
+
+var gm;
+
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    status = -1;
+    gm = cm.getEventManager("Geenie");
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-		return;
-	} else {
-		status++;
-		if(mode == 0) {
-			cm.sendOk("æ—…é€”è¿˜å¾ˆæ¼«é•¿...");
-			cm.dispose();
-			return;
-		}
-		if(status == 0) {
-			cm.sendYesNo("ä½ ç¡®å®šè¦ç¦»å¼€è¿™é‡Œå—ï¼Ÿ");
-		} else if(status == 1) {
-			cm.warp(260000100);
-			cm.dispose();
-		}
-	}
+    status++;
+    if(mode == 0) {
+	cm.sendOk("ÕâÊÇºÃµÄÑ¡Ôñ£¡£¡");
+	cm.dispose();
+	return;
+    }
+    if(status == 0) {
+	cm.sendYesNo("ÄãÒªÀë¿ª´¬ÉÏ??");
+    } else if(status == 1) {
+	cm.warp(260000100);
+	cm.dispose();
+    }
 }

@@ -22,7 +22,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
         <canvas name="4" width="46" height="63">
             <vector name="origin" x="24" y="54"/>
             <int name="z" value="0"/>
@@ -38,7 +38,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="7" value="5"/>
+        <uol name="5" value="5"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="46" height="63">
@@ -61,10 +61,10 @@
             <int name="z" value="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="4" value="1"/>
-        <uol name="5" value="0"/>
-        <uol name="6" value="1"/>
-        <uol name="7" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="0" value="0"/>
         <canvas name="8" width="46" height="63">
             <vector name="origin" x="24" y="54"/>
             <int name="z" value="0"/>
@@ -75,7 +75,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="180"/>
         </canvas>
-        <uol name="10" value="1"/>
+        <uol name="1" value="1"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

@@ -1,14 +1,15 @@
 /*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
+	This file is part of the OdinMS Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
+		       Matthias Butz <matze@odinms.de>
+		       Jan Christian Meyer <vimes@odinms.de>
 
     This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation version 3 as published by
+    the Free Software Foundation. You may not use, modify or distribute
+    this program under any other version of the GNU Affero General Public
+    License.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -18,52 +19,51 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 /**
 -- Odin JavaScript --------------------------------------------------------------------------------
-	VIP Cab - Victoria Road : Ellinia (101000000)
+	VIP Cab - Victoria Road : Lith Harbor (104000000)
 -- By ---------------------------------------------------------------------------------------------
 	Xterminator
 -- Version Info -----------------------------------------------------------------------------------
 	1.0 - First Version by Xterminator
 ---------------------------------------------------------------------------------------------------
 **/
-
 var status = 0;
 var cost;
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    status = -1;
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
+    if (status >= 1 && mode == 0){
+	cm.sendNext("Õâ¸öÕòÒ²ÓĞºÜ¶àÌá¹©¡£ÕÒµ½ÎÒÃÇÈç¹ûµ±Äã¾õµÃÓĞ±ØÒªÈ¥µ½ÂìÒÏËíµÀ");
+	cm.dispose();
+	return;	
+    }
+    if (mode == 1)
+	status++;
+    else
+	status--;
+    if (status == 0) {
+	cm.sendNext("ÄãºÃ£¡ÕâÊÇ³ö×â³µÖ»ÓĞVIP¿Í»§¡£¶ø²»ÊÇÖ»´øÄãµ½²»Í¬µÄ³ÇÕò£¬ÈçÕı¹æ³ö×â³µ£¬ÎÒÃÇÌá¹©Ò»¸ö¸üºÃµÄ·şÎñÖµµÃ¹ó±ö¼¶µÄ¡£ÕâÊÇÒ»¸öÓĞµã¹ó£¬µ«ÊÇ¶ÔÓÚ......Ö»ÓĞ10,000 ·ã±Ò£¬ÎÒÃÇ»á´øÄã°²È«µØËÍµ½\n #bÂìÒÏ¿ó¿Ó#k.");
+    } else if (status == 1) {
+	var job = cm.getJob();
+	if (job == 0 || job == 2000 || job == 1000) {
+	    cm.sendYesNo("ÎÒÃÇÓĞ¶ÔĞÂÊÖ90%µÄ´òÕÛ ËùÒÔÄãÖ»ĞèÒª»¨ #b1,000 ·ã±Ò#k ÊÇ·ñÒªÈ¥ÁËÄØ??");
+	    cost = 1000;
 	} else {
-	if (status >= 1 && mode == 0) {
-		cm.sendNext("åœ¨è¿™ä¸ªæ‘å­é‡Œè¿˜æœ‰è®¸å¤šæ¼‚äº®çš„æ™¯ç‚¹ï¼Œå¦‚æœä½ æƒ³å»èš‚èšæ´å¹¿åœºï¼Œæ¬¢è¿éšæ—¶ä½¿ç”¨æˆ‘ä»¬çš„å‡ºç§Ÿè½¦æœåŠ¡ã€‚");
-		cm.dispose();
-		return;
+	    cm.sendYesNo("µ½ÁËÄÇ±ßÓĞ¸ö24Ğ¡Ê±µÄÅÅµµ¿ÉÒÔ¹ºÂò²¹Æ· #b10,000 ·ã±Ò#k?");
+	    cost = 10000;
 	}
-	if (mode == 1)
-		status++;
-	else
-		status--;
-	if (status == 0) {
-		cm.sendNext("æ‚¨å¥½~ï¼æˆ‘ä»¬æ˜¯æ˜Ÿçº§å‡ºç§Ÿè½¦ã€‚ä¸åŒäºæ‘è½ä¹‹é—´æ¥å¾€çš„ä¸€åŠçš„ä¸­å·´æˆ‘ä»¬ç»™æ‚¨æä¾›æ›´é«˜çº§çš„æœåŠ¡ã€‚å› æ­¤è½¦è´¹æœ‰ç‚¹è´µâ€¦æ‚¨åªè¦æ”¯ä»˜10000é‡‘å¸ï¼Œæˆ‘ä»¬å°±ä¼šå°†æ‚¨å®‰å…¨è¿…é€Ÿçš„é€åˆ°#bèš‚èšæ´å¹¿åœº#kã€‚ä½†æ˜¯ç­‰çº§å¤ªä½è¿›å»ä¼šå¾ˆå±é™©æ˜¯å¦è¦è¿›å»å‘¢ï¼Ÿ");
-	} else if (status == 1) {
-		cm.sendYesNo("èš‚èšæ´å¹¿åœºæ˜¯ä½äºé‡‘é“¶å²›ä¸­é—´çš„è¿·å®«æ·±å¤„ã€‚åœ¨é‚£é‡Œæœ‰24å°æ—¶æ’æŒ¡ã€‚ä½ æ˜¯å¦è¦ä»˜10000é‡‘å¸åå»èš‚èšæ´å¹¿åœºï¼Ÿ");
-		cost = 1000;
-	} else if (status == 2) {
-		if (cm.getMeso() < cost) {
-			cm.sendNext("å¯¹ä¸èµ·ï¼Œä½ çš„é‡‘å¸ä¸å¤Ÿæ”¯ä»˜è½¦è´¹ã€‚");
-			cm.dispose();
-		} else {
-			cm.gainMeso(-cost);
-			cm.warp(105070001, 0);
-			cm.dispose();
-			}
-		}
+    } else if (status == 2) {
+	if (cm.getMeso() < cost) {
+	    cm.sendNext("ÇëÈ·ÈÏÄãÊÇ·ñÓĞ×ã¹»µÄ·ã±Ò!")
+	} else {
+	    cm.gainMeso(-cost);
+	    cm.warp(105070001, 0);
 	}
+	cm.dispose();
+    }
 }

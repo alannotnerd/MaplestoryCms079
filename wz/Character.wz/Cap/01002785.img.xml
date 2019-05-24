@@ -51,7 +51,7 @@
             </imgdir>
             <imgdir name="walk1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -63,7 +63,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -77,7 +77,7 @@
             </imgdir>
             <imgdir name="walk2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -89,7 +89,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -103,29 +103,29 @@
             </imgdir>
             <imgdir name="stand1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stand2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="alert">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -137,247 +137,247 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingPF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shootF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="proneStab">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -391,26 +391,26 @@
             </imgdir>
             <imgdir name="prone">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="heal">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="fly">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="jump">
@@ -426,12 +426,12 @@
             </imgdir>
             <imgdir name="sit">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="ladder">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -445,7 +445,7 @@
             </imgdir>
             <imgdir name="rope">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -490,7 +490,7 @@
             </imgdir>
             <imgdir name="walk1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -502,7 +502,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -516,7 +516,7 @@
             </imgdir>
             <imgdir name="walk2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -528,7 +528,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -542,29 +542,29 @@
             </imgdir>
             <imgdir name="stand1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stand2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="alert">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -576,247 +576,247 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingPF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shootF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="proneStab">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -830,26 +830,26 @@
             </imgdir>
             <imgdir name="prone">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="heal">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="fly">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="jump">
@@ -865,12 +865,12 @@
             </imgdir>
             <imgdir name="sit">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="ladder">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -884,7 +884,7 @@
             </imgdir>
             <imgdir name="rope">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -929,7 +929,7 @@
             </imgdir>
             <imgdir name="walk1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -941,7 +941,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -955,7 +955,7 @@
             </imgdir>
             <imgdir name="walk2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -967,7 +967,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -981,29 +981,29 @@
             </imgdir>
             <imgdir name="stand1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stand2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="alert">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1015,247 +1015,247 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingPF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shootF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="proneStab">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1269,26 +1269,26 @@
             </imgdir>
             <imgdir name="prone">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="heal">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="fly">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="jump">
@@ -1304,12 +1304,12 @@
             </imgdir>
             <imgdir name="sit">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="ladder">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -1323,7 +1323,7 @@
             </imgdir>
             <imgdir name="rope">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -1368,7 +1368,7 @@
             </imgdir>
             <imgdir name="walk1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1380,7 +1380,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -1394,7 +1394,7 @@
             </imgdir>
             <imgdir name="walk2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1406,7 +1406,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -1420,29 +1420,29 @@
             </imgdir>
             <imgdir name="stand1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stand2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="alert">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1454,247 +1454,247 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingPF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shootF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="proneStab">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1708,26 +1708,26 @@
             </imgdir>
             <imgdir name="prone">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="heal">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="fly">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="jump">
@@ -1743,12 +1743,12 @@
             </imgdir>
             <imgdir name="sit">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="ladder">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -1762,7 +1762,7 @@
             </imgdir>
             <imgdir name="rope">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -1807,7 +1807,7 @@
             </imgdir>
             <imgdir name="walk1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1819,7 +1819,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -1833,7 +1833,7 @@
             </imgdir>
             <imgdir name="walk2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1845,7 +1845,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -1859,29 +1859,29 @@
             </imgdir>
             <imgdir name="stand1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stand2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="alert">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -1893,247 +1893,247 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingPF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shootF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="proneStab">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -2147,26 +2147,26 @@
             </imgdir>
             <imgdir name="prone">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="heal">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="fly">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="jump">
@@ -2182,12 +2182,12 @@
             </imgdir>
             <imgdir name="sit">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="ladder">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -2201,7 +2201,7 @@
             </imgdir>
             <imgdir name="rope">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -2246,7 +2246,7 @@
             </imgdir>
             <imgdir name="walk1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -2258,7 +2258,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -2272,7 +2272,7 @@
             </imgdir>
             <imgdir name="walk2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -2284,7 +2284,7 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
                     <canvas name="default" width="48" height="22">
@@ -2298,29 +2298,29 @@
             </imgdir>
             <imgdir name="stand1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stand2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="alert">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -2332,247 +2332,247 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingO3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingT3">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingP2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="swingPF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabO2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabOF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabT2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
-                    <uol name="defaultAc" value="../../default/defaultAc"/>
+                    <uol name="../../default/default" value="../../default/default"/>
+                    <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
                 </imgdir>
             </imgdir>
             <imgdir name="stabTF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot1">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shoot2">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="shootF">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="proneStab">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="48" height="22">
@@ -2586,26 +2586,26 @@
             </imgdir>
             <imgdir name="prone">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="heal">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="fly">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
                 <imgdir name="1">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="jump">
@@ -2621,12 +2621,12 @@
             </imgdir>
             <imgdir name="sit">
                 <imgdir name="0">
-                    <uol name="default" value="../../default/default"/>
+                    <uol name="../../default/default" value="../../default/default"/>
                 </imgdir>
             </imgdir>
             <imgdir name="ladder">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -2640,7 +2640,7 @@
             </imgdir>
             <imgdir name="rope">
                 <imgdir name="0">
-                    <uol name="default" value="../../backDefault/default"/>
+                    <uol name="../../backDefault/default" value="../../backDefault/default"/>
                 </imgdir>
                 <imgdir name="1">
                     <canvas name="default" width="47" height="21">
@@ -2674,7 +2674,7 @@
     </imgdir>
     <imgdir name="walk1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="48" height="22">
@@ -2686,7 +2686,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="48" height="22">
@@ -2700,7 +2700,7 @@
     </imgdir>
     <imgdir name="walk2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="48" height="22">
@@ -2712,7 +2712,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="48" height="22">
@@ -2726,29 +2726,29 @@
     </imgdir>
     <imgdir name="stand1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="alert">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="48" height="22">
@@ -2760,247 +2760,247 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO3">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingOF">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT3">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingTF">
         <imgdir name="0">
-            <uol name="default" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingP1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingP2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingPF">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabO1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabO2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabOF">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabT1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabT2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defaultAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defaultAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defaultAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="4">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="shootF">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="48" height="22">
@@ -3014,26 +3014,26 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">
@@ -3049,12 +3049,12 @@
     </imgdir>
     <imgdir name="sit">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="ladder">
         <imgdir name="0">
-            <uol name="default" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="47" height="21">
@@ -3068,7 +3068,7 @@
     </imgdir>
     <imgdir name="rope">
         <imgdir name="0">
-            <uol name="default" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="47" height="21">

@@ -27,8 +27,8 @@
                 <int name="state" value="2"/>
             </imgdir>
         </imgdir>
-        <uol name="0" value="../0/0"/>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/0" value="../0/0"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="2">
         <imgdir name="event">
@@ -37,8 +37,8 @@
                 <int name="state" value="3"/>
             </imgdir>
         </imgdir>
-        <uol name="0" value="../1/0"/>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../1/0" value="../1/0"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="3">
         <imgdir name="event">
@@ -47,8 +47,8 @@
                 <int name="state" value="4"/>
             </imgdir>
         </imgdir>
-        <uol name="0" value="../2/0"/>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../2/0" value="../2/0"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="4">
         <imgdir name="event">
@@ -57,8 +57,8 @@
                 <int name="state" value="5"/>
             </imgdir>
         </imgdir>
-        <uol name="0" value="../0/0"/>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/0" value="../0/0"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="5">
         <imgdir name="event">
@@ -67,7 +67,7 @@
                 <int name="state" value="6"/>
             </imgdir>
         </imgdir>
-        <uol name="0" value="../0/0"/>
+        <uol name="../0/0" value="../0/0"/>
         <imgdir name="hit">
             <canvas name="0" width="43" height="33">
                 <vector name="origin" x="21" y="33"/>

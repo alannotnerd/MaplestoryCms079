@@ -5938,7 +5938,7 @@
         <int name="SN" value="10000430"/>
         <int name="ItemId" value="5000016"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="2580"/>
+        <int name="Price" value="258000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="8"/>
@@ -10237,7 +10237,7 @@
         <int name="SN" value="10000743"/>
         <int name="ItemId" value="5330000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="30"/>
+        <int name="Price" value="300"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="8"/>
@@ -12822,7 +12822,7 @@
         <int name="SN" value="10000930"/>
         <int name="ItemId" value="5370001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="2100000000"/>
+        <int name="Price" value="200"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="9"/>
@@ -12833,7 +12833,7 @@
         <int name="SN" value="10000931"/>
         <int name="ItemId" value="5370000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="2100000000"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="7"/>
         <int name="Priority" value="9"/>
@@ -20357,7 +20357,7 @@
         <int name="SN" value="10001477"/>
         <int name="ItemId" value="5350001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="23"/>
@@ -21765,7 +21765,7 @@
         <int name="SN" value="10001578"/>
         <int name="ItemId" value="5500000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="80"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="91"/>
@@ -24162,7 +24162,7 @@
         <int name="SN" value="10001755"/>
         <int name="ItemId" value="5581001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="80"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="98"/>
@@ -24715,7 +24715,7 @@
         <int name="SN" value="10001796"/>
         <int name="ItemId" value="5350002"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="98"/>
@@ -60332,7 +60332,7 @@
         <int name="SN" value="20400182"/>
         <int name="ItemId" value="1040140"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="70"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="10"/>
         <int name="Priority" value="1"/>
@@ -60925,7 +60925,7 @@
         <int name="SN" value="20400225"/>
         <int name="ItemId" value="1042165"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="10000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="1"/>
@@ -62958,7 +62958,7 @@
         <int name="SN" value="20500133"/>
         <int name="ItemId" value="1060122"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="70"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="10"/>
         <int name="Priority" value="1"/>
@@ -73543,7 +73543,7 @@
         <int name="SN" value="30000044"/>
         <int name="ItemId" value="5122000"/>
         <int name="Count" value="2"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="9"/>
@@ -73624,7 +73624,7 @@
         <int name="SN" value="30000050"/>
         <int name="ItemId" value="5120000"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73646,7 +73646,7 @@
         <int name="SN" value="30000052"/>
         <int name="ItemId" value="5120001"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73668,7 +73668,7 @@
         <int name="SN" value="30000054"/>
         <int name="ItemId" value="5120002"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73690,7 +73690,7 @@
         <int name="SN" value="30000056"/>
         <int name="ItemId" value="5120003"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73712,7 +73712,7 @@
         <int name="SN" value="30000058"/>
         <int name="ItemId" value="5120004"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73734,7 +73734,7 @@
         <int name="SN" value="30000060"/>
         <int name="ItemId" value="5120005"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73756,7 +73756,7 @@
         <int name="SN" value="30000062"/>
         <int name="ItemId" value="5120006"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73778,7 +73778,7 @@
         <int name="SN" value="30000064"/>
         <int name="ItemId" value="5120007"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73800,7 +73800,7 @@
         <int name="SN" value="30000066"/>
         <int name="ItemId" value="5120009"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73822,7 +73822,7 @@
         <int name="SN" value="30000068"/>
         <int name="ItemId" value="5120008"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73844,7 +73844,7 @@
         <int name="SN" value="30000070"/>
         <int name="ItemId" value="5120015"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73866,7 +73866,7 @@
         <int name="SN" value="30000072"/>
         <int name="ItemId" value="5100000"/>
         <int name="Count" value="3"/>
-        <int name="Price" value="60"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73877,7 +73877,7 @@
         <int name="SN" value="30000073"/>
         <int name="ItemId" value="5122000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73899,7 +73899,7 @@
         <int name="SN" value="30000075"/>
         <int name="ItemId" value="5121016"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73921,7 +73921,7 @@
         <int name="SN" value="30000077"/>
         <int name="ItemId" value="5121015"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73943,7 +73943,7 @@
         <int name="SN" value="30000079"/>
         <int name="ItemId" value="5121020"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73965,7 +73965,7 @@
         <int name="SN" value="30000081"/>
         <int name="ItemId" value="5281000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -73987,7 +73987,7 @@
         <int name="SN" value="30000083"/>
         <int name="ItemId" value="5281001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -74009,7 +74009,7 @@
         <int name="SN" value="30000085"/>
         <int name="ItemId" value="5121008"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="99"/>
@@ -75209,7 +75209,7 @@
         <int name="SN" value="30100084"/>
         <int name="ItemId" value="5076000"/>
         <int name="Count" value="2"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="9"/>
@@ -75519,7 +75519,7 @@
         <int name="SN" value="30200015"/>
         <int name="ItemId" value="5041000"/>
         <int name="Count" value="5"/>
-        <int name="Price" value="2"/>
+        <int name="Price" value="20000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="7"/>
@@ -75575,7 +75575,7 @@
         <int name="SN" value="30200019"/>
         <int name="ItemId" value="5041000"/>
         <int name="Count" value="2"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="9"/>
@@ -75743,7 +75743,7 @@
         <int name="SN" value="30200031"/>
         <int name="ItemId" value="5043000"/>
         <int name="Count" value="10"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="10000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="9"/>
@@ -75757,7 +75757,7 @@
         <int name="SN" value="30200032"/>
         <int name="ItemId" value="5043000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="7"/>
         <int name="Priority" value="99"/>
@@ -77453,7 +77453,7 @@
         <int name="SN" value="50200000"/>
         <int name="ItemId" value="5140000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="80"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="1"/>
@@ -77766,7 +77766,7 @@
         <int name="SN" value="50200026"/>
         <int name="ItemId" value="5370001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="2100000000"/>
+        <int name="Price" value="200"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="21"/>
@@ -77777,7 +77777,7 @@
         <int name="SN" value="50200027"/>
         <int name="ItemId" value="5370000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="2100000000"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="7"/>
         <int name="Priority" value="22"/>
@@ -78847,7 +78847,7 @@
         <int name="SN" value="50400045"/>
         <int name="ItemId" value="5350001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="9"/>
@@ -78987,7 +78987,7 @@
         <int name="SN" value="50400055"/>
         <int name="ItemId" value="5500000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="80"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="43"/>
@@ -79001,7 +79001,7 @@
         <int name="SN" value="50400056"/>
         <int name="ItemId" value="5130000"/>
         <int name="Count" value="2"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="9"/>
@@ -79453,7 +79453,7 @@
         <int name="SN" value="50400090"/>
         <int name="ItemId" value="5500001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="10"/>
+        <int name="Price" value="1000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="99"/>
@@ -79801,7 +79801,7 @@
         <int name="SN" value="50400117"/>
         <int name="ItemId" value="5581001"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="80"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="1"/>
         <int name="Priority" value="56"/>
@@ -79867,7 +79867,7 @@
         <int name="SN" value="50400123"/>
         <int name="ItemId" value="5350002"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="50"/>
+        <int name="Price" value="500"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="90"/>
@@ -81296,12 +81296,12 @@
         <int name="SN" value="60000021"/>
         <int name="ItemId" value="5000016"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="2580"/>
+        <int name="Price" value="258000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="1"/>
         <int name="Gender" value="2"/>
-        <int name="OnSale" value="1"/>
+        <int name="OnSale" value="0"/>
         <int name="PbCash" value="30"/>
         <int name="PbPoint" value="30"/>
         <int name="PbGift" value="30"/>
@@ -90622,7 +90622,7 @@
         <int name="SN" value="92000018"/>
         <int name="ItemId" value="5510000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="70"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="10"/>
@@ -90636,7 +90636,7 @@
         <int name="SN" value="92000019"/>
         <int name="ItemId" value="5500000"/>
         <int name="Count" value="1"/>
-        <int name="Price" value="80"/>
+        <int name="Price" value="6000"/>
         <int name="Bonus" value="0"/>
         <int name="Period" value="0"/>
         <int name="Priority" value="10"/>

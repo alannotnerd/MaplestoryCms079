@@ -1,320 +1,172 @@
-function start() {
+var status = -1;
 
-if (cm.haveItem(4031120) && cm.getChar().getMapId() == 803000800){
-    cm.sendSimple ("#b在这里必须要打败BOSS，在他们身上得到通过凭证，您才可以通过\r\n#d剩余:#r" + cm.getzb() + "元宝\r\n【需要25000元宝】 \r\n#L0#挑战海之魔女#l\r\n#L2#兑换通行证#l\r\n#L1#挑战下一关#l ");
+function start() {
+	cm.removeAll(4001256);
+	cm.removeAll(4001257);
+	cm.removeAll(4001258);
+	cm.removeAll(4001259);
+	cm.removeAll(4001260);
+		if (cm.getPlayer().getLevel() < 90) {
+			cm.sendOk("There is a level requirement of 90 to attempt Crimsonwood Keep.");
+			cm.dispose();
+			return;
+		}
+    var em = cm.getEventManager("CWKPQ");
+
+    if (em == null) {
+	cm.sendOk("The event isn't started, please contact a GM.");
+	cm.dispose();
+	return;
+    }
+    var prop = em.getProperty("state");
+
+    if (prop == null || prop.equals("0")) {
+	var squadAvailability = cm.getSquadAvailability("CWKPQ");
+	if (squadAvailability == -1) {
+	    status = 0;
+	    cm.sendYesNo("Are you interested in becoming the leader of the expedition Squad?");
+
+	} else if (squadAvailability == 1) {
+	    // -1 = Cancelled, 0 = not, 1 = true
+	    var type = cm.isSquadLeader("CWKPQ");
+	    if (type == -1) {
+		cm.sendOk("The squad has ended, please re-register.");
+		cm.dispose();
+	    } else if (type == 0) {
+		var memberType = cm.isSquadMember("CWKPQ");
+		if (memberType == 2) {
+		    cm.sendOk("You been banned from the squad.");
+		    cm.dispose();
+		} else if (memberType == 1) {
+		    status = 5;
+		    cm.sendSimple("What do you want to do? \r\n#b#L0#Check out members#l \r\n#b#L1#Join the squad#l \r\n#b#L2#Withdraw from squad#l \r\n#b#L3#Check out jobs#l");
+		} else if (memberType == -1) {
+		    cm.sendOk("The squad has ended, please re-register.");
+		    cm.dispose();
+		} else {
+		    status = 5;
+		    cm.sendSimple("What do you want to do? \r\n#b#L0#Check out members#l \r\n#b#L1#Join the squad#l \r\n#b#L2#Withdraw from squad#l \r\n#b#L3#Check out jobs#l");
+		}
+	    } else { // Is leader
+		status = 10;
+		cm.sendSimple("What do you want to do? \r\n#b#L0#Check out members#l \r\n#b#L1#Remove member#l \r\n#b#L2#Edit restricted list#l \r\n#b#L3#Check out jobs#l \r\n#r#L4#Enter map#l");
+	    // TODO viewing!
+	    }
+	} else {
+			var eim = cm.getDisconnected("CWKPQ");
+			if (eim == null) {
+				cm.sendOk("The squad's battle against the boss has already begun.");
+				cm.safeDispose();
+			} else {
+				cm.sendYesNo("Ah, you have returned. Would you like to join your squad in the fight again?");
+				status = 1;
+			}
+	}
     } else {
-    cm.sendOk("找我什么事，想要启动我的力量吗，你需要足够的条件")
+			var eim = cm.getDisconnected("CWKPQ");
+			if (eim == null) {
+				cm.sendOk("The battle against the boss has already begun.");
+				cm.safeDispose();
+			} else {
+				cm.sendYesNo("Ah, you have returned. Would you like to join your squad in the fight again?");
+				status = 1;
+			}
     }
 }
+
 function action(mode, type, selection) {
-cm.dispose();
-if (selection == 0) {
-	if(cm.getzb() >= 25000) {
-            cm.setzb(-25000);
-cm.serverNotice("『绯红骑士团公告』：【"+ cm.getChar().getName() +"】带领他的队友开始挑战绯红骑士团【海之魔女】！"); 
-        cm.summonMob(9400590, 400000000, 4000000, 1);海之魔女     
-        }else{
-        cm.sendOk("抱歉你没有25000元宝。我不能为您召唤"); 
-	cm.dispose();}
-} else if (selection == 1) {
-	if(cm.haveItem(4021010)) {
-cm.serverNotice("『绯红骑士团公告』：【"+ cm.getChar().getName() +"】带领他的队友成功的击败绯红骑士团【海之魔女】开始挑战第四层");  
-        cm.warp(229020000, 0);
-	cm.gainItem(4021010, -1000);
-	cm.dispose();
-        }else{ 
-        cm.sendOk("请击败BOSS并且得到通关凭证我才可以让你通过"); 
-	cm.dispose(); } 
-} else if (selection == 2) {
-	if(cm.haveItem(4001035,20)) {
-        cm.sendOk("请把你的通行证分给你们的伙伴们。【一个人一张】就可以了，不管你一个人身上有多少通行证，我在把你传送过去的时候，都会把你给收完"); 
-	cm.gainItem(4021010,5);
-	cm.gainItem(4001035, -100);
-        }else{ 
-        cm.sendOk("不好意思你需要#v4001035#20个兑换通关凭证"); 
-	cm.dispose(); } 
-} else if (selection == 3) { 
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400536, 38000000, 35230000, 1);蝙蝠魔(咒印)
-	cm.dispose(); } 
-} else if (selection == 4) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400120, 48000000, 50000000, 1);男老板 
-	cm.dispose(); } 
-} else if (selection == 5) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400121, 75000000, 55000000, 1);女老板 
-	cm.dispose(); } 
-} else if (selection == 6) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400112, 400000000, 100800000, 1);保镖A 
-	cm.dispose(); } 
-} else if (selection == 7) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400113, 500000000, 125500000, 1);保镖B
-	cm.dispose(); } 
-} else if (selection == 8) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400300, 600000000, 175000000, 1);恶僧
-	cm.dispose(); } 
-} else if (selection == 9) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9400549, 700000000, 200300000, 1);火马
-	cm.dispose(); } 
-} else if (selection == 10) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(8180001, 850000000, 235000000, 1);天鹰
-	cm.dispose(); } 
-} else if (selection == 11) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.summonMob(8180000, 903700000, 250135000, 1);火焰龙
-        cm.gainMeso(-50000000);
-	cm.dispose(); } 
-} else if (selection == 12) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(9300012, 900000000, 290000000, 1);阿丽莎乐
-	cm.dispose(); } 
-} else if (selection == 13) {
-	if(cm.getMeso() <= 50000000) {
-        cm.sendOk("抱歉你没有5000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-50000000);
-        cm.summonMob(8220001, 1100000000, 350048000, 1);驮狼雪人
-	cm.dispose(); } 
-} else if (selection == 110) {
-	if(cm.getMeso() <= 50) {
-        cm.sendOk("抱歉你没有50。我不能为您召唤"); 
-        }else{ 
-        cm.warp(100000000, 0);
-        cm.gainMeso(-50);
-	cm.dispose(); } 
-} else if (selection == 100) {
-	if(cm.getMeso() <= 300000000) {
-        cm.sendOk("抱歉你没有3E。我不能给你"); 
-        }else{
-        cm.gainMeso(-300000000); 
-        cm.gainItem(4031048,1);抽奖卷
-	cm.dispose(); } 
-
-
-} else if (selection == 41) {
-	if(cm.getMeso() <= 3000000) {
-        cm.sendOk("抱歉你没有300万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-3000000);
-        cm.summonMob(9500167, 90000, 6005, 30);金猪
-	cm.dispose(); } 
-} else if (selection == 42) {
-	if(cm.getMeso() <= 4000000) {
-        cm.sendOk("抱歉你没有400万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-4000000);
-        cm.summonMob(6130207, 95000, 6500, 30);猿公
-	cm.dispose(); } 
-
-} else if (selection == 43) {
-	if(cm.getMeso() <= 5000000) {
-        cm.sendOk("抱歉你没有500万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-5000000);
-        cm.summonMob(4230102, 100000, 7050, 30);大幽灵 
-	cm.dispose(); } 
-
-} else if (selection == 44) {
-	if(cm.getMeso() <= 6000000) {
-        cm.sendOk("抱歉你没有600万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-6000000);
-        cm.summonMob(9001000, 2500000, 4500, 3);教官
-        cm.summonMob(9001001, 2500000, 4500, 3);
-        cm.summonMob(9001002, 2500000, 4500, 3);
-        cm.summonMob(9001003, 2500000, 4500, 3);
-	cm.dispose(); } 
-
-} else if (selection == 45) {
-	if(cm.getMeso() <= 7000000) {
-        cm.sendOk("抱歉你没有700万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-7000000);
-        cm.summonMob(100100, 105000, 7500, 30);绿蜗牛 
-	cm.dispose(); } 
-
-} else if (selection == 46) {
-	if(cm.getMeso() <= 8000000) {
-        cm.sendOk("抱歉你没有800万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-8000000);
-        cm.summonMob(7130001, 110000, 8000, 30);猎犬
-
-	cm.dispose(); } 
-
-} else if (selection == 47) {
-	if(cm.getMeso() <= 9000000) {
-        cm.sendOk("抱歉你没有900万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-9000000);
-        cm.summonMob(8140500, 110000, 8000, 30);火焰猎犬
-	cm.dispose(); } 
-
-} else if (selection == 48) {
-	if(cm.getMeso() <= 10000000) {
-        cm.sendOk("抱歉你没有1000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-10000000);
-        cm.summonMob(7130200, 115000, 8500, 30);红狼
-	cm.dispose(); } 
-
-} else if (selection == 49) {
-	if(cm.getMeso() <= 11000000) {
-        cm.sendOk("抱歉你没有1100万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-11000000);
-        cm.summonMob(8140000, 120000, 9000, 30);白狼
-	cm.dispose(); } 
-
-} else if (selection == 50) {
-	if(cm.getMeso() <= 12000000) {
-        cm.sendOk("抱歉你没有1200万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-12000000);
-        cm.summonMob(8140100, 150000, 10000, 30);企鹅王与黑雪人 
-	cm.dispose(); } 
-
-} else if (selection == 51) {
-	if(cm.getMeso() <= 13000000) {
-        cm.sendOk("抱歉你没有1300万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-13000000);
-        cm.summonMob(8140103, 155000, 10500, 30);寒冰半人马
-	cm.dispose(); } 
-
-} else if (selection == 52) {
-	if(cm.getMeso() <= 14000000) {
-        cm.sendOk("抱歉你没有1400万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-14000000);
-        cm.summonMob(8140101, 160000, 12000, 30);暗黑半人马
-	cm.dispose(); } 
-
-} else if (selection == 53) {
-	if(cm.getMeso() <= 15000000) {
-        cm.sendOk("抱歉你没有1500万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-15000000);
-        cm.summonMob(8810020, 180000, 13000, 10);蓝飞龙 
-	cm.dispose(); } 
-
-} else if (selection == 54) {
-	if(cm.getMeso() <= 16000000) {
-        cm.sendOk("抱歉你没有1600万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-16000000);
-        cm.summonMob(8810021, 185000, 13500, 10);黑飞龙
-	cm.dispose(); } 
-
-} else if (selection == 55) {
-	if(cm.getMeso() <= 17000000) {
-        cm.sendOk("抱歉你没有1700万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-17000000);
-        cm.summonMob(8810023, 220000, 15000, 10);邪恶双刀蜥蜴
-	cm.dispose(); } 
-
-} else if (selection == 56) {
-	if(cm.getMeso() <= 18000000) {
-        cm.sendOk("抱歉你没有1800万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-18000000);
-        cm.summonMob(9300077, 350000, 20000, 30);骷髅龙
-	cm.dispose(); } 
-
-} else if (selection == 57) {
-	if(cm.getMeso() <= 19000000) {
-        cm.sendOk("抱歉你没有1900万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-19000000);
-        cm.summonMob(8150101, 550000 , 25000, 30);尖鼻鲨鱼 
-	cm.dispose(); } 
-
-} else if (selection == 58) {
-	if(cm.getMeso() <= 20000000) {
-        cm.sendOk("抱歉你没有2000万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-20000000);
-        cm.summonMob(8142100, 600000, 26000, 30);致命乌贼怪 
-	cm.dispose(); } 
-
-} else if (selection == 59) {
-	if(cm.getMeso() <= 21000000) {
-        cm.sendOk("抱歉你没有2100万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-21000000);
-        cm.summonMob(8160000, 700000, 26500, 30);时间门神 
-	cm.dispose(); } 
-
-} else if (selection == 60) {
-	if(cm.getMeso() <= 22000000) {
-        cm.sendOk("抱歉你没有2200万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-22000000);
-        cm.summonMob(8170000, 850000, 27500, 30);黑甲凶灵
-	cm.dispose(); } 
-
-} else if (selection == 61) {
-	if(cm.getMeso() <= 23000000) {
-        cm.sendOk("抱歉你没有2300万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-23000000);
-        cm.summonMob(8141100, 900000, 28500, 30);大海贼王
-	cm.dispose(); } 
-} else if (selection == 62) {
-	if(cm.getMeso() <= 24000000) {
-        cm.sendOk("抱歉你没有2400万。我不能为您召唤"); 
-        }else{ 
-        cm.gainMeso(-24000000);
-        cm.summonMob(8143000, 1000000, 30000, 30);时之鬼王 
-	cm.dispose(); } 
-} else if (selection == 63) {
-        if (cm.getBossLog('EMGC') < 1) {
-cm.warp(910000022, 0);
-                    cm.setBossLog('EMGC');
-                    cm.dispose();
-                }else{
-                    cm.sendOk("你每天只能进入1次超级恶魔广场!");
-                    mode = 1;
-                    status = -1; }
-} else if (selection == 64) {
-         cm.warp(209000001, 0);
-         cm.dispose();  
-                
-}
+    switch (status) {
+	case 0:
+	    	if (mode == 1) {
+			if (!cm.haveItem(4032012, 1)) {
+				cm.sendOk("You need 1 Crimson Heart to apply.");
+			} else if (cm.registerSquad("CWKPQ", 5, " has been named the Leader of the squad. If you would you like to join please register for the Expedition Squad within the time period.")) {
+				cm.sendOk("You have been named the Leader of the Squad. For the next 5 minutes, you can add the members of the Expedition Squad.");
+			} else {
+				cm.sendOk("An error has occurred adding your squad.");
+			}
+	    	}
+	    cm.dispose();
+	    break;
+	case 1:
+		if (!cm.reAdd("CWKPQ", "CWKPQ")) {
+			cm.sendOk("Error... please try again.");
+		}
+		cm.safeDispose();
+		break;
+	case 5:
+	    if (selection == 0 || selection == 3) {
+		if (!cm.getSquadList("CWKPQ", selection)) {
+		    cm.sendOk("Due to an unknown error, the request for squad has been denied.");
+		}
+	    } else if (selection == 1) { // join
+		var ba = cm.addMember("CWKPQ", true);
+		if (ba == 2) {
+		    cm.sendOk("The squad is currently full, please try again later.");
+		} else if (ba == 1) {
+		    cm.sendOk("You have joined the squad successfully");
+		} else {
+		    cm.sendOk("You are already part of the squad.");
+		}
+	    } else {// withdraw
+		var baa = cm.addMember("CWKPQ", false);
+		if (baa == 1) {
+		    cm.sendOk("You have withdrawed from the squad successfully");
+		} else {
+		    cm.sendOk("You are not part of the squad.");
+		}
+	    }
+	    cm.dispose();
+	    break;
+	case 10:
+	    if (mode == 1) {
+		if (selection == 0 || selection == 3) {
+		    if (!cm.getSquadList("CWKPQ", selection)) {
+			cm.sendOk("Due to an unknown error, the request for squad has been denied.");
+		    }
+		    cm.dispose();
+		} else if (selection == 1) {
+		    status = 11;
+		    if (!cm.getSquadList("CWKPQ", 1)) {
+			cm.sendOk("Due to an unknown error, the request for squad has been denied.");
+			cm.dispose();
+		    }
+		} else if (selection == 2) {
+		    status = 12;
+		    if (!cm.getSquadList("CWKPQ", 2)) {
+			cm.sendOk("Due to an unknown error, the request for squad has been denied.");
+			cm.dispose();
+		    }
+		} else if (selection == 4) { // get insode
+		    if (cm.getSquad("CWKPQ") != null) {
+			if (cm.haveItem(4032012, 1)) {
+			    cm.gainItem(4032012, -1);
+			    var dd = cm.getEventManager("CWKPQ");
+			    dd.startInstance(cm.getSquad("CWKPQ"), cm.getMap());
+			} else {
+		 	    cm.sendOk("Where is my Crimson Heart?");
+			}
+		    } else {
+			cm.sendOk("Due to an unknown error, the request for squad has been denied.");
+		    }
+		    cm.dispose();
+		}
+	    } else {
+		cm.dispose();
+	    }
+	    break;
+	case 11:
+	    cm.banMember("CWKPQ", selection);
+	    cm.dispose();
+	    break;
+	case 12:
+	    if (selection != -1) {
+		cm.acceptMember("CWKPQ", selection);
+	    }
+	    cm.dispose();
+	    break;
+	default:
+	    cm.dispose();
+	    break;
+    }
 }

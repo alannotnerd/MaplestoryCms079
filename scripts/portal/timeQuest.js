@@ -1,84 +1,36 @@
-//修正 
+/*
+	This file is part of the OdinMS Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
+		       Matthias Butz <matze@odinms.de>
+		       Jan Christian Meyer <vimes@odinms.de>
 
-function enter(pi) { 
-    var map = pi.getPlayer().getMapId(); 
-    var tomapifdone = 0; 
-    var tomap = 0; 
-    var quest = 0; 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation version 3 as published by
+    the Free Software Foundation. You may not use, modify or distribute
+    this program under any other version of the GNU Affero General Public
+    License.
 
-    if (map == 270010100) { 
-        quest = 3501; 
-        tomapifdone = 270010110; 
-        tomap = 270010000; 
-    } else if (map == 270010200) { 
-        quest = 3502; 
-        tomapifdone = 270010210; 
-        tomap = 270010110; 
-    } else if (map == 270010300){ 
-        quest = 3503; 
-        tomapifdone = 270010310; 
-        tomap = 270010210; 
-    } else if (map == 270010400){ 
-        quest = 3504; 
-        tomapifdone = 270010410; 
-        tomap = 270010310; 
-    } else if (map == 270010500){ 
-        quest = 3507; 
-        tomapifdone = 270020000; 
-        tomap = 270010410; 
-    } else if (map == 270020100){ 
-        quest = 3508; 
-        tomapifdone = 270020110; 
-        tomap = 270020000; 
-    } else if (map == 270020200){ 
-        quest = 3509; 
-        tomapifdone = 270020210; 
-        tomap = 270020110; 
-    } else if (map == 270020300){ 
-        quest = 3510; 
-        tomapifdone = 270020310; 
-        tomap = 270020210; 
-    } else if (map == 270020400){ 
-        quest = 3511; 
-        tomapifdone = 270020410; 
-        tomap = 270020310; 
-    } else if (map == 270020500){ 
-        quest = 3514; 
-        tomapifdone = 270030000; 
-        tomap = 270020410; 
-    } else if (map == 270030100){ 
-        quest = 3515; 
-        tomapifdone = 270030110; 
-        tomap = 270030100; 
-    } else if (map == 270030200){ 
-        quest = 3516; 
-        tomapifdone = 270030210; 
-        tomap = 270030210; 
-    } else if (map == 270030300){ 
-        quest = 3517; 
-        tomapifdone = 270030310; 
-        tomap = 270030310; 
-    } else if (map == 270030400){ 
-        quest = 3518; 
-        tomapifdone = 270030410; 
-        tomap = 270030410; 
-    } else if (map == 270030500){ 
-        quest = 3521; 
-        tomapifdone = 270040000; 
-        tomap = 270030410; 
-    } else if (map == 270040000){ 
-        quest = 3522; 
-        tomapifdone = 270040100; 
-        tomap = 270040000;  
-    } 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
 
-    // warp 
-    // if (pi.getQuestStatus(quest) == org.character.MapleQuestStatus.Status.COMPLETED) { 
-        pi.warp(tomapifdone,0); 
-        return true; 
-    // } else { 
-    //     pi.warp(tomap,0); 
-    //     pi.getPlayer().dropMessage("由于没有得到许可，被送到原来的地方。。"); 
-    //    return true; 
-    // } 
-}  
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/*
+ * @author Moogra
+ */
+function enter(pi) {
+    var mapid = pi.getPlayer().getMapId();
+    var togo = mapid / 100 % 10 == 5 ? mapid + 9500 : mapid + 100;
+    if (pi.getPlayer().getMapId() != 270040100) {
+        pi.warp(togo, 0);
+        return true;
+    } else {
+        pi.warp(270050000, 0);
+        return true;
+    }
+    return false;
+}

@@ -64,26 +64,26 @@ function action(mode, type, selection) {
 	    break;
 	case 10:
 	    if (selection == 0) {
-		if (cm.haveItem(4032168, 1) && cm.haveItem(4032181, 2500) && cm.haveItem(4032171, 1) && cm.haveItem(2070006, 1) && (cm.getMeso() >= 150000000)) {
+		if (cm.haveItem(4032168, 1) && cm.haveItem(4032181, 2500) && cm.haveItem(4032171, 1) && cm.haveItem(2070006, 1) && (cm.getMeso() >= 500000000)) {
 		    cm.gainItem(4032171, -1);
 		    cm.gainItem(4032168, -1);
 		    cm.gainItem(2070006, -1);
 		    cm.gainItem(4032181, -2500);
-		    cm.gainMeso(-150000000);
+		    cm.gainMeso(-500000000);
 		    cm.gainItem(2070019, 1);
 		} else {
-		    cm.sendNext("Eh? You don't have required materials.\n\r You need Nano Plant (Omega), Wiseman Stone, 1 Ilbi Throwing-Stars, Silver Coin 2,500 Pieces and 150,000,000 meso to create Magic Throwing Knife.");
+		    cm.sendNext("Eh? You don't have required materials.\n\r You need Nano Plant (Omega), Wiseman Stone, 1 Ilbi Throwing-Stars, Silver Coin 2,500 Pieces and 500,000,000 meso to create Magic Throwing Knife.");
 		}
 	    } else {
-		if (cm.haveItem(4032168, 1) && cm.haveItem(4032181, 2500) && cm.haveItem(4032170, 1) && cm.haveItem(2330003, 1) && (cm.getMeso() >= 150000000)) {
+		if (cm.haveItem(4032168, 1) && cm.haveItem(4032181, 2500) && cm.haveItem(4032170, 1) && cm.haveItem(2330003, 1) && (cm.getMeso() >= 500000000)) {
 		    cm.gainItem(4032170, -1);
 		    cm.gainItem(4032168, -1);
 		    cm.gainItem(2330003, -1);
 		    cm.gainItem(4032181, -2500);
-		    cm.gainMeso(-150000000);
+		    cm.gainMeso(-500000000);
 		    cm.gainItem(2330007, 1);
 		} else {
-		    cm.sendNext("Eh? You don't have required materials.\n\r You need Nano Plant (Omega), Saint Stone, 1 Vital Bullet, Silver Coin 2,500 Pieces and 150,000,000 meso to create Armor Piercing bullet.");
+		    cm.sendNext("Eh? You don't have required materials.\n\r You need Nano Plant (Omega), Saint Stone, 1 Vital Bullet, Silver Coin 2,500 Pieces and 500,000,000 meso to create Armor Piercing bullet.");
 		}
 	    }
 	    cm.dispose();

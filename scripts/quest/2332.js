@@ -5,12 +5,12 @@ function start(mode, type, selection) {
     qm.spawnMonster(3300008, 1);
     qm.sendNext("Please, eliminate the Prime Minister!!!");
     qm.forceStartQuest(2333);
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }
 
 function end(mode, type, selection) {
     qm.gainItem(4032386, 1);
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }

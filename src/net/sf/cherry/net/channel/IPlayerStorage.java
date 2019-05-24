@@ -1,15 +1,14 @@
 package net.sf.cherry.net.channel;
 
-import java.util.Collection;
-
 import net.sf.cherry.client.MapleCharacter;
 
-public abstract interface IPlayerStorage
-{
-  public abstract MapleCharacter getCharacterByName(String paramString);
+import java.util.Collection;
 
-  public abstract MapleCharacter getCharacterById(int paramInt);
+public interface IPlayerStorage {
+  MapleCharacter getCharacterByName(String paramString);
 
-  public abstract Collection<MapleCharacter> getAllCharacters();
+  MapleCharacter getCharacterById(int paramInt);
+
+  Collection<MapleCharacter> getAllCharacters();
 }
 

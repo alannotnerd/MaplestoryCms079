@@ -54,7 +54,7 @@
     </imgdir>
     <imgdir name="4201003">
         <int name="fixed" value="1"/>
-        <uol name="0" value="../4101004/0"/>
+        <uol name="../4101004/0" value="../4101004/0"/>
     </imgdir>
     <imgdir name="4201004">
         <int name="fixed" value="1"/>

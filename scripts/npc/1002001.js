@@ -1,25 +1,10 @@
-importPackage(net.sf.cherry.client);
-
-var status = 0;
-var job;
+/* 	Cody
+*/
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    cm.sendOk("嗨，我是#p1002001# 很高兴认识你=)");
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendOk("Hello. I'm Cody. Nice to meet you! =)");
-			cm.dispose();
-			return;
-		}
-	}
+    cm.dispose();
 }	

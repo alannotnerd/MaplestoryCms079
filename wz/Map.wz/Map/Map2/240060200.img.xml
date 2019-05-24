@@ -657,7 +657,7 @@
             <string name="id" value="2401000"/>
             <int name="x" value="598"/>
             <int name="y" value="-91"/>
-            <int name="reactorTime" value="1800"/>
+            <int name="reactorTime" value="-1"/>
             <int name="f" value="0"/>
             <string name="name" value="boss"/>
         </imgdir>

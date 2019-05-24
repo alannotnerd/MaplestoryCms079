@@ -1,10 +1,9 @@
 package net.sf.cherry.tools.data.input;
 
-public abstract interface ByteInputStream
-{
-  public abstract int readByte();
+public interface ByteInputStream {
+  int readByte();
 
-  public abstract long getBytesRead();
+  long getBytesRead();
 
-  public abstract long available();
+  long available();
 }

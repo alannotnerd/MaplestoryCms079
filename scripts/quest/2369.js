@@ -5,7 +5,7 @@ function end(mode, type, selection) {
         qm.changeJob(431);
         qm.sendNext("You are now advanced.");
     }
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }
 

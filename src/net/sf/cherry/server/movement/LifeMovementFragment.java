@@ -1,14 +1,13 @@
 package net.sf.cherry.server.movement;
 
-import java.awt.Point;
-
 import net.sf.cherry.tools.data.output.LittleEndianWriter;
 
-public abstract interface LifeMovementFragment
-{
-  public abstract void serialize(LittleEndianWriter paramLittleEndianWriter);
+import java.awt.*;
 
-  public abstract Point getPosition();
+public interface LifeMovementFragment {
+  void serialize(LittleEndianWriter paramLittleEndianWriter);
+
+  Point getPosition();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

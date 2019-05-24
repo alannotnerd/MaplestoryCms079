@@ -743,12 +743,12 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="weaponArmOverHair" value="../../swingPF/0/weaponArmOverHair"/>
-            <uol name="weaponOverGlove" value="../../swingPF/0/weaponOverGlove"/>
+            <uol name="../../swingPF/0/weaponArmOverHair" value="../../swingPF/0/weaponArmOverHair"/>
+            <uol name="../../swingPF/0/weaponOverGlove" value="../../swingPF/0/weaponOverGlove"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="weaponArmOverHair" value="../../swingPF/1/weaponArmOverHair"/>
-            <uol name="weaponOverGlove" value="../../swingPF/1/weaponOverGlove"/>
+            <uol name="../../swingPF/1/weaponArmOverHair" value="../../swingPF/1/weaponArmOverHair"/>
+            <uol name="../../swingPF/1/weaponOverGlove" value="../../swingPF/1/weaponOverGlove"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="weaponArmOverHair" width="11" height="10">
@@ -767,8 +767,8 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="weaponOverGlove" value="../../stabT1/2/weaponOverGlove"/>
-            <uol name="weapon" value="../../stabT1/2/weapon"/>
+            <uol name="../../stabT1/2/weaponOverGlove" value="../../stabT1/2/weaponOverGlove"/>
+            <uol name="../../stabT1/2/weapon" value="../../stabT1/2/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -805,8 +805,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="weaponArmOverHair" value="../1/weaponArmOverHair"/>
-            <uol name="weaponOverGlove" value="../1/weaponOverGlove"/>
+            <uol name="../1/weaponArmOverHair" value="../1/weaponArmOverHair"/>
+            <uol name="../1/weaponOverGlove" value="../1/weaponOverGlove"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -834,7 +834,7 @@
                 </imgdir>
                 <string name="z" value="weaponOverGlove"/>
             </canvas>
-            <uol name="weaponOverBody" value="../0/weaponOverBody"/>
+            <uol name="../0/weaponOverBody" value="../0/weaponOverBody"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="weaponArmOverHair" width="8" height="9">
@@ -844,11 +844,11 @@
                 </imgdir>
                 <string name="z" value="weaponOverGlove"/>
             </canvas>
-            <uol name="weaponOverBody" value="../0/weaponOverBody"/>
+            <uol name="../0/weaponOverBody" value="../0/weaponOverBody"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="weaponOverBody" value="../0/weaponOverBody"/>
-            <uol name="weaponArmOverHair" value="../0/weaponArmOverHair"/>
+            <uol name="../0/weaponOverBody" value="../0/weaponOverBody"/>
+            <uol name="../0/weaponArmOverHair" value="../0/weaponArmOverHair"/>
         </imgdir>
         <imgdir name="4">
             <canvas name="weaponArmOverHair" width="8" height="9">
@@ -901,8 +901,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="weaponOverBody" value="../1/weaponOverBody"/>
-            <uol name="weaponArmOverHair" value="../1/weaponArmOverHair"/>
+            <uol name="../1/weaponOverBody" value="../1/weaponOverBody"/>
+            <uol name="../1/weaponArmOverHair" value="../1/weaponArmOverHair"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -923,7 +923,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="weaponOverBody" value="../0/weaponOverBody"/>
+            <uol name="../0/weaponOverBody" value="../0/weaponOverBody"/>
             <canvas name="weaponArmOverHair" width="12" height="7">
                 <vector name="origin" x="29" y="6"/>
                 <imgdir name="map">
@@ -935,20 +935,20 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="weaponOverBody" value="../../proneStab/0/weaponOverBody"/>
-            <uol name="weaponArmOverHair" value="../../proneStab/0/weaponArmOverHair"/>
+            <uol name="../../proneStab/0/weaponOverBody" value="../../proneStab/0/weaponOverBody"/>
+            <uol name="../../proneStab/0/weaponArmOverHair" value="../../proneStab/0/weaponArmOverHair"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="weaponOverGlove" value="../../alert/1/weaponOverGlove"/>
+            <uol name="../../alert/1/weaponOverGlove" value="../../alert/1/weaponOverGlove"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="weapon" value="../../swingO2/1/weapon"/>
+            <uol name="../../swingO2/1/weapon" value="../../swingO2/1/weapon"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="weaponOverBody" value="../../swingO2/0/weaponOverBody"/>
-            <uol name="weapon" value="../../swingO2/0/weapon"/>
+            <uol name="../../swingO2/0/weaponOverBody" value="../../swingO2/0/weaponOverBody"/>
+            <uol name="../../swingO2/0/weapon" value="../../swingO2/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -969,8 +969,8 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="weaponOverGlove" value="../0/weaponOverGlove"/>
-            <uol name="weaponArmOverHair" value="../0/weaponArmOverHair"/>
+            <uol name="../0/weaponOverGlove" value="../0/weaponOverGlove"/>
+            <uol name="../0/weaponArmOverHair" value="../0/weaponArmOverHair"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

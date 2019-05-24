@@ -1,99 +1,74 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/* Aura
+/* 
  * 
  * Adobis's Mission I: Unknown Dead Mine (280010000)
  * 
  * Zakum PQ NPC (the one and only)
-*/
+ */
 
-var status;
+var status = -1;
 var selectedType;
 var scrolls;
 
-function start() {
-	status = -1;
-	action(1, 0, 0);
-}
-
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 0 && status == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendSimple("æ€ä¹ˆæ ·ï¼Ÿéƒ½æœé›†å¥½äº†å—ï¼Ÿ#b\r\n#L0#å‘Šè¯‰æˆ‘åº”è¯¥åšä»€ä¹ˆï¼Ÿ#l\r\n#L1#å·²ç»æœé›†å¥½äº†ç‰©å“ï¼#l\r\n#L2#æˆ‘è¦ç¦»å¼€è¿™é‡Œï¼#l");
-		} else if (status == 1) {
-			selectedType = selection;
-			if (selection == 0) {
-				cm.sendNext("ç™½ç—´ï¼ä½ è¿è¦ä½ è¿›æ¥çš„ç›®çš„æ˜¯ä»€ä¹ˆã€‚éœ€è¦æ”¶é›†ä»€ä¹ˆéƒ½ä¸çŸ¥é“ï¼Œè¿˜è¿›æ¥åšä»€ä¹ˆï¼Ÿå‘†ä¸€è¾¹å»å§ï¼")
-				cm.dispose();
-			} else if (selection == 1) {
-				if (!cm.haveItem(4001018)) {
-					cm.sendNext("éª—æˆ‘å‘€ï½ä½ æ ¹æœ¬å°±æ²¡æœ‰å˜›ï¼")
-					cm.dispose();
-				} else {
-					if (!cm.haveItem(4001015, 30)) { //documents
-						cm.sendYesNo("So, you brought the fire ore with you? In that case, I can give you and your party a piece of it that should be more than enough to make the core of Zakum. Make sure your whole party has room in their inventory before proceeding.");
-						scrolls = false;
-					} else {
-						cm.sendYesNo("So, you brought the fire ore and the documents with you? In that case, I can give you and your party a piece of it that should be more than enough to make the core of Zakum. As well, since you brought the documents with you, I can also give you a special item which will bring you to the mine's entrance at any time. Make sure your whole party has room in their inventory before proceeding.");
-						scrolls = true;
-					}
-				}
-			} else if (selection == 2) {
-				cm.sendYesNo("ä½ ç¡®å®šè¦é€€å‡ºï¼Ÿå¦‚æœä½ æ˜¯ç»„é˜Ÿé•¿ï¼Œä¸€æ—¦ä½ ç¦»å¼€ç»„é˜Ÿï¼Œé‚£ä¹ˆè¿™é¡¹ä»»åŠ¡å°±æ— æ³•ç»§ç»­ä¸‹å»ã€‚æ˜¯å¦å†³å®šé€€å‡ºï¼Ÿ")
-			}
-		} else if (status == 2) {
-			var eim = cm.getChar().getEventInstance();
-			if (selectedType == 1) {
-				var party = eim.getPlayers();
-				cm.gainItem(4001018, -1);
-				if (scrolls) {
-					cm.gainItem(4001015, -30);
-				}
-				cm.givePartyItems(4031061, 1, party);
-				if (scrolls) {
-					cm.givePartyItems(2030007, 5, party);
-					cm.givePartyExp(20000, party);
-				} else {
-					cm.givePartyExp(12000, party);
-				}
-				eim.finishPQ();
-				cm.dispose();
-			} else if (selectedType == 2) {
-				if (cm.isLeader())
-					eim.disbandParty();
-				else
-					eim.leaveParty(cm.getChar());
-				cm.dispose();
-			}
-		}
-	}
+    if (mode == 1) {
+        status++;
+    } else {
+        status--;
+    }
+    if (status == 0) {
+        cm.sendSimple("ÔõÃ´Ñù£¿¶¼ËÑ¼¯ºÃÁËÂğ£¿#b\r\n#L0#¸æËßÎÒÓ¦¸Ã×öÊ²Ã´£¿#l\r\n#L1#ÒÑ¾­ËÑ¼¯ºÃÁËÎïÆ·£¡#l\r\n#L2#ÎÒÒªÀë¿ªÕâÀï£¡#l");
+    } else if (status == 1) {
+        selectedType = selection;
+        if (selection == 0) {
+            cm.sendNext("ÎªÁË½â³ıÔúÀ¥µÄÇ°ÖÃ£¬Äã±ØĞëÊÕ¼¯ÎÒĞèÒªµÄºËĞÄ²ÄÁÏ¡£")
+            cm.safeDispose();
+        } else if (selection == 1) {
+            if (!cm.haveItem(4001018)) { //documents
+                cm.sendNext("Çë¸øÎÒ#b#t4001018##kĞ»Ğ»¡£")
+                cm.safeDispose();
+            } else {
+                if (!cm.haveItem(4001015, 30)) { //documents
+                    cm.sendYesNo("´øÀ´ÁËÊÇÂï??\r\nÎªÁËÈ·±£ÄúÄÜÄÃµ½³êÀÍÇëÏÈ¿Õ³ö¿Õ¼ä");
+                    scrolls = false;
+                } else {
+                    cm.sendYesNo("´øÀ´ÁËÊÇÂï??\r\nÎªÁËÈ·±£ÄúÄÜÄÃµ½³êÀÍÇëÏÈ¿Õ³ö¿Õ¼ä");
+                    scrolls = true;
+                }
+            }
+        } else if (selection == 2) {
+            cm.sendYesNo("ÄãÈ·¶¨ÒªÍË³ö£¿Èç¹ûÄãÊÇ×é¶Ó³¤£¬Ò»µ©ÄãÀë¿ª×é¶Ó£¬ÄÇÃ´ÕâÏîÈÎÎñ¾ÍÎŞ·¨¼ÌĞøÏÂÈ¥¡£ÊÇ·ñ¾ö¶¨ÍË³ö£¿")
+        }
+    } else if (status == 2) {
+        var eim = cm.getEventInstance();
+        if (selectedType == 1) {
+            cm.gainItem(4001018, -1);
+            if (scrolls) {
+                cm.gainItem(4001015, -30);
+            }
+            //give items/exp
+            cm.givePartyItems(4031061, 1);
+            if (scrolls) {
+                cm.givePartyItems(2030007, 5);
+                cm.givePartyExp(20000);
+            } else {
+                cm.givePartyExp(12000);
+            }
+            //clear PQ
+            if (eim != null) {
+                eim.finishPQ();
+            }
+            cm.dispose();
+        } else if (selectedType == 2) {
+            if (eim != null) {
+                if (cm.isLeader()) {
+                    eim.disbandParty();
+                } else {
+                    eim.leftParty(cm.getChar());
+                }
+            } else {
+                cm.warp(280090000, 0);
+            }
+            cm.dispose();
+        }
+    }
 }

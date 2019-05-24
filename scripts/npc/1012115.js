@@ -1,8 +1,7 @@
 function start() {
     var status = cm.getQuestStatus(20706);
-    
     if (status == 0) {
-        cm.sendNext("It looks like there's nothing suspecious in the area.");
+        cm.sendNext("ÆÕÍ¨µÄ²Ý´Ô¡£");
     } else if (status == 1) {
         cm.forceCompleteQuest(20706);
         cm.sendNext("You have spotted the shadow! Better report to #p1103001#.");
@@ -11,6 +10,7 @@ function start() {
     }
     cm.dispose();
 }
+
 function action(mode, type, selection) {
     cm.dispose();
 }

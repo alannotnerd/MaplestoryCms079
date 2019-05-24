@@ -1,55 +1,54 @@
 package net.sf.cherry.server.playerinteractions;
 
-import java.util.List;
-
 import net.sf.cherry.client.MapleCharacter;
 import net.sf.cherry.client.MapleClient;
 import net.sf.cherry.net.MaplePacket;
 
-public abstract interface IPlayerInteractionManager
-{
-  public static final byte HIRED_MERCHANT = 1;
-  public static final byte PLAYER_SHOP = 2;
-  public static final byte MATCH_CARD = 3;
-  public static final byte OMOK = 4;
+import java.util.List;
 
-  public abstract void broadcast(MaplePacket paramMaplePacket, boolean paramBoolean);
+public interface IPlayerInteractionManager {
+  byte HIRED_MERCHANT = 1;
+  byte PLAYER_SHOP = 2;
+  byte MATCH_CARD = 3;
+  byte OMOK = 4;
 
-  public abstract void addVisitor(MapleCharacter paramMapleCharacter);
+  void broadcast(MaplePacket paramMaplePacket, boolean paramBoolean);
 
-  public abstract void removeVisitor(MapleCharacter paramMapleCharacter);
+  void addVisitor(MapleCharacter paramMapleCharacter);
 
-  public abstract int getVisitorSlot(MapleCharacter paramMapleCharacter);
+  void removeVisitor(MapleCharacter paramMapleCharacter);
 
-  public abstract void removeAllVisitors(int paramInt1, int paramInt2);
+  int getVisitorSlot(MapleCharacter paramMapleCharacter);
 
-  public abstract void buy(MapleClient paramMapleClient, int paramInt, short paramShort);
+  void removeAllVisitors(int paramInt1, int paramInt2);
 
-  public abstract void closeShop(boolean paramBoolean);
+  void buy(MapleClient paramMapleClient, int paramInt, short paramShort);
 
-  public abstract String getOwnerName();
+  void closeShop(boolean paramBoolean);
 
-  public abstract int getOwnerId();
+  String getOwnerName();
 
-  public abstract String getDescription();
+  int getOwnerId();
 
-  public abstract MapleCharacter[] getVisitors();
+  String getDescription();
 
-  public abstract List<MaplePlayerShopItem> getItems();
+  MapleCharacter[] getVisitors();
 
-  public abstract void addItem(MaplePlayerShopItem paramMaplePlayerShopItem);
+  List<MaplePlayerShopItem> getItems();
 
-  public abstract boolean removeItem(int paramInt);
+  void addItem(MaplePlayerShopItem paramMaplePlayerShopItem);
 
-  public abstract void removeFromSlot(int paramInt);
+  boolean removeItem(int paramInt);
 
-  public abstract int getFreeSlot();
+  void removeFromSlot(int paramInt);
 
-  public abstract byte getItemType();
+  int getFreeSlot();
 
-  public abstract boolean isOwner(MapleCharacter paramMapleCharacter);
+  byte getItemType();
 
-  public abstract byte getShopType();
+  boolean isOwner(MapleCharacter paramMapleCharacter);
+
+  byte getShopType();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

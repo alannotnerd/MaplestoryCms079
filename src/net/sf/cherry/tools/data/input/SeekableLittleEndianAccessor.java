@@ -1,10 +1,9 @@
 package net.sf.cherry.tools.data.input;
 
-public abstract interface SeekableLittleEndianAccessor extends LittleEndianAccessor
-{
-  public abstract void seek(long paramLong);
+public interface SeekableLittleEndianAccessor extends LittleEndianAccessor {
+  void seek(long paramLong);
 
-  public abstract long getPosition();
+  long getPosition();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

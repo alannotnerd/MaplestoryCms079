@@ -1,18 +1,17 @@
 package net.sf.cherry.provider;
 
-import java.util.List;
-
 import net.sf.cherry.provider.wz.MapleDataType;
 
-public abstract interface MapleData extends MapleDataEntity, Iterable<MapleData>
-{
-  public abstract String getName();
+import java.util.List;
 
-  public abstract MapleDataType getType();
+public interface MapleData extends MapleDataEntity, Iterable<MapleData> {
+  String getName();
 
-  public abstract List<MapleData> getChildren();
+  MapleDataType getType();
 
-  public abstract MapleData getChildByPath(String paramString);
+  List<MapleData> getChildren();
 
-  public abstract Object getData();
+  MapleData getChildByPath(String paramString);
+
+  Object getData();
 }

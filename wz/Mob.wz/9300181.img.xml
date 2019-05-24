@@ -3,13 +3,13 @@
     <imgdir name="info">
         <int name="bodyAttack" value="1"/>
         <int name="level" value="75"/>
-        <int name="maxHP" value="83000"/>
-        <int name="maxMP" value="400"/>
+        <int name="maxHP" value="6000000"/>
+        <int name="maxMP" value="4000"/>
         <int name="speed" value="-50"/>
-        <int name="PADamage" value="190"/>
-        <int name="PDDamage" value="250"/>
-        <int name="MADamage" value="230"/>
-        <int name="MDDamage" value="170"/>
+        <int name="PADamage" value="1190"/>
+        <int name="PDDamage" value="1250"/>
+        <int name="MADamage" value="1230"/>
+        <int name="MDDamage" value="1170"/>
         <int name="acc" value="155"/>
         <int name="eva" value="18"/>
         <int name="exp" value="0"/>
@@ -442,12 +442,12 @@
             <vector name="head" x="-5" y="-132"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="12" value="../stand/0"/>
-        <uol name="13" value="../stand/1"/>
-        <uol name="14" value="../stand/2"/>
-        <uol name="15" value="../stand/3"/>
-        <uol name="16" value="../stand/4"/>
-        <uol name="17" value="../stand/5"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
     </imgdir>
     <imgdir name="skill1">
         <canvas name="0" width="148" height="141">
@@ -534,12 +534,12 @@
             <vector name="head" x="-5" y="-132"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="12" value="../stand/0"/>
-        <uol name="13" value="../stand/1"/>
-        <uol name="14" value="../stand/2"/>
-        <uol name="15" value="../stand/3"/>
-        <uol name="16" value="../stand/4"/>
-        <uol name="17" value="../stand/5"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
     </imgdir>
     <imgdir name="skill2">
         <canvas name="0" width="148" height="140">
@@ -626,12 +626,12 @@
             <vector name="head" x="-5" y="-132"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="12" value="../stand/0"/>
-        <uol name="13" value="../stand/1"/>
-        <uol name="14" value="../stand/2"/>
-        <uol name="15" value="../stand/3"/>
-        <uol name="16" value="../stand/4"/>
-        <uol name="17" value="../stand/5"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
     </imgdir>
     <imgdir name="skill3">
         <canvas name="0" width="148" height="141">
@@ -732,12 +732,12 @@
             <vector name="head" x="-5" y="-132"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="14" value="../stand/0"/>
-        <uol name="15" value="../stand/1"/>
-        <uol name="16" value="../stand/2"/>
-        <uol name="17" value="../stand/3"/>
-        <uol name="18" value="../stand/4"/>
-        <uol name="19" value="../stand/5"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="162" height="147">

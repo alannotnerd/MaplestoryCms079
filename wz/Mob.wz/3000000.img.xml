@@ -177,8 +177,8 @@
                     <vector name="origin" x="26" y="61"/>
                     <int name="delay" value="150"/>
                 </canvas>
-                <uol name="3" value="1"/>
-                <uol name="4" value="2"/>
+                <uol name="1" value="1"/>
+                <uol name="2" value="2"/>
                 <int name="attach" value="1"/>
             </imgdir>
             <imgdir name="effect">

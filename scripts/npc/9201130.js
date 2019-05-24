@@ -7,13 +7,14 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-		if (cm.getPlayer().getLevel() < 40) {
-			cm.sendYesNo("Would you like to move to Valefor's Strolling Place?");
+		if (cm.getPlayer().getLevel() < 40 && cm.haveItem(4032485)) {
+			cm.sendYesNo("你想移动到隐藏地图?");
 		} else {
-			cm.sendOk("You need to be less than level 40 and need the Valefor's Necklace to enter.");
+			cm.sendOk("你需要小于40级，需要进入要有大型钱币模型.");
 			cm.dispose();
 		}
 } else {
+	cm.spawnMob_map(9400613, 677000009 , 33, 66);
 	cm.warp(677000008,0);
 	cm.dispose();
     }

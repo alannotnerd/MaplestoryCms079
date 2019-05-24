@@ -1,14 +1,13 @@
 package net.sf.cherry.provider;
 
-public abstract interface MapleDataEntry extends MapleDataEntity
-{
-  public abstract String getName();
+public interface MapleDataEntry extends MapleDataEntity {
+  String getName();
 
-  public abstract int getSize();
+  int getSize();
 
-  public abstract int getChecksum();
+  int getChecksum();
 
-  public abstract int getOffset();
+  int getOffset();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

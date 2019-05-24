@@ -10,11 +10,6 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		status++;
-		if (cm.getClient().getChannel() == 1) {
-			cm.sendNext("The event may not be attempted in channel 1.");
-			cm.dispose();
-			return;
-		}
 		if(status == 0){
 			cm.sendNext("Hi There~ It's #bChristmas#k right now, do you wish to plant the Christmas Tree with me? With the Spirit from #bChristmas Decoration#k it can allow the tree to grow healthy! Please gather all the Christmas Decoration that you get from the monsters...");
 		} else if (status == 1) {

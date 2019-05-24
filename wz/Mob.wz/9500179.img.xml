@@ -743,10 +743,10 @@
         </canvas>
     </imgdir>
     <imgdir name="skill1">
-        <uol name="0" value="../stand/0"/>
-        <uol name="1" value="../stand/1"/>
-        <uol name="2" value="../stand/2"/>
-        <uol name="3" value="../stand/3"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="301" height="288">

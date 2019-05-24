@@ -604,8 +604,8 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="120"/>
                 </canvas>
-                <uol name="2" value="0"/>
-                <uol name="3" value="1"/>
+                <uol name="0" value="0"/>
+                <uol name="1" value="1"/>
                 <canvas name="4" width="133" height="129">
                     <vector name="origin" x="71" y="129"/>
                     <int name="z" value="0"/>
@@ -616,8 +616,8 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="120"/>
                 </canvas>
-                <uol name="6" value="4"/>
-                <uol name="7" value="5"/>
+                <uol name="4" value="4"/>
+                <uol name="5" value="5"/>
             </imgdir>
         </imgdir>
         <imgdir name="airplane">

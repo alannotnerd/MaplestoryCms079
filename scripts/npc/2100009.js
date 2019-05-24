@@ -20,7 +20,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if (mode == 0 && status == 0) {
-			cm.sendNext("I see...take your time, see if you really want it. Let me know when you make up your mind.");
+			cm.sendNext("如果有需要再来找我唷。");
 			cm.dispose();
 			return;
 		}
@@ -32,28 +32,24 @@ function action(mode, type, selection) {
 				facenew = Array();
 				if (cm.getChar().getGender() == 0) {
 					for(var i = 0; i < mface.length; i++) {
-						facenew.push(mface[i] + cm.getChar().getFace()
- % 1000 - (cm.getChar().getFace()
- % 100));
+						facenew.push(mface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
 					}
 				}
 				if (cm.getChar().getGender() == 1) {
 					for(var i = 0; i < fface.length; i++) {
-						facenew.push(fface[i] + cm.getChar().getFace()
- % 1000 - (cm.getChar().getFace()
- % 100));
+						facenew.push(fface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
 					}
 				}
-				cm.sendYesNo("If you use the regular coupon, your face may transform into a random new look...do you still want to do it using #b#t5152029##k?");
+				cm.sendYesNo("你确定要使用 #b#t5152029##k#r注意:这是随机#k ？？");
 			}
 		else if (status == 1){	
 			cm.dispose();
 			if (cm.haveItem(5152029) == true){
 				cm.gainItem(5152029, -1);
 				cm.setFace(facenew[Math.floor(Math.random() * facenew.length)]);
-				cm.sendOk("Enjoy your new and improved face!");
+				cm.sendOk("享受！");
 			} else {
-				cm.sendNext("Um ... it looks like you don't have the coupon specifically for this place...sorry to say this, but without the coupon, there's no plastic surgery for you.");
+				cm.sendNext("痾.... 貌似没有#t5152029#。");
 			}
 		}
 	}

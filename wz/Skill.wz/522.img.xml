@@ -2831,77 +2831,77 @@
                     <string name="hs" value="h20"/>
                     <int name="mpCon" value="34"/>
                     <int name="damage" value="310"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="21">
                     <string name="hs" value="h21"/>
                     <int name="mpCon" value="34"/>
                     <int name="damage" value="335"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="22">
                     <string name="hs" value="h22"/>
                     <int name="mpCon" value="36"/>
                     <int name="damage" value="340"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="23">
                     <string name="hs" value="h23"/>
                     <int name="mpCon" value="36"/>
                     <int name="damage" value="345"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="24">
                     <string name="hs" value="h24"/>
                     <int name="mpCon" value="36"/>
                     <int name="damage" value="350"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="25">
                     <string name="hs" value="h25"/>
                     <int name="mpCon" value="38"/>
                     <int name="damage" value="355"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="26">
                     <string name="hs" value="h26"/>
                     <int name="mpCon" value="38"/>
                     <int name="damage" value="360"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="27">
                     <string name="hs" value="h27"/>
                     <int name="mpCon" value="38"/>
                     <int name="damage" value="365"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="28">
                     <string name="hs" value="h28"/>
                     <int name="mpCon" value="40"/>
                     <int name="damage" value="370"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="29">
                     <string name="hs" value="h29"/>
                     <int name="mpCon" value="40"/>
                     <int name="damage" value="375"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="bulletCount" value="5"/>
                     <int name="range" value="400"/>
                 </imgdir>
                 <imgdir name="30">
                     <string name="hs" value="h30"/>
                     <int name="mpCon" value="40"/>
-                    <int name="damage" value="380"/>
-                    <int name="bulletCount" value="4"/>
+                    <int name="damage" value="340"/>
+                    <int name="bulletCount" value="6"/>
                     <int name="range" value="400"/>
                 </imgdir>
             </imgdir>

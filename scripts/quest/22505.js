@@ -16,7 +16,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendAcceptDecline("He's so big I didn't realize he was a baby. He probably can't digest meat yet. My guess is that all #bbabies need milk#k first");
+	qm.askAcceptDecline("He's so big I didn't realize he was a baby. He probably can't digest meat yet. My guess is that all #bbabies need milk#k first");
     } else if (status == 1) {
 	qm.forceStartQuest();
 	qm.sendNext("You can get milk from the #bMilk Cow#k at the #bHuge Path#k. Why don't you go ask her to give you some?");
@@ -36,7 +36,7 @@ function end(mode, type, selection) {
 	qm.sendOk("Mooo!");
     } else if (status == 1) {
 	qm.gainExp(1150);
-	qm.completeQuest();
+	qm.forceCompleteQuest();
 	qm.dispose();
     }
 }

@@ -11,14 +11,13 @@ import net.sf.cherry.tools.MaplePacketCreator;
 import net.sf.cherry.tools.data.input.SeekableLittleEndianAccessor;
 
 /**
- *
  * @author Administrator
  */
-public final class OpenFamilyHandler extends AbstractMaplePacketHandler{
-    public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
-     c.doneedlog(this, c.getPlayer());
-     MapleCharacter player = c.getPlayer();
-     c.getSession().write(MaplePacketCreator.getFamilyInfo(player));
-     c.getSession().write(MaplePacketCreator.enableActions());
-   }
+public final class OpenFamilyHandler extends AbstractMaplePacketHandler {
+  public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
+    c.doneedlog(this, c.getPlayer());
+    MapleCharacter player = c.getPlayer();
+    c.getSession().write(MaplePacketCreator.getFamilyInfo(player));
+    c.getSession().write(MaplePacketCreator.enableActions());
+  }
 }

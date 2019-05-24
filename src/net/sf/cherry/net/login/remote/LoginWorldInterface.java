@@ -3,25 +3,24 @@ package net.sf.cherry.net.login.remote;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public abstract interface LoginWorldInterface extends Remote
-{
-  public abstract void channelOnline(int paramInt, String paramString)
-    throws RemoteException;
+public interface LoginWorldInterface extends Remote {
+  void channelOnline(int paramInt, String paramString)
+      throws RemoteException;
 
-  public abstract void channelOffline(int paramInt)
-    throws RemoteException;
+  void channelOffline(int paramInt)
+      throws RemoteException;
 
-  public abstract void shutdown()
-    throws RemoteException;
+  void shutdown()
+      throws RemoteException;
 
-  public abstract boolean isAvailable()
-    throws RemoteException;
+  boolean isAvailable()
+      throws RemoteException;
 
-  public abstract double getPossibleLoginAverage()
-    throws RemoteException;
+  double getPossibleLoginAverage()
+      throws RemoteException;
 
-  public abstract int getWaitingUsers()
-    throws RemoteException;
+  int getWaitingUsers()
+      throws RemoteException;
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

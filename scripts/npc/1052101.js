@@ -1,118 +1,63 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /* Andre
-	Kerning Random Hair/Hair Color Change (EXP).
+	Kerning Random Hair/Hair Color Change.
 */
-var status = 0;
+var status = -1;
 var beauty = 0;
-var hairprice = 1000000;
-var haircolorprice = 1000000;
-var mhair = Array(30770, 30780, 30130, 30350, 30190, 30620, 30030, 30110, 30520, 30550, 30180, 30050, 30020, 30040, 30000, 30160);
-var fhair = Array(31690, 31760, 31050, 31040, 31000, 31020, 31060, 31090, 31520, 31620, 31130, 31120, 31140, 31330, 31440, 31010);
-var hairnew = Array();
+var hair_Colo_new;
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 0 && status == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendSimple("I'm Andre, Don's assistant. Everyone calls me Andre, though. If you have a #b#t5150011##k or a #b#t5151002##k, please let me change your hairdo!\r\n#L0#I want to buy a coupon!#l\r\n#L1#Haircut: #i5150011##t5150011##l\r\n#L2#Dye your hair: #i5151002##t5151002##l");						
-		} else if (status == 1) {
-			if (selection == 0) {
-				beauty = 0;
-				cm.sendSimple("Which coupon would you like to buy?\r\n#L0#Haircut for " + hairprice + " mesos: #i5150011##t5150011##l\r\n#L1#Dye your hair for " + haircolorprice + " mesos: #i5151002##t5151002##l");
-			} else if (selection == 1) {
-				beauty = 1;
-				hairnew = Array();
-				if (cm.getChar().getGender() == 0) {
-					for(var i = 0; i < mhair.length; i++) {
-						hairnew.push(mhair[i] + parseInt(cm.getChar().getHair()
- % 10));
-					}
-				} 
-				if (cm.getChar().getGender() == 1) {
-					for(var i = 0; i < fhair.length; i++) {
-						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair()
- % 10));
-					}
-				}
-				cm.sendYesNo("If you use the EXP coupon your hair will change RANDOMLY with a chance to obtain a new experimental style that I came up with. Are you going to use #b#t5150010##k and really change your hairstyle?");
-			} else if (selection == 2) {
-				beauty = 2;
-				haircolor = Array();
-				var current = parseInt(cm.getChar().getHair()
-/10)*10;
-				for(var i = 0; i < 8; i++) {
-					haircolor.push(current + i);
-				}
-				cm.sendYesNo("If you use a regular coupon your hair will change RANDOMLY. Do you still want to use #b#t5151002##k and change it up?");
-			}
-		}
-		else if (status == 2){
-			cm.dispose();
-			if (beauty == 1){
-				if (cm.haveItem(5150011) == true){
-					cm.gainItem(5150011, -1);
-					cm.setHair(hairnew[Math.floor(Math.random() * hairnew.length)]);
-					cm.sendOk("Enjoy your new and improved hairstyle!");
-				} else {
-					cm.sendOk("Hmmm...it looks like you don't have our designated coupon...I'm afraid I can't give you a haircut without it. I'm sorry...");
-				}
-			}
-			if (beauty == 2){
-				if (cm.haveItem(5151002) == true){
-					cm.gainItem(5151002, -1);
-					cm.setHair(haircolor[Math.floor(Math.random() * haircolor.length)]);
-					cm.sendOk("Enjoy your new and improved haircolor!");
-				} else {
-					cm.sendOk("Hmmm...it looks like you don't have our designated coupon...I'm afraid I can't dye your hair without it. I'm sorry...");
-				}
-			}
-			if (beauty == 0){
-				if (selection == 0 && cm.getMeso() >= hairprice) {
-					cm.gainMeso(-hairprice);
-					cm.gainItem(5150011, 1);
-					cm.sendOk("Enjoy!");
-				} else if (selection == 1 && cm.getMeso() >= haircolorprice) {
-					cm.gainMeso(-haircolorprice);
-					cm.gainItem(5151002, 1);
-					cm.sendOk("Enjoy!");
-				} else {
-					cm.sendOk("You don't have enough mesos to buy a coupon!");
-				}
-			}
-		}
+    if (mode == 0) {
+	cm.dispose();
+	return;
+    } else {
+	status++;
+    }
+
+    if (status == 0) {
+		cm.sendSimple("我是安德里亚. 如果你有 #b#t5151002##k \r\n或者 #b#t5150002##k 任何机会，\r\n那么怎么样让我改变你的发型颜色?\r\n#L0#使用 #b#t5150002##k\r\n#L1#使用 #b#t5151002##k");
+    } else if (status == 1) {
+	if (selection == 0) {
+	    var hair = cm.getPlayerStat("HAIR");
+	    hair_Colo_new = [];
+	    beauty = 1;
+
+	    if (cm.getPlayerStat("GENDER") == 0) {
+		hair_Colo_new = [30130, 30350, 30190, 30110, 30180, 30050, 30040, 30160, 30770, 30620, 30550, 30520];
+	    } else {
+		hair_Colo_new = [31060, 31090, 31020, 31130, 31120, 31140, 31330, 31010, 31520, 31440, 31750, 31620];
+	    }
+	    for (var i = 0; i < hair_Colo_new.length; i++) {
+		hair_Colo_new[i] = hair_Colo_new[i] + (hair % 10);
+	    }
+	    cm.sendYesNo("注意!这是随机，请问是否要使用 #b#t5150002##k?");
+	} else if (selection == 1) {
+	    var currenthaircolo = Math.floor((cm.getPlayerStat("HAIR") / 10)) * 10;
+	    hair_Colo_new = [];
+	    beauty = 2;
+
+	    for (var i = 0; i < 8; i++) {
+		hair_Colo_new[i] = currenthaircolo + i;
+	    }
+	    cm.sendYesNo("注意!这是随机，请问是否要使用 #b#t5151002##k?");
 	}
+    } else if (status == 2){
+	if (beauty == 1){
+	    if (cm.setRandomAvatar(5150002, hair_Colo_new) == 1) {
+		cm.sendOk("享受!");
+	    } else {
+		cm.sendOk("您貌似没有#b#t5150002##k..");
+	    }
+	} else {
+	    if (cm.setRandomAvatar(5151002, hair_Colo_new) == 1) {
+		cm.sendOk("享受!");
+	    } else {
+		cm.sendOk("您貌似没有#b#t5151002##k..");
+	    }
+	}
+	cm.dispose();
+    }
 }

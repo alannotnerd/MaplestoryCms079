@@ -1,6 +1,6 @@
 /*
-	ä»»åŠ¡: é¾™ç¥
-	æè¿°: è·å¾—äº†æ›´å¼ºçš„é³ç‰‡ï¼Œåˆ¶ä½œå‡ºäº†å‘å‡ºé‡‘å…‰çš„#bé¾™ç¥#kå‹‹ç« ã€‚
+	ÈÎÎñ: ÁúÉñ
+	ÃèÊö: »ñµÃÁË¸üÇ¿µÄÁÛÆ¬£¬ÖÆ×÷³öÁË·¢³ö½ğ¹âµÄ#bÁúÉñ#kÑ«ÕÂ¡£
 */
 var status = -1;
 
@@ -10,7 +10,7 @@ function start(mode, type, selection) {
             qm.gainItem(1142157, 1);
         }
         qm.forceStartQuest();
-        qm.completeQuest();
+        qm.forceCompleteQuest();
     }
     qm.dispose();
 }
@@ -21,7 +21,7 @@ function end(mode, type, selection) {
             qm.gainItem(1142157, 1);
         }
         qm.forceStartQuest();
-        qm.completeQuest();
+        qm.forceCompleteQuest();
     }
     qm.dispose();
 }

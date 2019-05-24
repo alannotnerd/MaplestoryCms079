@@ -32,10 +32,11 @@ function enter(pi) {
 	var eim = pi.getPlayer().getEventInstance();
 	var target = eim.getMapInstance(nextMap);
 	var targetPortal = target.getPortal(nextPortal);
-	if(eim == null){
-	    pi.warp(nextMap, nextPortal);
-	}else{
-	    pi.warp(target, targetPortal);
-	}
+	//if(eim == null){
+	   pi.warp(nextMap, nextPortal);
+	//}else{
+	  //  pi.warp(target, targetPortal);
+	//}
 	return true;
 }
+

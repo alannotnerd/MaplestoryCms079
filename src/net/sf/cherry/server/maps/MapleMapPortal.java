@@ -1,12 +1,10 @@
- package net.sf.cherry.server.maps;
- 
- public class MapleMapPortal extends MapleGenericPortal
- {
-   public MapleMapPortal()
-   {
-     super(2);
-   }
- }
+package net.sf.cherry.server.maps;
+
+public class MapleMapPortal extends MapleGenericPortal {
+  public MapleMapPortal() {
+    super(2);
+  }
+}
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar
  * Qualified Name:     net.sf.cherry.server.maps.MapleMapPortal

@@ -30,14 +30,14 @@
             <int name="z" value="0"/>
             <int name="delay" value="210"/>
         </canvas>
-        <uol name="5" value="0"/>
-        <uol name="6" value="1"/>
-        <uol name="7" value="2"/>
-        <uol name="8" value="3"/>
-        <uol name="9" value="0"/>
-        <uol name="10" value="1"/>
-        <uol name="11" value="2"/>
-        <uol name="12" value="3"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>
@@ -69,16 +69,16 @@
             <int name="z" value="0"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="6" value="0"/>
-        <uol name="7" value="1"/>
-        <uol name="8" value="2"/>
-        <uol name="9" value="3"/>
-        <uol name="10" value="4"/>
-        <uol name="11" value="0"/>
-        <uol name="12" value="1"/>
-        <uol name="13" value="2"/>
-        <uol name="14" value="3"/>
-        <uol name="15" value="4"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
     </imgdir>
     <imgdir name="hand">
         <canvas name="0" width="94" height="109">
@@ -111,11 +111,11 @@
             <int name="z" value="0"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="6" value="0"/>
-        <uol name="7" value="1"/>
-        <uol name="8" value="2"/>
-        <uol name="9" value="3"/>
-        <uol name="10" value="4"/>
-        <uol name="11" value="5"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="5" value="5"/>
     </imgdir>
 </imgdir>

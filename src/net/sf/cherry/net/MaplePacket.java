@@ -2,12 +2,11 @@ package net.sf.cherry.net;
 
 import java.io.Serializable;
 
-public abstract interface MaplePacket extends Serializable
-{
-  public abstract byte[] getBytes();
+public interface MaplePacket extends Serializable {
+  byte[] getBytes();
 
-  public abstract Runnable getOnSend();
+  Runnable getOnSend();
 
-  public abstract void setOnSend(Runnable paramRunnable);
+  void setOnSend(Runnable paramRunnable);
 }
 

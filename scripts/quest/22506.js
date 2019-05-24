@@ -16,9 +16,9 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNext("#b(You ask the Milk Cow to give you some milk.");
+	qm.sendNext("#b(You ask the Milk Cow to give you some milk.);
     } else if (status == 1) {
-	qm.sendAcceptDecline("Moo...");
+	qm.askAcceptDecline("Moo...");
     } else if (status == 2) {
 	qm.sendOk("#b(The Milk Cow gives you some milk. Go feed the milk to Mir.)#k");
 	qm.gainItem(4032454, 1);
@@ -36,7 +36,7 @@ function end(mode, type, selection) {
     if (status == 0) {
 	qm.sendOk("I'm so hungry, I have no strength left... Master, I'm so hungry I might shrivel up and really become a lizard. What's this? Water? You want me to fill my stomach with water? If you say so, master...\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#fUI/UIWindow.img/QuestIcon/10/0# 1 sp\r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0#1420 exp");
     } else if (status == 1) {
-	qm.completeQuest();
+	qm.forceCompleteQuest();
 	qm.gainExp(1420);
 	qm.getPlayer().gainSP(1, 0);
 	qm.gainItem(4032454, -1);

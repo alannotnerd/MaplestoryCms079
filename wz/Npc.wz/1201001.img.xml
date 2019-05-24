@@ -15,15 +15,15 @@
             <vector name="origin" x="93" y="465"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="1" value="0"/>
-        <uol name="2" value="0"/>
-        <uol name="3" value="0"/>
-        <uol name="4" value="0"/>
-        <uol name="5" value="0"/>
-        <uol name="6" value="0"/>
-        <uol name="7" value="0"/>
-        <uol name="8" value="0"/>
-        <uol name="10" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
+        <uol name="0" value="0"/>
     </imgdir>
     <imgdir name="condition1">
         <int name="21300" value="3"/>
@@ -35,15 +35,15 @@
                 <vector name="origin" x="93" y="466"/>
                 <int name="delay" value="120"/>
             </canvas>
-            <uol name="1" value="0"/>
-            <uol name="2" value="0"/>
-            <uol name="3" value="0"/>
-            <uol name="4" value="0"/>
-            <uol name="5" value="0"/>
-            <uol name="6" value="0"/>
-            <uol name="7" value="0"/>
-            <uol name="8" value="0"/>
-            <uol name="10" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
         </imgdir>
     </imgdir>
     <imgdir name="condition2">
@@ -111,15 +111,15 @@
                 <vector name="origin" x="93" y="465"/>
                 <int name="delay" value="120"/>
             </canvas>
-            <uol name="1" value="0"/>
-            <uol name="2" value="0"/>
-            <uol name="3" value="0"/>
-            <uol name="4" value="0"/>
-            <uol name="5" value="0"/>
-            <uol name="6" value="0"/>
-            <uol name="7" value="0"/>
-            <uol name="8" value="0"/>
-            <uol name="10" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
         </imgdir>
     </imgdir>
     <imgdir name="condition4">
@@ -130,15 +130,15 @@
                 <int name="z" value="0"/>
                 <int name="delay" value="120"/>
             </canvas>
-            <uol name="1" value="0"/>
-            <uol name="2" value="0"/>
-            <uol name="3" value="0"/>
-            <uol name="4" value="0"/>
-            <uol name="5" value="0"/>
-            <uol name="6" value="0"/>
-            <uol name="7" value="0"/>
-            <uol name="8" value="0"/>
-            <uol name="10" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="0" value="0"/>
         </imgdir>
     </imgdir>
 </imgdir>

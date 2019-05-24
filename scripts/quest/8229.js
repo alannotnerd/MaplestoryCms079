@@ -9,7 +9,7 @@ function end(mode, type, selection) {
     qm.sendNext("Thanks!");
     if (qm.haveItem(4032018, 1)) {
         qm.gainItem(4032018, -1);
-        qm.completeQuest();
+        qm.forceCompleteQuest();
     }
     qm.dispose();
 }

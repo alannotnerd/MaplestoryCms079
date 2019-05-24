@@ -1,5 +1,5 @@
 /*
-	浠诲姟 - 琚姄璧扮殑灞呮皯
+	任务 - 被抓走的居民
 */
 var status = -1;
 
@@ -8,6 +8,6 @@ function start(mode, type, selection) {
 }
 
 function end(mode, type, selection) {
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }

@@ -24,15 +24,15 @@
             <vector name="origin" x="34" y="73"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="3" value="1"/>
-        <uol name="4" value="0"/>
-        <uol name="5" value="1"/>
-        <uol name="6" value="2"/>
-        <uol name="7" value="1"/>
-        <uol name="8" value="0"/>
-        <uol name="9" value="1"/>
-        <uol name="10" value="2"/>
-        <uol name="11" value="1"/>
-        <uol name="12" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
     </imgdir>
 </imgdir>

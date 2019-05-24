@@ -2,13 +2,12 @@ package net.sf.cherry.provider;
 
 import java.util.List;
 
-public abstract interface MapleDataDirectoryEntry extends MapleDataEntry
-{
-  public abstract List<MapleDataDirectoryEntry> getSubdirectories();
+public interface MapleDataDirectoryEntry extends MapleDataEntry {
+  List<MapleDataDirectoryEntry> getSubdirectories();
 
-  public abstract List<MapleDataFileEntry> getFiles();
+  List<MapleDataFileEntry> getFiles();
 
-  public abstract MapleDataEntry getEntry(String paramString);
+  MapleDataEntry getEntry(String paramString);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

@@ -1,11 +1,15 @@
-importPackage(net.sf.cherry.server.maps);
+/*
+	NPC Name: 		Nineheart
+	Map(s): 		-Erev Cygnus Intro-
+	Description: 		warpout, accept cygnus help request
+*/
 
 function start() {
-    cm.sendAcceptDecline("本服务器骑士团技能已经全部修复完毕！现开启#b骑士团#k职业！致此，你可以体验新职业的乐趣。另外。新职业版本我们也将会和盛大同步更新。尽情期待！第五职业矛战士登场！");
+    cm.askAcceptDecline("Becoming a Knight of Cygnus requires talent, faith, courage, and will power... and it looks like you are more than qualified to become a Knight of Cygnus. What do you think? If you wish to become one right this minute, I'll take you straight to Erev. Would you like to head over to Erev right now?");
 }
 
 function action(mode, type, selection) {
-    var returnmap = cm.getChar().getSavedLocation(SavedLocationType.CYGNUSINTRO);
+    var returnmap = cm.getSavedLocation("CYGNUSINTRO");
 
     if (returnmap == null) {
         cm.warp(130000000, 0);
@@ -15,7 +19,7 @@ function action(mode, type, selection) {
         } else {
             cm.warp(130000000, 0);
         }
-        cm.getChar().clearSavedLocation(SavedLocationType.CYGNUSINTRO);
+	cm.clearSavedLocation("CYGNUSINTRO");
     }
-    dispose();
+    cm.dispose();
 }

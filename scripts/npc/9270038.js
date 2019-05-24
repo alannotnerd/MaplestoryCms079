@@ -1,61 +1,66 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/**
--- Odin JavaScript --------------------------------------------------------------------------------
-	Irene - Kerining City to Singapore
--- By ---------------------------------------------------------------------------------------------
-	xQuasar
----------------------------------------------------------------------------------------------------
-**/
-
 var cost = 20000;
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    status = -1;
+    em = cm.getEventManager("AirPlane");
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-	} else {
-		if(mode == 1) {
-			status++;
-		}
-		if(mode == 0) {
-			cm.sendOk("You must have some business to take care of here, right?");
-			cm.dispose();
-			return;
-		}
-		if(status == 0) {
-			cm.sendYesNo("Hey, due to popular demand, I can take you to #bKerning City#k instantly now. It'll still cost you #b"+cost+" mesos#k, though. Are you sure you want to go to #bKerning City#k?");
-		} else if(status == 1) {
-			if(cm.getMeso() >= cost) {
-				cm.warp(103000000,0);
-				cm.gainMeso(-cost);
-			} else {
-				cm.sendOk("Are you sure you have #b"+cost+" mesos#k?");
-			}
-			cm.dispose();
-		}
+    if(mode == 0 && status == 0) {
+	cm.dispose();
+	return;
+    }
+    if (mode == 1) {
+	status++;
+    }
+    if (mode == 0 && menu == 0) {
+	cm.sendNext("我在这里很长一段时间。请改变主意再来跟我说话.");
+	cm.dispose();
+    }
+    if (mode == 0 && menu == 1) {
+	cm.sendOk("我在这里很长一段时间。请改变主意再来跟我说话..");
+	cm.dispose();
+    }
+    if (status == 0) {
+	cm.sendSimple("嗨~ 我是 #p"+cm.getNpc()+"# 来自新加坡机场. 我会帮助你回去 #m103000000# 立刻! 需要帮忙??\r\n#L0##b我想购买飞机票到 #m103000000##k#l\r\n#L1##b出发.#k#l");
+    } else if(status == 1) {
+	menu = selection;
+	if (menu == 0) {
+	    cm.sendYesNo("飞机票两万枫币是否要购买??");
+	} else if (menu == 1) {
+	    cm.sendYesNo("你是否要走了?? 一旦走了你将失去一张飞机票, \r\n感谢您选择Wizet航空公司!");
 	}
-}
+  } else if(status == 2) {
+	if(menu == 0) {
+	    if(!cm.canHold(4031732) || cm.getMeso() < cost) {
+		cm.sendOk("你确定你有 #b"+cost+" 枫币#k? 如果是这样的话，我劝您检查其他栏，看看是否满了!.");
+	    } else {
+		cm.gainMeso(-cost);
+		cm.gainItem(4031732, 1);
+	    }
+	    cm.dispose();
+	} else if(menu == 1) {
+	  if(em == null) {
+		cm.sendNext("脚本错误请回报GM!");
+		cm.dispose();
+	  } else if(!cm.haveItem(4031732)) {
+		cm.sendNext("请先购买飞机票谢谢~");
+		cm.dispose();
+	} else if (em.getProperty("entry") != null && em.getProperty("entry").equals("true")) {
+		cm.sendYesNo("是否要搭飞机??");
+		} else if( em.getProperty("entry") != null && em.getProperty("entry").equals("false") && em.getProperty("docked") != null && em.getProperty("docked").equals("true")) {
+		cm.sendNext("这架飞机正准备起飞。我很抱歉，但你必须得在接下来的旅程。乘坐时间表可通过在迎来售票展台");
+		cm.dispose();
+	    } else {
+		cm.sendNext("请耐心等待几分钟，正在整理里面中！");
+		cm.dispose();
+	    }
+	}
+  } else if (status == 3) {
+		cm.gainItem(4031732,-1);
+		cm.warp(540010001);
+		cm.dispose();
+	    }
+	}
+	

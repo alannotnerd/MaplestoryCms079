@@ -1,54 +1,23 @@
-/* 
- * This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@odinms.de>
-                       Jan Christian Meyer <vimes@odinms.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-/*
- * @Author Raz
- * 
- * Ludi Maze PQ
- */
- 
-importPackage(net.sf.cherry.world);
-
-var exitMap;
-var instanceId;
-var finishMap;
-var bonusMap;
-var bonusTime = 60;//1 Minute
-var pqTime = 3600;//60 Minutes
+/**
+	Ludibrium PQ (101st Eos Tower)
+*/
+var stg6_combo = Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
+var minPlayers = 2;
 
 function init() {
-	instanceId = 1;
+    em.setProperty("state", "0");
 }
 
 function monsterValue(eim, mobId) {
-	return 1;
+    return 1;
 }
 
-function setup() {
-	exitMap = em.getChannelServer().getMapFactory().getMap(922010000);//Exit
-	var instanceName = "LudiPQ" + instanceId;
-	var eim = em.newInstance(instanceName);
-	//eim.setTimeLeft(pqTime);
+function setup(leaderid) {
+    em.setProperty("state", "1");
+
+    var eim = em.newInstance("LudiPQ");
+    eim.setProperty("stage2", "0");
 	var mf = eim.getMapFactory();
-	instanceId++;
 	var map0 = mf.getMap(922010100);
 	var map1 = mf.getMap(922010200);
 	var map1_1 = mf.getMap(922010201);
@@ -102,122 +71,129 @@ function setup() {
 	stage4PortalE.setScriptName("lpq4E");
 	var stage5Portal1A = eim.getMapInstance(922010500).getPortal("in01");
 	stage5Portal1A.setScriptName("lpq5_1_A");
-	return eim;
+
+    eim.startEventTimer(3600000); //20 mins
+
+    return eim;
+}
+
+function scheduledTimeout(eim) {
+    eim.disposeIfPlayerBelow(100, 922010000);
+
+    em.setProperty("state", "0");
+}
+
+function changedMap(eim, player, mapid) {
+    switch (mapid) {
+    case 922010100:
+        // Stage 1
+    case 922010200:
+        // Stage 2
+    case 922010201:
+        // Stage 2 - Tower's Trap'
+    case 922010300:
+        // Stage 3
+    case 922010400:
+        //stage 4
+    case 922010401:
+        //darkness in stage 4
+    case 922010402:
+        //darkness in stage 4
+    case 922010403:
+        //darkness in stage 4
+    case 922010404:
+        //darkness in stage 4
+    case 922010405:
+        //darkness in stage 4
+    case 922010500:
+        //stage 5
+    case 922010501:
+        //tower's maze in stage 5
+    case 922010502:
+        //tower's maze in stage 5
+    case 922010503:
+        //tower's maze in stage 5
+    case 922010504:
+        //tower's maze in stage 5
+    case 922010505:
+        //tower's maze in stage 5
+    case 922010506:
+        //tower's maze in stage 5
+    case 922010600:
+    case 922010700:
+        //stage 7
+    case 922010800:
+    case 922010900:
+        //crack on the wall
+    case 922011000:
+        //bonus
+        return;
+    }
+    eim.unregisterPlayer(player);
+
+    if (eim.disposeIfPlayerBelow(0, 0)) {
+        em.setProperty("state", "0");
+    }
 }
 
 function playerEntry(eim, player) {
-	var map0 = eim.getMapInstance(922010100);
-	player.changeMap(map0, map0.getPortal(0));
+    var map = em.getMapFactory().getMap(922010100);
+    player.changeMap(map, map.getPortal(0));
+    player.tryPartyQuest(1202);
 }
 
-function playerDead(eim, player) {
-	if (player.isAlive()) { //don't trigger on death, trigger on manual revive
-		if (eim.isLeader(player)) { //check for party leader
-			//boot whole party and end
-			var party = eim.getPlayers();
-			for (var i = 0; i < party.size(); i++) {
-				playerExit(eim, party.get(i));
-			}
-			eim.dispose();
-		}
-		else { //boot dead player
-			playerExit(eim, player);
-		}
-	}
-}
+function playerRevive(eim, player) {}
 
 function playerDisconnected(eim, player) {
-	if (eim.isLeader(player)) { //check for party leader
-		//boot whole party and end
-		var party = eim.getPlayers();
-		for (var i = 0; i < party.size(); i++) {
-			if (party.get(i).equals(player)) {
-				removePlayer(eim, player);
-			}			
-			else {
-				playerExit(eim, party.get(i));
-			}
-		}
-		eim.dispose();
-	}
-	else { //boot d/ced player
-		removePlayer(eim, player);
-	}
+    return - 3;
 }
 
 function leftParty(eim, player) {
-	playerExit(eim, player);
+    // If only 2 players are left, uncompletable
+    if (eim.disposeIfPlayerBelow(minPlayers, 922010000)) {
+        em.setProperty("state", "0");
+    } else {
+        playerExit(eim, player);
+    }
 }
 
 function disbandParty(eim) {
-	//boot whole party and end
-	var party = eim.getPlayers();
-	for (var i = 0; i < party.size(); i++) {
-		playerExit(eim, party.get(i));
-	}
-	eim.dispose();
+    // Boot whole party and end
+    eim.disposeIfPlayerBelow(100, 922010000);
+
+    em.setProperty("state", "0");
 }
 
 function playerExit(eim, player) {
-	eim.unregisterPlayer(player);
-	player.changeMap(exitMap, exitMap.getPortal(0));
+    var map = em.getMapFactory().getMap(922010000);
+
+    eim.unregisterPlayer(player);
+    player.changeMap(map, map.getPortal(0));
 }
 
-
-function playerFinish(eim, player) {
-	var map = eim.getMapInstance(922011100);
-	player.changeMap(map, map.getPortal(0));
-}
-
-//for offline players
+// For offline players
 function removePlayer(eim, player) {
-	eim.unregisterPlayer(player);
-	player.getMap().removePlayer(player);
-	player.setMap(exitMap);
+    eim.unregisterPlayer(player);
 }
 
 function clearPQ(eim) {
-	var party = eim.getPlayers();
-	//var rewards = MaplePQRewards.LMPQrewards;
-	for (var i = 0; i < party.size(); i++) {
-		   playerFinish(eim, party.get(i));
-		   //MapleReward.giveReward(rewards, party.get(i));
-	}
-	eim.dispose();
+    eim.disposeIfPlayerBelow(100, 922010000);
+
+    em.setProperty("state", "0");
 }
 
-function allMonstersDead(eim) {
+function finish(eim) {
+    eim.disposeIfPlayerBelow(100, 922010000);
+
+    em.setProperty("state", "0");
 }
 
-function cancelSchedule() {
+function timeOut(eim) {
+    eim.disposeIfPlayerBelow(100, 922010000);
+
+    em.setProperty("state", "0");
 }
 
-function timeOut() {
-	var iter = em.getInstances().iterator();
-	while (iter.hasNext()) {
-		var eim = iter.next();
-		if (eim.getPlayerCount() > 0) {
-			var pIter = eim.getPlayers().iterator();
-			while (pIter.hasNext()) {
-				playerExit(eim, pIter.next());
-			}
-		}
-		eim.dispose();
-	}
-}
-
-function startBonus() {
-var iter = em.getInstances().iterator();
-	while (iter.hasNext()) {
-		var eim = iter.next();
-		if (eim.getPlayerCount() > 0) {
-			var pIter = eim.getPlayers().iterator();
-			while (pIter.hasNext()) {
-				if(pIter.next().getMap().getId() == 922011000){
-				playerFinish(eim, pIter.next());
-				}
-			}
-		}
-	}
-
-}
+function cancelSchedule() {}
+function playerDead() {}
+function allMonstersDead(eim) {}

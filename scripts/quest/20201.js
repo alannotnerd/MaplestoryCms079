@@ -44,7 +44,7 @@ function end(mode, type, selection) {
 	    qm.sendOk("You are currently in full inventory, please check.");
 	    qm.dispose();
 	} else {
-	    qm.completeQuest();
+	    qm.forceCompleteQuest();
 	    if (qm.getJob() != 1110) {
 		qm.changeJob(1110); // Soul
 		qm.gainItem(4032096, -30);

@@ -4090,7 +4090,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="15">
-                <uol name="0" value="../8/0"/>
+                <uol name="../8/0" value="../8/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="artificiality">

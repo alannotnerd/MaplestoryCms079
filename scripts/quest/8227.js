@@ -4,7 +4,7 @@ function start(mode, type, selection) {
     qm.sendNext("Find someone to translate this.");
     if (qm.canHold(4032032, 1)) {
         qm.gainItem(4032032, 1);
-        qm.completeQuest();
+        qm.forceCompleteQuest();
     }
     qm.dispose();
 }

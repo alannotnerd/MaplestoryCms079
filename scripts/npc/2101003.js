@@ -1,35 +1,13 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 
 /* 	Ardin
-	Ariant
-	Created by Cody(shotdownsoul) -
-	
+	Ariant	
 */
 
 
 function start() {
-	cm.sendNext ("Hey hey, don't try to start trouble with anyone. I want nothing to do with you.");
+    cm.sendNext ("嘿，不要试图开始麻烦与任何人。我不想和你做任何事.");
 }
 
 function action() {
-	cm.dispose()
+    cm.dispose()
 }

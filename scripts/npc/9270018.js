@@ -1,59 +1,24 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/**
--- Odin JavaScript --------------------------------------------------------------------------------
-	Kerny - Pilot
--- By ---------------------------------------------------------------------------------------------
-	Information
--- Version Info -----------------------------------------------------------------------------------
-	1.0 - First Version by Information
----------------------------------------------------------------------------------------------------
-**/
-
-function start() {
-	status = -1;
-	action(1, 0, 0);
-}
+// Kerny - Pilot
+var status = -1;
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-		return;
-	}
-	if(mode == 1) {
-		status++;
-	}
-	if(mode == 0) {
-		cm.sendOk("Please hold on for a sec, and plane will be taking off. Thanks for your patience.");
-	}
-	if(status == 0) {
-		cm.sendYesNo("The plane will be taking off soon, Will you leave now? You will have buy the plane ticket again to come in here.");
-	} else if(status == 1) {
-		cm.sendNext("I have already told you the ticket is not refunable~ hope to see you again~");
-	} else if(status == 2) {
-		cm.warp(540010000);
-		cm.dispose();
+    if (mode == 1) {
+	status++;
+    } else {
+	status--;
+    }
+    if (status == 0) {
+	if (cm.getMapId() == 540010002) {
+		cm.sendOk("风景很美对吧?");
+	    cm.dispose();
+	} else if (cm.getMapId() == 540010101){
+	cm.sendOk("风景很美对吧?");
+	cm.dispose();
 	} else {
-		cm.sendOk("You have make a bug! Please report this to http://www.valhalladev.com");
-		cm.dispose();
+	    cm.sendYesNo("这架飞机将在起飞不久，请问你现在离开？您将有再次购买飞机票到这里来.");
 	}
+    } else {
+	cm.warp(540010000, 0);
+	cm.dispose();
+    }
 }

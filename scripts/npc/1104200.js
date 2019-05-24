@@ -6,7 +6,7 @@ function action(mode, type, selection) {
 		map.spawnNpc(1104002, new java.awt.Point(-430, 88));
 		cm.warp(913030000, 0);
 	} else {
-	    cm.playerMessage("The Black Witch is being fought by someone else.");
+	    cm.playerMessage("黑女巫正在与其他人战斗中。");
 	}
 	cm.dispose();
 }

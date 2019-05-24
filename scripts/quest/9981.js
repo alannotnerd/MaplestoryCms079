@@ -11,9 +11,9 @@ function end(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			qm.sendNext("ç¥è´ºä½ åŠªåŠ›å‡çº§ã€‚ä½œä¸ºå‡çº§çš„ç¥è´ºï¼Œæˆ‘é€ä½ ä¸€ä¸ªæ«å¶ã€‚å¸Œæœ›ä½ èƒ½åœ¨#r#eå†’é™©å²›#k#kåº¦è¿‡æ„‰å¿«çš„ä¸€å¤©ï½\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#v4001126# 29ä¸ª");
+			qm.sendNext("×£ºØÄãÅ¬Á¦Éı¼¶¡£×÷ÎªÉı¼¶µÄ×£ºØ£¬ÎÒËÍÄãÒ»¸ö·ãÒ¶¡£Ï£ÍûÄãÄÜÔÚ#r#eÃ°ÏÕµº#k#k¶È¹ıÓä¿ìµÄÒ»Ìì¡«\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#v4001126# 29¸ö");
 		} else if (status == 1) {
-			qm.completeQuest();
+			qm.forceCompleteQuest(9981);
 			qm.gainItem(4001126, 29);
 			qm.dispose();
 		}

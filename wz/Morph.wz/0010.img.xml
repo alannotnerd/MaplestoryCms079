@@ -219,15 +219,15 @@
             <vector name="head" x="-6" y="-82"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="24" value="0"/>
-        <uol name="25" value="1"/>
-        <uol name="26" value="2"/>
-        <uol name="27" value="3"/>
-        <uol name="28" value="4"/>
-        <uol name="29" value="5"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="5" value="5"/>
     </imgdir>
     <imgdir name="prone">
-        <uol name="0" value="../proneStab/0"/>
+        <uol name="../proneStab/0" value="../proneStab/0"/>
         <canvas name="1" width="86" height="93">
             <vector name="origin" x="53" y="78"/>
             <vector name="lt" x="-38" y="-54"/>

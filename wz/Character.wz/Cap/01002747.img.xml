@@ -44,80 +44,80 @@
     </imgdir>
     <imgdir name="walk1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="walk2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand1">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand2">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="alert">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO1">
@@ -129,7 +129,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -139,7 +139,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -149,7 +149,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO2">
@@ -161,7 +161,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -171,7 +171,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -181,7 +181,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO3">
@@ -193,7 +193,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -203,7 +203,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -213,7 +213,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingOF">
@@ -225,10 +225,10 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="backDefault" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="52" height="23">
@@ -238,7 +238,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="53" height="24">
@@ -248,7 +248,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT1">
@@ -260,7 +260,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -270,7 +270,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -280,7 +280,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT2">
@@ -292,7 +292,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -302,7 +302,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -312,7 +312,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT3">
@@ -324,7 +324,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -334,7 +334,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -344,12 +344,12 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingTF">
         <imgdir name="0">
-            <uol name="backDefault" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="51" height="23">
@@ -359,7 +359,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="52" height="23">
@@ -369,7 +369,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="53" height="24">
@@ -379,7 +379,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingP1">
@@ -391,7 +391,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -401,7 +401,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -411,7 +411,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingP2">
@@ -423,7 +423,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -433,7 +433,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -443,7 +443,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingPF">
@@ -455,7 +455,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -465,7 +465,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -475,7 +475,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="53" height="24">
@@ -485,7 +485,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabO1">
@@ -497,7 +497,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="53" height="24">
@@ -507,7 +507,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabO2">
@@ -519,7 +519,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="53" height="24">
@@ -529,7 +529,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabOF">
@@ -541,7 +541,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -551,7 +551,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -561,7 +561,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabT1">
@@ -573,7 +573,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -583,7 +583,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -593,7 +593,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabT2">
@@ -605,7 +605,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -615,7 +615,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -625,7 +625,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabTF">
@@ -637,7 +637,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="53" height="24">
@@ -647,7 +647,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -657,7 +657,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="53" height="24">
@@ -667,7 +667,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -679,7 +679,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -689,7 +689,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -699,7 +699,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -711,7 +711,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="51" height="23">
@@ -721,7 +721,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="52" height="23">
@@ -731,7 +731,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="default" width="53" height="24">
@@ -741,7 +741,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="4">
             <canvas name="default" width="53" height="24">
@@ -751,7 +751,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="shootF">
@@ -763,7 +763,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="53" height="24">
@@ -773,7 +773,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="52" height="23">
@@ -783,7 +783,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -795,7 +795,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="53" height="24">
@@ -805,7 +805,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="prone">
@@ -817,7 +817,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
@@ -829,7 +829,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="52" height="23">
@@ -839,7 +839,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="53" height="24">
@@ -849,7 +849,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -861,7 +861,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="53" height="24">
@@ -871,7 +871,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">
@@ -883,7 +883,7 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="sit">
@@ -895,23 +895,23 @@
                 </imgdir>
                 <string name="z" value="capOverHair"/>
             </canvas>
-            <uol name="defalutAc" value="../../default/defaultAc"/>
+            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="ladder">
         <imgdir name="0">
-            <uol name="backDefault" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="backDefault" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="rope">
         <imgdir name="0">
-            <uol name="backDefault" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="backDefault" value="../../backDefault/default"/>
+            <uol name="../../backDefault/default" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
 </imgdir>

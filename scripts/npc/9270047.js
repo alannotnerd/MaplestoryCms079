@@ -1,23 +1,218 @@
+var status = -1;
+var yaoshi = 2;
 
-function start() { 
- status = -1; 
- action(1, 0, 0); 
-} 
-function action(mode, type, selection) { 
- if (mode == -1 || mode == 0) { 
-  cm.dispose(); 
-  return; 
- } else { 
-  if (mode == 1) 
-   status++; 
-  else 
-   status--; 
-  if (status == 0) { 
-   cm.sendYesNo("ç¡®å®šè¦ç¦»å¼€å—?"); 
-  } 
-  else if(status == 1) { 
-   cm.warp(551030100); 
-   cm.dispose(); 
-  } 
- } 
-} 
+function start() {
+    if (cm.getPlayer().getMapId() == 551030200) {
+        cm.sendYesNo("ÄãÒªÀë¿ªÁËÂğ?");
+        status = 1;
+        return;
+    }
+    if (cm.getPlayer().getLevel() < 90) {
+        cm.sendOk("ÄãµÄµÈ¼¶ÉĞÎ´´ïµ½90....");
+        cm.dispose();
+        return;
+    } else if (!cm.haveItem(4032246)) {
+        cm.sendOk("ÄãÃ»ÓĞÒâÄî¹ö°É!");
+        cm.dispose();
+        return;
+    }
+    if ( !cm.getPlayer().isGM() &&  cm.getPlayer().getClient().getChannel() != 5 && cm.getPlayer().getClient().getChannel() != 6) {
+        cm.sendOk("ĞÜÊ¨Ö»ÄÜÔÚ5,6ÆµÌôÕ½.");
+        cm.dispose();
+        return;
+    }
+    if (cm.getBossLog("ĞÜÊ¨Íõ´ÎÊı") >= yaoshi) {
+        cm.sendOk("ºÜ±§Ç¸Ã¿ÌìÖ»ÄÜ´òÁ½´Î..");
+        cm.dispose();
+        return;
+    }
+    var em = cm.getEventManager("ScarTarBattle");
+
+    if (em == null) {
+        cm.sendOk("±¾»î¶¯ÉĞÎ´¿ª·Å.");
+        cm.dispose();
+        return;
+    }
+    var eim_status = em.getProperty("state");
+    var marr = cm.getQuestRecord(160108);
+    var data = marr.getCustomData();
+    if (data == null) {
+        marr.setCustomData("0");
+        data = "0";
+    }
+    var time = parseInt(data);
+    var dat = parseInt(marr.getCustomData());
+    if (eim_status == null || eim_status.equals("0")) {
+        var squadAvailability = cm.getSquadAvailability("ScarTar");
+        if (squadAvailability == -1) {
+            status = 0;
+            cm.sendYesNo("ÏÖÔÚÓĞÈËÕıÔÚÌôÕ½µ±ÖĞ£¬Äú¿ÉÒÔÏÈÉêÇëÔ¶Õ÷¶ÓÅÅ¶Ó£¬ÄãÏë³ÉÎªÔ¶Õ÷¶Ó¶Ó³¤Âğ£¿");
+            if (cm.getBossLog("ĞÜÊ¨Íõ´ÎÊı") >= yaoshi) {
+                cm.sendOk("ºÜ±§Ç¸Ã¿ÌìÖ»ÄÜ´òÁ½´Î..");
+                cm.dispose();
+                return;
+            }
+        } else if (squadAvailability == 1) {
+            // -1 = Cancelled, 0 = not, 1 = true
+            var type = cm.isSquadLeader("ScarTar");
+            if (type == -1) {
+                cm.sendOk("ÒÑ¾­½áÊøÁËÉêÇë¡£");
+                cm.dispose();
+            } else if (type == 0) {
+                var memberType = cm.isSquadMember("ScarTar");
+                if (memberType == 2) {
+                    cm.sendOk("ÔÚÔ¶Õ÷¶ÓµÄÖÆ²ÃÃûµ¥¡£");
+                    cm.dispose();
+                } else if (memberType == 1) {
+                    status = 5;
+                    cm.sendSimple("ÄãÒª×öÊ²Ã´? \r\n#b#L0#¼ÓÈëÔ¶Õ÷¶Ó#l \r\n#b#L1#ÍË³öÔ¶Õ÷¶Ó#l \r\n#b#L2#²é¿´Ô¶Õ÷¶ÓÃûµ¥#l");
+                } else if (memberType == -1) {
+                    cm.sendOk("Ô¶Õ÷¶ÓÔ±ÒÑ¾­´ïµ½30Ãû£¬ÇëÉÔºóÔÙÊÔ¡£");
+                    cm.dispose();
+                } else {
+                    status = 5;
+                    cm.sendSimple("ÄãÒª×öÊ²Ã´? \r\n#b#L0#¼ÓÈëÔ¶Õ÷¶Ó#l \r\n#b#L1#ÍË³öÔ¶Õ÷¶Ó#l \r\n#b#L2#²é¿´Ô¶Õ÷¶ÓÃûµ¥#l");
+                }
+            } else { // Is leader
+                status = 10;
+                cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿\r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¹ÜÀíÔ¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L2#±à¼­ÏŞÖÆÁĞ±í¡£#l \r\n#r#L3#½øÈëµØÍ¼¡£#l");
+                // TODO viewing!
+            }
+        } else {
+            var eim = cm.getDisconnected("ScarTarBattle");
+            if (eim == null) {
+                var squd = cm.getSquad("ScarTar");
+                if (squd != null) {
+                    cm.sendYesNo("ÒÑ¾­Ô¶Õ÷¶ÓÕıÔÚ½øĞĞÌôÕ½ÁË.\r\n" + squd.getNextPlayer());
+                    status = 3;
+                } else {
+                    cm.sendOk("Ô¶Õ÷¶ÓµÄÌôÕ½ÒÑ¾­¿ªÊ¼.");
+                    cm.safeDispose();
+                }
+            } else {
+                cm.sendYesNo("ÄãÒª¼ÌĞø½øĞĞÔ¶Õ÷ÈÎÎñÂğ?");
+                status = 2;
+            }
+        }
+    } else {
+        var eim = cm.getDisconnected("ScarTarBattle");
+        if (eim == null) {
+            var squd = cm.getSquad("ScarTar");
+            if (squd != null) {
+                cm.sendYesNo("ÒÑ¾­Ô¶Õ÷¶ÓÕıÔÚ½øĞĞÌôÕ½ÁË.\r\n" + squd.getNextPlayer());
+                status = 3;
+            } else {
+                cm.sendOk("Ô¶Õ÷¶ÓµÄÌôÕ½ÒÑ¾­¿ªÊ¼.");
+                cm.safeDispose();
+            }
+        } else {
+            cm.sendYesNo("ÄãÒª¼ÌĞø½øĞĞÔ¶Õ÷ÈÎÎñÂğ£¿");
+            status = 2;
+        }
+    }
+}
+
+function action(mode, type, selection) {
+    switch (status) {
+        case 0:
+            if (mode == 1) {
+                if (cm.registerSquad("ScarTar", 5, " ÒÑ¾­³ÉÎªÁËÔ¶Õ÷¶Ó¶Ó³¤¡£Èç¹ûÄãÏë¼ÓÈëÔ¶Õ÷¶Ó£¬ÇëÖØĞÂ´ò¿ª¶Ô»°ÉêÇë¼ÓÈëÔ¶Õ÷¶Ó¡£")) {
+                    cm.sendOk("ÄãÒÑ¾­³ÉÎªÁËÔ¶Õ÷¶Ó¶Ó³¤¡£½ÓÏÂÀ´µÄ5·ÖÖÓ£¬ÇëµÈ´ı¶ÓÔ±ÃÇµÄÉêÇë¡£");
+                } else {
+                    cm.sendOk("Î´Öª´íÎó.");
+                }
+            }
+            cm.dispose();
+            break;
+        case 1:
+            if (mode == 1) {
+                cm.warp(551030100, 0);
+            }
+            cm.dispose();
+            break;
+        case 2:
+            if (!cm.reAdd("ScarTarBattle", "ScarTar")) {
+                cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
+            }
+            cm.safeDispose();
+            break;
+        case 3:
+            if (mode == 1) {
+                var squd = cm.getSquad("ScarTar");
+                if (squd != null && !squd.getAllNextPlayer().contains(cm.getPlayer().getName())) {
+                    squd.setNextPlayer(cm.getPlayer().getName());
+                    cm.sendOk("ÄãÒÑ¾­³É¹¦µÇ¼ÇÎªÏÂÒ»×é..");
+                }
+            }
+            cm.dispose();
+            break;
+        case 5:
+            if (selection == 0) { // join
+                var ba = cm.addMember("ScarTar", true);
+                if (ba == 2) {
+                    cm.sendOk("Ô¶Õ÷¶ÓÔ±ÒÑ¾­´ïµ½30Ãû£¬ÇëÉÔºóÔÙÊÔ¡£");
+                } else if (ba == 1 && !cm.getPlayer().isGM()) {
+                    cm.setBossLog("ĞÜÊ¨Íõ´ÎÊı");
+                    cm.sendOk("ÉêÇë¼ÓÈëÔ¶Õ÷¶Ó³É¹¦£¬ÇëµÈºò¶Ó³¤Ö¸Ê¾¡£");
+                } else {
+                    cm.sendOk("ÄãÒÑ¾­²Î¼ÓÁËÔ¶Õ÷¶Ó£¬ÇëµÈºò¶Ó³¤Ö¸Ê¾¡£");
+                }
+            } else if (selection == 1) {// withdraw
+                var baa = cm.addMember("ScarTar", false);
+                if (baa == 1) {
+                    cm.sendOk("³É¹¦ÍË³öÔ¶Õ÷¶Ó¡£");
+                } else {
+                    cm.sendOk("ÄãÃ»ÓĞ²Î¼ÓÔ¶Õ÷¶Ó¡£");
+                }
+            } else if (selection == 2) {
+                if (!cm.getSquadList("ScarTar", 0)) {
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
+                }
+            }
+            cm.dispose();
+            break;
+        case 10:
+            if (mode == 1) {
+                if (selection == 0) {
+                    if (!cm.getSquadList("ScarTar", 0)) {
+                        cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
+                    }
+                    cm.dispose();
+                } else if (selection == 1) {
+                    status = 11;
+                    if (!cm.getSquadList("ScarTar", 1)) {
+                        cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
+                        cm.dispose();
+                    }
+                } else if (selection == 2) {
+                    status = 12;
+                    if (!cm.getSquadList("ScarTar", 2)) {
+                        cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
+                        cm.dispose();
+                    }
+                } else if (selection == 3) { // get insode
+                    if (cm.getSquad("ScarTar") != null) {
+                        var dd = cm.getEventManager("ScarTarBattle");
+                        dd.startInstance(cm.getSquad("ScarTar"), cm.getMap(), 160108);
+                        cm.setBossLog("ĞÜÊ¨Íõ´ÎÊı");
+                    } else {
+                        cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
+                    }
+                    cm.dispose();
+                }
+            } else {
+                cm.dispose();
+            }
+            break;
+        case 11:
+            cm.banMember("ScarTar", selection);
+            cm.dispose();
+            break;
+        case 12:
+            if (selection != -1) {
+                cm.acceptMember("ScarTar", selection);
+            }
+            cm.dispose();
+            break;
+    }
+}

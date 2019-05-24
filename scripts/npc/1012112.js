@@ -1,121 +1,88 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
+var status = -1;
+var minLevel = 10; // 35
+var maxLevel = 200; // 65
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/*
-Tory - [Does the Main function of HenesysPQ]
- @author Jvlaple
- */
- 
-var status = 0;
-var minLevel = 10;
-var maxLevel = 20;
-var minPlayers = 3;
-var maxPlayers = 6;
-
-function start() {
-	status = -1;
-	action(1, 0, 0);
-}
+var minPartySize = 1;
+var maxPartySize = 6;
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
+    if (mode == 1) {
+	status++;
+    } else {
+	if (status == 0) {
+	    cm.dispose();
+	    return;
+	}
+	status--;
+    }
+
+    if (status == 0) {
+        if (cm.getMapId() == 910010400) {
+		cm.warp(100000200);
+	}
+	if (cm.getParty() == null) { // No Party
+	    cm.sendSimple("ÄãÔ¸ÒâºÍÄãµÄ×é¶ÓÍê³ÉÒ»¸öÈÎÎñÂð£¿ÔÚÕâÀï£¬Äã»á·¢ÏÖÕÏ°­ºÍÎÊÌâ£¬Äã½«ÎÞ·¨»÷°ÜËü£¬³ý·ÇÓëÎ°´óµÄÍÅ¶ÓºÏ×÷¡£Èç¹ûÄãÏëÊÔÊÔ£¬Çë¸æËßÎÒ #b×é¶Ó¶Ó³¤#k ¸úÎÒËµ»°.\r\n\r\n#rÒªÇó: " + minPartySize + " ¶ÓÔ± ËùÓÐ¼¶±ð " + minLevel + " ~ " + maxLevel + ".#b#l");
+	} else if (!cm.isLeader()) { // Not Party Leader
+	    cm.sendSimple("Èç¹ûÄãÏë³¢ÊÔ£¬Çë¸æËß #b×é¶Ó¶Ó³¤#k ¸úÎÒËµ»°.#b#l");
 	} else {
-		if (mode == 0 && status == 0) {
+	    // Check if all party members are within PQ levels
+	    var party = cm.getParty().getMembers();
+	    var mapId = cm.getMapId();
+	    var next = true;
+	    var levelValid = 0;
+	    var inMap = 0;
+	    var it = party.iterator();
+
+	    while (it.hasNext()) {
+		var cPlayer = it.next();
+		if ((cPlayer.getLevel() >= minLevel) && (cPlayer.getLevel() <= maxLevel)) {
+		    levelValid += 1;
+		} else {
+		    next = false;
+		}
+		if (cPlayer.getMapid() == mapId) {
+		    inMap += (cPlayer.getJobId() == 900 ? 6 : 1);
+		}
+	    }
+	    if (party.size() > maxPartySize || inMap < minPartySize) {
+		next = false;
+	    }
+	    if (next) {
+		var em = cm.getEventManager("HenesysPQ");
+		if (em == null) {
+		    cm.sendSimple("PQÓöµ½ÁËÒ»¸ö´íÎó¡£ÇëÁªÏµGM£¬Óë½ØÍ¼.#b#l");
+		} else {
+		    var prop = em.getProperty("state");
+		    if (prop.equals("0") || prop == null) {
+        for (var i = 4001095; i < 4001099; i++) {
+	    cm.givePartyItems(i, 0, true);
+	}
+        for (var i = 4001100; i < 4001101; i++) {
+	    cm.givePartyItems(i, 0, true);
+	}
+			em.startInstance(cm.getParty(), cm.getMap());
 			cm.dispose();
 			return;
+		    } else {
+			cm.sendSimple("ÁíÒ»·½ÒÑ½øÈë #rÔÂÃëÈÎÎñ#k ÔÚÕâÀï¡£Çë³¢ÊÔÁíÒ»¸öÆµµÀ£¬»òÕßµÈ´ýµ±Ç°µÄÈÎÎñÍê³É.#b#");
+		    }
 		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (cm.getChar().getMapId()==100000200) {
-			if (status == 0) {
-				cm.sendNext("å“ˆå•°~æˆ‘å«è¾¾å°”åˆ©ã€‚è¿™é‡Œé¢æ˜¯å¼€æ»¡æœˆèŠ±çš„ç¾Žä¸½å±±ä¸˜ã€‚å¬è¯´â€¦é‡Œé¢æœ‰ä¸€ä¸ªå«åšå…´å„¿çš„è€è™Žï¼Œå¥½åƒå››å¤„åœ¨å¯»æ‰¾å¯ä»¥å¡«é¥±è‚šå­çš„é£Ÿç‰©â€¦");
-			} else if (status == 1) {
-				cm.sendNext("å‹‡å£«â€¦ä½ æ„¿æ„å‰å¾€æœˆèŠ±å±±ä¸˜ï¼Œé›†ç»“é˜Ÿå‘˜çš„åŠ›é‡ï¼Œä¸€èµ·å¸®åŠ©å…´å„¿å—ï¼Ÿ#l#k");
-			} else if (status == 2) {
-				if (cm.getParty() == null) {
-					cm.sendOk("ä½ è¿˜æ²¡æœ‰ç»„é˜Ÿï¼ä¸èƒ½å‚åŠ æœ¬æ´»åŠ¨");
-					cm.dispose();
-					return;
-				}
-				if (!cm.isLeader()) {
-					cm.sendOk("è‹¥æƒ³è¦è¿›å…¥é‡Œé¢ï¼Œéœ€è¦ä½ æ‰€éš¶å±žé˜Ÿä¼çš„é˜Ÿé•¿ï¼Œä¸Žæˆ‘è¿›è¡Œå¯¹è¯å–”ï¼å¿«åŽ»æ‰¾ä½ çš„é˜Ÿé•¿å§~^^");
-					cm.dispose();
-				} else {
-					var party = cm.getParty().getMembers();
-					var mapId = cm.getChar().getMapId();
-					var next = true;
-					var levelValid = 0;
-					var inMap = 0;
-					if (party.size() < minPlayers || party.size() > maxPlayers) {
-						next = false;
-						cm.sendOk(party.size());
-						cm.dispose();
-						return;
-					}else {
-						for (var i = 0; i < party.size() && next; i++) {
-							if ((party.get(i).getLevel() >= minLevel) && (party.get(i).getLevel() <= maxLevel))
-								levelValid += 1;
-							if (party.get(i).getMapid() == mapId)
-								inMap += 1;
-						}
-						if (levelValid < minPlayers || inMap < minPlayers){
-							cm.sendOk(levelValid);
-							cm.dispose();
-							//next = false;
-							return;
-						}
-							
-					}
-					if (next) {
-						var em = cm.getEventManager("HenesysPQ");
-						if (em == null) {
-							cm.sendOk("#rError#k: HenesysPQ is unavailable at the moment. Please try again later.");
-							cm.dispose();
-						} else {
-							em.startInstance(cm.getParty(), cm.getChar().getMap());
-							var party = cm.getChar().getEventInstance().getPlayers();
-						}
-						cm.dispose();
-					} else {
-						cm.sendOk("ä½ æ‰€å±žçš„ç»„é˜Ÿé˜Ÿå‘˜ä¸è¶³3åä¸èƒ½å…¥åœºã€‚ç­‰çº§åœ¨10ä»¥ä¸Šï¼Œå¹¶ä¸”äººå‘˜åœ¨3åä»¥ä¸Šæ‰å¯ä»¥å…¥åœºã€‚è¯·ä½ ç¡®è®¤ä»¥åŽå†è·Ÿæˆ‘è°ˆã€‚");
-						cm.dispose();
-					}
-				}
-			}
-		} else if (cm.getChar().getMapId() == 910010400) {
-			if (status == 0){
-			cm.warp(100000200);
-			cm.playerMessage("ä½ è¢«ä¼ é€åˆ°äº†å°„æ‰‹å…¬å›­.");
-			cm.dispose();
-			}
-		} else if (cm.getPlayer().getMapId() == 910010100) {
-			if (status==0) {
-				cm.sendYesNo("ä½ æƒ³è¦å‰å¾€#rå°„æ‰‹å…¬å›­#kå—?");				
-			} else if (status == 1) {
-					cm.warp(100000200);
-				cm.dispose();
-			}
-		}
+	    } else {
+		cm.sendSimple("ÉêÇë½øÈëÊ§°Ü¡£Çë×ñÊØÒÔÏÂ¹æ¶¨:\r\n\r\n#rÒªÇó: " + minPartySize + " ¶ÓÔ±, ËùÓÐ¼¶±ð " + minLevel + " ~ " + maxLevel + ".#b#l");
+	    }
 	}
+    } else { //broken glass
+	if (cm.haveItem(1002798,1)) {
+	    cm.sendOk("ÄãÒÑ¾­ÓÐÁË");
+	} else if (!cm.canHold(1002798,1)) {
+	    cm.sendOk("ÄãÒÑ¾­ÓÐÁË");
+	} else if (cm.haveItem(4001101,20)) {
+	    cm.gainItem(4001101,-20); //should handle automatically for "have"
+	    cm.gainItem(1002798,1);
+	} else {
+	    cm.sendOk("ÄãÐèÒª20¸öÔÂÃîµÄÄê¸â");
+	}
+	cm.dispose();
+
+    }
 }

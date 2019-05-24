@@ -33,7 +33,7 @@
                 <int name="state" value="0"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
         <canvas name="0" width="256" height="70">
             <vector name="origin" x="128" y="35"/>
             <int name="z" value="0"/>

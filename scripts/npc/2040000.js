@@ -1,32 +1,32 @@
+/*
+	Mel - Ludibrium Ticketing Place(220000100)
+*/
+
 var cost = 6000;
+var status = 0;
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    cm.sendYesNo("ÄãºÃ,ÎÒÊÇÂëÍ··şÎñÔ±ÇÇÒÁ¡£ÄãÏëÀë¿ªÍæ¾ßÖ®³Çµ½Ìì¿ÕÖ®³ÇÂğ? ´ÓÕâÕ¾µ½°¬ÄÉË¹´óÂ½µÄ#bÌì¿ÕÖ®³Ç#kµÄ´¬Ö»\rĞèÒª»¨·Ñ#b"+cost+" ·ã±Ò#k ¹ºÂò#b#t4031045##k ²Å¿ÉÒÔÆôº½.");
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-	} else {
-		if(mode == 1) {
-			status++;
-		}
-		if(mode == 0) {
-			cm.sendNext("ä½ è¿˜æœ‰ä»€ä¹ˆåˆ«çš„äº‹æƒ…åœ¨è¿™é‡Œæ²¡æœ‰å¤„ç†å¥½å—ï¼Ÿ");
-			cm.dispose();
-			return;
-		}
-		if(status == 0) {
-			cm.sendYesNo("æ‚¨å¥½~ï¼æˆ‘æ˜¯ç¾å°”ï¼Œæˆ‘è´Ÿè´£é”€å”®å¼€å¾€å¤©ç©ºä¹‹åŸçš„è½¦ç¥¨ã€‚ å¼€å¾€å¤©ç©ºä¹‹åŸçš„ç«è½¦æ¯ #b10åˆ†é’Ÿ#k ä¸€ç­ï¼Œè½¦ç¥¨çš„å”®ä»·ä¸º #b"+cost+" é‡‘å¸#kã€‚ ç¡®å®šè¦è´­ä¹° #b#t4031045##kå—ï¼Ÿ");
-		} else if(status == 1) {
-			if(cm.getMeso() >= cost && cm.canHold(4031045)) {
-				cm.gainItem(4031045,1);
-				cm.gainMeso(-cost);
-			} else {
-				cm.sendOk("ä½ ç¡®å®šæœ‰ #b"+cost+" é‡‘å¸#kå—ï¼Ÿ");
-			}
-			cm.dispose();
-		}
-	}
+    if(mode == -1)
+        cm.dispose();
+    else {
+        if(mode == 1)
+            status++;
+        if(mode == 0) {
+            cm.sendNext("ÄãÓĞÒ»Ğ©¾­¼ÃµÄ¸ºµ£¶øÎŞ·¨´î´¬¶Ô°É?");
+            cm.dispose();
+            return;
+        }
+        if(status == 1) {
+            if(cm.getMeso() >= cost && cm.canHold(4031045)) {
+                cm.gainItem(4031045,1);
+                cm.gainMeso(-cost);
+            } else
+                cm.sendOk("ÇëÎÊÄãÓĞ #b"+cost+" ·ã±Ò#k? Èç¹ûÓĞµÄ»°,ÎÒÈ°Äú¼ì²éÏÂÉíÉÏÆäËûÀ¸Î»¿´ÊÇ·ñÓĞÃ»ÓĞÂúÁË.");
+            cm.dispose();
+        }
+    }
 }

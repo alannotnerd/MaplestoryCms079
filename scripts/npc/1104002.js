@@ -4,7 +4,7 @@
  */
 
 function start() {
-    cm.sendNext("Oh... Did I just found something? Then there's only one way out! Let's fight like a #rBlack Wing#k should!");
+    cm.sendNext("呵呵...难道我刚刚做的被发现了吗？！");
 }
 
 function action(mode, type, selection) {

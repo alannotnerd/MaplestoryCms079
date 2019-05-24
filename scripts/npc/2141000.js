@@ -1,30 +1,19 @@
-var status = 0; 
-var selectedMap = -1; 
+/*
+ * Time Temple - Kirston
+ * Twilight of the Gods
+ */
 
-function start() { 
-    status = -1; 
-    action(1, 0, 0); 
-} 
-    
-function action(mode, type, selection) { 
-    if (mode == -1) { 
-        cm.dispose(); 
-    } else { 
-        if (mode == 1) 
-            status++; 
-        else { 
-            cm.sendOk("等待勇士的挑战！"); 
-            cm.dispose(); 
-            return; 
-        } if (status == 0) { 
-            cm.sendYesNo("是来挑战PB的么？"); 
-        } else if (status == 1) { 
-                var x = -222;
-                var y = -42;
-                cm.spawnNPC(x, y, 2141000, 270050100);
-                cm.removeNPC(0, 0, 2141000, 4001193); //1193
-                cm.warp(270050100,0);
-                cm.dispose();
-        }
-        } 
-} 
+function start() {
+    cm.askAcceptDecline("If only I had the Mirror of Goodness then I can re-summon the Black Wizard! \r\nWait! something's not right! Why is the Black Wizard not summoned? Wait, what's this aura? I feel something... totally different from the Black Wizard Ahhhhh!!!!! \r\n\r\n #b(Places a hand on the shoulder of Kryston.)");
+}
+
+function action(mode, type, selection) {
+    if (mode == 1) {
+	cm.removeNpc(270050100, 2141000);
+	cm.forceStartReactor(270050100, 2709000);
+    }
+    cm.dispose();
+
+// If accepted, = summon PB + Kriston Disappear + 1 hour timer
+// If deny = NoTHING HAPPEN
+}

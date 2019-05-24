@@ -789,7 +789,7 @@
             <string name="id" value="2202003"/>
             <int name="x" value="-96"/>
             <int name="y" value="-1914"/>
-            <int name="reactorTime" value="-1"/>
+            <int name="reactorTime" value="20"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>
@@ -797,7 +797,7 @@
             <string name="id" value="2202003"/>
             <int name="x" value="101"/>
             <int name="y" value="-2132"/>
-            <int name="reactorTime" value="-1"/>
+            <int name="reactorTime" value="20"/>
             <int name="f" value="1"/>
             <string name="name" value=""/>
         </imgdir>
@@ -805,7 +805,7 @@
             <string name="id" value="2202003"/>
             <int name="x" value="-78"/>
             <int name="y" value="-2350"/>
-            <int name="reactorTime" value="-1"/>
+            <int name="reactorTime" value="20"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>
@@ -813,7 +813,7 @@
             <string name="id" value="2202003"/>
             <int name="x" value="-106"/>
             <int name="y" value="-3379"/>
-            <int name="reactorTime" value="-1"/>
+            <int name="reactorTime" value="20"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>

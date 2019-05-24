@@ -197,14 +197,14 @@
             <vector name="head" x="0" y="-47"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="9" value="../stand/0"/>
-        <uol name="10" value="../stand/1"/>
-        <uol name="11" value="../stand/2"/>
-        <uol name="12" value="../stand/3"/>
-        <uol name="13" value="../stand/0"/>
-        <uol name="14" value="../stand/1"/>
-        <uol name="15" value="../stand/2"/>
-        <uol name="16" value="../stand/3"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
     </imgdir>
     <imgdir name="skill1">
         <canvas name="0" width="105" height="69">

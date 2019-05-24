@@ -1,122 +1,69 @@
-/*mia
-	spawn NPC
-	- EI Nath
-	- by ~çˆ±ä¸Šå†’é™©å²›
-*/
-
-var status = 0;
-var mob = Array(2220000, 3220000, 5220000, 7220000,8220000,8220001,3220001,4220000,5220002,6220000,6220001,7220001,7220002,8220002,8220003,9300151,9300151);
-var mobname = Array("çº¢èœ—ç‰›ç‹", "æ ‘å¦–ç‹", "å¯„å±…èŸ¹", "è‚¯å¾·ç†Š","è‰¾é‡Œæ°","è´Ÿç‹¼é›ªäºº","å¤§å®‡","æ­‡å°”å¤«","æµ®å£«å¾·","å¤šå°”","æœ±è¯º","ä¹å°¾ç‹","å¦–æ€ªç»…å£«","å‰ç±³æ‹‰","å¤§æµ·å…½","äººé€ äºº","æ„¤æ€’äººé€ äºº"
-);
-var mobcost = Array(10000000, 15000000, 20000000, 25000000,30000000,35000000,30000000,30000000,30000000,30000000,30000000,30000000,30000000,30000000,50000000,30000000,30000000);
-
-
-var boss = Array(9300089, 9300090, 9400112, 9500317,8500000,8220001,9400014,9001000,9001001,9600010,9001002,9001003);
-var bossname = Array("ç«å‡¤å‡°", "å†°å‡¤å‡°", "ä¿é•–A", "å°é›ªäºº","æ—¶é—´çƒ","é©®ç‹¼é›ªäºº","å¤©ç‹—","æ­¦æœ¯æ•™ç»ƒçš„åˆ†èº«","æ±‰æ–¯çš„åˆ†èº«","å¤§ç‹èœˆèš£","èµ«ä¸½å¨œçš„åˆ†èº«","è¾¾å…‹é²çš„åˆ†èº«");
-var bosscost = Array(50000000, 50000000, 1000000000, 50000000,300000000,150000000,50000000,50000000,80000000,50000000,50000000,50000000);
-var selectedmob = -1;
-var mobkind;
-var mobid;
-var mobna;
-var price;
-var qty=1;
-
-importPackage(net.sf.cherry.client);
-
 function start() {
-	status = -1;
-	action(1, 0, 0);
-}
+    status = -1;
 
+    action(1, 0, 0);
+}
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (status >= 2 && mode == 0) {
-			cm.sendOk("#bè°¢è°¢ä¸‹æ¬¡å†å…‰é¡¾.");
-			cm.dispose();
-			return;
-		}
-		if (mode == 1) {
-			status++;
-		}
-		else {
-			status--;
-		}
-		if (status == 0) {
-			cm.sendNext("#bHi, æˆ‘æ˜¯çˆ±ä¸Šå†’é™©å²›å¬å”¤å¸ˆ[æ¨å°ç»†],ï¼Œæˆ‘å¯ä»¥ä¸ºä½ è¿›è¡Œç‰¹æ®ŠæœåŠ¡å—.");
-		} else if (status == 1) {
-			cm.sendNextPrev("#bæˆ‘å¯ä»¥ä¸ºä½ å¬å”¤å‡ºä½ å¸Œæœ›çš„æ€ªå…½å’Œæ–°çš„è¶…çº§BOSSï¼Œä½†æ˜¯æ‚¨å¾—ç»™ç‚¹é’±æˆ‘å“Ÿï¼Œç¥ä½ æ€æ€ªæ„‰å¿«.")
-		} 
+    if (mode == -1) {
+        cm.dispose();
+    }
+    else {
+        if (status >= 0 && mode == 0) {
 
- 		else if (status == 2) {
-			cm.sendSimple ("#rè¯·é€‰æ‹©æ‚¨è¦å¬å”¤çš„æ€ªç‰©ç§ç±»?\r\n#b#L0#æ™®é€šæ€ªç‰©#l\r\n#L1#æ–°è¶…çº§BOSSæ€ªç‰©#l");
-		} 
-		else if (status == 3) {
-
-			var selStr = "#ré€‰æ‹©ä½ æƒ³å¬å”¤çš„æ€ªå…½å“¦.#b";
-		if (selection == 0) {
-				mobkind=0;
-				for (var i = 0; i < mob.length; i++) {
-					selStr += "\r\n#L" + i + "#" + mobname[i] + "(" + mobcost[i] + " æ«å¸)#l";
-				}
-			cm.sendSimple(selStr);}
-		else if (selection == 1){
-				mobkind=1;
-				for (var i = 0; i < boss.length; i++) {
-					selStr += "\r\n#L" + i + "#" + bossname[i] + "(" + bosscost[i] + " æ«å¸)#l";
-				}
-			cm.sendSimple(selStr);
-		}else cm.dispose();
-
+            cm.sendOk("¸ĞĞ»ÄãµÄ¹âÁÙ£¡");
+            cm.dispose();
+            return;
+        }
+        if (mode == 1) {
+            status++;
+        }
+        else {
+            status--;
+        }
+        if (status == 0) {
+            var tex2 = "";
+            var text = "";
+            for (i = 0; i < 10; i++) {
+                text += "";
+            }
+			//ÏÔÊ¾ÎïÆ·IDÍ¼Æ¬ÓÃµÄ´úÂëÊÇ  #vÕâÀïĞ´ÈëID#
+            text += "#dÔÚ±¦ÏäÖĞ£¬Èç¹ûÄãÕÒµ½ÁË#v4031216#,ÎÒ¾ÍÄÜ°ïÄãÕÙ»½¹ÖÎïÈ¥É§ÈÅÆäËûÍæ¼ÒÅ¶~ (^O^).8¸öÖé×ÓÕÙ»½Ò»´Î.#l\r\n#L1##rÕÙ»½¹ÖÎï.\r\n"//3
+            cm.sendSimple(text);
+        } else if (selection == 1) {
+			//1
+			//2
+			//3
+			//4
+			//5
+			/*if(!cm.beibao(1,3)){
+            cm.sendOk("×°±¸À¸¿ÕÓà²»×ã3¸ö¿Õ¸ñ£¡");
+            cm.dispose();
+			}else if(!cm.beibao(2,1)){
+            cm.sendOk("ÏûºÄÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
+            cm.dispose();
+			}else if(!cm.beibao(3,1)){
+            cm.sendOk("ÉèÖÃÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
+            cm.dispose();
+			}else if(!cm.beibao(4,1)){
+            cm.sendOk("ÆäËûÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
+            cm.dispose();
+			}else if(!cm.beibao(5,1)){
+            cm.sendOk("ÏÖ½ğÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
+            cm.dispose();
+			}else */if(cm.haveItem(4031216,8)){
+				cm.gainItem(4031216, -8);
+				cm.spawnMonster(6400006, 1);
+				cm.spawnMonster(4230107, 3);
+				cm.gainMeso(200000);
+            cm.sendOk("ÕÙ»½³É¹¦£¡");
+			cm.worldMessage(6,"Íæ¼Ò£º["+cm.getName()+"]ÔÚ»î¶¯µØÍ¼[ÄÏ½¼Æ½Ô­]ÕÙ»½ÁËĞ×ÃÍµÄ¹ÖÎï.´ó¼ÒĞ¡ĞÄ°¡£¡£¡£¡");
+            cm.dispose();
+			}else{
+            cm.sendOk("ÄãÒªÓĞ#v4031216#x3.ÎÒ²ÅÄÜ°ïÄãÕÙ»½¹ÖÎïÅ¶~£¡");
+            cm.dispose();
+			}
+		}
+    }
 }
- else if (status == 4) {
-			if (mobkind==0) {
-		var prompt = "#bä½ æƒ³å¬å”¤å¤šå°‘åªï¼Ÿ";
-		mobid  =mob[selection];
-		mobna =mobname[selection];
-		price=mobcost[selection];
-		cm.sendGetNumber(prompt,1,1,100)
-			}
-			else if (mobkind==1){
-		mobid  =boss[selection];
-		mobna =bossname[selection];
-		price=bosscost[selection];
-		cm.sendYesNo("#då¬å”¤#r"+mobna+"#déœ€è¦#r"+price+"#dæ«å¸ï¼Œä½ ç¡®å®šè¦å¬å”¤ï¼Ÿ");
-			}
-			else cm.dispose();	
-		} 
 
 
- else if (status == 5) {
-			if (mobkind==0) {
-				qty = selection;
-				cm.sendYesNo("#då¬å”¤#r"+qty+"#dåª#r"+mobna+"#déœ€è¦#r"+price*qty+"#dæ«å¸ï¼Œä½ ç¡®å®šè¦å¬å”¤ï¼Ÿ");
-			}
-			else if (mobkind==1){
-				if (cm.getMeso() >= price)
-				{ 
-				cm.spawnMob(mobid);
-				cm.gainMeso(-price);
-				cm.dispose();
-				}
-				else
-			cm.sendOk("#bå¯¹ä¸èµ·ï¼Œä½ é‡‘å¸ä¸è¶³.");
-			cm.dispose();
-				
-			}
-			else cm.dispose();	
-		} 
-else if (status == 6) {				
-			if (cm.getMeso() >= price*qty)
-				{ 
-				cm.spawnMob(mobid,qty);
-				cm.gainMeso(-price*qty);
-				cm.dispose();
-				}
-				else
-			cm.sendOk("#bå¯¹ä¸èµ·ï¼Œä½ é‡‘å¸ä¸è¶³.");
-			cm.dispose();
-		}
-	}
-}	

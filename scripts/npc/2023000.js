@@ -1,32 +1,57 @@
-/*
-é›ªåŸŸé»‘è½¦NPC
-*/ 
-var status;
- function start() {
- 	status = -1;
- 	action(1, 0, 0);
- }
- 
- function action(mode, type, selection) {
- 	if (mode == -1) {
- 		cm.dispose();
- 	} else {
- 		if (mode == 0 && status == 0) {
- 			cm.dispose();
- 			return;
- 		}
- 		if (mode == 1)
- 			status++;
- 		else
- 			status--;
- 		if (status == 0) {
-			
-			cm.sendYesNo("  æ‚¨å¥½! æ‚¨ç¡®å®šè¦å»å†°é›ªå³¡è°·IIå—?" );
-			
-		}
-		if (status == 1) {			
-			cm.warp(211040200,0);			
-			cm.dispose();
-		}
+var map;
+var cost;
+var location;
+var mapname;
+var status = -1;
+
+function action(mode, type, selection) {
+    if (mode == 1) {
+	status++;
+    } else {
+	cm.sendNext("àÅ......ÏëÏë°É¡£ÕâÊÇ³ö×â³µ¹«Ë¾¼ÛÖµµÄ·şÎñ£¡ÄãÓÀÔ¶²»»áºó»Ú£¡");
+	cm.dispose();
+	return;
+    }
+
+    if (status == 0) {
+	switch (cm.getMapId()) {
+	    case 540000000: // CBD
+		map = 541020000;
+		cost = 30000;
+		mapname = "ÎÚÂ³³Ç";
+		break;
+	    case 240000000: // Leafre
+		map = 240030000;
+		cost = 55000;
+		mapname = "ÉñÄ¾´å-ÁúÉ­ÁÖÂ·¿Ú";
+		break;
+	    case 220000000: // Ludi
+		map = 220050300;
+		cost = 45000;
+		mapname = "Ê±¼äÍ¨µÀ";
+		break;
+	    case 211000000: // El Nath
+		map = 211040200;
+		cost = 45000;
+		mapname = "±ùÑ©Ï¿¹ÈII";
+		break;
+	    default:
+		map = 211040200;
+		cost = 45000;
+		mapname = "±ùÑ©Ï¿¹ÈII";
+		break;
 	}
+	cm.sendNext("ÄãºÃ£¡ÕâÖÖ×Óµ¯³ö×â³µ½«´øÄã´ÓÈÎºÎÎ£ÏÕÇøÓò #m"+cm.getMapId()+"# µ½ #b#m"+map+"##k ÔÙ "+mapname+"! ÔËÊä·ÑÓÃ #b"+cost+" ·ã±Ò#k ¿ÉÄÜ¿´ÆğÀ´ºÜ¹ó£¬µ«²¢²»¶à£¬µ±ÄãÏë·½±ãµØÍ¨¹ıÎ£ÏÕÇøÓòÔËÊä!");
+    } else if (status == 1) {
+	cm.sendYesNo("#bÄãĞèÒªÖ§¸¶·ã±Ò#k ´«ËÍµ½ #b#m"+map+"##k?");
+    } else if (status == 2) {
+	if (cm.getMeso() < cost) {
+	    cm.sendNext("Äã¿´ÆğÀ´Ã»É¶Ç®¿ÉÒÔÖ§¸¶,ºÜ±§Ç¸ÎÒÃÇ²»ÊÕÆòØ¤´î³µµÄ,¹ö°É!!!");
+	    cm.dispose();
+	} else {
+	    cm.gainMeso(-cost);
+	    cm.warp(map, 0);
+	    cm.dispose();
+	}
+    }
 }

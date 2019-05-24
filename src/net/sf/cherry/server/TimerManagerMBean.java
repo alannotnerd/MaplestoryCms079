@@ -1,18 +1,17 @@
 package net.sf.cherry.server;
 
-public abstract interface TimerManagerMBean
-{
-  public abstract boolean isTerminated();
+public interface TimerManagerMBean {
+  boolean isTerminated();
 
-  public abstract boolean isShutdown();
+  boolean isShutdown();
 
-  public abstract long getCompletedTaskCount();
+  long getCompletedTaskCount();
 
-  public abstract long getActiveCount();
+  long getActiveCount();
 
-  public abstract long getTaskCount();
+  long getTaskCount();
 
-  public abstract int getQueuedTasks();
+  int getQueuedTasks();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

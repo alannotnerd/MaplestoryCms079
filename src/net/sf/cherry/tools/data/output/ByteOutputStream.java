@@ -1,8 +1,7 @@
 package net.sf.cherry.tools.data.output;
 
-public abstract interface ByteOutputStream
-{
-  public abstract void writeByte(byte paramByte);
+public interface ByteOutputStream {
+  void writeByte(byte paramByte);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

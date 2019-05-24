@@ -1,27 +1,26 @@
 package net.sf.cherry.net.world.remote;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-
 import net.sf.cherry.net.channel.remote.ChannelWorldInterface;
 import net.sf.cherry.net.login.remote.LoginWorldInterface;
 
-public abstract interface WorldRegistry extends Remote
-{
-  public abstract WorldChannelInterface registerChannelServer(String paramString, ChannelWorldInterface paramChannelWorldInterface)
-    throws RemoteException;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-  public abstract void deregisterChannelServer(int paramInt)
-    throws RemoteException;
+public interface WorldRegistry extends Remote {
+  WorldChannelInterface registerChannelServer(String paramString, ChannelWorldInterface paramChannelWorldInterface)
+      throws RemoteException;
 
-  public abstract WorldLoginInterface registerLoginServer(String paramString, LoginWorldInterface paramLoginWorldInterface)
-    throws RemoteException;
+  void deregisterChannelServer(int paramInt)
+      throws RemoteException;
 
-  public abstract void deregisterLoginServer(LoginWorldInterface paramLoginWorldInterface)
-    throws RemoteException;
+  WorldLoginInterface registerLoginServer(String paramString, LoginWorldInterface paramLoginWorldInterface)
+      throws RemoteException;
 
-  public abstract String getStatus()
-    throws RemoteException;
+  void deregisterLoginServer(LoginWorldInterface paramLoginWorldInterface)
+      throws RemoteException;
+
+  String getStatus()
+      throws RemoteException;
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

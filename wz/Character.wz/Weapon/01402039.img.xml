@@ -24,7 +24,7 @@
         <int name="incACC" value="35"/>
         <int name="incSTR" value="4"/>
         <int name="tuc" value="7"/>
-        <int name="price" value="230000"/>
+        <int name="price" value="3800"/>
         <int name="attackSpeed" value="6"/>
         <int name="cash" value="0"/>
     </imgdir>
@@ -48,7 +48,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="weapon" value="../0/weapon"/>
+            <uol name="../0/weapon" value="../0/weapon"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="weapon" width="79" height="26">
@@ -71,10 +71,10 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="weapon" value="../0/weapon"/>
+            <uol name="../0/weapon" value="../0/weapon"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="weapon" value="../0/weapon"/>
+            <uol name="../0/weapon" value="../0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="alert">
@@ -322,7 +322,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="weapon" value="../../proneStab/0/weapon"/>
+            <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

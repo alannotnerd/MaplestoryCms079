@@ -45,7 +45,7 @@
             <vector name="rb" x="12" y="0"/>
             <vector name="head" x="-1" y="-13"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
     <imgdir name="move">
         <canvas name="0" width="23" height="23">

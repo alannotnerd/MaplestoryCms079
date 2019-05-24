@@ -1,19 +1,18 @@
 package net.sf.cherry.scripting.npc;
 
-import java.util.List;
-
 import net.sf.cherry.client.MapleCharacter;
 import net.sf.cherry.net.world.MaplePartyCharacter;
 
-public abstract interface NPCScript
-{
-  public abstract void start();
+import java.util.List;
 
-  public abstract void start(MapleCharacter paramMapleCharacter);
+public interface NPCScript {
+  void start();
 
-  public abstract void start(List<MaplePartyCharacter> paramList);
+  void start(MapleCharacter paramMapleCharacter);
 
-  public abstract void action(byte paramByte1, byte paramByte2, int paramInt);
+  void start(List<MaplePartyCharacter> paramList);
+
+  void action(byte paramByte1, byte paramByte2, int paramInt);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

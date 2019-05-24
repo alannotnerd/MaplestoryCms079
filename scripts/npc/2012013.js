@@ -1,38 +1,43 @@
-var tm;
+/* 
+	NPC Name: 		Sunny
+	Map(s): 		Orbis: Station<To Ludibrium> (200000121)
+	Description: 		Orbis Ticketing Usher
+*/
+var status = 0;
 
 function start() {
-	status = -1;
-	tm = cm.getEventManager("Trains");
-	action(1, 0, 0);
+    status = -1;
+    train = cm.getEventManager("Trains");
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-		return;
+    status++;
+    if(mode == 0) {
+	cm.sendNext("µÈÄã¿¼ÂÇºÃÔÙÀ´ÕÒÎÒ¡£");
+	cm.dispose();
+	return;
+    }
+    if (status == 0) {
+	if(train == null) {
+	    cm.sendNext("ÕÒ²»µ½½Å±¾ÇëÁªÏµGM£¡");
+	    cm.dispose();
+	} else if (train.getProperty("entry").equals("true")) {
+	    cm.sendYesNo("ÄãÏëÒª´î´¬£¿£¿");
+	} else if (train.getProperty("entry").equals("false") && train.getProperty("docked").equals("true")) {
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬×¼±¸¿ª×ß,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	} else {
-		status++;
-		if(mode == 0) {
-			cm.sendNext("ä½ è¿˜æœ‰ä»€ä¹ˆäº‹æƒ…å†è¿™é‡Œæ²¡æœ‰å®Œæˆå—ï¼Ÿ");
-			cm.dispose();
-			return;
-		}
-		if (status == 0) {
-			if(tm == null) {
-				cm.sendNext("è„šæœ¬å‘ç”Ÿé”™è¯¯ï¼Œè¯·è”ç³»ç®¡ç†å‘˜è§£å†³ã€‚");
-				cm.dispose();
-			} else if(tm.getProperty("entry").equals("true")) {
-				cm.sendYesNo("éå¸¸å¥½ï¼Œè½¦ä¸Šè¿˜æœ‰è¶³å¤Ÿçš„ä½ç½®ï¼Œè¯·å‡†å¤‡å¥½ä½ çš„è½¦ç¥¨ï¼Œæˆ‘ä»¬å°†è¿›å…¥æ¼«é•¿çš„æ—…è¡Œï¼Œä½ æ˜¯ä¸æ˜¯æƒ³ä¸Šè½¦ï¼Ÿ");
-			} else if(tm.getProperty("entry").equals("false") && tm.getProperty("docked").equals("true")) {
-				cm.sendNext("è¿™ç­ç«è½¦å·²ç»å‡ºå‘ï¼Œè¯·ç­‰å¾…ä¸‹ä¸€æ¬¡èˆªç­ã€‚");
-				cm.dispose();
-			} else {
-				cm.sendNext("ç«è½¦å‡ºå‘å‰5åˆ†é’Ÿå†…åœæ­¢å‰ªç¥¨ï¼Œè¯·æ³¨æ„æ—¶é—´ã€‚");
-				cm.dispose();
-			}
-		} else if(status == 1) {
-			cm.warp(200000122);
-			cm.dispose();
-		}
+	    cm.sendNext("ÇëÄÍĞÄµÈ´ı¼¸·ÖÖÓ£¬ÕıÔÚÕûÀíÀïÃæÖĞ£¡");
+	    cm.dispose();
 	}
+    } else if(status == 1) {
+	if(!cm.haveItem(4031074)) {
+	    cm.sendNext("²»! ÄãÃ»ÓĞ#b#t4031047##k ËùÒÔÎÒ²»ÄÜ·ÅÄã×ß!");
+	} else {
+	    cm.gainItem(4031074, -1);
+	    cm.warp(200000122, 0);
+	}
+	cm.dispose();
+    }
 }

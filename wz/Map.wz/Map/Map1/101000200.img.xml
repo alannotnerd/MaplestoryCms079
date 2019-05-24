@@ -4,7 +4,7 @@
         <int name="version" value="10"/>
         <int name="cloud" value="0"/>
         <string name="streetName" value="히든스트리트"/>
-        <string name="mapName" value="인내의숲&amp;lt;1단계&gt;"/>
+        <string name="mapName" value="인내의숲&lt;1단계&gt;"/>
         <int name="town" value="1"/>
         <int name="returnMap" value="101000000"/>
         <float name="mobRate" value="1.199998"/>

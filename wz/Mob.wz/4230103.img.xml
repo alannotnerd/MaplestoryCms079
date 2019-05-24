@@ -123,8 +123,8 @@
             <vector name="head" x="-12" y="-74"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="7" value="5"/>
-        <uol name="8" value="0"/>
+        <uol name="5" value="5"/>
+        <uol name="0" value="0"/>
     </imgdir>
     <imgdir name="jump">
         <canvas name="0" width="68" height="46">

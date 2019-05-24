@@ -1,41 +1,49 @@
+/* Kedrick
+    Fishking King NPC
+*/
+
 var status = -1;
 var sel;
 
 function action(mode, type, selection) {
     if (mode == 1) {
-	status++;
+        status++;
     } else {
-		if (status == 0) {
-			cm.dispose();
-			return;
-		}
-	status--;
+        if (status == 0) {
+            cm.dispose();
+            return;
+        }
+        status--;
     }
 
     if (status == 0) {
-	cm.sendSimple("ä½ ç°åœ¨æƒ³è¦åšä»€ä¹ˆå‘¢?\n\r #b#L0#å‰å¾€å…¶ä»–é’“é±¼åœº#l \n\r #L2#è¿”å›è‡ªç”±å¸‚åœº#l");
+        if (cm.getPlayer().getMapId() == 910000000) {
+            cm.sendSimple("ÎÒÄÜÎªÄú×öÊ²Ã´Âğ£¿£¿\n\r #b#L0#ÎÒÏëÈ¥µöÓã¡£#l");
+        } else {
+            cm.sendSimple("ÎÒÄÜÎªÄú×öÊ²Ã´Âğ£¿£¿\n\r #b#L0#ÎÒÏëÈ¥µöÓã¡£#l \n\r #L2#»ØÈ¥Ô­±¾µÄµØÍ¼¡£#l");
+        }
     } else if (status == 1) {
-	sel = selection;
-	if (sel == 0) {
-	    cm.sendSimple("ä½ æƒ³å‰å¾€é‚£é‡Œçš„é’“é±¼åœº?\r\n#b#L0#å¤–å±‚ç©ºé—´é’“é±¼åœº#l\r\n#L1#æ¢¦å¹»ç‹å›½é’“é±¼åœº#l\r\n#L2#ç²¾çµé’“é±¼åœº#l#k");
-	} else if (sel == 2) {
-	    var returnMap = cm.getSavedLocation("FISHING");
-	    if (returnMap < 0 || cm.getMap(returnMap) == null) {
-		returnMap = 910000000; 
-	    }
-	    cm.clearSavedLocation("FISHING");
-	    cm.warp(returnMap,0);
-	    cm.dispose();
-	}
+        sel = selection;
+        if (sel == 0) {
+            cm.sendSimple("ÄÄÈ¥ÄÄ¸öµöÓã³¡£¿£¿?\r\n#b#L0##m749050500##l\r\n#L1##m749050501##l\r\n#L2##m749050502##l#k");
+        } else if (sel == 2) {
+            var returnMap = cm.getSavedLocation("FISHING");
+            if (returnMap < 0 || cm.getMap(returnMap) == null) {
+                returnMap = 910000000; // to fix people who entered the fm trough an unconventional way
+            }
+            cm.clearSavedLocation("FISHING");
+            cm.warp(returnMap, 0);
+            cm.dispose();
+        }
     } else if (status == 2) {
-	if (sel == 0 && selection <= 2 && selection >= 0) {
-	    if (cm.getPlayer().getMapId() < 749050500 || cm.getPlayer().getMapId() > 749050502) {
-	    	cm.saveLocation("FISHING");
-	    }
-	    cm.warp(749050500 + selection);
-	    cm.dispose();
-	} else {
-	    cm.dispose();
-	}
+        if (sel == 0 && selection <= 2 && selection >= 0) {
+            if (cm.getPlayer().getMapId() < 749050500 || cm.getPlayer().getMapId() > 749050502) {
+                cm.saveLocation("FISHING");
+            }
+            cm.warp(749050500 + selection);
+            cm.dispose();
+        } else {
+            cm.dispose();
+        }
     }
 }

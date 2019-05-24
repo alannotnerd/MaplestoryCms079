@@ -55,7 +55,7 @@
         <canvas name="backgrnd" width="296" height="122">
             <vector name="origin" x="0" y="0"/>
         </canvas>
-        <uol name="fontScore" value="../simple/fontTime"/>
+        <uol name="../simple/fontTime" value="../simple/fontTime"/>
         <imgdir name="fontTime">
             <canvas name="0" width="8" height="9">
                 <vector name="origin" x="4" y="4"/>

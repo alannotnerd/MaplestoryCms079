@@ -1,118 +1,103 @@
-/* Author: Xterminator
-	NPC Name: 		Harmonia
-	Map(s): 		Leafre: Forest of the Priest (240010501)
-	Description: 		Warrior 4th Job Advancement
+/*  NPC : 汉摩尼亚
+	剑士 4转 任务脚本
+	地图代码 (240010501)
 */
 
+var status = -1;
+
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
+    if (mode == 0 && status == 0) {
+	cm.dispose();
+	return;
+    }
+    if (mode == 1)
+	status++;
+    else
+	status--;
+
+    if (status == 0) {
+	if (!(cm.getJob() == 111 || cm.getJob() == 121 || cm.getJob() == 131 || cm.getJob() == 2111)) {
+	    cm.sendOk("为什么你要见我??还有你想要问我关于什么事情??");
+	    cm.dispose();
+	    return;
+	} else if (cm.getPlayer().getLevel() < 120) {
+	    cm.sendOk("你等级尚未到达120级.");
+	    cm.dispose();
+	    return;
 	} else {
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			if (cm.getJob().getId() == 111 || cm.getJob().getId() == 121 || cm.getJob().getId() == 131) {
-				if (cm.getPlayer().getLevel() >= 120) {
-					if (cm.getQuestStatus(6904).equals(net.sf.cherry.client.MapleQuestStatus.Status.COMPLETED)) {
-						if (cm.getJob().getId() == 111) {
-							cm.sendSimple("You're qualified to be a true warrior. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Hero.#l\r\n#b#L1# Let me think for a while.#l");
-						} else if (cm.getJob().getId() == 121) {
-							cm.sendSimple("You're qualified to be a true warrior. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Paladin.#l\r\n#b#L1# Let me think for a while.#l");
-						} else if (cm.getJob().getId() == 131) {
-							cm.sendSimple("You're qualified to be a true warrior. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Dark Knight.#l\r\n#b#L1# Let me think for a while.#l");
-						}
-					} else {
-						cm.sendOk("You're not ready to make the 4th job advancement. When you're ready, talk to me.");
-						cm.dispose();
-					}
-				} else {
-					cm.sendOk("You're still weak to go to the warrior extreme road. If you get stronger, come back to me.");
-					cm.dispose();
-				}
-			} else if (cm.getJob().getId() == 112 || cm.getJob().getId() == 122 || cm.getJob().getId() == 132) {
-				if (cm.getJob().getId() == 112) {
-					cm.sendOk("You became the best warrior, the position of #bHero#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
-				} else if (cm.getJob().getId() == 122) {
-					cm.sendOk("You became the best warrior, the position of #bPaladin#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
-				} else if (cm.getJob().getId() == 132) {
-					cm.sendOk("You became the best warrior, the position of #bDark Knight#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
-				}
-				cm.dispose();
-			} else {
-				cm.sendOk("Why do you want to see me? There is nothing you want to ask me.");
-				cm.dispose();
-			}
-		} else if (status == 1) {
-			if (selection == 0) {
-				nPSP = (cm.getPlayer().getLevel() - 120) * 3;
-				if (cm.getPlayer().getRemainingSp() > nPSP) {
-					cm.sendNext("Hmm...You have too many #bSP#k. You can't make the 4th job advancement with too many SP left.");
-					cm.dispose();
-				} else {
-					if (!cm.canHold(2280003)) {
-						cm.sendNext("You can't proceed as you don't have an empty slot in your inventory. Please clear your inventory and try again.");
-						cm.dispose();
-					} else {
-						cm.gainItem(2280003, 1);
-						var statup = new java.util.ArrayList();
-						cm.getPlayer().setRemainingAp(cm.getPlayer().getRemainingAp() + 5);
-						statup.add(new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(cm.getPlayer().getRemainingAp())));
-						cm.getC().getSession().write(net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-						if (cm.getJob().getId() == 111) {
-							cm.changeJob(net.sf.cherry.client.MapleJob.HERO);
-							cm.teachSkill(1120004, 0, 10);
-							cm.teachSkill(1121001, 0, 10);
-							cm.teachSkill(1121008, 0, 10);
-							status = 2;
-							cm.sendNext("You have become the best of warriors, my #bHero#k. You will gain the #bRush#k Skill which makes you attack mutiple enemies and give you indomitable will along with #bStance#k and #bAchilles#k");
-						} else if (cm.getJob().getId() == 121) {
-							cm.changeJob(net.sf.cherry.client.MapleJob.PALADIN);
-							cm.teachSkill(1220005, 0, 10);
-							cm.teachSkill(1221001, 0, 10);
-							cm.teachSkill(1221009, 0, 10);
-							status = 2;
-							cm.sendNext("You have become the best of warriors, my #bPaladin#k. You will gain the #bRush#k Skill which makes you attack mutiple enemies and give you indomitable will along with #bStance#k and #bAchilles#k");
-						} else if (cm.getJob().getId() == 131) {
-							cm.changeJob(net.sf.cherry.client.MapleJob.DARKKNIGHT);
-							cm.teachSkill(1320005, 0, 10);
-							cm.teachSkill(1321001, 0, 10);
-							cm.teachSkill(1321007, 0, 10);
-							status = 2;
-							cm.sendNext("You have become the best of warriors, my #bDark Knight#k. You will gain the #bRush#k Skill which makes you attack mutiple enemies and give you indomitable with along with #bStance#k and #bAchilles#k.");
-						}
-					}
-				}
-			} else {
-				cm.sendNext("You don't have to hesitate to be the best Warrior..Whenever you make your decision, talk to me. If you're ready, I'll let you make the 4th job advancement.");
-				cm.dispose();
-			}
-		} else if (status == 2) {
-			if (cm.getJob().getId() == 112) {
-				cm.sendNext("You have become the best of warriors, my #bHero#k. You will gain the #bRush#k Skill which makes you attack mutiple enemies and give you indomitable will along with #bStance#k and #bAchilles#k");
-			} else if (cm.getJob().getId() == 122) {
-				cm.sendNext("You have become the best of warriors, my #bPaladin#k. You will gain the #bRush#k Skill which makes you attack mutiple enemies and give you indomitable will along with #bStance#k and #bAchilles#k");
-			} else if (cm.getJob().getId() == 132) {
-				cm.sendNext("You have become the best of warriors, my #bDark Knight#k. You will gain the #bRush#k Skill which makes you attack mutiple enemies and give you indomitable with along with #bStance#k and #bAchilles#k.");
-			}
-		} else if (status == 3) {
-			if (cm.getJob().getId() == 112) {
-				cm.sendNextPrev("This is not all about Hero. Hero is a well-balanced warrior who has excellent attack and defense power. It can learn various attack skills as well as combo attack if he trains himself.");
-			} else if (cm.getJob().getId() == 122) {
-				cm.sendNextPrev("This is not all about Paladin. Paladin is good at element-based attack and defense. It can use a new element-based and may break the limit of charge blow if you train yourself.");
-			} else if (cm.getJob().getId() == 132) {
-				cm.sendNextPrev("This is not all about Dark Knight. Dark Knight can use the power of darkness. It can attack with power of darkness which is unbelievably strong and may summon the figure of darkness.");
-			}
-		} else if (status == 4) {
-			cm.sendPrev("Don't forget that it all depends on how much you train.");
-		} else if (status == 5) {
-			cm.dispose();
-		}
+		if (cm.getJob() == 111) {
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为英雄.#l\r\n#b#L1#像我想一下...#l");
+		} else if(cm.getJob() == 121){
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为圣骑士.#l\r\n#b#L1#像我想一下...#l");
+		}else if(cm.getJob() == 131){
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为黑骑士.#l\r\n#b#L1#像我想一下...#l");
+		}else if(cm.getJob() == 2111){
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想变强！！#l\r\n#b#L1#像我想一下...#l");    
+		} else {
+		cm.sendOk("好吧假如你想要4转麻烦再来找我");
+		cm.dispose();
+		return;
+	    }
 	}
+    } else if (status == 1) {
+	if (selection == 1) {
+	    cm.sendOk("好吧假如你想要4转麻烦再来找我");
+	    cm.dispose();
+	    return;
+	}
+	if (cm.getPlayerStat("RSP") > (cm.getPlayerStat("LVL") - 120) * 3) {
+	    cm.sendOk("你的技能点数还没点完..");
+	    cm.dispose();
+	    return;
+	} else if (!cm.haveItem(4031348, 1)){
+		cm.sendOk("我需要#t4031348# 1张。");
+		cm.dispose();
+		return;
+	} else {
+	    if (cm.canHold(2280003)) {
+		cm.gainItem(2280003, 1);
+		if (cm.getJob() == 111) {
+		    cm.changeJob(112);
+		    cm.teachSkill(1121001, 0, 10); 
+		    cm.teachSkill(1120004, 0, 10);
+		    cm.teachSkill(1121008, 0, 10);
+			cm.gainItem(4031348, -1);
+		    cm.sendNext("恭喜你转职为 #b英雄#k.我送你一些神秘小礼物^^");
+		} else if (cm.getJob() == 121) {
+		    cm.changeJob(122);
+		    cm.teachSkill(1221001, 0, 10);
+		    cm.teachSkill(1220005, 0, 10);
+		    cm.teachSkill(1221009, 0, 10);
+			cm.gainItem(4031348, -1);
+		    cm.sendNext("恭喜你转职为 #b圣骑士#k.我送你一些神秘小礼物^^");
+		} else if (cm.getJob() == 131) {
+		    cm.changeJob(132);
+		    cm.teachSkill(1321001, 0, 10);
+		    cm.teachSkill(1320005, 0, 10);
+		    cm.teachSkill(1321007, 0, 10);
+			cm.gainItem(4031348, -1);
+		    cm.sendNext("恭喜你转职为 #b黑骑士#k.我送你一些神秘小礼物^^");
+		} else if (cm.getJob() == 2111) {
+            cm.gainItem(4031348, -1);
+            cm.changeJob(2112);
+            if (cm.canHold(1142132, 1)) {
+                cm.forceCompleteQuest(29927);
+                cm.gainItem(1142132, 1);
+            }
+		    cm.sendNext("恭喜你狂狼勇士又更上一层楼了！ 另外我送你一些神秘小礼物^^");
+	    } else {
+		cm.sendOk("你没有多的栏位请清空再来尝试一次!");
+		cm.dispose();
+		return;
+	    }
+	}
+	}
+    } else if (status == 2) {
+	cm.sendNextPrev("不要忘记了这一切都取决于你练了多少.");
+	cm.dispose();
+    }
 }

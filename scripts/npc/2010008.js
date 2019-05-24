@@ -1,66 +1,37 @@
-/*
-	This file was written by "StellarAshes" <stellar_dust@hotmail.com> 
-			as a part of the Guild package for
-			the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/**
-* Guild Emblem NPC
-*/
+/* guild emblem npc */
 var status = 0;
 var sel;
+
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    status = -1;
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 0 && status == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1) {
-			status++;
-		} else {
-			status--;
-		}
-		
-		if (status == 0) {
-			cm.sendSimple("ä½ å¥½ï¼Œæˆ‘æ˜¯è•¾é›…ï¼Œè´Ÿè´£å®¶æ—å¾½ç« çš„ç›¸å…³ä¸šåŠ¡ã€‚\r\n#b#L0#åˆ›å»º/æ”¹å˜å®¶æ—å¾½ç« #l#k");
-		} else if (status == 1) {
-			sel = selection;
-			if (selection == 0) {
-				if (cm.getChar().getGuildRank() == 1) {
-					cm.sendYesNo("åˆ›å»ºæˆ–è€…æ”¹å˜å®¶æ—å¾½ç« éœ€è¦ #b" + cm.getChar().emblemCost() + " é‡‘å¸#k, æ˜¯å¦ç»§ç»­ï¼Ÿ");
-				} else {
-					cm.sendOk("ä½ ä¸æ˜¯å®¶æ—æ—é•¿ï¼Œå› æ­¤ä½ ä¸èƒ½åˆ›å»ºå’Œæ”¹å˜å®¶æ—å¾½ç« ï¼Œè¯·è½¬å‘Šä½ çš„æ—é•¿ï¼Œè®©ä»–æ¥æ‰¾æˆ‘..");
-				}
-			}
-		} else if (status == 2) {
-			if (sel == 0) {
-				cm.getChar().genericGuildMessage(17);
-				cm.dispose();
-			}
-		}
+    if (mode == 0 && status == 0) {
+	cm.dispose();
+	return;
+    }
+    if (mode == 1)
+	status++;
+    else
+	status--;
+
+    if (status == 0)
+	cm.sendSimple("ÄãÏëÒª×öÊ²Ã´£¿\r\n#b#L0#´´½¨/¸ü¸Ä¹«»á»ÕÕÂ#l#k");
+    else if (status == 1) {
+	sel = selection;
+	if (selection == 0) {
+	    if (cm.getPlayerStat("GRANK") == 1)
+		cm.sendYesNo("ÖØĞÂ´òÔìÒ»¸ö»ÕÕÂĞèÒª #b5,000,000½ğ±Ò#k£¬ÄãÈ·¶¨Òª¼ÌĞøÂğ£¿");
+	    else
+		cm.sendOk("´òÔì¹«»á»ÕÕÂĞèÒª¹«»á³¤À´ÕÒÎÒ²ÅĞĞà¸£¬ÇëÄãÃÇµÄ¹«»á³¤À´ÕÒÎÒ°É~");
 	}
+				
+    } else if (status == 2) {
+	if (sel == 0) {
+	    cm.genericGuildMessage(17);
+	    cm.dispose();
+	}
+    }
 }

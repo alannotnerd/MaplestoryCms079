@@ -17,7 +17,7 @@ function action(mode, type, selection) {
 				}
 				cm.gainExp_PQ(200, 1.5);
 				cm.gainItem(4001535, 1);
-				cm.gainNX(2000);
+				//cm.gainNX(2000);
 				cm.addTrait("will", 26);
 				cm.addTrait("charm", 26);
 				cm.warp(923040000,0);

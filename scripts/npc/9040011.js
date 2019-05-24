@@ -1,25 +1,4 @@
 /* 
- * This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-/* 
  * @Author Lerk
  * 
  * Bulletin Board, Victoria Road: Excavation Site<Camp> (101030104) AND Sharenian: Excavation Site (990000000)
@@ -27,11 +6,8 @@
  * Start of Guild Quest
  */
 
-function start() {
-	cm.sendOk("你好，我是游戏万事通，有什么事情你都可以找我了解到");
-        cm.dispose();
-}
 
 function action(mode, type, selection) {
-        
+    cm.sendOk("<Notice> \r\n 你是一个有足够多的勇气和信任的家族的一部分吗？然后，对家族的探索和挑战自己!\r\n\r\n#b参与 :#k\r\n1.家族必须至少由6人组成!\r\n2. 家族任务的领导者必须是一个大师或一个小法师的家族!\r\n3. 如果家族成员的人数下降到6以下，或如果队长决定提前结束，则家族任务可能会提前结束!");
+    cm.safeDispose();
 }

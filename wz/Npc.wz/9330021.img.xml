@@ -54,14 +54,14 @@
             <int name="z" value="0"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
         <canvas name="4" width="55" height="78">
             <vector name="origin" x="28" y="78"/>
             <int name="z" value="0"/>
             <int name="delay" value="250"/>
         </canvas>
-        <uol name="5" value="1"/>
-        <uol name="6" value="4"/>
+        <uol name="1" value="1"/>
+        <uol name="4" value="4"/>
         <canvas name="7" width="55" height="78">
             <vector name="origin" x="28" y="78"/>
             <int name="z" value="0"/>

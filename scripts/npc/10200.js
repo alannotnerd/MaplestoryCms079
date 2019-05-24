@@ -1,33 +1,33 @@
-var status = 0;
-var job;
+/*
+	NPC Name: 		Athena Pierce
+	Map(s): 		Maple Road : Spilt road of choice
+	Description: 		Job tutorial, movie clip
+*/
 
-importPackage(net.sf.cherry.client);
+---var status = -1;
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if ((mode == 0 && status == 2) || (mode == 0 && status == 13)) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendNext("å¼“æ‰‹æ‹¥æœ‰é«˜æ•æ·åŠåŠ›é‡,åœ¨æˆ˜æ–—ä¸­è´Ÿè´£è¿œè·ç¦»æ”»å‡»,å‡å¦‚å¼“æ‰‹èŒä¸šèƒ½å·§å¦™åœ°è¿ç”¨åœ°åŠ¿çš„è¯,æ‰“çŒå¯æ˜¯éå¸¸è½»æ¾å‰å®³ã€‚");
-		} else if (status == 1) {
-			cm.sendYesNo("æ€ä¹ˆæ ·ï¼Ÿä½ æƒ³ä½“éªŒå¼“æ‰‹å—ï¼Ÿ");
-		} else if (status == 2) {
-			cm.lockUI();
-			cm.warp(1020300);
-			cm.dispose();
-		}
+    if (mode == 1) {
+	status++;
+    } else {
+	if (status == 1) {
+	    cm.sendOk("ºÃ°É,²»Ïë¾Í²»Ïë(ºß((°Á½¿");
+	    cm.dispose();
+	    return;
 	}
-}	
+	status--;
+    }
+    if (status == 0) {
+	cm.sendNext("Ïë³ÉÎª¹­¼ıÊÖÂğ?");
+    } else if (status == 1) {
+	cm.sendYesNo("ÒªÎÒ¶ÌÔİ°ïÄãÊµÏÖÃÎÏëÂğ?");
+    } else if (status == 2) {
+	cm.MovieClipIntroUI(true);
+	cm.warp(1020300, 0); // Effect/Direction3.img/archer/Scene00
+	cm.dispose();
+    }
+}

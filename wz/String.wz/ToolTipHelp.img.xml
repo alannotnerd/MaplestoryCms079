@@ -614,7 +614,7 @@
         </imgdir>
         <imgdir name="101010103">
             <imgdir name="0">
-                <string name="Title" value="&amp;lt;警告&gt;"/>
+                <string name="Title" value="&lt;警告&gt;"/>
                 <string name="Desc" value="高度 : 魔法密林中最高的树，上空向魔法密林方向吹着偏东风。从这里跳下去无法保证您的安全。"/>
             </imgdir>
         </imgdir>
@@ -1362,18 +1362,18 @@
         </imgdir>
         <imgdir name="200000110">
             <imgdir name="0">
-                <string name="Title" value="港口通道&amp;lt;开往魔法密林&gt;"/>
+                <string name="Title" value="港口通道&lt;开往魔法密林&gt;"/>
             </imgdir>
             <imgdir name="1">
-                <string name="Title" value="码头&amp;lt;开往魔法密林&gt;"/>
+                <string name="Title" value="码头&lt;开往魔法密林&gt;"/>
             </imgdir>
         </imgdir>
         <imgdir name="200000120">
             <imgdir name="0">
-                <string name="Title" value="港口通道&amp;lt;开往玩具城&gt;"/>
+                <string name="Title" value="港口通道&lt;开往玩具城&gt;"/>
             </imgdir>
             <imgdir name="1">
-                <string name="Title" value="码头&amp;lt;开往玩具城&gt; "/>
+                <string name="Title" value="码头&lt;开往玩具城&gt; "/>
             </imgdir>
         </imgdir>
         <imgdir name="200000130">
@@ -1381,7 +1381,7 @@
                 <string name="Title" value="开往神木村的站台"/>
             </imgdir>
             <imgdir name="1">
-                <string name="Title" value="码头&amp;lt;开往神木村&gt;"/>
+                <string name="Title" value="码头&lt;开往神木村&gt;"/>
             </imgdir>
         </imgdir>
         <imgdir name="200000140">
@@ -2935,7 +2935,7 @@
                 <string name="Title" value="西门町"/>
             </imgdir>
             <imgdir name="4">
-                <string name="Title" value="地铁站&amp;lt;西门町&gt;"/>
+                <string name="Title" value="地铁站&lt;西门町&gt;"/>
             </imgdir>
             <imgdir name="5">
                 <string name="Title" value="世界旅游向导处"/>
@@ -3046,22 +3046,22 @@
         </imgdir>
         <imgdir name="920010100">
             <imgdir name="0">
-                <string name="Title" value="&amp;lt;休息室&gt;"/>
+                <string name="Title" value="&lt;休息室&gt;"/>
             </imgdir>
             <imgdir name="1">
-                <string name="Title" value="&amp;lt;封印之室&gt;"/>
+                <string name="Title" value="&lt;封印之室&gt;"/>
             </imgdir>
             <imgdir name="2">
-                <string name="Title" value="&amp;lt;仓库&gt;"/>
+                <string name="Title" value="&lt;仓库&gt;"/>
             </imgdir>
             <imgdir name="3">
-                <string name="Title" value="&amp;lt;大厅&gt;"/>
+                <string name="Title" value="&lt;大厅&gt;"/>
             </imgdir>
             <imgdir name="4">
-                <string name="Title" value="&amp;lt;步道&gt;"/>
+                <string name="Title" value="&lt;步道&gt;"/>
             </imgdir>
             <imgdir name="5">
-                <string name="Title" value="&amp;lt;向上通道&gt;"/>
+                <string name="Title" value="&lt;向上通道&gt;"/>
             </imgdir>
         </imgdir>
         <imgdir name="990000200">
@@ -3876,19 +3876,19 @@
             <string name="out00" value="自由市场出口"/>
         </imgdir>
         <imgdir name="920010100">
-            <string name="in00" value="雅典娜禁地&amp;lt;散步路&gt;"/>
-            <string name="in01" value="雅典娜禁地&amp;lt;仓库&gt;"/>
-            <string name="in02" value="雅典娜禁地&amp;lt;休息室&gt;"/>
-            <string name="in03" value="雅典娜禁地&amp;lt;封印之室&gt;"/>
+            <string name="in00" value="雅典娜禁地&lt;散步路&gt;"/>
+            <string name="in01" value="雅典娜禁地&lt;仓库&gt;"/>
+            <string name="in02" value="雅典娜禁地&lt;休息室&gt;"/>
+            <string name="in03" value="雅典娜禁地&lt;封印之室&gt;"/>
         </imgdir>
         <imgdir name="920010300">
-            <string name="st00" value="雅典娜禁地&amp;lt;中央塔&gt;"/>
+            <string name="st00" value="雅典娜禁地&lt;中央塔&gt;"/>
         </imgdir>
         <imgdir name="920010500">
-            <string name="st00" value="雅典娜禁地&amp;lt;中央塔&gt;"/>
+            <string name="st00" value="雅典娜禁地&lt;中央塔&gt;"/>
         </imgdir>
         <imgdir name="920010800">
-            <string name="in00" value="雅典娜禁地&amp;lt;中央塔&gt;"/>
+            <string name="in00" value="雅典娜禁地&lt;中央塔&gt;"/>
         </imgdir>
         <imgdir name="925100000">
             <string name="next00" value="突破船头！"/>

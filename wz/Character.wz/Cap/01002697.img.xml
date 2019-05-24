@@ -836,18 +836,18 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

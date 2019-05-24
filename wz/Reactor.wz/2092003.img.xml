@@ -54,14 +54,14 @@
         </canvas>
     </imgdir>
     <imgdir name="1">
-        <uol name="0" value="../0/0"/>
+        <uol name="../0/0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
                 <int name="state" value="2"/>
             </imgdir>
         </imgdir>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="2">
         <canvas name="0" width="65" height="93">
@@ -80,7 +80,7 @@
             <vector name="origin" x="32" y="46"/>
             <int name="z" value="0"/>
         </canvas>
-        <uol name="hit" value="../0/hit"/>
+        <uol name="../0/hit" value="../0/hit"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <string name="action" value="canedrop"/>

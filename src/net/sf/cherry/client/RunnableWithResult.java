@@ -1,10 +1,9 @@
 package net.sf.cherry.client;
 
-public abstract interface RunnableWithResult extends Runnable
-{
-  public abstract Object getResult();
+public interface RunnableWithResult extends Runnable {
+  Object getResult();
 
-  public abstract boolean isDone();
+  boolean isDone();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

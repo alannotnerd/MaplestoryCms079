@@ -1,380 +1,520 @@
-/**
- *Mary
- */
-var status = 0;
+var points;
 
 function start() {
-    status = -1;
-    action(1, 0, 0);
+    var record = cm.getQuestRecord(150001);
+    points = record.getCustomData() == null ? "0" : record.getCustomData();
+
+    cm.sendSimple("Would you like to have a taste of a relentless boss battle? If so you must definitely try this! Which of these difficulty levels do you want to take on?.... \n\r #b[TIP : The points will be saved on every defeat of bosses!]#k \n\r #b#L3#Current points#l#k \n\r\n\r\n #b#L0# #v03994115##l #L1# #v03994116##l #L2# #v03994117##l #L28# #v03994118##l  \n\r\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \n\r \n\r #b#L4##i1492023:#Trade 120,000 points (Timeless Blindness)#l#k \n\r #b#L5##i1472068:#Trade 120,000 points (Timeless Lampion)#l#k \n\r #b#L6##i1462050:#Trade 120,000 points (Timeless Black Beauty)#l#k \n\r #b#L7##i1452057:#Trade 120,000 points (Timeless Engaw)#l#k \n\r #b#L8##i1432047:#Trade 120,000 points (Timeless Alchupiz)#l#k \n\r #b#L9##i1382057:#Trade 120,000 points (Timeless Aeas Hand)#l#k \n\r #b#L10##i1372044:#Trade 120,000 points (Timeless Enreal Tear)#l#k \n\r #b#L11##i1332074:#Trade 120,000 points (Timeless Killic)#l#k \n\r #b#L12##i1332073:#Trade 120,000 points (Timeless Pescas)#l#k \n\r #b#L13##i1482023:#Trade 120,000 points (Timeless Equinox)#l#k \n\r #b#L14##i1442063:#Trade 120,000 points (Timeless Diesra)#l#k \n\r #b#L15##i1422037:#Trade 120,000 points (Timeless Bellocce)#l#k \n\r #b#L16##i1412033:#Trade 120,000 points (Timeless Tabarzin)#l#k \n\r #b#L17##i1402046:#Trade 120,000 points (Timeless Nibleheim)#l#k \n\r #b#L18##i1322060:#Trade 120,000 points (Timeless Allargando)#l#k \n\r #b#L19##i1312037:#Trade 120,000 points (Timeless Bardiche)#l#k \n\r #b#L20##i1302081:#Trade 120,000 points (Timeless Executioners)#l#k \n\r #b#L31##i1342011:#Trade 120,000 points (Timeless Katara)#l#k \n\r #b#L21##i2070018:#Trade 200,000 points (Balanced Fury)#l#k \n\r #b#L22# #i1122017:#Trade 10,000 points (Fairy Pendant, lasts 1 day)#l#k \n\r #b#L23# #i2022459:#Trade 2,000 points (Cassandra Reward 1)#l#k \n\r #b#L24# #i2022460:#Trade 5,000 points (Cassandra Reward 2)#l#k \n\r #b#L25# #i2022461:#Trade 5,000 points (Cassandra Reward 3)#l#k \n\r #b#L26# #i2022462:#Trade 5,000 points (Cassandra Reward 4)#l#k \n\r #b#L27# #i2022463:#Trade 5,000 points (Cassandra Reward 5)#l#k \n\r #b#L28##i2340000:#Trade 100,000 points (White Scroll)#l#k \n\r #b#L29##i5490001:#Trade 20,000 points (Silver Key)#l#k \n\r #b#L30##i5490000:#Trade 30,000 points (Gold Key)#l#k");
+
 }
 
 function action(mode, type, selection) {
-    if (status == 0 && mode == 0) {
-        cm.dispose();
-        return;
-    }
     if (mode == 1) {
-        status++;
-    } else {
-        status--;
+	switch (selection) {
+	    case 0:
+		if (cm.getParty() != null) {
+		if (cm.getDisconnected("BossQuestEASY") != null) {
+			cm.getDisconnected("BossQuestEASY").registerPlayer(cm.getPlayer());
+		 } else if (cm.isLeader()) {
+			var q = cm.getEventManager("BossQuestEASY");
+			if (q == null) {
+			    cm.sendOk("Unknown error occured");
+			} else {
+			    q.startInstance(cm.getParty(), cm.getMap());
+			}
+		    } else {
+			cm.sendOk("You are not the leader of the party, please ask your leader to talk to me.");
+		    }
+		} else {
+		    cm.sendOk("Please form a party first.");
+		}
+		break;
+	    case 1:
+		if (cm.getParty() != null) {
+		if (cm.getDisconnected("BossQuestMed") != null) {
+			cm.getDisconnected("BossQuestMed").registerPlayer(cm.getPlayer());
+		 } else if (cm.isLeader()) {
+			var q = cm.getEventManager("BossQuestMed");
+			if (q == null) {
+			    cm.sendOk("Unknown error occured");
+			} else {
+			    q.startInstance(cm.getParty(), cm.getMap());
+			}
+		    } else {
+			cm.sendOk("You are not the leader of the party, please ask your leader to talk to me.");
+		    }
+		} else {
+		    cm.sendOk("Please form a party first.");
+		}
+		break;
+	    case 2:
+		if (cm.getParty() != null) {
+		if (cm.getDisconnected("BossQuestHARD") != null) {
+			cm.getDisconnected("BossQuestHARD").registerPlayer(cm.getPlayer());
+		 } else if (cm.isLeader()) {
+			var q = cm.getEventManager("BossQuestHARD");
+			if (q == null) {
+			    cm.sendOk("Unknown error occured");
+			} else {
+			    q.startInstance(cm.getParty(), cm.getMap());
+			}
+		    } else {
+			cm.sendOk("You are not the leader of the party, please ask your leader to talk to me.");
+		    }
+		} else {
+		    cm.sendOk("Please form a party first.");
+		}
+		break;
+	    case 28:
+		if (cm.getParty() != null) {
+		if (cm.getDisconnected("BossQuestHELL") != null) {
+			cm.getDisconnected("BossQuestHELL").registerPlayer(cm.getPlayer());
+		 } else if (cm.isLeader()) {
+			var q = cm.getEventManager("BossQuestHELL");
+			if (q == null) {
+			    cm.sendOk("Unknown error occured");
+			} else {
+			    q.startInstance(cm.getParty(), cm.getMap());
+			}
+		    } else {
+			cm.sendOk("You are not the leader of the party, please ask your leader to talk to me.");
+		    }
+		} else {
+		    cm.sendOk("Please form a party first.");
+		}
+		break;
+	    case 3:
+		cm.sendOk("#bCurrent Points : " + points);
+		break;
+	    case 4: // Timeless Blindness
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1492023)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1492023, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 5: // Timeless Lampion
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1472068)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1472068, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 6: // Timeless Black Beauty
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1462050)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1462050, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 7: // Timeless Engaw
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1452057)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1452057, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 8: // Timeless Alchupiz
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1432047)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1432047, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 9: // Timeless Aeas Hand
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1382057)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1382057, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+    	    case 10: // Timeless Enreal Tear
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1372044)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1372044, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+  	    case 11: // Timeless Killic
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1332074)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1332074, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 12: // Timeless Pescas
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1332073)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1332073, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 13: // Timeless Equinox
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1482023)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1482023, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 14: // Timeless Diesra
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1442063)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1442063, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 15: // Timeless Bellocce
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1422037)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1422037, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 16: // Timeless Tabarzin
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1412033)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1412033, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 17: // Timeless Nibleheim
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1402046)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1402046, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 18: // Timeless Allargando
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1322060)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1322060, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 19: // Timeless Bardiche
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1312037)) {
+			intPoints -= 1312037;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(2049100, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 20: // Timeless Executioners
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1302081)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1302081, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;		
+	    case 21: // Balanced Fury
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 150000) {
+		    if (cm.canHold(2070018)) {
+			intPoints -= 150000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(2070018, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 22: // Fairy Pendant
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 10000) {
+		    if (cm.canHold(1122017)) {
+			intPoints -= 10000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItemPeriod(1122017, 1, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 23: // Cassandra Reward
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 2000) {
+		    if (cm.canHold(2022459)) {
+			intPoints -= 2000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(2022459, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 24: // Cassandra Reward
+	    case 25: // Cassandra Reward
+	    case 26: // Cassandra Reward
+	    case 27: // Cassandra Reward
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 5000) {
+		    if (cm.canHold(2022436 + selection)) {
+			intPoints -= 5000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(2022436 + selection, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;
+	    case 28:
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 100000) {
+		    if (cm.canHold(2340000)) {
+			intPoints -= 100000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(2340000, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;	
+	    case 29:
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 20000) {
+		    if (cm.canHold(5490001)) {
+			intPoints -= 20000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(5490001, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;	
+	    case 30:
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 30000) {
+		    if (cm.canHold(5490000)) {
+			intPoints -= 30000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(5490000, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;	
+	    case 31: // Timeless Katara
+		var record = cm.getQuestRecord(150001);
+		var intPoints = parseInt(points);
+
+		if (intPoints >= 120000) {
+		    if (cm.canHold(1342011)) {
+			intPoints -= 120000;
+			record.setCustomData(""+intPoints+"");
+			cm.gainItem(1342011, 1);
+			cm.sendOk("Enjoy your rewards :P");
+		    } else {
+			cm.sendOk("Please check if you have sufficient inventory slot for it.")
+		    }
+		} else {
+		    cm.sendOk("Please check if you have sufficient points for it, #bCurrent Points : " + points);
+		}
+		break;	
+	}
     }
-    if (status == 0) {
-        var selStr = "你好，请选择你需要兑换的物品，以下统一为50蜗牛票.\r\n#L0#法弗纳天使手铳#v1222058#\r\n#L1#法弗纳半月宽刃斧#v1442223#\r\n#L2#法弗纳忏悔之剑#v1402196#\r\n#L3#法弗纳追风者#v1452205#\r\n#L4#法弗纳急速之刃#v1342082#\r\n#L5#法弗纳北极星魔法棒#v1252015#\r\n#L6#法弗纳死亡使者#v1232057#\r\n#L7#法弗纳戈耳迪锤#v1322203#\r\n#L8#法弗纳双刃切肉斧#v1312153#\r\n#L9#法弗纳魔冠之杖#v1382208#\r\n#L10#法弗纳双风翼弩#v1522094#\r\n#L11#法弗纳银槲之剑#v1302275#\r\n#L12#法弗纳巨狼之爪#v1482168#\r\n#L13#法弗纳危险之手#v1472214#\r\n#L14#法弗纳风翼弩#v1462193#\r\n#L15#法弗纳闪电锤#v1422140#\r\n#L16#法弗纳煌扇蓝姬#v1552063#\r\n#L17#法弗纳精神之刃#v1242061#\r\n#L18#法弗纳魔力夺取者#v1372177#\r\n#L19#法弗纳精神之刃#v1242060#\r\n#L20#法弗纳洞察手杖#v1362090#\r\n#L21#法弗纳荣耀炮#v1532098#\r\n#L22#法弗纳左轮枪#v1492179#\r\n#L23#法弗纳战斗切肉斧#v1412135#\r\n#L24#法弗纳皇刀正宗#v1542063#\r\n#L25#法弗纳ESP限制器#v1262016#\r\n#L26#法弗纳大马士革剑#v1332225#\r\n#L27#法弗纳魔力源泉杖#v1212063#\r\n#L28#法弗纳贯雷枪#v1432167#\r\n#L29#枫叶3年旗#v1452046#\r\n#L30#0级温度计#v1402014#\r\n#L31#0级冻冻鱼#v1442039#";
- cm.sendSimple(selStr);
-    } else if (status == 1) {
-        switch (selection) {
-        case 0:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1222058,1);//法弗纳天使手铳
-                cm.sendOk("兑换#v1222058#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 1:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1442223,1);//法弗纳半月宽刃斧
-                cm.sendOk("兑换#v1442223#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 2:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1402196,1);//法弗纳忏悔之剑
-                cm.sendOk("兑换#v1402196#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 3:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1452205,1);//法弗纳追风者
-                cm.sendOk("兑换#v1452205#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 4:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1342082,1);//法弗纳急速之刃
-                cm.sendOk("兑换#v1342082#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 5:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1252015,1);//法弗纳北极星魔法棒
-                cm.sendOk("兑换#v1252015#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 6:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1232057,1);//法弗纳死亡使者
-                cm.sendOk("兑换#v1232057#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 7:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1322203,1);//法弗纳戈耳迪锤
-                cm.sendOk("兑换#v1322203#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 8:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1312153,1);//法弗纳双刃切肉斧
-                cm.sendOk("兑换#v1312153#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 9:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1382208,1);//法弗纳魔冠之杖
-                cm.sendOk("兑换#v1382208#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 10:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1522094,1);//法弗纳双风翼弩
-                cm.sendOk("兑换#v1522094#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 11:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1302275,1);//法弗纳银槲之剑
-                cm.sendOk("兑换#v1302275#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 12:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(402001,-0);
-		cm.gainItem(1482168,1);//法弗纳巨狼之爪
-                cm.sendOk("兑换#v1482168#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v40020014#");
-		cm.dispose();
-            }
-            break;
-        case 13:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(402001,-0);
-		cm.gainItem(1472214,1);//法弗纳危险之手
-                cm.sendOk("兑换#v1472214#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 14:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1462193,1);//法弗纳风翼弩
-                cm.sendOk("兑换#v1462193#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 15:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1422140,1);//法弗纳闪电锤
-                cm.sendOk("兑换#v1422140#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 16:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(15520631,1);//法弗纳煌扇蓝姬
-                cm.sendOk("兑换#v1552063#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 17:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1242061,1);//法弗纳精神之刃
-                cm.sendOk("兑换#v1242061#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 18:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1372177,1);//法弗纳魔力夺取者
-                cm.sendOk("兑换#v1372177#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 19:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1242060,1);//法弗纳精神之刃
-                cm.sendOk("兑换#v1242060#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 20:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1362090,1);//法弗纳洞察手杖
-                cm.sendOk("兑换#v1362090#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 21:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1532098,1);//法弗纳荣耀炮
-                cm.sendOk("兑换#v1532098#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 22:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1492179,1);//法弗纳左轮枪
-                cm.sendOk("兑换#v1492179#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 23:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1412135,1);//法弗纳战斗切肉斧
-                cm.sendOk("兑换#v1412135#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 24:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1542063,1);//法弗纳皇刀正宗
-                cm.sendOk("兑换#v1542063#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 25:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1262016,1);//法弗纳ESP限制器
-                cm.sendOk("兑换#v1262016#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 26:
-            if (cm.itemQuantity(4002001) >=5){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1332225,1);//法弗纳大马士革剑
-                cm.sendOk("兑换#v1332225#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 27:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4310034,-0);
-		cm.gainItem(1212063,1);//法弗纳魔力源泉杖
-                cm.sendOk("兑换#v1212063#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 28:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1432167,1);//法弗纳贯雷枪
-                cm.sendOk("兑换#v1432167#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 29:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1452046,1);//枫叶3年旗
-                cm.sendOk("兑换#v1452046#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 30:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1402014,1);//0级温度计
-                cm.sendOk("兑换#v1402014#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        case 31:
-            if (cm.itemQuantity(4002001) >=50){
-		cm.gainItem(4002001,-0);
-		cm.gainItem(1442039,1);//0级冻冻鱼
-                cm.sendOk("兑换#v1442039#x1成功.请查看背包");
-		cm.dispose();
-            } else {
-                cm.sendOk("你没有50个#v4002001#");
-		cm.dispose();
-            }
-            break;
-        }
-    }
+    cm.dispose();
 }

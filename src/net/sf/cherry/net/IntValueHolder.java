@@ -1,8 +1,7 @@
 package net.sf.cherry.net;
 
-public abstract interface IntValueHolder
-{
-  public abstract int getValue();
+public interface IntValueHolder {
+  int getValue();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

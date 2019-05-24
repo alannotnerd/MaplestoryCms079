@@ -1,51 +1,58 @@
+function enter(pi) {
+    if (pi.haveItem(4031870) && pi.getPlayer().getSkillLevel(5121010) <= 0) {
+        pi.warp(922020300, 0);
+        return true;
+    }
+/*    if (!pi.haveItem(4031172)) {
+        return false;
+    }*/
+    if (pi.getPlayerCount(220080001) <= 0) { // Papu Map
+        var papuMap = pi.getMap(220080001);
 
-/* 
-    闹钟脚本 
-   亲亲嘴冒险  芯碎王子 修改。。
-    非同意内禁止转载 
-*/ 
+        papuMap.resetFully();
+//pi.playPortalSE();
+        pi.warp(220080001, "st00");
+        return true;
+    } else {
+        if (pi.getMap(220080001).getSpeedRunStart() == 0 && (pi.getMonsterCount(220080001) <= 0 || pi.getMap(220080001).isDisconnected(pi.getPlayer().getId()))) {
+//pi.playPortalSE();
+            pi.warp(220080001, "st00");
+            return true;
+        } else {
+            pi.playerMessage(5, "�Կ�����BOSS����ս�Ѿ���ʼ�ˣ��㲻�ܽ��뵽���档");
+            return false;
+        }
+    }
 
-importPackage(net.sf.cherry.server.maps); 
-importPackage(net.sf.cherry.net.channel); 
-importPackage(net.sf.cherry.tools); 
+    /*    
+    var canEnter = false;
 
-function enter(pi) { 
- var nextMap = 220080001; 
- var Populatus00Map = pi.getC().getChannelServer().getMapFactory().getMap(220080001); 
- var mapobjects = Populatus00Map.getMapObjects(); 
- var boss = null; 
- var player = null; 
- var iter = mapobjects.iterator(); 
- while (iter.hasNext()) { 
-   o = iter.next(); 
-   if (o.getType() == MapleMapObjectType.MONSTER){ 
-    boss = o; 
-   } 
-   if (o.getType() == MapleMapObjectType.PLAYER){ 
-    player = o; 
-   } 
-  } 
-
- if (pi.getBossLog('Populatus00')>=5) { 
-  sendMessage(pi,"每天只能挑战5次！"); 
-  return false;
-  }
-  
-if(player != null && boss != null){
-	sendMessage(pi,"对抗闹钟还在进行中。。。"); 
-  	return false; }
-
-
- if (Populatus00Map.getCharacters().isEmpty() && pi.getBossLog('Populatus00') < 5) { 
-  Populatus00Map.resetReactors(); 
- } 
-  pi.getC().getChannelServer().getMapFactory().getMap(220080001).clearMapTimer(); 
-  pi.getC().getChannelServer().getMapFactory().getMap(220080001).killAllMonsters(); 
-  pi.setBossLog('Populatus00'); 
-  pi.warp(220080001);  
-  return true; 
-   
-} 
-function sendMessage(pi,message) { 
- pi.getPlayer().getClient().getSession().write(MaplePacketCreator.serverNotice(5, message)); 
-} 
+    if (pi.haveItem(4031172)) { // Ludibrium Medal
+	var currenttime = new Date().getTime();
+	var record = pi.getQuestRecord(7200);
+	var diff = currenttime - record.getCompletionTime();
+	
+	// After 1 day
+	if (diff >= 86400000) { // 24 hours
+	    record.setCompletionTime(currenttime);
+	    record.setCustomData("1");
+	    canEnter = true;
+	} else {
+	    var recordData = record.getCustomData();
+	    if (recordData == null || recordData.equals("")) {
+		record.setCompletionTime(currenttime);
+		record.setCustomData("1");
+		canEnter = true;
+	    } else if (recordData.equals("1")) {
+		record.setCustomData("2");
+		canEnter = true;
+	    }
+	}
+    } else {
+	return false;
+    }
+    if (!canEnter) {
+	pi.playerMessage(5, "ʱ���ı�Դһ��ֻ�ܽ������Ρ�");
+	return false;
+    }*/
+}

@@ -65,7 +65,7 @@
                 </imgdir>
                 <string name="z" value="mailChest"/>
             </canvas>
-            <uol name="mailArm" value="../0/mailArm"/>
+            <uol name="../0/mailArm" value="../0/mailArm"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="mail" width="29" height="29">
@@ -125,7 +125,7 @@
                 </imgdir>
                 <string name="z" value="mailChest"/>
             </canvas>
-            <uol name="mailArm" value="../0/mailArm"/>
+            <uol name="../0/mailArm" value="../0/mailArm"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="mail" width="27" height="29">
@@ -1105,12 +1105,12 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="mail" value="../../swingPF/0/mail"/>
-            <uol name="mailArm" value="../../swingPF/0/mailArm"/>
+            <uol name="../../swingPF/0/mail" value="../../swingPF/0/mail"/>
+            <uol name="../../swingPF/0/mailArm" value="../../swingPF/0/mailArm"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="mail" value="../../swingPF/1/mail"/>
-            <uol name="mailArm" value="../../swingPF/1/mailArm"/>
+            <uol name="../../swingPF/1/mail" value="../../swingPF/1/mail"/>
+            <uol name="../../swingPF/1/mailArm" value="../../swingPF/1/mailArm"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="mail" width="29" height="36">
@@ -1136,8 +1136,8 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="mail" value="../../stabT1/2/mail"/>
-            <uol name="mailArm" value="../../stabT1/2/mailArm"/>
+            <uol name="../../stabT1/2/mail" value="../../stabT1/2/mail"/>
+            <uol name="../../stabT1/2/mailArm" value="../../stabT1/2/mailArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -1174,8 +1174,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="mail" value="../1/mail"/>
-            <uol name="mailArm" value="../1/mailArm"/>
+            <uol name="../1/mail" value="../1/mail"/>
+            <uol name="../1/mailArm" value="../1/mailArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="shootF">
@@ -1212,8 +1212,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="mail" value="../1/mail"/>
-            <uol name="mailArm" value="../1/mailArm"/>
+            <uol name="../1/mail" value="../1/mail"/>
+            <uol name="../1/mailArm" value="../1/mailArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -1234,7 +1234,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="mail" value="../0/mail"/>
+            <uol name="../0/mail" value="../0/mail"/>
             <canvas name="mailArm" width="19" height="9">
                 <vector name="origin" x="3" y="5"/>
                 <imgdir name="map">
@@ -1328,22 +1328,22 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="mail" value="../../proneStab/0/mail"/>
-            <uol name="mailArm" value="../../proneStab/0/mailArm"/>
+            <uol name="../../proneStab/0/mail" value="../../proneStab/0/mail"/>
+            <uol name="../../proneStab/0/mailArm" value="../../proneStab/0/mailArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="mail" value="../../alert/1/mail"/>
-            <uol name="mailArm" value="../../alert/1/mailArm"/>
+            <uol name="../../alert/1/mail" value="../../alert/1/mail"/>
+            <uol name="../../alert/1/mailArm" value="../../alert/1/mailArm"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="mail" value="../../swingO2/1/mail"/>
-            <uol name="mailArm" value="../../swingO2/1/mailArm"/>
+            <uol name="../../swingO2/1/mail" value="../../swingO2/1/mail"/>
+            <uol name="../../swingO2/1/mailArm" value="../../swingO2/1/mailArm"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="mail" value="../../swingO2/0/mail"/>
-            <uol name="mailArm" value="../../swingO2/0/mailArm"/>
+            <uol name="../../swingO2/0/mail" value="../../swingO2/0/mail"/>
+            <uol name="../../swingO2/0/mailArm" value="../../swingO2/0/mailArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -1371,7 +1371,7 @@
                 </imgdir>
                 <string name="z" value="mailChest"/>
             </canvas>
-            <uol name="mailArm" value="../0/mailArm"/>
+            <uol name="../0/mailArm" value="../0/mailArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

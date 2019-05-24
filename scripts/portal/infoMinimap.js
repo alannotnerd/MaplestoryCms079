@@ -1,5 +1,7 @@
 function enter(pi) {
-	pi.showWZEffect("UI/tutorial.img/25", 1);
-	pi.blockPortal();
-	return true;
+    if (pi.isQuestActive(1031)) {
+        pi.ShowWZEffect("UI/tutorial.img/25");
+        return true;
+    }
+    return false;
 }

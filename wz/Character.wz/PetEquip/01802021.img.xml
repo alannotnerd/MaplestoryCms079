@@ -22,7 +22,7 @@
             <canvas name="2" width="34" height="31">
                 <vector name="origin" x="18" y="32"/>
             </canvas>
-            <uol name="3" value="0"/>
+            <uol name="0" value="0"/>
         </imgdir>
         <imgdir name="stand1">
             <canvas name="0" width="34" height="31">
@@ -86,8 +86,8 @@
             <canvas name="1" width="34" height="31">
                 <vector name="origin" x="18" y="32"/>
             </canvas>
-            <uol name="2" value="0"/>
-            <uol name="3" value="1"/>
+            <uol name="0" value="0"/>
+            <uol name="1" value="1"/>
         </imgdir>
         <imgdir name="hungry">
             <canvas name="0" width="34" height="31">
@@ -113,10 +113,10 @@
             <canvas name="5" width="29" height="34">
                 <vector name="origin" x="11" y="38"/>
             </canvas>
-            <uol name="6" value="4"/>
-            <uol name="7" value="3"/>
-            <uol name="8" value="4"/>
-            <uol name="9" value="5"/>
+            <uol name="4" value="4"/>
+            <uol name="3" value="3"/>
+            <uol name="4" value="4"/>
+            <uol name="5" value="5"/>
         </imgdir>
         <imgdir name="piddle">
             <canvas name="0" width="36" height="30">
@@ -125,12 +125,12 @@
             <canvas name="1" width="36" height="30">
                 <vector name="origin" x="18" y="33"/>
             </canvas>
-            <uol name="2" value="0"/>
-            <uol name="3" value="1"/>
-            <uol name="4" value="0"/>
-            <uol name="5" value="1"/>
-            <uol name="6" value="0"/>
-            <uol name="7" value="1"/>
+            <uol name="0" value="0"/>
+            <uol name="1" value="1"/>
+            <uol name="0" value="0"/>
+            <uol name="1" value="1"/>
+            <uol name="0" value="0"/>
+            <uol name="1" value="1"/>
         </imgdir>
         <imgdir name="cry">
             <canvas name="0" width="34" height="31">
@@ -142,11 +142,11 @@
             <canvas name="2" width="34" height="31">
                 <vector name="origin" x="19" y="33"/>
             </canvas>
-            <uol name="3" value="1"/>
-            <uol name="4" value="2"/>
-            <uol name="5" value="1"/>
-            <uol name="6" value="2"/>
-            <uol name="7" value="0"/>
+            <uol name="1" value="1"/>
+            <uol name="2" value="2"/>
+            <uol name="1" value="1"/>
+            <uol name="2" value="2"/>
+            <uol name="0" value="0"/>
         </imgdir>
         <imgdir name="plot">
             <canvas name="0" width="34" height="31">
@@ -177,10 +177,10 @@
             <canvas name="2" width="34" height="31">
                 <vector name="origin" x="18" y="32"/>
             </canvas>
-            <uol name="3" value="0"/>
-            <uol name="4" value="1"/>
-            <uol name="5" value="2"/>
-            <uol name="6" value="0"/>
+            <uol name="0" value="0"/>
+            <uol name="1" value="1"/>
+            <uol name="2" value="2"/>
+            <uol name="0" value="0"/>
         </imgdir>
         <imgdir name="sleep">
             <canvas name="0" width="35" height="30">

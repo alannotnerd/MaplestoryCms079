@@ -55,7 +55,7 @@
             <vector name="rb" x="59" y="-35"/>
             <vector name="head" x="-8" y="-149"/>
         </canvas>
-        <uol name="5" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
     <imgdir name="stand">
         <canvas name="0" width="119" height="110">

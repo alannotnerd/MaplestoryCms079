@@ -5,13 +5,14 @@
 */
 
 var status = -1;
+var cost = 3000;
 
 function action(mode, type, selection) {
     if (mode == 1) {
 	status++;
     } else {
-	if (status == 1) {
-	    cm.sendNext("Wait, are you not going to ride this?");
+	if (status == 1 || status == 0 && mode == -1) {
+	    cm.sendNext("需要的时候再来找我吧。");
 	    cm.dispose();
 	    return;
 	}
@@ -20,26 +21,28 @@ function action(mode, type, selection) {
     switch (cm.getMapId()) {
 	case 800040000: {
 	    if (status == 0) {
-		cm.sendNext("We are the bearers of palankeen~! Let the bearers take you anywhere, even to Sakura's Ninja Castle~!");
-	    } else if (status == 1) {
-		cm.sendYesNo("Oh what? What is it? Do you want to go visit Mushroom Shrine?");
+		cm.sendNext("是否要回去古代神社？ 一次 " + cost + "枫币就好了。");
+		} else if (status == 1) {
+		cm.sendYesNo("您真的要回去吗??");
 	    } else if (status == 2) {
-		cm.sendNext("Okay, I got it! Just let us do the work, and you'll get there in the blink of an eye! Oh, and this won't cost you any money. Today's a good day for me, so I'll just let you get on it for free! Now, doesn't that make you feel good or what? Anyway, off we go!");
+		cm.sendNext("那我就带您回去啰！");
 	    } else if (status == 3) {
-		cm.warp(800000000);
+		cm.gainMeso(-cost);
+		cm.warp(800000000, 0);
 		cm.dispose();
 	    }
 	    break;
 	}
 	default: {
 	    if (status == 0) {
-		cm.sendNext("We are the bearers of palankeen~! Let the bearers take you anywhere, even to Sakura's Ninja Castle~!");
-	    } else if (status == 1) {
-		cm.sendYesNo("Oh what? What is it? Do you want to go visit Ninja Castle");
+		cm.sendNext("是否要去枫叶古城？ 一次 " + cost + "枫币就好了。");
+		} else if (status == 1) {
+		cm.sendYesNo("您真的要去吗??");	
 	    } else if (status == 2) {
-		cm.sendNext("Okay, I got it! Just let us do the work, and you'll get there in the blink of an eye! Oh, and this won't cost you any money. Today's a good day for me, so I'll just let you get on it for free! Now, doesn't that make you feel good or what? Anyway, off we go!");
+		cm.sendNext("那我就带您去啰！");
 	    } else if (status == 3) {
-		cm.warp(800040000);
+		cm.gainMeso(-cost);
+		cm.warp(800040000, 0);
 		cm.dispose();
 	    }
 	    break;

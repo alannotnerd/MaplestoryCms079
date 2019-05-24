@@ -11,15 +11,15 @@ function action(mode, type, selection) {
 	} else {
 		status++;
 		if(status == 0){
-			cm.sendSimple("Welcome to Golden Temple! I can issue you a Golden Ticket.\r\n\r\n#b#L0#Golden Ticket for 2,000,000 meso (one time use)#l\r\n#L1#Premium Golden Ticket for 50,000,000 meso#l#k");
+			cm.sendSimple("Welcome to Golden Temple! I can issue you a Golden Ticket.\r\n\r\n#b#L0#Golden Ticket for 5,000,000 meso (one time use)#l\r\n#L1#Premium Golden Ticket for 50,000,000 meso#l#k");
 		} else if (status == 1) {
 			if (selection == 0) {
-				if (cm.getMeso() < 2000000) {
+				if (cm.getMeso() < 5000000) {
 					cm.sendOk("You do not have enough meso.");
 				} else if (!cm.canHold(4001431) || cm.haveItem(4001431)) {
 					cm.sendOk("Either you have this already or can't hold it.");
 				} else {
-					cm.gainMeso(-2000000);
+					cm.gainMeso(-5000000);
 					cm.gainItem(4001431,1);
 					cm.sendOk("Thank you.");
 				}

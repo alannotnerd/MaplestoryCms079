@@ -8,106 +8,35 @@ function action(mode, type, selection) {
     }
     if (cm.getPlayer().getMapId() == 925100700) {
 	cm.removeAll(4001117);
+	cm.removeAll(4031437);
 	cm.removeAll(4001120);
 	cm.removeAll(4001121);
 	cm.removeAll(4001122);
-	cm.warp(251010404,0);
-	cm.dispose();
-	return;
-    }
-    var em = cm.getEventManager("Pirate");
-    if (em == null) {
-	cm.sendNext("é…ç½®æ–‡ä»¶å‡ºé”™,è¯·è”ç³»ç®¡ç†å‘˜ã€‚");
-	cm.dispose();
-	return;
-    }
-    if (!cm.isLeader()) {
-	cm.sendNext("è¯·ä½ ä»¬çš„é˜Ÿé•¿å’Œæˆ‘è¯´è¯ã€‚");
+	cm.removeAll(4001260);
+	cm.warp(251010404);
 	cm.dispose();
 	return;
     }
     switch(cm.getPlayer().getMapId()) {
 	case 925100000:
-	   cm.sendNext("ä½ å’Œä½ çš„é˜Ÿå‘˜å³å°†è¿›å…¥æµ·ç›—çš„èˆ¹,ç°åœ¨ä½ ä»¬å¿…é¡»æ¶ˆç­æ‰€æœ‰çš„æ€ªç‰©å’Œæ‰“å¼€æ‰€æœ‰çš„å®ç®±æ‰å¯ä»¥è¿›å…¥ä¸‹ä¸€é˜¶æ®µã€‚");
+	   cm.sendNext("ÎÒÃÇÕâÀïÊÇº£µÁ´¬£¡ÎÒÃÇÒªÏûÃğËùÓĞµÄ¹ÖÎï±£»¤Ëü¡£\r\n#bÇëÊÕ¼¯#bÀÏº£µÁÏä×ÓµÄ½û½äÖ®Ç¹#k5¸ö¡£");
 	   cm.dispose();
 	   break;
 	case 925100100:
-	   var emp = em.getProperty("stage2");
-	   if (emp == null) {
-		em.setProperty("stage2", "0");
-		emp = "0";
-	   }
-	   if (emp.equals("0")) {
-		if (cm.haveItem(4001120,20)) {
-		    cm.sendNext("éå¸¸å¥½,æŠ“ç´§æ—¶é—´å‰å¾€ä¸‹ä¸€é˜¶æ®µå§!");
-		    cm.gainItem(4001120,-20);
-		    em.setProperty("stage2", "1");
-		} else {
-	   	    cm.sendNext("ä½ å’Œä½ çš„é˜Ÿå‘˜å³å°†è¿›å…¥æµ·ç›—çš„èˆ¹,ç°åœ¨ä½ ä»¬å¿…é¡»æ”¶é›†20ä¸ª#b#z4001120##käº¤ç»™æˆ‘,æ‰å¯ä»¥å¼€å§‹ä¸‹ä¸€ä¸ªè€ƒéªŒã€‚");
-		}
-	   } else if (emp.equals("1")) {
-		if (cm.haveItem(4001121,20)) {
-		    cm.sendNext("éå¸¸å¥½,ç°åœ¨æŠ“ç´§æ—¶é—´æ”¶é›†20ä¸ª#b#z4001121##käº¤ç»™æˆ‘å§ã€‚");
-		    cm.gainItem(4001121,-20);
-		    em.setProperty("stage2", "2");
-		} else {
-	   	    cm.sendNext("ä½ å’Œä½ çš„é˜Ÿå‘˜å³å°†è¿›å…¥æµ·ç›—çš„èˆ¹,ç°åœ¨ä½ ä»¬å¿…é¡»æ”¶é›†20ä¸ª#b#z4001121##käº¤ç»™æˆ‘,æ‰å¯ä»¥å¼€å§‹ä¸‹ä¸€ä¸ªè€ƒéªŒã€‚");
-		}
-	   } else if (emp.equals("2")) {
-		if (cm.haveItem(4001122,20)) {
-		    cm.sendNext("éå¸¸å¥½,ç°åœ¨æŠ“ç´§æ—¶é—´æ”¶é›†20ä¸ª#b#z4001122##käº¤ç»™æˆ‘å§ã€‚");
-		    cm.gainItem(4001122,-20);
-		    em.setProperty("stage2", "3");
-		} else {
-	   	    cm.sendNext("ä½ å’Œä½ çš„é˜Ÿå‘˜å³å°†è¿›å…¥æµ·ç›—çš„èˆ¹,ç°åœ¨ä½ ä»¬å¿…é¡»æ”¶é›†20ä¸ª#b#z4001122##käº¤ç»™æˆ‘,æ‰å¯ä»¥å¼€å§‹ä¸‹ä¸€ä¸ªè€ƒéªŒã€‚");
-		}
-	   } else {
-		cm.sendNext("æ—¶é—´å¤§é—¨å·²ç»æ‰“å¼€,ä½ ä»¬å¯ä»¥å‰å¾€ä¸‹ä¸€å…³äº†,æŠ“ç´§æ—¶é—´ã€‚");
-	   }
-	   cm.dispose();
-	   break;
-	case 925100200:
-	   cm.sendNext("æµ·ç›—èˆ¹çš„è¢­å‡»,æˆ‘ä»¬å¿…é¡»æ¯ç­å®ˆå«ç¬¬ä¸€ã€‚");
-	   cm.dispose();
-	   break;
-	case 925100201:
-	   if (cm.getMap().getAllMonstersThreadsafe().size() == 0) {
-		cm.sendNext("Excellent.");
-		if (em.getProperty("stage2a").equals("0")) {
-		    cm.getMap().setReactorState();
-		    em.setProperty("stage2a", "1");
-		}
-	   } else {
-	   	cm.sendNext("These bellflowers are in hiding. We must liberate them.");
-	   }
-	   cm.dispose();
-	   break;
-	case 925100301:
-	   if (cm.getMap().getAllMonstersThreadsafe().size() == 0) {
-		cm.sendNext("Excellent.");
-		if (em.getProperty("stage3a").equals("0")) {
-		    cm.getMap().setReactorState();
-		    em.setProperty("stage3a", "1");
-		}
-	   } else {
-	   	cm.sendNext("These bellflowers are in hiding. We must liberate them.");
-	   }
-	   cm.dispose();
-	   break;
-	case 925100202:
-	case 925100302:
-	   cm.sendNext("These are the Captains and Krus which devote their whole life to Lord Pirate. Kill them as you see fit.");
+	   cm.sendNext("ÎÒÃÇÕâÀïÊÇº£µÁ´¬£¡ÎÒÃÇÒªÏûÃğËùÓĞµÄ¹ÖÎï±£»¤Ëü¡£\r\n#bÇëÊÕ¼¯#b³õ¼¶¡¢#bÖĞ¼¶¡¢¸ß¼¶¡¢º£µÁÉí·İ#k¸÷20¸ö¡£");
 	   cm.dispose();
 	   break;
 	case 925100400:
-	   cm.sendNext("These are the sources of the ship's power. We must seal it by using the Old Metal Keys on the doors!");
+	   cm.sendNext("ÎÒÃÇÕâÀïÊÇº£µÁ´¬£¡ÎÒÃÇÒªÏûÃğËùÓĞµÄ¹ÖÎï±£»¤Ëü¡£\r\n#bÇëÊÕ¼¯#b÷¼÷ÃÔ¿³×#k20¸ö,²¢¹Ø±ÕËùÓĞ´óÃÅ¡£");
 	   cm.dispose();
 	   break;
 	case 925100500:
 	   if (cm.getMap().getAllMonstersThreadsafe().size() == 0) {
+		cm.givePartyItems(4170009, 1);
+		cm.givePartyItems(4001322, 2);
 		cm.warpParty(925100600);
 	   } else {
-	   	cm.sendNext("Defeat all monsters! Even Lord Pirate's minions!");
+	   	cm.sendNext("ÇëÏûÃğ£¬ÀÏº£µÁ´¬³¤£¡");
 	   }
 	   cm.dispose();
 	   break;

@@ -1,24 +1,3 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /* Ali
  * 
  * Adobis's Mission I: The Room of Tragedy (280090000)
@@ -26,26 +5,20 @@
  * Zakum Quest NPC Exit
 */
 
-var status;
-
 function start() {
-	status = -1
-	action(1,0,0);
+    if (cm.haveItem(4031061)) {
+        cm.sendNext("ÄãºÜºÃµÄÍê³ÉÁËµÚÒ»¹ØµÄÈÎÎñ£¡ ºÃ°É¡­¡­¡£ ÎÒ»á°ÑÄãËÍµ½ #b#p2030008##k ÄÇÀï¡£ ²»¹ıÔÚÄÇÖ®Ç°£¡£¡ Äã²»ÄÜ°ÑÕâÀïÌØÊâµÄ¶«Î÷Áôµ½ÍâÃæÈ¥¡£ÎÒ½«»áÔÚÄãµÄ±³°üÖĞÄÃ×ßÕâĞ©¶«Î÷¡£ÄÇÃ´£¬¾ÍÕâÑù°É£¡»ØÍ·¼û£¡");
+    } else {
+        cm.sendNext("ÄãÔÚÖĞÍ¾ÍË³öÁËÈÎÎñ¡£ºÃ°É¡­¡­¡£ÎÒ»áËÍÄã³öÈ¥¡£µ«ÊÇÔÚÄÇÖ®Ç°£¡£¡Äã²»ÄÜ°ÑÕâÀïÌØÊâµÄ¶«Î÷´øµ½ÍâÃæÈ¥¡£ÎÒ½²»áÔÚÄãµÄ±³°üÖĞÄÃ×ßÕâĞ©¶«Î÷¡£ÄÇÃ´£¬¾ÍÕâÑù°É£¡»ØÍ·¼û¡£");
+    }
 }
 
-function action(mode, type, selection){
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		status++;
-		if (status == 0) {
-			cm.sendNext("æƒ³åˆ°å¤–é¢å»å°±è·Ÿæˆ‘è¯´å§ã€‚ä¸­é€”æ”¾å¼ƒçœŸçš„å¯æƒœå•Šï¼");
-		} else {
-			cm.warp(211042300);
-			cm.removeAll(4001015);
-			cm.removeAll(4001016);
-			cm.removeAll(4001018);
-			cm.dispose();
-		}
-	}
+function action(mode, type, selection) {
+    if (mode == 1) {
+        cm.removeAll(4001015);
+        cm.removeAll(4001016);
+        cm.removeAll(4001018);
+        cm.warp(211042300, 0);
+    }
+    cm.dispose();
 }

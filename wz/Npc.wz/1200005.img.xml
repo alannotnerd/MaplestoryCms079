@@ -64,15 +64,15 @@
         </canvas>
     </imgdir>
     <imgdir name="say">
-        <uol name="0" value="../stand/0"/>
-        <uol name="1" value="../stand/1"/>
-        <uol name="2" value="../stand/2"/>
-        <uol name="3" value="../stand/3"/>
-        <uol name="4" value="../stand/4"/>
-        <uol name="5" value="../stand/5"/>
-        <uol name="6" value="../stand/6"/>
-        <uol name="7" value="../stand/7"/>
-        <uol name="8" value="../stand/8"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
+        <uol name="../stand/6" value="../stand/6"/>
+        <uol name="../stand/7" value="../stand/7"/>
+        <uol name="../stand/8" value="../stand/8"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

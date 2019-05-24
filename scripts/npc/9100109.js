@@ -1,93 +1,49 @@
-//Cherry_MS
-var status = 0;
-var typeName = new Array("【单】","【双】","【小】","【中】","【大】","【一点】","【二点】","【三点】","【四点】","【五点】","【六点】");
-var selectTouType=new Array(2,2,3,3,3,6,6,6,6,6,6);
-var selectTouNum=new Array(1,5,1,3,5,1,2,3,4,5,6);
-var selectTou=-1;
-var nx=500;
-var race;
-var num;
-function start() {
-status = -1;
-action(1, 0, 0);
-}
+/*
+	Name: GMS-like Gachapon
+	Place: New Leaf City
+ */
+
+var status = -1;
 
 function action(mode, type, selection) {
-if (mode == -1) {
-cm.dispose();
-} else {
-if (mode == 1)
-status++;
-else
-status--;
-		if (status == -1) {
-			cm.dispose();
-		 } 
-		else if (status == 0) {
-		 var where ="冒险岛赌博系统\r\n假如你中奖了,要扣掉5%的佣金.您的点卷数量为:#r"+cm.getChar().getNX()+"\r\n选择你要下注的选项。\r\n";
-		 if(cm.getChar().isGM()){
-		 where+="#r管理员提示:#k吃进点卷:#r"+cm.seeAlltouzhu()+"#k 赔出点卷:#r"+cm.seeAllpeichu()+"#k(仅GM可见.)\r\n";
-		 }
-		 where+="#r2倍奖励#k\r\n#L0##b【单】#k#l#L1##b【双】#k#l\r\n\r\n";
-		 where+="#r3倍奖励#k\r\n#L2##b【小】#k#l#L3##b【中】#k#l#L4##b【大】#k#l\r\n\r\n";
-		 where+="#r6倍奖励#k\r\n#L5##b【一】#k#l#L6##b【二】#k#l#L7##b【三】#k#l#L8##b【四】#k#l#L9##b【五】#k#l#L10##b【六】#k#l\r\n\r\n\r\n";
-		 where+="本期开奖前投注统计,每5分钟开奖刷新统计:\r\n";
-		 where+="#b2倍投注数当前:#k"+cm.seeTouzhuByType(2)+"人投注\r\n";
-		 where+="#b3倍投注数:#k"+cm.seeTouzhuByType(3)+"\r\n";
-		 where+="#b6倍投注数:#k"+cm.seeTouzhuByType(6)+"\r\n\r\n";
+    if (mode == 1) {
+	status++;
+    } else {
+	status--;
+    }
+    if (status == 0) {
+	if (cm.haveItem(5220000)) {
+	    cm.sendYesNo("你有一些 #b快乐百宝卷吗#k .\r\n你想试试你的运气吗?");
+	} else {
+	    cm.sendOk("你没有一张票。请在我的百货店买张票，才可以回来给我。谢谢你.");
+	    cm.safeDispose();
+	}
+    } else if (status == 1) {
+	var item;
+	if (Math.floor(Math.random() * 300) == 0) {
+	    var rareList = new Array(2049000, 2340000, 2049100, 1372039, 1372040, 1092049);
 
-		 where+="#r本系统仅在频道1有效,每5分钟开奖一次,请不要随意更换频道或者下线.否则造成获奖点卷丢失,将不给予补偿。#k"
-		 cm.sendSimple(where);
-		 } 
-		else if (status == 1) {
-			if(cm.getChar().getClient().getChannel()!=1){
-			cm.sendOk("该系统仅在频道1开放。如果在其他频道奖不会获得奖励。");
-				cm.dispose();
-			}
-				else
-			if(cm.getChar().getTouzhuNum()>0){
-				cm.sendOk("本次开奖前您已经投过注了。您的投注金额:"+cm.getChar().getTouzhuNX());
-				cm.dispose();
-			}else{
-		selectTou=selection;
-		race=selectTouType[selectTou];
-		num=selectTouNum[selectTou];
-		var prompt="你选择的投注类型为:"+typeName[selectTou]+"倍率为:"+selectTouType[selectTou]+"\r\n最高投注10000点，最低投注500点。\r\n您的点卷数量为:"+cm.getChar().getNX()+"\r\n请输入你要投注的点卷数目。";
-		cm.sendGetNumber(prompt,500,500,10000);
-		}
-		} 
-		else if (status == 2) {
-			status=4;
-			nx=selection;
-			cm.sendYesNo("您确定要投注 "+nx+" 点吗？倍数:"+race+" 号码:"+num);
-		} 
-		else if (status == 3) {
-        cm.sendOk("看样子你还很犹豫，那就想好了再来吧？");
-        cm.dispose();
-		} 
-		else if (status == 4) {
-			cm.sendOk("谢谢");
-        cm.dispose();
-		} 
-		else if (status == 5) {
-			if(nx>cm.getChar().getNX()){
-			cm.sendOk("您的点卷不足 "+nx+" 点");
-			cm.dispose();
-			}else
-		if(cm.touzhu(race, nx, num)){
-				cm.sendOk("投注完毕,每分钟开奖。请不要离开喔。");
-				cm.dispose();
-			}else{
-		cm.sendOk("投注出现错误。");
-        cm.dispose();
-		}
-		} 
-		else if (status == 6) {
-		cm.sendOk("6");
-        cm.dispose();
-		} 
-		else if (status == 7) {
-        cm.dispose();
-		} 
+	    item = cm.gainGachaponItem(rareList[Math.floor(Math.random() * rareList.length)], 1);
+	} else {
+	    var itemList = new Array(1472010,1402010,1382001,1452000,1302026,1472023,1472019,1472022,1102011,1472033,
+		1402017,1442009,1472013,1472021,1472075,2000004,1382005,1332030,1432001,2044901,2044902,
+		1422025,1442015,1432017,1442025,1312004,1322015,1462005,1312012,1302003,1442004,1302028,
+		1402006,1322000,2022195,1412001,1372002,1472009,1422001,1462000,1412004,1452008,1432016,
+		1302021,4000176,1442000,2000005,2022113,1432013,1322024,1322012,1302012,1102028,1452006,
+		1302013,1462007,1332016,2043102,2043112,2044101,2044002,2044001,2041011,2041010,2044602,
+		2044601,2043305,2044401,2044314,2043702,2043701,1432004,1472054,1462006,1472012,1442010,
+		1472008,1472005,1382006,1422007,1332000,1402000,1452007,1402009,1102029,1402001,
+		1372005,1442021,2040915,2040919,2040920,2040914,2041301,2041304,2041307,2041310,2044803, 2044804);
+
+	    item = cm.gainGachaponItem(itemList[Math.floor(Math.random() * itemList.length)], 1);
+	}
+
+	if (item != -1) {
+	    cm.gainItem(5220000, -1);
+	    cm.sendOk("你已经获得 #b#t" + item + "##k.");
+	} else {
+	    cm.sendOk("请检查您的物品清单，看看是否有票，或如果背包满了.");
+	}
+	cm.safeDispose();
+    }
 }
-}  

@@ -21,7 +21,7 @@
     <imgdir name="10001">
         <string name="name" value="和特殊工作人员O的协同作战"/>
         <string name="0" value="变身为秘密工作人员的喔喔说有个人要介绍给我，到底会是谁呢？"/>
-        <string name="1" value="经已经成为未知组织的秘密工作员喔喔的介绍，我也获得了工作人员的资格。喔喔提议我和特殊工作人员O协同作战。但是他没有和我说明任务的具体内容，而是让我直接去找特殊工作人员O。他说在迷你地图的入口可以见到特殊工作人员O……\n\n#b&amp;lt;工作员O所在的迷你地图地区&gt;\n- 金银岛：#m100020000#\n- 金银岛：#m105040304#\n- 金银岛：#m105050100#\n "/>
+        <string name="1" value="经已经成为未知组织的秘密工作员喔喔的介绍，我也获得了工作人员的资格。喔喔提议我和特殊工作人员O协同作战。但是他没有和我说明任务的具体内容，而是让我直接去找特殊工作人员O。他说在迷你地图的入口可以见到特殊工作人员O……\n\n#b&lt;工作员O所在的迷你地图地区&gt;\n- 金银岛：#m100020000#\n- 金银岛：#m105040304#\n- 金银岛：#m105050100#\n "/>
         <string name="2" value="经喔喔的介绍，见到了特殊工作人员O。特殊工作人员O看上去好像是个很有个性的人。"/>
         <int name="area" value="50"/>
     </imgdir>
@@ -41,7 +41,7 @@
     <imgdir name="10007">
         <string name="name" value="工作人员C的谍报活动"/>
         <string name="0" value="变身为秘密工作人员的喔喔联系到了我，说上面下达了指令。会是什么事呢？心里有点忐忑不安。"/>
-        <string name="1" value="秘密工作人员喔喔让我在组队任务中得到5个碟报文件之后，去组队任务奖励区域见见工作人员C。\n\n#b&amp;lt;有工作人员C的组队任务&gt;\n- 月妙的年糕：10级以上\n- 第一次同行：21级 ~ 30级\n- 时空裂缝：35级 ~ 50级\n- 女神之塔：51级 ~ 70级\n- 老海盗：55级 ~ 100级\n- 罗密欧和朱丽叶：71级 ~ 85级"/>
+        <string name="1" value="秘密工作人员喔喔让我在组队任务中得到5个碟报文件之后，去组队任务奖励区域见见工作人员C。\n\n#b&lt;有工作人员C的组队任务&gt;\n- 月妙的年糕：10级以上\n- 第一次同行：21级 ~ 30级\n- 时空裂缝：35级 ~ 50级\n- 女神之塔：51级 ~ 70级\n- 老海盗：55级 ~ 100级\n- 罗密欧和朱丽叶：71级 ~ 85级"/>
         <string name="2" value="秘密工作人员喔喔让我在组队任务中得到5个碟报文件之后，去组队任务奖励区域见见工作人员C。"/>
         <int name="area" value="50"/>
     </imgdir>
@@ -93,7 +93,7 @@
         <string name="name" value="获得特殊工作人员徽章！"/>
         <string name="parent" value="今天的任务！"/>
         <int name="order" value="1"/>
-        <string name="1" value="今天的任务！！\r\n&amp;lt;去迷你地图打猎，获得#b1个特殊工作人员徽章#k！&gt;\r\n今天的任务是获取#b特殊工作人员徽章#k。听说特殊工作人员徽章可以在迷你地图中获得……\n去见见喔喔介绍的工作人员O吧。如果还没把#b工作人员O#k介绍给你的话，就先去见见#b工作人员喔喔#k吧。"/>
+        <string name="1" value="今天的任务！！\r\n&lt;去迷你地图打猎，获得#b1个特殊工作人员徽章#k！&gt;\r\n今天的任务是获取#b特殊工作人员徽章#k。听说特殊工作人员徽章可以在迷你地图中获得……\n去见见喔喔介绍的工作人员O吧。如果还没把#b工作人员O#k介绍给你的话，就先去见见#b工作人员喔喔#k吧。"/>
         <string name="2" value="今天的任务完成了。"/>
         <int name="area" value="50"/>
         <int name="autoComplete" value="1"/>
@@ -102,7 +102,7 @@
         <string name="name" value="获得优秀工作人员徽章！"/>
         <string name="parent" value="今天的任务！"/>
         <int name="order" value="1"/>
-        <string name="1" value="今天的任务！\r\n&amp;lt;保护存储芯片，获得#b1个优秀工作人员徽章#k！&gt;\n\n今天的任务是获取#b优秀工作人员徽章#k。根据可信的情报员的情报，帮助#b工作人员W#k执行#b代号MS-07#k任务的话，就可以获得优秀工作人员徽章。\n据说到时候，#b工作人员W#k会来找你……"/>
+        <string name="1" value="今天的任务！\r\n&lt;保护存储芯片，获得#b1个优秀工作人员徽章#k！&gt;\n\n今天的任务是获取#b优秀工作人员徽章#k。根据可信的情报员的情报，帮助#b工作人员W#k执行#b代号MS-07#k任务的话，就可以获得优秀工作人员徽章。\n据说到时候，#b工作人员W#k会来找你……"/>
         <string name="2" value="今天的任务完成了。"/>
         <int name="area" value="50"/>
         <int name="autoComplete" value="1"/>
@@ -111,7 +111,7 @@
         <string name="name" value="参加工作人员特别强化项目！"/>
         <string name="parent" value="今天的任务！"/>
         <int name="order" value="1"/>
-        <string name="1" value="今天的任务！\r\n&amp;lt;参加工作人员特别强化项目，获得#b50点#k！&gt;#k\n\n今天的任务是参加工作人员特别强化项目，获得#b50点#k。工作人员特别强化项目是#b工作人员咪咪#k和#b工作人员喵喵#k特别设计的训练项目，是在假想的空间内消灭分阶段出现的怪物的训练方法。根据怪物的难易度，可以获得不同的#b点数#k。可以一个人参加，也可以以组队为单位参加。"/>
+        <string name="1" value="今天的任务！\r\n&lt;参加工作人员特别强化项目，获得#b50点#k！&gt;#k\n\n今天的任务是参加工作人员特别强化项目，获得#b50点#k。工作人员特别强化项目是#b工作人员咪咪#k和#b工作人员喵喵#k特别设计的训练项目，是在假想的空间内消灭分阶段出现的怪物的训练方法。根据怪物的难易度，可以获得不同的#b点数#k。可以一个人参加，也可以以组队为单位参加。"/>
         <string name="2" value="今天的任务完成了。"/>
         <int name="area" value="50"/>
         <int name="autoComplete" value="1"/>
@@ -120,7 +120,7 @@
         <string name="name" value="挑战快速问答50分！"/>
         <string name="parent" value="今天的任务！"/>
         <int name="order" value="1"/>
-        <string name="1" value="今天的任务！！\r\n&amp;lt;在快速问答中获得#b50分#k！&gt;\n\n今天的任务是在快速问答中获得#b50分#k。在#b工作人员星缘#k那里，可以参加有关冒险岛世界的物品和怪物的快速问答。每个问题得1分，每30分钟可以挑战1次。必须在今天一天内总共获得#b50分#k。"/>
+        <string name="1" value="今天的任务！！\r\n&lt;在快速问答中获得#b50分#k！&gt;\n\n今天的任务是在快速问答中获得#b50分#k。在#b工作人员星缘#k那里，可以参加有关冒险岛世界的物品和怪物的快速问答。每个问题得1分，每30分钟可以挑战1次。必须在今天一天内总共获得#b50分#k。"/>
         <string name="2" value="今天的任务完成了。"/>
         <int name="area" value="50"/>
         <int name="autoComplete" value="1"/>
@@ -129,7 +129,7 @@
         <string name="name" value="西瓜田攻略！"/>
         <string name="parent" value="今天的任务！"/>
         <int name="order" value="1"/>
-        <string name="1" value="今天的任务！！\r\n&amp;lt;到西瓜田中，获得#b朴大爷的西瓜#k！&gt;\n\n今天的任务是获取朴大爷的西瓜。据情报显示，朴大爷的西瓜田里的西瓜被#r头目M#k安装了炸弹。所以现在瓜田由#b冒险岛运营员#k在管理。通过冒险岛运营员前往西瓜田，去摘西瓜吧！"/>
+        <string name="1" value="今天的任务！！\r\n&lt;到西瓜田中，获得#b朴大爷的西瓜#k！&gt;\n\n今天的任务是获取朴大爷的西瓜。据情报显示，朴大爷的西瓜田里的西瓜被#r头目M#k安装了炸弹。所以现在瓜田由#b冒险岛运营员#k在管理。通过冒险岛运营员前往西瓜田，去摘西瓜吧！"/>
         <string name="2" value="今天的任务完成了。"/>
         <int name="area" value="50"/>
         <int name="autoComplete" value="1"/>
@@ -138,7 +138,7 @@
         <string name="name" value="帮助工作人员E！"/>
         <string name="parent" value="今天的任务！"/>
         <int name="order" value="1"/>
-        <string name="1" value="今天的任务！！\r\n&amp;lt;完成工作人员E的#b特别命令任务#k！&gt; \n\n工作人员E为了随时搜集#b头目M#k的情报，正在向工作人员们下达特别命令。如果想接受工作人员E的特殊命令，就去见见各个村子里的工作人员E吧。"/>
+        <string name="1" value="今天的任务！！\r\n&lt;完成工作人员E的#b特别命令任务#k！&gt; \n\n工作人员E为了随时搜集#b头目M#k的情报，正在向工作人员们下达特别命令。如果想接受工作人员E的特殊命令，就去见见各个村子里的工作人员E吧。"/>
         <string name="2" value="今天的任务完成了。"/>
         <int name="area" value="50"/>
         <int name="autoComplete" value="1"/>
@@ -3033,42 +3033,42 @@
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2105">
-        <string name="name" value="危险的迷宫! &amp;lt;1-绿蘑菇&gt;"/>
+        <string name="name" value="危险的迷宫! &lt;1-绿蘑菇&gt;"/>
         <string name="0" value="黑森林某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭绿菇菇 #b99 只#k后去找记忆者吧。\n\n#o9101000# #r#a21051##k"/>
         <string name="2" value="消灭了绿蘑菇，但它们的数量却一点也没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2106">
-        <string name="name" value="危险的迷宫! &amp;lt;2-刺蘑菇&gt;"/>
+        <string name="name" value="危险的迷宫! &lt;2-刺蘑菇&gt;"/>
         <string name="0" value="蚂蚁洞某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o2110200# #b99 只#k后去找记忆者吧。\n\n#o2110200# #r#a21061##k"/>
         <string name="2" value="消灭了#o2110200#，但它们的数量却一点也没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2107">
-        <string name="name" value="危险的迷宫! &amp;lt;3-僵尸蘑菇&gt;"/>
+        <string name="name" value="危险的迷宫! &lt;3-僵尸蘑菇&gt;"/>
         <string name="0" value="蚂蚁洞某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o2230101# #b99 只#k后去找记忆者吧。\n\n#o9101001# #r#a21071##k"/>
         <string name="2" value="消灭了#o2230101#，但它们的数量却一点也没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2108">
-        <string name="name" value="被污染的迷宫! &amp;lt;1-火独眼兽&gt;"/>
+        <string name="name" value="被污染的迷宫! &lt;1-火独眼兽&gt;"/>
         <string name="0" value="火独眼兽洞穴某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o2230100# #b99 只#k后去找记忆者吧。 \n\n#o2230100# #r#a21081##k"/>
         <string name="2" value="消灭了#o2230100#，但它们的数量却一点也没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2109">
-        <string name="name" value="被污染的迷宫! &amp;lt;2-风独眼兽&gt;"/>
+        <string name="name" value="被污染的迷宫! &lt;2-风独眼兽&gt;"/>
         <string name="0" value="黑森林某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o3230100# #b99 只#k后去找记忆者吧。\n\n#o3230100# #r#a21091##k"/>
         <string name="2" value="消灭了#o3230100#，但它们的数量却一点也没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2110">
-        <string name="name" value="被污染的迷宫! &amp;lt;3-幼魔精灵&gt;"/>
+        <string name="name" value="被污染的迷宫! &lt;3-幼魔精灵&gt;"/>
         <string name="0" value="火独眼兽洞穴某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭火独眼兽洞穴的幼魔精灵，并将战利品幼魔精灵的角 #b10个#k带给在林中之城的记忆者吧... \n\n#t4000067# #b#c4000067##k/10"/>
         <string name="2" value="迷宫里居然还会有幼魔精灵这样怪异的怪物，不知还会有什么怪物呢…"/>
@@ -3091,35 +3091,35 @@
         <string name="type" value="[转职]"/>
     </imgdir>
     <imgdir name="2111">
-        <string name="name" value="危险的迷宫!! &amp;lt;1-绿蘑菇&gt;"/>
+        <string name="name" value="危险的迷宫!! &lt;1-绿蘑菇&gt;"/>
         <string name="0" value="黑森林某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭绿蘑菇 #b999 只#k后去找记忆者吧。\n\n#o9101000# #r#a21111##k"/>
         <string name="2" value="消灭了绿蘑菇，它们的数量却没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2112">
-        <string name="name" value="危险的迷宫!! &amp;lt;2-刺蘑菇&gt;"/>
+        <string name="name" value="危险的迷宫!! &lt;2-刺蘑菇&gt;"/>
         <string name="0" value="蚂蚁洞某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭刺蘑菇 #b999 只#k后去找记忆者吧。\n\n#o2110200# #r#a21121##k"/>
         <string name="2" value="消灭了刺蘑菇，它们的数量却没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2113">
-        <string name="name" value="危险的迷宫!! &amp;lt;3-僵尸蘑菇&gt;"/>
+        <string name="name" value="危险的迷宫!! &lt;3-僵尸蘑菇&gt;"/>
         <string name="0" value="蚂蚁洞某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o2230101# #b999 只#k后去找记忆者吧。 \n \n#o9101001# #r#a21131##k"/>
         <string name="2" value="消灭了#o2230101#，它们的数量却没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2114">
-        <string name="name" value="被污染的迷宫!! &amp;lt;1-火独眼兽&gt;"/>
+        <string name="name" value="被污染的迷宫!! &lt;1-火独眼兽&gt;"/>
         <string name="0" value="火独眼兽洞穴某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o2230100# #b999 只#k后去找记忆者吧。\n\n#o2230100# #r#a21141##k"/>
         <string name="2" value="消灭了#o2230100#，它们的数量却没有减少。"/>
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="2115">
-        <string name="name" value="被污染的迷宫!! &amp;lt;2-风独眼兽&gt;"/>
+        <string name="name" value="被污染的迷宫!! &lt;2-风独眼兽&gt;"/>
         <string name="0" value="黑森林某处有一块警告怪物出没的标示牌…"/>
         <string name="1" value="消灭#o3230100# #b999 只#k后去找记忆者吧。 \n\n#o3230100# #r#a21151##k"/>
         <string name="2" value="消灭了#o3230100#，它们的数量却没有减少。"/>
@@ -8376,7 +8376,7 @@
     <imgdir name="3239">
         <string name="name" value="修理配件的下落"/>
         <string name="0" value="要找玩具工厂某处的助教 尚。"/>
-        <string name="1" value="在玩具厂见到了助教 尚。尚说最近发生了玩具厂机械的配件丢失的事件。他拜托我替他找那个配件。通过尚到隐藏配件的玩具工厂&amp;lt;骨干工程1&gt;第4地区后，收集10个配件。\n\n#t4031092#  #b#c4031092#/10#k"/>
+        <string name="1" value="在玩具厂见到了助教 尚。尚说最近发生了玩具厂机械的配件丢失的事件。他拜托我替他找那个配件。通过尚到隐藏配件的玩具工厂&lt;骨干工程1&gt;第4地区后，收集10个配件。\n\n#t4031092#  #b#c4031092#/10#k"/>
         <string name="2" value="都找到在玩具工厂丢失的10个配件给助教 尚了。今后玩具工厂也能正常运转吧？"/>
         <int name="area" value="37"/>
     </imgdir>
@@ -15081,8 +15081,8 @@
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="9051">
-        <string name="name" value="???? ????&amp;lt;??&gt;-1??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-1??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="1"/>
         <string name="0" value="??? ???? ??? ???? ???? ??????...??? ???? ??????"/>
         <string name="1" value="??? ???? ??? ???? ??? ???, ??? ??? ???? ???? ??? ?? &apos;???? ????&apos;? ????? ??. ??? ???? ?? #b#o130101# 50??#k? #b#o1210102# 20??#k? ????? ???...? ? ?????\n\n#o130101# #r#a90512##k\n#o1210102# #r#a90511#"/>
@@ -15090,8 +15090,8 @@
         <int name="area" value="20"/>
     </imgdir>
     <imgdir name="9052">
-        <string name="name" value="???? ????&amp;lt;??&gt;-2??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-2??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="2"/>
         <string name="0" value="???? ????? 2??? ???? ?? ??? ???? ?????."/>
         <string name="1" value="??? ???? 2?? ?? ??? #b#o1110100##k? #b#o1110101##k? ???? ?? ? ?? #b#t4031167##k? #b10?#k ????? ??.\n\n#t4031167# #b#c4031167##k/10"/>
@@ -15099,8 +15099,8 @@
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="9053">
-        <string name="name" value="???? ????&amp;lt;??&gt;-3??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-3??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="3"/>
         <string name="0" value="???? ????? 3??? ???? ?? ??? ???? ?????."/>
         <string name="1" value="??? ???? ??? 3?? ?? ??? #b#o1130100##k? #b#o2220100##k? ?? #b25#k??? ???? #b#o1210103##k? ?? #b#t4000037##k? #b30#k? ????? ??.\n\n#o1130100# #r#a90532##k\n#o2220100# #r#a90531##k\n#t4000037# #b#c4000037##k/30"/>
@@ -15108,8 +15108,8 @@
         <int name="area" value="30"/>
     </imgdir>
     <imgdir name="9054">
-        <string name="name" value="???? ????&amp;lt;??&gt;-1??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-1??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="1"/>
         <string name="0" value="??? ???? ??? ???? ???? ??????...??? ???? ??????"/>
         <string name="1" value="??? ???? ??? ???? ??? ???, ??? ??? ???? ???? ??? ?? &apos;???? ????&apos;? ????? ??. ??? ???? ?? #b#o5200000# 50??#k? #b#o3000000# 20??#k? ????? ???...? ? ?????\n\n#o5200000# #r#a90542##k\n#o3000000# #r#a90541#"/>
@@ -15117,8 +15117,8 @@
         <int name="area" value="40"/>
     </imgdir>
     <imgdir name="9055">
-        <string name="name" value="???? ????&amp;lt;??&gt;-2??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-2??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="2"/>
         <string name="0" value="???? ????? 2??? ???? ?? ??? ???? ?????."/>
         <string name="1" value="??? ???? 2?? ?? ??? #b#o5200002##k? #b#o5200001##k? ???? ?? ? ?? #b#t4031168##k? #b10?#k ????? ??.\n\n#t4031168# #b#c4031168##k/10"/>
@@ -15126,8 +15126,8 @@
         <int name="area" value="40"/>
     </imgdir>
     <imgdir name="9056">
-        <string name="name" value="???? ????&amp;lt;??&gt;-3??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-3??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="3"/>
         <string name="0" value="???? ????? 3??? ???? ?? ??? ???? ?????."/>
         <string name="1" value="??? ???? ??? 3?? ?? ??? #b#o3210201##k? #b#o5300001##k? ?? #b25#k??? ???? #b#o5300000##k? ?? #b#t4000086##k? #b30#k? ????? ??.\n\n#o3210201# #r#a90561##k\n#o5300001# #r#a90562##k\n#t4000086# #b#c4000086##k/30"/>
@@ -15135,8 +15135,8 @@
         <int name="area" value="40"/>
     </imgdir>
     <imgdir name="9057">
-        <string name="name" value="???? ????&amp;lt;??&gt;-1??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-1??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="1"/>
         <string name="0" value="??? ???? ??? ???? ???? ??????...??? ???? ??????"/>
         <string name="1" value="??? ???? ??? ???? ??? ???, ??? ??? ???? ???? ??? ?? &apos;???? ????&apos;? ????? ??. ??? ???? ?? #b#o4230120# 50??#k? #b#o4230118# 20??#k? ????? ???...? ? ?????\n\n#o4230120# #r#a90572##k\n#o4230118# #r#a90571#"/>
@@ -15144,8 +15144,8 @@
         <int name="area" value="40"/>
     </imgdir>
     <imgdir name="9058">
-        <string name="name" value="???? ????&amp;lt;??&gt;-2??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-2??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="2"/>
         <string name="0" value="???? ????? 2??? ???? ?? ??? ???? ?????."/>
         <string name="1" value="??? ???? 2?? ?? ??? #b#o4230104##k? #b#o4230115##k? ???? ?? ? ?? #b#t4031169##k? 15? ????? ??.\n\n#t4031169# #b#c4031169##k/15"/>
@@ -15153,8 +15153,8 @@
         <int name="area" value="40"/>
     </imgdir>
     <imgdir name="9059">
-        <string name="name" value="???? ????&amp;lt;??&gt;-3??"/>
-        <string name="parent" value="???? ????&amp;lt;??&gt;"/>
+        <string name="name" value="???? ????&lt;??&gt;-3??"/>
+        <string name="parent" value="???? ????&lt;??&gt;"/>
         <int name="order" value="3"/>
         <string name="0" value="???? ????? 3??? ???? ?? ??? ???? ?????."/>
         <string name="1" value="??? ???? ??? 3?? ?? ??? #b#o5120002##k? #b#o5120000##k? ?? #b25#k??? ???? #b#o5120003##k? ?? #b#t4000072##k? #b30#k? ????? ??.\n\n#o5120002# #r#a90592##k\n#o5120000# #r#a90591##k\n#t4000072# #b#c4000072##k/30"/>

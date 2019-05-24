@@ -1,8 +1,7 @@
 package net.sf.cherry.scripting.map;
 
-public abstract interface MapScript
-{
-  public abstract void start(MapScriptMethods paramMapScriptMethods);
+public interface MapScript {
+  void start(MapScriptMethods paramMapScriptMethods);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

@@ -5,9 +5,8 @@
 package net.sf.cherry.tools;
 
 /**
- *
  * @author Administrator
  */
 class PacketHelper {
-    
+
 }

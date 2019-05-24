@@ -1,64 +1,47 @@
 /*
-Moose
-...
-Warps to exit map etc.
+Moose, Power of Shield
 */
-
-var status;
-var exitMap = 221000300;
-var exitPortal = "mid00";
-
-function start() {
-	status = -1
-	action(1,0,0);
-}
+var status = -1;
 
 function action(mode, type, selection){
-	if (mode == -1) {
-		cm.dispose();
+    if (mode == 1) {
+	status++
+    } else {
+	cm.dispose();
+	return;
+    }
+    if (status == 0) {
+	if (cm.getMapId() == 924000002) { // At Exit Map
+	    cm.warp(240010400, 0);
+	    cm.dispose();
+	} else if (cm.getMapId() == 924000000) { // At start map
+	    cm.sendNext("I have to let you know one thing before sending you to the training field. You have to hold #b#t1092041##k that I gave you in shield training field. Otherwise, you're dead.");
+	} else {
+	    cm.warp(924000002, 0);
+	    cm.dispose();
 	}
-	if (mode == 0 && status == 0) {
-		cm.dispose();
-		return;
-	}
-	else {
-		if (mode == 1) {
-			status++;
-		}
-		else
-			status--;
-		var mapId = cm.getChar().getMapId();
-		if (mapId == exitMap) { // won't happen in boss PQ, here for historic reasons
-			if (status == 0) {
-				cm.sendNext("See you next time.");
-			}
-			else {
-				cm.warp(103000000,"mid00"); // Kerning
-				cm.dispose();
-			}
-		}
-		else {
-			var outText = "Would you like to leave, " +  cm.getChar().getName()  +  "? Once you leave the map, you'll have to restart the whole quest if you want to try it again, and Juudai will be sad.  Do you still want to leave this map?";		 
-			if (status == 0) {
-				cm.sendYesNo(outText);
-			}
-			else if (mode == 1) {
-				// Remove them from the PQ!
-				var eim = cm.getChar().getEventInstance();
-				if (eim == null)
-					// warp player
-					//cm.warp(exitMap,exitPortal);
-					cm.warp(221000300,0);
-				else if (cm.isLeader())
-					eim.disbandParty();
+    } else if (status == 1) {
+	cm.sendSimple("Don't forget #rto hold shield#k before you get there! \r\n #b#L0# I want to get #t1092041#.#l \r\n #b#L1# Let me go in to #m924000001#.#l \r\n #b#L2# Let me out.#l");
 
-				else
-					eim.leftParty(cm.getChar());
-				cm.dispose();
-			}
-			else {
-				cm.dispose();
-			}
+    } else if (status == 2) {
+	if (selection == 0) {
+	    if (!cm.haveItem(1092041)) {
+		if (cm.canHold(1092041)) {
+		    cm.gainItem(1092041, 1);
+		    cm.sendOk("I gave you #t1092041#. Check inventory. You have to be equipped with it!");
+		} else {
+		    cm.sendOk("I couldn...t give you #t1092041##k as there's no blank in Equipment box. Make a blank and try again." );
 		}
+	    } else {
+		cm.sendOk("You already have #t1092041##k. No need more.");
+	    }
+	    cm.safeDispose();
+	} else if (selection == 1) {
+	    cm.warp(924000001, 0);
+	    cm.dispose();
+	} else {
+	    cm.warp(240010400, 0);
+	    cm.dispose();
 	}
+    }
 }

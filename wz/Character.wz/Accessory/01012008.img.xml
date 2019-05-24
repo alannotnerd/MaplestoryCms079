@@ -97,83 +97,83 @@
         </canvas>
     </imgdir>
     <imgdir name="blink">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
-        <uol name="2" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="hit">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="smile">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="troubled">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="cry">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="angry">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="bewildered">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="stunned">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="vomit">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="oops">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="cheers">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="chu">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="wink">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="pain">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="glitter">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="shine">
-        <uol name="0" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="blaze">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="despair">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="love">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="hum">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="bowing">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="hot">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
     <imgdir name="dam">
-        <uol name="0" value="../default"/>
-        <uol name="1" value="../default"/>
+        <uol name="../default" value="../default"/>
+        <uol name="../default" value="../default"/>
     </imgdir>
 </imgdir>

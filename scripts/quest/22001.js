@@ -6,23 +6,23 @@ function start(mode, type, selection) {
         if (type == 1 && mode == 0) {
             status -= 2;
         } else {
-            qm.sendNext("ä½ ï¼Œä¸æ„¿æ„å»å—ï¼Ÿä½ æƒ³çœ‹åˆ°å“¥å“¥æˆ‘è¢«ç‹—å’¬å—ï¼Ÿå¿«é‡æ–°å’Œæˆ‘è¯´è¯ï¼Œæ¥å—ä»»åŠ¡ï¼");
+            qm.sendNext("Äã£¬²»Ô¸ÒâÈ¥Âğ£¿ÄãÏë¿´µ½¸ç¸çÎÒ±»¹·Ò§Âğ£¿¿ìÖØĞÂºÍÎÒËµ»°£¬½ÓÊÜÈÎÎñ£¡");
             qm.dispose();
             return;
         }
     }
     if (status == 0) {
-        qm.sendNext("ä¸€å¤§æ—©å°±æ¥å¼€ç©ç¬‘ï¼Œå“ˆå“ˆå“ˆã€‚åˆ«ä¹±è¯´äº†ï¼Œå¿«å»ç»™#p1013102#å–‚é¥­å§ã€‚");
+        qm.sendNext("Ò»´óÔç¾ÍÀ´¿ªÍæĞ¦£¬¹ş¹ş¹ş¡£±ğÂÒËµÁË£¬¿ìÈ¥¸ø#p1013102#Î¹·¹°É¡£");
     } else if (status == 1) {
-        qm.PlayerToNpc("#bå—¯ï¼Ÿé‚£ä¸æ˜¯#p1013101#çš„äº‹æƒ…å—ï¼Ÿ");
+        qm.PlayerToNpc("#bàÅ£¿ÄÇ²»ÊÇ#p1013101#µÄÊÂÇéÂğ£¿");
     } else if (status == 2) {
-        qm.sendYesNo("ä½ è¿™å®¶ä¼™ï¼å¿«å»å–‚å‘€ï¼ï¼ #p1013102#æœ‰å¤šè®¨åŒæˆ‘ï¼Œä½ ä¹ŸçŸ¥é“ã€‚å“¥å“¥æˆ‘å»çš„è¯ï¼Œå®ƒä¸€å®šä¼šå’¬æˆ‘çš„ã€‚çŒçŠ¬å–œæ¬¢ä½ ï¼Œä½ å»ç»™å®ƒé€é¥­ã€‚");
+        qm.sendAcceptDecline("ÄãÕâ¼Ò»ï£¡¿ìÈ¥Î¹Ñ½£¡£¡ #p1013102#ÓĞ¶àÌÖÑáÎÒ£¬ÄãÒ²ÖªµÀ¡£¸ç¸çÎÒÈ¥µÄ»°£¬ËüÒ»¶¨»áÒ§ÎÒµÄ¡£ÁÔÈ®Ï²»¶Äã£¬ÄãÈ¥¸øËüËÍ·¹¡£");
     } else if (status == 3) {
         qm.gainItem(4032447, 1);
-        qm.sendNext("ä½ å¿«åˆ°#bå·¦è¾¹#kå»ç»™ #b#p1013102##k å–‚é¥²æ–™ã€‚é‚£ä¸ªå®¶ä¼™å¥½è±¡è‚šå­é¥¿äº†ï¼Œä»åˆšæ‰å¼€å§‹å°±ä¸€ç›´åœ¨å«ã€‚");
+        qm.sendNext("Äã¿ìµ½#b×ó±ß#kÈ¥¸ø #b#p1013102##k Î¹ËÇÁÏ¡£ÄÇ¸ö¼Ò»ïºÃÏó¶Ç×Ó¶öÁË£¬´Ó¸Õ²Å¿ªÊ¼¾ÍÒ»Ö±ÔÚ½Ğ¡£");
         qm.forceStartQuest();
     } else if (status == 4) {
-        qm.sendPrev("ç»™#p1013102#å–‚å®Œé£Ÿä¹‹åï¼Œèµ¶å¿«å›æ¥ã€‚");
+        qm.sendPrev("¸ø#p1013102#Î¹ÍêÊ³Ö®ºó£¬¸Ï¿ì»ØÀ´¡£");
         qm.dispose();
     }
 }
@@ -42,7 +42,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.sendOk("#b(Bulldog is totally sweet. Utah is just a coward.)#k\r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 35 exp");
     } else if (status == 2) {
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.gainItem(4032447, -1);
         qm.gainExp(35);
         qm.sendOk("#b(Looks like Bulldog has finished eating. Return to Utah and let him know.)#k");

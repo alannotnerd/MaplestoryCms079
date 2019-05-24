@@ -1,6 +1,6 @@
 var status = -1;
 
-function start(mode, type, selection) {
+function end(mode, type, selection) {
     if (mode == 0) {
 	if (status == 0) {
 	    qm.sendNext("This is an important decision to make.");
@@ -22,7 +22,7 @@ function start(mode, type, selection) {
 	    qm.expandInventory(4, 4);
 	    qm.changeJob(3200);
 	}
-	qm.completeQuest();
+	qm.forceCompleteQuest();
     } else if (status == 2) {
 	qm.sendNextPrev("I have also expanded your inventory slot counts for your equipment and etc. inventory. Use those slots wisely and fill them up with items required for Resistance to carry.");
     } else if (status == 3) {

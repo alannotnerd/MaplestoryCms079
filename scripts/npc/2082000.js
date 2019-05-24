@@ -1,24 +1,32 @@
+/*
+	Mue - Leafre Ticketing Booth(240000100)
+*/
+
+var cost = 30000;
 var status = 0;
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    cm.sendYesNo("ÄãºÃ,ÎÒÊÇÂëÍ··şÎñÔ±Å¦Âü¡£ÄãÏëÀë¿ªÉñÄ¾´åµ½Ìì¿ÕÖ®³ÇÂğ? ´ÓÕâÕ¾µ½°¬ÄÉË¹´óÂ½µÄ#bÌì¿ÕÖ®³Ç#kµÄ´¬Ö»\rĞèÒª»¨·Ñ#b"+cost+" ·ã±Ò#k ¹ºÂò#b#t4031045##k ²Å¿ÉÒÔÆôº½.");
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendNext("å¼€å¾€å¤©ç©ºä¹‹åŸçš„é£è‰‡æ¯#b10åˆ†é’Ÿ#kä¸€ç­ã€‚å¦‚æœä½ éœ€è¦å»#bå¤©ç©ºä¹‹åŸ#kçš„è¯ã€‚æˆ‘æƒ³æˆ‘å¯ä»¥å¸®åŠ©ä½ ï¼æ€ä¹ˆæ ·ï¼Ÿè¦ä¸è¦å»å¤©ç©ºä¹‹åŸï¼Ÿ");
-		} else if (status == 1) {
-			cm.sendOk("å¾ˆå¥½ï¼Œå› ä¸ºå†’é™©çš„æ”¹é©ã€‚ç°åœ¨ä¹˜åé£è‰‡å·²ç»ä¸åœ¨éœ€è¦è´­ç¥¨äº†ã€‚ä½ å¯ä»¥ç›´æ¥å»æ‰¾#bä¹˜åŠ¡å‘˜ å¡”å’ª#kå‰å¾€å¤©ç©ºä¹‹åŸã€‚");
-		} else if (status == 2) {
-			cm.dispose();
-		}
-	}
+    if(mode == -1)
+        cm.dispose();
+    else {
+        if(mode == 1)
+            status++;
+        else {
+            cm.sendNext("ÄãÓĞÒ»Ğ©¾­¼ÃµÄ¸ºµ£¶øÎŞ·¨´î´¬¶Ô°É?");
+            cm.dispose();
+            return;
+        }
+        if(status == 1) {
+            if(cm.getMeso() >= cost && cm.canHold(4031045)) {
+                cm.gainItem(4031045,1);
+                cm.gainMeso(-cost);
+            } else
+                cm.sendOk("ÇëÎÊÄãÓĞ #b"+cost+" ·ã±Ò#k? Èç¹ûÓĞµÄ»°,ÎÒÈ°Äú¼ì²éÏÂÉíÉÏÆäËûÀ¸Î»¿´ÊÇ·ñÓĞÃ»ÓĞÂúÁË.");
+            cm.dispose();
+        }
+    }
 }

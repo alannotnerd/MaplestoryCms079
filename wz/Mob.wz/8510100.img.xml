@@ -179,14 +179,14 @@
         </canvas>
     </imgdir>
     <imgdir name="die1">
-        <uol name="0" value="../attack1/5"/>
-        <uol name="1" value="../attack1/6"/>
-        <uol name="2" value="../attack1/7"/>
-        <uol name="3" value="../attack1/8"/>
-        <uol name="4" value="../attack1/9"/>
-        <uol name="5" value="../attack1/10"/>
-        <uol name="6" value="../attack1/11"/>
-        <uol name="7" value="../attack1/12"/>
+        <uol name="../attack1/5" value="../attack1/5"/>
+        <uol name="../attack1/6" value="../attack1/6"/>
+        <uol name="../attack1/7" value="../attack1/7"/>
+        <uol name="../attack1/8" value="../attack1/8"/>
+        <uol name="../attack1/9" value="../attack1/9"/>
+        <uol name="../attack1/10" value="../attack1/10"/>
+        <uol name="../attack1/11" value="../attack1/11"/>
+        <uol name="../attack1/12" value="../attack1/12"/>
         <canvas name="8" width="132" height="119">
             <vector name="origin" x="68" y="123"/>
             <vector name="head" x="-4" y="-80"/>

@@ -1,25 +1,3 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-					   Matthias Butz <matze@cherry.de>
-					   Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation version 3 as published by
-    the Free Software Foundation. You may not use, modify or distribute
-    this program under any other version of the GNU Affero General Public
-    License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /**
 -- Odin JavaScript --------------------------------------------------------------------------------
 	Alcaster - El Nath Market (211000100)
@@ -33,75 +11,57 @@
 ---------------------------------------------------------------------------------------------------
 **/
 
-importPackage(net.sf.cherry.client);
-
 var selected;
 var amount;
 var totalcost;
 var item = new Array(2050003,2050004,4006000,4006001);
-var highCost = new Array(600,800,10000,10000);
 var cost = new Array(300,400,5000,5000);
-var msg = new Array("that cures the state of being sealed and cursed","that cures all",", possessing magical power, that is used for high-quality skills",", possessing the power of summoning that is used for high-quality skills");
-var selStr;
-
-function start() {
-	status = -1;
-	action(1, 0, 0);
-}
+var msg = new Array("圣水","万能疗伤","魔法石","召唤石");
+var status = -1;
 
 function action(mode, type, selection) {
-	if (mode == 0 && status == 2) {
-		cm.sendNext("I see. Understand that I have many different items here. Take a look around. I'm only selling these items to you, so I won't be ripping you off in any way shape or form.");
-		cm.dispose();
-		return;
+    if (mode == 1) {
+	status++;
+    } else {
+	if (status == 2) {
+	    cm.sendNext("你需要的话再来找我。.");
+	    cm.safeDispose();
+	    return;
 	}
-	if (mode == 0 || mode == -1) {
-		cm.dispose();
-		return;
+	status--;
+    }
+
+    if (status == 0) {
+	if (cm.getQuestStatus(3035) == 2) {
+	    var selStr;
+	    for (var i = 0; i < item.length; i++){
+		selStr += "\r\n#L" + i + "# #b#t" + item[i] + "# (价格: "+cost[i]+" 枫币)#k#l";
+	    }
+	    cm.sendSimple("谢谢你购买 #b#t4031056##k "+selStr);
 	}
-	else
-		status++;
-	if (status == 0) {
-		if (cm.getQuestStatus(3035).equals(MapleQuestStatus.Status.COMPLETED)) {
-			selStr = "\r\n#L0# #b#t2050003# (Price: 300 mesos)#k#l\r\n#L1# #b#t2050004# (Price: 400 mesos)#k#l\r\n#L2# #b#t4006000# (Price: 5000 mesos)#k#l\r\n#L3# #b#t4006001# (Price: 300 mesos)#k#l";
-			cm.sendSimple("Thanks to you #b#t4031056##k is safely sealed. Of course, also as a result, I used up about half of the power I have accumulated over the last 800 years or so...but now I can die in peace. Oh, by the way... are you looking for rare items by any chance? As a sign of appreciation for your hard work, I'll sell some items I have to you, and ONLY you. Pick out the one you want!"+selStr);
-		} else {
-			selStr = "\r\n#L0# #b#t2050003# (Price: 600 mesos)#k#l\r\n#L1# #b#t2050004# (Price: 800 mesos)#k#l\r\n#L2# #b#t4006000# (Price: 10000 mesos)#k#l\r\n#L3# #b#t4006001# (Price: 10000 mesos)#k#l";
-			cm.sendSimple("I can sell these following items... Pick out the one you want! By the way, I'll make these items cheaper if you help me out and do my quest..."+selStr);
-		}
-	} else if (status == 1) {
-		selected = selection;
-		if (cm.getQuestStatus(3035).equals(MapleQuestStatus.Status.COMPLETED)) {
-			cm.sendGetNumber("Is #b#t"+item[selected]+"##k really the item that you need? It's the item "+msg[selected]+". It may not be the easiest item to acquire, but I'll give you a good deal on it. It'll cost you #b"+cost[selected]+" mesos#k per item. How many would you like to purchase?", 0, 1, 100);
-		} else {
-			cm.sendGetNumber("Is #b#t"+item[selected]+"##k really the item that you need? It's the item "+msg[selected]+". It may not be the easiest item to acquire, but I'll give you a good deal on it. It'll cost you #b"+highCost[selected]+" mesos#k per item. How many would you like to purchase?", 0, 1, 100);
-		}
-	} else if (status == 2) {
-		if (cm.getQuestStatus(3035).equals(MapleQuestStatus.Status.COMPLETED)) {
-			amount = selection;
-			totalcost = cost[selected] * amount;
-			if (amount == 0) {
-				cm.sendOk("If you're not going to buy anything, then I've got nothing to sell either.");
-				cm.dispose();
-			}
-			cm.sendYesNo("Are you sure you want to buy #r"+amount+" #t"+item[selected]+"(s)##k? It'll cost you "+cost[selected]+" mesos per #t"+item[selected]+"#, which will cost you #r"+totalcost+" mesos#k in total.");
-		} else {
-			amount = selection;
-			totalcost = highCost[selected] * amount;
-			if (amount == 0) {
-				cm.sendOk("If you're not going to buy anything, then I've got nothing to sell either.");
-				cm.dispose();
-			}
-			cm.sendYesNo("Are you sure you want to buy #r"+amount+" #t"+item[selected]+"(s)##k? It'll cost you "+highCost[selected]+" mesos per #t"+item[selected]+"#, which will cost you #r"+totalcost+" mesos#k in total.");
-		}
-	} else if (status == 3) {
-		if (cm.getMeso() < totalcost || !cm.canHold(item[selected])) {
-			cm.sendNext("Are you sure you have enough mesos? Please check and see if your etc. or use inventory is full, or if you have at least #r"+totalcost+"#k mesos.");
-			cm.dispose();
-		}
-		cm.sendNext("Thank you. If you ever find yourself needing items down the road, make sure to drop by here. I may have gotten old over the years, but I can still make magic items with ease.");
-		cm.gainMeso(-totalcost);
-		cm.gainItem(item[selected], amount);
-		cm.dispose();
+	else {
+	    cm.sendNext("如果你帮助我，作为奖励我会把我最棒的物品卖给你。");
+	    cm.safeDispose();
 	}
+    } else if (status == 1) {
+	selected = selection;
+	cm.sendGetNumber("#b#t"+item[selected]+"##k 真的是你需要的道具？这个道具 "+msg[selected]+". 它可能不是获取最简单的项目，但我会给你一个很好的协议就可以了。它会花费你 #b"+cost[selected]+" 枫币#k 你想购买多少？？", 0, 1, 100);
+    } else if (status == 2) {
+	amount = selection;
+	totalcost = cost[selected] * amount;
+	if (amount == 0) {
+	    cm.sendOk("如果你不打算买任何东西的话，我也没有什么可卖。");
+	    cm.dispose();
+	}
+	cm.sendYesNo("你真的想要买 #r"+amount+" #t"+item[selected]+"##k? 费用是 "+cost[selected]+" 枫币 每个 #t"+item[selected]+"#, 总共费用是 #r"+totalcost+" 枫币#k");
+    } else if(status == 3) {
+	if(cm.getMeso() < totalcost || !cm.canHold(item[selected])) {
+	    cm.sendNext("你确定你的枫币足够吗，如果没有至少也要有 #r"+totalcost+"#k 枫币.");
+	    cm.dispose();
+	}
+	cm.sendNext("谢谢。如果你发现自己需要的物品的道路，确保这里所下降。我可能已经得到了旧历年，但我仍然可以轻松的魔法物品。.");
+	cm.gainMeso(-totalcost);
+	cm.gainItem(item[selected], amount);
+	cm.safeDispose();
+    }
 }

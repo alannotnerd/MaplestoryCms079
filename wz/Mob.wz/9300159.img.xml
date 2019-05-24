@@ -444,12 +444,12 @@
             <vector name="head" x="-6" y="-54"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="11" value="../attack1/16"/>
-        <uol name="12" value="../attack1/17"/>
-        <uol name="13" value="../attack1/18"/>
-        <uol name="14" value="../attack1/19"/>
-        <uol name="15" value="../attack1/20"/>
-        <uol name="16" value="../attack1/21"/>
+        <uol name="../attack1/16" value="../attack1/16"/>
+        <uol name="../attack1/17" value="../attack1/17"/>
+        <uol name="../attack1/18" value="../attack1/18"/>
+        <uol name="../attack1/19" value="../attack1/19"/>
+        <uol name="../attack1/20" value="../attack1/20"/>
+        <uol name="../attack1/21" value="../attack1/21"/>
     </imgdir>
     <imgdir name="attack3">
         <imgdir name="info">
@@ -596,18 +596,18 @@
             <vector name="head" x="-21" y="-66"/>
             <int name="delay" value="90"/>
         </canvas>
-        <uol name="11" value="../attack1/16"/>
-        <uol name="12" value="../attack1/17"/>
-        <uol name="13" value="../attack1/18"/>
-        <uol name="14" value="../attack1/19"/>
-        <uol name="15" value="../attack1/20"/>
-        <uol name="16" value="../attack1/21"/>
-        <uol name="17" value="../attack1/16"/>
-        <uol name="18" value="../attack1/17"/>
-        <uol name="19" value="../attack1/18"/>
-        <uol name="20" value="../attack1/19"/>
-        <uol name="21" value="../attack1/20"/>
-        <uol name="22" value="../attack1/21"/>
+        <uol name="../attack1/16" value="../attack1/16"/>
+        <uol name="../attack1/17" value="../attack1/17"/>
+        <uol name="../attack1/18" value="../attack1/18"/>
+        <uol name="../attack1/19" value="../attack1/19"/>
+        <uol name="../attack1/20" value="../attack1/20"/>
+        <uol name="../attack1/21" value="../attack1/21"/>
+        <uol name="../attack1/16" value="../attack1/16"/>
+        <uol name="../attack1/17" value="../attack1/17"/>
+        <uol name="../attack1/18" value="../attack1/18"/>
+        <uol name="../attack1/19" value="../attack1/19"/>
+        <uol name="../attack1/20" value="../attack1/20"/>
+        <uol name="../attack1/21" value="../attack1/21"/>
     </imgdir>
     <imgdir name="jump">
         <canvas name="0" width="95" height="89">

@@ -1,6 +1,4 @@
-function start() {	
-	action(1, 0, 0);
-}
+var status = -1;
 
 function action(mode, type, selection) {
     if (cm.isQuestActive(2236)) {

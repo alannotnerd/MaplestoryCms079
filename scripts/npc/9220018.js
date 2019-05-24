@@ -1,9 +1,7 @@
-
-
 function action(mode, type, selection) {
 	cm.removeAll(4032248);
 	    if (cm.getPlayer().getParty() == null || !cm.isLeader()) {
-		cm.sendOk("The leader of the party must be here.");
+		cm.sendOk("请找队长来找我谈话。");
 	    } else {
 		var party = cm.getPlayer().getParty().getMembers();
 		var mapId = cm.getPlayer().getMapId();
@@ -22,17 +20,12 @@ function action(mode, type, selection) {
 		if (next && size >= 2) {
 			var em = cm.getEventManager("MV");
 			if (em == null) {
-				cm.sendOk("Please try again later.");
+				cm.sendOk("目前副本出了一点状况，请稍后再尝试。");
 			} else {
-		    var prop = em.getProperty("state");
-		    if (prop.equals("0") || prop == null) {
-			em.startInstance(cm.getPlayer().getParty(), cm.getPlayer().getMap());
-		    } else {
-			cm.sendOk("Another party quest has already entered this channel.");
-		    }
+				em.startInstance(cm.getPlayer().getParty(), cm.getPlayer().getMap());
 			}
 		} else {
-			cm.sendOk("All 2+ members of your party must be here and above level 8.");
+			cm.sendOk("我需要2个8等以上的。");
 		}
 	    }
 	cm.dispose();

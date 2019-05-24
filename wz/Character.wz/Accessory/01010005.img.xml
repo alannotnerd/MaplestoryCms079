@@ -28,13 +28,13 @@
     </imgdir>
     <imgdir name="blink">
         <imgdir name="0">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="default" value="../../default/default"/>
+            <uol name="../../default/default" value="../../default/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="hit">
@@ -94,7 +94,7 @@
     </imgdir>
     <imgdir name="bewildered">
         <imgdir name="0">
-            <uol name="default" value="../../stunned/0/default"/>
+            <uol name="../../stunned/0/default" value="../../stunned/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="stunned">
@@ -119,12 +119,12 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="oops">
         <imgdir name="0">
-            <uol name="default" value="../../troubled/0/default"/>
+            <uol name="../../troubled/0/default" value="../../troubled/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="cheers">
@@ -151,12 +151,12 @@
     </imgdir>
     <imgdir name="wink">
         <imgdir name="0">
-            <uol name="default" value="../../hit/0/default"/>
+            <uol name="../../hit/0/default" value="../../hit/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="pain">
         <imgdir name="0">
-            <uol name="default" value="../../troubled/0/default"/>
+            <uol name="../../troubled/0/default" value="../../troubled/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="glitter">
@@ -170,7 +170,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="shine">
@@ -195,7 +195,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="love">
@@ -209,7 +209,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="despair">
@@ -223,7 +223,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="hum">
@@ -237,7 +237,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="bowing">
@@ -251,7 +251,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="hot">
@@ -265,7 +265,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="dam">
@@ -279,7 +279,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="default" value="../0/default"/>
+            <uol name="../0/default" value="../0/default"/>
         </imgdir>
     </imgdir>
 </imgdir>

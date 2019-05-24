@@ -1,12 +1,11 @@
 package net.sf.cherry.server.maps;
 
-public abstract interface AnimatedMapleMapObject extends MapleMapObject
-{
-  public abstract int getStance();
+public interface AnimatedMapleMapObject extends MapleMapObject {
+  int getStance();
 
-  public abstract void setStance(int paramInt);
+  void setStance(int paramInt);
 
-  public abstract boolean isFacingLeft();
+  boolean isFacingLeft();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

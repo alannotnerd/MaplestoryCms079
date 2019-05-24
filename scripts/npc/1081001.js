@@ -1,68 +1,34 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /**
--- Odin JavaScript --------------------------------------------------------------------------------
 	Pison - Florina Beach(110000000)
--- By ---------------------------------------------------------------------------------------------
-	Information & Xterminator
--- Version Info -----------------------------------------------------------------------------------
-	1.1 - Add null map check [Xterminator]
-	1.0 - First Version
----------------------------------------------------------------------------------------------------
 **/
-
-importPackage(net.sf.cherry.server.maps);
-var status = 0;
-var returnmap;
-
-function start() {
-	status = -1;
-	action(1, 0, 0);
-}
+var status = -1;
+var returnmap = -1;
 
 function action(mode, type, selection) {
-	if (mode == -1) {
+    if (mode == 1) {
+	status++;
+    } else {
+	cm.sendNext("Äã²»»ØÈ¥ #m"+returnmap+"# ÄÇÕæÊÇÌ«°ôÁË!\r\n¿´¿´ÎÒÔÚÕâ±ß»¹²»ÊÇ¹ıµÃºÃºÃ£¬ºÍÄã½²»°·Â·ğ»Øµ½ÁËÒÔÇ°ÄØ!");
+	cm.safeDispose();
+	return;
+    }
+    if (status == 0) {
+	returnmap = cm.getSavedLocation("FLORINA");
+	cm.sendSimple("ËùÒÔÄãÏëÀë¿ª #b#m110000000##k? Èç¹ûÄãÏëÎÒ¿ÉÒÔ°ïÖúÄã»Øµ½ #b#m"+returnmap+"##k. µ«ÊÇĞèÒª1500·ã±Ò r\n\r\n#L0##b ÎÒÔ¸Òâ¸¶ 1500 ·ã±Ò.#l");
+    } else if (status == 1) {
+	cm.sendYesNo("ÄãÈ·¶¨ÄãÏë»Øµ½ #b#m"+returnmap+"##k? ºÃ°É£¬ÎÒÃÇµÃ×ß¿ìµãÁË");
+    } else if (status == 2) {
+	if (cm.getMeso() < 1500) {
+		cm.sendOk("ºÃÏñ·ã±Ò²»×ãÒ®!");
 		cm.dispose();
 	} else {
-		if (mode == 0) {
-			cm.sendNext("çœ‹æ¥ä½ åœ¨è¿™é‡Œæœ‰äº›äº‹è¿˜æ²¡æœ‰åŠå®Œå˜›ï¼Ÿèº«å¿ƒç–²æƒ«çš„æ—¶å€™åˆ°è¿™é»„é‡‘æµ·æ»©ä¼‘æ¯æ”¾æ¾ä¸€ä¸‹ä¹Ÿä¸é”™ã€‚");
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			returnmap = cm.getChar().getSavedLocation(SavedLocationType.FLORINA);
-			if (returnmap == -1) {
-				returnmap = 104000000;
-			}
-			cm.sendNext("åœ¨#b#m110000000##kå·²æ²¡åˆ«çš„äº‹æƒ…äº†å—?å¦‚æœæœ‰éœ€è¦çš„è¯ï¼Œæˆ‘é€ä½ å»#b#m"+returnmap+"##kå§ï¼");
-		} else if (status == 1) {
-			cm.sendYesNo("æƒ³å›#b#m"+returnmap+"##kå—ï¼Ÿå¥½~é‚£ç°åœ¨å‡†å¤‡å‡ºèˆªå§ã€‚é‚£â€¦ç°åœ¨é©¬ä¸Šå»#m"+returnmap+"#å—ï¼Ÿ")
-		} else if (status == 2) {
-			cm.warp(returnmap);
-			cm.dispose();
-		}
+	if (returnmap < 0) {
+		returnmap = 104000000;
 	}
+	cm.gainMeso(-1500);
+	cm.warp(returnmap, 0);
+	cm.clearSavedLocation("FLORINA");
+	cm.dispose();
+    }
+}
 }

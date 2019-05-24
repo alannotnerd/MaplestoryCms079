@@ -3,7 +3,7 @@ var status = -1;
 function start(mode, type, selection) {
 	qm.sendNext("I will NEVER give up!");
 	qm.gainExp(2000);
-	qm.completeQuest();
+	qm.forceCompleteQuest();
 	qm.dispose();
 }
 function end(mode, type, selection) {

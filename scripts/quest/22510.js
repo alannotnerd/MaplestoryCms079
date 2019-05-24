@@ -17,7 +17,7 @@ function end(mode, type, selection) {
 		qm.getPlayer().gainSP(1, 0);
 		qm.gainExp(450);
 		qm.gainItem(4032455, -1);
-		qm.completeQuest();
+		qm.forceCompleteQuest();
 	} else {
 		qm.sendNext("Please get me the letter.");
 	}

@@ -170,11 +170,11 @@
         </canvas>
     </imgdir>
     <imgdir name="skill1">
-        <uol name="0" value="../stand/0"/>
-        <uol name="1" value="../stand/1"/>
-        <uol name="2" value="../stand/2"/>
-        <uol name="3" value="../stand/3"/>
-        <uol name="4" value="../stand/4"/>
-        <uol name="5" value="../stand/5"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="../stand/4" value="../stand/4"/>
+        <uol name="../stand/5" value="../stand/5"/>
     </imgdir>
 </imgdir>

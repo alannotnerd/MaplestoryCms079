@@ -79,15 +79,15 @@
             <vector name="origin" x="57" y="61"/>
             <int name="delay" value="350"/>
         </canvas>
-        <uol name="5" value="1"/>
-        <uol name="6" value="2"/>
-        <uol name="7" value="3"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
         <canvas name="8" width="82" height="61">
             <vector name="origin" x="57" y="61"/>
             <int name="delay" value="700"/>
         </canvas>
-        <uol name="9" value="1"/>
-        <uol name="10" value="2"/>
-        <uol name="11" value="3"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
     </imgdir>
 </imgdir>

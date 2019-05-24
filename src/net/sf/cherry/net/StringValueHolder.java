@@ -1,7 +1,6 @@
 package net.sf.cherry.net;
 
-public abstract interface StringValueHolder
-{
-  public abstract String getValue();
+public interface StringValueHolder {
+  String getValue();
 }
 

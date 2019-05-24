@@ -33,8 +33,8 @@
             <canvas name="2" width="30" height="28">
                 <vector name="origin" x="19" y="36"/>
             </canvas>
-            <uol name="3" value="1"/>
-            <uol name="4" value="0"/>
+            <uol name="1" value="1"/>
+            <uol name="0" value="0"/>
             <canvas name="5" width="30" height="28">
                 <vector name="origin" x="19" y="36"/>
             </canvas>
@@ -145,5 +145,5 @@
             </canvas>
         </imgdir>
     </imgdir>
-    <uol name="5000004" value="5000000"/>
+    <uol name="5000000" value="5000000"/>
 </imgdir>

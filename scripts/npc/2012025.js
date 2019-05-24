@@ -1,38 +1,43 @@
-var gm;
+/*
+	NPC Name: 		Geras
+	Map(s): 		Orbis: Station<To Ariant> (200000151)
+	Description: 		Orbis Ticketing Usher
+*/
+var status = 0;
 
 function start() {
-	status = -1;
-	gm = cm.getEventManager("Geenie");
-	action(1, 0, 0);
+    status = -1;
+    geenie = cm.getEventManager("Geenie");
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-		return;
+    status++;
+    if(mode == 0) {
+	cm.sendNext("µÈÄã¿¼ÂÇºÃÔÙÀ´ÕÒÎÒ¡£");
+	cm.dispose();
+	return;
+    }
+    if (status == 0) {
+	if(geenie == null) {
+	    cm.sendNext("ÕÒ²»µ½½Å±¾ÇëÁªÏµGM£¡");
+	    cm.dispose();
+	} else if (geenie.getProperty("entry").equals("true")) {
+	    cm.sendYesNo("ÄãÏëÒª´î´¬£¿£¿");
+	} else if(geenie.getProperty("entry").equals("false") && geenie.getProperty("docked").equals("true")) {
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬×¼±¸¿ª×ß,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	} else {
-		status++;
-		if(mode == 0) {
-			cm.sendNext("ä½ è¿˜æœ‰ä»€ä¹ˆäº‹æƒ…å†è¿™é‡Œæ²¡æœ‰å®Œæˆå—ï¼Ÿ");
-			cm.dispose();
-			return;
-		}
-		if (status == 0) {
-			if(gm == null) {
-				cm.sendNext("è„šæœ¬å‘ç”Ÿé”™è¯¯ï¼Œè¯·è”ç³»ç®¡ç†å‘˜è§£å†³ã€‚");
-				cm.dispose();
-			} else if(gm.getProperty("entry").equals("true")) {
-				cm.sendYesNo("ä¸Šå»ä¹‹åï¼Œéœ€è¦é£å¾ˆä¹…æ‰èƒ½åˆ°è¾¾ç›®çš„åœ°ã€‚å¦‚æœä½ åœ¨è¿™é‡Œæœ‰æ€¥äº‹è¦åŠçš„è¯ï¼Œè¯·å…ˆæŠŠäº‹æƒ…åŠå®Œï¼Œæ€ä¹ˆæ ·ï¼Ÿ");
-			} else if(gm.getProperty("entry").equals("false") && gm.getProperty("docked").equals("true")) {
-				cm.sendNext("æœ¬æ¬¡èˆªç­å·²ç»å‡ºå‘ï¼Œè¯·ç­‰å¾…ä¸‹ä¸€æ¬¡èˆªç­ã€‚");
-				cm.dispose();
-			} else {
-				cm.sendNext("å‡ºå‘å‰5åˆ†é’Ÿå¼€å§‹æ‰å¯ä»¥å…¥åœºã€‚è¯·ç¨ç­‰ä¸€ä¸‹ã€‚ä¸è¿‡ä¹Ÿåˆ«æ¥çš„å¤ªæ™šã€‚å‡ºå‘å‰1åˆ†é’Ÿå°±ä¼šç»“æŸå‡ºèˆªå‡†å¤‡ã€‚");
-				cm.dispose();
-			}
-		} else if(status == 1) {
-			cm.warp(200000152);
-			cm.dispose();
-		}
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬ÒÑ¾­×ßÁË,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	}
+    } else if(status == 1) {
+	if(!cm.haveItem(4031576)) {
+	    cm.sendNext("²»! ÄãÃ»ÓĞ#b#t4031576##k ËùÒÔÎÒ²»ÄÜ·ÅÄã×ß!");
+	} else {
+	    cm.gainItem(4031576, -1);
+	    cm.warp(200000152, 0);
+	}
+	cm.dispose();
+    }
 }

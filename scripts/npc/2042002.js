@@ -1,12 +1,86 @@
-//CherryMS LoveMXD
-//éåŒæ„å†…ç¦æ­¢è½¬è½½
-//CherryMS.cn
+/* 
+ * Spiegelmann - Monster Carnival
+ */
+
+var status = -1;
+var rank = "D";
+var exp = 0;
 
 function start() {
-	cm.sendOk("å¯¹ä¸èµ·ï¼Œæ€ªç‰©å˜‰å¹´åæš‚æœªå¼€æ”¾ã€‚è¯·å…³æ³¨å®˜ç½‘ä¿¡æ¯ã€‚")
-	cm.dispose();
+    if (cm.getCarnivalParty() != null) {
+        status = 99;
+    }
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
+    if (mode == 1) {
+        status++;
+    } else {
+        status--;
+    }
+    if (mode == -1) {
+        cm.dispose();
+        return;
+    }
+    if (status == 0) {
+        cm.sendSimple("ÄãÏë×öÊ²Ã´£¿Èç¹ûÄã´ÓÀ´Ã»ÓĞ²Î¼Ó¹ı¼ÎÄê»ª£¬ÄãĞèÒªÏÈÖªµÀÁ½¼şÊÂ²ÅÄÜ¼ÓÈë¡£\r\n#b#L0#ÎÒÒªÈ¥¼ÎÄê»ª#l");
+    } else if (status == 1) {
+        switch (selection) {
+        case 0: {
+                var level = cm.getPlayerStat("LVL");
+                if (level < 30) {
+                    cm.sendOk("ÄãµÄµÈ¼¶Ğ¡ÓÚ30.²»ÄÜ²Î¼Ó¼ÎÄê»ª.");
+                } else {
+                    cm.warp(980000000, "st00");
+                }
+                cm.dispose();
+            }
+        default: {
+                cm.dispose();
+                break;
+            }
+            break;
+        }
+    } else if (status == 100) {
+        var carnivalparty = cm.getCarnivalParty();
+        if (carnivalparty.getTotalCP() >= 501) {
+            rank = "A";
+            exp = 150000;
+        } else if (carnivalparty.getTotalCP() >= 251) {
+            rank = "B";
+            exp = 120000;
+        } else if (carnivalparty.getTotalCP() >= 101) {
+            rank = "C";
+            exp = 100000;
+        } else if (carnivalparty.getTotalCP() >= 0) {
+            rank = "D";
+            exp = 80000;
+        }
+        cm.getPlayer().endPartyQuest(1301);
+        if (carnivalparty.isWinner()) {
+            cm.sendOk("ÄãÊ¤ÀûÁË.¹§Ï²Äã. \r\n#bMonster Carnival Rank : " + rank);
+        } else {
+            cm.sendOk("²»ĞÒµÄÄãÔÚÕ½¶·ÖĞÊ§°ÜÁË.ÏÂ´Î¼ÓÓÍ°É. \r\n#bMonster Carnival Rank : " + rank);
+        }
+    } else if (status == 101) {
+        var carnivalparty = cm.getCarnivalParty();
+        var los = parseInt(cm.getPlayer().getOneInfo(1301, "lose"));
+        var vic = parseInt(cm.getPlayer().getOneInfo(1301, "vic"));
+        if (carnivalparty.isWinner()) {
+            vic++;
+            cm.getPlayer().updateOneInfo(1301, "vic", "" + vic);
+            carnivalparty.removeMember(cm.getChar());
+            cm.gainExpR(exp);
+        } else {
+            los++;
+            cm.getPlayer().updateOneInfo(1301, "lose", "" + los);
+            carnivalparty.removeMember(cm.getChar());
+            cm.gainExpR(exp / 2);
+        }
+        cm.getPlayer().updateOneInfo(1301, "VR", "" + (java.lang.Math.ceil((vic * 100) / los)));
+        cm.warp(980000000);
+        cm.dispose();
+    }
 
 }

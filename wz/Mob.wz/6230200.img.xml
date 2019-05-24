@@ -65,7 +65,7 @@
             <vector name="head" x="-16" y="-42"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="3" value="0"/>
+        <uol name="0" value="0"/>
         <canvas name="4" width="63" height="56">
             <vector name="origin" x="31" y="55"/>
             <vector name="lt" x="-29" y="-52"/>

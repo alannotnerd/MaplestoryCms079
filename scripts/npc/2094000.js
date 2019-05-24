@@ -1,29 +1,8 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 var status = 0;
-var minLevel = 55;
-var maxLevel = 100;
-var minPlayers = 0;
-var maxPlayers = 6;
+var minLevel = 70;
+var maxLevel = 200;
+var minPartySize = 1;
+var maxPartySize = 6;
 
 function start() {
     status = -1;
@@ -38,60 +17,78 @@ function action(mode, type, selection) {
             cm.dispose();
             return;
         }
-        if (mode == 1)
-            status++;
-        else
-            status--;
+        if (mode == 1) status++;
+        else status--;
+	if (cm.getPlayer().getClient().getChannel() == 1 || cm.getPlayer().getClient().getChannel() == 2 || cm.getPlayer().getClient().getChannel() == 3) {
         if (status == 0) {
-            if (cm.getParty() == null) {
-                cm.sendOk("Please come back to me after you've formed a party.");
-                cm.dispose();
-                return;
-            }
-            if (!cm.isLeader()) {
-                cm.sendSimple("You are not the party leader.");
-                cm.dispose();
-            } else {
-                var party = cm.getParty().getMembers();
-                var mapId = cm.getPlayer().getMapId();
-                var next = true;
-                var levelValid = 0;
-                var inMap = 0;
-                if (party.size() < minPlayers || party.size() > maxPlayers)
-                    next = false;
-                else {
-                    for (var i = 0; i < party.size() && next; i++) {
-                        if ((party.get(i).getLevel() >= minLevel) && (party.get(i).getLevel() <= maxLevel))
+	cm.removeAll(4001117);
+	cm.removeAll(4031437);
+	cm.removeAll(4001120);
+	cm.removeAll(4001121);
+	cm.removeAll(4001122);
+	cm.removeAll(4001260);
+            cm.sendSimple("亲爱的#r#h ##k您好，海盗船组队任务:\r\n#r1,2,3线可挑战。#r所属队长与我对话执行。\r\n组队员等级必须要在" + minLevel + "级以上。\r\n#组队员必须要" + minPartySize + "人以上，" + maxPartySize + "人以下。#b\r\n\r\n#L0#进入海盗船\r\n\r\n#L2##v4170009#海盗副本固定奖励兑换#l");
+        } else if (status == 1) {
+            if (selection == 0) {
+                if (cm.getParty() == null) { // 没有组队
+                    cm.sendOk("请组队后和我谈话。");
+                    cm.dispose();
+                } else if (!cm.isLeader()) { // 不是队长
+                    cm.sendOk("队长必须在这里。请让他和我说话。");
+                    cm.dispose();
+                    } else  {
+                    var party = cm.getParty().getMembers();
+                    var mapId = cm.getPlayer().getMapId();
+                    var next = true;
+                    var levelValid = 0;
+                    var inMap = 0;
+                    var it = party.iterator();
+                    while (it.hasNext()) {
+                        var cPlayer = it.next();
+                        if ((cPlayer.getLevel() >= minLevel) && (cPlayer.getLevel() <= maxLevel)) {
                             levelValid += 1;
-                        if (party.get(i).getMapid() == mapId)
+                        } else {
+                            next = false;
+                        }
+                        if (cPlayer.getMapid() == mapId) {
                             inMap += 1;
+                        }
                     }
-                    if (levelValid < minPlayers || inMap < minPlayers)
+                    if (party.size() < minPartySize || party.size() > maxPartySize || inMap < minPartySize) {
                         next = false;
-                }
-                if (next) {
-                    var em = cm.getEventManager("PiratePQ");
-                    if (em == null) {
-                        cm.sendOk("PiratePQ does not work.");
+                    }
+                    if (next) {
+                        var em = cm.getEventManager("Pirate");
+                        if (em == null) {
+                            cm.sendOk("此任务正在建设当中。");
+                        } else {
+                            var prop = em.getProperty("state");
+                            if (prop.equals("0") || prop == null) {
+                                em.startInstance(cm.getParty(), cm.getMap());
+                                cm.dispose();
+                                return;
+                            } else {
+                                cm.sendOk("[日常]抢占海盗船任务里面已经有人了，请稍等！");
+                            }
+                        }
+                        cm.dispose();
+                    } else {
+                        cm.sendOk("请确认你的组队员：\r\n\r\n#b1、组队员必须要" + minPartySize + "人以上，" + maxPartySize + "人以下。\r\n2、组队员等级必须要在" + minLevel + "级以上。\r\n\r\n（#r如果仍然错误, 重新下线,再登陆 或者请重新组队。#k#b）");
                         cm.dispose();
                     }
-                    else {
-                        em.startInstance(cm.getParty(),cm.getPlayer().getMap());
-                        party = cm.getPlayer().getEventInstance().getPlayers();
-                    }
-                    cm.dispose();
-                }
-                else {
-                    cm.sendOk("Your party is not a party of six.  Make sure all your members are present and qualified to participate in this quest.  I see #b" + levelValid.toString() + " #kmembers are in the right level range, and #b" + inMap.toString() + "#k are in my map. If this seems wrong, #blog out and log back in,#k or reform the party.");
-                    cm.dispose();
-                }
+		} //判断组队
+            } else if (selection == 1) {
+                cm.sendOk("请确认你的组队员：\r\n\r\n#b1、组队员必须要" + minPartySize + "人以上，" + maxPartySize + "人以下。\r\n2、组队员等级必须要在" + minLevel + "级以上。\r\n\r\n（#r如果仍然错误, 重新下线,再登陆 或者请重新组队。#k#b）");
+                cm.dispose();
+            } else if (selection == 2) {
+            cm.openNpc(9310084, 25);
+                //cm.sendOk("1");
+                //cm.dispose();
             }
         }
-        else {
-            cm.sendOk("PiratePQ does not exist.");
-            cm.dispose();
-        }
+		 } else {
+        		cm.dispose();
+        		cm.sendOk("只有在1,2,3频道才可以参加海盗船任务。");
+	}
     }
 }
-					
-					

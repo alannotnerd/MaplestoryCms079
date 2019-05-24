@@ -22,7 +22,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="1">
-        <uol name="0" value="../0/hit/0"/>
+        <uol name="../0/hit/0" value="../0/hit/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
@@ -37,7 +37,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="2">
-        <uol name="0" value="../1/hit/0"/>
+        <uol name="../1/hit/0" value="../1/hit/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
@@ -52,7 +52,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="3">
-        <uol name="0" value="../2/hit/0"/>
+        <uol name="../2/hit/0" value="../2/hit/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
@@ -67,7 +67,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="4">
-        <uol name="0" value="../3/hit/0"/>
+        <uol name="../3/hit/0" value="../3/hit/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>

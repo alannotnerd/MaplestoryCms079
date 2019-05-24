@@ -27,7 +27,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
     <imgdir name="talk">
         <canvas name="0" width="43" height="73">
@@ -40,7 +40,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="130"/>
         </canvas>
-        <uol name="2" value="0"/>
+        <uol name="0" value="0"/>
         <canvas name="3" width="43" height="73">
             <vector name="origin" x="21" y="73"/>
             <int name="z" value="0"/>
@@ -51,7 +51,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="300"/>
         </canvas>
-        <uol name="5" value="0"/>
-        <uol name="6" value="4"/>
+        <uol name="0" value="0"/>
+        <uol name="4" value="4"/>
     </imgdir>
 </imgdir>

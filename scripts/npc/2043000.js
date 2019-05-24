@@ -24,9 +24,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.sendNextPrev("Now, before we begin, think of the time and place you used to live in. The Crack od Dimension will recognize the thought, and send you to that place. I will see you in the future!");
     } else if (status == 2) {
-	if (cm.getPlayer().getSkillLevel(5121010) <= 0) {
-	    cm.teachSkill(5121010, 0, 10);
-	}
+	cm.teachSkill(5121010, 0, 10);
 	cm.forceCompleteQuest(6363);
 	cm.warp(120000200, 0);
 	cm.dispose();

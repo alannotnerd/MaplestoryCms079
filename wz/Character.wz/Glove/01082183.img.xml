@@ -54,7 +54,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
             <canvas name="lWrist" width="3" height="3">
                 <vector name="origin" x="6" y="2"/>
                 <imgdir name="map">
@@ -114,7 +114,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
             <canvas name="lWrist" width="4" height="3">
                 <vector name="origin" x="7" y="1"/>
                 <imgdir name="map">
@@ -791,12 +791,12 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="rWrist" value="../../swingPF/0/rWrist"/>
-            <uol name="lWrist" value="../../swingPF/0/lWrist"/>
+            <uol name="../../swingPF/0/rWrist" value="../../swingPF/0/rWrist"/>
+            <uol name="../../swingPF/0/lWrist" value="../../swingPF/0/lWrist"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="rWrist" value="../../swingPF/1/rWrist"/>
-            <uol name="lWrist" value="../../swingPF/1/lWrist"/>
+            <uol name="../../swingPF/1/rWrist" value="../../swingPF/1/rWrist"/>
+            <uol name="../../swingPF/1/lWrist" value="../../swingPF/1/lWrist"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="rWrist" width="4" height="5">
@@ -815,7 +815,7 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="rWrist" value="../../stabT1/2/rWrist"/>
+            <uol name="../../stabT1/2/rWrist" value="../../stabT1/2/rWrist"/>
             <canvas name="lWrist" width="4" height="5">
                 <vector name="origin" x="21" y="7"/>
                 <imgdir name="map">
@@ -925,7 +925,7 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
             <canvas name="lWrist" width="4" height="5">
                 <vector name="origin" x="11" y="7"/>
                 <imgdir name="map">
@@ -985,8 +985,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="rWrist" value="../1/rWrist"/>
-            <uol name="lWrist" value="../1/lWrist"/>
+            <uol name="../1/rWrist" value="../1/rWrist"/>
+            <uol name="../1/lWrist" value="../1/lWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -1025,19 +1025,19 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="rWrist" value="../../proneStab/0/rWrist"/>
-            <uol name="lWrist" value="../../proneStab/0/lWrist"/>
+            <uol name="../../proneStab/0/rWrist" value="../../proneStab/0/rWrist"/>
+            <uol name="../../proneStab/0/lWrist" value="../../proneStab/0/lWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="rWrist" value="../../alert/1/rWrist"/>
+            <uol name="../../alert/1/rWrist" value="../../alert/1/rWrist"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="rWrist" value="../../swingO2/1/rWrist"/>
+            <uol name="../../swingO2/1/rWrist" value="../../swingO2/1/rWrist"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="rWrist" value="../../swingO2/0/rWrist"/>
+            <uol name="../../swingO2/0/rWrist" value="../../swingO2/0/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

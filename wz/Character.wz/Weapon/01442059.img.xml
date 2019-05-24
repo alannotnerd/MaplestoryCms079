@@ -189,10 +189,10 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="weapon" value="../../swingPF/0/weapon"/>
+            <uol name="../../swingPF/0/weapon" value="../../swingPF/0/weapon"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="weapon" value="../../swingPF/1/weapon"/>
+            <uol name="../../swingPF/1/weapon" value="../../swingPF/1/weapon"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="weapon" width="73" height="77">
@@ -235,7 +235,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="weapon" value="../../proneStab/0/weapon"/>
+            <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

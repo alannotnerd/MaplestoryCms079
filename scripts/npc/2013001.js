@@ -1,98 +1,202 @@
-var status = 0;
-var beauty = 0;
-var haircolor = Array();
-var skin = Array(0, 1, 2, 3, 4,6,7,8,9,10,11);
-var hair = Array(31000, 31010, 31020, 31030, 31040, 31050, 31060, 31070, 31080, 31090, 31100, 31110, 31120, 31130, 31140, 31150, 31160, 31170, 31180, 31190, 31200, 31210, 31220, 31230, 31240, 31250, 31260, 31270, 31280, 31290, 31300, 31310, 31320, 31330, 31340, 31350,31400, 31410, 31420, 31430, 31440, 31450, 31460, 31470, 31480, 31490, 31510, 31520, 31530, 31540, 31550, 31560, 31610, 31620, 31630, 31640, 31650, 31670, 31680, 31690, 31700, 31710, 31720, 31730, 31740,31750,31760,31770,31780,31790,31800,31810,31820,31830,31840,31850,31860,31870,31880,31890,31910,31920,31930,31940,31950);
-var hairnew = Array();
-var face = Array(21000, 21001, 21002, 21003, 21004, 21005, 21006, 21007, 21008, 21009, 21010, 21011, 21012, 21013, 21014, 21016, 21017, 21018, 21019, 21020,21021, 21022, 21023, 21024, 21025, 21026, 21027);
-var facenew = Array();
-var colors = Array();
-
-function start() {
-	status = -1;
-	action(1, 0, 0);
+function action(mode, type, selection) {
+    if (cm.getPlayer().getMapId() == 920011200) { //exit
+	for (var i = 4001044; i < 4001064; i++) {
+		cm.removeAll(i); //holy
+	}
+	cm.warp(200080101);//³ö¿Ú
+	cm.dispose();
+	return;
+    }
+    var em = cm.getEventManager("OrbisPQ");
+    if (em == null) {
+	cm.sendOk("ÇëÔÙÒ»´Î³¢ÊÔ.");
+	cm.dispose();
+	return;
+    }
+    if (cm.getLevel() > 200 ) {  
+	cm.sendOk("ÎÒÖ»Ïë¸úÄãµÄ¶Ó³¤Ëµ»°!");
+	cm.dispose();
+	return;
+    }
+    if (em.getProperty("pre").equals("0")) {
+	for (var i = 4001044; i < 4001064; i++) {
+		cm.removeAll(i); //holy
+	}
+	cm.sendNext("Çë¾È¾ÈÎÒ£¬ÎÒ±»À§ÔÚÁË°Ö°ÖµÄĞ¡¾«ÁéµÄÓ¡ÕÂ£¬ÎÒÃÇËşµÄ¿Ö²À£¡Ëû°ÑÎÒÃÇËùÓĞµÄÃ×ÀÕÍŞµñÏñ¶¼·Å´íÁËµØ·½£¬ÎÒÃÇµÃ°ÑËüÅª»ØÀ´£¡Å¶£¬¶Ô²»Æğ£¬ÎÒµÄ¹Ü¼Ò£¬ËµÎÒÊÇÃ×ÀÕÍŞµÄ»Ê¼ÒÆÍÈË¡£ÇëÄã°ÑËùÓĞµÄÔÆ´òÁË£¬»ñµÃ20¸öÔÆ¶äËéÆ¬·ÅÈëµØÍ¼Í¤×ÓµÄ¹âÇòÏÂ£¡");
+	cm.dispose();
+	return;
+    }
+    switch(cm.getPlayer().getMapId()) {
+	case 920010000:
+	    cm.warpParty(920010000, 2);//´«ËÍµ½Õâ¸öµØÍ¼µÄÁ´½ÓµØÍ¼
+	    cm.givePartyExp(1);
+	    break;
+	case 920010100:
+	    if (em.getProperty("stage").equals("6")) {
+		if (em.getProperty("finished").equals("0")) {
+		    cm.warpParty(920010800); //GARDEN.	
+		} else {
+		    cm.sendOk("Ğ»Ğ»ÄãÆ´ºÃÁËÅ®ÉñÏñ£¬ÎÒËÍÄãÈ¥BOSS¹Ø°É£¡");
+		}
+	    } else {
+		cm.sendOk("ÇëÊÕ¼¯Å®ÉñÏñµÄ¸÷¸ö²¿¼ş£¬°ÑÅ®ÉñÏñÆ´ºÃ£¬È»ºóµã»÷ÎÒ£¬ËÍÄãÈ¥BOSSµØÍ¼");
+	    } 
+	    break;
+	case 920010200: //walkway
+	    if (!cm.haveItem(4001050,30)) {
+		cm.sendOk("´òËÀ¹ÖÎï»ñµÃ30¸öËéÆ¬¸øÎÒ£¬ÓÄÁéµÄÍö»êÃ»±ØÒª´ò£¬ÒòÎª²»µôËéÆ¬!");
+	    } else if(cm.haveItem(4001044,1)){
+		cm.sendOk("ÊÕ¼¯³É¹¦£¬Äã¿ÉÒÔ³öÈ¥ÁË!");
+	    } else {
+		cm.removeAll(4001050);
+		cm.gainItem(4001044,1); //first piece
+		cm.gainItem(4001049,1); //sixth
+		cm.givePartyExp(20000);
+		clear();
+	    }
+	    break;
+	case 920010300: //storage
+	    if (!cm.haveItem(4001051,15)) {
+		cm.sendOk("ÇëÊÕ¼¯15¸öËéÆ¬¸øÎÒ£¬´òËÀĞ¡Ê¨×Ó»áµô!\r\n´Ó×îÏÂÃæ¿ªÊ¼ÍùÉÏÊıÊÇ1-15²ã£¬×ó±ßÊÇµ¥Êı²ã£¬ÓÒ±ßÊÇË«Êı²ã\r\n\r\nÊ¨×ÓÒÀ´Î³öÏÖµÄ²ãÊıÎª£º\r\n1²ã 10²ã 9²ã 13²ã 11²ã\r\n 6²ã 12²ã 2²ã 5²ã 15²ã\r\n 8²ã 4²ã 7²ã 3²ã 14²ã¡£");
+	    } else if(cm.haveItem(4001045,1)){
+		cm.sendOk("ÄãÒÑ¾­ÓĞÁË£¬¿ÉÒÔ³öÈ¥ÁË!");
+	    } else {
+		cm.removeAll(4001051);
+		cm.gainItem(4001045,1);
+		cm.givePartyExp(20000);
+		clear();
+	    }
+	    break;
+	case 920010400: //lobby
+	    if (em.getProperty("stage3").equals("0")) {
+		cm.sendOk("Çë£¬ÕÒµ½Õâ¸ö³ªÆ¬µÄÒ»ÖÜ£¬²¢½«Ëü·ÅÔÚÒôÀÖ²¥·Å¡£\r\n#v4001056#ĞÇÆÚÌì\r\n#v4001057#ĞÇÆÚÒ»\r\n#v4001058#ĞÇÆÚ¶ş\r\n#v4001059#ĞÇÆÚÈı\r\n#v4001060#ĞÇÆÚËÄ\r\n#v4001061#ĞÇÆÚÎå\r\n#v4001062#ĞÇÆÚÁù\r\n");
+	    } else if (em.getProperty("stage3").equals("1")) {
+		if (cm.canHold(4001046,1)) {
+		    cm.gainItem(4001046,1); //third piece
+		    cm.givePartyExp(20000);
+		    clear();
+		    em.setProperty("stage3", "2");
+		} else {
+		    cm.sendOk("Please make room!");
+		}
+	    } else {
+		cm.sendOk("Thank you so much!");
+	    }
+	    break;
+	case 920010500: //sealed
+	    if (em.getProperty("stage4").equals("0")) {
+		var players = Array();
+		var total = 0;
+		for (var i = 0; i < 3; i++) {
+		    var z = cm.getMap().getNumPlayersItemsInArea(i);
+		    players.push(z);
+		    total += z;
+		}
+		if (total != 3) {
+		    cm.sendOk("ĞèÒª3¸ö¶ÓÓÑÕ¾ÉÏÌ¨½×£¬¶àÒ»¸öÈË¶¼²»ĞĞ£¬ÌáÊ¾ÊÇ£º\r\n300¡¢030¡¢003°´ÕâÑùµÄË³ĞòÒÀ´ÎÕ¾ºÃ£¡");
+		} else {
+		    var num_correct = 0;
+		    for (var i = 0; i < 3; i++) {
+			if (em.getProperty("stage4_" + i).equals("" + players[i])) {
+			    num_correct++;
+			}
+		    }
+		    if (num_correct == 3) {
+			if (cm.canHold(4001047,1)) {
+	    		    clear();
+			    cm.gainItem(4001047,1); //fourth
+			    cm.givePartyExp(30000);
+	    		    em.setProperty("stage4", "1");
+			} else {
+			    cm.sendOk("Please make room!");
+			}
+		    } else {
+    	    		cm.showEffect(true, "quest/party/wrong_kor");
+    	    		cm.playSound(true, "Party1/Failed");
+			if (num_correct > 0) {
+			    cm.sendOk("One of the platforms is correct.");
+			} else {
+			    cm.sendOk("All of the platforms are wrong.");
+			}
+		    }
+		}
+	    } else {
+		cm.sendOk("The portal is opened! Go!");
+	    }
+	    cm.dispose();
+	    break;
+	case 920010600: //lounge
+	    if (!cm.haveItem(4001052,20)) {
+		cm.sendOk("ÊÕ¼¯20¸öËéÆ¬¸øÎÒ£¬ÔÚ×îÏÂÃæµÄĞ¡ºÚÎİ´òÏä×Ó»ñµÃ£¡£¡£¡");
+	    } else if(cm.haveItem(4001048,1)){
+		cm.sendOk("ÊÕ¼¯³É¹¦£¬Äã¿ÉÒÔ³öÈ¥ÁË!");
+	    cm.dispose();
+	    } else {
+		cm.givePartyItems(4001052,-1,true);
+		cm.removeAll(4001052);
+		cm.gainItem(4001048,1); //fifth piece
+		cm.givePartyExp(10000);
+		clear();
+	    }
+	    break;
+	case 920010700: //on the way up
+	    if (em.getProperty("stage6").equals("0")) {
+		var react = Array();
+		var total = 0;
+	    	for(var i = 0; i < 3; i++) {
+		    if (cm.getMap().getReactorByName("" + (i + 1)).getState() > 0) {
+			react.push("1");
+			total += 1;
+		    } else {
+			react.push("0");
+		    }
+	    	}
+		if (total != 2) {
+		    cm.sendOk("ÇëÄãµÄÈ«²¿¶ÓÓÑÍÅ¶ÓĞ­ÖúÉÏÈ¥´ò×îÏÂÃæµÄ3¸ö¸Ë×Ó£¬×îÉÏÃæµÄÁ½¸ö¸Ë×Ó²»ÓÃ´ò£¬¶Ó³¤µãÎÒ¾ÍĞĞ\r\n\r\n#rÓÑÇéÌáÊ¾£ºÉÏÈ¥Ò»¸ö½×Ìİ£¬¶ªÒ»¸ö½ğ±Ò¼ÇÂ¼Ò»ÏÂ£¡");
+		} else {
+		    var num_correct = 0;
+		    for (var i = 0; i < 3; i++) {
+			if (em.getProperty("stage62_" + i).equals("" + react[i])) {
+			    num_correct++;
+			}
+		    }
+		    if (num_correct == 3) {
+			if (cm.canHold(4001049,1)) {
+	    		    clear();
+			    cm.gainItem(4001049,1); //sixth
+			    cm.givePartyExp(100000);
+	    		    em.setProperty("stage6", "1");
+			} else {
+			    cm.sendOk("Please make room!");
+			}
+		    } else {
+    	    		cm.showEffect(true, "quest/party/wrong_kor");
+    	    		cm.playSound(true, "Party1/Failed");
+			if (num_correct >= 1) { //this should always be true
+			    cm.sendOk("One of the levers is correct.");
+			} else {
+			    cm.sendOk("Both of the levers are wrong.");
+			}
+		    }
+		}
+	    } else {
+		cm.sendOk("Thank you!!");
+	    }
+	    break;
+	case 920010800:
+	    cm.sendNext("ÇëÄã´òËÀÖÖ×Ó£¬ÖÖÔÚÁ½±ßµÄÅè×ÓÉÏ£¬°ÑºÚÉ«µÄÊ³ÈË»¨´òËÀ£¬BOSS¾Í³öÀ´ÁË£¡È»ºó°ÑBOSS´òËÀ»ñµÃÌØ±ğÆæ¹ÖµÄÖÖ×Ó£¬°ÑÌØ±ğÆæ¹ÖµÄÖÖ×Ó£¬ÖÖÔÚÅè×ÓÉÏ£¬³¤³ö²İ£¬ÓÃÆÕÍ¨¹¥»÷´òËÀ²İ»ñµÃÉúÃüÖÖ×Ó£¬È»ºó³öÈ¥£¬°ÑÉúÃü²İ¶ªÔÚÅ®ÉñÏñµÄÖĞ¼ä£¡"); 
+	    break;
+	case 920010900:
+	    cm.sendNext("ÕâÊÇËşµÄ¼àÓü¡£ÔÚÕâÀïÄã¿ÉÒÔÕÒµ½Ò»Ğ©ºÃ³ÔµÄ¶«Î÷¡£"); 
+	    break;
+	case 920011000:
+	    cm.sendNext("ÕâÊÇËşÂ¥µÄÒş²Ø¿Õ¼ä¡£ÔÚÕâÀïÄã¿ÉÒÔÕÒµ½Ò»Ğ©ºÃ³ÔµÄ¶«Î÷¡£"); 
+	    break;
+    }
+    cm.dispose();
 }
 
-function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 0 && status == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			if(false) {
-				cm.sendOk("ä½ ä¸æ˜¯ GM!");
-				cm.dispose();
-			} else {
-				if(cm.getChar().getGender() == 1) {
-					cm.sendSimple("#bå› ä¸ºæ— åŠ è–ªï¼Œæ‰€ä»¥ä½ æˆ¿å°```?#k#r\r\n#L0#çš®è‚¤#l\r\n#L1#å¤´å‘#l\r\n#L2#å¤´å‘é¢œè‰²#l\r\n#L3#çœ¼ç›#l\r\n#L4#çœ¼ç›é¢œè‰²#l#k");
-				}else {
-					cm.sendOk("ä½ ä¸æ˜¯å¥³ç”Ÿ!");
-					cm.dispose();
-				}
-			}
-		} else if (status == 1) {
-			if (selection == 0) {
-				beauty = 1;
-				cm.sendStyle("é€‰æ‹©ä½ å–œæ¬¢çš„æ ·å¼å§", skin);
-			} else if (selection == 1) {
-				beauty = 2;
-				hairnew = Array();
-				for(var i = 0; i < hair.length; i++) {
-					hairnew.push(hair[i] + parseInt(cm.getChar().getHair()
- % 10));
-				}
-				cm.sendStyle("é€‰æ‹©ä½ å–œæ¬¢çš„æ ·å¼å§?", hairnew);
-			} else if (selection == 2) {
-				beauty = 3;
-				haircolor = Array();
-				var current = parseInt(cm.getChar().getHair()
-/10)*10;
-				for(var i = 0; i < 8; i++) {
-					haircolor.push(current + i);
-				}
-				cm.sendStyle("é€‰æ‹©ä½ å–œæ¬¢çš„æ ·å¼å§?", haircolor);
-			} else if (selection == 3) {
-				beauty = 4;
-				facenew = Array();
-				for(var i = 0; i < face.length; i++) {
-					facenew.push(face[i] + cm.getChar().getFace()
- % 1000 - (cm.getChar().getFace()
- % 100));
-				}
-				cm.sendStyle("é€‰æ‹©ä½ å–œæ¬¢çš„æ ·å¼å§?", facenew);
-			} else if (selection == 4) {
-				beauty = 5;
-				var current = cm.getChar().getFace()
- % 100 + 21000;
-				colors = Array();
-				colors = Array(current , current + 100, current + 200, current + 300, current +400, current + 500, current + 600, current + 700);
-				cm.sendStyle("é€‰æ‹©ä½ å–œæ¬¢çš„æ ·å¼å§?", colors);
-			}
-		}
-		else if (status == 2){
-			cm.dispose();
-			if (beauty == 1){
-				cm.setSkin(skin[selection]);
-			}
-			if (beauty == 2){
-				cm.setHair(hairnew[selection]);
-			}
-			if (beauty == 3){
-				cm.setHair(haircolor[selection]);
-			}
-			if (beauty == 4){
-				cm.setFace(facenew[selection]);
-			}
-			if (beauty == 5){
-				cm.setFace(colors[selection]);
-			}
-		}
-	}
+function clear() {
+    cm.showEffect(true, "quest/party/clear");
+    cm.playSound(true, "Party1/Clear");
 }

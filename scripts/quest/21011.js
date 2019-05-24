@@ -1,40 +1,44 @@
-importPackage(net.sf.cherry.client);
+function start(mode, type, selection) {
+    qm.dispose();
+}
 
 var status = -1;
 
-function start(mode, type, selection) {
-
-}
-
 function end(mode, type, selection) {
-	if (mode == -1) {
-		qm.sendNext("å‘œå‘œï¼Œä½ æ˜¯å«Œè¿™æŠŠå‰‘å¤ªå¯’ç¢œå—ï¼Ÿ");
-        	qm.dispose();
-    	} else {
-        	if (mode > 0)
-            		status++;
-        	else
-            		status--;
-		if (status == 0) {
-			qm.sendNext("å’Œ#p1201000#åœ¨ä¸€èµ·çš„ï¼Œéš¾é“â€¦â€¦éš¾é“å°±æ˜¯ä¼ è¯´ä¸­çš„è‹±é›„ï¼Ÿ#p1201000#ï¼åˆ«ä¸è€çƒ¦åœ°ç‚¹å¤´ï¼Œç»™æˆ‘ä»¬ä»‹ç»ä»‹ç»å‘€ï¼è¿™ä½å°±æ˜¯ä¼ è¯´ä¸­çš„è‹±é›„å—ï¼Ÿï¼");
-		} else if (status == 1) {
-			qm.sendNextPrev("   #i4001171#");
-		} else if (status == 2) {
-			qm.sendNextPrev("â€¦â€¦çœŸå¯¹ä¸èµ·ï¼Œå¤ªæ¿€åŠ¨äº†ï¼Œå¿ä¸ä½å—“é—¨å¤§äº†äº›ã€‚å‘œå‘œï½çœŸæ˜¯ä»¤äººæ¿€åŠ¨â€¦â€¦å”‰ï¼Œçœ¼æ³ªéƒ½å¿«å‡ºæ¥äº†â€¦â€¦#p1201000#è¿™å›å¯å¼€å¿ƒäº†ã€‚");
-		} else if (status == 3) {
-			qm.sendNextPrev("ç­‰ç­‰â€¦â€¦è‹±é›„å¤§äººæ€ä¹ˆèƒ½æ²¡æœ‰æ­¦å™¨å‘¢ï¼Ÿæˆ‘å¬è¯´æ¯ä¸ªè‹±é›„éƒ½æœ‰è‡ªå·±çš„ç‹¬ç‰¹æ­¦å™¨â€¦â€¦å•Šï¼Œä¼°è®¡æ˜¯å’Œé»‘é­”æ³•å¸ˆæˆ˜æ–—çš„æ—¶å€™é—å¤±äº†ã€‚");
-		} else if (status == 4) {
-			qm.sendYesNo("è™½ç„¶å¯’ç¢œäº†ç‚¹ï¼Œä¸è¿‡#bå…ˆæ‹¿è¿™æŠŠå‰‘ç”¨ç€å§#kã€‚ç®—æ˜¯é€ç»™è‹±é›„çš„ç¤¼ç‰©ã€‚è‹±é›„å¦‚æœæ²¡æœ‰æ­¦å™¨ï¼Œå²‚ä¸æ˜¯ä¼šæœ‰äº›å¥‡æ€ªï¼Ÿ \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i1302000# 1 #t1302000# \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 35 exp");
-		} else if (status == 5) {
-			if (qm.isQuestActive(21011)) {
-				qm.gainItem(1302000, 1);
-				qm.completeQuest();
-				qm.getPlayer().gainExp(35, true, true);
-			}
-			qm.sendNext("#bï¼ˆçœ‹è‡ªå·±è¿™æŠ€èƒ½æ°´å¹³æ²¡ä¸€ç‚¹è‹±é›„çš„æ ·å­â€¦â€¦è¿™æŠŠå‰‘æ„Ÿè§‰ä¹Ÿå¾ˆé™Œç”Ÿã€‚ä»¥å‰çš„æˆ‘æ˜¯ç”¨å‰‘çš„å—ï¼Ÿè¿™æŠŠå‰‘æ€ä¹ˆç”¨å‘¢ï¼Ÿï¼‰#k", 3);
-		} else if (status == 6) {
-			qm.displayGuide(16);
-			qm.dispose();
-		}
-	}
+    if (mode == 1) {
+        status++;
+    } else {
+        if (status == 4) {
+            qm.sendNext("ÎØÎØ£¬ÄãÊÇÏÓÕâ°Ñ½£Ì«º®í×Âğ£¿");
+            qm.dispose();
+            return;
+        }
+        status--;
+    }
+    if (status == 0) {
+        if (qm.getQuestStatus(21011) == 0) {
+            qm.forceStartQuest();
+            qm.dispose();
+            return;
+        }
+        qm.sendNext("ºÍ#p1201000#ÔÚÒ»ÆğµÄ£¬ÄÑµÀ¡­¡­ÄÑµÀ¾ÍÊÇ´«ËµÖĞµÄÓ¢ĞÛ£¿#p1201000#£¡±ğ²»ÄÍ·³µØµãÍ·£¬¸øÎÒÃÇ½éÉÜ½éÉÜÑ½£¡ÕâÎ»¾ÍÊÇ´«ËµÖĞµÄÓ¢ĞÛÂğ£¿£¡");
+    } else if (status == 1) {
+        qm.sendNextPrev("   #i4001171#");
+    } else if (status == 2) {
+        qm.sendNextPrev("¡­¡­Õæ¶Ô²»Æğ£¬Ì«¼¤¶¯ÁË£¬ÈÌ²»×¡É¤ÃÅ´óÁËĞ©¡£ÎØÎØ¡«ÕæÊÇÁîÈË¼¤¶¯¡­¡­°¦£¬ÑÛÀá¶¼¿ì³öÀ´ÁË¡­¡­#p1201000#Õâ»Ø¿É¿ªĞÄÁË¡£");
+    } else if (status == 3) {
+        qm.sendNextPrev("µÈµÈ¡­¡­Ó¢ĞÛ´óÈËÔõÃ´ÄÜÃ»ÓĞÎäÆ÷ÄØ£¿ÎÒÌıËµÃ¿¸öÓ¢ĞÛ¶¼ÓĞ×Ô¼ºµÄ¶ÀÌØÎäÆ÷¡­¡­°¡£¬¹À¼ÆÊÇºÍºÚÄ§·¨Ê¦Õ½¶·µÄÊ±ºòÒÅÊ§ÁË¡£");
+    } else if (status == 4) {
+        qm.sendYesNo("ËäÈ»º®í×ÁËµã£¬²»¹ı#bÏÈÄÃÕâ°Ñ½£ÓÃ×Å°É#k¡£ËãÊÇËÍ¸øÓ¢ĞÛµÄÀñÎï¡£Ó¢ĞÛÈç¹ûÃ»ÓĞÎäÆ÷£¬Æñ²»ÊÇ»áÓĞĞ©Ææ¹Ö£¿\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#v1302000# 1¸ö #t1302000#\r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 35 exp");
+    } else if (status == 5) {
+        if (qm.getQuestStatus(21011) == 1) {
+            qm.gainItem(1302000, 1);
+            qm.gainExp(35);
+        }
+        qm.forceCompleteQuest();
+        qm.sendNextPrevS("#b£¨¿´×Ô¼ºÕâ¼¼ÄÜË®Æ½Ã»Ò»µãÓ¢ĞÛµÄÑù×Ó¡­¡­Õâ°Ñ½£¸Ğ¾õÒ²ºÜÄ°Éú¡£ÒÔÇ°µÄÎÒÊÇÓÃ½£µÄÂğ£¿Õâ°Ñ½£ÔõÃ´ÓÃÄØ£¿£©#k", 3);
+    } else if (status == 6) {
+        qm.summonMsg(16); // How to equip shiet
+        qm.dispose();
+    }
 }

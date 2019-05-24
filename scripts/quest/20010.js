@@ -10,20 +10,20 @@ function start(mode, type, selection) {
         status++;
     } else {
         if (status == 3) {
-            qm.sendNext("我一直在这里，如果你改变注意，可以再次来找我。");
+            qm.sendNext("��һֱ����������ı�ע�⣬�����ٴ������ҡ�");
             qm.safeDispose();
             return;
         }
         status--;
     }
     if (status == 0) {
-        qm.sendNext("欢迎来到圣地！你是谁？ 噢，你是 #b#h0##k！ 很高兴见到你！ 我在这里等你好久了， 你将成为一个冒险岛骑士， 对吗？ 我的名字是 #p1102004#。");
+        qm.sendNext("��ӭ����ʥ�أ�����˭�� �ޣ����� #b#h0##k�� �ܸ��˼����㣡 �����������þ��ˣ� �㽫��Ϊһ��ð�յ���ʿ�� ���� �ҵ������� #p1102004#��");
     } else if (status == 1) {
-        qm.sendNextPrev("如果你想成为冒险岛骑士团中的一员，你可以找我旁边的那位先生，他可以帮助你成为冒险岛骑士团中的一员。");
+        qm.sendNextPrev("��������Ϊð�յ���ʿ���е�һԱ������������Աߵ���λ�����������԰������Ϊð�յ���ʿ���е�һԱ��");
     } else if (status == 2) {
-        qm.sendNextPrev("噢，我提醒你一下，这个是一项任务。你可能偶尔可以注意到，NPC头顶上偶尔会有灯泡，那称之为#b任务（QUEST）#k。完成任务你将可以得到很多丰富的奖励！");
+        qm.sendNextPrev("�ޣ���������һ�£������һ�����������ż������ע�⵽��NPCͷ����ż�����е��ݣ��ǳ�֮Ϊ#b����QUEST��#k����������㽫���Եõ��ܶ�ḻ�Ľ�����");
     } else if (status == 3) {
-        qm.sendAcceptDecline("你愿意见见 #b#p1102005##k吗？ 你想知道怎么打猎吗？你可以找到 #p1102005# 来教你怎么打猎！");
+        qm.askAcceptDecline("��Ը����� #b#p1102005##k�� ����֪����ô������������ҵ� #p1102005# ��������ô���ԣ�");
     } else if (status == 4) {
         qm.forceStartQuest();
         qm.summonMsg(2);
@@ -42,7 +42,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.gainItem(2000020, 5);
         qm.gainItem(2000021, 5);
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.gainExp(15);
         qm.summonMsg(3);
         qm.dispose();

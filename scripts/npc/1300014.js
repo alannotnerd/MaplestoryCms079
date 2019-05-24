@@ -24,11 +24,11 @@ function action(mode, type, selection) {
 		}
 	if(status == 0){
 		if(cm.isQuestActive(2314))
-			cm.sendNextPrev("This... is a powerful magical barrier that converted #bmushroom spores#k into a powerful form of magic. This cannot be penetrated with brute force. I better report this to #bMinister of Home Affairs#k.", 3);
+			cm.PlayerToNpc("ÕâÊÇÒ»¸ö#b¾Ş´óµÄÄ§·¨ÆÁÕÏ#k ...");
 		else if(cm.isQuestActive(2322))
-			cm.sendNextPrev("Right on the surface of the colossal castle wall is a daunting scene of spine vines tangled up on the wall. How in the world am I going to enter the castle? Oh well, I better report this to #b#p1300003##k first.",3);
+			cm.PlayerToNpc("Õâ¸öµØ·½»¹ÊÇÏÈ±¨¸æ¸ø #b#p1300003##k ÖªµÀ°É£¡");
 		else {
-			cm.sendOk("æˆ‘æƒ³æˆ‘å¯ä»¥ä½¿ç”¨ #b#t2430014##k æ¥æ¸…é™¤éšœç¢ï¼.",3);
+			cm.PlayerToNpc("ÎÒÊÇ·ñ¸ÃÊ¹ÓÃ #t2430014#£¿£¿");
 			cm.dispose();
 		}
 	}if(status == 1){
@@ -37,7 +37,7 @@ function action(mode, type, selection) {
 			cm.forceCompleteQuest(2314);
 			cm.dispose();
 		} else {
-			cm.playerMessage("Please return to the Minister of Home Affairs and report results.");
+			cm.playerMessage("ÇëÏÈ»ØÈ¥±¨¸æ°É¡£");
 		}
 	}
 }

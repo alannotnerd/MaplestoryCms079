@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Scarrs
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  甯冮瞾鏂殑鍙嬫儏
+	Description: 	Quest -  布鲁斯的友情
 */
 
 importPackage(Packages.client);
@@ -21,7 +21,7 @@ function start(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendYesNo("I have just one more request for you. Would you like to take a listen?");
+        qm.sendAcceptDecline("I have just one more request for you. Would you like to take a listen?");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.gainItem(4032389, 1);
@@ -46,7 +46,7 @@ function end(mode, type, selection) {
         qm.gainExp(8800);
         qm.gainItem(4032389, -1);
         qm.sendOk("Ahh, so this is the #bKiller Mushroom Spores#k that I was working on in the past. I had a tough time gathering up the ingredients, so I left it in theory only, but he was able to complete it, with a sample to show for as well. Please tell him I appreciate his good work.");
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.dispose();
     }
 }

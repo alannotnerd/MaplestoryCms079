@@ -2212,7 +2212,7 @@
             <int name="pt" value="0"/>
             <int name="x" value="180"/>
             <int name="y" value="-223"/>
-            <int name="tm" value="999999999"/>
+            <int name="tm" value="910000000"/>
             <string name="tn" value=""/>
         </imgdir>
         <imgdir name="1">
@@ -2220,7 +2220,7 @@
             <int name="pt" value="0"/>
             <int name="x" value="417"/>
             <int name="y" value="-231"/>
-            <int name="tm" value="999999999"/>
+            <int name="tm" value="910000000"/>
             <string name="tn" value=""/>
         </imgdir>
         <imgdir name="2">
@@ -2228,7 +2228,7 @@
             <int name="pt" value="0"/>
             <int name="x" value="546"/>
             <int name="y" value="-52"/>
-            <int name="tm" value="999999999"/>
+            <int name="tm" value="910000000"/>
             <string name="tn" value=""/>
         </imgdir>
         <imgdir name="3">
@@ -2236,7 +2236,7 @@
             <int name="pt" value="7"/>
             <int name="x" value="820"/>
             <int name="y" value="30"/>
-            <int name="tm" value="999999999"/>
+            <int name="tm" value="910000000"/>
             <string name="tn" value=""/>
             <string name="script" value="mapleMarket7_out"/>
         </imgdir>

@@ -1,109 +1,84 @@
-/* ç»ç‰ˆæŠµç”¨å·å•†åº— è„¸é¥°*/
-
-var status = -1;
-var itemList = Array(
-Array(3010767, 30000),
-Array(3010760, 120000),
-Array(3010761, 20000),
-Array(3014006, 120000),
-Array(3015000, 80000),
-Array(3010459, 50000),
-Array(3010613, 80000),
-Array(3010958, 30000),
-Array(3010066, 30000),
-Array(3010071, 20000),
-Array(3010073, 25000),
-Array(3010140, 36000),
-Array(3015004, 50000),
-Array(3010825, 80000),
-Array(3010755, 50000),
-Array(3010753, 100000),
-Array(3010959, 30000),
-Array(3010493, 30000),
-Array(3013001, 30000),
-Array(3015097, 35000),
-Array(3010587, 50000),
-Array(3010545, 60000),
-Array(3010048, 50000),
-Array(3010135, 70000),
-Array(3010403, 50000),
-Array(3010596, 60000),
-Array(3015027, 100000),
-Array(3010212, 100000),
-Array(3010043, 90000),
-Array(3010375, 120000),
-Array(3010522, 120000),
-Array(3010703, 120000),
-Array(3010719, 150000),
-Array(3015031, 170000),
-Array(3010848, 640000),
-Array(3010361, 200000),
-Array(3010589, 200000),
-Array(3010708, 200000),
-Array(3010661, 250000),
-Array(3014005, 200000),
-Array(3014009, 350000),
-Array(3015130, 250000),
-Array(3010681, 650000),
-Array(3010417, 650000),
-Array(3010723, 300000),
-Array(3015133, 350000),
-Array(3015089, 350000),
-Array(3015108, 280000),
-Array(3015131, 280000),
-Array(3010983, 150000),
-Array(3010984, 160000)
-);
-var selectedItem = -1;
-var selectedCost = -1;
-
 function start() {
+    status = -1;
+
     action(1, 0, 0);
 }
-
 function action(mode, type, selection) {
-    if (mode == 1) {
-        status++;
-    } else {
-        if (status >= 0) {
-            cm.dispose();
-            return;
-        }
-        status--;
-    }
-    if (status == 0) {
-        var selStr = "#fUI/UIWindow2.img/QuestAlarm/BtQ/normal/0#äº²çˆ±çš„#r#h ##kæ‚¨å¥½ï¼Œè¯·é€‰æ‹©æ‚¨å¸Œæœ›è´­ä¹°çš„é“å…·ï¼š";
-        for (var i = 0; i < itemList.length; i++) {
-            selStr += "\r\n#L" + i + "##i" + itemList[i][0] + ":# #b#t" + itemList[i][0] + "##k   #r" + itemList[i][1]  + "#kæŠµç”¨å·#l";
-        }
-        cm.sendSimple(selStr);
-    } else if (status == 1) {
-        var item = itemList[selection];
-        if (item != null) {
-            selectedItem = item[0];
-            selectedCost = item[1];
-            cm.sendYesNo("æ‚¨æ˜¯å¦è´­ä¹°#i" + selectedItem + ":# #b#t" + selectedItem + "##k éœ€è¦ #r" + selectedCost + "#k æŠµç”¨å·ï¼Ÿ");
-        } else {
-            cm.sendOk("å‡ºç°é”™è¯¯...");
-            cm.dispose();
-        }
-    } else if (status == 2) {
-        if (selectedCost <= 0 || selectedItem <= 0) {
-            cm.sendOk("è´­ä¹°é“å…·å‡ºç°é”™è¯¯...");
-            cm.dispose();
-            return;
-        }
-        if (cm.getPlayer().getCSPoints(2) >= selectedCost) {
-            var gachaponItem = cm.gainGachaponItem(selectedItem, 1, "æŠµç”¨å·å•†åº—", 3, true);
-            if (gachaponItem != -1) {
-                cm.gainNX(2, - selectedCost );
-                cm.sendOk("æ­å–œæ‚¨æˆåŠŸè´­ä¹°#i" + selectedItem + ":# #b#t" + selectedItem + "##kã€‚");
-            } else {
-                cm.sendOk("è´­ä¹°å¤±è´¥ï¼Œè¯·æ‚¨ç¡®è®¤åœ¨èƒŒåŒ…æ‰€æœ‰æ ç›®çª—å£ä¸­æ˜¯å¦æœ‰ä¸€æ ¼ä»¥ä¸Šçš„ç©ºé—´ã€‚");
-            }
-        } else {
-            cm.sendOk("æ‚¨æ²¡æœ‰é‚£ä¹ˆå¤šæŠµç”¨å·ã€‚\r\n\r\nè´­ä¹°#i" + selectedItem + ":# #b#t" + selectedItem + "##k éœ€è¦ #r" + selectedCost + "#k æŠµç”¨å·ã€‚");
-        }
+    if (mode == -1) {
         cm.dispose();
     }
+    else {
+        if (status >= 0 && mode == 0) {
+
+            cm.sendOk("¸ĞĞ»ÄãµÄ¹âÁÙ£¡");
+            cm.dispose();
+            return;
+        }
+        if (mode == 1) {
+            status++;
+        }
+        else {
+            status--;
+        }
+        if (status == 0) {
+            var tex2 = "";
+            var text = "";
+            for (i = 0; i < 10; i++) {
+                text += "";
+            }
+			text += "\t\t\t  #e»¶Ó­À´µ½#bÌì³ÉÃ°ÏÕµºÏîÁ´À©³äÏµÍ³ #k!#n\r\n"
+            text += "#r¿ÉÒÔ¸ø½ÇÉ«×°±¸Ôö¼ÓÒ»¸öÁÙÊ±µÄÏîÁ´Î»ÖÃ#l\r\n\r\n"//3
+            text += "#L1##r7ÌìÏîÁ´Î»3000µã¾í£¡#l\r\n\r\n"//3
+            text += "#L2##r15ÌìÏîÁ´Î»5000µã¾í£¡#l\r\n\r\n"//3
+            text += "#L3##r1¸öÔÂÏîÁ´Î»8000µã¾í£¡#l\r\n\r\n"//3
+            text += "#L4##r3¸öÔÂÏîÁ´Î»20000µã¾í£¡#l\r\n\r\n"//3
+            cm.sendSimple(text);
+        } else if (selection == 1) {
+			if(cm.getPlayer().getCSPoints(1) >= 3000){
+				cm.gainNX(-3000);
+				cm.xlkc(7);
+            cm.sendOk("¹ºÂò³É¹¦£¡");
+			cm.worldMessage(6,"Íæ¼Ò£º["+cm.getName()+"]¹ºÂòÁËÌì³ÉÃ°ÏÕµº3000µã¾íÏîÁ´À©³äÏµÍ³£¡");
+            cm.dispose();
+			}else{
+            cm.sendOk("µã¾í²»×ãÎŞ·¨¹ºÂò£¡");
+            cm.dispose();
+			}
+        } else if (selection == 2) {
+			if(cm.getPlayer().getCSPoints(1) >= 5000){
+				cm.gainNX(-5000);
+				cm.xlkc(15);
+            cm.sendOk("¹ºÂò³É¹¦£¡");
+			cm.worldMessage(6,"Íæ¼Ò£º["+cm.getName()+"]¹ºÂòÁËÌì³ÉÃ°ÏÕµº5000µã¾íÏîÁ´À©³äÏµÍ³£¡");
+            cm.dispose();
+			}else{
+            cm.sendOk("µã¾í²»×ãÎŞ·¨¹ºÂò£¡");
+            cm.dispose();
+			}
+        } else if (selection == 3) {
+			if(cm.getPlayer().getCSPoints(1) >= 8000){
+				cm.gainNX(-8000);
+				cm.xlkc(30);
+            cm.sendOk("¹ºÂò³É¹¦£¡");
+			cm.worldMessage(6,"Íæ¼Ò£º["+cm.getName()+"]¹ºÂòÁËÌì³ÉÃ°ÏÕµº8000µã¾íÏîÁ´À©³äÏµÍ³£¡");
+            cm.dispose();
+			}else{
+            cm.sendOk("µã¾í²»×ãÎŞ·¨¹ºÂò£¡");
+            cm.dispose();
+			}
+        } else if (selection == 4) {
+			if(cm.getPlayer().getCSPoints(1) >= 20000){
+				cm.gainNX(-20000);
+				cm.xlkc(90);
+            cm.sendOk("¹ºÂò³É¹¦£¡");
+			cm.worldMessage(6,"Íæ¼Ò£º["+cm.getName()+"]¹ºÂòÁËÌì³ÉÃ°ÏÕµº20000µã¾íÏîÁ´À©³äÏµÍ³£¡");
+            cm.dispose();
+			}else{
+            cm.sendOk("µã¾í²»×ãÎŞ·¨¹ºÂò£¡");
+            cm.dispose();
+			}
+		}
+    }
 }
+
+

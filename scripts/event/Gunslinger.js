@@ -6,35 +6,33 @@ function init() {
 }
 
 function playerEntry(eim, player) {
-	var map = eim.getMapInstance(108000500);
-	player.changeMap(map, map.getPortal(0));
-	player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.getClock(600));
-	eim.schedule("warpOut", 600000);	
+    var map = eim.createInstanceMap(108000500);
+    player.changeMap(map, map.getPortal(0));
+    player.getClient().getSession().write(tools.MaplePacketCreator.getClock(600));
+    eim.schedule("warpOut", 600000);	
 }
 
 function warpOut(eim) {
-	var map = em.getChannelServer().getMapFactory().getMap(120000101)
-	var iter = eim.getPlayers().iterator();
-	while (iter.hasNext()) {
-		player = iter.next();
-		player.changeMap(map, map.getPortal(0));
-		eim.unregisterPlayer(player);
-	}
-	eim.dispose();
+    var map = em.getChannelServer().getMapFactory().getMap(120000101)
+    var iter = eim.getPlayers().iterator();
+    while (iter.hasNext()) {
+	player = iter.next();
+	player.changeMap(map, map.getPortal(0));
+	eim.unregisterPlayer(player);
+    }
+    eim.dispose();
 }
 
 function playerDisconnected(eim, player) {
-	player.getMap().removePlayer(player);
-	eim.unregisterPlayer(player);
-	eim.dispose();
+    return 0;
 }
 
 function playerDead(eim, player) {
 }
 
 function playerRevive(eim, player) {
-	eim.unregisterPlayer(player);
-	eim.dispose();
+    eim.unregisterPlayer(player);
+    eim.dispose();
 }
 
 function leftParty(eim, player) {			

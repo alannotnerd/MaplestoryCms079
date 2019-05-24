@@ -6,7 +6,7 @@ function start(mode, type, selection) {
 		qm.sendNext("#bHm, there''s a medicinal substance in the box. What could this be? You better take this to John and ask him what it is.#k");
 	} else {
 		qm.gainItem(4032423,1);
-		qm.completeQuest();
+		qm.forceCompleteQuest();
 		qm.dispose();
 	}
 }

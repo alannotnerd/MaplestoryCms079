@@ -1,94 +1,58 @@
-var status = -1;
-var winTimes = 0;
-var uiFPaper = "#fUI/UIWindow.img/RpsGame/Fpaper#";
-var uiFRock = "#fUI/UIWindow.img/RpsGame/Frock#";
-var uiFScissor = "#fUI/UIWindow.img/RpsGame/Fscissor#";
-var uiPaper = "#fUI/UIWindow.img/RpsGame/paper#";
-var uiRock = "#fUI/UIWindow.img/RpsGame/rock#";
-var uiScissor = "#fUI/UIWindow.img/RpsGame/scissor#";
-var uiWin = "#fUI/UIWindow.img/RpsGame/charWin#";
-var uiLose = "#fUI/UIWindow.img/RpsGame/charLose#";
-var FpictureArr=Array(uiFRock, uiFScissor, uiFPaper);
-var pictureArr=Array(uiRock, uiScissor, uiPaper);
-var step = -1;
 function start() {
+    status = -1;
+
     action(1, 0, 0);
 }
-
 function action(mode, type, selection) {
-	if (mode == 1) {
-		status++;
-	} else {
-		if (status >= 0) {
-			cm.dispose();
-			return;
-		}
-		status--;
+    if (mode == -1) {
+        cm.dispose();
+    }
+    else {
+        if (status >= 0 && mode == 0) {
+
+            cm.sendOk("¸ĞĞ»ÄãµÄ¹âÁÙ£¡");
+            cm.dispose();
+            return;
+        }
+        if (mode == 1) {
+            status++;
+        }
+        else {
+            status--;
+        }
+        if (status == 0) {
+            var tex2 = "";
+            var text = "";
+            for (i = 0; i < 10; i++) {
+                text += "";
+            }
+			//ÏÔÊ¾ÎïÆ·IDÍ¼Æ¬ÓÃµÄ´úÂëÊÇ  #vÕâÀïĞ´ÈëID#
+            text += "#e#rÄãºÃ£¡ÔÚÎÒÕâÀï¿ÉÒÔ°ïÄãÖÆ×÷ÄãËùĞèÒªµÄÎäÆ÷£¬ÒÔÏÂÊÇÎÒ¿ÉÒÔÎªÄúÖÆ×÷µÄÎäÆ÷ÁĞ±í.\r\n\r\n"//3
+            //text += "#L2##e#d#v4031975#Lv43  ·ãÒ¶ÎäÆ÷ÖÆÔì#l\r\n"//3
+            //text += "#L3##e#d#v4031975#Lv64  ·ãÒ¶ÎäÆ÷ÖÆÔì#l\r\n"//3
+            text += "#L4##e#d#v4031975#Lv77  »Æ½ğ·ãÒ¶ÖÆÔì#l\r\n"//3
+            //text += "#L5##e#d#v4031975#Lv100 ÔúÀ¥²´ÒÁ×ÈÄá#l\r\n"//3
+            //text += "#L7##e#d#v4031975#Lv120 ÓÀºãÎäÆ÷ÖÆÔì#l\r\n"//3
+            //text += "#L8##e#d#v4031975#Lv130 Ù¤Ò®ÎäÆ÷ÖÆÔì(ÌìÈ»½ğÉ«Æ·ÖÊÎäÆ÷)#l\r\n"//3
+            cm.sendSimple(text);
+        } else if (selection == 1) {
+		cm.openNpc(9000018, 1);
+        } else if (selection == 2) {
+		cm.openNpc(9000018, 1);
+        } else if (selection == 3) {
+		cm.openNpc(9000018, 2);
+        } else if (selection == 4) {
+		cm.openNpc(9900004, 301);
+        } else if (selection == 5) {
+		cm.openNpc(9000018, 4);
+        } else if (selection == 6) {
+		cm.openNpc(9000018, 5);
+        } else if (selection == 7) {
+		cm.openNpc(9000018, 6);
+        } else if (selection == 8) {
+		cm.openNpc(9000018, 9);
 	}
-	if (status == 0) {
-		var text="å˜¿å˜¿ï¼Œæƒ³æŒ‘æˆ˜ä¸€ä¸‹æˆ‘çš„çŒœæ‹³æŠ€æœ¯å—ï¼Ÿ";
-		text+="\r\n#b#L1#ç©æ³•è¯´æ˜(æ¯å¤©100æ¬¡)#l\r\n";
-		if(cm.getBossLog("çŒœæ‹³")<=100){
-		text+="#b#L2#å¼€å§‹æ¸¸æˆ#l\r\n";
-		}
-		cm.sendSimple(text);
-	} else if (status == 1) {
-		if (step>0)
-			selection = step;
-		if (selection == 1) {
-			var text = "#d#eæ¸¸æˆè¯´æ˜ï¼š#n#k\r\n";
-			text+="\t1. ç›®å‰çŒœæ‹³æ¸¸æˆæ¯å¤©å¯ä»¥è¿›è¡Œ100æ¬¡ã€‚\r\n";
-			text+="\t2. æ¯ä¸€è½®è‡³å¤šå¯ä»¥è¿›è¡Œ10æ¬¡ï¼Œè¾“äº†åˆ™ç»“æŸè¯¥è½®æ¸¸æˆã€‚\r\n";
-			text+="\t3. è·å¾—è¿èƒœçš„å¥–åŠ±æ˜¯å€å¢çš„ã€‚\r\n";
-			text+="\t4. ä¸­é€”é€€å‡ºæ¸¸æˆå°†æ— æ³•è·å¾—å¥–åŠ±ã€‚\r\n";
-			text+="\t5. å¦‚æœç¬¬ä¸€æŠŠå°±è¾“äº†ï¼Œä¹Ÿå¯ä»¥è·å¾—å®‰æ…°å¥–åŠ±ã€‚";
-			status=-1;
-			cm.sendSimple(text);
-		} else if (selection == 2) {
-			var selStr = "æ¯æ—¥100æ¬¡,è¶…è¿‡æ¬¡æ•°å°†ä¸æ˜¾ç¤º\r\n";
-		    selStr += "å‡ºæ‹›å§ï¼å°‘å¹´ï¼\r\n";
-			selStr +="#L0#"+uiFRock+"#l";
-			selStr +="#L1#"+uiFScissor+"#l";
-			selStr +="#L2#"+uiFPaper+"#l";
-        cm.sendSimple(selStr)
-		}
-	} else if (status == 2) {
-		var playerHand = selection;
-		var npcHand = Math.floor(Math.random()*3);
-		var result =  playerHand - npcHand;
-		if (result == -1 || result == 2) {
-			//win
-			winTimes+=1;
-			if (winTimes>=10) {
-				cm.sendSimple(uiWin+"\r\nä½ å·²ç»è¿èƒœäº†10å±€ï¼Œæˆ‘æ— åœ°è‡ªå®¹ï¼Œé¢†å–ä½ çš„å¥–åŠ±å»å§ï¼\r\n#b#L999#é¢†å–å¥–åŠ±#l");
-			} else {
-				status = 0;
-				step = 2;
-				cm.sendSimple(uiWin+"\r\næœ‰ç‚¹æ„æ€ï¼Œä½ å·²ç»è¿èƒœ"+winTimes+"æŠŠäº†ï¼Œæˆ˜æ–—åˆ°åº•ï¼\r\n"+FpictureArr[playerHand]+" "+pictureArr[npcHand]);
-			}
-		} else if (result == 0) {
-			//tie
-			status = 0;
-			step = 2;
-			cm.sendSimple("å·®ç‚¹å°±è¢«ä½ èµ¢äº†ï¼Œæ¥å§ï¼Œæ”¾é©¬è¿‡æ¥ï¼\r\n"+FpictureArr[playerHand]+" "+pictureArr[npcHand]);
-		} else {
-			//lose
-			cm.sendSimple(uiLose+"\r\nå‘µå‘µå‘µï¼Œä½ è¿˜æ˜¯å¤ªå¹´è½»äº†ã€‚\r\n"+FpictureArr[playerHand]+" "+pictureArr[npcHand]+"\r\n#b#L999#é¢†å–å¥–åŠ±ï¼Œé€€å‡ºæ¸¸æˆ#l");
-		}
-	} else if (status == 3) {
-		//é¢†å–å¥–åŠ±
-		if (winTimes>=3) {
-			cm.worldMessage(0x18, "ã€çŒœæ‹³èƒ½æ‰‹ã€ : ç©å®¶ " + cm.getChar().getName() + " åœ¨çŒœæ‹³æ¸¸æˆä¸­è¿èƒœ"+winTimes+"æŠŠï¼Œè·å¾—äº†ä¸°åšçš„å¥–åŠ±ã€‚");
-		}
-		var meso = 10000*Math.pow(2,winTimes);
-		cm.setBossLog("çŒœæ‹³");
-		cm.gainMeso(meso);
-		cm.gainItem(4310057, winTimes*2);
-		cm.sendOk("è·å¾—äº†"+meso+"æ¸¸æˆå¸å’Œ"+(winTimes*2)+"ä¸ª#v4310057##t4310057#");
-		cm.dispose();
-	}
+    }
 }
 
-function isWin(playerHand) {
 
-}

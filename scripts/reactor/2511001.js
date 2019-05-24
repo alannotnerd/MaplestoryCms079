@@ -4,8 +4,6 @@
  */
 
 function act() {
-	for (var i = 0; i < 6; i++)
-		rm.spawnMonster(9300124);
-	for (var k = 0; k < 6; k++) 
-		rm.spawnMonster(9300125);
+    rm.spawnMonster(9300124, 6);
+    rm.spawnMonster(9300125, 6);
 }

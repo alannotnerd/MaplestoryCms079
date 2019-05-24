@@ -1,118 +1,102 @@
-/* Author: Xterminator
-	NPC Name: 		Gritto
-	Map(s): 		Leafre: Forest of the Priest (240010501)
-	Description: 		Magician 4th Job Advancement
+/*  NPC : 葛雷托
+	法师 4转 任务脚本
+	地图代码 (240010501)
 */
 
+var status = -1;
+
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
+    if (mode == 0 && status == 0) {
+	cm.dispose();
+	return;
+    }
+    if (mode == 1)
+	status++;
+    else
+	status--;
+
+    if (status == 0) {
+	if (!(cm.getJob() == 211 || cm.getJob() == 221 || cm.getJob() == 231)) {
+	    cm.sendOk("为什么你要见我??还有你想要问我关于什么事情??");
+	    cm.dispose();
+	    return;
+	} else if (cm.getPlayer().getLevel() < 120) {
+	    cm.sendOk("你等级尚未到达120级.");
+	    cm.dispose();
+	    return;
 	} else {
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			if (cm.getJob().getId() == 211 || cm.getJob().getId() == 221 || cm.getJob().getId() == 231) {
-				if (cm.getPlayer().getLevel() >= 120) {
-					if (cm.getQuestStatus(6914).equals(net.sf.cherry.client.MapleQuestStatus.Status.COMPLETED)) {
-						if (cm.getJob().getId() == 211) {
-							cm.sendSimple("You're qualified to be a true magician. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Arch Mage.#l\r\n#b#L1# Let me think for a while.#l");
-						} else if (cm.getJob().getId() == 221) {
-							cm.sendSimple("You're qualified to be a true magician. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Arch Mage.#l\r\n#b#L1# Let me think for a while.#l");
-						} else if (cm.getJob().getId() == 231) {
-							cm.sendSimple("You're qualified to be a true magician. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Bishop.#l\r\n#b#L1# Let me think for a while.#l");
-						}
-					} else {
-						cm.sendOk("You're not ready to make the 4th job advancement. When you're ready, talk to me.");
-						cm.dispose();
-					}
-				} else {
-					cm.sendOk("You're still weak to go to the magician extreme road. If you get stronger, come back to me.");
-					cm.dispose();
-				}
-			} else if (cm.getJob().getId() == 212 || cm.getJob().getId() == 222 || cm.getJob().getId() == 232) {
-				if (cm.getJob().getId() == 212) {
-					cm.sendOk("You became the best magician, the position of #bArch Mage#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
-				} else if (cm.getJob().getId() == 222) {
-					cm.sendOk("You became the best magician, the position of #bArch Mage#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
-				} else if (cm.getJob().getId() == 232) {
-					cm.sendOk("You became the best magician, the position of #bBishop#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
-				}
-				cm.dispose();
-			} else {
-				cm.sendOk("Why do you want to see me? There is nothing you want to ask me.");
-				cm.dispose();
-			}
-		} else if (status == 1) {
-			if (selection == 0) {
-				nPSP = (cm.getPlayer().getLevel() - 120) * 3;
-				if (cm.getPlayer().getRemainingSp() > nPSP) {
-					cm.sendNext("Hmm...You have too many #bSP#k. You can't make the 4th job advancement with too many SP left.");
-					cm.dispose();
-				} else {
-					if (!cm.canHold(2280003)) {
-						cm.sendNext("You can't proceed as you don't have an empty slot in your inventory. Please clear your inventory and try again.");
-						cm.dispose();
-					} else {
-						cm.gainItem(2280003, 1);
-						var statup = new java.util.ArrayList();
-						cm.getPlayer().setRemainingAp(cm.getPlayer().getRemainingAp() + 5);
-						statup.add(new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(cm.getPlayer().getRemainingAp())));
-						cm.getC().getSession().write(net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-						if (cm.getJob().getId() == 211) {
-							cm.changeJob(net.sf.cherry.client.MapleJob.FP_ARCHMAGE);
-							cm.teachSkill(2121001, 0, 10);
-							cm.teachSkill(2121002, 0, 10);
-							cm.teachSkill(2121006, 0, 10);
-							status = 2;
-							cm.sendNext("You became the best magician, #bArch Mage#k. Arch Mage can use its own power as well as Mana of nature just like \n#bInfinity#k or #bBig Bang#k");
-						} else if (cm.getJob().getId() == 221) {
-							cm.changeJob(net.sf.cherry.client.MapleJob.IL_ARCHMAGE);
-							cm.teachSkill(2221001, 0, 10);
-							cm.teachSkill(2221002, 0, 10);
-							cm.teachSkill(2221006, 0, 10);
-							status = 2;
-							cm.sendNext("You became the best magician, #bArch Mage#k. Arch Mage can use its own power as well as Mana of nature just like \n#bInfinity#k or #bBig Bang#k");
-						} else if (cm.getJob().getId() == 231) {
-							cm.changeJob(net.sf.cherry.client.MapleJob.BISHOP);
-							cm.teachSkill(2321001, 0, 10);
-							cm.teachSkill(2321002, 0, 10);
-							cm.teachSkill(2321005, 0, 10);
-							status = 2;
-							cm.sendNext("You became the best magician #bBishop#k. Bishop can use its own power as well as Mana of nature just like \n#bInfinity#k or #bBig Bang#k");
-						}
-					}
-				}
-			} else {
-				cm.sendNext("You don't have to hesitate to be the best Magician..Whenever you decide, talk to me. If you're ready, I'll let you make the 4th job advancement.");
-				cm.dispose();
-			}
-		} else if (status == 2) {
-			if (cm.getJob().getId() == 212) {
-				cm.sendNext("You became the best magician, #bArch Mage#k. Arch Mage can use its own power as well as Mana of nature just like \n#bInfinity#k or #bBig Bang#k");
-			} else if (cm.getJob().getId() == 222) {
-				cm.sendNext("You became the best magician, #bArch Mage#k. Arch Mage can use its own power as well as Mana of nature just like \n#bInfinity#k or #bBig Bang#k");
-			} else if (cm.getJob().getId() == 232) {
-				cm.sendNext("You became the best magician #bBishop#k. Bishop can use its own power as well as Mana of nature just like \n#bInfinity#k or #bBig Bang#k");
-			}
-		} else if (status == 3) {
-			if (cm.getJob().getId() == 212) {
-				cm.sendNextPrev("This is not all about Arch Mage. Arch Mage is good at fire and poison element-based. It may change not only extreme element-based but also element-based of its own or enemies if you train.");
-			} else if (cm.getJob().getId() == 222) {
-				cm.sendNextPrev("This is not all about Arch Mage. Arch Mage is good at ice and lightning element-based. It may change not only extreme element-based but also element-based of its own or enemies if you train.");
-			} else if (cm.getJob().getId() == 232) {
-				cm.sendNextPrev("This is not all about Bishop. Bishop can borrow God's power. It may make strong castle element-based magic and even make the dead alive.");
-			}
-		} else if (status == 4) {
-			cm.sendPrev("Don't forget that it all depends on how much you train.");
-		} else if (status == 5) {
-			cm.dispose();
-		}
+		if (cm.getJob() == 211) {
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为大魔岛士.#l\r\n#b#L1#像我想一下...#l");
+		} else if(cm.getJob() == 221){
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为大魔岛士.#l\r\n#b#L1#像我想一下...#l");
+		} else if(cm.getJob() == 231){
+		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为主教.#l\r\n#b#L1#像我想一下...#l");
+	    } else {
+		cm.sendOk("好吧假如你想要4转麻烦再来找我");
+		cm.dispose();
+		return;
+	    }
 	}
+    } else if (status == 1) {
+	if (selection == 1) {
+		cm.sendOk("好吧假如你想要4转麻烦再来找我");
+	    cm.dispose();
+	    return;
+	}
+	if (cm.getPlayerStat("RSP") > (cm.getPlayerStat("LVL") - 120) * 3) {
+	    cm.sendOk("你的技能点数还没点完..");
+	    cm.dispose();
+	    return;
+	} else if (!cm.haveItem(4031348, 1)){
+		cm.sendOk("我需要#t4031348# 1张。");
+		cm.dispose();
+		return;
+	} else {
+	    if (cm.canHold(2280003)) {
+		cm.gainItem(2280003, 1);
+                    
+		if (cm.getJob() == 211) {
+		    cm.changeJob(212);
+		    cm.teachSkill(2121001,0,10);
+		    cm.teachSkill(2121006,0,10);
+		    cm.teachSkill(2121002,0,10);
+			cm.gainItem(4031348, -1);
+		    cm.sendNext("恭喜你转职为 #b大魔岛士#k.我送你一些神秘小礼物^^");
+		} else if (cm.getJob() == 221) {
+		    cm.changeJob(222);
+		    cm.teachSkill(2221001,0,10);
+		    cm.teachSkill(2221006,0,10);
+		    cm.teachSkill(2221002,0,10);
+			cm.gainItem(4031348, -1);
+		    cm.sendNext("恭喜你转职为 #b大魔岛士#k.我送你一些神秘小礼物^^");
+		} else {
+		    cm.changeJob(232);
+		    cm.teachSkill(2321001,0,10);
+		    cm.teachSkill(2321005,0,10);
+		    cm.teachSkill(2321002,0,10);
+			cm.gainItem(4031348, -1);
+		    cm.sendNext("恭喜你转职为 #b主教#k.我送你一些神秘小礼物^^");
+		}
+	    } else {
+		cm.sendOk("你没有多的栏位请清空再来尝试一次!");
+		cm.dispose();
+		return;
+	    }
+	}
+    } else if (status == 2) {
+	if (cm.getJob() == 212) {
+	    cm.sendNext("不要忘记了这一切都取决于你练了多少.");
+	} else if (cm.getJob() == 222) {
+	    cm.sendNextPrev("不要忘记了这一切都取决于你练了多少.");
+	} else {
+	    cm.sendNextPrev("不要忘记了这一切都取决于你练了多少.");
+	}
+    } else if (status == 3) {
+	cm.sendNextPrev("我已你为荣.");
+	cm.dispose();
+    }
 }

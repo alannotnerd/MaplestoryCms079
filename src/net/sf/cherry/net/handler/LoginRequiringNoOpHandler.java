@@ -5,18 +5,18 @@ import net.sf.cherry.net.MaplePacketHandler;
 import net.sf.cherry.tools.data.input.SeekableLittleEndianAccessor;
 
 public final class LoginRequiringNoOpHandler
-        implements MaplePacketHandler {
+    implements MaplePacketHandler {
 
-    private static LoginRequiringNoOpHandler instance = new LoginRequiringNoOpHandler();
+  private static LoginRequiringNoOpHandler instance = new LoginRequiringNoOpHandler();
 
-    public static LoginRequiringNoOpHandler getInstance() {
-        return instance;
-    }
+  public static LoginRequiringNoOpHandler getInstance() {
+    return instance;
+  }
 
-    public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
-    }
+  public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
+  }
 
-    public boolean validateState(MapleClient c) {
-        return c.isLoggedIn();
-    }
+  public boolean validateState(MapleClient c) {
+    return c.isLoggedIn();
+  }
 }

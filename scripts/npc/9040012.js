@@ -1,24 +1,3 @@
-/* 
- * This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 /* @Author Lerk
  *
  * Armor Statue - Sharenian: Hall of the Knight (990000400)
@@ -26,11 +5,8 @@
  * Guild Quest Stage 2 Info
  */
 
-function start() {
-        cm.sendOk("The plaque translates as follows: \r\n\"The knights of Sharenian are proud warriors. Their Longinus Spears are both formidable weapons and the key to the castle's defense: By removing them from their platforms at the highest points of this hall, they block off the entrance from invaders.\"\r\n\r\nSomething seems to be etched in English on the side, barely readable: \r\n\"evil stole spears, chained up behind obstacles. return to top of towers. large spear, grab from higher up.\"\r\n...Obviously whoever figured it out didn't have much time to live. Poor guy.");
-        cm.dispose();
-}
 
 function action(mode, type, selection) {
-        
+    cm.sendOk("翻译如下: \r\n\"对sharenian骑士是骄傲的战士。他们都是强大的武器朗吉弩斯矛和城堡的防御的关键：通过消除他们的平台在这大厅的最高点，他们阻挡入侵者的入口.\"\r\n\r\n似乎有一些东西在英语上蚀刻，几乎没有可读性: \r\n\"邪恶偷走了矛，被锁链锁住了。回到塔上。大的矛，从高处抓起.\"\r\n...很显然，无论是谁想出了它没有太多的时间去生活。可怜的家伙.");
+    cm.safeDispose();
 }

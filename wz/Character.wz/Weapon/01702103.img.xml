@@ -221,7 +221,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="2">
-                <uol name="weapon" value="../1/weapon"/>
+                <uol name="../1/weapon" value="../1/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="proneStab">
@@ -246,7 +246,7 @@
         </imgdir>
         <imgdir name="prone">
             <imgdir name="0">
-                <uol name="weapon" value="../../proneStab/0/weapon"/>
+                <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="jump">

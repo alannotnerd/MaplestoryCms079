@@ -1,5 +1,4 @@
 function enter(pi) {
-	pi.showWZEffect("UI/tutorial.img/26", 1);
-	pi.blockPortal();
-	return true;
+    pi.ShowWZEffect("UI/tutorial.img/26");
+    return true;
 }

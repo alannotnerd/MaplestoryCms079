@@ -1,6 +1,6 @@
 var status = -1;
 
-var exchangeItem = 4000436;
+var exchangeItem = 4000437;
 
 function action(mode, type, selection) {
     if (mode == 1) {
@@ -10,22 +10,22 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-        cm.sendSimple("I wish I had something to hold this water in...#b\r\n#L0#Hey, take these snail shells. You can hold your water with these.#l");
+        cm.sendSimple("这么多的伤患，需要一点药吧...#b\r\n#L0#嘿，这一些#t4000437#，帮我做更好的药品。#l");
     } else if (status == 1) {
 	if (!cm.haveItem(exchangeItem, 100)) {
-	    cm.sendNext("You don't have enough... I need at least 100.");
+	    cm.sendNext("你没有足够的数量我需要100个#t4000437#");
 	    cm.dispose();
 	} else {
-	    cm.sendGetNumber("Hey, that's a good idea! I can give you #i4310000#Perfect Pitch for each 100 #i" + exchangeItem + "##t" + exchangeItem + "# you give me. How many do you want? (Current Items: " + cm.getPlayer().itemQuantity(exchangeItem) + ")", java.lang.Math.min(300, cm.getPlayer().itemQuantity(exchangeItem) / 100), 1, java.lang.Math.min(300, cm.getPlayer().itemQuantity(exchangeItem) / 100));
+	    cm.sendGetNumber("嗯，这是个好主意！ 我可以给你 #i2022457#每100个 #i" + exchangeItem + "##t" + exchangeItem + "# 你想要给我多少 (当前道具: " + cm.getPlayer().itemQuantity(exchangeItem) + ")", java.lang.Math.min(300, cm.getPlayer().itemQuantity(exchangeItem) / 100), 1, java.lang.Math.min(300, cm.getPlayer().itemQuantity(exchangeItem) / 100));
 	}
     } else if (status == 2) { 
 	if (selection >= 1 && selection <= cm.getPlayer().itemQuantity(exchangeItem) / 100) {
-	    if (!cm.canHold(4310000, selection)) {
-		cm.sendOk("Please make some space in ETC tab.");
+	    if (!cm.canHold(2022457, selection)) {
+		cm.sendOk("请空出一些其他栏位。");
 	    } else {
-		cm.gainItem(4310000, selection);
+		cm.gainItem(2022457, selection);
 		cm.gainItem(exchangeItem, -(selection * 100));
-		cm.sendOk("Thanks!");
+		cm.sendOk("谢谢你。");
 	    }
 	}
         cm.dispose();

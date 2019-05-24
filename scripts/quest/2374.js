@@ -1,7 +1,7 @@
 var status = -1;
 
 function end(mode, type, selection) {
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     if (qm.getJob() == 431) {
         qm.changeJob(432);
         qm.gainItem(1132021, 1);

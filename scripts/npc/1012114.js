@@ -1,120 +1,52 @@
-/*1012114.js - Growlie 
- *@author Jvlaple
- *Tigur duude in PQ ;)
- */
- 
-importPackage(net.sf.cherry.tools);
-importPackage(net.sf.cherry.server.life);
-importPackage(java.awt);
-
-var status;
-var curMap;
-var playerStatus;
-var chatState;
-var preamble;
-var mySelection;
-
-			
-
-function start() {
-	if (cm.getParty() == null) //Check for Party
-	{
-		cm.sendNext("Ê≤°ÊúâÈòü‰ºç!");
-		cm.dispose();
-		return;
-	}
-	if(cm.getPlayer().getEventInstance()==null){
-		cm.sendNext("Ê≤°ÊúâÂºÄÂßãÂâØÊú¨!");
-		cm.dispose();
-		return;
-	}	
-
-	status = -1;
-	mapId = cm.getPlayer().getMapId();
-	playerStatus = cm.isLeader();
-	preamble = null;
-	action(1, 0, 0);
-}
+var status = -1;
+var random = java.lang.Math.floor(Math.random() * 9 + 1);
+var random1 = java.lang.Math.floor(Math.random() * 10 + 1);
+var random2 = java.lang.Math.floor(Math.random() * 10 + 1);
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (mode == 0 && status == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (playerStatus) {
-			var eim = cm.getPlayer().getEventInstance();
-			var party = cm.getPlayer().getEventInstance().getPlayers();
-			if (status == 0) {
-				cm.sendSimple("Hello, I'm Growlie and I want #bRice Cakes#k...#b\r\n#L0#I brought you Rice Cakes!#l\r\n#L1#What do I do here?#l\r\n#L2#I want to go out!#l#k");
-			} else if (status == 1) {
-				mySelection = selection;
-				switch (mySelection) {
-					case 0 : if (cm.haveItem(4001101, 10)) {
-								cm.gainItem(4001101, -10);
-								clear(1, eim, cm);
-								cm.givePartyExp(1600, party);
-								cm.sendNext("Thank you for giving me #bRice Cakes#k!");
-								} else {
-								cm.sendNext("You haven't gotten me 10 #bRice Cakes#k! Rawr!");
-								cm.dispose();
-								}
-							break;
-					case 1 : cm.sendNext("This is the Primrose Hill where the Moon Bunny will make #bRice Cakes#k when there is a full moon. To make a full moon, plant the seeds obtained from the primroses and when all 6 seeds are planted, them full moon will appear. The #rMoon Bunny will then be summoned, and you must protect him from the other monsters that try to attack him#k. In the event of #bMoon Bunny#k dying, you will fail the quest and I will be hungry and angry...");
-							 cm.dispose();
-							 break;
-					case 2 : cm.sendNext("Alright, but come back soon and get me some #bRice Cakes#k!");
-							 break;
-				}
-			} else if (status == 2) {
-				switch (mySelection) {
-					case 0 : //eim.finishPQ();
-							 var mf = eim.getMapFactory();
-							 map = mf.getMap(910010100);
-							 for (var i = 0; i < party.size(); i++) {
-								party.get(i).changeMap(map, map.getPortal(0));
-								eim.unregisterPlayer(party.get(i));
-							 }
-							 eim.dispose();
-							 cm.dispose();
-							 break;
-					case 1 : break; //Can't happen o.O
-					case 2 : eim.unregisterPlayer(cm.getPlayer());
-							 cm.warp(910010300, 0);
-							 cm.dispose();
-				}
-			}
-		} else {
-			var eim = cm.getPlayer().getEventInstance();
-			var party = cm.getPlayer().getEventInstance().getPlayers();
-			if (status == 0) {
-				cm.sendYesNo("Would you like to quit the Party Quest?");
-			} else if (status == 1) {
-				eim.unregisterPlayer(cm.getPlayer());
-				cm.warp(910010300, 0);
-				cm.dispose();
-			}
-		}
-	}
+    if (mode == 0 && status == 0) {
+        cm.dispose();
+        return;
+    }
+    if (mode == 1) {
+        status++;
+    } else {
+        status--;
+    }
+    if (status == 0) {
+        cm.sendSimple("ƒ„∫√£¨Œ“ «–°¿œª¢ #bRice Cakes#k...#b\r\n#L1#≤Èø¥Àµ√˜#l\r\n#L2#¿Îø™µÿÕº#l\r\n#L0#Œ“∏¯ƒ„¥¯¿¥¡ÀƒÍ∏‚!#l");
+    } else if (status == 1) {
+        if (selection == 0) {
+            if (!cm.isLeader()) {
+                cm.sendOk("«Î∂”≥§”ÎŒ“Ã∏ª∞.");
+            } else {
+                if (cm.haveItem(4001101,20)) {
+//if(cm.haveItem(4031326,1)){//”–≤∆…Òµƒ–≈º˛µƒÕÊº“£¨ø…“‘ªÒµ√∂∑…Ò÷§ŒÔ
+	//cm.gainItem(4310015,+1);}
+                    cm.removeAll(4001101);
+                    cm.givePartyExp(10000);
+                    //cm.addPartyTrait("will", 5);
+                    //cm.addPartyTrait("sense", 1);
+                    //cm.achievement(100);
+                    cm.endPartyQuest(1200);
+                    cm.warpParty(910010300);
+cm.¿Æ∞»(3, "πßœ≤[" + cm.getPlayer().getName() + "]≥…π¶¥¯¡Ï∂””—Õ®πÿ°æ◊È∂”»ŒŒÒ - ‘¬√Ó∏±±æ°øªÒµ√Ω±¿¯£°");
+        cm.dispose();
+                } else {
+                    cm.sendNext("ƒ„√ª”–¥¯¿¥ #r20#k øÈ‘¬√ÓµƒƒÍ∏‚... ");
+                }
+            }
+        } else if (selection == 1) {
+            cm.sendNext("«Îµ„ª˜µÿøÈ»√À¸ø™ª®£¨6øÈÕ¡µÿ»´≤øø™ª® ±¬˙‘¬Ω´≥ˆœ÷°£¬˙‘¬œ¬ª·’ŸªΩ‘¬√Ó–°œ…◊”£¨√ø∏Ù“ª∂Œ ±º‰‘¬√Ó–°œ…◊”ª·µ∑≥ˆƒÍ∏‚£¨ ’ºØ #r20 #køÈƒÍ∏‚∫ÛΩª∏¯∂”≥§»ª∫ÛΩª∏¯NPC£¨º¥ø…Õ®πÿ°£\r\n#r◊¢£∫‘⁄‘¬√Óœ…◊”µ∑ƒÍ∏‚µƒ ±∫Ú±£ª§À¸£¨‘¬√Óœ…◊”±ªπ÷ŒÔπ•ª˜∫ÛÀ¿Õˆ‘Ú»ŒŒÒ ß∞‹.");
+        } else if (selection == 2) {
+        cm.removeAll(4001095);
+        cm.removeAll(4001096);
+        cm.removeAll(4001097);
+        cm.removeAll(4001098);
+        cm.removeAll(4001099);
+        cm.removeAll(4001100);
+                    cm.warp(100000200);
+        }
+        cm.dispose();
+    }
 }
-
-function clear(stage, eim, cm) {
-	eim.setProperty("1stageclear","true");
-	var packetef = MaplePacketCreator.showEffect("quest/party/clear");
-	var packetsnd = MaplePacketCreator.playSound("Party1/Clear");
-	var packetglow = MaplePacketCreator.environmentChange("gate",2);
-	var map = eim.getMapInstance(cm.getChar().getMapId());
-	map.broadcastMessage(packetef);
-	map.broadcastMessage(packetsnd);
-	var mf = eim.getMapFactory();
-	//map = mf.getMap(922010100 + stage * 100);
-	//cm.givePartyExp(300, party);
-	cm.mapMessage("Clear!");
-}
-	

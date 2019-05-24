@@ -144,10 +144,10 @@
             <vector name="head" x="-14" y="-35"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="5" value="3"/>
-        <uol name="6" value="4"/>
-        <uol name="7" value="3"/>
-        <uol name="8" value="4"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
     </imgdir>
     <imgdir name="attack1">
         <imgdir name="info">

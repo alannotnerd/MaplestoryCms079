@@ -21,7 +21,7 @@ function end(mode, type, selection) {
         qm.gainExp(11000);
         qm.removeAll(4032531);
         qm.sendOk("There we go! You have learned the Soaring skill and will be able to fly, using great amounts of MP.");
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.dispose();
     }
 }

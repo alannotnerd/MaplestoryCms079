@@ -11,27 +11,27 @@ import net.sf.cherry.tools.MaplePacketCreator;
 import net.sf.cherry.tools.data.input.SeekableLittleEndianAccessor;
 
 public class DamageSummonHandler extends AbstractMaplePacketHandler
-        implements MaplePacketHandler {
+    implements MaplePacketHandler {
 
-    public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
-        c.doneedlog(this, c.getPlayer());
+  public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
+    c.doneedlog(this, c.getPlayer());
 
-        int skillid = slea.readInt();
-        int unkByte = slea.readByte();
-        int damage = slea.readInt();
-        int monsterIdFrom = slea.readInt();
+    int skillid = slea.readInt();
+    int unkByte = slea.readByte();
+    int damage = slea.readInt();
+    int monsterIdFrom = slea.readInt();
 
-        if (SkillFactory.getSkill(skillid) != null) {
-            MapleCharacter player = c.getPlayer();
-            MapleSummon summon = (MapleSummon) player.getSummons().get(Integer.valueOf(skillid));
+    if (SkillFactory.getSkill(skillid) != null) {
+      MapleCharacter player = c.getPlayer();
+      MapleSummon summon = player.getSummons().get(Integer.valueOf(skillid));
 
-            if (summon != null) {
-                summon.addHP(-damage);
-                if (summon.getHP() <= 0) {
-                    player.cancelEffectFromBuffStat(MapleBuffStat.PUPPET);
-                }
-            }
-            player.getMap().broadcastMessage(player, MaplePacketCreator.damageSummon(player.getId(), skillid, damage, unkByte, monsterIdFrom), summon.getPosition());
+      if (summon != null) {
+        summon.addHP(-damage);
+        if (summon.getHP() <= 0) {
+          player.cancelEffectFromBuffStat(MapleBuffStat.PUPPET);
         }
+      }
+      player.getMap().broadcastMessage(player, MaplePacketCreator.damageSummon(player.getId(), skillid, damage, unkByte, monsterIdFrom), summon.getPosition());
     }
+  }
 }

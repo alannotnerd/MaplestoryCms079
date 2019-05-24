@@ -1,32 +1,29 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 /* Konpei
-	Showa ultra warp npc - nightmarish last days
+	Showa - Nightmarish Last Days
 */
+
+var flash;
 
 function start() {
-	cm.warp (801040004, 0);
-	cm.dispose();
+    flash = cm.haveItem(4000141);
+
+    if (!flash) {
+	cm.sendNext("Once you eliminate the boss, you'll have to show me the boss's flashlight as evidence. I won't believe it until you show me the flashlight! What? You want to leave this room?");
+    } else {
+	cm.sendNext("Hey, hey! It's dangerous to carry around a flashlight like that! It's going to cause a fire! I'll take care of it. cant' be too careful around here...")
+    }
 }
 
 function action(mode, type, selection) {
+    if (mode == 1) {
+	if (!flash) {
+	    cm.warp(801040000, 0);
+	    cm.dispose();
+	} else {
+	    cm.warp(801040101, 0);
+	    cm.dispose();
+	}
+    } else {
+	cm.sendOk("I really admire your toughness! Well, if you decide to return to Showa Town, let me know~!");
+    }
 }

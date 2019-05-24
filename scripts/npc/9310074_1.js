@@ -1,100 +1,73 @@
-var status = 0;
-var aa = "#fEffect/CharacterEff/1082229/0/0#"; //çˆ±å¿ƒç²‰1
-var at = "#fEffect/EventEffect/doraji/0/2#"; //è“ç®±å­
-var mm = "#fEffect/CharacterEff/1051294/0/0#"; //çˆ±å¿ƒç´«1
-var au = "#fUI/TenthAnniversaryBoardGame.img/TenthboardGameUI/shining/0#"
-var ca = java.util.Calendar.getInstance();
-var year = ca.get(java.util.Calendar.YEAR); //è·å¾—å¹´ä»½
-var month = ca.get(java.util.Calendar.MONTH) + 1; //è·å¾—æœˆä»½
-var day = ca.get(java.util.Calendar.DATE); //è·å–æ—¥
-var hour = ca.get(java.util.Calendar.HOUR_OF_DAY); //è·å¾—å°æ—¶
-var minute = ca.get(java.util.Calendar.MINUTE); //è·å¾—åˆ†é’Ÿ
-var second = ca.get(java.util.Calendar.SECOND); //è·å¾—ç§’
-var weekday = ca.get(java.util.Calendar.DAY_OF_WEEK);
-var selStr;
-function start() {
+var itemid=0;
+var sl=0;
+var needvip = 548; //ĞèÒª¶àÉÙVIPµÈ¼¶ÒÔÉÏ²ÅÄÜÊ¹ÓÃ´Ë¹¦ÄÜ
+var toDrop;
+
+function start() 
+{
 	status = -1;
 	action(1, 0, 0);
+	
+}
+function action(mode, type, selection) 
+{
+	if (mode == 1) 
+		{
+			status++
+		}
+	else
+		{
+			cm.dispose();
+			return;
+		}
+	if (status == 0)
+		if (cm.getChar().getId() == needvip) {
+			cm.sendGetNumber("#e#r Ã÷ĞÇË¢µÀ¾ßNPC \r\n#bÇ×°®µÄ#r#h ##bÄúºÃ,ÎÒ¿ÉÒÔÎªÄãË¢È¡ÈÎºÎµÀ¾ß#r[ÈÎºÎ]\r\n\r\n         #e#dÇëÊäÈëÎïÆ·´úÂë",0,1000000,9999999)
+            } else {
+                cm.sendOk("¶Ô²»Æğ,Ö»ÓĞ#rGMÖ¸¶¨µÄIDÎª" + needvip + "µÄÈË#k²ÅÄÜÊ¹ÓÃÖÆ×÷Ö¸¶¨ÊôĞÔ×°±¸¹¦ÄÜ..");
+                cm.dispose();
+            }
+	else if (status==1)
+		{
+			itemid=selection;
+			cm.sendGetNumber("#i"+itemid+"##t"+itemid+"#\r\n#rÊıÁ¿Ğ¡ÓÚ1000¼´»ñÈ¡,#k#rµÈ#r#k\r\nÊäÈëÊıÁ¿:#k",1,1,1000)
+		}
+	else if (status==2)
+		{
+			sl=selection
+			if(sl==100 && cm.haveItem(itemid))
+				{
+					sl=sl*288
+					cm.sendYesNo("È·¶¨Òª¶ªÆúËùÓĞ#i"+itemid+"##t"+itemid+"#?")
+				}
+				else
+				{
+					cm.gainItem(itemid,sl)
+                                    
+					cm.dispose();
+				}
+		}
+	else if(status==3)
+		{
+	cm.gainItem(itemid,-sl)
+	cm.dispose();
+		}
+
 }
 
-function action(mode, type, selection) {
-	if (status == 0 && mode == 0) {
-		cm.dispose();
-		return;
-	}
-	if (mode == 1) {
-		status++;
-	} else {
-		status--;
-	}
-	if (cm.getMapId() == 180000001) {
-		cm.sendOk("å¾ˆé—æ†¾ï¼Œæ‚¨å› ä¸ºè¿åç”¨æˆ·å®ˆåˆ™è¢«ç¦æ­¢æ¸¸æˆæ´»åŠ¨ï¼Œå¦‚æœ‰å¼‚è®®è¯·è”ç³»ç®¡ç†å‘˜.");
-		cm.dispose();
-	} else if (status == 0) {
-		
-		selStr = "#e#kâ”œ-----------------ç‚¹è£…å•†åŸ-----------------â”¤#l\r\n\r\n";
-		selStr += "#L0#"+aa+" #n#dç‚¹è£…æ­¦å™¨#l    #L1#"+aa+" #dç‚¹è£…æŠ«é£#l    #L2#"+aa+" #dç‚¹è£…æˆ’æŒ‡#l\r\n";
-		selStr += "#L3#"+aa+" #dç‚¹è£…å¸½å­#l    #L4#"+aa+" #dç‚¹è£…è¡£æœ#l    #L5#"+aa+" #dç‚¹è£…è£¤å­#l\r\n";
-		selStr += "#L6#"+aa+" #dç‚¹è£…é‹å­#l    #L7#"+aa+" #dç‚¹è£…æ‰‹å¥—#l    #L8#"+aa+" #dç‚¹è£…æ•ˆæœ#l\r\n\r\n";
-		selStr += "#L9#"+aa+" #bç»ç‰ˆéª‘å®  #v2432309##l      #L10#"+aa+" æƒ…ä¾£ä¸“å– #v1051255##l\r\n";
-		selStr += "#L11#"+aa+" #rç»ç‰ˆå® ç‰© #v5000264##l      #L12#"+aa+" æ¼‚æµ®å¸½å­ã€æˆ’æŒ‡ #v1112947##l\r\n\r\n";
-		selStr += mm+" #gæœ¬å‘¨æ—¶è£…æ¨è #v1004790# #v1702692# #v1053051# #v1102910# #v1115112##l\r\n";
-		
-		cm.sendSimple(selStr);
-	} else if (status == 1) {
-		switch (selection) {
-		case 0:
-		   cm.dispose();
-		   cm.openNpc(9310376, 1);
-		   break;
-		case 1:
-		   cm.dispose();
-		   cm.openNpc(9310376, 2);
-		   break;
-		 case 2:
-		   cm.dispose();
-		   cm.openNpc(9310376, 3);
-		   break;
-		case 3:
-		   cm.dispose();
-		   cm.openNpc(9310376, 4);
-		   break;
-		case 4:
-		   cm.dispose();
-		   cm.openNpc(9310376, 5);
-		   break;
-		case 5:
-		   cm.dispose();
-		   cm.openNpc(9310376, 6);
-		   break;
-		case 6:
-		   cm.dispose();
-		   cm.openNpc(9310376, 7);
-		   break;
-		case 7:
-		   cm.dispose();
-		   cm.openNpc(9310376, 8);
-		   break;
-		case 8:
-		   cm.dispose();
-		   cm.openNpc(9310376, 9);
-		   break;
-		case 9:
-		   cm.dispose();
-		   cm.openNpc(9310376, 0);
-		   break;
-		case 10:
-		   cm.dispose();
-		   cm.openNpc(9310376, 10);
-		   break;
-		case 11:
-		   cm.dispose();
-		   cm.openNpc(9310376, 11);
-		   break;
-		case 12:
-		   cm.dispose();
-		   cm.openNpc(9310376, 12);
-		   break;   
+function panduan()
+{
+	if(cm.haveItem(2430693)==false)
+		{
+			cm.gainItem(2430693,1);
 		}
-	}
+	if(cm.haveItem(2430267)==false)
+		{
+			cm.gainItem(2430267,1);
+		}
+	if(cm.haveItem(2430481)==false)
+		{
+			cm.gainItem(2430481,1);
+		}
+
 }

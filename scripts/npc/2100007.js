@@ -25,17 +25,17 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("Hohoh~ welcome welcome. Welcome to Ariant Skin Care. You have stepped into a renowned Skin Care shop that even the Queen herself frequents this place. If you have #bAriant skin care coupon#k with you, we'll take care of the rest. How about letting work on your skin today?");
+			cm.sendNext("嗨，我是#p2100007# 今天你想要来点不一样的？？");
 		} else if (status == 1) {
-			cm.sendStyle("With our specialized machine, you can see yourself after the treatment in advance. What kind of skin-treatment would you like to do? Choose the style of your liking...", skin);
+			cm.sendStyle("选择一个你想要的。", skin);
 		} else if (status == 2){
 			cm.dispose();
 			if (cm.haveItem(5153007) == true){
 				cm.gainItem(5153007, -1);
 				cm.setSkin(skin[selection]);
-				cm.sendOk("Enjoy your new and improved skin!");
+				cm.sendOk("享受！");
 			} else {
-				cm.sendNext("Hmmm... I don't think you have our Skin Care coupon with you. Without it, I can't give you the treatment");
+				cm.sendNext("痾.... 貌似没有#t5153007#。");
 			}
 		}
 	}

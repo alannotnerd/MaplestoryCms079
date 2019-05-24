@@ -1,10 +1,9 @@
 package net.sf.cherry.provider;
 
-public abstract interface MapleDataProvider
-{
-  public abstract MapleData getData(String paramString);
+public interface MapleDataProvider {
+  MapleData getData(String paramString);
 
-  public abstract MapleDataDirectoryEntry getRoot();
+  MapleDataDirectoryEntry getRoot();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

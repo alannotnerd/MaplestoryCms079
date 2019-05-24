@@ -19,7 +19,7 @@
             <vector name="origin" x="22" y="66"/>
             <int name="delay" value="500"/>
         </canvas>
-        <uol name="3" value="1"/>
+        <uol name="1" value="1"/>
     </imgdir>
     <imgdir name="move">
         <canvas name="0" width="44" height="66">
@@ -48,7 +48,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="smile">
-        <uol name="0" value="../stand/1"/>
+        <uol name="../stand/1" value="../stand/1"/>
         <canvas name="1" width="44" height="66">
             <vector name="origin" x="22" y="66"/>
             <int name="delay" value="300"/>
@@ -73,12 +73,12 @@
             <vector name="origin" x="22" y="66"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="7" value="../stand/1"/>
-        <uol name="8" value="../stand/2"/>
-        <uol name="9" value="../stand/1"/>
-        <uol name="10" value="../stand/0"/>
-        <uol name="11" value="../stand/1"/>
-        <uol name="12" value="../stand/2"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="../stand/1" value="../stand/1"/>
+        <uol name="../stand/2" value="../stand/2"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

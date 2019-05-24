@@ -1,7 +1,7 @@
 var status = -1;
 
 function end(mode, type, selection) {
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     if (qm.getJob() == 400) {
         qm.changeJob(430);
         qm.resetStats(4, 25, 4, 4);

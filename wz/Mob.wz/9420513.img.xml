@@ -810,11 +810,11 @@
                     <vector name="origin" x="71" y="19"/>
                     <int name="delay" value="150"/>
                 </canvas>
-                <uol name="5" value="0"/>
-                <uol name="6" value="1"/>
-                <uol name="7" value="2"/>
-                <uol name="8" value="3"/>
-                <uol name="9" value="4"/>
+                <uol name="0" value="0"/>
+                <uol name="1" value="1"/>
+                <uol name="2" value="2"/>
+                <uol name="3" value="3"/>
+                <uol name="4" value="4"/>
                 <int name="attach" value="1"/>
             </imgdir>
             <int name="type" value="0"/>

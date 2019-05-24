@@ -2,9 +2,8 @@ package net.sf.cherry.client;
 
 import java.util.Collection;
 
-public abstract interface InventoryContainer
-{
-  public abstract Collection<MapleInventory> allInventories();
+public interface InventoryContainer {
+  Collection<MapleInventory> allInventories();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

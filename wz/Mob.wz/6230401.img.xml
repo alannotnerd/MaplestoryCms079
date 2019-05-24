@@ -72,8 +72,8 @@
             <vector name="head" x="-2" y="-46"/>
             <int name="delay" value="2000"/>
         </canvas>
-        <uol name="4" value="1"/>
-        <uol name="5" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
     </imgdir>
     <imgdir name="jump">
         <canvas name="0" width="38" height="54">

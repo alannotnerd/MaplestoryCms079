@@ -5,23 +5,23 @@ function action(mode, type, selection) {
     else 
 	status--;
     if (status == 0) {
-    	cm.sendNext("嗯…实验似乎进行的相当顺利，顺利的拿到露。和黑色翅膀合作果然是明智之举…呵呵呵");
+    	cm.sendNext("The experiment is going well, quite well. The endless supply of Rue is certainly speeding things along. Joining the Black Wings was a wise decision, a wise decision indeed. Muahaha!");
     } else if (status == 1) {
-	cm.sendNextPrevS("杰利麦勒果然有先见之明。", 4, 2159008);
+	cm.sendNextPrevS("I say, you have great foresight about these things.", 4, 2159008);
     } else if (status == 2) {
-	cm.sendNextPrev("黑色翅膀无法挑剔的机器人，就快要完成了。现在实验要开始下一个阶段了。比他们时候的还要有趣。");
+	cm.sendNextPrev("The android the Black Wings wanted will be completed soon. Oh yes, very soon. Then, the next stage will begin! I will conduct an experiment wilder than their wildest dreams!");
     } else if (status == 3) {
-	cm.sendNextPrevS("下一个阶段呢？", 4, 2159008);
+	cm.sendNextPrevS("Pardon? The next stage?", 4, 2159008);
     } else if (status == 4) {
-	cm.sendNextPrev("呼呼…到现在还不知道吗？光看这个实验室就应该会知道，我现在要制造什麽东西。只制造及其不够好玩，比机器人还有趣的…");
+	cm.sendNextPrev("Teeheehee, do you still not comprehend what I''m trying to create? Look around! Here''s a clue: it''s eons more interesting than a simple android. Eons more interesting.");
     } else if (status == 5) {
-	cm.sendNextPrevS("嗯？这实验室吗？你打算对这实验者做什麽事吗？", 4, 2159008);
+	cm.sendNextPrevS("What?? All these test subjects... I say, sir, just what are you planning to do?", 4, 2159008);
     } else if (status == 6) {
-	cm.sendNextPrev("什麽，我能了解在你眼中，看不见这实验室伟大的地方。至於你呢！只要把你的任务做好就行了。顾好在这里的没一个实验者，让他们没办法逃跑就行了。");
+	cm.sendNextPrev("Now, now, you may not understand the grandness of my experiments. I don''t expect you to. No, I don''t expect you to. Just focus on your job and make sure none of the test subjects run away.");
     } else if (status == 7) {
-	cm.sendNextPrev("…嗯？有没有听到什麽奇怪的声音？");
+	cm.sendNextPrev("Hey... Did you hear that?");
     } else if (status == 8) {
-	cm.sendNextPrevS("嗯？奇怪的声音？这样一说，好像有什麽…？", 4, 2159008);
+	cm.sendNextPrevS("Huh? Well... Now that you mention it, I do hear something. Yes, I do hear something...", 4, 2159008);
     } else if (status == 9) {
 	cm.updateInfoQuest(23007, "vel00=2;vel01=1");
 	cm.trembleEffect(0,500);

@@ -1,0 +1,9 @@
+function enter(pi) {
+    var em = pi.getEventManager("Romeo");
+    if (em != null && em.getProperty("stage5").equals("2")) {
+        pi.warp(926100300, 0);
+	pi.gainExp(100000);
+    } else {
+        pi.playerMessage(5, "传送门尚未打开。");
+    }
+}

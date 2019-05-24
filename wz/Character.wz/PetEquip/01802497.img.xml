@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="01802497.img">
+    <imgdir name="info">
+        <canvas name="icon" width="37" height="31">
+            <vector name="origin" x="2" y="31"/>
+        </canvas>
+        <canvas name="iconRaw" width="37" height="30">
+            <vector name="origin" x="2" y="31"/>
+        </canvas>
+        <int name="tuc" value="10"/>
+        <int name="reqLevel" value="0"/>
+        <int name="cash" value="1"/>
+    </imgdir>
+    <imgdir name="5001006">
+        <imgdir name="stand0">
+            <canvas name="0" width="43" height="35">
+                <vector name="origin" x="-11" y="74"/>
+                <int name="z" value="0"/>
+            </canvas>
+            <canvas name="1" width="44" height="35">
+                <vector name="origin" x="-11" y="74"/>
+                <int name="z" value="0"/>
+            </canvas>
+            <canvas name="2" width="46" height="35">
+                <vector name="origin" x="-10" y="74"/>
+                <int name="z" value="0"/>
+            </canvas>
+            <canvas name="3" width="48" height="33">
+                <vector name="origin" x="-9" y="73"/>
+                <int name="z" value="0"/>
+            </canvas>
+            <canvas name="4" width="46" height="35">
+                <vector name="origin" x="-10" y="74"/>
+                <int name="z" value="0"/>
+            </canvas>
+            <canvas name="5" width="44" height="35">
+                <vector name="origin" x="-11" y="74"/>
+                <int name="z" value="0"/>
+            </canvas>
+        </imgdir>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <uol name="stand0" value="stand0"/>
+        <imgdir name="TransformAction">
+            <imgdir name="stand0">
+                <canvas name="0" width="43" height="35">
+                    <vector name="origin" x="-11" y="74"/>
+                    <int name="z" value="0"/>
+                </canvas>
+                <canvas name="1" width="44" height="35">
+                    <vector name="origin" x="-11" y="74"/>
+                    <int name="z" value="0"/>
+                </canvas>
+                <canvas name="2" width="46" height="35">
+                    <vector name="origin" x="-10" y="74"/>
+                    <int name="z" value="0"/>
+                </canvas>
+                <canvas name="3" width="48" height="33">
+                    <vector name="origin" x="-9" y="73"/>
+                    <int name="z" value="0"/>
+                </canvas>
+                <canvas name="4" width="46" height="35">
+                    <vector name="origin" x="-10" y="74"/>
+                    <int name="z" value="0"/>
+                </canvas>
+                <canvas name="5" width="44" height="35">
+                    <vector name="origin" x="-11" y="74"/>
+                    <int name="z" value="0"/>
+                </canvas>
+            </imgdir>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+            <uol name="stand0" value="stand0"/>
+        </imgdir>
+    </imgdir>
+    <uol name="5001006" value="5001006"/>
+    <uol name="5001006" value="5001006"/>
+    <uol name="5001006" value="5001006"/>
+    <uol name="5001006" value="5001006"/>
+    <uol name="5001006" value="5001006"/>
+</imgdir>

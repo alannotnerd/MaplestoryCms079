@@ -1,30 +1,14 @@
-importPackage(net.sf.cherry.client);
-
-var status = 0;
-var zones = 0;
-var selectedMap = -1;
+ /* 
+	NPC Name: 		Divine Bird
+	Map(s): 		Erev
+	Description: 		Buff
+*/
 
 function start() {
-	status = -1;
-	action(1, 0, 0);
+    cm.useItem(2022458);
+    cm.sendOk("²»ÒªÍ£Ö¹ÑµÁ·£¬Õâ¸öÊÀ½çĞèÒªÄãÀ´ÊØ»¤¡£");
 }
 
 function action(mode, type, selection) {
-	if (mode == -1) {
-		cm.dispose();
-	} else {
-		if (status >= 0 && mode == 0) {
-			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			cm.sendOk("æ¬¢è¿æ¥åˆ°åœ£åœ°ï¼");
-		} else if (status == 1) {
-			cm.dispose();
-		}
-	}
-}	
+    cm.dispose();
+}

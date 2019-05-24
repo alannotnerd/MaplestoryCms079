@@ -3,12 +3,12 @@ var status = -1;
 //this quest is NINTH JOB ADV
 function start(mode, type, selection) {
 	qm.forceStartQuest();
-	qm.completeQuest();
+	qm.forceCompleteQuest();
 	qm.dispose();
 }
 
 function end(mode, type, selection) {
 	qm.forceStartQuest();
-	qm.completeQuest();
+	qm.forceCompleteQuest();
 	qm.dispose();
 }

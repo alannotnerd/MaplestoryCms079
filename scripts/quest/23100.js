@@ -6,6 +6,6 @@ function end(mode, type, selection) {
     qm.forceStartQuest(23103);
     qm.forceStartQuest(23128, "1");
     qm.forceStartQuest();
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }

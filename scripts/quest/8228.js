@@ -12,7 +12,7 @@ function end(mode, type, selection) {
     qm.sendNext("Here you are!");
     if (qm.canHold(4032018, 1)) {
         qm.gainItem(4032018, 1);
-        qm.completeQuest();
+        qm.forceCompleteQuest();
     }
     qm.dispose();
 }

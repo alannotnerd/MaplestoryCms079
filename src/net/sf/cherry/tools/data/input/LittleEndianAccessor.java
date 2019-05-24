@@ -1,38 +1,37 @@
 package net.sf.cherry.tools.data.input;
 
-import java.awt.Point;
+import java.awt.*;
 
-public abstract interface LittleEndianAccessor
-{
-  public abstract byte readByte();
+public interface LittleEndianAccessor {
+  byte readByte();
 
-  public abstract char readChar();
+  char readChar();
 
-  public abstract short readShort();
+  short readShort();
 
-  public abstract int readInt();
+  int readInt();
 
-  public abstract long readLong();
+  long readLong();
 
-  public abstract void skip(int paramInt);
+  void skip(int paramInt);
 
-  public abstract byte[] read(int paramInt);
+  byte[] read(int paramInt);
 
-  public abstract float readFloat();
+  float readFloat();
 
-  public abstract double readDouble();
+  double readDouble();
 
-  public abstract String readAsciiString(int paramInt);
+  String readAsciiString(int paramInt);
 
-  public abstract String readNullTerminatedAsciiString();
+  String readNullTerminatedAsciiString();
 
-  public abstract String readMapleAsciiString();
+  String readMapleAsciiString();
 
-  public abstract long getBytesRead();
+  long getBytesRead();
 
-  public abstract long available();
+  long available();
 
-  public Point readPos();
+  Point readPos();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

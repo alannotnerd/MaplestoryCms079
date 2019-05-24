@@ -33,7 +33,7 @@
             <vector name="head" x="-4" y="-31"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="2" value="0"/>
+        <uol name="0" value="0"/>
         <canvas name="3" width="21" height="24">
             <vector name="origin" x="10" y="37"/>
             <vector name="lt" x="-10" y="-37"/>
@@ -57,7 +57,7 @@
             <vector name="head" x="-4" y="-31"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="2" value="0"/>
+        <uol name="0" value="0"/>
         <canvas name="3" width="55" height="28">
             <vector name="origin" x="26" y="39"/>
             <vector name="lt" x="-10" y="-39"/>

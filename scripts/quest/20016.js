@@ -10,7 +10,7 @@ function start(mode, type, selection) {
         status++;
     } else {
         if (status == 8) {
-            qm.sendNext("å™¢ï¼Œä½ è¿˜æœ‰ä»€ä¹ˆé—®é¢˜å—ï¼Ÿå¦‚æœä½ è¦è·Ÿæˆ‘å¯¹è¯ï¼Œè¯·é‡æ–°æ‰“å¼€ç•Œé¢ã€‚");
+            qm.sendNext("àŞ£¬Äã»¹ÓĞÊ²Ã´ÎÊÌâÂğ£¿Èç¹ûÄãÒª¸úÎÒ¶Ô»°£¬ÇëÖØĞÂ´ò¿ª½çÃæ¡£");
             qm.safeDispose();
             return;
         }
@@ -33,11 +33,11 @@ function start(mode, type, selection) {
     } else if (status == 7) {
         qm.sendNextPrev("We have to get stronger so we can defeat the Black Mage if he revives. Our primary goal is to prevent him from destroying Maple World, and you will play a prominent role in that.");
     } else if (status == 8) {
-        qm.sendAcceptDecline("That concludes my explanation. Have I answered all your questions? \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#fUI/UIWindow.img/QuestIcon/8/0# 380 exp");
+        qm.askAcceptDecline("That concludes my explanation. Have I answered all your questions? \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#fUI/UIWindow.img/QuestIcon/8/0# 380 exp");
     } else if (status == 9) {
         if (qm.getQuestStatus(20016) == 0) {
             qm.gainExp(380);
-            qm.completeQuest();
+            qm.forceCompleteQuest();
         }
         qm.sendNext("I'm glad you're clear about our current situation, but you know, at your current level, you're not even strong enough to face the Black Mage's minions, let alone the Black Mage himself. Not even his minions' minions, as a matter of fact. How will you protect Maple World at your current level?");
     } else if (status == 10) {

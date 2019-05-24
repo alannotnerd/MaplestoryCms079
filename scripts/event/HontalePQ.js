@@ -1,216 +1,131 @@
-
-importPackage(java.lang);
-importPackage(org.packet);
-
-var exitMap;
-var instanceId;
-var minPlayers = 1;
+var minPlayers = 6;
 
 function init() {
-	instanceId = 1;
+    em.setProperty("state", "0");
 }
 
 function monsterValue(eim, mobId) {
-	return 1;
+    return 1;
 }
 
 function setup() {
-	instanceId = em.getChannelServer().getInstanceId();
-	exitMap = em.getChannelServer().getMapFactory().getMap(240050500); //Teh exit map :) <---------t
-	var instanceName = "HontalePQ" + instanceId;
+    em.setProperty("state", "1");
 
-	var eim = em.newInstance(instanceName);
-	
-	var mf = eim.getMapFactory();
-	
-	em.getChannelServer().addInstanceId();
-	
-	var map = mf.getMap(240050100);//wutt
-	//map.shuffleReactors();
-	// eim.addMapInstance(240050100,map);
-	var firstPortal = eim.getMapInstance(240050100).getPortal("in00");
-	firstPortal.setScriptName("hontale_BtoB1");
-	//Fuck this timer
-	eim.setProperty("bulbWay", 0);
-	em.schedule("timeOut", 60000 * 30);
-	em.schedule("broadcastClock", 1500);
-	eim.setProperty("entryTimestamp",System.currentTimeMillis() + (30 * 60000));
-	var tehwat = Math.random() * 3;
-	if (tehwat > 1) {
-		eim.setProperty("theWay", "darkness");
-	} else {
-		eim.setProperty("theWay", "light");
-	}
-	
-	return eim;
+    var eim = em.newInstance("HontalePQ");
+    
+    var map = eim.setInstanceMap(240050100);
+    map.resetFully();
+//    map.getPortal("next00").setScriptName("lpq1");
+    map = eim.setInstanceMap(240050101);
+    map.resetFully();
+//    map.getPortal("next00").setScriptName("lpq2");
+    eim.setInstanceMap(922010201).resetFully();
+    map = eim.setInstanceMap(240050102);
+    map.resetFully();
+//    map.getPortal("next00").setScriptName("lpq3");
+    map = eim.setInstanceMap(240050103);
+    map.resetFully();
+//    map.getPortal("next00").setScriptName("lpq4");
+    eim.setInstanceMap(240050104).resetFully();
+    eim.setInstanceMap(240050105).resetFully();
+    eim.setInstanceMap(240050200).resetFully();
+    map = eim.setInstanceMap(240050300);
+    map.resetFully();
+//    map.getPortal("next00").setScriptName("lpq7");
+    map = eim.setInstanceMap(240050310);
+    map.resetFully();
+//    map.getPortal("next00").setScriptName("lpq8");
+
+    eim.startEventTimer(60 * 1000 * 60);
+
+    return eim;
+}
+
+function scheduledTimeout(eim) {
+    eim.disposeIfPlayerBelow(100, eim.getProperty("cleared") == null ? 240050000 : 240050400);
+
+    em.setProperty("state", "0");
+}
+
+function changedMap(eim, player, mapid) {
+    switch (mapid) {
+	case 240050100:
+	case 240050101:
+	case 240050102:
+	case 240050103:
+	case 240050104:
+	case 240050105:
+	case 240050200:
+	case 240050300:
+	case 240050310:
+	case 240050500:
+	    return;
+    }
+    eim.unregisterPlayer(player);
+
+    if (eim.disposeIfPlayerBelow(0, 0)) {
+	em.setProperty("state", "0");
+    }
 }
 
 function playerEntry(eim, player) {
-	var map = eim.getMapInstance(240050100);
-	player.changeMap(map, map.getPortal(0));
-	player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.getClock((Long.parseLong(eim.getProperty("entryTimestamp")) - System.currentTimeMillis()) / 1000));
-	//THE CLOCK IS SHIT
-	//player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.getClock(1800));
-}
-
-function playerDead(eim, player) {
+    var map = em.getMapFactory().getMap(240050100);
+    player.changeMap(map, map.getPortal(0));
 }
 
 function playerRevive(eim, player) {
-	if (eim.isLeader(player)) { //check for party leader
-		//boot whole party and end
-		var party = eim.getPlayers();
-		for (var i = 0; i < party.size(); i++) {
-			playerExit(eim, party.get(i));
-		}
-		eim.dispose();
-	}
-	else { //boot dead player
-		// If only 5 players are left, uncompletable:
-		var party = eim.getPlayers();
-		if (party.size() <= minPlayers) {
-			for (var i = 0; i < party.size(); i++) {
-				playerExit(eim,party.get(i));
-			}
-			eim.dispose();
-		}
-		else
-			playerExit(eim, player);
-	}
 }
 
 function playerDisconnected(eim, player) {
-	if (eim.isLeader(player)) { //check for party leader
-		//PWN THE PARTY (KICK OUT)
-		var party = eim.getPlayers();
-		for (var i = 0; i < party.size(); i++) {
-			if (party.get(i).equals(player)) {
-				removePlayer(eim, player);
-			}			
-			else {
-				playerExit(eim, party.get(i));
-			}
-		}
-		eim.dispose();
-	}
-	else { //KICK THE D/CED CUNT
-		// If only 5 players are left, uncompletable:
-		var party = eim.getPlayers();
-		if (party.size() < minPlayers) {
-			for (var i = 0; i < party.size(); i++) {
-				playerExit(eim,party.get(i));
-			}
-			eim.dispose();
-		}
-		else
-			playerExit(eim, player);
-	}
+    return -3;
 }
 
 function leftParty(eim, player) {			
-	// If only 5 players are left, uncompletable:
-	var party = eim.getPlayers();
-	if (party.size() <= minPlayers) {
-		for (var i = 0; i < party.size(); i++) {
-			playerExit(eim,party.get(i));
-		}
-		eim.dispose();
-	}
-	else
-		playerExit(eim, player);
+    // If only 2 players are left, uncompletable
+    if (eim.disposeIfPlayerBelow(minPlayers, eim.getProperty("cleared") == null ? 240050000 : 240050400)) {
+	em.setProperty("state", "0");
+    } else {
+	playerExit(eim, player);
+    }
 }
 
 function disbandParty(eim) {
-	//boot whole party and end
-	var party = eim.getPlayers();
-	for (var i = 0; i < party.size(); i++) {
-		playerExit(eim, party.get(i));
-	}
-	eim.dispose();
+    // Boot whole party and end
+    eim.disposeIfPlayerBelow(100, eim.getProperty("cleared") == null ? 240050000 : 240050400);
+
+    em.setProperty("state", "0");
 }
 
 function playerExit(eim, player) {
-	eim.unregisterPlayer(player);
-	player.changeMap(exitMap, exitMap.getPortal(0));
+    var map = em.getMapFactory().getMap(eim.getProperty("cleared") == null ? 240050000 : 240050400);
+
+    eim.unregisterPlayer(player);
+    player.changeMap(map, map.getPortal(0));
 }
 
-//Those offline cuntts
+// For offline players
 function removePlayer(eim, player) {
-	eim.unregisterPlayer(player);
-	player.getMap().removePlayer(player);
-	player.setMap(exitMap);
+    eim.unregisterPlayer(player);
 }
 
 function clearPQ(eim) {
-	//HTPQ does nothing special with winners
-	var party = eim.getPlayers();
-	for (var i = 0; i < party.size(); i++) {
-		playerExit(eim, party.get(i));
-	}
-	eim.dispose();
+    eim.disposeIfPlayerBelow(100, eim.getProperty("cleared") == null ? 240050000 : 240050400);
+
+    em.setProperty("state", "0");
 }
 
-function allMonstersDead(eim) {
-        //Open Portal? o.O
+function finish(eim) {
+    eim.disposeIfPlayerBelow(100, eim.getProperty("cleared") == null ? 240050000 : 240050400);
+
+    em.setProperty("state", "0");
 }
 
-function cancelSchedule() {
+function timeOut(eim) {
+    eim.disposeIfPlayerBelow(100, eim.getProperty("cleared") == null ? 240050000 : 240050400);
+
+    em.setProperty("state", "0");
 }
 
-function timeOut() {
-	var iter = em.getInstances().iterator();
-	while (iter.hasNext()) {
-		var eim = iter.next();
-		if (eim.getPlayerCount() > 0) {
-			var pIter = eim.getPlayers().iterator();
-			while (pIter.hasNext()) {
-				playerExit(eim, pIter.next());
-			}
-		}
-		eim.dispose();
-	}
-}
-
-function playerClocks(eim, player) {
-  if (player.getMap().hasTimer() == false){
-	player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.getClock((Long.parseLong(eim.getProperty("entryTimestamp")) - System.currentTimeMillis()) / 1000));
-	//player.getMap().setTimer(true);
-	}
-}
-
-function playerTimer(eim, player) {
-	if (player.getMap().hasTimer() == false) {
-		player.getMap().setTimer(true);
-	}
-}
-
-function broadcastClock(eim, player) {
-	//var party = eim.getPlayers();
-	var iter = em.getInstances().iterator();
-	while (iter.hasNext()) {
-		var eim = iter.next();
-		if (eim.getPlayerCount() > 0) {
-			var pIter = eim.getPlayers().iterator();
-			while (pIter.hasNext()) {
-				playerClocks(eim, pIter.next());
-			}
-		}
-		//em.schedule("broadcastClock", 1600);
-	}
-	// for (var kkl = 0; kkl < party.size(); kkl++) {
-		// party.get(kkl).getMap().setTimer(true);
-	// }
-	var iterr = em.getInstances().iterator();
-	while (iterr.hasNext()) {
-		var eim = iterr.next();
-		if (eim.getPlayerCount() > 0) {
-			var pIterr = eim.getPlayers().iterator();
-			while (pIterr.hasNext()) {
-				//playerClocks(eim, pIter.next());
-				playerTimer(eim, pIterr.next());
-			}
-		}
-		//em.schedule("broadcastClock", 1600);
-	}
-	em.schedule("broadcastClock", 1600);
-}
+function cancelSchedule() {}
+function playerDead() {}
+function allMonstersDead(eim) {}

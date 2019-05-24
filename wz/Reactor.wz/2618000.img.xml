@@ -19,7 +19,7 @@
             </imgdir>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
+            <uol name="../0" value="../0"/>
         </imgdir>
     </imgdir>
     <imgdir name="1">
@@ -50,8 +50,8 @@
             <int name="timeOut" value="9500"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
-            <uol name="1" value="../1"/>
+            <uol name="../0" value="../0"/>
+            <uol name="../1" value="../1"/>
         </imgdir>
     </imgdir>
     <imgdir name="2">
@@ -82,8 +82,8 @@
             <int name="timeOut" value="9500"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
-            <uol name="1" value="../1"/>
+            <uol name="../0" value="../0"/>
+            <uol name="../1" value="../1"/>
         </imgdir>
     </imgdir>
     <imgdir name="3">
@@ -114,8 +114,8 @@
             <int name="timeOut" value="9500"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
-            <uol name="1" value="../1"/>
+            <uol name="../0" value="../0"/>
+            <uol name="../1" value="../1"/>
         </imgdir>
     </imgdir>
     <imgdir name="4">
@@ -146,8 +146,8 @@
             <int name="timeOut" value="9500"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
-            <uol name="1" value="../1"/>
+            <uol name="../0" value="../0"/>
+            <uol name="../1" value="../1"/>
         </imgdir>
     </imgdir>
     <imgdir name="5">
@@ -178,8 +178,8 @@
             <int name="timeOut" value="9500"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
-            <uol name="1" value="../1"/>
+            <uol name="../0" value="../0"/>
+            <uol name="../1" value="../1"/>
         </imgdir>
     </imgdir>
     <imgdir name="6">
@@ -263,7 +263,7 @@
             </imgdir>
         </imgdir>
         <imgdir name="hit">
-            <uol name="0" value="../0"/>
+            <uol name="../0" value="../0"/>
         </imgdir>
     </imgdir>
 </imgdir>

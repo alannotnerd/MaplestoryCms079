@@ -514,8 +514,8 @@
                         <vector name="lt" x="-32" y="-94"/>
                         <vector name="rb" x="32" y="0"/>
                     </canvas>
-                    <uol name="3" value="1"/>
-                    <uol name="4" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="0" value="0"/>
                     <canvas name="5" width="81" height="96">
                         <vector name="origin" x="35" y="96"/>
                         <int name="delay" value="150"/>
@@ -1327,9 +1327,9 @@
                     <string name="hs" value="h30"/>
                     <int name="mobCount" value="6"/>
                     <int name="mpCon" value="28"/>
-                    <int name="damage" value="160"/>
-                    <vector name="lt" x="-210" y="-100"/>
-                    <vector name="rb" x="210" y="100"/>
+                    <int name="damage" value="80"/>
+                    <vector name="lt" x="-350" y="-200"/>
+                    <vector name="rb" x="500" y="200"/>
                 </imgdir>
             </imgdir>
             <imgdir name="effect">
@@ -1388,13 +1388,13 @@
                         <vector name="origin" x="21" y="48"/>
                     </canvas>
                 </imgdir>
-                <int name="x" value="85"/>
-                <int name="y" value="230"/>
-                <int name="fall" value="150"/>
+                <int name="x" value="200"/>
+                <int name="y" value="400"/>
+                <int name="fall" value="300"/>
                 <int name="start" value="0"/>
-                <int name="interval" value="90"/>
-                <int name="count" value="8"/>
-                <int name="duration" value="500"/>
+                <int name="interval" value="45"/>
+                <int name="count" value="12"/>
+                <int name="duration" value="1000"/>
             </imgdir>
             <imgdir name="hit">
                 <imgdir name="0">

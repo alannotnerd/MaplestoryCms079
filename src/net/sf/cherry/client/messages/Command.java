@@ -2,10 +2,10 @@ package net.sf.cherry.client.messages;
 
 import net.sf.cherry.client.MapleClient;
 
-public abstract interface Command {
+public interface Command {
 
-    public abstract CommandDefinition[] getDefinition();
+  CommandDefinition[] getDefinition();
 
-    public abstract void execute(MapleClient paramMapleClient, MessageCallback paramMessageCallback, String[] paramArrayOfString)
-            throws Exception, IllegalCommandSyntaxException;
+  void execute(MapleClient paramMapleClient, MessageCallback paramMessageCallback, String[] paramArrayOfString)
+      throws Exception;
 }

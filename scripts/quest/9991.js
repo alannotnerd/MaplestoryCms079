@@ -9,10 +9,10 @@ function start(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			qm.sendAcceptDecline("æ­£å€¼æš‘å‡æœŸé—´ï¼Œæˆ‘å‡†å¤‡äº†å¾ˆå¤šå¿«é€Ÿé—®ç­”é¢˜ã€‚ä½ è¦ä¸è¦å‚åŠ ï¼Ÿ");
+			qm.sendAcceptDecline("ÕıÖµÊî¼ÙÆÚ¼ä£¬ÎÒ×¼±¸ÁËºÜ¶à¿ìËÙÎÊ´ğÌâ¡£ÄãÒª²»Òª²Î¼Ó£¿");
 		} else if (status == 1) {
-			qm.startQuest();
-			qm.sendNext("ä¸è¿‡æˆ‘ç°åœ¨æ²¡æ—¶é—´ï¼Œä½ è¿‡ä¸€ä¼šå†æ¥æ‰¾æˆ‘å§ã€‚");
+			qm.forceStartQuest(9991);
+			qm.sendNext("²»¹ıÎÒÏÖÔÚÃ»Ê±¼ä£¬Äã¹ıÒ»»áÔÙÀ´ÕÒÎÒ°É¡£");
 		} else if (status == 2) {
 			qm.dispose();
 		}

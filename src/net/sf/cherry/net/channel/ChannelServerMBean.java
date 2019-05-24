@@ -1,40 +1,39 @@
 package net.sf.cherry.net.channel;
 
-public abstract interface ChannelServerMBean
-{
-  public abstract void shutdown(int paramInt);
+public interface ChannelServerMBean {
+  void shutdown(int paramInt);
 
-  public abstract void shutdownWorld(int paramInt);
+  void shutdownWorld(int paramInt);
 
-  public abstract void broadcastWorldMessage(String paramString);
+  void broadcastWorldMessage(String paramString);
 
-  public abstract String getServerMessage();
+  String getServerMessage();
 
-  public abstract void setServerMessage(String paramString);
+  void setServerMessage(String paramString);
 
-  public abstract int getChannel();
+  int getChannel();
 
-  public abstract int getExpRate();
+  int getExpRate();
 
-  public abstract int getMesoRate();
+  void setExpRate(int paramInt);
 
-  public abstract int getDropRate();
+  int getMesoRate();
 
-  public abstract int getBossDropRate();
+  void setMesoRate(int paramInt);
 
-  public abstract int getPetExpRate();
+  int getDropRate();
 
-  public abstract void setExpRate(int paramInt);
+  void setDropRate(int paramInt);
 
-  public abstract void setMesoRate(int paramInt);
+  int getBossDropRate();
 
-  public abstract void setDropRate(int paramInt);
+  void setBossDropRate(int paramInt);
 
-  public abstract void setBossDropRate(int paramInt);
+  int getPetExpRate();
 
-  public abstract void setPetExpRate(int paramInt);
+  void setPetExpRate(int paramInt);
 
-  public abstract int getConnectedClients();
+  int getConnectedClients();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

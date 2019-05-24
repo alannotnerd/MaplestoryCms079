@@ -23,10 +23,7 @@
 package net.sf.cherry.net.channel.handler;
 
 import net.sf.cherry.client.Fishing;
-import net.sf.cherry.client.IItem;
 import net.sf.cherry.client.MapleClient;
-import net.sf.cherry.client.MapleInventoryType;
-import net.sf.cherry.client.anticheat.CheatingOffense;
 import net.sf.cherry.net.AbstractMaplePacketHandler;
 import net.sf.cherry.tools.MaplePacketCreator;
 import net.sf.cherry.tools.data.input.SeekableLittleEndianAccessor;
@@ -34,25 +31,25 @@ import net.sf.cherry.tools.data.input.SeekableLittleEndianAccessor;
 /**
  * @author Jay Estrella
  */
-public class FishingHandler extends AbstractMaplePacketHandler{
+public class FishingHandler extends AbstractMaplePacketHandler {
 
-    @Override
-    public void handlePacket(SeekableLittleEndianAccessor slea, final MapleClient c) {
-        if (c.getPlayer().getJob() == null || c.getPlayer().getMap() == null) { 
-            return; 
-        } 
-       
-        if (!Fishing.hasFishingChair(c.getPlayer())) { 
-            return; 
-        } 
-       
-        if (Fishing.isFishingChair(c.getPlayer().getChair()) && Fishing.isFishingMap(c.getPlayer().getMapId())) { 
-        	c.getPlayer().doFish();
-        } else {
-        	c.getPlayer().getClient().getSession().write(MaplePacketCreator.sendHint("必须要在钓鱼地图，才能钓鱼！\r\n", 200, 200));
-        } 
-        
-        c.getSession().write(MaplePacketCreator.enableActions()); 
+  @Override
+  public void handlePacket(SeekableLittleEndianAccessor slea, final MapleClient c) {
+    if (c.getPlayer().getJob() == null || c.getPlayer().getMap() == null) {
+      return;
     }
-    
+
+    if (!Fishing.hasFishingChair(c.getPlayer())) {
+      return;
+    }
+
+    if (Fishing.isFishingChair(c.getPlayer().getChair()) && Fishing.isFishingMap(c.getPlayer().getMapId())) {
+      c.getPlayer().doFish();
+    } else {
+      c.getPlayer().getClient().getSession().write(MaplePacketCreator.sendHint("必须要在钓鱼地图，才能钓鱼！\r\n", 200, 200));
+    }
+
+    c.getSession().write(MaplePacketCreator.enableActions());
+  }
+
 }

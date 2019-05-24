@@ -141,24 +141,24 @@
             </imgdir>
             <imgdir name="stand2">
                 <string name="z" value="-1"/>
-                <uol name="0" value="../stand1/0"/>
-                <uol name="1" value="../stand1/1"/>
-                <uol name="2" value="../stand1/2"/>
-                <uol name="3" value="../stand1/3"/>
-                <uol name="4" value="../stand1/4"/>
-                <uol name="5" value="../stand1/5"/>
-                <uol name="6" value="../stand1/6"/>
-                <uol name="7" value="../stand1/7"/>
-                <uol name="8" value="../stand1/8"/>
-                <uol name="9" value="../stand1/9"/>
-                <uol name="10" value="../stand1/10"/>
-                <uol name="11" value="../stand1/11"/>
-                <uol name="12" value="../stand1/12"/>
-                <uol name="13" value="../stand1/13"/>
-                <uol name="14" value="../stand1/14"/>
-                <uol name="15" value="../stand1/15"/>
-                <uol name="16" value="../stand1/16"/>
-                <uol name="17" value="../stand1/17"/>
+                <uol name="../stand1/0" value="../stand1/0"/>
+                <uol name="../stand1/1" value="../stand1/1"/>
+                <uol name="../stand1/2" value="../stand1/2"/>
+                <uol name="../stand1/3" value="../stand1/3"/>
+                <uol name="../stand1/4" value="../stand1/4"/>
+                <uol name="../stand1/5" value="../stand1/5"/>
+                <uol name="../stand1/6" value="../stand1/6"/>
+                <uol name="../stand1/7" value="../stand1/7"/>
+                <uol name="../stand1/8" value="../stand1/8"/>
+                <uol name="../stand1/9" value="../stand1/9"/>
+                <uol name="../stand1/10" value="../stand1/10"/>
+                <uol name="../stand1/11" value="../stand1/11"/>
+                <uol name="../stand1/12" value="../stand1/12"/>
+                <uol name="../stand1/13" value="../stand1/13"/>
+                <uol name="../stand1/14" value="../stand1/14"/>
+                <uol name="../stand1/15" value="../stand1/15"/>
+                <uol name="../stand1/16" value="../stand1/16"/>
+                <uol name="../stand1/17" value="../stand1/17"/>
             </imgdir>
             <string name="action" value="1"/>
             <int name="tamingMob" value="0"/>
@@ -260,24 +260,24 @@
             </imgdir>
             <imgdir name="stand2">
                 <string name="z" value="-1"/>
-                <uol name="0" value="../stand1/0"/>
-                <uol name="1" value="../stand1/1"/>
-                <uol name="2" value="../stand1/2"/>
-                <uol name="3" value="../stand1/3"/>
-                <uol name="4" value="../stand1/4"/>
-                <uol name="5" value="../stand1/5"/>
-                <uol name="6" value="../stand1/6"/>
-                <uol name="7" value="../stand1/7"/>
-                <uol name="8" value="../stand1/8"/>
-                <uol name="9" value="../stand1/9"/>
-                <uol name="10" value="../stand1/10"/>
-                <uol name="11" value="../stand1/11"/>
-                <uol name="12" value="../stand1/12"/>
-                <uol name="13" value="../stand1/13"/>
-                <uol name="14" value="../stand1/14"/>
-                <uol name="15" value="../stand1/15"/>
-                <uol name="16" value="../stand1/16"/>
-                <uol name="17" value="../stand1/17"/>
+                <uol name="../stand1/0" value="../stand1/0"/>
+                <uol name="../stand1/1" value="../stand1/1"/>
+                <uol name="../stand1/2" value="../stand1/2"/>
+                <uol name="../stand1/3" value="../stand1/3"/>
+                <uol name="../stand1/4" value="../stand1/4"/>
+                <uol name="../stand1/5" value="../stand1/5"/>
+                <uol name="../stand1/6" value="../stand1/6"/>
+                <uol name="../stand1/7" value="../stand1/7"/>
+                <uol name="../stand1/8" value="../stand1/8"/>
+                <uol name="../stand1/9" value="../stand1/9"/>
+                <uol name="../stand1/10" value="../stand1/10"/>
+                <uol name="../stand1/11" value="../stand1/11"/>
+                <uol name="../stand1/12" value="../stand1/12"/>
+                <uol name="../stand1/13" value="../stand1/13"/>
+                <uol name="../stand1/14" value="../stand1/14"/>
+                <uol name="../stand1/15" value="../stand1/15"/>
+                <uol name="../stand1/16" value="../stand1/16"/>
+                <uol name="../stand1/17" value="../stand1/17"/>
                 <int name="repeatStartIndex" value="6"/>
             </imgdir>
         </imgdir>
@@ -287,7 +287,7 @@
             <canvas name="icon" width="32" height="32">
                 <vector name="origin" x="0" y="33"/>
             </canvas>
-            <uol name="iconRaw" value="./icon"/>
+            <uol name="./icon" value="./icon"/>
             <int name="price" value="1"/>
             <int name="timeLimited" value="1"/>
             <int name="slotMax" value="1"/>
@@ -324,7 +324,7 @@
                 </canvas>
                 <int name="pos" value="3"/>
             </imgdir>
-            <uol name="stand2" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
             <imgdir name="walk1">
                 <string name="z" value="-1"/>
                 <canvas name="0" width="63" height="56">
@@ -352,36 +352,36 @@
                     <int name="z" value="0"/>
                 </canvas>
             </imgdir>
-            <uol name="alert" value="stand1"/>
-            <uol name="swingO1" value="stand1"/>
-            <uol name="swingO2" value="stand1"/>
-            <uol name="swingO3" value="stand1"/>
-            <uol name="swingOF" value="stand1"/>
-            <uol name="swingT1" value="stand1"/>
-            <uol name="swingT2" value="stand1"/>
-            <uol name="swingT3" value="stand1"/>
-            <uol name="swingTF" value="stand1"/>
-            <uol name="swingP1" value="stand1"/>
-            <uol name="swingP2" value="stand1"/>
-            <uol name="swingPF" value="stand1"/>
-            <uol name="stabO1" value="stand1"/>
-            <uol name="stabO2" value="stand1"/>
-            <uol name="stabOF" value="stand1"/>
-            <uol name="stabT1" value="stand1"/>
-            <uol name="stabT2" value="stand1"/>
-            <uol name="stabTF" value="stand1"/>
-            <uol name="proneStab" value="stand1"/>
-            <uol name="prone" value="stand1"/>
-            <uol name="shoot1" value="stand1"/>
-            <uol name="shoot2" value="stand1"/>
-            <uol name="shootF" value="stand1"/>
-            <uol name="heal" value="stand1"/>
-            <uol name="fly" value="walk1"/>
-            <uol name="jump" value="walk1"/>
-            <uol name="sit" value="stand1"/>
-            <uol name="ladder" value="walk1"/>
-            <uol name="rope" value="walk1"/>
-            <uol name="walk2" value="walk1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="walk1" value="walk1"/>
+            <uol name="walk1" value="walk1"/>
+            <uol name="stand1" value="stand1"/>
+            <uol name="walk1" value="walk1"/>
+            <uol name="walk1" value="walk1"/>
+            <uol name="walk1" value="walk1"/>
             <string name="action" value="1"/>
             <int name="tamingMob" value="1"/>
         </imgdir>
@@ -444,14 +444,14 @@
             </imgdir>
             <imgdir name="stand2">
                 <string name="z" value="-1"/>
-                <uol name="0" value="../stand1/0"/>
-                <uol name="1" value="../stand1/1"/>
-                <uol name="2" value="../stand1/2"/>
-                <uol name="3" value="../stand1/3"/>
-                <uol name="4" value="../stand1/4"/>
-                <uol name="5" value="../stand1/5"/>
-                <uol name="6" value="../stand1/6"/>
-                <uol name="7" value="../stand1/7"/>
+                <uol name="../stand1/0" value="../stand1/0"/>
+                <uol name="../stand1/1" value="../stand1/1"/>
+                <uol name="../stand1/2" value="../stand1/2"/>
+                <uol name="../stand1/3" value="../stand1/3"/>
+                <uol name="../stand1/4" value="../stand1/4"/>
+                <uol name="../stand1/5" value="../stand1/5"/>
+                <uol name="../stand1/6" value="../stand1/6"/>
+                <uol name="../stand1/7" value="../stand1/7"/>
                 <int name="fixed" value="1"/>
                 <int name="animate" value="1"/>
             </imgdir>

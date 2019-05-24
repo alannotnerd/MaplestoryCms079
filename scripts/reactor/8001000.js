@@ -1,4 +1,10 @@
-function act(){
-	rm.spawnMonster(9400112, 830, 160); 
-	rm.getPlayer().getMap().resetReactors(); // It's the only reactor so we can do this
+/*
+ * 8001000.js: Zipangu: The Nightmarish Last Days
+ * Summons BodyGuard A
+*/
+
+function act() {
+    rm.changeMusic("Bgm06/FinalFight");
+    rm.spawnMonster(9400112, 830, 160);
+    rm.mapMessage("保镖A 出现了。")
 }

@@ -2,7 +2,7 @@ var status = -1;
 
 function start(mode, type, selection) {
     qm.sendNext("Ah, a clue! Let's go back to Scadur.");
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }
 

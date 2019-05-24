@@ -9,10 +9,11 @@
         </canvas>
         <string name="islot" value="Sd"/>
         <string name="vslot" value="Sd"/>
-        <int name="pachinko" value="1"/>
-        <int name="timeLimited" value="1"/>
-        <int name="slotMax" value="1"/>
         <int name="tradeBlock" value="1"/>
+        <int name="tuc" value="0"/>
+        <int name="reqLevel" value="0"/>
+        <int name="only" value="0"/>
+        <int name="notSale" value="1"/>
     </imgdir>
     <imgdir name="1902035">
         <imgdir name="walk1">
@@ -26,33 +27,33 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="4">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="walk2">
             <imgdir name="0">
-                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
             </imgdir>
             <imgdir name="4">
-                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="stand1">
@@ -66,15 +67,15 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="stand2">
             <imgdir name="0">
-                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="0" value="../../walk1/1/0"/>
+                <uol name="../../walk1/1/0" value="../../walk1/1/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="tired">
@@ -88,19 +89,19 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="4">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="5">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="jump">
@@ -176,10 +177,10 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="0" value="../0/0"/>
+                <uol name="../0/0" value="../0/0"/>
             </imgdir>
         </imgdir>
     </imgdir>

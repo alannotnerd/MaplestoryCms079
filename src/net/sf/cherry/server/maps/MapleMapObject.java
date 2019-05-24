@@ -1,24 +1,23 @@
 package net.sf.cherry.server.maps;
 
-import java.awt.Point;
-
 import net.sf.cherry.client.MapleClient;
 
-public abstract interface MapleMapObject
-{
-  public abstract int getObjectId();
+import java.awt.*;
 
-  public abstract void setObjectId(int paramInt);
+public interface MapleMapObject {
+  int getObjectId();
 
-  public abstract MapleMapObjectType getType();
+  void setObjectId(int paramInt);
 
-  public abstract Point getPosition();
+  MapleMapObjectType getType();
 
-  public abstract void setPosition(Point paramPoint);
+  Point getPosition();
 
-  public abstract void sendSpawnData(MapleClient paramMapleClient);
+  void setPosition(Point paramPoint);
 
-  public abstract void sendDestroyData(MapleClient paramMapleClient);
+  void sendSpawnData(MapleClient paramMapleClient);
+
+  void sendDestroyData(MapleClient paramMapleClient);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

@@ -2,13 +2,12 @@ package net.sf.cherry.provider;
 
 import java.awt.image.BufferedImage;
 
-public abstract interface MapleCanvas
-{
-  public abstract int getHeight();
+public interface MapleCanvas {
+  int getHeight();
 
-  public abstract int getWidth();
+  int getWidth();
 
-  public abstract BufferedImage getImage();
+  BufferedImage getImage();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

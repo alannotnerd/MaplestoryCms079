@@ -1,90 +1,60 @@
-/*
-	This file is part of the cherry Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@cherry.de>
-                       Jan Christian Meyer <vimes@cherry.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/**
--- Odin JavaScript --------------------------------------------------------------------------------
-	Olson the Toy Soldier - Eos Tower 100th Floor(221024400)
--- By ---------------------------------------------------------------------------------------------
-	Information
--- Version Info -----------------------------------------------------------------------------------
-	1.0 - First Version by Information
----------------------------------------------------------------------------------------------------
-**/
-
 var dh;
 var entry = true;
 
 function start() {
-	dh = cm.getEventManager("DollHouse");
-	status = -1;
-	action(1, 0, 0);
+    dh = cm.getEventManager("DollHouse");
+    status = -1;
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-	} else {
-		if(mode == 0 && status == 0) {
-			cm.sendNext("I see. It's very understandable, considering the fact that you'll be facing a very dangerous monster inside. If you ever feel a change of heart, then please come talk to me. I sure can use help from someone like you.");
-			cm.dispose();
-			return;
-		} else if(mode == 0 && status == 2) {
-			cm.sendNext("I see. Please talk to me when you're ready to take on this task. I advise you not to take too much time, through, for the monster may turn into something totally different. We have to act like we don't know anything.");
-			cm.dispose();
-			return;
-		}
-		if(mode == 1) {
-			status++;
-		} else {
-			status--;
-		}
-		if(cm.getQuestStatus(3230).getId() == net.sf.cherry.client.MapleQuestStatus.Status.STARTED.getId()) {
-			if(status == 0) {
-				cm.sendYesNo("Hmmm...I've heard a lot about you through #b#p2040001##k. You got him a bunch of #b#t4031093##k so he can fight off boredom at work. Well ... alright, then. There's a dangerous, dangerous monster inside. I want to ask you for help in regards to locating it. Would you like to help me out?");
-			} else if(status == 1) {
-				cm.sendNext("Thank you so much. Actually, #b#t4031093##k asked you to get #b#p2040001##k as a way of testing your abilities to see if you can handle this, so don't think of it as a random request. I think someone like you can handle adversity well.");
-			} else if(status == 2) {
-				cm.sendYesNo("A while ago, a monster came here from another dimension thanks to a crack in dimensions, and it stole the pendulum of the clock. It hid itself inside the room over there camouflaged as a dollhouse. It all looks the same to me, so there's no way to find it. Would you help us locate it?");
-				if(dh.getProperty("noEntry").equals("true"))
-					entry = false;
-			} else if(status == 3) {
-				cm.sendNext("Alright! I'll take you to a room, where you'll find a number of dollhouses all over the place. One of them will look slightly different from the others. Your job is to locate it and break its door. If you break a wrong dollhouse, however, you'll be sent out here without warning, so please be careful on that.");
-			} else if(status == 4) {
-				cm.sendNextPrev("You'll also find monsters in there, and they have gotten so powerful thanks to the monster from the other dimension that you won't able to take them down. Please find #b#t4031094##k within the time limit and then notify #b#p2040028##k, who should be inside. Let's get this started!");
-			} else if(status == 5) {
-				if(entry == false) {
-					cm.sendPrev("Someone else must be inside looking for the dollhouse. Unfortunately I can only let in one person at a time, so please wait for your turn.");
-				} else {
-					cm.removeAll(4031093);
-					dh.newInstance("DollHouse");
-					dh.getInstance("DollHouse").registerPlayer(cm.getChar());
-				}
-				cm.dispose();
-			}
-		} else if(cm.getQuestStatus(3230).getId() == net.sf.cherry.client.MapleQuestStatus.Status.COMPLETED) {
-			cm.sendNext("Thanks to #h #, we got the #b#t4031094##k back and destroyed the monster from the other dimension. Thankfully we haven't found one like that since. I can't thank you enough for helping us out. Hope you enjoy your stay here at #m220000000#!");
-			cm.dispose();
-		} else {
-			cm.sendOk("We are the toy soldiers here guarding this room, preventing anyone else from entering. I cannot inform you of the reasoning behind this policy. Now, if you'll excuse me, I am working here.");
-			cm.dispose();
-		}
-	}
+
+    if (mode == -1) {
+        cm.dispose();
+    } else {
+        if (mode == 0 && status == 0) {
+            cm.sendNext("我明白。这是非常可以理解的，考虑到你将面临内部一个非常危险的怪物的事实。如果你觉得心脏的改变，那么请你跟我说话。我确信可以从别人像你使用的帮助。");
+            cm.dispose();
+            return;
+        } else if (mode == 0 && status == 2) {
+            cm.sendNext("我明白。这是非常可以理解的，考虑到你将面临内部一个非常危险的怪物的事实。如果你觉得心脏的改变，那么请你跟我说话。我确信可以从别人像你使用的帮助。");
+            cm.dispose();
+            return;
+        }
+        if (mode == 1) {
+            status++;
+        } else {
+            status--;
+        }
+        if (cm.getQuestStatus(3230) == 1) {
+            if (status == 0) {
+                cm.sendYesNo("嗯...我是 #b#p2040001##k. 我听说过很多关于你的事情... 你能帮我找回 #b#t4031093##k 吗拜托了!");
+            } else if (status == 1) {
+                cm.sendNext("非常感谢。其实, #b#p2040001##k 问你拿  #b#t4031093##k 为测试自己的能力，看看你是否能处理这个问题，所以不要把它当做一个随机请求的方式。我觉得你这样的人能处理好逆境.");
+            } else if (status == 2) {
+                cm.sendYesNo("前段时间，一个怪物来到这里从另一个层面得益于尺寸的裂缝，并偷走了钟摆。它躲在自己的房间里那边伪装成一个玩具屋。这一切看起来是一样的我，所以没有办法找到它。你会帮助我们找到它？");
+                if (dh != null && dh.getProperty("noEntry") != null && dh.getProperty("noEntry").equals("true")) {
+                    entry = false;
+                }
+            } else if (status == 3) {
+                cm.sendNext("好的，我会带你到另一个房间，那边有许多相同的玩具屋，不过你仔细看会发现有所不同，你的任务是打破真正的玩具屋然后把#t4031094#带回来给我。.");
+            } else if (status == 4) {
+                cm.sendNextPrev("你需要在时间内找到#t4031094# 然后像我回报。");
+            } else if (status == 5) {
+                if (dh == null || entry == false) {
+                    cm.sendPrev("玩具屋内好像有人了。我只能让一个人在里面，所以请你等待吧。");
+                } else {
+                    cm.removeAll(4031093);
+                    dh.startInstance(cm.getChar());
+                }
+                cm.dispose();
+            }
+        } else if (cm.getQuestStatus(3230) == 2) {
+            cm.sendNext("谢谢你 #h #, 我们得到了 #b#t4031094##k 回并销毁从另一个邪恶的怪物。值得庆幸的是，我们还没有找到一个这样的，因为。我不知道怎么感谢你帮助我们这么多。希望你在#m220000000#过得愉快!");
+            cm.dispose();
+        } else {
+            cm.sendOk("我们在这里守卫这个房间的玩具士兵，防止任何人进入这个地方。");
+            cm.dispose();
+        }
+    }
 }

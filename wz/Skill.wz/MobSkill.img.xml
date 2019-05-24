@@ -1633,7 +1633,7 @@
                     <int name="pos" value="2"/>
                     <int name="icon" value="1"/>
                 </imgdir>
-                <uol name="mob0" value="../../../110/level/3/mob0"/>
+                <uol name="../../../110/level/3/mob0" value="../../../110/level/3/mob0"/>
                 <vector name="lt" x="-400" y="-350"/>
                 <vector name="rb" x="400" y="250"/>
             </imgdir>
@@ -1830,7 +1830,7 @@
                     <int name="pos" value="2"/>
                     <int name="icon" value="1"/>
                 </imgdir>
-                <uol name="mob0" value="../../../110/level/3/mob0"/>
+                <uol name="../../../110/level/3/mob0" value="../../../110/level/3/mob0"/>
                 <vector name="lt" x="-400" y="-350"/>
                 <vector name="rb" x="400" y="250"/>
             </imgdir>
@@ -2022,7 +2022,7 @@
                     <int name="pos" value="2"/>
                     <int name="icon" value="1"/>
                 </imgdir>
-                <uol name="mob0" value="../../../110/level/3/mob0"/>
+                <uol name="../../../110/level/3/mob0" value="../../../110/level/3/mob0"/>
                 <vector name="lt" x="-400" y="-350"/>
                 <vector name="rb" x="400" y="250"/>
             </imgdir>
@@ -2450,7 +2450,7 @@
                 <int name="mpCon" value="5"/>
                 <int name="interval" value="30"/>
                 <int name="time" value="1"/>
-                <uol name="effect" value="../../../114/level/2/effect"/>
+                <uol name="../../../114/level/2/effect" value="../../../114/level/2/effect"/>
                 <vector name="lt" x="-400" y="-350"/>
                 <vector name="rb" x="400" y="250"/>
             </imgdir>
@@ -6600,11 +6600,11 @@
                 <vector name="lt" x="-700" y="-440"/>
                 <vector name="rb" x="240" y="55"/>
                 <imgdir name="affected">
-                    <uol name="0" value="../../1/affected/0"/>
-                    <uol name="1" value="../../1/affected/1"/>
-                    <uol name="2" value="../../1/affected/2"/>
-                    <uol name="3" value="../../1/affected/3"/>
-                    <uol name="4" value="../../1/affected/4"/>
+                    <uol name="../../1/affected/0" value="../../1/affected/0"/>
+                    <uol name="../../1/affected/1" value="../../1/affected/1"/>
+                    <uol name="../../1/affected/2" value="../../1/affected/2"/>
+                    <uol name="../../1/affected/3" value="../../1/affected/3"/>
+                    <uol name="../../1/affected/4" value="../../1/affected/4"/>
                     <int name="pos" value="1"/>
                     <int name="repeat" value="1"/>
                 </imgdir>
@@ -6618,11 +6618,11 @@
                 <vector name="lt" x="-730" y="-190"/>
                 <vector name="rb" x="580" y="110"/>
                 <imgdir name="affected">
-                    <uol name="0" value="../../1/affected/0"/>
-                    <uol name="1" value="../../1/affected/1"/>
-                    <uol name="2" value="../../1/affected/2"/>
-                    <uol name="3" value="../../1/affected/3"/>
-                    <uol name="4" value="../../1/affected/4"/>
+                    <uol name="../../1/affected/0" value="../../1/affected/0"/>
+                    <uol name="../../1/affected/1" value="../../1/affected/1"/>
+                    <uol name="../../1/affected/2" value="../../1/affected/2"/>
+                    <uol name="../../1/affected/3" value="../../1/affected/3"/>
+                    <uol name="../../1/affected/4" value="../../1/affected/4"/>
                     <int name="pos" value="1"/>
                     <int name="repeat" value="1"/>
                 </imgdir>
@@ -6873,7 +6873,7 @@
                 <vector name="lt" x="-300" y="-120"/>
                 <vector name="rb" x="300" y="120"/>
                 <imgdir name="affected">
-                    <uol name="0" value="../../1/affected/0"/>
+                    <uol name="../../1/affected/0" value="../../1/affected/0"/>
                     <int name="pos" value="2"/>
                 </imgdir>
             </imgdir>
@@ -6949,7 +6949,7 @@
                 <vector name="lt" x="-800" y="-800"/>
                 <vector name="rb" x="800" y="50"/>
                 <imgdir name="affected">
-                    <uol name="0" value="../../1/affected/0"/>
+                    <uol name="../../1/affected/0" value="../../1/affected/0"/>
                     <int name="pos" value="2"/>
                 </imgdir>
                 <int name="hp" value="60"/>
@@ -7010,7 +7010,7 @@
                 <vector name="lt" x="-800" y="-800"/>
                 <vector name="rb" x="800" y="50"/>
                 <imgdir name="affected">
-                    <uol name="0" value="../../1/affected/0"/>
+                    <uol name="../../1/affected/0" value="../../1/affected/0"/>
                     <int name="pos" value="2"/>
                 </imgdir>
                 <int name="hp" value="30"/>
@@ -7022,7 +7022,7 @@
                 <vector name="lt" x="-300" y="-120"/>
                 <vector name="rb" x="300" y="120"/>
                 <imgdir name="affected">
-                    <uol name="0" value="../../1/affected/0"/>
+                    <uol name="../../1/affected/0" value="../../1/affected/0"/>
                     <int name="pos" value="2"/>
                 </imgdir>
                 <int name="interval" value="20"/>
@@ -10300,23 +10300,23 @@
                         <vector name="origin" x="81" y="149"/>
                         <int name="delay" value="100"/>
                     </canvas>
-                    <uol name="5" value="0"/>
-                    <uol name="6" value="1"/>
-                    <uol name="7" value="2"/>
-                    <uol name="8" value="3"/>
-                    <uol name="9" value="4"/>
-                    <uol name="10" value="0"/>
-                    <uol name="11" value="1"/>
-                    <uol name="12" value="2"/>
-                    <uol name="13" value="3"/>
-                    <uol name="14" value="4"/>
-                    <uol name="15" value="0"/>
-                    <uol name="16" value="1"/>
-                    <uol name="17" value="2"/>
-                    <uol name="18" value="3"/>
-                    <uol name="19" value="4"/>
+                    <uol name="0" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="2" value="2"/>
+                    <uol name="3" value="3"/>
+                    <uol name="4" value="4"/>
+                    <uol name="0" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="2" value="2"/>
+                    <uol name="3" value="3"/>
+                    <uol name="4" value="4"/>
+                    <uol name="0" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="2" value="2"/>
+                    <uol name="3" value="3"/>
+                    <uol name="4" value="4"/>
                 </imgdir>
-                <uol name="mob" value="../1/mob"/>
+                <uol name="../1/mob" value="../1/mob"/>
             </imgdir>
             <imgdir name="3">
                 <int name="x" value="1"/>
@@ -10591,7 +10591,7 @@
                 <int name="mpCon" value="5"/>
                 <int name="interval" value="45"/>
                 <int name="time" value="30"/>
-                <uol name="effect" value="../../../140/level/1/effect"/>
+                <uol name="../../../140/level/1/effect" value="../../../140/level/1/effect"/>
                 <imgdir name="mob">
                     <canvas name="0" width="77" height="76">
                         <vector name="origin" x="67" y="119"/>
@@ -10627,23 +10627,23 @@
                         <vector name="origin" x="81" y="149"/>
                         <int name="delay" value="100"/>
                     </canvas>
-                    <uol name="5" value="0"/>
-                    <uol name="6" value="1"/>
-                    <uol name="7" value="2"/>
-                    <uol name="8" value="3"/>
-                    <uol name="9" value="4"/>
-                    <uol name="10" value="0"/>
-                    <uol name="11" value="1"/>
-                    <uol name="12" value="2"/>
-                    <uol name="13" value="3"/>
-                    <uol name="14" value="4"/>
-                    <uol name="15" value="0"/>
-                    <uol name="16" value="1"/>
-                    <uol name="17" value="2"/>
-                    <uol name="18" value="3"/>
-                    <uol name="19" value="4"/>
+                    <uol name="0" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="2" value="2"/>
+                    <uol name="3" value="3"/>
+                    <uol name="4" value="4"/>
+                    <uol name="0" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="2" value="2"/>
+                    <uol name="3" value="3"/>
+                    <uol name="4" value="4"/>
+                    <uol name="0" value="0"/>
+                    <uol name="1" value="1"/>
+                    <uol name="2" value="2"/>
+                    <uol name="3" value="3"/>
+                    <uol name="4" value="4"/>
                 </imgdir>
-                <uol name="mob" value="../1/mob"/>
+                <uol name="../1/mob" value="../1/mob"/>
             </imgdir>
             <imgdir name="3">
                 <int name="x" value="1"/>
@@ -10773,7 +10773,7 @@
                 <int name="mpCon" value="5"/>
                 <int name="interval" value="45"/>
                 <int name="time" value="30"/>
-                <uol name="effect" value="../../../140/level/1/effect"/>
+                <uol name="../../../140/level/1/effect" value="../../../140/level/1/effect"/>
                 <imgdir name="mob">
                     <int name="repeat" value="1"/>
                     <int name="pos" value="2"/>
@@ -11194,7 +11194,7 @@
                 <int name="2" value="6230101"/>
                 <int name="3" value="6230101"/>
                 <int name="4" value="6230101"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="6">
                 <int name="interval" value="7"/>
@@ -11206,7 +11206,7 @@
                 <int name="2" value="6300003"/>
                 <int name="3" value="6300003"/>
                 <int name="4" value="6300003"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="7">
                 <int name="interval" value="5"/>
@@ -11218,7 +11218,7 @@
                 <int name="2" value="6400003"/>
                 <int name="3" value="6400003"/>
                 <int name="4" value="6400003"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="8">
                 <int name="interval" value="40"/>
@@ -11432,7 +11432,7 @@
                 <int name="2" value="6230101"/>
                 <int name="3" value="6230101"/>
                 <int name="4" value="6230101"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="33">
                 <int name="interval" value="7"/>
@@ -11444,7 +11444,7 @@
                 <int name="2" value="6300003"/>
                 <int name="3" value="6300003"/>
                 <int name="4" value="6300003"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="34">
                 <int name="interval" value="5"/>
@@ -11456,7 +11456,7 @@
                 <int name="2" value="6400003"/>
                 <int name="3" value="6400003"/>
                 <int name="4" value="6400003"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="35">
                 <int name="interval" value="5"/>
@@ -11468,7 +11468,7 @@
                 <int name="2" value="6400004"/>
                 <int name="3" value="6400004"/>
                 <int name="4" value="6400004"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="36">
                 <int name="interval" value="7"/>
@@ -11480,7 +11480,7 @@
                 <int name="2" value="6300003"/>
                 <int name="3" value="6300003"/>
                 <int name="4" value="6300003"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="37">
                 <int name="interval" value="5"/>
@@ -11492,7 +11492,7 @@
                 <int name="2" value="6400003"/>
                 <int name="3" value="6400003"/>
                 <int name="4" value="6400003"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="38">
                 <int name="interval" value="5"/>
@@ -11504,7 +11504,7 @@
                 <int name="2" value="6400004"/>
                 <int name="3" value="6400004"/>
                 <int name="4" value="6400004"/>
-                <uol name="effect" value="../4/effect"/>
+                <uol name="../4/effect" value="../4/effect"/>
             </imgdir>
             <imgdir name="39">
                 <int name="interval" value="1"/>

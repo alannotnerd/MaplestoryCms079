@@ -1,15 +1,15 @@
 var status = -1;
 
 function start(mode, type, selection) {
-    qm.sendOk("ä»»åŠ¡æš‚æ—¶æ€§å®Œæˆ.");
+    qm.sendOk("ÈÎÎñÔİÊ±ĞÔÍê³É.");
     qm.forceStartQuest();
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }
 
 function end(mode, type, selection) {
-    qm.sendOk("ä»»åŠ¡æš‚æ—¶æ€§å®Œæˆ.");
+    qm.sendOk("ÈÎÎñÔİÊ±ĞÔÍê³É.");
     qm.forceStartQuest();
-    qm.completeQuest();
+    qm.forceCompleteQuest();
     qm.dispose();
 }

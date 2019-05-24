@@ -1,6 +1,6 @@
 /*
-	ä»»åŠ¡: å¯åŠ¨å¸ƒé›·å…¹é¦–è„‘
-	æè¿°: ç»è¿‡ä¸€ç•ªæ¿€æˆ˜åç»ˆäºæ¶ˆç­äº†#o9400295#ï¼Œç„¶åæˆ‘å‘#p9120025#æŠ¥å‘Šã€‚
+	ÈÎÎñ: Æô¶¯²¼À××ÈÊ×ÄÔ
+	ÃèÊö: ¾­¹ıÒ»·¬¼¤Õ½ºóÖÕÓÚÏûÃğÁË#o9400295#£¬È»ºóÎÒÏò#p9120025#±¨¸æ¡£
 */
 
 var status = -1;
@@ -29,7 +29,7 @@ function end(mode, type, selection) {
             qm.sendNextPrev("The truth is, there have been underground pathways that leads from Shibuya to Roppongi Mall. Using this will allow you to enter the building without being noticed by #o9400287#. This is the map that'll lead you to there. It's just a straight line, so you should have no trouble entering there, but I'll give you the map nontheless.");
         } else if (status == 4) {
             qm.sendOk("Please head over to Shibuya in year 2102, and use the undergroud path to enter the mall. Since the mall is the headquarters, you may encounter a number of monsters you wil have never seen. Please do not underestimate them. Good luck!");
-            qm.completeQuest();
+            qm.forceCompleteQuest();
             qm.safeDispose();
         }
     }

@@ -676,28 +676,28 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="2">
-                    <uol name="0" value="../0/0"/>
-                    <uol name="1" value="../0/1"/>
-                    <uol name="2" value="../0/2"/>
-                    <uol name="3" value="../0/3"/>
+                    <uol name="../0/0" value="../0/0"/>
+                    <uol name="../0/1" value="../0/1"/>
+                    <uol name="../0/2" value="../0/2"/>
+                    <uol name="../0/3" value="../0/3"/>
                 </imgdir>
                 <imgdir name="3">
-                    <uol name="0" value="../1/0"/>
-                    <uol name="1" value="../1/1"/>
-                    <uol name="2" value="../1/2"/>
-                    <uol name="3" value="../1/3"/>
+                    <uol name="../1/0" value="../1/0"/>
+                    <uol name="../1/1" value="../1/1"/>
+                    <uol name="../1/2" value="../1/2"/>
+                    <uol name="../1/3" value="../1/3"/>
                 </imgdir>
                 <imgdir name="4">
-                    <uol name="0" value="../0/0"/>
-                    <uol name="1" value="../0/1"/>
-                    <uol name="2" value="../0/2"/>
-                    <uol name="3" value="../0/3"/>
+                    <uol name="../0/0" value="../0/0"/>
+                    <uol name="../0/1" value="../0/1"/>
+                    <uol name="../0/2" value="../0/2"/>
+                    <uol name="../0/3" value="../0/3"/>
                 </imgdir>
                 <imgdir name="5">
-                    <uol name="0" value="../1/0"/>
-                    <uol name="1" value="../1/1"/>
-                    <uol name="2" value="../1/2"/>
-                    <uol name="3" value="../1/3"/>
+                    <uol name="../1/0" value="../1/0"/>
+                    <uol name="../1/1" value="../1/1"/>
+                    <uol name="../1/2" value="../1/2"/>
+                    <uol name="../1/3" value="../1/3"/>
                 </imgdir>
             </imgdir>
             <imgdir name="effect">

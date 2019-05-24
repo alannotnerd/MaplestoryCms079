@@ -60,16 +60,16 @@
     </imgdir>
     <imgdir name="walk2">
         <imgdir name="0">
-            <uol name="shoes" value="../../walk1/0/shoes"/>
+            <uol name="../../walk1/0/shoes" value="../../walk1/0/shoes"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../../walk1/1/shoes"/>
+            <uol name="../../walk1/1/shoes" value="../../walk1/1/shoes"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="shoes" value="../../walk1/2/shoes"/>
+            <uol name="../../walk1/2/shoes" value="../../walk1/2/shoes"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="shoes" value="../../walk1/3/shoes"/>
+            <uol name="../../walk1/3/shoes" value="../../walk1/3/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand1">
@@ -103,13 +103,13 @@
     </imgdir>
     <imgdir name="stand2">
         <imgdir name="0">
-            <uol name="shoes" value="../../stand1/0/shoes"/>
+            <uol name="../../stand1/0/shoes" value="../../stand1/0/shoes"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../../stand1/1/shoes"/>
+            <uol name="../../stand1/1/shoes" value="../../stand1/1/shoes"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="shoes" value="../../stand1/2/shoes"/>
+            <uol name="../../stand1/2/shoes" value="../../stand1/2/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="alert">
@@ -616,10 +616,10 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="shoes" value="../../swingPF/0/shoes"/>
+            <uol name="../../swingPF/0/shoes" value="../../swingPF/0/shoes"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../../swingPF/1/shoes"/>
+            <uol name="../../swingPF/1/shoes" value="../../swingPF/1/shoes"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="shoes" width="19" height="20">
@@ -631,7 +631,7 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="shoes" value="../../stabT1/2/shoes"/>
+            <uol name="../../stabT1/2/shoes" value="../../stabT1/2/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -645,10 +645,10 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -662,16 +662,16 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
         <imgdir name="4">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="shootF">
@@ -694,7 +694,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="shoes" value="../1/shoes"/>
+            <uol name="../1/shoes" value="../1/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -708,23 +708,23 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../0/shoes"/>
+            <uol name="../0/shoes" value="../0/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="shoes" value="../../proneStab/0/shoes"/>
+            <uol name="../../proneStab/0/shoes" value="../../proneStab/0/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="shoes" value="../../alert/1/shoes"/>
+            <uol name="../../alert/1/shoes" value="../../alert/1/shoes"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="shoes" value="../../swingO2/1/shoes"/>
+            <uol name="../../swingO2/1/shoes" value="../../swingO2/1/shoes"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="shoes" value="../../swingO2/0/shoes"/>
+            <uol name="../../swingO2/0/shoes" value="../../swingO2/0/shoes"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

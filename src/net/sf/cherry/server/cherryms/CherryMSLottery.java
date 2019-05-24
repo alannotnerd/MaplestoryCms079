@@ -1,42 +1,42 @@
 package net.sf.cherry.server.cherryms;
 
-import java.util.Collection;
-
 import net.sf.cherry.client.MapleCharacter;
 import net.sf.cherry.net.channel.ChannelServer;
 import net.sf.cherry.server.maps.MapleMapFactory;
 
-public abstract interface CherryMSLottery {
+import java.util.Collection;
 
-    public abstract void addChar(MapleCharacter paramMapleCharacter);
+public interface CherryMSLottery {
 
-    public abstract void doLottery();
+  void addChar(MapleCharacter paramMapleCharacter);
 
-    public abstract void drawalottery();
+  void doLottery();
 
-    public abstract long getAllpeichu();
+  void drawalottery();
 
-    public abstract long getAlltouzhu();
+  long getAllpeichu();
 
-    public abstract ChannelServer getChannelServer();
+  void setAllpeichu(long paramLong);
 
-    public abstract Collection<MapleCharacter> getCharacters();
+  long getAlltouzhu();
 
-    public abstract MapleMapFactory getMapleMapFactory();
+  void setAlltouzhu(long paramLong);
 
-    public abstract int getTouNumbyType(int paramInt);
+  ChannelServer getChannelServer();
 
-    public abstract int getZjNum();
+  Collection<MapleCharacter> getCharacters();
 
-    public abstract void setAllpeichu(long paramLong);
+  void setCharacters(Collection<MapleCharacter> paramCollection);
 
-    public abstract void setAlltouzhu(long paramLong);
+  MapleMapFactory getMapleMapFactory();
 
-    public abstract void setCharacters(Collection<MapleCharacter> paramCollection);
+  int getTouNumbyType(int paramInt);
 
-    public abstract void setZjNum(int paramInt);
+  int getZjNum();
 
-    public abstract void warp(int paramInt, MapleCharacter paramMapleCharacter);
+  void setZjNum(int paramInt);
+
+  void warp(int paramInt, MapleCharacter paramMapleCharacter);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

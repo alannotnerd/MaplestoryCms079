@@ -1,100 +1,69 @@
-/*
-	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
-		       Matthias Butz <matze@odinms.de>
-		       Jan Christian Meyer <vimes@odinms.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation version 3 as published by
-    the Free Software Foundation. You may not use, modify or distribute
-    this program under any other version of the GNU Affero General Public
-    License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-var status = 0;
-var party;
-var preamble;
-var mobcount;
-
 function start() {
     status = -1;
+
     action(1, 0, 0);
 }
-
 function action(mode, type, selection) {
     if (mode == -1) {
         cm.dispose();
-    }else if (mode == 0){
-        cm.dispose();
-    }else{
-        if (mode == 1)
+    }
+    else {
+        if (status >= 0 && mode == 0) {
+
+            cm.sendOk("感谢你的光临！");
+            cm.dispose();
+            return;
+        }
+        if (mode == 1) {
             status++;
-        else
+        }
+        else {
             status--;
-        var eim = cm.getPlayer().getEventInstance(); 
-        var nthtext = "last";
+        }
         if (status == 0) {
-            party = eim.getPlayers();
-            preamble = eim.getProperty("leader" + nthtext + "preamble");
-            mobcount = eim.getProperty("leader" + nthtext + "mobcount");
-            if (preamble == null) {
-                cm.sendOk("Hi. Welcome to the " + nthtext + " stage. This is where you fight the #bboss#k. Shall we get started?");
-                status = 9;
-            }else{
-                if(!isLeader()){
-                    if(mobcount == null){
-                        cm.sendOk("Please tell your #bParty-Leader#k to come talk to me");
-                        cm.dispose();
-                    }else{
-                        cm.warp(109020001,0);
-                        cm.dispose();
-                    }
-                }
-                if(mobcount == null){
-                    cm.sendYesNo("You're finished?!");
-                }
+            var tex2 = "";
+            var text = "";
+            for (i = 0; i < 10; i++) {
+                text += "";
             }
-        }else if (status == 1){
-            //if (cm.mobCount(600010000)==0) {
-            if (cm.mapMobCount() == 0) {
-                cm.sendOk("Good job! You've killed 'em!");
-            }else{
-                cm.sendOk("What are you talking about? Kill those creatures!!");
-                cm.dispose();
-            }
-        }else if (status == 2){
-            cm.sendOk("You may continue to the next stage!");
-        }else if (status == 3) {
-            cm.clear();
-            eim.setProperty("leader" + nthtext + "mobcount","done");
-            var map = eim.getMapInstance(109020001);
-            var members = eim.getPlayers();
-            cm.warpMembers(map, members);
-            cm.givePartyExp(2500, eim.getPlayers());
+			//显示物品ID图片用的代码是  #v这里写入ID#
+            text += "#d在宝箱中，如果你找到了#v4031216#,我就能帮你召唤怪物去骚扰其他玩家哦~ (^O^).8个珠子召唤一次.#l\r\n#L1##r召唤怪物.\r\n"//3
+            cm.sendSimple(text);
+        } else if (selection == 1) {
+			//1
+			//2
+			//3
+			//4
+			//5
+			/*if(!cm.beibao(1,3)){
+            cm.sendOk("装备栏空余不足3个空格！");
             cm.dispose();
-        }else if (status == 10){
-            eim.setProperty("leader" + nthtext + "preamble","done");
-//            cm.summonMobAtPosition(8220000,25000000,1500000,1,-762,-1307);
-//            cm.summonMobAtPosition(8220001,15000000,750000,1,-788,-851);
-//            cm.summonMobAtPosition(9410015,15000000,750000,1,128,-851);
+			}else if(!cm.beibao(2,1)){
+            cm.sendOk("消耗栏空余不足1个空格！");
             cm.dispose();
-        }           
+			}else if(!cm.beibao(3,1)){
+            cm.sendOk("设置栏空余不足1个空格！");
+            cm.dispose();
+			}else if(!cm.beibao(4,1)){
+            cm.sendOk("其他栏空余不足1个空格！");
+            cm.dispose();
+			}else if(!cm.beibao(5,1)){
+            cm.sendOk("现金栏空余不足1个空格！");
+            cm.dispose();
+			}else */if(cm.haveItem(4031216,8)){
+				cm.gainItem(4031216, -8);
+				cm.spawnMonster(6400006, 1);
+				cm.spawnMonster(4230107, 3);
+				cm.gainMeso(200000);
+            cm.sendOk("召唤成功！");
+			cm.worldMessage(6,"玩家：["+cm.getName()+"]在活动地图[南郊平原]召唤了凶猛的怪物.大家小心啊！！！");
+            cm.dispose();
+			}else{
+            cm.sendOk("你要有#v4031216#x3.我才能帮你召唤怪物哦~！");
+            cm.dispose();
+			}
+		}
     }
 }
-     
-     
-function isLeader(){
-    if(cm.getParty() == null){
-        return false;
-    }else{
-        return cm.isLeader();
-    }
-}
+
+

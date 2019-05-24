@@ -1,10 +1,9 @@
 package net.sf.cherry.scripting.reactor;
 
-public abstract interface ReactorScript
-{
-  public abstract void act();
+public interface ReactorScript {
+  void act();
 
-  public abstract void touch();
+  void touch();
 
-  public abstract void untouch();
+  void untouch();
 }

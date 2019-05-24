@@ -1,8 +1,7 @@
 package net.sf.cherry.provider;
 
-public abstract interface MapleDataFileEntry extends MapleDataEntry
-{
-  public abstract void setOffset(int paramInt);
+public interface MapleDataFileEntry extends MapleDataEntry {
+  void setOffset(int paramInt);
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

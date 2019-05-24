@@ -23,10 +23,10 @@
             <vector name="origin" x="25" y="82"/>
             <string name="delay" value="180"/>
         </canvas>
-        <uol name="4" value="0"/>
-        <uol name="5" value="1"/>
-        <uol name="6" value="2"/>
-        <uol name="7" value="3"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
         <canvas name="8" width="61" height="82">
             <vector name="origin" x="25" y="82"/>
             <string name="delay" value="2000"/>
@@ -123,12 +123,12 @@
             <vector name="origin" x="25" y="82"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="10" value="8"/>
-        <uol name="11" value="6"/>
-        <uol name="12" value="5"/>
-        <uol name="13" value="6"/>
-        <uol name="14" value="7"/>
-        <uol name="15" value="8"/>
-        <uol name="16" value="0"/>
+        <uol name="8" value="8"/>
+        <uol name="6" value="6"/>
+        <uol name="5" value="5"/>
+        <uol name="6" value="6"/>
+        <uol name="7" value="7"/>
+        <uol name="8" value="8"/>
+        <uol name="0" value="0"/>
     </imgdir>
 </imgdir>

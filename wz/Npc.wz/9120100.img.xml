@@ -54,7 +54,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="500"/>
         </canvas>
-        <uol name="4" value="2"/>
+        <uol name="2" value="2"/>
         <canvas name="5" width="44" height="66">
             <vector name="origin" x="27" y="65"/>
             <int name="z" value="0"/>

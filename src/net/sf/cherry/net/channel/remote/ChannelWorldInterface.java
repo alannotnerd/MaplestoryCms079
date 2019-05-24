@@ -1,9 +1,5 @@
 package net.sf.cherry.net.channel.remote;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-import java.util.List;
-
 import net.sf.cherry.client.BuddyList;
 import net.sf.cherry.net.MaplePacket;
 import net.sf.cherry.net.world.MapleMessenger;
@@ -13,79 +9,82 @@ import net.sf.cherry.net.world.PartyOperation;
 import net.sf.cherry.net.world.guild.MapleGuildSummary;
 import net.sf.cherry.net.world.remote.WorldChannelCommonOperations;
 
-public abstract interface ChannelWorldInterface extends Remote, WorldChannelCommonOperations
-{
-  public abstract void setChannelId(int paramInt)
-    throws RemoteException;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.util.List;
 
-  public abstract int getChannelId()
-    throws RemoteException;
+public interface ChannelWorldInterface extends Remote, WorldChannelCommonOperations {
+  int getChannelId()
+      throws RemoteException;
 
-  public abstract String getIP()
-    throws RemoteException;
+  void setChannelId(int paramInt)
+      throws RemoteException;
 
-  public abstract boolean isConnected(int paramInt)
-    throws RemoteException;
+  String getIP()
+      throws RemoteException;
 
-  public abstract int getConnected()
-    throws RemoteException;
+  boolean isConnected(int paramInt)
+      throws RemoteException;
 
-  public abstract int getLocation(String paramString)
-    throws RemoteException;
+  int getConnected()
+      throws RemoteException;
 
-  public abstract void updateParty(MapleParty paramMapleParty, PartyOperation paramPartyOperation, MaplePartyCharacter paramMaplePartyCharacter)
-    throws RemoteException;
+  int getLocation(String paramString)
+      throws RemoteException;
 
-  public abstract void partyChat(MapleParty paramMapleParty, String paramString1, String paramString2)
-    throws RemoteException;
+  void updateParty(MapleParty paramMapleParty, PartyOperation paramPartyOperation, MaplePartyCharacter paramMaplePartyCharacter)
+      throws RemoteException;
 
-  public abstract boolean isAvailable()
-    throws RemoteException;
+  void partyChat(MapleParty paramMapleParty, String paramString1, String paramString2)
+      throws RemoteException;
 
-  public abstract BuddyList.BuddyAddResult requestBuddyAdd(String paramString1, int paramInt1, int paramInt2, String paramString2)
-    throws RemoteException;
+  boolean isAvailable()
+      throws RemoteException;
 
-  public abstract void buddyChanged(int paramInt1, int paramInt2, String paramString, int paramInt3, BuddyList.BuddyOperation paramBuddyOperation)
-    throws RemoteException;
+  BuddyList.BuddyAddResult requestBuddyAdd(String paramString1, int paramInt1, int paramInt2, String paramString2)
+      throws RemoteException;
 
-  public abstract int[] multiBuddyFind(int paramInt, int[] paramArrayOfInt)
-    throws RemoteException;
+  void buddyChanged(int paramInt1, int paramInt2, String paramString, int paramInt3, BuddyList.BuddyOperation paramBuddyOperation)
+      throws RemoteException;
 
-  public abstract void sendPacket(List<Integer> paramList, MaplePacket paramMaplePacket, int paramInt)
-    throws RemoteException;
+  int[] multiBuddyFind(int paramInt, int[] paramArrayOfInt)
+      throws RemoteException;
 
-  public abstract void setGuildAndRank(int paramInt1, int paramInt2, int paramInt3)
-    throws RemoteException;
+  void sendPacket(List<Integer> paramList, MaplePacket paramMaplePacket, int paramInt)
+      throws RemoteException;
 
-  public abstract void setOfflineGuildStatus(int paramInt1, byte paramByte, int paramInt2)
-    throws RemoteException;
+  void setGuildAndRank(int paramInt1, int paramInt2, int paramInt3)
+      throws RemoteException;
 
-  public abstract void setGuildAndRank(List<Integer> paramList, int paramInt1, int paramInt2, int paramInt3)
-    throws RemoteException;
+  void setOfflineGuildStatus(int paramInt1, byte paramByte, int paramInt2)
+      throws RemoteException;
 
-  public abstract void reloadGuildCharacters()
-    throws RemoteException;
+  void setGuildAndRank(List<Integer> paramList, int paramInt1, int paramInt2, int paramInt3)
+      throws RemoteException;
 
-  public abstract void changeEmblem(int paramInt, List<Integer> paramList, MapleGuildSummary paramMapleGuildSummary)
-    throws RemoteException;
+  void reloadGuildCharacters()
+      throws RemoteException;
 
-  public abstract String listGMs()
-    throws RemoteException;
+  void changeEmblem(int paramInt, List<Integer> paramList, MapleGuildSummary paramMapleGuildSummary)
+      throws RemoteException;
 
-  public abstract void addMessengerPlayer(MapleMessenger paramMapleMessenger, String paramString, int paramInt1, int paramInt2)
-    throws RemoteException;
+  String listGMs()
+      throws RemoteException;
 
-  public abstract void removeMessengerPlayer(MapleMessenger paramMapleMessenger, int paramInt)
-    throws RemoteException;
+  void addMessengerPlayer(MapleMessenger paramMapleMessenger, String paramString, int paramInt1, int paramInt2)
+      throws RemoteException;
 
-  public abstract void messengerChat(MapleMessenger paramMapleMessenger, String paramString1, String paramString2)
-    throws RemoteException;
+  void removeMessengerPlayer(MapleMessenger paramMapleMessenger, int paramInt)
+      throws RemoteException;
 
-  public abstract void declineChat(String paramString1, String paramString2)
-    throws RemoteException;
+  void messengerChat(MapleMessenger paramMapleMessenger, String paramString1, String paramString2)
+      throws RemoteException;
 
-  public abstract void updateMessenger(MapleMessenger paramMapleMessenger, String paramString, int paramInt1, int paramInt2)
-    throws RemoteException;
+  void declineChat(String paramString1, String paramString2)
+      throws RemoteException;
+
+  void updateMessenger(MapleMessenger paramMapleMessenger, String paramString, int paramInt1, int paramInt2)
+      throws RemoteException;
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

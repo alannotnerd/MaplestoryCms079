@@ -15,13 +15,13 @@ function action(mode, type, selection) {
 		} else if (status == 1) {
 			if (!cm.haveItem(4001431) && !cm.haveItem(4001432)) {
 				cm.sendOk("You need a Golden Temple Ticket.");
-			} else if (cm.getMap(cm.getMapId() + 500 + (selection * 100)).getCharactersSize() > 0) {
+			} else if (cm.getMap(950100500 + (selection * 100)).getCharactersSize() > 0) {
 				cm.sendOk("There is already someone in the map.");
 			} else {
 				if (cm.haveItem(4001431) && !cm.haveItem(4001432)) {
 					cm.gainItem(4001431, -1);
 				}
-				cm.warp(cm.getMapId() + 500 + (selection * 100),0);
+				cm.warp(950100500 + (selection * 100),0);
 			}
 			cm.dispose();
 		}

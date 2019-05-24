@@ -1,40 +1,40 @@
 /*
-	NPC åå­—: 		Adobis
-	æ‰€åœ¨åœ°å›¾: 		æ‰æ˜†çš„ç¥­å°å…¥å£
-	è„šæœ¬åå­—: 		æ‰æ˜†è¿œå¾é˜Ÿ
+	NPC Ãû×Ö: 		Adobis
+	ËùÔÚµØÍ¼: 		ÔúÀ¥µÄ¼ÀÌ¨Èë¿Ú
+	½Å±¾Ãû×Ö: 		ÔúÀ¥Ô¶Õ÷¶Ó
 */
 
 var status = 0;
 
 function action(mode, type, selection) {
-    if (cm.getPlayer().getMapId() == 211042200) { //è‰°è‹¦æ´ç©´â…¢
+    if (cm.getPlayer().getMapId() == 211042200) { //¼è¿à¶´Ñ¨¢ó
         if (selection < 100) {
-            cm.sendSimple("#r#L100#æ‰æ˜†#l\r\n#L101#è¿›é˜¶æ‰æ˜†#l");
+            cm.sendSimple("#r#L100#ÔúÀ¥#l\r\n#L101#½ø½×ÔúÀ¥#l");
         } else {
             if (selection == 100) {
-                cm.warp(211042300, 0); //æ‰æ˜†å…¥å£
+                cm.warp(211042300, 0); //ÔúÀ¥Èë¿Ú
             } else if (selection == 101) {
-                cm.warp(211042301, 0); //è¿›é˜¶æ‰æ˜†å…¥å£
+                cm.warp(211042301, 0); //½ø½×ÔúÀ¥Èë¿Ú
             }
             cm.dispose();
         }
         return;
-    } else if (cm.getPlayer().getMapId() == 211042401) { //è¿›é˜¶æ‰æ˜†çš„ç¥­å°å…¥å£
+    } else if (cm.getPlayer().getMapId() == 211042401) { //½ø½×ÔúÀ¥µÄ¼ÀÌ¨Èë¿Ú
         switch (status) {
         case 0:
             if (cm.getPlayer().getLevel() < 100) {
-                cm.sendOk("ä½ çš„ç­‰çº§å°äº 100 çº§ï¼Œæ— æ³•æŒ‘æˆ˜è¿›é˜¶æ‰æ˜†ã€‚");
+                cm.sendOk("ÄãµÄµÈ¼¶Ğ¡ÓÚ 100 ¼¶£¬ÎŞ·¨ÌôÕ½½ø½×ÔúÀ¥¡£");
                 cm.dispose();
                 return;
             }
             if (cm.getPlayer().getClient().getChannel() != 3) {
-                cm.sendOk("è¿›é˜¶æ‰æ˜†åªèƒ½åœ¨ 3 é¢‘é“æŒ‘æˆ˜ã€‚");
+                cm.sendOk("½ø½×ÔúÀ¥Ö»ÄÜÔÚ 3 ÆµµÀÌôÕ½¡£");
                 cm.dispose();
                 return;
             }
             var em = cm.getEventManager("ChaosZakum");
             if (em == null) {
-                cm.sendOk("é…ç½®æ¸…å•ä¸ºç©ºï¼Œè¯·è”ç³»ç®¡ç†å‘˜ã€‚");
+                cm.sendOk("ÅäÖÃÇåµ¥Îª¿Õ£¬ÇëÁªÏµ¹ÜÀíÔ±¡£");
                 cm.safeDispose();
                 return;
             }
@@ -55,7 +55,7 @@ function action(mode, type, selection) {
                         cm.dispose();
                         return;
                     }
-                    cm.sendYesNo("ç°åœ¨å¯ä»¥ç”³è¯·è¿œå¾é˜Ÿï¼Œä½ æƒ³æˆä¸ºè¿œå¾é˜Ÿé˜Ÿé•¿å—ï¼Ÿ");
+                    cm.sendYesNo("ÏÖÔÚ¿ÉÒÔÉêÇëÔ¶Õ÷¶Ó£¬ÄãÏë³ÉÎªÔ¶Õ÷¶Ó¶Ó³¤Âğ£¿");
                 } else if (squadAvailability == 1) {
                     if (time + (12 * 3600000) >= cm.getCurrentTime() && !cm.getPlayer().isGM()) {
                         cm.sendOk("You have already went to Chaos Zakum in the past 12 hours. Time left: " + cm.getReadableMillis(cm.getCurrentTime(), time + (12 * 3600000)));
@@ -65,26 +65,26 @@ function action(mode, type, selection) {
                     // -1 = Cancelled, 0 = not, 1 = true
                     var type = cm.isSquadLeader("ChaosZak");
                     if (type == -1) {
-                        cm.sendOk("å·²ç»ç»“æŸäº†ç”³è¯·ã€‚");
+                        cm.sendOk("ÒÑ¾­½áÊøÁËÉêÇë¡£");
                         cm.safeDispose();
                     } else if (type == 0) {
                         var memberType = cm.isSquadMember("ChaosZak");
                         if (memberType == 2) {
-                            cm.sendOk("åœ¨è¿œå¾é˜Ÿçš„åˆ¶è£åå•ã€‚");
+                            cm.sendOk("ÔÚÔ¶Õ÷¶ÓµÄÖÆ²ÃÃûµ¥¡£");
                             cm.safeDispose();
                         } else if (memberType == 1) {
                             status = 5;
-                            cm.sendSimple("ä½ ç°åœ¨æƒ³åšä»€ä¹ˆï¼Ÿ\r\n#b#L0#æŸ¥çœ‹è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L1#åŠ å…¥è¿œå¾é˜Ÿã€‚#l \r\n#b#L2#é€€å‡ºè¿œå¾é˜Ÿã€‚#l");
+                            cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿\r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¼ÓÈëÔ¶Õ÷¶Ó¡£#l \r\n#b#L2#ÍË³öÔ¶Õ÷¶Ó¡£#l");
                         } else if (memberType == -1) {
-                            cm.sendOk("è¿œå¾é˜Ÿå‘˜å·²ç»è¾¾åˆ°30åï¼Œè¯·ç¨åå†è¯•ã€‚");
+                            cm.sendOk("Ô¶Õ÷¶ÓÔ±ÒÑ¾­´ïµ½30Ãû£¬ÇëÉÔºóÔÙÊÔ¡£");
                             cm.safeDispose();
                         } else {
                             status = 5;
-                            cm.sendSimple("ä½ ç°åœ¨æƒ³åšä»€ä¹ˆï¼Ÿ \r\n#b#L0#æŸ¥çœ‹è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L1#åŠ å…¥è¿œå¾é˜Ÿã€‚#l \r\n#b#L2#é€€å‡ºè¿œå¾é˜Ÿã€‚#l");
+                            cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿ \r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¼ÓÈëÔ¶Õ÷¶Ó¡£#l \r\n#b#L2#ÍË³öÔ¶Õ÷¶Ó¡£#l");
                         }
                     } else { // Is leader
                         status = 10;
-                        cm.sendSimple("ä½ ç°åœ¨æƒ³åšä»€ä¹ˆï¼Ÿ\r\n#b#L0#æŸ¥çœ‹è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L1#ç®¡ç†è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L2#ç¼–è¾‘é™åˆ¶åˆ—è¡¨ã€‚#l \r\n#r#L3#è¿›å…¥åœ°å›¾ã€‚#l");
+                        cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿\r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¹ÜÀíÔ¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L2#±à¼­ÏŞÖÆÁĞ±í¡£#l \r\n#r#L3#½øÈëµØÍ¼¡£#l");
                         // TODO viewing!
                     }
                 } else {
@@ -132,19 +132,19 @@ function action(mode, type, selection) {
             break;
         case 1:
             if (mode == 1) {
-                if (cm.registerSquad("ChaosZak", 5, " å·²ç»æˆä¸ºäº†è¿œå¾é˜Ÿé˜Ÿé•¿ã€‚å¦‚æœä½ æƒ³åŠ å…¥è¿œå¾é˜Ÿï¼Œè¯·é‡æ–°æ‰“å¼€å¯¹è¯ç”³è¯·åŠ å…¥è¿œå¾é˜Ÿã€‚")) {
-                    cm.sendOk("ä½ å·²ç»æˆä¸ºäº†è¿œå¾é˜Ÿé˜Ÿé•¿ã€‚æ¥ä¸‹æ¥çš„5åˆ†é’Ÿï¼Œè¯·ç­‰å¾…é˜Ÿå‘˜ä»¬çš„ç”³è¯·ã€‚");
+                if (cm.registerSquad("ChaosZak", 5, " ÒÑ¾­³ÉÎªÁËÔ¶Õ÷¶Ó¶Ó³¤¡£Èç¹ûÄãÏë¼ÓÈëÔ¶Õ÷¶Ó£¬ÇëÖØĞÂ´ò¿ª¶Ô»°ÉêÇë¼ÓÈëÔ¶Õ÷¶Ó¡£")) {
+                    cm.sendOk("ÄãÒÑ¾­³ÉÎªÁËÔ¶Õ÷¶Ó¶Ó³¤¡£½ÓÏÂÀ´µÄ5·ÖÖÓ£¬ÇëµÈ´ı¶ÓÔ±ÃÇµÄÉêÇë¡£");
                 } else {
                     cm.sendOk("An error has occurred adding your squad.");
                 }
             } else {
-                cm.sendOk("å¦‚æœä½ æƒ³ç”³è¯·è¿œå¾é˜Ÿçš„è¯ï¼Œé‚£ä¹ˆå°±æ¥æ‰¾æˆ‘å§ã€‚")
+                cm.sendOk("Èç¹ûÄãÏëÉêÇëÔ¶Õ÷¶ÓµÄ»°£¬ÄÇÃ´¾ÍÀ´ÕÒÎÒ°É¡£")
             }
             cm.safeDispose();
             break;
         case 2:
             if (!cm.reAdd("ChaosZakum", "ChaosZak")) {
-                cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
             }
             cm.dispose();
             break;
@@ -161,7 +161,7 @@ function action(mode, type, selection) {
         case 5:
             if (selection == 0) {
                 if (!cm.getSquadList("ChaosZak", 0)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 } else {
                     cm.dispose();
@@ -169,22 +169,22 @@ function action(mode, type, selection) {
             } else if (selection == 1) { // join
                 var ba = cm.addMember("ChaosZak", true);
                 if (ba == 2) {
-                    cm.sendOk("è¿œå¾é˜Ÿå‘˜å·²ç»è¾¾åˆ°30åï¼Œè¯·ç¨åå†è¯•ã€‚");
+                    cm.sendOk("Ô¶Õ÷¶ÓÔ±ÒÑ¾­´ïµ½30Ãû£¬ÇëÉÔºóÔÙÊÔ¡£");
                     cm.safeDispose();
                 } else if (ba == 1) {
-                    cm.sendOk("ç”³è¯·åŠ å…¥è¿œå¾é˜ŸæˆåŠŸï¼Œè¯·ç­‰å€™é˜Ÿé•¿æŒ‡ç¤ºã€‚");
+                    cm.sendOk("ÉêÇë¼ÓÈëÔ¶Õ÷¶Ó³É¹¦£¬ÇëµÈºò¶Ó³¤Ö¸Ê¾¡£");
                     cm.safeDispose();
                 } else {
-                    cm.sendOk("ä½ å·²ç»å‚åŠ äº†è¿œå¾é˜Ÿï¼Œè¯·ç­‰å€™é˜Ÿé•¿æŒ‡ç¤ºã€‚");
+                    cm.sendOk("ÄãÒÑ¾­²Î¼ÓÁËÔ¶Õ÷¶Ó£¬ÇëµÈºò¶Ó³¤Ö¸Ê¾¡£");
                     cm.safeDispose();
                 }
             } else { // withdraw
                 var baa = cm.addMember("ChaosZak", false);
                 if (baa == 1) {
-                    cm.sendOk("åˆ¶è£æŒ‡å®šçš„æˆå‘˜æˆåŠŸã€‚");
+                    cm.sendOk("ÖÆ²ÃÖ¸¶¨µÄ³ÉÔ±³É¹¦¡£");
                     cm.safeDispose();
                 } else {
-                    cm.sendOk("ä½ æ²¡æœ‰å‚åŠ è¿œå¾é˜Ÿã€‚");
+                    cm.sendOk("ÄãÃ»ÓĞ²Î¼ÓÔ¶Õ÷¶Ó¡£");
                     cm.safeDispose();
                 }
             }
@@ -192,20 +192,20 @@ function action(mode, type, selection) {
         case 10:
             if (selection == 0) {
                 if (!cm.getSquadList("ChaosZak", 0)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                 }
                 cm.safeDispose();
             } else if (selection == 1) {
                 status = 11;
                 if (!cm.getSquadList("ChaosZak", 1)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 }
 
             } else if (selection == 2) {
                 status = 12;
                 if (!cm.getSquadList("ChaosZak", 2)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 }
 
@@ -215,7 +215,7 @@ function action(mode, type, selection) {
                     dd.startInstance(cm.getSquad("ChaosZak"), cm.getMap(), 160102);
                     cm.dispose();
                 } else {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 }
             }
@@ -235,18 +235,18 @@ function action(mode, type, selection) {
         switch (status) {
         case 0:
             if (cm.getPlayer().getLevel() < 50) {
-                cm.sendOk("ä½ çš„ç­‰çº§å°äº 50 çº§ï¼Œæ— æ³•æŒ‘æˆ˜è¿›é˜¶æ‰æ˜†ã€‚");
+                cm.sendOk("ÄãµÄµÈ¼¶Ğ¡ÓÚ 50 ¼¶£¬ÎŞ·¨ÌôÕ½½ø½×ÔúÀ¥¡£");
                 cm.dispose();
                 return;
             }
-            if (cm.getPlayer().getClient().getChannel() != 2 && cm.getPlayer().getClient().getChannel() != 4) {
-                cm.sendOk("æ‰æ˜†å¤§æ€ªåªèƒ½åœ¨ 2 é¢‘é“å¬å”¤ã€‚");
+            if (cm.getPlayer().getClient().getChannel() != 2) {
+                cm.sendOk("ÔúÀ¥´ó¹ÖÖ»ÄÜÔÚ 2 ÆµµÀÕÙ»½¡£");
                 cm.dispose();
                 return;
             }
             var em = cm.getEventManager("ZakumBattle");
             if (em == null) {
-                cm.sendOk("é…ç½®æ¸…å•ä¸ºç©ºï¼Œè¯·è”ç³»ç®¡ç†å‘˜ã€‚");
+                cm.sendOk("ÅäÖÃÇåµ¥Îª¿Õ£¬ÇëÁªÏµ¹ÜÀíÔ±¡£");
                 cm.safeDispose();
                 return;
             }
@@ -267,7 +267,7 @@ function action(mode, type, selection) {
                         cm.dispose();
                         return;
                     }
-                    cm.sendYesNo("ç°åœ¨å¯ä»¥ç”³è¯·è¿œå¾é˜Ÿï¼Œä½ æƒ³æˆä¸ºè¿œå¾é˜Ÿé˜Ÿé•¿å—ï¼Ÿ");
+                    cm.sendYesNo("ÏÖÔÚ¿ÉÒÔÉêÇëÔ¶Õ÷¶Ó£¬ÄãÏë³ÉÎªÔ¶Õ÷¶Ó¶Ó³¤Âğ£¿");
                 } else if (squadAvailability == 1) {
                     if (time + (6 * 3600000) >= cm.getCurrentTime() && !cm.getPlayer().isGM()) {
                         cm.sendOk("You have already went to Zakum in the past 6 hours. Time left: " + cm.getReadableMillis(cm.getCurrentTime(), time + (6 * 360000)));
@@ -277,26 +277,26 @@ function action(mode, type, selection) {
                     // -1 = Cancelled, 0 = not, 1 = true
                     var type = cm.isSquadLeader("ZAK");
                     if (type == -1) {
-                        cm.sendOk("å·²ç»ç»“æŸäº†ç”³è¯·ã€‚");
+                        cm.sendOk("ÒÑ¾­½áÊøÁËÉêÇë¡£");
                         cm.safeDispose();
                     } else if (type == 0) {
                         var memberType = cm.isSquadMember("ZAK");
                         if (memberType == 2) {
-                            cm.sendOk("åœ¨è¿œå¾é˜Ÿçš„åˆ¶è£åå•ã€‚");
+                            cm.sendOk("ÔÚÔ¶Õ÷¶ÓµÄÖÆ²ÃÃûµ¥¡£");
                             cm.safeDispose();
                         } else if (memberType == 1) {
                             status = 5;
-                            cm.sendSimple("ä½ ç°åœ¨æƒ³åšä»€ä¹ˆï¼Ÿ\r\n#b#L0#æŸ¥çœ‹è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L1#åŠ å…¥è¿œå¾é˜Ÿã€‚#l \r\n#b#L2#é€€å‡ºè¿œå¾é˜Ÿã€‚#l");
+                            cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿\r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¼ÓÈëÔ¶Õ÷¶Ó¡£#l \r\n#b#L2#ÍË³öÔ¶Õ÷¶Ó¡£#l");
                         } else if (memberType == -1) {
-                            cm.sendOk("è¿œå¾é˜Ÿå‘˜å·²ç»è¾¾åˆ°30åï¼Œè¯·ç¨åå†è¯•ã€‚");
+                            cm.sendOk("Ô¶Õ÷¶ÓÔ±ÒÑ¾­´ïµ½30Ãû£¬ÇëÉÔºóÔÙÊÔ¡£");
                             cm.safeDispose();
                         } else {
                             status = 5;
-                            cm.sendSimple("ä½ ç°åœ¨æƒ³åšä»€ä¹ˆï¼Ÿ\r\n#b#L0#æŸ¥çœ‹è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L1#åŠ å…¥è¿œå¾é˜Ÿã€‚#l \r\n#b#L2#é€€å‡ºè¿œå¾é˜Ÿã€‚#l");
+                            cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿\r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¼ÓÈëÔ¶Õ÷¶Ó¡£#l \r\n#b#L2#ÍË³öÔ¶Õ÷¶Ó¡£#l");
                         }
                     } else { // Is leader
                         status = 10;
-                        cm.sendSimple("ä½ ç°åœ¨æƒ³åšä»€ä¹ˆï¼Ÿ\r\n#b#L0#æŸ¥çœ‹è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L1#ç®¡ç†è¿œå¾é˜Ÿæˆå‘˜ã€‚#l \r\n#b#L2#ç¼–è¾‘é™åˆ¶åˆ—è¡¨ã€‚#l \r\n#r#L3#è¿›å…¥åœ°å›¾ã€‚#l");
+                        cm.sendSimple("ÄãÏÖÔÚÏë×öÊ²Ã´£¿\r\n#b#L0#²é¿´Ô¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L1#¹ÜÀíÔ¶Õ÷¶Ó³ÉÔ±¡£#l \r\n#b#L2#±à¼­ÏŞÖÆÁĞ±í¡£#l \r\n#r#L3#½øÈëµØÍ¼¡£#l");
                         // TODO viewing!
                     }
                 } else {
@@ -344,19 +344,19 @@ function action(mode, type, selection) {
             break;
         case 1:
             if (mode == 1) {
-                if (cm.registerSquad("ZAK", 5, " å·²ç»æˆä¸ºäº†è¿œå¾é˜Ÿé˜Ÿé•¿ã€‚å¦‚æœä½ æƒ³åŠ å…¥è¿œå¾é˜Ÿï¼Œè¯·é‡æ–°æ‰“å¼€å¯¹è¯ç”³è¯·åŠ å…¥è¿œå¾é˜Ÿã€‚")) {
-                    cm.sendOk("ä½ å·²ç»æˆä¸ºäº†è¿œå¾é˜Ÿé˜Ÿé•¿ã€‚æ¥ä¸‹æ¥çš„5åˆ†é’Ÿï¼Œè¯·ç­‰å¾…é˜Ÿå‘˜ä»¬çš„ç”³è¯·ã€‚");
+                if (cm.registerSquad("ZAK", 5, " ÒÑ¾­³ÉÎªÁËÔ¶Õ÷¶Ó¶Ó³¤¡£Èç¹ûÄãÏë¼ÓÈëÔ¶Õ÷¶Ó£¬ÇëÖØĞÂ´ò¿ª¶Ô»°ÉêÇë¼ÓÈëÔ¶Õ÷¶Ó¡£")) {
+                    cm.sendOk("ÄãÒÑ¾­³ÉÎªÁËÔ¶Õ÷¶Ó¶Ó³¤¡£½ÓÏÂÀ´µÄ5·ÖÖÓ£¬ÇëµÈ´ı¶ÓÔ±ÃÇµÄÉêÇë¡£");
                 } else {
                     cm.sendOk("An error has occurred adding your squad.");
                 }
             } else {
-                cm.sendOk("å¦‚æœä½ æƒ³ç”³è¯·è¿œå¾é˜Ÿçš„è¯ï¼Œé‚£ä¹ˆå°±æ¥æ‰¾æˆ‘å§ã€‚")
+                cm.sendOk("Èç¹ûÄãÏëÉêÇëÔ¶Õ÷¶ÓµÄ»°£¬ÄÇÃ´¾ÍÀ´ÕÒÎÒ°É¡£")
             }
             cm.safeDispose();
             break;
         case 2:
             if (!cm.reAdd("ZakumBattle", "ZAK")) {
-                cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
             }
             cm.safeDispose();
             break;
@@ -373,7 +373,7 @@ function action(mode, type, selection) {
         case 5:
             if (selection == 0) {
                 if (!cm.getSquadList("ZAK", 0)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 } else {
                     cm.dispose();
@@ -381,22 +381,22 @@ function action(mode, type, selection) {
             } else if (selection == 1) { // join
                 var ba = cm.addMember("ZAK", true);
                 if (ba == 2) {
-                    cm.sendOk("è¿œå¾é˜Ÿå‘˜å·²ç»è¾¾åˆ°30åï¼Œè¯·ç¨åå†è¯•ã€‚");
+                    cm.sendOk("Ô¶Õ÷¶ÓÔ±ÒÑ¾­´ïµ½30Ãû£¬ÇëÉÔºóÔÙÊÔ¡£");
                     cm.safeDispose();
                 } else if (ba == 1) {
-                    cm.sendOk("ç”³è¯·åŠ å…¥è¿œå¾é˜ŸæˆåŠŸï¼Œè¯·ç­‰å€™é˜Ÿé•¿æŒ‡ç¤ºã€‚");
+                    cm.sendOk("ÉêÇë¼ÓÈëÔ¶Õ÷¶Ó³É¹¦£¬ÇëµÈºò¶Ó³¤Ö¸Ê¾¡£");
                     cm.safeDispose();
                 } else {
-                    cm.sendOk("ä½ å·²ç»å‚åŠ äº†è¿œå¾é˜Ÿï¼Œè¯·ç­‰å€™é˜Ÿé•¿æŒ‡ç¤ºã€‚");
+                    cm.sendOk("ÄãÒÑ¾­²Î¼ÓÁËÔ¶Õ÷¶Ó£¬ÇëµÈºò¶Ó³¤Ö¸Ê¾¡£");
                     cm.safeDispose();
                 }
             } else { // withdraw
                 var baa = cm.addMember("ZAK", false);
                 if (baa == 1) {
-                    cm.sendOk("åˆ¶è£æŒ‡å®šçš„æˆå‘˜æˆåŠŸã€‚");
+                    cm.sendOk("ÖÆ²ÃÖ¸¶¨µÄ³ÉÔ±³É¹¦¡£");
                     cm.safeDispose();
                 } else {
-                    cm.sendOk("ä½ æ²¡æœ‰å‚åŠ è¿œå¾é˜Ÿã€‚");
+                    cm.sendOk("ÄãÃ»ÓĞ²Î¼ÓÔ¶Õ÷¶Ó¡£");
                     cm.safeDispose();
                 }
             }
@@ -404,19 +404,19 @@ function action(mode, type, selection) {
         case 10:
             if (selection == 0) {
                 if (!cm.getSquadList("ZAK", 0)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                 }
                 cm.safeDispose();
             } else if (selection == 1) {
                 status = 11;
                 if (!cm.getSquadList("ZAK", 1)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 }
             } else if (selection == 2) {
                 status = 12;
                 if (!cm.getSquadList("ZAK", 2)) {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 }
             } else if (selection == 3) { // get insode
@@ -425,7 +425,7 @@ function action(mode, type, selection) {
                     dd.startInstance(cm.getSquad("ZAK"), cm.getMap(), 160101);
                     cm.dispose();
                 } else {
-                    cm.sendOk("ç”±äºæœªçŸ¥çš„é”™è¯¯ï¼Œæ“ä½œå¤±è´¥ã€‚");
+                    cm.sendOk("ÓÉÓÚÎ´ÖªµÄ´íÎó£¬²Ù×÷Ê§°Ü¡£");
                     cm.safeDispose();
                 }
             }

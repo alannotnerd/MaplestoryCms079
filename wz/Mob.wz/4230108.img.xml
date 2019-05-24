@@ -71,15 +71,15 @@
             <vector name="head" x="-5" y="-31"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="3" value="1"/>
-        <uol name="4" value="0"/>
-        <uol name="5" value="1"/>
-        <uol name="6" value="2"/>
-        <uol name="7" value="1"/>
-        <uol name="8" value="0"/>
-        <uol name="9" value="1"/>
-        <uol name="10" value="2"/>
-        <uol name="11" value="1"/>
+        <uol name="1" value="1"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="1" value="1"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="1" value="1"/>
         <canvas name="12" width="38" height="37">
             <vector name="origin" x="19" y="37"/>
             <vector name="lt" x="-19" y="-37"/>
@@ -101,11 +101,11 @@
             <vector name="head" x="-5" y="-31"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="15" value="13"/>
-        <uol name="16" value="12"/>
-        <uol name="17" value="13"/>
-        <uol name="18" value="14"/>
-        <uol name="19" value="13"/>
+        <uol name="13" value="13"/>
+        <uol name="12" value="12"/>
+        <uol name="13" value="13"/>
+        <uol name="14" value="14"/>
+        <uol name="13" value="13"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="38" height="46">

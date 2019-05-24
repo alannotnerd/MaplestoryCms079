@@ -1,10 +1,9 @@
 package net.sf.cherry.provider;
 
-public abstract interface MapleDataEntity
-{
-  public abstract String getName();
+public interface MapleDataEntity {
+  String getName();
 
-  public abstract MapleDataEntity getParent();
+  MapleDataEntity getParent();
 }
 
 /* Location:           E:\maoxiandaodanji\dist\cherry.jar

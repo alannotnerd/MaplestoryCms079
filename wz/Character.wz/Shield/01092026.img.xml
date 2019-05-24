@@ -41,7 +41,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="shield" value="../0/shield"/>
+            <uol name="../0/shield" value="../0/shield"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="shield" width="27" height="36">
@@ -316,23 +316,23 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="shield" value="../0/shield"/>
+            <uol name="../0/shield" value="../0/shield"/>
         </imgdir>
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="shield" value="../../proneStab/0/shield"/>
+            <uol name="../../proneStab/0/shield" value="../../proneStab/0/shield"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="shield" value="../../alert/1/shield"/>
+            <uol name="../../alert/1/shield" value="../../alert/1/shield"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="shield" value="../../swingO2/1/shield"/>
+            <uol name="../../swingO2/1/shield" value="../../swingO2/1/shield"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="shield" value="../../swingO2/0/shield"/>
+            <uol name="../../swingO2/0/shield" value="../../swingO2/0/shield"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -346,7 +346,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="shield" value="../0/shield"/>
+            <uol name="../0/shield" value="../0/shield"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

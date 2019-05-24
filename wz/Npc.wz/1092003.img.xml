@@ -125,15 +125,15 @@
             <vector name="origin" x="33" y="89"/>
             <int name="delay" value="90"/>
         </canvas>
-        <uol name="19" value="18"/>
-        <uol name="20" value="17"/>
-        <uol name="21" value="18"/>
-        <uol name="22" value="18"/>
-        <uol name="23" value="17"/>
-        <uol name="24" value="15"/>
-        <uol name="25" value="18"/>
-        <uol name="26" value="18"/>
-        <uol name="27" value="17"/>
+        <uol name="18" value="18"/>
+        <uol name="17" value="17"/>
+        <uol name="18" value="18"/>
+        <uol name="18" value="18"/>
+        <uol name="17" value="17"/>
+        <uol name="15" value="15"/>
+        <uol name="18" value="18"/>
+        <uol name="18" value="18"/>
+        <uol name="17" value="17"/>
         <canvas name="28" width="67" height="98">
             <vector name="origin" x="33" y="89"/>
             <int name="delay" value="3000"/>

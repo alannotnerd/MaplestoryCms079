@@ -1,5 +1,3 @@
-/* 等待主人的武器 */
-
 var status = -1;
 
 function start(mode, type, selection) {
@@ -7,20 +5,20 @@ function start(mode, type, selection) {
         status++;
     } else {
         if (status == 0) {
-            qm.sendNext("有很紧急的事情。要是拒绝的话，肯定会后悔的哦？#b有关你长矛的事情#k，也就是有关你的过去。谁知道呢？……说不定这个长矛能够唤醒你的能力？");
+            qm.sendNext("It's really urgent, and you'll regret it if you refuse to. #bIt has something to do with your pole arm,#k which means it has to do with your past. Who knows...? Maybe the pole arm is key to reawakening your abilities...?");
             qm.dispose();
             return;
         }
         status--;
     }
     if (status == 0) {
-        qm.sendAcceptDecline("修炼进展得如何？哟，等级升得这么高了？难怪人们都说济州岛是养马的天堂，金银岛是升级的天堂……对了，现在还不是说闲话的时候。能否麻烦你回岛上来一趟？");
+        qm.askAcceptDecline("How's the training going? Wow, looking at you, I can tell your levels have shot through the roof. That's amazing... well, anyway, I see that you'r busy, but you'll have to return to the island for a bit.");
     } else if (status == 1) {
         qm.forceStartQuest(21200, "3"); //??
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.forceStartQuest(21202); //skip just in case
         qm.forceStartQuest(21203, "0");
-        qm.sendOk("#b保管在#m140000000##k的你的#b#p1201001##k突然出现了奇怪的反应。据说长矛在呼唤自己主人的时候才会发出那样的反应。#b也许有什么事情要转达给你？#k请速回岛上一趟吧。");
+        qm.sendOk("Your #bGiant Pole Arm#k that's being kept in #bRien#k is acting strange all of a sudden. According to the book, the pole arm reacts like this when it's calling for its master. #bMaybe it's calling for you?#k? Please come back to the island and find out.");
         qm.dispose();
     }
 }
@@ -30,7 +28,7 @@ function end(mode, type, selection) {
         status++;
     } else {
         if (status == 11) {
-            qm.sendNext("你这家伙！好歹也要努力颠峰一下吧？");
+            qm.sendNext("Hey, at least you tell me you tried!");
             qm.dispose();
             return;
         } else if (status == 13) {
@@ -42,32 +40,32 @@ function end(mode, type, selection) {
         status--;
     }
     if (status == 0) {
-        qm.sendNext("嗡嗡嗡嗡嗡……", 2);
+        qm.sendNextS("Hmmmmmm mmmm mmmmm....", 2);
     } else if (status == 1) {
-        qm.sendNextPrev("#b（#p1201001#在发出嗡鸣声。奇怪，那边的少年是谁？）#k", 2);
+        qm.sendNextPrevS("#b(Giant Pole Arm is buzzing, but who's that boy standing there?)#k", 2);
     } else if (status == 2) {
-        qm.sendNextPrev("#b（以前没见过他啊？怎么看起来不太像人类？）#k", 2);
+        qm.sendNextPrevS("#b(I've never met him before. He doesn't look human.)#k", 2);
     } else if (status == 3) {
-        qm.sendNextPrev("喂！战神！还听不见我的声音吗？到底听不听得见？唉，烦死了！");
+        qm.sendNextPrev("Hey Aran! Do you still not hear me? Seriously, can't you hear me? Ahhh, this is frustrating!");
     } else if (status == 4) {
-        qm.sendNextPrev("#b（咦？这是谁的声音？怎么听起来像个凶巴巴的少年……）#k", 2);
+        qm.sendNextPrevS("#b(Whoa, who was that? Sounds like an angry boy...)#k", 2);
     } else if (status == 5) {
-        qm.sendNextPrev("唉……哪有这样的主人啊？丢开武器在冰窟里睡了几百年，现在连话都听不懂了……");
+        qm.sendNextPrev("Seriously, the one master I had turned out to be trapped in ice for hundreds of years, abandoning the weapon, and now the 'master' can't even hear me?");
     } else if (status == 6) {
-        qm.sendNextPrev("你是谁啊？", 2);
+        qm.sendNextPrevS("Who are you?", 2);
     } else if (status == 7) {
-        qm.sendNextPrev("啊，战神？现在听到我的声音了？是我啊，不记得我了？我就是武器#b长矛 #p1201002##k啊？");
+        qm.sendNextPrev("Aran? Do you hear me now? It's me, it's me! I'm your weapon #bMaha the pole arm!#k!");
     } else if (status == 8) {
-        qm.sendNextPrev("#b（……#p1201002#？#p1201001#会说话？）#k", 2);
+        qm.sendNextPrevS("#b(...Maha? Giant pole Arm actually talks?)#k", 2);
     } else if (status == 9) {
-        qm.sendNextPrev("不至于吧？这么吃惊？再怎么失忆，总不能连我都忘了吧？太不够意思了！");
+        qm.sendNextPrev("Why do you have that look on your face like you can't believe it? I see that you have lost all your memories, but... did you also forget about me? How can you do that to me??");
     } else if (status == 10) {
-        qm.sendNextPrev("不好意思，真的一点都想不起来。", 2);
+        qm.sendNextPrevS("I'm sorry, but seriously... I don't remember a thing.", 2);
     } else if (status == 11) {
-        qm.sendYesNo("说声不好意思就能算了？！几百年来就我一个人孤苦伶仃地，有多寂寞你知道吗？不管怎样，你快点给我想起来！");
+        qm.sendYesNo("Is that all you can say after all those years? I'm sorry? Do you understand how bored I was all by myself for hundreds of years? Bring it out if you can. Bring your memories out! Bring them all out! Dig them up if you need to!");
     } else if (status == 12) {
-        qm.sendNext("#b（一口一个自己是#p1201001#、#p1201002#的，还越说越生气了。再这么说下去也不会有啥进展，还是先走到 #p1201000#跟前，好好商量商量。）#k", 2);
-        qm.completeQuest();
+        qm.sendNextS("#b(The voice that claims to be Maha the Giant Pole Arm seem quite perturbed. This conversation is going nowhere. I better talk to Lirin first.)#k", 2);
+        qm.forceCompleteQuest();
         qm.forceStartQuest(21202); //skip just in case
         qm.forceStartQuest(21203, "0");
     } else if (status == 13) {

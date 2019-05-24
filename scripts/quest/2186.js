@@ -10,7 +10,7 @@ function end(mode, type, selection) {
     } else {
         qm.gainItem(2030019, 5);
         qm.gainExp(1000);
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.dispose();
     }
 }

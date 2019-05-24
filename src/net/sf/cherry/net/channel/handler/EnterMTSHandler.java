@@ -1,32 +1,32 @@
 package net.sf.cherry.net.channel.handler;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.sf.cherry.client.MapleClient;
 import net.sf.cherry.net.AbstractMaplePacketHandler;
 import net.sf.cherry.net.Constants.GameConstants;
 import net.sf.cherry.scripting.npc.NPCScriptManager;
 import net.sf.cherry.tools.MaplePacketCreator;
 import net.sf.cherry.tools.data.input.SeekableLittleEndianAccessor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EnterMTSHandler extends AbstractMaplePacketHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(DistributeSPHandler.class);
-     public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
-        if (GameConstants.单机IP == 1) {
-                NPCScriptManager.getInstance().start(c, 9900004);
-                c.getSession().write(MaplePacketCreator.enableActions());
-        } else {
-            if (c.getPlayer().getLevel() >= 10) {
-                NPCScriptManager.getInstance().start(c, 9900004);
-                c.getSession().write(MaplePacketCreator.enableActions());
-            } else {
-                c.getSession().write(MaplePacketCreator.getNPCTalk(9010000, (byte) 0, "#b等级不足#r10#b无法使用快捷功能!", "00 00", (byte) 0));
-                c.getSession().write(MaplePacketCreator.enableActions());
-            }
-        }
+  private static final Logger log = LoggerFactory.getLogger(DistributeSPHandler.class);
+
+  public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
+    if (GameConstants.单机IP == 1) {
+      NPCScriptManager.getInstance().start(c, 9900004);
+      c.getSession().write(MaplePacketCreator.enableActions());
+    } else {
+      if (c.getPlayer().getLevel() >= 10) {
+        NPCScriptManager.getInstance().start(c, 9900004);
+        c.getSession().write(MaplePacketCreator.enableActions());
+      } else {
+        c.getSession().write(MaplePacketCreator.getNPCTalk(9010000, (byte) 0, "#b等级不足#r10#b无法使用快捷功能!", "00 00", (byte) 0));
+        c.getSession().write(MaplePacketCreator.enableActions());
+      }
     }
+  }
    /* public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
 
            NPCScriptManager.getInstance().start(c, 9900000,123);//拍卖npc

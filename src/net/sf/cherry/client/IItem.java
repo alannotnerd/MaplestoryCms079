@@ -3,65 +3,65 @@ package net.sf.cherry.client;
 import java.sql.Timestamp;
 import java.util.List;
 
-public abstract interface IItem extends Comparable<IItem> {
+public interface IItem extends Comparable<IItem> {
 
-    public static final int PET = 3;
-    public static final int ITEM = 2;
-    public static final int EQUIP = 1;
+  int PET = 3;
+  int ITEM = 2;
+  int EQUIP = 1;
 
-    public abstract void setFlag(byte paramByte);
+  byte getFlag();
 
-    public abstract byte getFlag();
-    
-    public abstract int getxingji(); //星级
-    
-    public abstract byte getItemLevel();
-    
-    public abstract int getItemExp();
-    
-    public abstract byte getType();
+  void setFlag(byte paramByte);
 
-    public abstract byte getPosition();
+  int getxingji(); //星级
 
-    public abstract void setPosition(byte paramByte);
+  byte getItemLevel();
 
-    public abstract int getItemId();
+  int getItemExp();
 
-    public abstract short getQuantity();
+  byte getType();
 
-    public abstract String getOwner();
+  byte getPosition();
 
-    public abstract int getPetId();
+  void setPosition(byte paramByte);
 
-    public abstract IItem copy();
+  int getItemId();
 
-    public abstract void setOwner(String paramString);
+  short getQuantity();
 
-    public abstract void setQuantity(short paramShort);
-    
-    public abstract void setxingji(int paramShort);
+  void setQuantity(short paramShort);
 
-    public abstract void log(String paramString, boolean paramBoolean);
+  String getOwner();
 
-    public abstract List<String> getLog();
+  void setOwner(String paramString);
 
-    public abstract Timestamp getExpiration();
+  int getPetId();
 
-    public abstract void setExpiration(Timestamp paramTimestamp);
+  IItem copy();
 
-    public abstract int getSN();
+  void setxingji(int paramShort);
 
-    public abstract int getUniqueId();
+  void log(String paramString, boolean paramBoolean);
 
-    public abstract void setUniqueId(int paramInt);
+  List<String> getLog();
 
-    public abstract void setSN(int paramInt);
+  Timestamp getExpiration();
 
-    public MaplePet getPet();
+  void setExpiration(Timestamp paramTimestamp);
 
-    boolean 友谊戒指();
+  int getSN();
 
-    boolean 恋人戒指();
+  void setSN(int paramInt);
 
-    boolean 结婚戒指();
+  int getUniqueId();
+
+  void setUniqueId(int paramInt);
+
+  MaplePet getPet();
+
+  boolean 友谊戒指();
+
+  boolean 恋人戒指();
+
+  boolean 结婚戒指();
 }

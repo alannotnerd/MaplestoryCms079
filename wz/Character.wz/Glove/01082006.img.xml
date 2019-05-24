@@ -90,8 +90,8 @@
                 </imgdir>
                 <string name="z" value="gloveWristOverBody"/>
             </canvas>
-            <uol name="rGlove" value="../0/rGlove"/>
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/rGlove" value="../0/rGlove"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="lGlove" width="10" height="9">
@@ -186,10 +186,10 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="lGlove" value="../0/lGlove"/>
-            <uol name="lWrist" value="../0/lWrist"/>
-            <uol name="rGlove" value="../0/rGlove"/>
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="../0/lWrist" value="../0/lWrist"/>
+            <uol name="../0/rGlove" value="../0/rGlove"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="lGlove" width="8" height="11">
@@ -1577,16 +1577,16 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="lGlove" value="../../swingPF/0/lGlove"/>
-            <uol name="lWrist" value="../../swingPF/0/lWrist"/>
-            <uol name="rGlove" value="../../swingPF/0/rGlove"/>
-            <uol name="rWrist" value="../../swingPF/0/rWrist"/>
+            <uol name="../../swingPF/0/lGlove" value="../../swingPF/0/lGlove"/>
+            <uol name="../../swingPF/0/lWrist" value="../../swingPF/0/lWrist"/>
+            <uol name="../../swingPF/0/rGlove" value="../../swingPF/0/rGlove"/>
+            <uol name="../../swingPF/0/rWrist" value="../../swingPF/0/rWrist"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="lGlove" value="../../swingPF/1/lGlove"/>
-            <uol name="lWrist" value="../../swingPF/1/lWrist"/>
-            <uol name="rGlove" value="../../swingPF/1/rGlove"/>
-            <uol name="rWrist" value="../../swingPF/1/rWrist"/>
+            <uol name="../../swingPF/1/lGlove" value="../../swingPF/1/lGlove"/>
+            <uol name="../../swingPF/1/lWrist" value="../../swingPF/1/lWrist"/>
+            <uol name="../../swingPF/1/rGlove" value="../../swingPF/1/rGlove"/>
+            <uol name="../../swingPF/1/rWrist" value="../../swingPF/1/rWrist"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="lGlove" width="14" height="10">
@@ -1619,10 +1619,10 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="lGlove" value="../../stabT1/2/lGlove"/>
-            <uol name="lWrist" value="../../stabT1/2/lWrist"/>
-            <uol name="rGlove" value="../../stabT1/2/rGlove"/>
-            <uol name="rWrist" value="../../stabT1/2/rWrist"/>
+            <uol name="../../stabT1/2/lGlove" value="../../stabT1/2/lGlove"/>
+            <uol name="../../stabT1/2/lWrist" value="../../stabT1/2/lWrist"/>
+            <uol name="../../stabT1/2/rGlove" value="../../stabT1/2/rGlove"/>
+            <uol name="../../stabT1/2/rWrist" value="../../stabT1/2/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -1687,10 +1687,10 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="lGlove" value="../1/lGlove"/>
-            <uol name="lWrist" value="../1/lWrist"/>
-            <uol name="rGlove" value="../1/rGlove"/>
-            <uol name="rWrist" value="../1/rWrist"/>
+            <uol name="../1/lGlove" value="../1/lGlove"/>
+            <uol name="../1/lWrist" value="../1/lWrist"/>
+            <uol name="../1/rGlove" value="../1/rGlove"/>
+            <uol name="../1/rWrist" value="../1/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -1725,8 +1725,8 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="lGlove" value="../0/lGlove"/>
-            <uol name="lWrist" value="../0/lWrist"/>
+            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="../0/lWrist" value="../0/lWrist"/>
             <canvas name="rGlove" width="13" height="9">
                 <vector name="origin" x="10" y="10"/>
                 <imgdir name="map">
@@ -1743,8 +1743,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="lGlove" value="../0/lGlove"/>
-            <uol name="lWrist" value="../0/lWrist"/>
+            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="../0/lWrist" value="../0/lWrist"/>
             <canvas name="rGlove" width="9" height="9">
                 <vector name="origin" x="11" y="9"/>
                 <imgdir name="map">
@@ -1761,10 +1761,10 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="lGlove" value="../0/lGlove"/>
-            <uol name="lWrist" value="../0/lWrist"/>
-            <uol name="rGlove" value="../0/rGlove"/>
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="../0/lWrist" value="../0/lWrist"/>
+            <uol name="../0/rGlove" value="../0/rGlove"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
         </imgdir>
         <imgdir name="4">
             <canvas name="lGlove" width="12" height="9">
@@ -1859,10 +1859,10 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="lGlove" value="../1/lGlove"/>
-            <uol name="lWrist" value="../1/lWrist"/>
-            <uol name="rGlove" value="../1/rGlove"/>
-            <uol name="rWrist" value="../1/rWrist"/>
+            <uol name="../1/lGlove" value="../1/lGlove"/>
+            <uol name="../1/lWrist" value="../1/lWrist"/>
+            <uol name="../1/rGlove" value="../1/rGlove"/>
+            <uol name="../1/rWrist" value="../1/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -1897,8 +1897,8 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="lGlove" value="../0/lGlove"/>
-            <uol name="lWrist" value="../0/lWrist"/>
+            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="../0/lWrist" value="../0/lWrist"/>
             <canvas name="rGlove" width="15" height="9">
                 <vector name="origin" x="10" y="10"/>
                 <imgdir name="map">
@@ -1917,27 +1917,27 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="lGlove" value="../../proneStab/0/lGlove"/>
-            <uol name="lWrist" value="../../proneStab/0/lWrist"/>
-            <uol name="rGlove" value="../../proneStab/0/rGlove"/>
-            <uol name="rWrist" value="../../proneStab/0/rWrist"/>
+            <uol name="../../proneStab/0/lGlove" value="../../proneStab/0/lGlove"/>
+            <uol name="../../proneStab/0/lWrist" value="../../proneStab/0/lWrist"/>
+            <uol name="../../proneStab/0/rGlove" value="../../proneStab/0/rGlove"/>
+            <uol name="../../proneStab/0/rWrist" value="../../proneStab/0/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="lGlove" value="../../alert/1/lGlove"/>
-            <uol name="rGlove" value="../../alert/1/rGlove"/>
-            <uol name="rWrist" value="../../alert/1/rWrist"/>
+            <uol name="../../alert/1/lGlove" value="../../alert/1/lGlove"/>
+            <uol name="../../alert/1/rGlove" value="../../alert/1/rGlove"/>
+            <uol name="../../alert/1/rWrist" value="../../alert/1/rWrist"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="lGlove" value="../../swingO2/1/lGlove"/>
-            <uol name="rGlove" value="../../swingO2/1/rGlove"/>
-            <uol name="rWrist" value="../../swingO2/1/rWrist"/>
+            <uol name="../../swingO2/1/lGlove" value="../../swingO2/1/lGlove"/>
+            <uol name="../../swingO2/1/rGlove" value="../../swingO2/1/rGlove"/>
+            <uol name="../../swingO2/1/rWrist" value="../../swingO2/1/rWrist"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="lGlove" value="../../swingO2/0/lGlove"/>
-            <uol name="rGlove" value="../../swingO2/0/rGlove"/>
-            <uol name="rWrist" value="../../swingO2/0/rWrist"/>
+            <uol name="../../swingO2/0/lGlove" value="../../swingO2/0/lGlove"/>
+            <uol name="../../swingO2/0/rGlove" value="../../swingO2/0/rGlove"/>
+            <uol name="../../swingO2/0/rWrist" value="../../swingO2/0/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -1965,9 +1965,9 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="lGlove" value="../0/lGlove"/>
-            <uol name="rGlove" value="../0/rGlove"/>
-            <uol name="rWrist" value="../0/rWrist"/>
+            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="../0/rGlove" value="../0/rGlove"/>
+            <uol name="../0/rWrist" value="../0/rWrist"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

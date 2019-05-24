@@ -44,7 +44,7 @@ function end(mode, type, selection) {
 	    qm.sendOk("You are currently in full inventory, please check.");
 	    qm.dispose();
 	} else {
-	    qm.completeQuest();
+	    qm.forceCompleteQuest();
 	    if (qm.getJob() != 1410) {
 		qm.changeJob(1410); // Night Walker
 		qm.gainItem(4032099, -30);

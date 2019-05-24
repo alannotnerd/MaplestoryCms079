@@ -643,10 +643,10 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="120"/>
                 </canvas>
-                <uol name="6" value="1"/>
-                <uol name="7" value="2"/>
-                <uol name="8" value="3"/>
-                <uol name="9" value="4"/>
+                <uol name="1" value="1"/>
+                <uol name="2" value="2"/>
+                <uol name="3" value="3"/>
+                <uol name="4" value="4"/>
             </imgdir>
             <imgdir name="17">
                 <canvas name="0" width="71" height="85">

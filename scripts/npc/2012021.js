@@ -1,38 +1,43 @@
-importPackage(net.sf.cherry.client);
-
-var cb;
-var ride;
+/* 
+	NPC Name: 		Ramini
+	Map(s): 		Orbis: Cabin<To Leafre> (200000131)
+	Description: 		Orbis Ticketing Usher
+*/
+var status = 0;
 
 function start() {
-	status = -1;
-	cb = cm.getEventManager("Cabin");
-	action(1, 0, 0);
+    status = -1;
+    flight = cm.getEventManager("Flight");
+    action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-	if(mode == -1) {
-		cm.dispose();
-		return;
+    status++;
+    if(mode == 0) {
+	cm.sendNext("µÈÄã¿¼ÂÇºÃÔÙÀ´ÕÒÎÒ¡£");
+	cm.dispose();
+	return;
+    }
+    if (status == 0) {
+	if(flight == null) {
+	    cm.sendNext("ÕÒ²»µ½½Å±¾ÇëÁªÏµGM£¡");
+	    cm.dispose();
+	} else if(flight.getProperty("entry").equals("true")) {
+	    cm.sendYesNo("ÄãÏëÒª´î´¬£¿£¿");
+	} else if(flight.getProperty("entry").equals("false") && flight.getProperty("docked").equals("true")) {
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬×¼±¸¿ª×ß,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	} else {
-		status++;
-		if(mode == 0) {
-			cm.sendNext("ä½ è¿˜æœ‰ä»€ä¹ˆäº‹æƒ…å†è¿™é‡Œæ²¡æœ‰å®Œæˆå—ï¼Ÿ");
-			cm.dispose();
-			return;
-		}
-		if (status == 0) {
-			if(cb.getProperty("entry").equals("true")) {
-				cm.sendYesNo("éå¸¸å¥½ï¼Œèˆ¹ä¸Šè¿˜æœ‰è¶³å¤Ÿçš„ä½ç½®ï¼Œè¯·å‡†å¤‡å¥½ç™»èˆ¹ï¼Œæˆ‘ä»¬å°†è¿›å…¥æ¼«é•¿çš„æ—…è¡Œï¼Œä½ æ˜¯ä¸æ˜¯æƒ³ç™»èˆ¹ï¼Ÿ");
-			} else if(cb.getProperty("entry").equals("false") && cb.getProperty("docked").equals("true")) {
-				cm.sendOk("æœ¬æ¬¡èˆªç­å·²ç»å‡ºå‘ï¼Œè¯·è€å¿ƒç­‰å¾…ä¸‹ä¸€æ¬¡èˆªç­ã€‚");
-				cm.dispose();
-			} else {
-				cm.sendOk("å‡ºå‘å‰1åˆ†é’Ÿå°±åœæ­¢è®©å®¢äººç™»èˆ¹äº†ï¼Œè¯·æ³¨æ„ç«™å°æ—¶é—´ã€‚ä¸è¿‡ä¹Ÿä¸è¦æ¥çš„å¤ªæ™šäº†ï¼");
-				cm.dispose();
-			}
-		} else if(status == 1) {
-			cb.getInstance("Cabin").registerPlayer(cm.getChar());
-			cm.dispose();
-		}
+	    cm.sendNext("ºÜ±§Ç¸±¾°à´¬ÒÑ¾­×ßÁË,³Ë×øÊ±¼ä±í¿ÉÒÔÍ¨¹ıÊÛÆ±Õ¹Ì¨²é¿´.");
+	    cm.dispose();
 	}
+    } else if(status == 1) {
+	if(!cm.haveItem(4031331)) {
+	    cm.sendNext("²»! ÄãÃ»ÓĞ#b#t4031331##k ËùÒÔÎÒ²»ÄÜ·ÅÄã×ß!");
+	} else {
+	    cm.gainItem(4031331, -1);
+	    cm.warp(200000132, 0);
+	}
+	cm.dispose();
+    }
 }

@@ -28,14 +28,14 @@ Ludi PQ: 4th stage to 4th stage portal
 
 function enter(pi) {
 	var nextMap = 922010500;
-	var nextPortal = "in01";
+	var nextPortal = "out01";
 	var eim = pi.getPlayer().getEventInstance();
 	var target = eim.getMapInstance(nextMap);
 	var targetPortal = target.getPortal(nextPortal);
-	if(eim == null){
+	//if(eim == null){
 	    pi.warp(nextMap, nextPortal);
-	}else{
-	    pi.warp(target, targetPortal);
-	}
+	//}else{
+	 //   pi.warp(target, targetPortal);
+	//}
 	return true;
 }

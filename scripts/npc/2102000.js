@@ -1,1 +1,43 @@
-/**-- Krypto JavaScript ------------------------------------------------------------------------------	Asesson - Ariant Station Platform(260000100)-- By ---------------------------------------------------------------------------------------------	Information-- Description ------------------------------------------------------------------------------------	Geenie manager-- Version Info -----------------------------------------------------------------------------------	1.4 - New text [Information]	1.3 - Removed ticket item check [Information]	1.2 - Replace function to support latest [Information]	1.1 - Statement fix [Information]	1.0 - First Version by Information-- Additional Comments ----------------------------------------------------------------------------	None---------------------------------------------------------------------------------------------------**/var gm;function start() {	status = -1;	gm = cm.getEventManager("Geenie");	action(1, 0, 0);}function action(mode, type, selection) {	if(mode == -1) {		cm.dispose();		return;	} else {		status++;		if(mode == 0) {			cm.sendNext("You must have some business to take care of here, right?");			cm.dispose();			return;		}		if (status == 0) {			if(gm == null) {				cm.sendNext("Event error, please restart your server for solution");				cm.dispose();			} else if(gm.getProperty("entry").equals("true")) {				cm.sendYesNo("This will not be a short flight, so if you need to take care of some things, I suggest you do that first before getting on board. Do you still wish to board the ship?");			} else if(gm.getProperty("entry").equals("false") && gm.getProperty("docked").equals("true")) {				cm.sendNext("The ship is getting ready for takeoff. I'm sorry, but you'll have to get on the next ride. The ride schedule is available through the usher at the ticketing booth.");				cm.dispose();			} else {				cm.sendNext("We will begin boarding 5 minutes before the takeoff. Please be patient and wait for a few minutes. Be aware that the ship will take off on time, and we stop receiving tickets 1 minute before that, so please make sure to be here on time.");				cm.dispose();			}		} else if(status == 1) {			cm.warp(260000110);			cm.dispose();		}	}}
+/* Author: Xterminator
+	NPC Name: 		Asesson
+	Map(s): 		Ariant: Ariant Station Platform (260000100)
+	Description: 	Ariant Ticketing Usher
+*/
+var status = 0;
+
+function start() {
+    status = -1;
+    geenie = cm.getEventManager("Geenie");
+    action(1, 0, 0);
+}
+
+function action(mode, type, selection) {
+    status++;
+    if(mode == 0) {
+	cm.sendNext("等你考虑好再来找我。");
+	cm.dispose();
+	return;
+    }
+    if (status == 0) {
+	if(geenie == null) {
+	    cm.sendNext("找不到脚本请联系GM！");
+	    cm.dispose();
+	} else if (geenie.getProperty("entry").equals("true")) {
+	    cm.sendYesNo("你想要搭船？？");
+	} else if(geenie.getProperty("entry").equals("false") && geenie.getProperty("docked").equals("true")) {
+	    cm.sendNext("很抱歉本班船准备开走,乘坐时间表可以通过售票展台查看.");
+	    cm.dispose();
+	} else {
+	    cm.sendNext("很抱歉本班船已经走了,乘坐时间表可以通过售票展台查看.");
+	    cm.dispose();
+	}
+    } else if(status == 1) {
+	if(!cm.haveItem(4031045)) {
+	    cm.sendNext("不! 你没有#b#t4031045##k 所以我不能放你走!");
+	} else {
+	    cm.gainItem(4031045, -1);
+	    cm.warp(260000110, 0);
+	}
+	cm.dispose();
+    }
+}

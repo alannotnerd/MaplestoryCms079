@@ -5,6 +5,6 @@ function action(mode, type, selection) {
 		returnMap = 230000000; // to fix people who entered the fm trough an unconventional way
 	}
 	cm.clearSavedLocation("MULUNG_TC");
-	cm.warp(returnMap, "unityPortal2");
+	cm.warp(returnMap,0);
 	cm.dispose();
 }

@@ -17,7 +17,7 @@ function action(mode, type, selection) {
     if (mode == 1) {
 	status++;
     } else {
-	cm.sendOk("Well, if you are not interested in treasures, then钬?);
+	cm.sendOk("Well, if you are not interested in treasures, then??");
 	cm.dispose();
 	return;
     }

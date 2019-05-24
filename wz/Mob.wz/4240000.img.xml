@@ -73,8 +73,8 @@
             <vector name="head" x="-21" y="-48"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="2" value="0"/>
-        <uol name="3" value="1"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
         <canvas name="4" width="79" height="111">
             <vector name="origin" x="42" y="111"/>
             <vector name="lt" x="-42" y="-105"/>

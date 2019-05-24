@@ -35,7 +35,7 @@
             <vector name="rb" x="41" y="0"/>
             <vector name="head" x="-13" y="-27"/>
         </canvas>
-        <uol name="2" value="0"/>
+        <uol name="0" value="0"/>
         <canvas name="3" width="87" height="29">
             <vector name="origin" x="43" y="29"/>
             <int name="delay" value="180"/>

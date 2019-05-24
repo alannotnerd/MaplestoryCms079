@@ -1,7 +1,7 @@
 /*
-	ä»»åŠ¡: åœ¨å¤©ç©ºä¸­é£å§ï¼
-	æè¿°: ç›å¡”å¡”è¯´è¦æƒ³å­¦ä¹ #bé£è¡Œéª‘ä¹˜#kæŠ€èƒ½ï¼Œéœ€è¦#bå¤ä»£é¾™çš„ç¿¼é³#kã€‚\n#bå¤ä»£é¾™çš„ç¿¼é³#kå¯ä»¥ä»#bç¥æœ¨æ‘#kçš„#bæ‘é•¿å¡”å¡”æ›¼#ké‚£é‡Œè·å¾—ã€‚
-	éœ€è¦: å­¦ä¼šäº†é£è¡Œéª‘ä¹˜æŠ€èƒ½ã€‚
+	ÈÎÎñ: ÔÚÌì¿ÕÖĞ·É°É£¡
+	ÃèÊö: ÂêËşËşËµÒªÏëÑ§Ï°#b·ÉĞĞÆï³Ë#k¼¼ÄÜ£¬ĞèÒª#b¹Å´úÁúµÄÒíÁÛ#k¡£\n#b¹Å´úÁúµÄÒíÁÛ#k¿ÉÒÔ´Ó#bÉñÄ¾´å#kµÄ#b´å³¤ËşËşÂü#kÄÇÀï»ñµÃ¡£
+	ĞèÒª: Ñ§»áÁË·ÉĞĞÆï³Ë¼¼ÄÜ¡£
 */
 var status = -1;
 
@@ -25,7 +25,7 @@ function end(mode, type, selection) {
         qm.teachSkill(80001089, 1, 0); // Maker
         qm.removeAll(4032969);
         qm.sendOk("There we go! You have learned the Soaring skill and will be able to fly, using great amounts of MP.");
-        qm.completeQuest();
+        qm.forceCompleteQuest();
         qm.dispose();
     }
 }

@@ -5,9 +5,8 @@
 package net.sf.cherry.net.channel.handler;
 
 /**
- *
  * @author Administrator
  */
 public class BuyCSItemHandler {
-    
+
 }

@@ -217,12 +217,12 @@
             <vector name="head" x="-6" y="-82"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="24" value="0"/>
-        <uol name="25" value="1"/>
-        <uol name="26" value="2"/>
-        <uol name="27" value="3"/>
-        <uol name="28" value="4"/>
-        <uol name="29" value="5"/>
+        <uol name="0" value="0"/>
+        <uol name="1" value="1"/>
+        <uol name="2" value="2"/>
+        <uol name="3" value="3"/>
+        <uol name="4" value="4"/>
+        <uol name="5" value="5"/>
     </imgdir>
     <imgdir name="alert">
         <canvas name="0" width="84" height="114">
@@ -285,8 +285,8 @@
         </canvas>
     </imgdir>
     <imgdir name="stabO2">
-        <uol name="0" value="../stabO1/0"/>
-        <uol name="1" value="../stabO1/1"/>
+        <uol name="../stabO1/0" value="../stabO1/0"/>
+        <uol name="../stabO1/1" value="../stabO1/1"/>
     </imgdir>
     <imgdir name="proneStab">
         <canvas name="0" width="85" height="94">
@@ -305,7 +305,7 @@
         </canvas>
     </imgdir>
     <imgdir name="prone">
-        <uol name="0" value="../proneStab/0"/>
+        <uol name="../proneStab/0" value="../proneStab/0"/>
         <canvas name="1" width="86" height="99">
             <vector name="origin" x="53" y="84"/>
             <vector name="lt" x="-38" y="-54"/>

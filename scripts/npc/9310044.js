@@ -1,55 +1,35 @@
 /*
-	äº²äº²å˜´å†’é™©ä¸“ç”¨è„šæœ¬
-
-	å°‘æ—å¦–åƒ§ -- å‡ºå£NPC
-	
-	by-- èŠ¯ç¢ç‹å­
-		
-	QQ:7851103
-
+	ÉÙÁÖÑıÉ® -- ³ö¿ÚNPC
 */
 var status = 0;
 
-function start() 
-	{
+function start() {
 	status = -1;
 	action(1, 0, 0);
-
-
 	}
 
-function action(mode, type, selection)
-{
-	if (mode == -1)
-	{
+function action(mode, type, selection) {
+	if (mode == -1) {
 		cm.dispose();
-	}
-	else if (mode == 0)
-	{
-		cm.sendOk("å¥½çš„å¦‚æœè¦å‡ºå»éšæ—¶æ¥æ‰¾æˆ‘.");
+	} else if (mode == 0) {
+		cm.sendOk("ºÃµÄÈç¹ûÒª³öÈ¥ËæÊ±À´ÕÒÎÒ.");
 		cm.dispose();
-	}else 
-	{
+	} else {
 		if (mode == 1)
 			status++;
 		else
 			status--;		
-	if (status == 0)
-	{		
-		cm.sendYesNo("æ‚¨æ˜¯å¦è¦å‡ºå»å‘¢?" );	
-	}
-	else if (status == 1) 
-        {
-		var m = cm.getPlayer().getMap()
-		if(m.playerCount() > 1){
-			m.clearMapTimer();
-			m.killAllMonsters();
-			m.resetReactors();
-			m.setOnUserEnter("");
-		}
-		cm.warp(702070400,0);
+	if (status == 0) {		
+		cm.sendYesNo("ÄúÊÇ·ñÒª³öÈ¥ÄØ?" );	
+	} else if (status == 1)  {
+		if (!cm.isLeader()) {
+	cm.sendOk("Çë½ĞÄãµÄ¶Ó³¤À´ÕÒÎÒ!");
+		cm.dispose();
+		} else {
+		cm.warpParty(702070400,0);
+		cm.resetReactors();
 		cm.dispose();	
 	}
 }
 }
-	
+}

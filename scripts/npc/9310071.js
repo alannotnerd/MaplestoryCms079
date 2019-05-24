@@ -1,12 +1,20 @@
-/*
-åŠ ç‚¹NPC
-*/
+/* 
+ * ½Å±¾ÀàĞÍ: cm
+ * ½Å±¾ÓÃÍ¾: µÖÓÃ¾íÖĞ½é
+ * ½Å±¾×÷Õß: ¹ÊÊÂØ¼
+ * ÖÆ×÷Ê±¼ä: 2014/12/18
+ */
+ 
+importPackage(Packages.client);
+importPackage(Packages.client.inventory);
 
-var status = 0;
-var fee;
-var xap;
+
+var status = -1;
+var beauty = 0;
+var tosend = 0;
+var sl;
+var mats;
 function start() {
-    status = -1;
     action(1, 0, 0);
 }
 
@@ -14,131 +22,122 @@ function action(mode, type, selection) {
     if (mode == -1) {
         cm.dispose();
     } else {
-        if (mode == 0) {
-            cm.sendOk("å¾ˆå¥½ä¸‹æ¬¡å†è§");
+        if (mode == 0 && status == 0) {
             cm.dispose();
             return;
         }
-        if (mode == 1)
+        if (mode == 1) {
             status++;
-        else
+        } else {
+            if (status == 0) {
+                cm.sendNext("Èç¹ûĞèÒªµÖÓÃ¾íÖĞ½é·şÎñÔÚÀ´ÕÒÎÒ°É¡£");
+                cm.dispose();
+            }
             status--;
+        }
         if (status == 0) {
-            cm.sendSimple("æ‚¨å¥½!æˆ‘å¯ä»¥å¸®æ‚¨å¿«é€ŸåŠ ç‚¹å–”!!#b\r\n#L0#å¢åŠ åŠ›é‡#l #L1#å¢åŠ æ•æ·#l #L2#å¢åŠ æ™ºåŠ›#l #L3#å¢åŠ è¿æ°”#l#k");
+            var gsjb = "";
+            gsjb ="  #e´Ë´¦¶Ò»» #b- ·ãÒ¶ - #r1±È1¶Ò»»¡£\r\n  #r·ãÒ¶»ñµÃ·½Ê½: #v4001126#\r\n  ´òÈÎºÎ¹ÖÎïÓĞ¼¸ÂÊ±¬\r\n";
+            gsjb +="  µ±Ç°µÖÓÃ¾í:#r" + cm.getPlayer().getCSPoints(2) + "#k\r\n\r\n#d";
+            gsjb +="#L3##b#z4001126#¶Ò»»µÖÓÃ¾í #fUI/Basic/BtHide3/mouseOver/0# #b±ÈÀı - (#r1 = 1#b)#l\r\n\r\n\r\n";
+
+
+
+
+        //    gsjb += "#L1##b#z4000463#¶Ò»»µÖÓÃ¾í #b±ÈÀı - (#r1 = 100#b)#l#l\r\n\r\n";
+        //    gsjb += "#L0##bµÖÓÃ¾í¶Ò»»#z4000463# #b±ÈÀı - (#r100 = 1#b)#l#l\r\n";
+            cm.sendSimple(gsjb);
         } else if (status == 1) {
-          	 if(selection == 0){
-			xap=1;
-			cm.sendGetNumber("è¯·é—®æ‚¨è¦åŠ å¤šå°‘ç‚¹åŠ›é‡?",1,1,10000);
-		 }else if(selection == 1){
-			xap=2;
-			cm.sendGetNumber("è¯·é—®æ‚¨è¦åŠ å¤šå°‘ç‚¹æ•æ·?",1,1,10000);
-		 }else if(selection == 2){
-			xap=3;
-			cm.sendGetNumber("è¯·é—®æ‚¨è¦åŠ å¤šå°‘ç‚¹æ™ºåŠ›?",1,1,10000);
-		 }else if(selection == 3){
-			xap=4;
-			cm.sendGetNumber("è¯·é—®æ‚¨è¦åŠ å¤šå°‘ç‚¹è¿æ°”?",1,1,10000);
-		 }
+            if (cm.getPlayer() >= 1 && cm.getPlayer() <= 5) {
+                cm.sendOk("GM²»ÄÜ²ÎÓë¶Ò»»¡£");
+                cm.dispose();
+            }
+            if (selection == 0) {
+                if (cm.getPlayer().getCSPoints(2) / 100 == 0) {
+                    cm.sendNext("ÄúµÄÕÊ»§µÖÓÃ¾í²»×ãÎŞ·¨¶Ò»»¹úÇì¼ÍÄî±Ò¡£");
+                    status = -1;
+                } else {
+                    beauty = 1;
+                    cm.sendGetNumber("ÇëÊäÈë#rµÖÓÃ¾í#k¶Ò»»#b#z4000463##kµÄÊıÁ¿:\r\n#b±ÈÀı - (#r100 = 1#b)\r\nÄãµÄÕË»§ĞÅÏ¢ - \r\n    µÖÓÃ¾íÊıÁ¿: #r" +
+                            cm.getPlayer().getCSPoints(2) + " \r\n", 1, 1, cm.getPlayer().getCSPoints(2) / 100);
+
+                }
+
+            
+            } else if (selection == 1) {
+                var iter = cm.getChar().getInventory(MapleInventoryType.ETC).listById(4000463).iterator();
+                if (cm.haveItem(4000463) == 0) {
+                    cm.sendNext("ÄúµÄÕÊ»§#z4000463#ÊıÁ¿²»×ã¶Ò»»µÖÓÃ¾í¡£");
+                    status = -1;
+                } else {
+                    beauty = 2;
+                    cm.sendGetNumber("ÇëÊäÈë#b#z4000463##k¶Ò»»#rµÖÓÃ¾í#kµÄÊıÁ¿:\r\n#b±ÈÀı - (#r1 = 100#b)\r\nÄãµÄÕË»§ĞÅÏ¢ - \r\n    µÖÓÃ¾íÊıÁ¿: #r" +
+                            cm.getPlayer().getCSPoints(2) + "    \r\n", 1, 1, iter.next().getQuantity());
+
+                }
+            } else if (selection == 3) {
+                var iter = cm.getChar().getInventory(MapleInventoryType.ETC).listById(4001126).iterator();
+                if (cm.haveItem(4001126) == 0) {
+                    cm.sendNext("ÄúµÄÕÊ»§#v4001126#ÊıÁ¿²»×ã¶Ò»»µÖÓÃ¾í¡£");
+                    status = -1;
+                } else {
+                    beauty = 3;
+                    cm.sendGetNumber("ÇëÊäÈë#b#z4001126##k¶Ò»»#rµÖÓÃ¾í#kµÄÊıÁ¿:\r\n#b±ÈÀı - (#r1 = 1#b)\r\nÄãµÄÕË»§ĞÅÏ¢ - \r\n    µÖÓÃ¾íÊıÁ¿: #r" +
+                            cm.getPlayer().getCSPoints(2) + "   \r\n", 1, 1, iter.next().getQuantity());
+
+                }
+
+            }
+
+
         } else if (status == 2) {
-            fee = selection;
-	    if(xap == 1){
-		xap=5;
-            	cm.sendYesNo("ä½ ç¡®å®šè¦åŠ  #r" + fee + "#k ç‚¹åŠ›é‡å—?");  
-	    }else if(xap == 2){
-		xap=6;
-            	cm.sendYesNo("ä½ ç¡®å®šè¦åŠ  #r" + fee + "#k ç‚¹æ•æ·å—?");  
-	    }else if(xap == 3){
-		xap=7;
-            	cm.sendYesNo("ä½ ç¡®å®šè¦åŠ  #r" + fee + "#k ç‚¹æ™ºåŠ›å—?");  
-	    }else if(xap == 4){
-		xap=8;
-            	cm.sendYesNo("ä½ ç¡®å®šè¦åŠ  #r" + fee + "#k ç‚¹è¿æ°”å—?");       
-	    }	
-        } else if (status == 3) {
-	   var statup = new java.util.ArrayList();
-	   var p = cm.c.getPlayer(); 	  
-           if(xap == 5){
-		if(p.getRemainingAp() < fee){
-			cm.sendOk("æ‚¨çš„APä¸å¤ŸåŠ å“¦!");
-			cm.dispose();
-		}else{ 		
-			var newxi = p.getStr() + fee;	
-			var newap =  p.getRemainingAp()- fee;
-			if (newxi > 32000){
-				cm.sendOk("åŠ ç‚¹å¤±è´¥! å„é¡¹èƒ½åŠ›å€¼æœ€å¤šä¸èƒ½è¶…32000!");
-				cm.dispose();
-			}else{
-				p.setRemainingAp (newap);
-				p.setStr(newxi);			
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.STR, java.lang.Integer.valueOf(newxi)));
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(newap)));
-				p.getClient().getSession().write (net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-				cm.sendOk("å¿«é€ŸåŠ ç‚¹æˆåŠŸ!");
-				cm.dispose();
-			      }
-		}
-	   }else if(xap == 6){
-		if(p.getRemainingAp() < fee){
-			cm.sendOk("æ‚¨çš„APä¸å¤ŸåŠ å“¦!");
-			cm.dispose();
-		}else{ 		
-			var newxi = p.getDex() + fee;	
-			var newap =  p.getRemainingAp() - fee;
-			if (newxi > 32000){
-				cm.sendOk("åŠ ç‚¹å¤±è´¥! å„é¡¹èƒ½åŠ›å€¼æœ€å¤šä¸èƒ½è¶…32000!");
-				cm.dispose();
-			}else{
-				p.setRemainingAp (newap);
-				p.setDex(newxi);			
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.DEX, java.lang.Integer.valueOf(newxi)));
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(newap)));
-				p.getClient().getSession().write (net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-				cm.sendOk("å¿«é€ŸåŠ ç‚¹æˆåŠŸ!");
-				cm.dispose();
-			     }
-		}
-	   }else if(xap == 7){
-		if(p.getRemainingAp() < fee){
-			cm.sendOk("æ‚¨çš„APä¸å¤ŸåŠ å“¦!");
-			cm.dispose();
-		}else{ 		
-			var newxi = p.getInt() + fee;	
-			var newap =  p.getRemainingAp() - fee;
-			if (newxi > 32000){
-				cm.sendOk("åŠ ç‚¹å¤±è´¥! å„é¡¹èƒ½åŠ›å€¼æœ€å¤šä¸èƒ½è¶…32000!");
-				cm.dispose();
-			}else{
-				p.setRemainingAp (newap);
-				p.setInt(newxi);			
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.INT, java.lang.Integer.valueOf(newxi)));
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(newap)));
-				p.getClient().getSession().write (net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-				cm.sendOk("å¿«é€ŸåŠ ç‚¹æˆåŠŸ!");
-				cm.dispose();
-			     }
-		}
-	   }else if(xap == 8){
-		if(p.getRemainingAp() < fee){
-			cm.sendOk("æ‚¨çš„APä¸å¤ŸåŠ å“¦!");
-			cm.dispose();
-		}else{ 		
-			var newxi = p.getLuk() + fee;	
-			var newap =  p.getRemainingAp() - fee;
-			if (newxi > 32000){
-				cm.sendOk("åŠ ç‚¹å¤±è´¥! å„é¡¹èƒ½åŠ›å€¼æœ€å¤šä¸èƒ½è¶…32000!");
-				cm.dispose();
-			}else{
-				p.setRemainingAp (newap);
-				p.setLuk(newxi);			
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.LUK, java.lang.Integer.valueOf(newxi)));
-				statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(newap)));
-				p.getClient().getSession().write (net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-				cm.sendOk("å¿«é€ŸåŠ ç‚¹æˆåŠŸ!");
-				cm.dispose();
-			    }
-		}
-	   }
-          
+            if (beauty == 1) {
+                if (selection <= 0) {
+                    cm.sendOk("ÊäÈëµÄ¶Ò»»Êı×Ö´íÎó¡£");
+                    cm.dispose();
+                /*
+                } else if (selection >= 200) {
+                    sl = (selection / 200) + 1;
+                } else {
+                    sl = 3;
+                }
+
+                //if(cm.getPlayer().getInventory(net.sf.cherry.client.MapleInventoryType.getByType(1)).isFull()){
+                if (cm.getSpace(4) < sl) {
+                    cm.sendOk("ÄãµÄ±³°ü¡°ÆäËü¡±¿Õ¼ä²»×ã!ÇëÖÁÉÙÓĞ" + sl + "¸ö¿Õ¼äÒÔÉÏ.\r\nÈç¹ûÉÏÃæÓĞ³öÏÖĞ¡ÊıµÄ»°ÇëÈëÎ»!\r\nÈç£º³öÏÖ<ÖÁÉÙÓĞ7.5¸ö¿Õ¼äÒÔÉÏ>ÄÇÃ´Äú¾ÍĞèÒªÁô8¸ö¿Õ¼ä!");
+                    cm.dispose();
+*/
+                } else if (cm.getPlayer().getCSPoints(2) >= selection * 100) {
+                    cm.gainD(-selection * 100);
+                    cm.gainItem(4000463, selection);
+                    cm.sendOk("Äú³É¹¦½« #r " + (selection * 100) + " #kµÖÓÃ¾í ¶Ò»»³É ¹úÇì¼ÍÄî±Ò#v4000463# x #r" + selection + " #k")
+                } else {
+                    cm.sendNext("¶Ò»»" + selection + "¸ö#z4000463##v4000463# ĞèÒª#r " + (selection * 100) + "#kµÖÓÃ¾í¡£ÄúÃ»ÓĞ×ã¹»µÄµÖÓÃ¾í¡£");
+                    cm.dispose();
+                }
+            } else if (beauty == 2) {
+                if (cm.haveItem(4000463, selection)) {
+                    cm.gainItem(4000463, -selection);
+                    cm.gainD(+100 * selection);
+                    cm.sendOk("Äú³É¹¦½«#z4000463##v4000463# x #r" + selection + " #k»»Îª#r " + (100 * selection) + " #kµÖÓÃ¾í¡£");
+                } else {
+                    cm.sendNext("ÄúµÄÊäÈëµÄÊıÁ¿´íÎó£¬ÎŞ·¨¶Ò»»µÖÓÃ¾í¡£");
+                    cm.dispose();
+                }
+
+            } else if (beauty == 3) {
+                if (cm.haveItem(4001126, selection)) {
+                    cm.gainItem(4001126, -selection);
+                    cm.gainD(+Math.floor(1 * selection));
+                    cm.sendOk("Äú³É¹¦½«#z4001126##v4001126# x #r" + selection + " #k»»Îª#r " + Math.floor(1 * selection) + " #kµÖÓÃ¾í¡£");
+                } else {
+                    cm.sendNext("ÄúµÄÊäÈëµÄÊıÁ¿´íÎó£¬ÎŞ·¨¶Ò»»µÖÓÃ¾í¡£");
+                    cm.dispose();
+                }
+            }
+            status = -1;
+        } else {
+            cm.dispose();
         }
     }
 }

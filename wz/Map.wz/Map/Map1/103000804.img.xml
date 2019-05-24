@@ -100,7 +100,7 @@
             <string name="id" value="9300002"/>
             <int name="x" value="297"/>
             <int name="y" value="-2188"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="76"/>
             <int name="cy" value="-2175"/>
@@ -112,7 +112,7 @@
             <string name="id" value="9300002"/>
             <int name="x" value="433"/>
             <int name="y" value="-2192"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="80"/>
             <int name="cy" value="-2175"/>
@@ -124,7 +124,7 @@
             <string name="id" value="9300002"/>
             <int name="x" value="132"/>
             <int name="y" value="-2193"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="81"/>
             <int name="cy" value="-2175"/>
@@ -136,7 +136,7 @@
             <string name="id" value="9300000"/>
             <int name="x" value="-18"/>
             <int name="y" value="-1480"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="100"/>
             <int name="cy" value="-1455"/>
@@ -148,7 +148,7 @@
             <string name="id" value="9300000"/>
             <int name="x" value="80"/>
             <int name="y" value="-1486"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="99"/>
             <int name="cy" value="-1455"/>
@@ -160,7 +160,7 @@
             <string name="id" value="9300000"/>
             <int name="x" value="391"/>
             <int name="y" value="-1488"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="96"/>
             <int name="cy" value="-1455"/>
@@ -172,7 +172,7 @@
             <string name="id" value="9300000"/>
             <int name="x" value="247"/>
             <int name="y" value="-1485"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="90"/>
             <int name="cy" value="-1455"/>
@@ -208,7 +208,7 @@
             <string name="id" value="9300000"/>
             <int name="x" value="-111"/>
             <int name="y" value="-1475"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="94"/>
             <int name="cy" value="-1455"/>
@@ -220,7 +220,7 @@
             <string name="id" value="9300000"/>
             <int name="x" value="299"/>
             <int name="y" value="-1485"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="89"/>
             <int name="cy" value="-1455"/>
@@ -232,7 +232,7 @@
             <string name="id" value="9300003"/>
             <int name="x" value="162"/>
             <int name="y" value="-451"/>
-            <int name="mobTime" value="-1"/>
+            <int name="mobTime" value="50"/>
             <int name="f" value="0"/>
             <int name="fh" value="111"/>
             <int name="cy" value="-435"/>
