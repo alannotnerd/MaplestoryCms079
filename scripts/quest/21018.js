@@ -5,21 +5,21 @@ function start(mode, type, selection) {
         status++;
     } else {
         if (status == 1) {
-            qm.sendNext("ֻҪ����5ֻ�Ϳ����ˣ���������");
+            qm.sendNext("只要消灭5只就可以了，你怕了吗？");
             qm.dispose();
             return;
         }
         status--;
     }
     if (status == 0) {
-        qm.sendNext("�������Ҳ���һ�£�������Ϊֹ�Ļ�������ѵ����������Է����ܼ򵥡�����������һ����ǿ�����͵Ĺ��ޣ��д���ѩ���飬��ֻҪ�������Ϳ��ԣ�Ҫ���ܻ���#r50#kֻ������ˡ���");
+        qm.sendNext("来，让我测试一下，你至今为止的基础体力训练结果。测试方法很简单。这座岛上有一种最强悍凶猛的怪兽，叫呆呆雪精灵，你只要击退它就可以！要是能击退#r50#k只就最好了……");
     } else if (status == 1) {
-        qm.askAcceptDecline("����#o0100134#�����������Ͳ��࣬ɱ����ô����²�����̬ƽ��ı��֣�������5ֻ�Ͳ���ˡ��㿴����ѵ������Ȼ����֮���Ƕ�ô�κ�г������������������");
+        qm.sendAcceptDecline("不过#o0100134#的数量本来就不多，杀掉那么多恐怕不利生态平衡的保持，你消灭5只就差不多了。你看，这训练与自然环境之间是多么滴和谐啊！真是完美啊……");
     } else if (status == 2) {
         if (!qm.isQuestActive(21018)) {
             qm.forceStartQuest();
         }
-        qm.sendNextS("#o0100134#�ڵ��Ľ����������ߵ�·һֱ�ߣ����ܿ���#b#m140010200##k����ȥ��������#r5ֻ#o0100134#s#k��");
+        qm.sendNext("#o0100134#在岛的较深处。村子左边的路一直走，就能看到#b#m140010200##k，请去那里消灭#r5只#o0100134#s#k。");
     } else if (status == 3) {
         qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow1");
         qm.dispose();

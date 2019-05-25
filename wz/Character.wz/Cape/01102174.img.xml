@@ -179,7 +179,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/cape" value="../../proneStab/0/cape"/>
+            <uol name="cape" value="../../proneStab/0/cape"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

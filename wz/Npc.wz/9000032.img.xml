@@ -25,32 +25,32 @@
             <vector name="origin" x="32" y="79"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="0"/>
+        <uol name="9" value="1"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="0"/>
+        <uol name="13" value="1"/>
+        <uol name="14" value="0"/>
+        <uol name="15" value="1"/>
+        <uol name="16" value="0"/>
+        <uol name="17" value="1"/>
+        <uol name="18" value="0"/>
+        <uol name="19" value="1"/>
+        <uol name="20" value="0"/>
+        <uol name="21" value="1"/>
+        <uol name="22" value="0"/>
+        <uol name="23" value="1"/>
+        <uol name="24" value="0"/>
+        <uol name="25" value="1"/>
+        <uol name="26" value="0"/>
+        <uol name="27" value="1"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>
@@ -109,19 +109,19 @@
             <vector name="origin" x="32" y="79"/>
             <int name="delay" value="30"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
-        <uol name="7" value="7"/>
-        <uol name="8" value="8"/>
-        <uol name="9" value="9"/>
-        <uol name="10" value="10"/>
-        <uol name="11" value="11"/>
-        <uol name="12" value="12"/>
+        <uol name="13" value="0"/>
+        <uol name="14" value="1"/>
+        <uol name="15" value="2"/>
+        <uol name="16" value="3"/>
+        <uol name="17" value="4"/>
+        <uol name="18" value="5"/>
+        <uol name="19" value="6"/>
+        <uol name="20" value="7"/>
+        <uol name="21" value="8"/>
+        <uol name="22" value="9"/>
+        <uol name="23" value="10"/>
+        <uol name="24" value="11"/>
+        <uol name="25" value="12"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

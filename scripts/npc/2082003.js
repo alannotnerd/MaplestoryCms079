@@ -1,29 +1,30 @@
-/*
-	NPC Name: 		Cobra - Retired dragon trainer
-	Map(s): 		Leafre : Cabin
-*/
 var status = 0;
 
 function start() {
-    status = -1;
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (status >= 0 && mode == 0) {
-	cm.dispose();
-	return;
-    }
-    if (mode == 1)
-	status++;
-    else
-	status--;
-
-    if (status == 0) {
-	cm.sendSimple("Èç¹ûÄãÓĞ³á°ò£¬ÎÒ¸Ò¿Ï¶¨£¬Äã¿ÉÒÔÈ¥ÄÇÀï¡£µ«ÊÇ£¬Õâ±¾Éí²¢Ã»ÓĞ×ã¹»µÄ¡£Èç¹ûÄãÏëÒª·É£¬ËäÈ»·çÕâ±Èµ¶Æ¬·æÀû£¬ÄãĞèÒª¼áÈÍµÄ³ß¶ÈÎªºÃ¡£ÎÒÊÇÎ¨Ò»°ëÉí×ó±ßÄÇ¸öÖªµÀ»ØÀ´µÄÂ·ÉÏ......Èç¹ûÄãÏëÈ¥ÄÇÀï£¬ÎÒ¿ÉÒÔ¸Ä±äÄã¡£²»¹ÜÄãÊÇÊ²Ã´£¬ÕâÒ»¿Ì£¬Äã»á³ÉÎªÒ»¸ö #bÁú#k...\r\n #L0##bÎÒÏë±ä³ÉÒ»Ö»Áú.#k#l");
-    } else if (status == 1) {
-	cm.useItem(2210016);
-	cm.warp(200090500, 0);
-	cm.dispose();
-    }
+	if (mode == -1) {
+		cm.dispose();
+	} else {
+		if (status >= 0 && mode == 0) {
+			cm.sendOk("ä½ åœ¨è¿™é‡Œè¿˜æœ‰å…¶ä»–çš„äº‹æƒ…æ²¡æœ‰åŠå®Œå—ï¼Ÿ");
+			cm.dispose();
+			return;
+		}
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			cm.sendYesNo("ä½ æƒ³ç¦»å¼€ç¥æœ¨æ‘ï¼Œå‰å¾€ #bæ—¶é—´ç¥æ®¿#k å—ï¼Ÿå¦‚æœæ˜¯çš„è¯ï¼Œæˆ‘å¯ä»¥å¸¦ä½ è¿›å…¥é€šå¾€æ—¶é—´ç¥æ®¿çš„è·¯ï¼æ€ä¹ˆæ ·ï¼Ÿå†³å®šè¦å»å—ï¼Ÿ");
+		} else if (status == 1) {
+			cm.sendNext("å¾ˆå¥½ï¼Œé‚£æˆ‘ä»¬ç°åœ¨å°±å‡ºå‘å§ï¼");
+		} else if (status == 2) {
+			cm.warp(200090500, 0);
+			cm.dispose();
+		}
+	}
 }

@@ -1,5 +1,5 @@
 /**
- *	[¹í½Ú]²»¸øÌÇ¹û£¬ËûÃÇ¾Í»áµ·µ°¡«£¡
+ *	[é¬¼èŠ‚]ä¸ç»™ç³–æœï¼Œä»–ä»¬å°±ä¼šæ£è›‹ï½ï¼
  */
 
 var status = -1;
@@ -10,6 +10,6 @@ function start(mode, type, selection) {
 }
 
 function end(mode, type, selection) {
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }

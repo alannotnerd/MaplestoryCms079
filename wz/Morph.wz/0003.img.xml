@@ -58,10 +58,10 @@
             <vector name="head" x="-4" y="-65"/>
             <int name="delay" value="50"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="0" value="0"/>
+        <uol name="3" value="0"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
+        <uol name="6" value="0"/>
         <canvas name="7" width="58" height="118">
             <vector name="origin" x="34" y="118"/>
             <vector name="lt" x="-34" y="-96"/>

@@ -1,13 +1,13 @@
 /*
-	ÈÎÎñ: Ó¢ÐÛµÄºóÒá
-	ÃèÊö: »ñµÃÁË°¢¸¥Àû°£¹ýÈ¥µÄÓ¢ÐÛÁúÉñ¸¥ÀïµÂÊ¹ÓÃ¹ýµÄÑ«ÕÂ¡£±»ÈÏ¿ÉÎª#bÓ¢ÐÛµÄºóÒá#k¡£
+	ä»»åŠ¡: è‹±é›„çš„åŽè£”
+	æè¿°: èŽ·å¾—äº†é˜¿å¼—åˆ©åŸƒè¿‡åŽ»çš„è‹±é›„é¾™ç¥žå¼—é‡Œå¾·ä½¿ç”¨è¿‡çš„å‹‹ç« ã€‚è¢«è®¤å¯ä¸º#bè‹±é›„çš„åŽè£”#kã€‚
 */
 var status = -1;
 
 function start(mode, type, selection) {
     if (qm.getPlayer().getLevel() >= 10 && ((qm.getPlayer().getJob() / 100) | 0) == 22) {
         qm.forceStartQuest();
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }
@@ -15,7 +15,7 @@ function start(mode, type, selection) {
 function end(mode, type, selection) {
     if (qm.getPlayer().getLevel() >= 10 && ((qm.getPlayer().getJob() / 100) | 0) == 22) {
         qm.forceStartQuest();
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }

@@ -1,6 +1,6 @@
 /*
-	ÈÎÎñ: ²»¹Ü¶àÉÙ´Î¶¼µÃÕùÈ¡£¡
-	ÃèÊö: ÎÒ´ÓÖØÁ¦Íø¼İÊ»Ô±¡­¡­Î»ÓÚ2102ÄêÉÌÒµÇøµÄ#p9120033#´¦£¬»ñµÃÁËÌÖ·¥#o9400295#µÄÈÎÎñ£¬ËûËµÖØÁ¦ÍøÊ¹ÓÃµÄÇı¶¯×é¼şÄ¿Ç°³öÏÖÔÚ#o9400295#µÄÖÜÎ§£¬ÓĞÁËËü¾Í¿ÉÒÔÇ¿»¯#o9400295#Ã»Ê±¼äÁË£¬Èç¹û²»¾¡¿ìµØ´òµ¹#o9400295#µÄ»°¡­£¡
+	ä»»åŠ¡: ä¸ç®¡å¤šå°‘æ¬¡éƒ½å¾—äº‰å–ï¼
+	æè¿°: æˆ‘ä»é‡åŠ›ç½‘é©¾é©¶å‘˜â€¦â€¦ä½äº2102å¹´å•†ä¸šåŒºçš„#p9120033#å¤„ï¼Œè·å¾—äº†è®¨ä¼#o9400295#çš„ä»»åŠ¡ï¼Œä»–è¯´é‡åŠ›ç½‘ä½¿ç”¨çš„é©±åŠ¨ç»„ä»¶ç›®å‰å‡ºç°åœ¨#o9400295#çš„å‘¨å›´ï¼Œæœ‰äº†å®ƒå°±å¯ä»¥å¼ºåŒ–#o9400295#æ²¡æ—¶é—´äº†ï¼Œå¦‚æœä¸å°½å¿«åœ°æ‰“å€’#o9400295#çš„è¯â€¦ï¼
 */
 var status = -1;
 
@@ -13,7 +13,7 @@ function start(mode, type, selection) {
         return;
     }
     if (status == 0) {
-        qm.askAcceptDecline("Watch out, because he seems... much more powerful than before. Do not underestimate him!");
+        qm.sendAcceptDecline("Watch out, because he seems... much more powerful than before. Do not underestimate him!");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.dispose();
@@ -21,6 +21,6 @@ function start(mode, type, selection) {
 }
 
 function end(mode, type, selection) {
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }

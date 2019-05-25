@@ -1,8 +1,5 @@
 function enter(pi) {
-    if (pi.getPlayer().getMapId() != 910000000) {
-        pi.getPlayer().saveLocation("FREE_MARKET");
-        pi.warp(910000000, "out00");
-        return true;
-    }
-    return false;
+	pi.getPlayer().saveLocation(net.sf.cherry.server.maps.SavedLocationType.FREE_MARKET);
+	pi.warp(910000000, "st00");
+	return true;
 }

@@ -49,7 +49,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="67" height="75">
             <vector name="origin" x="31" y="74"/>
             <int name="z" value="0"/>
@@ -70,8 +70,8 @@
             <int name="z" value="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="6" value="6"/>
-        <uol name="7" value="7"/>
+        <uol name="8" value="6"/>
+        <uol name="9" value="7"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

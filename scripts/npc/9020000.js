@@ -53,17 +53,17 @@ function action(mode, type, selection) {
             for (i = 0; i < 10; i++) {
                 text += "";
             }
-			//ÏÔÊ¾ÎïÆ·IDÍ¼Æ¬ÓÃµÄ´úÂëÊÇ  #vÕâÀïĞ´ÈëID#
-            text += "#dÇ×°®µÄµºÃñÄãºÃ£¡#l\r\nÕâÀïÊÇ·ÏÆú¶¼ÊĞ×é¶ÓÈÎÎñ£¬ÒªÇó3~6ÈË£¬µÈ¼¶ÔÚ21~200¼¶¼´¿É¿ªÊ¼·ÏÆú×é¶ÓÈÎÎñ,ÕÙ¼¯Ğ¡»ï°éÒ»ÆğÍ¨¹Ø°É£¡¡£\r\n\r\n"//3
-            text += "#L1##r¿ªÊ¼×é¶Ó¸±±¾#l\r\n"//3
-			//text += "#L2##r¸±±¾¹Ì¶¨½±Àø#l\r\n\r\n"//3
+			//æ˜¾ç¤ºç‰©å“IDå›¾ç‰‡ç”¨çš„ä»£ç æ˜¯  #vè¿™é‡Œå†™å…¥ID#
+            text += "#däº²çˆ±çš„å²›æ°‘ä½ å¥½ï¼#l\r\nè¿™é‡Œæ˜¯åºŸå¼ƒéƒ½å¸‚ç»„é˜Ÿä»»åŠ¡ï¼Œè¦æ±‚3~6äººï¼Œç­‰çº§åœ¨21~35çº§å³å¯å¼€å§‹åºŸå¼ƒç»„é˜Ÿä»»åŠ¡,å¬é›†å°ä¼™ä¼´ä¸€èµ·é€šå…³å§ï¼ã€‚\r\n\r\n"//3
+            text += "#L1##rå¼€å§‹ç»„é˜Ÿå‰¯æœ¬#l\r\n"//3
+			//text += "#L2##rå‰¯æœ¬å›ºå®šå¥–åŠ±#l\r\n\r\n"//3
             cm.sendSimple(text);
 	} else if (selection == 1) {
         if (cm.getParty() == null) { // No Party
-            cm.sendOk("ÄãÃ»ÓĞ¶ÓÎéÎŞ·¨½øÈë£¡");
+            cm.sendOk("ä½ æ²¡æœ‰é˜Ÿä¼æ— æ³•è¿›å…¥ï¼");
             cm.dispose();
         } else if (!cm.isLeader()) { // Not Party Leader
-            cm.sendOk("ÇëÈÃÄãµÄ¶Ó³¤ºÍÎÒËµ»°~");
+            cm.sendOk("è¯·è®©ä½ çš„é˜Ÿé•¿å’Œæˆ‘è¯´è¯~");
             cm.dispose();
         } else {
             var party = cm.getParty().getMembers();
@@ -74,11 +74,11 @@ function action(mode, type, selection) {
                     levelValid++;
             }
             if (inMap < minPlayers || inMap > maxPlayers) {
-                cm.sendOk("ÄãµÄ¶ÓÎéÈËÊı²»×ã"+minPlayers+"ÈË.Çë°ÑÄãµÄ¶ÓÎéÈËÔ±ÕÙ¼¯µ½·ÏÆø¶¼ÊĞÔÚ½øÈë¸±±¾.");
+                cm.sendOk("ä½ çš„é˜Ÿä¼äººæ•°ä¸è¶³"+minPlayers+"äºº.è¯·æŠŠä½ çš„é˜Ÿä¼äººå‘˜å¬é›†åˆ°åºŸæ°”éƒ½å¸‚åœ¨è¿›å…¥å‰¯æœ¬.");
                 //cm.sendOk("Your party is not a party of "+minPlayers+". Please make sure all your members are present and qualified to participate in this quest. I see #b" + inMap + "#k of your party members are in Kerning. If this seems wrong, #blog out and log back in,#k or reform the party.");
                 cm.dispose();
             } else if (levelValid != inMap) {
-                cm.sendOk("ÇëÈ·±£ÄãµÄ¶ÓÎéÈËÔ±×îĞ¡µÈ¼¶ÔÚ "+minLevel+" ºÍ "+maxLevel+"Ö®¼ä. I see #b" + levelValid + "#k members are in the right level range. If this seems wrong, #blog out and log back in,#k or reform the party.");
+                cm.sendOk("è¯·ç¡®ä¿ä½ çš„é˜Ÿä¼äººå‘˜æœ€å°ç­‰çº§åœ¨ "+minLevel+" å’Œ "+maxLevel+"ä¹‹é—´. I see #b" + levelValid + "#k members are in the right level range. If this seems wrong, #blog out and log back in,#k or reform the party.");
                 cm.dispose();
             } else {
                 var em = cm.getEventManager("KerningPQ");
@@ -102,7 +102,7 @@ function action(mode, type, selection) {
 				//em.startInstance(cm.getPlayer().getParty(), cm.getPlayer().getMap());
                 em.startInstance(cm.getParty(), cm.getPlayer().getMap());
 		} else {
-                            cm.sendOk("ÇëÉÔµÈ...ÈÎÎñÕıÔÚ½øĞĞÖĞ.");
+                            cm.sendOk("è¯·ç¨ç­‰...ä»»åŠ¡æ­£åœ¨è¿›è¡Œä¸­.");
                         }
 						// Capt. Lac Map
 				//em.startInstance(cm.getPlayer().getParty(), cm.getPlayer().getMap());

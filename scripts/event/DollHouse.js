@@ -1,63 +1,89 @@
+/*
+	This file is part of the OdinMS Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
+					   Matthias Butz <matze@odinms.de>
+					   Jan Christian Meyer <vimes@odinms.de>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation version 3 as published by
+    the Free Software Foundation. You may not use, modify or distribute
+    this program under any other version of the GNU Affero General Public
+    License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/**
+	Hak, travel between Orbis, Mu Lung and Herb Town
+**/
+
+importPackage(net.sf.cherry.world);
+importPackage(net.sf.cherry.tools);
+
+var returnMap;
+var map;
+var eim;
 
 function init() {
-    em.setProperty("state", "0");
-}
-
-function setup(eim) {
-    em.setProperty("state", "1");
-    var eim = em.newInstance("DollHouse");
-    var map = eim.setInstanceMap(922000010);
-    map.shuffleReactors();
-    eim.startEventTimer(600000);
-    return eim;
+	em.setProperty("noEntry","false");
 }
 
 function playerEntry(eim, player) {
-    var map = em.getMapFactory().getMap(922000010);
-    player.changeMap(map, map.getPortal(0));
-}
+	returnMap = em.getChannelServer().getMapFactory().getMap(221024400);
 
-function changedMap(eim, player, mapid) {
-    switch (mapid) {
-	case 103000800: // 1st Stage
-	case 103000801: // 2nd Stage
-	case 103000802: // 3rd Stage
-	case 103000803: // 4th Stage
-	case 103000804: // 5th Stage
-    	case 103000805: // Bonus stage
-	    return;
-    }
-    eim.unregisterPlayer(player);
+	eim = em.getInstance("DollHouse");
+	map = eim.getMapFactory().getMap(922000010);
+	player.changeMap(map, map.getPortal(0));
+	map.shuffleReactors();
+	em.setProperty("noEntry","true");
+	em.schedule("timeOut", 600000);
+	player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.getClock(600));
 }
 
 function playerExit(eim, player) {
-    clear(eim);
+	em.setProperty("noEntry","false");
+	player.changeMap(returnMap, returnMap.getPortal(4));
+	eim.unregisterPlayer(player);
+	em.cancel();
+	em.disposeInstance("DollHouse");
+	eim.dispose();
 }
 
-function scheduledTimeout(eim) {
-    clear(eim);
+function timeOut() {
+	em.setProperty("noEntry","false");
+	var player = eim.getPlayers().get(0);
+	player.changeMap(returnMap, returnMap.getPortal(4));
+	eim.unregisterPlayer(player);
+	em.cancel();
+	em.disposeInstance("DollHouse");
+	eim.dispose();
 }
 
 function playerDisconnected(eim, player) {
-    em.setProperty("state", "0");
-    player.getMap().removePlayer(player);
-    player.setMap(em.getChannelServer().getMapFactory().getMap(221024400));
-    eim.unregisterPlayer(player);
-    eim.dispose();
+	em.setProperty("noEntry","false");
+	player.getMap().removePlayer(player);
+	player.setMap(returnMap);
+	eim.unregisterPlayer(player);
+	em.cancel();
+	em.disposeInstance("DollHouse");
+	eim.dispose();
 }
 
 function clear(eim) {
-    var map = eim.getChannelServer().getMapFactory().getMap(221024400);
-    em.setProperty("state", "0");
-    if( eim.getPlayers().legnth != 0) {
-        try {
-            var player = eim.getPlayers().get(0);
-            player.changeMap(map, map.getPortal(0));
-            eim.unregisterPlayer(player);
-        } catch (e) {
-        }
-    }
-    eim.dispose();
+	em.setProperty("noEntry","false");
+	var player = eim.getPlayers().get(0);
+	player.changeMap(returnMap, returnMap.getPortal(4));
+	eim.unregisterPlayer(player);
+	em.cancel();
+	em.disposeInstance("DollHouse");
+	eim.dispose();
 }
 
 function cancelSchedule() {

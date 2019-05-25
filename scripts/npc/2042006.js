@@ -6,16 +6,16 @@ function start() {
     action(1, 0, 0);
 }
 
+
 function action(mode, type, selection) {
-    if (mode == 1) {
+    if (mode == 1)
         status++;
-    } else {
+    else
         status = 0;
-    }
     if (status == 0) {
         request = cm.getNextCarnivalRequest();
         if (request != null) {
-            cm.sendYesNo(request.getChallengeInfo() + "\r\n你想与这个队伍进行怪物嘉年华2战斗吗?");
+            cm.sendYesNo(request.getChallengeInfo() + "\r\nWould you like to battle this party at the Monster Carnival 2?")
         } else {
             cm.dispose();
         }
@@ -23,9 +23,11 @@ function action(mode, type, selection) {
         try {
             cm.getChar().getEventInstance().registerCarnivalParty(request.getChallenger(), request.getChallenger().getMap(), 1);
             cm.dispose();
-        } catch(e) {
-            cm.sendOk("你选择的挑战队伍无效.");
+        } catch (e) {
+            cm.sendOk("The challenge is no longer valid.");
         }
         status = -1;
     }
 }
+
+

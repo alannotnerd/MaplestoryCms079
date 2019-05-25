@@ -105,20 +105,20 @@
             <int name="z" value="0"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
+        <uol name="7" value="0"/>
+        <uol name="8" value="1"/>
+        <uol name="9" value="2"/>
+        <uol name="10" value="3"/>
+        <uol name="11" value="4"/>
+        <uol name="12" value="5"/>
+        <uol name="13" value="6"/>
+        <uol name="14" value="0"/>
+        <uol name="15" value="1"/>
+        <uol name="16" value="2"/>
+        <uol name="17" value="3"/>
+        <uol name="18" value="4"/>
+        <uol name="19" value="5"/>
+        <uol name="20" value="6"/>
         <canvas name="21" width="79" height="84">
             <vector name="origin" x="45" y="84"/>
             <int name="z" value="0"/>

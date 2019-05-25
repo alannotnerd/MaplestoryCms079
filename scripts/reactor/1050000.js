@@ -1,8 +1,11 @@
-/* 
-	Berserk 4th job quest rock - Warp you away
+/* @Author Crovy
+ * 
+ * 1050000.js: Berserk 4th job quest rock - drops a shield or punts you from map.
 */
 
 function act() {
-    rm.playerMessage("You were sent out of the map due to an unknown force.");
-    rm.warp(105090200, 0);
+	if (Math.random() > 0.7)
+	    rm.dropItems();
+	else
+	    rm.warp(105090200);
 }

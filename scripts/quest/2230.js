@@ -4,7 +4,7 @@ function start(mode, type, selection) {
 }
 function end(mode, type, selection) {
 	qm.sendNext("Snail Roon is no longer available.");
-	qm.forceCompleteQuest();
+	qm.completeQuest();
 	qm.dispose();
 /*	if (mode == -1) {
 		qm.dispose();
@@ -31,7 +31,7 @@ function end(mode, type, selection) {
 			if (qm.haveItem(4032086,1)) {
 				qm.gainItem(4032086, -1); // Mysterious Egg * -1
 			}
-			qm.forceCompleteQuest();
+			qm.completeQuest();
 			qm.sendNext("This snail will only be alive for #b5 hours#k. Shower it with love. Your love will be reciprocated in the end.");
 			qm.dispose();
 		}

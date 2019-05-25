@@ -178,8 +178,8 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="150"/>
                 </canvas>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="4" value="2"/>
+                <uol name="5" value="1"/>
             </imgdir>
             <imgdir name="1">
                 <canvas name="0" width="176" height="235">

@@ -4,7 +4,7 @@
         <int name="version" value="10"/>
         <int name="cloud" value="0"/>
         <string name="streetName" value="커닝시티지하철"/>
-        <string name="mapName" value="2호선&lt;1구역&gt;"/>
+        <string name="mapName" value="2호선&amp;lt;1구역&gt;"/>
         <string name="mapDesc" value=""/>
         <int name="town" value="0"/>
         <int name="returnMap" value="103000000"/>

@@ -1,12 +1,12 @@
 /*
-	����: ʱ�侲ֹ֮����ʮ������
-	����: �ӵ���ʮ�����Ű���ʱ�侲ֹ֮��������ָ�ȥ����ʱ�侲ֹ֮����#p9120210#�ɡ�
+	任务: 时间静止之湖的十字旅团
+	描述: 接到了十字旅团帮助时间静止之湖地区的指令。去见见时间静止之湖的#p9120210#吧。
 */
 var status = -1;
 
 function start(mode, type, selection) {
-    qm.sendOk("ȥʱ�侲ֹ֮����#p9120210#��");
-    qm.forceCompleteQuest();
+    qm.sendOk("去时间静止之湖见#p9120210#。");
+    qm.completeQuest();
     qm.dispose();
 }
 function end(mode, type, selection) {

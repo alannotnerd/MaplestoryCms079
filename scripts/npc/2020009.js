@@ -1,15 +1,14 @@
 /*
-	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
-		       Matthias Butz <matze@odinms.de>
-		       Jan Christian Meyer <vimes@odinms.de>
+	This file is part of the cherry Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
+                       Matthias Butz <matze@cherry.de>
+                       Jan Christian Meyer <vimes@cherry.de>
 
     This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation version 3 as published by
-    the Free Software Foundation. You may not use, modify or distribute
-    this program under any other version of the GNU Affero General Public
-    License.
+    it under the terms of the GNU Affero General Public License version 3
+    as published by the Free Software Foundation. You may not use, modify
+    or distribute this program under any other version of the
+    GNU Affero General Public License.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -19,98 +18,100 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-//BY MOOGRA
+
 /* Robeira
 	Magician 3rd job advancement
 	El Nath: Chief's Residence (211000001)
+
 	Custom Quest 100100, 100102
 */
+
+importPackage(net.sf.cherry.client);
 
 var status = 0;
 var job;
 
 function start() {
-    status = -1;
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (mode == -1) {
-        cm.dispose();
-    } else {
-        if (mode == 0 && status == 1) {
-            cm.sendOk("等您下定决心再次找我吧.");
-            cm.dispose();
-            return;
-        }
-        if (mode == 1)
-            status++;
-        else
-            status--;
-        if (status == 0) {
-		if (cm.getJob() == 211 || cm.getJob() == 221 || cm.getJob() == 231 || cm.getJob() == 212 || cm.getJob() == 222 || cm.getJob() == 232) {	
-	    cm.sendOk("您属于法师部,但是您已经成功三转了,已经超越了教官的强度了!");
-	    cm.dispose();
-	    return;
+	if (mode == -1) {
+		cm.dispose();
+	} else {
+		if (mode == 0 && status == 1) {
+			cm.sendOk("Make up your mind and visit me again.");
+			cm.dispose();
+			return;
 		}
-            if (!(cm.getJob()==210 ||cm.getJob()==220||cm.getJob()==230)) {
-		cm.sendOk("请找您的转职教官,您不属于法师部的滚吧!");
-                cm.dispose();
-                return;
-			} else if (cm.getPlayer().getLevel() < 70) {
-				cm.sendOk("你的等级尚未满70等");
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			if (!(cm.getJob().equals(MapleJob.FP_WIZARD) ||
+				cm.getJob().equals(MapleJob.IL_WIZARD) ||
+				cm.getJob().equals(MapleJob.CLERIC))) {
+				cm.sendOk("May #rOdin#k be with you!");
 				cm.dispose();
-				return;		
-            }	
-			if (cm.haveItem(4031057, 1)){
-                cm.sendNext("恭喜你到达这里,最后我将给你一个考验!");			
-            } else if (!(cm.haveItem(4031057,1))) {
-				cm.warp(101000003);
-                cm.sendOk("去找 #r汉斯#k 他会帮助你的!");
-                cm.dispose();
-            } else if (cm.getPlayer().getRemainingSp() <= (cm.getLevel() - 70) * 3) {
-                cm.sendNext("你的技能点数还没点完..");
-		} else {
-                cm.sendOk("你还不能转职...");
-                cm.dispose();
-            }
-        } else if (status == 1) {
-            if (cm.haveItem(4031058, 1)) {
-                if (cm.getJob()==210) {
-                    cm.changeJob(211);
-                    //cm.getPlayer().gainAp(5);
-					cm.gainItem(4031057, -1);
-					cm.gainItem(4031058, -1);
-					cm.sendOk("恭喜你现在已经成为最帅的魔导士(火.毒)了!");
-					cm.worldMessage("‘转职快报’：恭喜玩家."+ cm.getChar().getName() +"  成功三转-魔导士(火.毒)让我们热烈的祝福他/她吧！");
-                    cm.dispose();
-                } else if (cm.getJob()==220) {
-                    cm.changeJob(221);
-                    //cm.getPlayer().gainAp(5);
-					cm.gainItem(4031057, -1);
-					cm.gainItem(4031058, -1);
-                    cm.sendOk("恭喜你现在已经成为最帅的魔导士(冰.雷)了!");
-					cm.worldMessage("‘转职快报’：恭喜玩家."+ cm.getChar().getName() +"  成功三转-魔导士(冰.雷)让我们热烈的祝福他/她吧！");
-					
-                    cm.dispose();
-                } else if (cm.getJob()==230) {
-                    cm.changeJob(231);
-                    //cm.getPlayer().gainAp(5);
-					cm.gainItem(4031057, -1);
-					cm.gainItem(4031058, -1);
-                    cm.sendOk("恭喜你现在已经成为最帅的祭司了!");
-					cm.worldMessage("‘转职快报’：恭喜玩家."+ cm.getChar().getName() +"  成功三转-祭司让我们热烈的祝福他/她吧！");
-                    cm.dispose();
-                }
-            } else if (cm.haveItem(4031057, 1))
-                cm.sendAcceptDecline("你准备承担最终测试??");
-            else
-                cm.sendAcceptDecline("但是，我可以让你更加强大。虽然你必须证明不仅是你的实力，但你的知识。你准备好挑战了吗？");
-        } else if (status == 2) {
-            if (cm.haveItem(4031057, 1)) {
-                cm.sendOk("去找神圣的石头测验吧!!.");
-                cm.dispose();
-            }
-        }
-    }
-}
+				return;
+			}
+			cm.completeQuest(100100);
+			cm.completeQuest(100102);
+			if (cm.getQuestStatus(100102).equals(MapleQuestStatus.Status.COMPLETED)) {
+				cm.sendNext("#rBy Odin's ring!#k Indeed, you have proven to be worthy of the strength I will now bestow upon you.");
+			} else if (cm.getQuestStatus(100102).equals(MapleQuestStatus.Status.STARTED)) {
+				cm.sendOk("Go and find me the #rNecklace of Wisdom#k which is hidden on the Holy Ground at the Snowfield.");
+				cm.dispose();
+			} else if (cm.getQuestStatus(100100).equals(MapleQuestStatus.Status.COMPLETED)) {
+				cm.sendNext("#rBy Odin's raven!#k I was right, your strength is truly excellent.");
+			} else if (cm.getQuestStatus(100100).equals(MapleQuestStatus.Status.STARTED)) {
+				cm.sendOk("Well, well. Now go and see #bGrendel the Really Old#k. He will show you the way.");
+				cm.dispose();
+			} else if ((cm.getJob().equals(MapleJob.FP_WIZARD) ||
+				cm.getJob().equals(MapleJob.IL_WIZARD) ||
+				cm.getJob().equals(MapleJob.CLERIC)) &&
+				cm.getLevel() >= 70 && 
+				cm.getChar().getRemainingSp() <= (cm.getLevel() - 70) * 3) {
+				cm.sendNext("#rBy Odin's beard!#k You are a strong one.");
+			} else {
+				cm.sendOk("Your time has yet to come...");
+				cm.dispose();
+			}
+		} else if (status == 1) {
+			if (cm.getQuestStatus(100102).equals(MapleQuestStatus.Status.COMPLETED)) {
+				if (cm.getJob().equals(MapleJob.FP_WIZARD)) {
+					cm.changeJob(MapleJob.FP_MAGE);
+					cm.getChar().gainAp(5);
+					cm.sendOk("You are now a #bFire/Poison Mage#k. May #rOdin#k be with you!");
+					cm.dispose();
+				} else if (cm.getJob().equals(MapleJob.IL_WIZARD)) {
+					cm.changeJob(MapleJob.IL_MAGE);
+					cm.getChar().gainAp(5);
+					cm.sendOk("You are now an #bIce/Lightning Mage#k. May #rOdin#k be with you!");
+					cm.dispose();
+				} else if (cm.getJob().equals(MapleJob.CLERIC)) {
+					cm.changeJob(MapleJob.PRIEST);
+					cm.getChar().gainAp(5);
+					cm.sendOk("You are now a #bPriest#k. May #rOdin#k be with you!");
+					cm.dispose();
+				}
+			} else if (cm.getQuestStatus(100100).equals(MapleQuestStatus.Status.COMPLETED)) {
+				cm.sendAcceptDecline("Is your mind ready to undertake the final test?");
+			} else {
+				cm.sendAcceptDecline("But I can make you even stronger. Although you will have to prove not only your strength but your knowledge. Are you ready for the challenge?");
+			}
+		} else if (status == 2) {
+			if (cm.getQuestStatus(100100).equals(MapleQuestStatus.Status.COMPLETED)) {
+				cm.startQuest(100102);
+				cm.sendOk("Go and find me the #rNecklace of Wisdom#k which is hidden on the Holy Ground at the Snowfield.");
+				cm.dispose();
+			} else {
+				cm.startQuest(100100);
+				cm.sendOk("Well, well. Now go and see #bGrendel the Really Old#k. He will show you the way.");
+				cm.dispose();
+			}
+		}
+	}
+}	

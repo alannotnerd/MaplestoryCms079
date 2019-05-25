@@ -385,7 +385,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
+            <uol name="weapon" value="../../proneStab/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

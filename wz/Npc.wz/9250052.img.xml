@@ -15,10 +15,10 @@
             <vector name="origin" x="77" y="156"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="156" height="156">
@@ -33,15 +33,15 @@
             <vector name="origin" x="77" y="156"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="0"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="0"/>
+        <uol name="10" value="1"/>
+        <uol name="11" value="2"/>
     </imgdir>
     <imgdir name="act">
         <canvas name="0" width="156" height="156">
@@ -68,11 +68,11 @@
             <vector name="origin" x="77" y="156"/>
             <int name="delay" value="180"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="3"/>
+        <uol name="10" value="4"/>
+        <uol name="11" value="5"/>
     </imgdir>
 </imgdir>

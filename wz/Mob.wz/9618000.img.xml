@@ -630,12 +630,12 @@
             <vector name="head" x="-36" y="-42"/>
             <int name="delay" value="123"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="0" value="0"/>
-        <uol name="0" value="0"/>
-        <uol name="0" value="0"/>
-        <uol name="0" value="0"/>
-        <uol name="0" value="0"/>
+        <uol name="7" value="0"/>
+        <uol name="8" value="0"/>
+        <uol name="9" value="0"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="0"/>
+        <uol name="12" value="0"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="71" height="81">

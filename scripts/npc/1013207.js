@@ -10,7 +10,7 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendYesNo("Would you like to head straight to Lith Harbor?");
+	cm.sendYesNo("你现在想要回到明珠港吗?");
     } else if (status == 1) {
 	cm.warp(104000000);
 	cm.dispose();

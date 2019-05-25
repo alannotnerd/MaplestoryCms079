@@ -167,9 +167,9 @@
             <vector name="rb" x="128" y="0"/>
             <vector name="head" x="0" y="-81"/>
         </canvas>
-        <uol name="../die1/0" value="../die1/0"/>
-        <uol name="../die1/1" value="../die1/1"/>
-        <uol name="../die1/2" value="../die1/2"/>
+        <uol name="13" value="../die1/0"/>
+        <uol name="14" value="../die1/1"/>
+        <uol name="15" value="../die1/2"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="36" height="50">

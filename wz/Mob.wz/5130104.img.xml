@@ -139,8 +139,8 @@
             <vector name="head" x="-20" y="-41"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="3" value="0"/>
+        <uol name="4" value="1"/>
         <canvas name="5" width="102" height="57">
             <vector name="origin" x="45" y="57"/>
             <vector name="lt" x="-45" y="-50"/>

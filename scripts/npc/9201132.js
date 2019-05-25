@@ -7,14 +7,13 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-		if (cm.getPlayer().getLevel() < 40 && cm.haveItem(4032494)) {
-			cm.sendYesNo("你想移动到隐藏地图?");
+		if (cm.getPlayer().getLevel() < 40) {
+			cm.sendYesNo("Would you like to move to Crocell's Strolling Place?");
 		} else {
-			cm.sendOk("你需要小于40级，需要进入要有9400611勋章.");
+			cm.sendOk("You need to be less than level 40 and need the Crocell's Necklace to enter.");
 			cm.dispose();
 		}
 } else {
-	cm.spawnMob_map(9400611, 677000007,38,73 );
 	cm.warp(677000006,0);
 	cm.dispose();
     }

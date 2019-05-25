@@ -20,9 +20,9 @@
             <vector name="origin" x="35" y="84"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="0"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="59" height="84">
@@ -33,8 +33,8 @@
             <vector name="origin" x="35" y="84"/>
             <int name="delay" value="180"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

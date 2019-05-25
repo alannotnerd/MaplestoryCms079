@@ -1,15 +1,18 @@
-/*
- * Cygnus 2nd Job advancement
- */
-
 var status = -1;
 
 function start(mode, type, selection) {
-    qm.sendNext("Èç¹ûÄãÏë²Î¼ÓÆïÊ¿µÈ¼¶¿¼ÊÔ£¬¿ÉÒÔËæÊ±À´Ê¥µØ¡£¸÷¸öÆïÊ¿ÍÅ³¤»á¶ÔÄãµÄÄÜÁ¦½øĞĞ²âÊÔ£¬Èç¹ûºÏ¸ñ£¬¾Í»áÈÎÃüÄãÎªÕıÊ½µÄÆïÊ¿¡£ÔÙ¼û¡­¡­");
-    qm.forceStartQuest();
-    qm.dispose();
-}
-
-function end(mode, type, selection) {
-    qm.dispose();
+	if (mode == -1) {
+		qm.dispose();
+	} else {
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			qm.sendAcceptDecline("å¦‚æœä½ æƒ³å‚åŠ éª‘å£«ç­‰çº§è€ƒè¯•ï¼Œå¯ä»¥éšæ—¶æ¥åœ£åœ°ã€‚å„ä¸ªéª‘å£«å›¢é•¿ä¼šå¯¹ä½ çš„èƒ½åŠ›è¿›è¡Œæµ‹è¯•ï¼Œå¦‚æœåˆæ ¼ï¼Œå°±ä¼šä»»å‘½ä½ ä¸ºæ­£å¼çš„éª‘å£«ã€‚å†è§â€¦â€¦");
+		} else if (status == 1) {
+			qm.completeQuest();
+			qm.dispose();
+		}
+	}
 }

@@ -56,7 +56,7 @@
                 </canvas>
             </imgdir>
         </imgdir>
-        <imgdir name="Cookie&amp;Candy">
+        <imgdir name="Cookie&Candy">
             <imgdir name="0">
                 <canvas name="0" width="399" height="264">
                     <vector name="origin" x="199" y="132"/>
@@ -154,7 +154,7 @@
                 </canvas>
             </imgdir>
         </imgdir>
-        <imgdir name="Cake&amp;Jelly">
+        <imgdir name="Cake&Jelly">
             <imgdir name="1">
                 <canvas name="0" width="427" height="273">
                     <vector name="origin" x="213" y="136"/>

@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Minister of Home Affairs
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  Ì½Ë÷Ä¢¹½É­ÁÖ(1)
+	Description: 	Quest -  æ¢ç´¢è˜‘è‡æ£®æ—(1)
 */
 
 importPackage(Packages.client);
@@ -29,7 +29,7 @@ function start(mode, type, selection) {
         //qm.forceStartQuest(2314,"1");
         qm.gainExp(8300);
         qm.sendOk("I see, so it was indeed not a regular barrier by any means. Great work there. If not for you help, we wouldn't have had a clue as to what that was all about.");
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.dispose();
     }
 }
@@ -49,7 +49,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.gainExp(8300);
         qm.sendOk("I see, so it was indeed not a regular barrier by any means. Great work there. If not for you help, we wouldn't have had a clue as to what that was all about.");
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.dispose();
     }
 }

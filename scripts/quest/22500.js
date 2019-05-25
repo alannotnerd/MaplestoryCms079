@@ -37,7 +37,7 @@ function start(mode, type, selection) {
 	if (status == 11)
 		qm.PlayerToNpc("#b...#b(You stare at him skeptically. He looks like a lizard. A puny little one, at that.)#k");
 	if (status == 12)
-		qm.sendAcceptDecline("Why are you looking at me like that?! Just watch! See what I can do with my power. Ready?");
+		qm.sendYesNo("Why are you looking at me like that?! Just watch! See what I can do with my power. Ready?");
 	if (status == 13){
 		qm.forceStartQuest();
 		qm.sendNext("Command me to slay the #r#o1210100#s#k! Do it now! I'll show you how fast a Dragon can defeat the #o1210100#s! Goooo, charge!");
@@ -62,7 +62,7 @@ function end(mode, type, selection) {
 	if(status == 0)
 		qm.sendOk("Ha! What do you think of that?! My skills are amazing, right? You can use them as much as you want. That's what it means to be in a pact with me. Isn't it amazing?");
 	if(status == 1){
-		qm.forceCompleteQuest();
+		qm.completeQuest();
 		qm.gainExp(1270);
 		qm.getPlayer().gainSP(1, 0);
 		qm.sendOk("Ohhh... I'm so hungry. I used my energy too soon after being born...");

@@ -1501,20 +1501,20 @@
             <vector name="rb" x="24" y="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="0"/>
+        <uol name="9" value="1"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="0"/>
+        <uol name="13" value="1"/>
+        <uol name="14" value="0"/>
+        <uol name="15" value="1"/>
     </imgdir>
     <imgdir name="angry">
         <canvas name="0" width="47" height="59">
@@ -1559,18 +1559,18 @@
             <vector name="lt" x="-20" y="-37"/>
             <vector name="rb" x="24" y="0"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="0"/>
+        <uol name="9" value="1"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="0"/>
+        <uol name="13" value="1"/>
     </imgdir>
     <imgdir name="nap">
         <canvas name="0" width="51" height="35">

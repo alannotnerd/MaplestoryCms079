@@ -1,54 +1,49 @@
-/*
-	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@odinms.de>
-                       Jan Christian Meyer <vimes@odinms.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 var ticket = new Array(4031047, 4031074, 4031331, 4031576);
-var cost = new Array(5000, 6000, 30000, 5000, 6000);
-var mapNames = new Array("Ç°ÍùÄ§·¨É­ÁÖ", "Ç°ÍùÍæ¾ß³Ç", "Ç°ÍùÉñÄ¾´å", "Ç°ÍùÄÉÎ÷É³Ä®");
-var mapName2 = new Array("Ç°ÍùÄ§·¨É­ÁÖ", "Ç°ÍùÍæ¾ß³Ç", "Ç°ÍùÉñÄ¾´å", "Ç°ÍùÄÉÎ÷É³Ä®");
+var cost = new Array(5000, 6000, 30000, 6000);
+var tmsg = new Array(15, 10, 10, 10);
+var mapNames = new Array("é­”æ³•å¯†æ—", "ç©å…·åŸ", "ç¥æœ¨æ‘", "é˜¿é‡Œå®‰ç‰¹");
+var mapName2 = new Array("é­”æ³•å¯†æ—", "ç©å…·åŸ", "ç¥æœ¨æ‘", "é˜¿é‡Œå®‰ç‰¹");
 var select;
-var status = 0;
 
 function start() {
-    var where = "ÄãºÃ,ÎÒÊÇ¸ºÔğÊÛ´¬Æ±µÄ,ÇëÎÊÄãÏëÈ¥ÄÄÀï?";
-    for (var i = 0; i < ticket.length; i++)
-        where += "\r\n#L" + i + "##b" + mapNames[i] + "#k#l";
-    cm.sendSimple(where);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if(mode < 1) {
-        cm.dispose();
-    } else {
-        status++;
-        if (status == 1) {
-            select = selection;
-            cm.sendYesNo("ÄãÈ·¶¨Òª¹ºÂò " + mapName2[select] + " ĞèÒª " + (select == 0 ? 15 : 10) + " Ğ¡Ê±·ÖÖÓ, Ëü»á»¨·ÑÄã #b"+cost[select]+" ·ã±Ò#k. ÇëÎÊÄãÊÇ·ñÈ·¶¨Òª¹ºÂò #b#t"+ticket[select]+"##k?");
-        } else if(status == 2) {
-            if (cm.getMeso() < cost[select] || !cm.canHold(ticket[select]))
-                cm.sendOk("ÄãÈ·¶¨ÄãÓĞ #b"+cost[select]+" ·ã±Ò#k? Èç¹ûÓĞµÄ»°,ÎÒÈ°Äú¼ì²éÏÂÉíÉÏÆäËûÀ¸Î»¿´ÊÇ·ñÓĞÃ»ÓĞÂúÁË.");
-            else {
-                cm.gainMeso(-cost[select]);
-                cm.gainItem(ticket[select],1);
-            }
-            cm.dispose();
-        }
-    }
+	if(mode == -1) {
+		cm.dispose();
+	} else {
+		if(mode == 0 && status == 0) {
+			cm.dispose();
+			return;
+		}
+		if(mode == 0) {
+			cm.sendNext("ä½ è¿˜æœ‰ä»€ä¹ˆäº‹æƒ…åœ¨è¿™é‡Œæ²¡åŠå®Œå—ï¼Ÿ");
+			cm.dispose();
+			return;
+		}
+		if(mode == 1) {
+			status++;
+		}
+		if(status == 0) {
+			var where = "æ‚¨å¥½ï¼Œæˆ‘æ˜¯å¤©ç©ºä¹‹åŸå”®ç¥¨å‘˜ï¼Œæˆ‘è´Ÿè´£é”€å”®å¼€å¾€å„åœ°èˆ¹ç¥¨ã€‚ä½ æƒ³è´­ä¹°å»é‚£é‡Œçš„èˆ¹ç¥¨å‘¢ï¼Ÿ";
+			for (var i = 0; i < ticket.length; i++) {
+				where += "\r\n#L" + i + "##b" + mapNames[i] + "#k#l";
+			}
+			cm.sendSimple(where);
+		} else if(status == 1) {
+			select = selection;
+			cm.sendYesNo("å¤©ç©ºä¹‹åŸå¼€å¾€ #b" + mapName2[select] + "#k çš„é£èˆ¹æ¯ "+tmsg[select]+" åˆ†é’Ÿä¸€ç­ï¼Œèˆ¹ç¥¨çš„å”®ä»· #b"+cost[select]+" é‡‘å¸#kã€‚ä½ ç¡®å®šè¦è´­ä¹°å¼€å¾€ #b"+mapName2[select]+"#k çš„èˆ¹ç¥¨å—ï¼Ÿ");
+		} else if(status == 2) {
+			if(cm.getMeso() < cost[select] || !cm.canHold(ticket[select])) {
+				cm.sendOk("ä½ ç¡®å®šä½ æœ‰ #b" + cost[select] + " é‡‘å¸#kå—ï¼Ÿ æ²¡æœ‰èˆ¹ç¥¨æ˜¯ä¸å¯ä»¥ç™»èˆ¹çš„ã€‚");
+				cm.dispose();
+			} else {
+				cm.gainMeso(-cost[select]);
+				cm.gainItem(ticket[select],1);
+				cm.dispose();
+			}
+		}
+	}
 }

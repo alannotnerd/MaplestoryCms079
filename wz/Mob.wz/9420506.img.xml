@@ -104,6 +104,6 @@
             <vector name="head" x="-6" y="-51"/>
             <int name="delay" value="250"/>
         </canvas>
-        <uol name="3" value="3"/>
+        <uol name="5" value="3"/>
     </imgdir>
 </imgdir>

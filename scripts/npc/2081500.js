@@ -1,88 +1,103 @@
-/*  NPC : 萨穆埃尔
-	海盗 4转 任务脚本
-	地图代码 (240010501)
+/* Author: Xterminator
+	NPC Name: 		Samuel
+	Map(s): 		Leafre: Forest of the Priest (240010501)
+	Description: 		Pirate 4th Job Advancement
 */
 
-var status = -1;
+function start() {
+	status = -1;
+	action(1, 0, 0);
+}
 
 function action(mode, type, selection) {
-    if (mode == 1) {
-	status++;
-    } else {
-	status--;
-    }
-
-    if (status == 0) {
-	if (!(cm.getJob() == 511 || cm.getJob() == 521)) {
-	    cm.sendOk("为什么你要见我??还有你想要问我关于什么事情??");
-	    cm.dispose();
-	    return;
-	} else if (cm.getPlayer().getLevel() < 120) {
-	    cm.sendOk("你等级尚未到达120级.");
-	    cm.dispose();
-	    return;
-	} else {
-		if (cm.getJob() == 511){
-		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为拳霸.#l\r\n#b#L1#像我想一下...#l");
-		} else if (cm.getJob() == 521){
-		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为枪神.#l\r\n#b#L1#像我想一下...#l");
-	    } else {
-		cm.sendOk("好吧假如你想要4转麻烦再来找我");
-	    cm.dispose();
-		return;
-	    }
-	}
-    } else if (status == 1) {
-	if (selection == 1) {
-		cm.sendOk("好吧假如你想要4转麻烦再来找我");
-	    cm.dispose();
-	    return;
-	}
-	if (cm.getPlayerStat("RSP") > (cm.getPlayerStat("LVL") - 120) * 3) {
-	    cm.sendOk("你的技能点数还没点完..");
-	    cm.dispose();
-	    return;
-	} else if (!cm.haveItem(4031348, 1)){
-		cm.sendOk("我需要#t4031348# 1张。");
+	if (mode == -1) {
 		cm.dispose();
-		return;
 	} else {
-	    if (cm.canHold(2280003)) {
-		cm.gainItem(2280003, 1);
-
-		if (cm.getJob() == 511) {
-		    cm.changeJob(512);
-		    cm.teachSkill(5121007,0,10);
-		    cm.teachSkill(5121001,0,10);
-		    cm.teachSkill(5121002,0,10);
-		    cm.teachSkill(5121009,0,10);
-			cm.gainItem(4031348, -1);
-		    cm.sendNext("恭喜你转职为 #b拳霸#k.我送你一些神秘小礼物^^");
-		} else if (cm.getJob() == 521) {
-		    cm.changeJob(522);
-		    cm.teachSkill(5221004,0,10);
-		    cm.teachSkill(5220001,0,10);
-		    cm.teachSkill(5220002,0,10);
-		    cm.teachSkill(5220011,0,10);
-			cm.gainItem(4031348, -1);
-		    cm.sendNext("恭喜你转职为 #b枪神#k.我送你一些神秘小礼物^^");
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			if (cm.getJob().getId() == 511 || cm.getJob().getId() == 521) {
+				if (cm.getPlayer().getLevel() >= 120) {
+					if (cm.getQuestStatus(6944).equals(net.sf.cherry.client.MapleQuestStatus.Status.COMPLETED)) {
+						if (cm.getJob().getId() == 511) {
+							cm.sendSimple("You have proved yourself a hero indeed. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Buccaneer.#l\r\n#b#L1# I need a minute to think about it.#l");
+						} else if (cm.getJob().getId() == 521) {
+							cm.sendSimple("You have proved yourself a hero indeed. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Corsair.#l\r\n#b#L1# I need a minute to think about it.#l");
+						}
+					} else {
+						cm.sendOk("You're not ready to make the 4th job advancement. When you're ready, talk to me.");
+						cm.dispose();
+					}
+				} else {
+					cm.sendOk("You're still weak to go to the pirate extreme road. If you get stronger, come back to me.");
+					cm.dispose();
+				}
+			} else if (cm.getJob().getId() == 512 || cm.getJob().getId() == 522) {
+				if (cm.getJob().getId() == 512) {
+					cm.sendOk("You have now reached the pinnacle of your pirate career by becoming a #bBuccaneer#k. But possessing great power means great responsibilities. I wish you success in defeating all the challenges that are thrown your way!");
+				} else if (cm.getJob().getId() == 522) {
+					cm.sendOk("You have now reached the pinnacle of your pirate career by becoming a #bCorsair#k. But possessing great power means great responsibilities. I wish you success in defeating all the challenges that are thrown your way!");
+				}
+				cm.dispose();
+			} else {
+				cm.sendOk("Why do you want to see me? There is nothing you want to ask me.");
+				cm.dispose();
+			}
+		} else if (status == 1) {
+			if (selection == 0) {
+				nPSP = (cm.getPlayer().getLevel() - 120) * 3;
+				if (cm.getPlayer().getRemainingSp() > nPSP) {
+					cm.sendNext("Hmm...You have too many #bSP#k. You can't make the 4th job advancement with too many SP left.");
+					cm.dispose();
+				} else {
+					if (!cm.canHold(2280003)) {
+						cm.sendNext("You can't proceed as you don't have an empty slot in your inventory. Please clear your inventory and try again.");
+						cm.dispose();
+					} else {
+						cm.gainItem(2280003, 1);
+						var statup = new java.util.ArrayList();
+						cm.getPlayer().setRemainingAp(cm.getPlayer().getRemainingAp() + 5);
+						statup.add(new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(cm.getPlayer().getRemainingAp())));
+						cm.getC().getSession().write(net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
+						if (cm.getJob().getId() == 511) {
+							cm.changeJob(net.sf.cherry.client.MapleJob.BUCCANEER);
+							cm.teachSkill(5121001, 0, 10);
+							cm.teachSkill(5121007, 0, 10);
+							cm.teachSkill(5121002, 0, 10);
+							cm.teachSkill(5121009, 0, 10);
+							status = 2;
+							cm.sendNext("Now that you are a #bBuccaneer#k, you have reached the pinnacle of your career as a pirate. As a Buccaneer, you can use Speed Infusion to increase your party members' attack speed. It'll be so fast that the attacks won't even look like #bDemolition#k.");
+						} else if (cm.getJob().getId() == 521) {
+							cm.changeJob(net.sf.cherry.client.MapleJob.CORSAIR);
+							cm.teachSkill(5220001, 0, 10);
+							cm.teachSkill(5220011, 0, 10);
+							cm.teachSkill(5220002, 0, 10);
+							cm.teachSkill(5221004, 0, 10);
+							status = 2;
+							cm.sendNext("Now that you are a #bCorsair#k, you have reached the pinnacle of your career as a pirate. As a Corsair, you can use Speed Infusion to increase your party members' attack speed. It'll be so fast that the attacks won't even look like #bDemolition#k.");
+						}
+					}
+				}
+			} else {
+				cm.sendNext("You don't have to hesitate.... Whenever you decide, talk to me. If you're ready, I'll let you make the 4th job advancement.");
+				cm.dispose();
+			}
+		} else if (status == 2) {
+			if (cm.getJob().getId() == 512) {
+				cm.sendNext("Now that you are a #bBuccaneer#k, you have reached the pinnacle of your career as a pirate. As a Buccaneer, you can use Speed Infusion to increase your party members' attack speed. It'll be so fast that the attacks won't even look like #bDemolition#k.");
+			} else if (cm.getJob().getId() == 522) {
+				cm.sendNext("Now that you are a #bCorsair#k, you have reached the pinnacle of your career as a pirate. As a Corsair, you can use Speed Infusion to increase your party members' attack speed. It'll be so fast that the attacks won't even look like #bDemolition#k.");
+			}
+		} else if (status == 3) {
+			if (cm.getJob().getId() == 512) {
+				cm.sendNextPrev("But that isn't all there is to a Buccaneer. Buccaneers are skilled fighters who are completely in control of their bodies. Depending on the Buccaneer's training, they can kill an enemy with a single strike.");
+			} else if (cm.getJob().getId() == 522) {
+				cm.sendNextPrev("But that isn't all there is to a Corsair. Corsairs are skilled fighters who are completely in control of their bodies. Depending on the Corsair's training, they can kill an enemy with a single strike.");
+			}
+		} else if (status == 4) {
+			cm.dispose();
 		}
-	    } else {
-		cm.sendOk("你没有多的栏位请清空再来尝试一次!");
-		cm.safeDispose();
-		return;
-	    }
 	}
-	
-    } else if (status == 2) {
-	if (cm.getJob() == 512) {
-	    cm.sendNext("不要忘记了这一切都取决于你练了多少.");
-	} else {
-	    cm.sendNext("不要忘记了这一切都取决于你练了多少.");
-	}
-    } else if (status == 3) {
-	cm.sendNextPrev("我已你为荣.");
-    } else if (status == 4) {
-	cm.dispose();
-    }
 }

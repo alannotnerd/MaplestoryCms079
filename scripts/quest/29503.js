@@ -23,7 +23,7 @@ function start(mode, type, selection) {
     }
 
     if (status == 0) {
-        qm.askAcceptDecline("#v1142030# #e#b#t1142030##k\n\r\n\r - Time Limit: 1 hr\n\r - Donate the Most for this town....#nDo you want to test yourself and see if this Medal is for you?");
+        qm.sendAcceptDecline("#v1142030# #e#b#t1142030##k\n\r\n\r - Time Limit: 1 hr\n\r - Donate the Most for this town....#nDo you want to test yourself and see if this Medal is for you?");
     } else if (status == 1) {
         qm.sendNext("Current Rank \n\r\n\r1. #bMintLovePep#k : ???,???,??? mesos\n\r2. #bKelviinXD#k : 68,000,000 mesos\n\r3. #bxBabyRence#k : 49,999,999 mesos\n\r4. #bXxTrIStaArxx#k : 29,999,999 mesosn\n\r5. #bxBabyRence#k : 14,000,000 mesos\n\r\n\rUnderstand that we cannot divulge the exact number donated by the current King of Donation. \n\rAlso remember that all records will be reset every first of the month...");
     } else if (status == 2) {

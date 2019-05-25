@@ -1,27 +1,28 @@
+importPackage(java.awt);
+importPackage(net.sf.cherry.server.life);
+
 var minPlayers = 1;
+var leaderid = 1;
+var pqMap = 910010000;
+var pqTime = 60000;//10 Minutes
 
 function init() {
-    em.setProperty("state", "0");
-    em.setProperty("leader", "true");
+	
 }
 
-function setup(level, leaderid) {
-    em.setProperty("state", "1");
-    em.setProperty("leader", "true");
-    var eim = em.newInstance("HenesysPQ" + leaderid);
-    em.setProperty("stage", "0");
-    var map = eim.setInstanceMap(910010000);
-    map.resetFully(false);
-    map.setSpawns(false);
-    //map.resetSpawnLevel(level);
-    eim.startEventTimer(600000); //10 mins
+function setup(level, partyId) {
+    var eim = em.newInstance("HenesysPQ" + (leaderid++));
+    var map = eim.getMapInstance(pqMap);
+	map.killAllMonsters();
+    eim.startEventTimer(pqTime);
+	map.spawnMonsterwithpos(MapleLifeFactory.getMonster(9300061), new Point(-200,-200));	
     return eim;
 }
 
 function playerEntry(eim, player) {
-    var map = eim.getMapInstance(0);
+    var map = eim.getMapInstance(pqMap);
     player.changeMap(map, map.getPortal(0));
-    player.tryPartyQuest(1200);
+    player.startQuest(1200, 1012114, true);  //迎月花保护月妙组队任务
 }
 
 function playerRevive(eim, player) {}
@@ -31,13 +32,8 @@ function scheduledTimeout(eim) {
 }
 
 function changedMap(eim, player, mapid) {
-    if (mapid != 910010000) {
+    if (mapid != pqMap) {
         eim.unregisterPlayer(player);
-
-        if (eim.disposeIfPlayerBelow(0, 0)) {
-            em.setProperty("state", "0");
-            em.setProperty("leader", "true");
-        }
     }
 }
 
@@ -49,23 +45,18 @@ function monsterValue(eim, mobId) {
     if (mobId == 9300061) {
         eim.broadcastPlayerMsg(5, "The Moon Bunny has been killed.");
         end(eim);
-    }
+    }else{
+		eim.broadcastPlayerMsg(5, mobId);
+	}
     return 1;
 }
 
 function playerExit(eim, player) {
     eim.unregisterPlayer(player);
-
-    if (eim.disposeIfPlayerBelow(0, 0)) {
-        em.setProperty("state", "0");
-        em.setProperty("leader", "true");
-    }
 }
 
 function end(eim) {
     eim.disposeIfPlayerBelow(100, 910010300);
-    em.setProperty("state", "0");
-    em.setProperty("leader", "true");
 }
 
 function clearPQ(eim) {
@@ -75,7 +66,6 @@ function clearPQ(eim) {
 function allMonstersDead(eim) {}
 
 function leftParty(eim, player) {
-    // If only 2 players are left, uncompletable:
     end(eim);
 }
 function disbandParty(eim) {

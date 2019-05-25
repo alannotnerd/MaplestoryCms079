@@ -77,10 +77,10 @@
             <vector name="origin" x="121" y="107"/>
             <int name="delay" value="350"/>
         </canvas>
-        <uol name="6" value="6"/>
-        <uol name="7" value="7"/>
-        <uol name="8" value="8"/>
-        <uol name="9" value="9"/>
+        <uol name="10" value="6"/>
+        <uol name="11" value="7"/>
+        <uol name="12" value="8"/>
+        <uol name="13" value="9"/>
         <canvas name="14" width="242" height="81">
             <vector name="origin" x="121" y="80"/>
             <int name="delay" value="250"/>

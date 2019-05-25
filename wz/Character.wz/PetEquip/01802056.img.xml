@@ -69,10 +69,10 @@
                 <vector name="origin" x="-5" y="16"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="move">
             <canvas name="0" width="26" height="23">
@@ -194,18 +194,18 @@
                 <vector name="origin" x="-5" y="32"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="cry">
             <canvas name="0" width="49" height="19">
@@ -214,14 +214,14 @@
             <canvas name="1" width="52" height="20">
                 <vector name="origin" x="11" y="18"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
+            <uol name="2" value="0"/>
+            <uol name="3" value="1"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="0"/>
+            <uol name="7" value="1"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
         </imgdir>
         <imgdir name="love">
             <canvas name="0" width="25" height="24">
@@ -239,21 +239,21 @@
             <canvas name="4" width="47" height="43">
                 <vector name="origin" x="7" y="53"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="5" value="0"/>
+            <uol name="6" value="1"/>
+            <uol name="7" value="2"/>
+            <uol name="8" value="3"/>
+            <uol name="9" value="4"/>
+            <uol name="10" value="0"/>
+            <uol name="11" value="1"/>
+            <uol name="12" value="2"/>
+            <uol name="13" value="3"/>
+            <uol name="14" value="4"/>
+            <uol name="15" value="0"/>
+            <uol name="16" value="1"/>
+            <uol name="17" value="2"/>
+            <uol name="18" value="3"/>
+            <uol name="19" value="4"/>
         </imgdir>
         <imgdir name="sleep">
             <canvas name="0" width="31" height="32">
@@ -271,18 +271,18 @@
                 <vector name="origin" x="2" y="32"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="eat">
             <canvas name="0" width="24" height="19">
@@ -300,14 +300,14 @@
                 <vector name="origin" x="-4" y="16"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
         </imgdir>
         <imgdir name="fly">
             <canvas name="0" width="37" height="30">
@@ -417,8 +417,8 @@
             <canvas name="32" width="23" height="19">
                 <vector name="origin" x="-5" y="30"/>
             </canvas>
-            <uol name="32" value="32"/>
-            <uol name="32" value="32"/>
+            <uol name="33" value="32"/>
+            <uol name="34" value="32"/>
         </imgdir>
         <imgdir name="surprise">
             <canvas name="0" width="30" height="28">
@@ -435,14 +435,14 @@
                 <vector name="origin" x="-5" y="32"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
         </imgdir>
         <imgdir name="hang">
             <canvas name="0" width="31" height="29">
@@ -533,11 +533,11 @@
             <canvas name="2" width="25" height="29">
                 <vector name="origin" x="-15" y="28"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
+            <uol name="6" value="0"/>
+            <uol name="7" value="1"/>
         </imgdir>
         <imgdir name="move">
             <canvas name="0" width="26" height="23">
@@ -552,10 +552,10 @@
             <canvas name="3" width="22" height="20">
                 <vector name="origin" x="-30" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="jump">
             <canvas name="0" width="31" height="29">
@@ -589,18 +589,18 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-29" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="angry">
             <canvas name="0" width="25" height="24">
@@ -808,7 +808,7 @@
                 <vector name="rb" x="56" y="0"/>
                 <int name="delay" value="180"/>
             </canvas>
-            <uol name="0" value="0"/>
+            <uol name="3" value="0"/>
         </imgdir>
         <imgdir name="rise">
             <canvas name="0" width="25" height="24">
@@ -956,7 +956,7 @@
                 <vector name="origin" x="-29" y="34"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="32" value="32"/>
+            <uol name="35" value="32"/>
         </imgdir>
         <imgdir name="hands">
             <canvas name="0" width="25" height="24">
@@ -968,9 +968,9 @@
             <canvas name="2" width="25" height="28">
                 <vector name="origin" x="-29" y="37"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
         </imgdir>
         <imgdir name="angry_short">
             <canvas name="0" width="25" height="24">
@@ -1033,11 +1033,11 @@
             <canvas name="2" width="25" height="29">
                 <vector name="origin" x="-30" y="28"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
+            <uol name="6" value="0"/>
+            <uol name="7" value="1"/>
         </imgdir>
         <imgdir name="move">
             <canvas name="0" width="26" height="23">
@@ -1052,10 +1052,10 @@
             <canvas name="3" width="22" height="20">
                 <vector name="origin" x="-30" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="jump">
             <canvas name="0" width="31" height="29">
@@ -1089,10 +1089,10 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-29" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="angry">
             <canvas name="0" width="25" height="24">
@@ -1231,10 +1231,10 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-19" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="cry">
             <canvas name="0" width="49" height="19">
@@ -1249,14 +1249,14 @@
             <canvas name="3" width="52" height="20">
                 <vector name="origin" x="-13" y="18"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
         </imgdir>
         <imgdir name="fly">
             <canvas name="0" width="37" height="30">
@@ -1296,11 +1296,11 @@
             <canvas name="4" width="47" height="43">
                 <vector name="origin" x="-17" y="53"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="5" value="0"/>
+            <uol name="6" value="1"/>
+            <uol name="7" value="2"/>
+            <uol name="8" value="3"/>
+            <uol name="9" value="4"/>
         </imgdir>
         <imgdir name="sleep">
             <canvas name="0" width="31" height="32">
@@ -1485,9 +1485,9 @@
             <canvas name="2" width="25" height="28">
                 <vector name="origin" x="-29" y="37"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
         </imgdir>
         <imgdir name="angry_short">
             <canvas name="0" width="27" height="31">
@@ -1527,17 +1527,17 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-29" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
         </imgdir>
         <imgdir name="stand1">
             <canvas name="0" width="25" height="24">
@@ -1555,16 +1555,16 @@
             <canvas name="4" width="23" height="19">
                 <vector name="origin" x="-29" y="29"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="5" value="0"/>
+            <uol name="6" value="1"/>
+            <uol name="7" value="2"/>
+            <uol name="8" value="3"/>
+            <uol name="9" value="4"/>
+            <uol name="10" value="0"/>
+            <uol name="11" value="1"/>
+            <uol name="12" value="2"/>
+            <uol name="13" value="3"/>
+            <uol name="14" value="4"/>
         </imgdir>
         <imgdir name="hungry">
             <canvas name="0" width="25" height="29">
@@ -1576,15 +1576,15 @@
             <canvas name="2" width="25" height="29">
                 <vector name="origin" x="-30" y="28"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
+            <uol name="6" value="0"/>
+            <uol name="7" value="1"/>
+            <uol name="8" value="2"/>
+            <uol name="9" value="0"/>
+            <uol name="10" value="1"/>
+            <uol name="11" value="2"/>
         </imgdir>
         <imgdir name="move">
             <canvas name="0" width="26" height="23">
@@ -1618,18 +1618,18 @@
             <canvas name="3" width="25" height="17">
                 <vector name="origin" x="-29" y="16"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="chat">
             <canvas name="0" width="25" height="24">
@@ -1644,18 +1644,18 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-29" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="angry">
             <canvas name="0" width="25" height="24">
@@ -1800,18 +1800,18 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-19" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="cry">
             <canvas name="0" width="49" height="19">
@@ -1826,14 +1826,14 @@
             <canvas name="3" width="52" height="20">
                 <vector name="origin" x="-13" y="18"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
         </imgdir>
         <imgdir name="fly">
             <canvas name="0" width="37" height="30">
@@ -1856,18 +1856,18 @@
             <canvas name="3" width="24" height="18">
                 <vector name="origin" x="-28" y="16"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="love">
             <canvas name="0" width="25" height="24">
@@ -1885,16 +1885,16 @@
             <canvas name="4" width="47" height="43">
                 <vector name="origin" x="-17" y="53"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="5" value="0"/>
+            <uol name="6" value="1"/>
+            <uol name="7" value="2"/>
+            <uol name="8" value="3"/>
+            <uol name="9" value="4"/>
+            <uol name="10" value="0"/>
+            <uol name="11" value="1"/>
+            <uol name="12" value="2"/>
+            <uol name="13" value="3"/>
+            <uol name="14" value="4"/>
         </imgdir>
         <imgdir name="sleep">
             <canvas name="0" width="31" height="32">
@@ -1921,16 +1921,16 @@
                 <vector name="rb" x="56" y="0"/>
                 <int name="delay" value="180"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="2"/>
+            <uol name="9" value="3"/>
+            <uol name="10" value="0"/>
+            <uol name="11" value="1"/>
+            <uol name="12" value="2"/>
+            <uol name="13" value="3"/>
         </imgdir>
         <imgdir name="rise">
             <canvas name="0" width="25" height="24">
@@ -2089,15 +2089,15 @@
             <canvas name="2" width="25" height="28">
                 <vector name="origin" x="-29" y="37"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
+            <uol name="6" value="0"/>
+            <uol name="7" value="1"/>
+            <uol name="8" value="2"/>
+            <uol name="9" value="0"/>
+            <uol name="10" value="1"/>
+            <uol name="11" value="2"/>
         </imgdir>
         <imgdir name="angry_short">
             <canvas name="0" width="27" height="31">
@@ -2211,18 +2211,18 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-29" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="angry">
             <canvas name="0" width="25" height="24">
@@ -2374,10 +2374,10 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-19" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="cry">
             <canvas name="0" width="49" height="19">
@@ -2392,14 +2392,14 @@
             <canvas name="3" width="52" height="20">
                 <vector name="origin" x="-13" y="18"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
         </imgdir>
         <imgdir name="fly">
             <canvas name="0" width="37" height="30">
@@ -2422,10 +2422,10 @@
             <canvas name="3" width="24" height="18">
                 <vector name="origin" x="-28" y="16"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="love">
             <canvas name="0" width="25" height="24">
@@ -2443,16 +2443,16 @@
             <canvas name="4" width="47" height="43">
                 <vector name="origin" x="-17" y="53"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="5" value="0"/>
+            <uol name="6" value="1"/>
+            <uol name="7" value="2"/>
+            <uol name="8" value="3"/>
+            <uol name="9" value="4"/>
+            <uol name="10" value="0"/>
+            <uol name="11" value="1"/>
+            <uol name="12" value="2"/>
+            <uol name="13" value="3"/>
+            <uol name="14" value="4"/>
         </imgdir>
         <imgdir name="sleep">
             <canvas name="0" width="31" height="32">
@@ -2479,18 +2479,18 @@
                 <vector name="rb" x="56" y="0"/>
                 <int name="delay" value="180"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="rise">
             <canvas name="0" width="25" height="24">
@@ -2645,12 +2645,12 @@
             <canvas name="2" width="25" height="28">
                 <vector name="origin" x="-29" y="37"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="1"/>
+            <uol name="5" value="2"/>
+            <uol name="6" value="0"/>
+            <uol name="7" value="1"/>
+            <uol name="8" value="2"/>
         </imgdir>
         <imgdir name="angry_short">
             <canvas name="0" width="27" height="31">
@@ -2716,7 +2716,7 @@
             <canvas name="2" width="25" height="29">
                 <vector name="origin" x="-15" y="28"/>
             </canvas>
-            <uol name="0" value="0"/>
+            <uol name="3" value="0"/>
         </imgdir>
         <imgdir name="move">
             <canvas name="0" width="26" height="23">
@@ -2731,7 +2731,7 @@
             <canvas name="3" width="22" height="20">
                 <vector name="origin" x="-30" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
+            <uol name="4" value="0"/>
         </imgdir>
         <imgdir name="jump">
             <canvas name="0" width="31" height="29">
@@ -2765,18 +2765,18 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-29" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="angry">
             <canvas name="0" width="25" height="24">
@@ -2963,10 +2963,10 @@
             <canvas name="3" width="23" height="20">
                 <vector name="origin" x="-19" y="32"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="cry">
             <canvas name="0" width="49" height="19">
@@ -2981,14 +2981,14 @@
             <canvas name="3" width="52" height="20">
                 <vector name="origin" x="-13" y="18"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
         </imgdir>
         <imgdir name="fly">
             <canvas name="0" width="37" height="30">
@@ -3011,10 +3011,10 @@
             <canvas name="3" width="24" height="18">
                 <vector name="origin" x="-22" y="16"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
         </imgdir>
         <imgdir name="love">
             <canvas name="0" width="25" height="24">
@@ -3032,16 +3032,16 @@
             <canvas name="4" width="47" height="43">
                 <vector name="origin" x="-17" y="53"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="5" value="0"/>
+            <uol name="6" value="1"/>
+            <uol name="7" value="2"/>
+            <uol name="8" value="3"/>
+            <uol name="9" value="4"/>
+            <uol name="10" value="0"/>
+            <uol name="11" value="1"/>
+            <uol name="12" value="2"/>
+            <uol name="13" value="3"/>
+            <uol name="14" value="4"/>
         </imgdir>
         <imgdir name="sleep">
             <canvas name="0" width="31" height="32">
@@ -3062,19 +3062,19 @@
                 <vector name="rb" x="56" y="0"/>
                 <int name="delay" value="180"/>
             </canvas>
-            <uol name="0" value="0"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="0" value="0"/>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="3" value="0"/>
+            <uol name="4" value="0"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
+            <uol name="8" value="0"/>
+            <uol name="9" value="1"/>
+            <uol name="10" value="2"/>
+            <uol name="11" value="3"/>
+            <uol name="12" value="0"/>
+            <uol name="13" value="1"/>
+            <uol name="14" value="2"/>
+            <uol name="15" value="3"/>
         </imgdir>
         <imgdir name="rise">
             <canvas name="0" width="25" height="24">
@@ -3222,10 +3222,10 @@
                 <vector name="origin" x="-29" y="34"/>
                 <int name="z" value="0"/>
             </canvas>
-            <uol name="32" value="32"/>
-            <uol name="34" value="34"/>
-            <uol name="32" value="32"/>
-            <uol name="34" value="34"/>
+            <uol name="35" value="32"/>
+            <uol name="36" value="34"/>
+            <uol name="37" value="32"/>
+            <uol name="38" value="34"/>
         </imgdir>
     </imgdir>
 </imgdir>

@@ -246,10 +246,10 @@
                 </imgdir>
             </imgdir>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="2"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="2"/>
         <canvas name="7" width="246" height="193">
             <vector name="origin" x="88" y="193"/>
             <int name="delay" value="100"/>
@@ -575,10 +575,10 @@
                 </imgdir>
             </imgdir>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="2"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="2"/>
         <canvas name="7" width="246" height="193">
             <vector name="origin" x="88" y="193"/>
             <int name="delay" value="100"/>

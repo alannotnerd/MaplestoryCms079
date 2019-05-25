@@ -1,7 +1,4 @@
 function enter(pi) {
-    //if (pi.getQuestStatus(21720) == 1) {
-        pi.warp(910510001);
-   // } else {
-   //     pi.warp(910050300);
-   // }
+    pi.playerMessage("地图尚未开启！");
+	return false;
 }

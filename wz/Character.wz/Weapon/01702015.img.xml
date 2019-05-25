@@ -76,7 +76,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="2">
-                <uol name="../0/weapon" value="../0/weapon"/>
+                <uol name="weapon" value="../0/weapon"/>
             </imgdir>
             <imgdir name="3">
                 <canvas name="weapon" width="72" height="69">
@@ -360,10 +360,10 @@
         </imgdir>
         <imgdir name="stabTF">
             <imgdir name="0">
-                <uol name="../../swingPF/0/weapon" value="../../swingPF/0/weapon"/>
+                <uol name="weapon" value="../../swingPF/0/weapon"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../swingPF/1/weapon" value="../../swingPF/1/weapon"/>
+                <uol name="weapon" value="../../swingPF/1/weapon"/>
             </imgdir>
             <imgdir name="2">
                 <canvas name="weapon" width="77" height="68">
@@ -375,7 +375,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="3">
-                <uol name="../../stabT1/2/weapon" value="../../stabT1/2/weapon"/>
+                <uol name="weapon" value="../../stabT1/2/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="proneStab">
@@ -400,7 +400,7 @@
         </imgdir>
         <imgdir name="prone">
             <imgdir name="0">
-                <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
+                <uol name="weapon" value="../../proneStab/0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="fly">
@@ -414,7 +414,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="../0/weapon" value="../0/weapon"/>
+                <uol name="weapon" value="../0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="jump">
@@ -430,21 +430,21 @@
         </imgdir>
     </imgdir>
     <imgdir name="44">
-        <uol name="../43/walk1" value="../43/walk1"/>
-        <uol name="../43/walk2" value="../43/walk2"/>
-        <uol name="../43/stand1" value="../43/stand1"/>
-        <uol name="../43/stand2" value="../43/stand2"/>
-        <uol name="../43/alert" value="../43/alert"/>
-        <uol name="../43/swingT2" value="../43/swingT2"/>
-        <uol name="../43/swingP1" value="../43/swingP1"/>
-        <uol name="../43/swingP2" value="../43/swingP2"/>
-        <uol name="../43/swingPF" value="../43/swingPF"/>
-        <uol name="../43/stabT1" value="../43/stabT1"/>
-        <uol name="../43/stabT2" value="../43/stabT2"/>
-        <uol name="../43/stabT2" value="../43/stabT2"/>
-        <uol name="../43/proneStab" value="../43/proneStab"/>
-        <uol name="../43/prone" value="../43/prone"/>
-        <uol name="../43/fly" value="../43/fly"/>
-        <uol name="../43/jump" value="../43/jump"/>
+        <uol name="walk1" value="../43/walk1"/>
+        <uol name="walk2" value="../43/walk2"/>
+        <uol name="stand1" value="../43/stand1"/>
+        <uol name="stand2" value="../43/stand2"/>
+        <uol name="alert" value="../43/alert"/>
+        <uol name="swingT2" value="../43/swingT2"/>
+        <uol name="swingP1" value="../43/swingP1"/>
+        <uol name="swingP2" value="../43/swingP2"/>
+        <uol name="swingPF" value="../43/swingPF"/>
+        <uol name="stabT1" value="../43/stabT1"/>
+        <uol name="stabT2" value="../43/stabT2"/>
+        <uol name="stabTF" value="../43/stabT2"/>
+        <uol name="proneStab" value="../43/proneStab"/>
+        <uol name="prone" value="../43/prone"/>
+        <uol name="fly" value="../43/fly"/>
+        <uol name="jump" value="../43/jump"/>
     </imgdir>
 </imgdir>

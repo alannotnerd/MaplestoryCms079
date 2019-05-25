@@ -1,6 +1,6 @@
 function enter(pi) {
-    if (pi.isQuestFinished(1035)) {
-        pi.ShowWZEffect("UI/tutorial.img/23");
-    }
-    return false;
+	if (pi.isQuestFinished(1035))
+		pi.showWZEffect("UI/tutorial.img/23", 1);
+	pi.blockPortal();
+	return true;
 }

@@ -502,7 +502,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/weaponOverBody" value="../0/weaponOverBody"/>
+            <uol name="weaponOverBody" value="../0/weaponOverBody"/>
             <canvas name="weaponArmOverHair" width="23" height="20">
                 <vector name="origin" x="35" y="15"/>
                 <imgdir name="map">
@@ -514,20 +514,20 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/weaponOverBody" value="../../proneStab/0/weaponOverBody"/>
-            <uol name="../../proneStab/0/weaponArmOverHair" value="../../proneStab/0/weaponArmOverHair"/>
+            <uol name="weaponOverBody" value="../../proneStab/0/weaponOverBody"/>
+            <uol name="weaponArmOverHair" value="../../proneStab/0/weaponArmOverHair"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../alert/1/weaponOverGlove" value="../../alert/1/weaponOverGlove"/>
+            <uol name="weaponOverGlove" value="../../alert/1/weaponOverGlove"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingO2/1/weapon" value="../../swingO2/1/weapon"/>
+            <uol name="weapon" value="../../swingO2/1/weapon"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../swingO2/0/weaponOverBody" value="../../swingO2/0/weaponOverBody"/>
-            <uol name="../../swingO2/0/weapon" value="../../swingO2/0/weapon"/>
+            <uol name="weaponOverBody" value="../../swingO2/0/weaponOverBody"/>
+            <uol name="weapon" value="../../swingO2/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -548,8 +548,8 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/weaponOverGlove" value="../0/weaponOverGlove"/>
-            <uol name="../0/weaponArmOverHair" value="../0/weaponArmOverHair"/>
+            <uol name="weaponOverGlove" value="../0/weaponOverGlove"/>
+            <uol name="weaponArmOverHair" value="../0/weaponArmOverHair"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

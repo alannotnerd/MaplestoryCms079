@@ -20,12 +20,12 @@ function end(mode, type, selection) {
             qm.dispose();
             return;
         }
-        qm.sendNextS("My memories are returning...", 2);
+        qm.sendNext("My memories are returning...", 2);
         qm.changeJob(2110);
         qm.gainItem(1142130, 1);
         qm.gainItem(4032311, -30);
-        qm.forceCompleteQuest(21201);
-        qm.forceCompleteQuest();
+        qm.completeQuest(21201);
+        qm.completeQuest();
     } else if (status == 2) {
         qm.sendOk("Haha! You've got what you want, now leave!");
         qm.dispose();

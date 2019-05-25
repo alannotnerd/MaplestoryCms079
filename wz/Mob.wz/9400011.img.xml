@@ -221,12 +221,12 @@
             <vector name="head" x="-10" y="-50"/>
             <int name="delay" value="130"/>
         </canvas>
-        <uol name="../stand/5" value="../stand/5"/>
-        <uol name="../stand/6" value="../stand/6"/>
-        <uol name="../stand/7" value="../stand/7"/>
-        <uol name="../stand/8" value="../stand/8"/>
-        <uol name="../stand/9" value="../stand/9"/>
-        <uol name="../stand/10" value="../stand/10"/>
+        <uol name="8" value="../stand/5"/>
+        <uol name="9" value="../stand/6"/>
+        <uol name="10" value="../stand/7"/>
+        <uol name="11" value="../stand/8"/>
+        <uol name="12" value="../stand/9"/>
+        <uol name="13" value="../stand/10"/>
     </imgdir>
     <imgdir name="attack2">
         <imgdir name="info">
@@ -312,12 +312,12 @@
             <vector name="head" x="-11" y="-51"/>
             <int name="delay" value="130"/>
         </canvas>
-        <uol name="../stand/5" value="../stand/5"/>
-        <uol name="../stand/6" value="../stand/6"/>
-        <uol name="../stand/7" value="../stand/7"/>
-        <uol name="../stand/8" value="../stand/8"/>
-        <uol name="../stand/9" value="../stand/9"/>
-        <uol name="../stand/10" value="../stand/10"/>
+        <uol name="9" value="../stand/5"/>
+        <uol name="10" value="../stand/6"/>
+        <uol name="11" value="../stand/7"/>
+        <uol name="12" value="../stand/8"/>
+        <uol name="13" value="../stand/9"/>
+        <uol name="14" value="../stand/10"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="106" height="70">

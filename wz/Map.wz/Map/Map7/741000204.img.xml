@@ -1637,7 +1637,7 @@
             <int name="y" value="383"/>
             <int name="tm" value="105040300"/>
             <string name="tn" value="west00"/>
-            <string name="script" value=""/>
+            <string name="script" value="fishing_out"/>
             <int name="hideTooltip" value="0"/>
             <int name="delay" value="0"/>
         </imgdir>

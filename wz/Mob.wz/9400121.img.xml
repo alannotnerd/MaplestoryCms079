@@ -72,8 +72,8 @@
             <vector name="head" x="-5" y="-43"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="66" height="86">
             <vector name="origin" x="39" y="86"/>
             <int name="z" value="0"/>
@@ -410,7 +410,7 @@
             <vector name="head" x="-21" y="-37"/>
             <int name="delay" value="40"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="14" value="1"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="65" height="77">

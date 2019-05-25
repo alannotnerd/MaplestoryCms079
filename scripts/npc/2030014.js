@@ -1,15 +1,18 @@
-/* 
- * Ancient Icy Stone - Ice Demon
- */
+var status = -1;
 
-function start() {
-    if (cm.haveItem(4031450)) {
-	if (cm.canHold(2280011)) {
-	    cm.gainItem(2280011, 1);
-	    cm.gainItem(4031450, -1);
-	} else {
-	    cm.sendOk("Your inventory is full.");
+function action(mode, type, selection) {
+    if (mode == 1) {
+	status++;
+    } else {
+	if (status == 0) {
+	    cm.dispose();
 	}
+	status--;
     }
-    cm.dispose();
+    if (status == 0) {
+	cm.sendYesNo("Would you like to head back?");
+    } else if (status == 1) {
+	cm.warp(193000000);
+	cm.dispose();
+    }
 }

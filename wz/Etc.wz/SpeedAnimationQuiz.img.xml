@@ -169,12 +169,12 @@
                         <vector name="origin" x="-113" y="-201"/>
                         <int name="delay" value="170"/>
                     </canvas>
-                    <uol name="0" value="0"/>
-                    <uol name="1" value="1"/>
-                    <uol name="2" value="2"/>
-                    <uol name="0" value="0"/>
-                    <uol name="1" value="1"/>
-                    <uol name="2" value="2"/>
+                    <uol name="3" value="0"/>
+                    <uol name="4" value="1"/>
+                    <uol name="5" value="2"/>
+                    <uol name="6" value="0"/>
+                    <uol name="7" value="1"/>
+                    <uol name="8" value="2"/>
                     <canvas name="9" width="56" height="87">
                         <vector name="origin" x="-119" y="-146"/>
                         <int name="delay" value="170"/>
@@ -273,22 +273,22 @@
                         <vector name="origin" x="-109" y="-188"/>
                         <int name="delay" value="130"/>
                     </canvas>
-                    <uol name="6" value="6"/>
-                    <uol name="7" value="7"/>
-                    <uol name="8" value="8"/>
-                    <uol name="9" value="9"/>
-                    <uol name="6" value="6"/>
-                    <uol name="7" value="7"/>
-                    <uol name="8" value="8"/>
-                    <uol name="9" value="9"/>
-                    <uol name="6" value="6"/>
-                    <uol name="7" value="7"/>
-                    <uol name="8" value="8"/>
-                    <uol name="9" value="9"/>
-                    <uol name="6" value="6"/>
-                    <uol name="7" value="7"/>
-                    <uol name="8" value="8"/>
-                    <uol name="9" value="9"/>
+                    <uol name="10" value="6"/>
+                    <uol name="11" value="7"/>
+                    <uol name="12" value="8"/>
+                    <uol name="13" value="9"/>
+                    <uol name="14" value="6"/>
+                    <uol name="15" value="7"/>
+                    <uol name="16" value="8"/>
+                    <uol name="17" value="9"/>
+                    <uol name="18" value="6"/>
+                    <uol name="19" value="7"/>
+                    <uol name="20" value="8"/>
+                    <uol name="21" value="9"/>
+                    <uol name="22" value="6"/>
+                    <uol name="23" value="7"/>
+                    <uol name="24" value="8"/>
+                    <uol name="25" value="9"/>
                 </imgdir>
             </imgdir>
             <imgdir name="5">

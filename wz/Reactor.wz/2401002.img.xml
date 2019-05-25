@@ -77,8 +77,8 @@
         </canvas>
     </imgdir>
     <imgdir name="2">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/hit" value="../1/hit"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="hit" value="../1/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
@@ -87,14 +87,14 @@
         </imgdir>
     </imgdir>
     <imgdir name="3">
-        <uol name="../1/0" value="../1/0"/>
+        <uol name="0" value="../1/0"/>
         <imgdir name="hit">
-            <uol name="../../0/hit/5" value="../../0/hit/5"/>
-            <uol name="../../0/hit/4" value="../../0/hit/4"/>
-            <uol name="../../0/hit/3" value="../../0/hit/3"/>
-            <uol name="../../0/hit/2" value="../../0/hit/2"/>
-            <uol name="../../0/hit/1" value="../../0/hit/1"/>
-            <uol name="../../0/hit/0" value="../../0/hit/0"/>
+            <uol name="0" value="../../0/hit/5"/>
+            <uol name="1" value="../../0/hit/4"/>
+            <uol name="2" value="../../0/hit/3"/>
+            <uol name="3" value="../../0/hit/2"/>
+            <uol name="4" value="../../0/hit/1"/>
+            <uol name="5" value="../../0/hit/0"/>
         </imgdir>
         <imgdir name="event">
             <imgdir name="0">

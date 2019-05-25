@@ -139,7 +139,7 @@
             <vector name="head" x="0" y="-283"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="13" value="../stand/0"/>
     </imgdir>
     <imgdir name="skill2">
         <canvas name="0" width="185" height="282">
@@ -254,7 +254,7 @@
             <vector name="head" x="0" y="-283"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="16" value="../stand/0"/>
     </imgdir>
     <imgdir name="attack1">
         <imgdir name="info">

@@ -330,10 +330,10 @@
             <vector name="head" x="-40" y="-84"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="17" value="../stand/0"/>
+        <uol name="18" value="../stand/1"/>
+        <uol name="19" value="../stand/2"/>
+        <uol name="20" value="../stand/3"/>
     </imgdir>
     <imgdir name="skill1">
         <canvas name="0" width="125" height="164">

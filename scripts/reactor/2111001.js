@@ -1,12 +1,11 @@
-/*
-	Zakum Altar - Summons Zakum.
-*/
 
 function act() {
-    rm.changeMusic("Bgm06/FinalFight");
-    rm.getMap().spawnZakum( - 10, -215);
-    rm.mapMessage("ÔúÀ¥³öÏÖÁË£¬ÇëÔÚ¹æ¶¨Ê±¼ä·¶Î§ÄÚ»÷°ÜËü¡£");
-    if (!rm.getPlayer().isGM()) {
-        rm.getMap().startSpeedRun();
-    }
+        if(rm.getPlayer().getEventInstance() != null)
+        rm.getPlayer().getEventInstance().setProperty("canEnter", "false");
+	rm.getReactor().getMap().addMapTimer(2 * 60 * 60,211042300); 
+        rm.changeMusic("Bgm06/FinalFight");
+        rm.spawnFakeMonster(8800000);
+        for (i=8800003; i<8800011; i++) rm.spawnMonster(i);
+        //rm.createMapMonitor(280030000,true,211042300,"ps00",211042300,2118002); 
+	rm.mapMessage("è¯·æ³¨æ„!æ‰æ˜†å‡ºæ¥äº†.");
 }

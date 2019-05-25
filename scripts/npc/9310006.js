@@ -1,54 +1,41 @@
-/*
-	¹«°²C - ÉÏº£Ì² - Í¨µÀ (701010323)
-**/
+//cherry_MS
+importPackage(net.sf.cherry.client);
+
+var status = 0;
 
 function start() {
-    if (cm.getParty() == null) { // No Party
-	cm.sendOk("Çë×é¶ÓÔÙÀ´ÕÒÎÒ");
-    } else if (!cm.isLeader()) { // Not Party Leader
-	cm.sendOk("Çë½ÐÄãµÄ¶Ó³¤À´ÕÒÎÒ!");
-    } else {
-	var party = cm.getParty().getMembers();
-	var mapId = cm.getMapId();
-	var next = true;
-	var levelValid = 0;
-	var inMap = 0;
-
-	var it = party.iterator();
-	while (it.hasNext()) {
-	    var cPlayer = it.next();
-	    if ((cPlayer.getLevel() >= 25 && cPlayer.getLevel() <= 200) || cPlayer.getJobId() == 900) {
-		levelValid += 1;
-	    } else {
-		next = false;
-	    }
-	    if (cPlayer.getMapid() == mapId) {
-		inMap += (cPlayer.getJobId() == 900 ? 1 : 1);
-	    }
-	}
-	if (party.size() > 4 || inMap < 1) {
-	    next = false;
-	}
-	if (next) {
-	    var em = cm.getEventManager("WuGongPQ");
-	    if (em == null) {
-		cm.sendOk("µ±Ç°¸±±¾ÓÐÎÊÌâ£¬ÇëÁªÂç¹ÜÀíÔ±....");
-	    } else {
-		var prop = em.getProperty("state");
-		if (prop.equals("0") || prop == null) {
-		    em.startInstance(cm.getParty(),cm.getMap());
-	            cm.dispose();
-		    return;
-		} else {
-		    cm.sendOk("ÀïÃæÒÑ¾­ÓÐÈËÔÚÌôÕ½...");
-		}
-	    }
-	} else {
-	    cm.sendOk("µÈ¼¶ÉÐÎ´´ïµ½ #r25#k »òÕßÒÑ¾­³¬¹ý #r200#k");
-	}
-    }
-    cm.dispose();
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-}
+	if (mode == -1) {
+		cm.dispose();
+	} else {
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			cm.sendNext("ä½ æ˜¯ä¸ºäº†æ‰“è´¥å¤§çŽ‹èœˆèš£æ¥çš„å§ï¼Ÿæˆ‘é€ä½ åˆ°å¤§çŽ‹èœˆèš£æ‰€åœ¨åœ°å§ï¼");
+		}else if (status == 1) {
+			cm.sendNextPrev("ä¸€å®šè¦æ‰“è´¥å¤§çŽ‹èœˆèš£ï¼Œå¤ºå›ž#bèµ¤ç #kå¹³å®‰å›žæ¥ã€‚ã€‚ã€‚");
+		}
+		else if (status == 2) {
+			
+					if(cm.getPlayerCount(701010323)==0){
+					cm.warp(701010323, 0);
+					cm.addMapTimer(600);
+					cm.getMap(701010323).addMapTimer(600, 701010320);
+					cm.dispose();
+				}else{
+				cm.sendNextPrev("é‡Œé¢æœ‰æ­£åœ¨æ‰§è¡Œä»»åŠ¡çš„çŽ©å®¶ï¼Œè¯·ç¨åŽåœ¨å°è¯•è¿›å…¥ã€‚");
+				cm.dispose();
+				}
+		}
+		else{
+				cm.sendOk("å°±è¿™æ ·å§ã€‚");
+				cm.dispose();
+		}
+	}
+}	

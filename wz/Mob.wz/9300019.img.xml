@@ -73,12 +73,12 @@
             <vector name="head" x="-4" y="-99"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="3"/>
+        <uol name="10" value="4"/>
+        <uol name="11" value="5"/>
     </imgdir>
     <imgdir name="stand">
         <canvas name="0" width="123" height="107">
@@ -227,42 +227,42 @@
             <vector name="head" x="-4" y="-99"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
+        <uol name="10" value="../stand/0"/>
+        <uol name="11" value="../stand/1"/>
+        <uol name="12" value="../stand/2"/>
+        <uol name="13" value="../stand/3"/>
+        <uol name="14" value="../stand/4"/>
+        <uol name="15" value="../stand/5"/>
+        <uol name="16" value="../stand/0"/>
+        <uol name="17" value="../stand/1"/>
+        <uol name="18" value="../stand/2"/>
+        <uol name="19" value="../stand/3"/>
+        <uol name="20" value="../stand/4"/>
+        <uol name="21" value="../stand/5"/>
     </imgdir>
     <imgdir name="skill1">
-        <uol name="../attack1/0" value="../attack1/0"/>
-        <uol name="../attack1/1" value="../attack1/1"/>
-        <uol name="../attack1/2" value="../attack1/2"/>
-        <uol name="../attack1/3" value="../attack1/3"/>
-        <uol name="../attack1/4" value="../attack1/4"/>
-        <uol name="../attack1/5" value="../attack1/5"/>
-        <uol name="../attack1/6" value="../attack1/6"/>
-        <uol name="../attack1/7" value="../attack1/7"/>
-        <uol name="../attack1/8" value="../attack1/8"/>
-        <uol name="../attack1/9" value="../attack1/9"/>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
+        <uol name="0" value="../attack1/0"/>
+        <uol name="1" value="../attack1/1"/>
+        <uol name="2" value="../attack1/2"/>
+        <uol name="3" value="../attack1/3"/>
+        <uol name="4" value="../attack1/4"/>
+        <uol name="5" value="../attack1/5"/>
+        <uol name="6" value="../attack1/6"/>
+        <uol name="7" value="../attack1/7"/>
+        <uol name="8" value="../attack1/8"/>
+        <uol name="9" value="../attack1/9"/>
+        <uol name="10" value="../stand/0"/>
+        <uol name="11" value="../stand/1"/>
+        <uol name="12" value="../stand/2"/>
+        <uol name="13" value="../stand/3"/>
+        <uol name="14" value="../stand/4"/>
+        <uol name="15" value="../stand/5"/>
+        <uol name="16" value="../stand/0"/>
+        <uol name="17" value="../stand/1"/>
+        <uol name="18" value="../stand/2"/>
+        <uol name="19" value="../stand/3"/>
+        <uol name="20" value="../stand/4"/>
+        <uol name="21" value="../stand/5"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="159" height="113">

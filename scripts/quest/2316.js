@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Minister of Magic
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  ÃΩÀ˜ƒ¢πΩ…≠¡÷(3)
+	Description: 	Quest -  Êé¢Á¥¢ËòëËèáÊ£ÆÊûó(3)
 */
 
 importPackage(Packages.client);
@@ -21,7 +21,7 @@ function start(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendAcceptDecline("I think i've heard of a potion that breaks these kinds of barriers. I think it's called #bKiller Mushroom Spores#k? Hmmm... outside, you'll find the Mushroom Scholar #bScarrs#k waiting outside. #bScarrs#k is an expert on mushrooms, so go talk to him.");
+        qm.sendYesNo("I think i've heard of a potion that breaks these kinds of barriers. I think it's called #bKiller Mushroom Spores#k? Hmmm... outside, you'll find the Mushroom Scholar #bScarrs#k waiting outside. #bScarrs#k is an expert on mushrooms, so go talk to him.");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.sendOk("I am confident #kScarrs#k will do everything to help you.");
@@ -44,7 +44,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.gainExp(4200);
         qm.sendOk("#kKiller Mushroom Spores#k... I think i've heard of them before...");
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.dispose();
     }
 }

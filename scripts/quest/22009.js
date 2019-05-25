@@ -16,7 +16,7 @@ function start(mode, type, selection) {
         status--;
     }
     if (status == 0) {
-        qm.askAcceptDecline("If the number of foxes has increased near the farm just like it has near our house, that'll interface with Dad's farm work. We should investigate this. Don't you agree?");
+        qm.sendAcceptDecline("If the number of foxes has increased near the farm just like it has near our house, that'll interface with Dad's farm work. We should investigate this. Don't you agree?");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.sendOk("Go to the #bCentral Farm#k and ask #bDad#k about the situation. If the number of Cunning Foxes has increased there as well, we're going to have to conduct a major Cunning Fox hunt.");
@@ -35,7 +35,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.sendNext("Well, I'm not sure. I've been too busy to notice. The #bPig#ks have been acting crazy, jumping all over the place. Even the foxes seem to be running away from the Pigs...");
         qm.gainExp(260);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     } else if (status == 2) {
         qm.sendPrev("Ah, maybe that is why the Cunning Fox population near the house has increased. They ran there to escape from the Pigs. Hmm...");
         qm.dispose();

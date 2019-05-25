@@ -1,16 +1,16 @@
 /*
-	ÈÎÎñ: ÃÎµÄËéÆ¬
-	ÃèÊö: Å¼È»¼ñµ½ÁËÃÎËéÆ¬¡£È¥´åÀï¿´¿´ÓĞÃ»ÓĞÈËÖªµÀÕâÊÇÊ²Ã´¶«Î÷°É¡£
+	ä»»åŠ¡: æ¢¦çš„ç¢ç‰‡
+	æè¿°: å¶ç„¶æ¡åˆ°äº†æ¢¦ç¢ç‰‡ã€‚å»æ‘é‡Œçœ‹çœ‹æœ‰æ²¡æœ‰äººçŸ¥é“è¿™æ˜¯ä»€ä¹ˆä¸œè¥¿å§ã€‚
 */
 var status = -1;
 
 function start(mode, type, selection) {
     qm.sendNext("Thank you so much.");
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }
 function end(mode, type, selection) {
     qm.sendNext("Thank you so much.");
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }

@@ -21,24 +21,24 @@
             <vector name="origin" x="39" y="89"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="69" height="89">
             <vector name="origin" x="39" y="89"/>
             <int name="delay" value="500"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="4" value="4"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="4" value="4"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="4"/>
+        <uol name="9" value="1"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="0"/>
+        <uol name="13" value="1"/>
+        <uol name="14" value="0"/>
+        <uol name="15" value="1"/>
+        <uol name="16" value="4"/>
         <imgdir name="speak">
             <string name="0" value="s0"/>
             <string name="1" value="s1"/>
@@ -57,17 +57,17 @@
             <vector name="origin" x="39" y="89"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="0"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
         <canvas name="6" width="69" height="89">
             <vector name="origin" x="39" y="89"/>
             <int name="delay" value="800"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="0"/>
+        <uol name="10" value="1"/>
+        <uol name="11" value="2"/>
     </imgdir>
 </imgdir>

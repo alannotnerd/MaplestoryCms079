@@ -1,119 +1,115 @@
-/* Dances with Balrog
-	Warrior Job Advancement
-	Victoria Road : Warriors' Sanctuary (102000003)
+/* Dances with Balrog */
+/** Made by xQuasar **/
 
-	Custom Quest 100003, 100005
-*/
-
-importPackage(net.sf.odinms.client);
-
-var status = 0;
-var job;
+var status;
 
 function start() {
 	status = -1;
-	action(1, 0, 0);
-}
-
-function action(mode, type, selection) {
+	action(1,0,0);
+	}
+	
+function action(mode,type,selection) {
 	if (mode == -1) {
 		cm.dispose();
-	} else {
-		if (mode == 0 && status == 2) {
-			cm.sendOk("你的选择是明智的.");
+	} else if (mode == 0) {
+			cm.sendOk("...");
 			cm.dispose();
-			return;
-		}
-		if (mode == 1)
-			status++;
-		else
-			status--;
-		if (status == 0) {
-			if (cm.getJob() == 0) {
-				if (cm.getLevel() >= 10)
-					cm.sendNext("所以你决定成为一个 #r战士#k?");
-				else {
-					cm.sendOk("呵呵呵呵!!干得漂亮!!10级都没有就想转职成为#r战士!")
-					cm.dispose();
-				}
-			} else {
-				if (cm.getLevel() >= 30 && cm.getJob() == 100) {
-                if (cm.getQuestStatus(100003) >= 1) {
-                    cm.completeQuest(100005);
-                    if (cm.haveItem(4031012,1)) {
-							status = 20;
-							cm.sendNext("我看你做得很好。我会让你在你的漫长道路上迈出下一步。");
-						} else {
-							cm.sendOk("去找二转转职教练把，他是一个抠脚大汉！他在西部岩山Ⅳ")
-							cm.dispose();
-						}
-					} else {
-						status = 10;
-						cm.sendNext("你所取得的进步是惊人的.");
-					}
-            } else if (cm.getQuestStatus(100100) == 1) {
-                cm.completeQuest(100101);
-                if (cm.getQuestStatus(100101) == 2) {
-						cm.sendOk("好吧，现在把这个带到#b二转教官所在的地方#k.");
-					} else {
-						cm.sendOk("Hey, " + cm.getChar().getName() + "! 我需要一个 #b二转教官#k.去寻找维度的门。");
-						cm.startQuest(100101);
-					}
-					cm.dispose();
-				} else {
-                                    if(cm.haveItem(4031380,1)){
-                                        cm.sendOk("你居然带来了#v4031380#，OK，少侠，我们进入正题吧。现在我的分身已经出现了，和他决斗吧。赢了可以获得#b黑符#k一张\r\n(#v4031380#已经删除，如果这次失败，请再去三转教官获取！)");
-                                        cm.spawnMonster(9001000,1);
-                                        cm.gainItem(4031380,-1);
-                                        cm.dispose();
-                                    }else{
-					cm.sendOk("你好，再见.");
-					cm.dispose();
-				}
-                            }
-			}
-		} else if (status == 1) {
-			cm.sendNextPrev("这是一个重要的和最后的选择。你将无法回头。");
-		} else if (status == 2) {
-			cm.sendYesNo("你想成为一个 #r战士#k?");
-		} else if (status == 3) {
-			if (cm.getJob() == 0)
-				cm.changeJob(100);
-			cm.gainItem(1402001, 1);
-			cm.sendOk("So be it! Now go, and go with pride.");
+	} else if (status == -1) {
+		if (cm.getJob().equals(net.sf.cherry.client.MapleJob.BEGINNER)) {
+			status = 0;
+			cm.sendNext("You may be able to become a Warrior. Let's see...");
+		} else if (cm.getJob().equals(net.sf.cherry.client.MapleJob.WARRIOR)) {
+			status = 2;
+			cm.sendNext("You might be ready for your second job advancement. Let's see...");
+		} else if (cm.getJob().equals(net.sf.cherry.client.MapleJob.FIGHTER) ||
+					cm.getJob().equals(net.sf.cherry.client.MapleJob.PAGE) ||
+					cm.getJob().equals(net.sf.cherry.client.MapleJob.SPEARMAN)) {
+			status = 4;
+			cm.sendNext("You may be ready for your third job advancement. Let's see...");
+		} else {
+			cm.sendOk("I can teach you all about the path of a Warrior...");
 			cm.dispose();
-		} else if (status == 11) {
-			cm.sendNextPrev("你可能准备采取下一步 #r剑客#k, #r准骑士#k or #r枪战士#k.")
-		} else if (status == 12) {
-			cm.sendAcceptDecline("但首先我必须测试你的技能。你准备好了吗？");
-		} else if (status == 13) {
-			if (cm.haveItem(4031008)) {
-				cm.sendOk("请报告此错误= 13");
-			} else {
-				cm.startQuest(100003);
-				cm.sendOk("去找 #b转职教官#k 勇士部落附近。他会告诉你的方式。");
-			}
-		} else if (status == 21) {
-			cm.sendSimple("你想成为什么？#b\r\n#L0#剑客#l\r\n#L1#准骑士#l\r\n#L2#枪战士#l#k");
-		} else if (status == 22) {
-			var jobName;
-			if (selection == 0) {
-				jobName = "剑客";
-				job = 110;
-			} else if (selection == 1) {
-				jobName = "准骑士";
-				job = 120;
-			} else {
-				jobName = "枪战士";
-				job = 130;
-			}
-			cm.sendYesNo("你是否想转职成为一个牛X的 #r" + jobName + "#k?");
-		} else if (status == 23) {
-			cm.changeJob(job);
-			cm.gainItem(4031012, -1);
-			cm.sendOk("恭喜，你转职了！！");
-cm.喇叭(3, "恭喜[" + cm.getPlayer().getName() + "]成功2转，哈哈，我要起飞了！！");
-					cm.dispose();
 		}
+	} else if (status == 0) {
+		if (cm.getLevel() <= 9 || cm.getChar().getStr() <= 34) {
+			cm.sendOk("Hmm... you are not quite ready yet. Come back when you're at least level 10 and have 35 STR, okay?");
+			cm.dispose();
+		} else {
+			status = 1;
+			cm.sendYesNo("Yes, you seem ready to become a Warrior. Would you like to become a Warrior?");
+		}
+	} else if (status == 1) {
+		cm.changeJob(net.sf.cherry.client.MapleJob.WARRIOR);
+		cm.sendOk("Congratulations! You're now a Warrior. Train hard, and when you reach level 30, come and talk to me again.");
+		cm.dispose();
+	} else if (status == 2) {
+		if (cm.getLevel() <= 29) {
+			cm.sendOk("Hmm... you aren't quite ready yet. Come back when you're level 30, okay?");
+			cm.dispose();
+		} else if (cm.getLevel() >= 30 && cm.haveItem(4031012)) {
+			status = 3;
+			cm.sendNext("I see... You have passed the test...");
+		} else if (cm.getLevel() >= 30 && cm.haveItem(4031008)) {
+			cm.sendOk("Come on, let's get moving. Go and see the Warrior job instructor, he's somewhere around in the valley...");
+			cm.dispose();
+		} else {
+			cm.sendOk("The progress you have made is astonishing. It's time for you to take your next step. Here, take this letter and go to the Warrior job instructor somewhere around in the valley. Pass the test, and bring back your proof to become a Fighter, a Page or a Spearman.");
+			cm.gainItem(4031008,1);
+			cm.dispose();
+		}
+	} else if (status == 3) {
+		if (selection == 0) {
+			status = 8;
+			cm.sendYesNo("Are you sure you want to become a Fighter?");
+		} else if (selection == 1) {
+			status = 9;
+			cm.sendYesNo("Are you sure you want to become an Page?");
+		} else if (selection == 2) {
+			status = 10;
+			cm.sendYesNo("Are you sure you want to become a Spearman?");
+		} else {
+		cm.sendSimple("Now, what would you like to become?#b\r\n#L0#Fighter#l\r\n#L1#Page#l\r\n#L2#Spearman#l#k");
+		}
+	} else if (status == 4) {
+		if (cm.getJob().equals(net.sf.cherry.client.MapleJob.FIGHTER) && cm.getLevel() >= 70){
+			status = 5;
+			cm.sendYesNo("Yes, you are ready for your third job advancement. Would you like to become a Crusader?");
+		} else if (cm.getJob().equals(net.sf.cherry.client.MapleJob.PAGE) && cm.getLevel() >= 70){
+			status = 6;
+			cm.sendYesNo("Yes, you are ready for your third job advancement. Would you like to become a White Knight?");
+		} else if (cm.getJob().equals(net.sf.cherry.client.MapleJob.SPEARMAN) && cm.getLevel() >= 70){
+			status = 7;
+			cm.sendYesNo("Yes, you are ready for your third job advancement. Would you like to become a Dragon Knight?");
+		} else {
+			cm.sendOk("Hmm... you aren't quite ready yet. Come back when you're level 70, okay?");
+			cm.dispose();
+		}
+	} else if (status == 5) {
+		cm.changeJob(net.sf.cherry.client.MapleJob.CRUSADER);
+		cm.sendOk("Congratulations! You're now a Crusader. Train hard, and when you reach level 120, come and talk to me again.");
+		cm.dispose();
+	} else if (status == 6) {
+		cm.changeJob(net.sf.cherry.client.MapleJob.WHITEKNIGHT);
+		cm.sendOk("Congratulations! You're now a White Knight. Train hard, and when you reach level 120, come and talk to me again.");
+		cm.dispose();
+	} else if (status == 7) {
+		cm.changeJob(net.sf.cherry.client.MapleJob.DRAGONKNIGHT);
+		cm.sendOk("Congratulations! You're now a Dragon Knight. Train hard, and when you reach level 120, come and talk to me again.");
+		cm.dispose();
+	} else if (status == 8) {
+			cm.changeJob(net.sf.cherry.client.MapleJob.FIGHTER);
+			cm.gainItem(4031012,-1);
+			cm.sendOk("Congratulations! You're now a Fighter. Train hard, and when you reach level 70, come and talk to me again.");
+			cm.dispose();
+	} else if (status == 9) {
+			cm.changeJob(net.sf.cherry.client.MapleJob.PAGE);
+			cm.gainItem(4031012,-1);
+			cm.sendOk("Congratulations! You're now a Page. Train hard, and when you reach level 70, come and talk to me again.");
+			cm.dispose();
+	} else if (status == 10) {
+			cm.changeJob(net.sf.cherry.client.MapleJob.SPEARMAN);
+			cm.gainItem(4031012,-1);
+			cm.sendOk("Congratulations! You're now a Spearman. Train hard, and when you reach level 70, come and talk to me again.");
+			cm.dispose();
 	}
-}	
+}

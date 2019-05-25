@@ -2470,25 +2470,25 @@
         <string name="d1" value="(艾利杰睡的很深。)"/>
     </imgdir>
     <imgdir name="2012027">
-        <string name="name" value="竖琴玄&lt;do&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;do&gt;"/>
     </imgdir>
     <imgdir name="2012028">
-        <string name="name" value="竖琴玄&lt;lei&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;lei&gt;"/>
     </imgdir>
     <imgdir name="2012029">
-        <string name="name" value="竖琴玄&lt;mi&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;mi&gt;"/>
     </imgdir>
     <imgdir name="2012030">
-        <string name="name" value="竖琴玄&lt;fa&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;fa&gt;"/>
     </imgdir>
     <imgdir name="2012031">
-        <string name="name" value="竖琴玄&lt;so&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;so&gt;"/>
     </imgdir>
     <imgdir name="2012032">
-        <string name="name" value="竖琴玄&lt;la&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;la&gt;"/>
     </imgdir>
     <imgdir name="2012033">
-        <string name="name" value="竖琴玄&lt;xi&gt;"/>
+        <string name="name" value="竖琴玄&amp;lt;xi&gt;"/>
     </imgdir>
     <imgdir name="2013000">
         <string name="name" value="温莉"/>
@@ -3939,7 +3939,7 @@
     <imgdir name="2090005">
         <string name="name" value="鹤"/>
         <string name="func" value="出租车"/>
-        <string name="n0" value="航线是武陵&lt;-&gt;天空之城！给些辛苦钱就送你"/>
+        <string name="n0" value="航线是武陵&amp;lt;-&gt;天空之城！给些辛苦钱就送你"/>
         <string name="n1" value="我送你比起走着去快多了是不是？"/>
     </imgdir>
     <imgdir name="2090006">
@@ -4877,8 +4877,8 @@
         <string name="name" value="艾琳"/>
         <string name="n0" value="那边有危险的怪人。不要随便过去。"/>
         <string name="n1" value="啊！必须尽快解决才行，那些被称为英雄的家伙都说很忙。这可怎么办呢？"/>
-        <string name="d0" value="不久前，森林开始受到污染。这都是那些被称为&lt;怪人&gt;的穿着黑色长袍的人干的。他们到底是什么人呢？难道……是黑魔法师？"/>
-        <string name="d1" value="不久前，森林开始受到污染。这都是那些被称为&lt;怪人&gt;的穿着黑色长袍的人干的。他们到底是什么人呢？难道……是黑魔法师？"/>
+        <string name="d0" value="不久前，森林开始受到污染。这都是那些被称为&amp;lt;怪人&gt;的穿着黑色长袍的人干的。他们到底是什么人呢？难道……是黑魔法师？"/>
+        <string name="d1" value="不久前，森林开始受到污染。这都是那些被称为&amp;lt;怪人&gt;的穿着黑色长袍的人干的。他们到底是什么人呢？难道……是黑魔法师？"/>
     </imgdir>
     <imgdir name="2133001">
         <string name="name" value="艾琳"/>

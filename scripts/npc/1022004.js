@@ -1,10 +1,34 @@
+/*
+	This file is part of the cherry Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
+					   Matthias Butz <matze@cherry.de>
+					   Jan Christian Meyer <vimes@cherry.de>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation version 3 as published by
+    the Free Software Foundation. You may not use, modify or distribute
+    this program under any other version of the GNU Affero General Public
+    License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 /* Mr. Smith
- Victoria Road: Perion (102000000)
- 
- Refining NPC: 
- * Warrior Gloves - 10-60 + upgrades
- * Processed Wood/Screws
- */
+	Victoria Road: Perion (102000000)
+	
+	Refining NPC: 
+	* Warrior Gloves - 10-60 + upgrades
+	* Processed Wood/Screws
+*/
+
+importPackage(net.sf.cherry.client);
 
 var status = 0;
 var selectedType = -1;
@@ -17,165 +41,190 @@ var qty;
 var equip;
 
 function start() {
-    status = -1;
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (mode == 1)
-        status++;
-    else
-        cm.dispose();
-    if (status == 0 && mode == 1) {
-        var selStr = "ÎÒÊÇÊ·ÃÜË¹,ºÜ¸ßĞËÎªÄã·şÎñyo~#b"
-        var options = new Array("ÖÆ×÷ÊÖÌ×", "Éı¼¶ÊÖÌ×", "Ä¾²ÄÓëÂİË¿¶¤ÖÆ×÷");
-        for (var i = 0; i < options.length; i++) {
-            selStr += "\r\n#L" + i + "# " + options[i] + "#l";
-        }
+	if (mode == 1)
+		status++;
+	else
+		cm.dispose();
+	if (status == 0 && mode == 1) {
+		var selStr = "å¥½ï¼æœåŠ¡è´µä¸å¤ªè´µï¼Œä½ ä¸ç”¨å¤ªæ‹…å¿ƒã€‚ä½ æƒ³åšä»€ä¹ˆï¼Ÿ#b"
+		var options = new Array("åˆ¶ä½œæ‰‹å¥—","åˆæˆæ‰‹å¥—","åˆ¶ä½œææ–™");
+		for (var i = 0; i < options.length; i++){
+			selStr += "\r\n#L" + i + "# " + options[i] + "#l";
+		}
+			
+		cm.sendSimple(selStr);
+	}
+	else if (status == 1 && mode == 1) {
+		selectedType = selection;
+		if (selectedType == 0){ //glove refine
+			var selStr = "åœ¨è¿™ä¸ªæ‘è½æˆ‘åšçš„æ‰‹å¥—æ˜¯æœ€å¥½çš„ï¼å¥½~ä½ æƒ³åšä»€ä¹ˆæ ·çš„æ‰‹å¥—å‘¢ï¼Ÿ#b";
+			var items = new Array ("è…•ç”²#k(ç­‰çº§é™åˆ¶ : 10, æˆ˜å£«)#b","é’¢åˆ¶çŸ­æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 15, æˆ˜å£«)#b","çš®æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 20, æˆ˜å£«)#b","ç™½çº¹çŸ­æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 25, æˆ˜å£«)#b",
+				"é’é“œæœºå™¨æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 30, æˆ˜å£«)#b","é“åˆ¶è½»ä¾¿æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 35, æˆ˜å£«)#b","é’¢é“æŒ‡èŠ‚æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 40, æˆ˜å£«)#b","é’¢é“åˆé‡‘æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 50, æˆ˜å£«)#b","é’¢é“æˆ˜æ–—æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 60, æˆ˜å£«)0#b");
+			for (var i = 0; i < items.length; i++){
+				selStr += "\r\n#L" + i + "# " + items[i] + "#l";
+			}
+			cm.sendSimple(selStr);
+			equip = true;
+		}
+		else if (selectedType == 1){ //glove upgrade
+			var selStr = "å¥½...ä½ æƒ³åˆæˆåšä»€ä¹ˆæ‰‹å¥—ï¼Ÿ#r#b";
+			var crystals = new Array ("é’¢åˆ¶æœºå™¨æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 30, æˆ˜å£«)#b","ç´«çŸ¿æœºå™¨æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ :30, æˆ˜å£«)#b","é»„è½»ä¾¿æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 35, æˆ˜å£«)#b","é»‘è½»ä¾¿æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 35, æˆ˜å£«)#b",
+				"æœ±çŸ¿æŒ‡èŠ‚æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 40, æˆ˜å£«)#b","é»‘æŒ‡èŠ‚æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 40, æˆ˜å£«)#b","é”‚çŸ¿åˆé‡‘æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 50, æˆ˜å£«)#b","é»„é‡‘åˆé‡‘æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 50, æˆ˜å£«)#b",
+				"è“æˆ˜æ–—æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 60, æˆ˜å£«)#b","é»‘æˆ˜æ–—æ‰‹å¥—#k(ç­‰çº§é™åˆ¶ : 60, æˆ˜å£«)#b");
+			for (var i = 0; i < crystals.length; i++){
+				selStr += "\r\n#L" + i + "# " + crystals[i] + "#l";
+			}
+			cm.sendSimple(selStr);
+			equip = true;
+		}
+		else if (selectedType == 2){ //material refine
+			var selStr = "ä½ æƒ³åšææ–™ï¼Ÿå¥½...ä½ æƒ³åšä»€ä¹ˆææ–™ï¼Ÿ#b";
+			var materials = new Array ("ç”¨æ ‘æåšæœ¨æ","ç”¨æœ¨å—åšæœ¨æ","åšèºä¸é’‰");
+			for (var i = 0; i < materials.length; i++){
+				selStr += "\r\n#L" + i + "# " + materials[i] + "#l";
+			}
+			cm.sendSimple(selStr);
+			equip = false;
+		}
+		if (equip)
+			status++;
+	}
+	else if (status == 2 && mode == 1) {
+		selectedItem = selection;
+		if (selectedType == 2){ //material refine
+			var itemSet = new Array (4003001,4003001,4003000);
+			var matSet = new Array(4000003,4000018,new Array (4011000,4011001));
+			var matQtySet = new Array (10,5,new Array (1,1));
+			var costSet = new Array (0,0,0)
+			item = itemSet[selectedItem];
+			mats = matSet[selectedItem];
+			matQty = matQtySet[selectedItem];
+			cost = costSet[selectedItem];
+		}
+		
+		var prompt = "æœ‰#b10ä¸ªæ ‘æ#kèƒ½åšä¸€ä¸ª#t" + item + "#ï¼Œéƒ½æ˜¯å…è´¹çš„ã€‚æ‰€ä»¥ä½ åº”è¯¥è°¢è°¢æˆ‘ã€‚æ€ä¹ˆæ ·ï¼Ÿä½ æƒ³åšå‡ æ¬¡ï¼Ÿ";
+		
+		cm.sendGetNumber(prompt,1,1,100)
+	}
+	else if (status == 3 && mode == 1) {
+		if (equip)
+		{
+			selectedItem = selection;
+			qty = 1;
+		}
+		else
+			qty = selection;
 
-        cm.sendSimple(selStr);
-    } else if (status == 1 && mode == 1) {
-        selectedType = selection;
-        if (selectedType == 0) { //glove refine
-            var selStr = "ºÃder,ÄãÏëÒªÖÆ×÷ÄÄÒ»ÖÖÊÖÌ×ÄØ?#b";
-            var items = new Array("Íó¼×#k - ĞèÒªµÈ¼¶ Lv. 10#b", "¸ÖÖÆ¶ÌÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 15#b", "Æ¤ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 20#b", "°×ÎÆ¶ÌÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 25#b",
-                    "ÇàÍ­»úÆ÷ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 30#b", "ÌúÖÆÇá±ãÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 35#b", "¸ÖÌú³¤ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 40#b", "¸ÖÌúºÏ½ğÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 50#b", "ÇàÍ­Õ½¶·ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 60#b");
-            for (var i = 0; i < items.length; i++) {
-                selStr += "\r\n#L" + i + "# " + items[i] + "#l";
-            }
-            cm.sendSimple(selStr);
-            equip = true;
-        } else if (selectedType == 1) { //glove upgrade
-            var selStr = "Éı¼¶ÊÖÌ×? ¿ÉÒÔÅ¶~ÄãÏëÒªÉı¼¶ÄÄÒ»ÖÖÊÖÌ×ÄØ?#b";
-            var crystals = new Array("¸ÖÖÆ»úÆ÷ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 30#b", "×Ï¿ó»úÆ÷ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 30#b", "»ÆÇá±ãÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 35#b", "ºÚÇá±ãÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 35#b",
-                    "Öì¿ó³¤ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 40#b", "ºÚÉ«³¤ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 40#b", "ï®¿óºÏ½ğÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 50#b", "»Æ½ğºÏ½ğÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 50#b",
-                    "À¶Õ½¶·ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 60#b", "ºÚÕ½¶·ÊÖÌ×#k - ĞèÒªµÈ¼¶ Lv. 60#b");
-            for (var i = 0; i < crystals.length; i++) {
-                selStr += "\r\n#L" + i + "# " + crystals[i] + "#l";
-            }
-            cm.sendSimple(selStr);
-            equip = true;
-        } else if (selectedType == 2) { //material refine
-            var selStr = "Ä¾²ÄºÍÂİË¿¶¤,ÄãĞèÒªÊ²Ã´ÄØ?#b";
-            var materials = new Array("ÓÃ10¸öÊ÷Ö¦ÖÆ×÷1¸öÄ¾²Ä", "ÓÃ5¸öÄ¾²ñÖÆ×÷1¸öÄ¾²Ä", "ÖÆ×÷ÂİË¿¶¤(1´Î15¸ö)");
-            for (var i = 0; i < materials.length; i++) {
-                selStr += "\r\n#L" + i + "# " + materials[i] + "#l";
-            }
-            cm.sendSimple(selStr);
-            equip = false;
-        }
-        if (equip)
-            status++;
-    } else if (status == 2 && mode == 1) {
-        selectedItem = selection;
-        if (selectedType == 2) { //material refine
-            var itemSet = new Array(4003001, 4003001, 4003000);
-            var matSet = new Array(4000003, 4000018, new Array(4011000, 4011001));
-            var matQtySet = new Array(10, 5, new Array(1, 1));
-            var costSet = new Array(0, 0, 0)
-            item = itemSet[selectedItem];
-            mats = matSet[selectedItem];
-            matQty = matQtySet[selectedItem];
-            cost = costSet[selectedItem];
-        }
-
-        var prompt = "ËùÒÔÄãĞèÒªÎÒ°ïÄã×öÒ»Ğ©#t" + item + "#? ÄÇÄãÏëÒªÎÒ×ö¶àÉÙ¸öÄØ?";
-
-        cm.sendGetNumber(prompt, 1, 1, 100)
-    } else if (status == 3 && mode == 1) {
-        if (equip)
-        {
-            selectedItem = selection;
-            qty = 1;
-        } else
-            qty = selection;
-
-        if (selectedType == 0) { //glove refine
-            var itemSet = new Array(1082003, 1082000, 1082004, 1082001, 1082007, 1082008, 1082023, 1082009, 1082059);
-            var matSet = new Array(new Array(4000021, 4011001), 4011001, new Array(4000021, 4011000), 4011001, new Array(4011000, 4011001, 4003000), new Array(4000021, 4011001, 4003000), new Array(4000021, 4011001, 4003000),
-                    new Array(4011001, 4021007, 4000030, 4003000), new Array(4011007, 4011000, 4011006, 4000030, 4003000));
-            var matQtySet = new Array(new Array(15, 1), 2, new Array(40, 2), 2, new Array(3, 2, 15), new Array(30, 4, 15), new Array(50, 5, 40), new Array(3, 2, 30, 45), new Array(1, 8, 2, 50, 50));
-            var costSet = new Array(1000, 2000, 5000, 10000, 20000, 30000, 40000, 50000, 70000);
-            item = itemSet[selectedItem];
-            mats = matSet[selectedItem];
-            matQty = matQtySet[selectedItem];
-            cost = costSet[selectedItem];
-        } else if (selectedType == 1) { //glove upgrade
-            var itemSet = new Array(1082005, 1082006, 1082035, 1082036, 1082024, 1082025, 1082010, 1082011, 1082060, 1082061);
-            var matSet = new Array(new Array(1082007, 4011001), new Array(1082007, 4011005), new Array(1082008, 4021006), new Array(1082008, 4021008), new Array(1082023, 4011003), new Array(1082023, 4021008),
-                    new Array(1082009, 4011002), new Array(1082009, 4011006), new Array(1082059, 4011002, 4021005), new Array(1082059, 4021007, 4021008));
-            var matQtySet = new Array(new Array(1, 1), new Array(1, 2), new Array(1, 3), new Array(1, 1), new Array(1, 4), new Array(1, 2), new Array(1, 5), new Array(1, 4), new Array(1, 3, 5), new Array(1, 2, 2));
-            var costSet = new Array(20000, 25000, 30000, 40000, 45000, 50000, 55000, 60000, 70000, 80000);
-            item = itemSet[selectedItem];
-            mats = matSet[selectedItem];
-            matQty = matQtySet[selectedItem];
-            cost = costSet[selectedItem];
-        }
-
-        var prompt = "ÄãĞèÒªÎÒ°ïÄã×ö";
-        if (qty == 1)
-            prompt += "#t" + item + "#?";
-        else
-            prompt += qty + "¸ö#t" + item + "#?";
-
-        prompt += " ºÃµÄÎÒ»á°ïÄãÍê³ÉµÄ,µ«ÇëÄãÈ·ÈÏÄãµÄ±³°üÊÇ·ñÓĞÒÔÏÂµÄ²ÄÁÏÓë×ã¹»µÄ¿Õ¼äÅ¶#b";
-
-        if (mats instanceof Array) {
-            for (var i = 0; i < mats.length; i++) {
-                prompt += "\r\n#i" + mats[i] + "# " + matQty[i] * qty + " #t" + mats[i] + "#";
-            }
-        } else {
-            prompt += "\r\n#i" + mats + "# " + matQty * qty + " #t" + mats + "#";
-        }
-
-        if (cost > 0) {
-            prompt += "\r\n#i4031138# " + cost * qty + " meso";
-        }
-        cm.sendYesNo(prompt);
-    } else if (status == 4 && mode == 1) {
-        var complete = true;
-
-        if (cm.getMeso() < cost * qty) {
-            cm.sendOk("Ôã¸â...ÄãµÄÇ®ºÃÏñ²»¹»Å¶...")
-            cm.dispose();
-            return;
-        } else {
-            if (mats instanceof Array) {
-
-                for (var i = 0; complete && i < mats.length; i++)
-                {
-                    if (!cm.haveItem(mats[i], matQty[i] * qty))
-                    {
-                        complete = false;
-                    }
-                }
-            } else {
-                if (!cm.haveItem(mats, matQty * qty))
-                {
-                    complete = false;
-                }
-            }
-        }
-
-        if (!complete)
-            cm.sendOk("Ôã¸â!? ÄãµÄ²ÄÁÏºÃÏñ²»¹»Å¶...ÕâÑù×ÓÎÒ¾Í²»ÄÜ°ïÄãÖÆ×÷ÁË,ÇëÖØĞÂÈ·ÈÏÒ»ÏÂ");
-        else {
-            if (mats instanceof Array) {
-                for (var i = 0; i < mats.length; i++) {
-                    cm.gainItem(mats[i], -matQty[i] * qty);
-                }
-            } else
-                cm.gainItem(mats, -matQty * qty);
-
-            if (cost > 0)
-                cm.gainMeso(-cost * qty);
-
-            if (item == 4003000)//screws
-                cm.gainItem(4003000, 15 * qty);
-            else
-                cm.gainItem(item, qty);
-            cm.sendOk("ºÜ°ô°É?ÎÒµÄÊÖÒÕ,Èç¹û»¹ÓĞĞèÒª»¶Ó­À´ÕÒÎÒ,ÎÒÄÄ¶¼²»»áÈ¥µÄ.");
-        }
-        cm.dispose();
-    }
+		if (selectedType == 0){ //glove refine
+			var itemSet = new Array(1082003,1082000,1082004,1082001,1082007,1082008,1082023,1082009,1082059);
+			var matSet = new Array(new Array(4000021,4011001),4011001,new Array(4000021,4011000),4011001,new Array(4011000,4011001,4003000),new Array(4000021,4011001,4003000),new Array(4000021,4011001,4003000),
+				new Array(4011001,4021007,4000030,4003000),new Array(4011007,4011000,4011006,4000030,4003000));
+			var matQtySet = new Array(new Array(15,1),2,new Array(40,2),2,new Array(3,2,15),new Array(30,4,15),new Array(50,5,40),new Array(3,2,30,45),new Array(1,8,2,50,50));
+			var costSet = new Array(1000,2000,5000,10000,20000,30000,40000,50000,70000);
+			item = itemSet[selectedItem];
+			mats = matSet[selectedItem];
+			matQty = matQtySet[selectedItem];
+			cost = costSet[selectedItem];
+		}
+		else if (selectedType == 1){ //glove upgrade
+			var itemSet = new Array(1082005,1082006,1082035,1082036,1082024,1082025,1082010,1082011,1082060,1082061);
+			var matSet = new Array(new Array(1082007,4011001),new Array(1082007,4011005),new Array(1082008,4021006),new Array(1082008,4021008),new Array(1082023,4011003),new Array(1082023,4021008),
+				new Array(1082009,4011002),new Array(1082009,4011006),new Array(1082059,4011002,4021005),new Array(1082059,4021007,4021008));
+			var matQtySet = new Array (new Array(1,1),new Array(1,2),new Array(1,3),new Array(1,1),new Array(1,4),new Array(1,2),new Array(1,5),new Array(1,4),new Array(1,3,5),new Array(1,2,2));
+			var costSet = new Array (20000,25000,30000,40000,45000,50000,55000,60000,70000,80000);
+			item = itemSet[selectedItem];
+			mats = matSet[selectedItem];
+			matQty = matQtySet[selectedItem];
+			cost = costSet[selectedItem];
+		}
+		
+		var prompt = "ä½ æƒ³åš";
+		if (qty == 1)
+			prompt += "1ä¸ª#t" + item + "#å—ï¼Ÿ";
+		else
+			prompt += qty + "ä¸ª#t" + item + "#å—ï¼Ÿ";
+			
+		prompt += "é‚£éœ€è¦ä¸‹é¢çš„ç‰©å“ï¼Œæ€ä¹ˆæ ·ï¼Ÿæƒ³åšå—ï¼Ÿ#b";
+		
+		if (mats instanceof Array){
+			for(var i = 0; i < mats.length; i++){
+				prompt += "\r\n#i"+mats[i]+"# " + matQty[i] * qty + " #t" + mats[i] + "#";
+			}
+		}
+		else {
+			prompt += "\r\n#i"+mats+"# " + matQty * qty + " #t" + mats + "#";
+		}
+		
+		if (cost > 0)
+			prompt += "\r\n#i4031138# " + cost * qty + " é‡‘å¸";
+		
+		cm.sendYesNo(prompt);
+	}
+	else if (status == 4 && mode == 1) {
+		var complete = true;
+		
+		if (cm.getMeso() < cost * qty)
+			{
+				cm.sendOk("è¯·ä½ ç¡®è®¤æœ‰éœ€è¦çš„ç‰©å“æˆ–èƒŒåŒ…çš„å…¶å®ƒçª—å£æœ‰ç©ºé—´ã€‚")
+			}
+			else
+			{
+				if (mats instanceof Array) {
+					for(var i = 0; complete && i < mats.length; i++)
+					{
+						if (matQty[i] * qty == 1)	{
+							if (!cm.haveItem(mats[i]))
+							{
+								complete = false;
+							}
+						}
+						else {
+							var count = 0;
+							var iter = cm.getChar().getInventory(MapleInventoryType.ETC).listById(mats[i]).iterator();
+							while (iter.hasNext()) {
+								count += iter.next().getQuantity();
+							}
+							if (count < matQty[i] * qty)
+								complete = false;
+						}					
+					}
+				}
+				else {
+					var count = 0;
+					var iter = cm.getChar().getInventory(MapleInventoryType.ETC).listById(mats).iterator();
+					while (iter.hasNext()) {
+						count += iter.next().getQuantity();
+					}
+					if (count < matQty * qty)
+						complete = false;
+				}
+			}
+			
+			if (!complete) 
+				cm.sendOk("è¯·ä½ ç¡®è®¤æœ‰éœ€è¦çš„ç‰©å“æˆ–èƒŒåŒ…çš„å…¶å®ƒçª—å£æœ‰ç©ºé—´ã€‚");
+			else {
+				if (mats instanceof Array) {
+					for (var i = 0; i < mats.length; i++){
+						cm.gainItem(mats[i], -matQty[i] * qty);
+					}
+				}
+				else
+					cm.gainItem(mats, -matQty * qty);
+					
+				if (cost > 0)
+					cm.gainMeso(-cost * qty);
+				
+				if (item == 4003000)//screws
+					cm.gainItem(4003000, 15 * qty);
+				else
+					cm.gainItem(item, qty);
+				cm.sendOk("å¥½ï¼ä½ çš„ä¸œè¥¿å·²ç»åšå¥½äº†ï¼Œæˆ‘çš„æ‰‹è‰ºæœç„¶ä¸é”™ï¼ä½ çœ‹è§è¿‡è¿™ä¹ˆå®Œç¾çš„ä¸œè¥¿å—ï¼Ÿä¸‹æ¬¡å†æ¥å§ã€‚");
+			}
+		cm.dispose();
+	}
 }

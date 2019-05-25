@@ -3,6 +3,10 @@ var map = 910060000;
 var num = 5;
 var maxp = 5;
 
+function start() {
+	action(1, 0, 0);
+}
+
 function action(mode, type, selection) {
     if (mode == 1) {
 	status++;

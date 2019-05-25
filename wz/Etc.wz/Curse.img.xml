@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <imgdir name="Curse.img">
     <string name="0" value="尻,*"/>
     <string name="1" value="穴,*"/>
@@ -1288,8 +1288,8 @@
     <string name="1285" value="海边的卡夫卡,******"/>
     <string name="1286" value="斯蒂芬?霍金,******"/>
     <string name="1287" value="新闻出版总署,******"/>
-    <string name="1288" value="apexon,******"/>
-    <string name="1289" value="Client,******"/>
+    <string name="1288" value="map,***"/>
+    <string name="1289" value="/map,****"/>
     <string name="1290" value="galaxy,******"/>
     <string name="1291" value="master,******"/>
     <string name="1292" value="PENIS”,******"/>

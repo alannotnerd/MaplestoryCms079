@@ -1,4 +1,5 @@
+
 function action(mode, type, selection) {
-    cm.sendOk("ÆÕÍ¨µÄ²Ý´Ô¡£");
+    cm.sendNext("It looks like there's nothing suspecious in the area.");
     cm.safeDispose();
 }

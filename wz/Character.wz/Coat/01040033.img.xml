@@ -54,8 +54,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../0/mail" value="../0/mail"/>
-            <uol name="../0/mailArm" value="../0/mailArm"/>
+            <uol name="mail" value="../0/mail"/>
+            <uol name="mailArm" value="../0/mailArm"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="mail" width="16" height="13">
@@ -108,8 +108,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../0/mail" value="../0/mail"/>
-            <uol name="../0/mailArm" value="../0/mailArm"/>
+            <uol name="mail" value="../0/mail"/>
+            <uol name="mailArm" value="../0/mailArm"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="mail" width="16" height="13">
@@ -879,10 +879,10 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="../../swingPF/0/mail" value="../../swingPF/0/mail"/>
+            <uol name="mail" value="../../swingPF/0/mail"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingPF/1/mail" value="../../swingPF/1/mail"/>
+            <uol name="mail" value="../../swingPF/1/mail"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="mail" width="20" height="18">
@@ -894,7 +894,7 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../stabT1/2/mail" value="../../stabT1/2/mail"/>
+            <uol name="mail" value="../../stabT1/2/mail"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -931,7 +931,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/mail" value="../1/mail"/>
+            <uol name="mail" value="../1/mail"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -1036,7 +1036,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/mail" value="../1/mail"/>
+            <uol name="mail" value="../1/mail"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -1050,23 +1050,23 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/mail" value="../0/mail"/>
+            <uol name="mail" value="../0/mail"/>
         </imgdir>
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/mail" value="../../proneStab/0/mail"/>
+            <uol name="mail" value="../../proneStab/0/mail"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../alert/1/mail" value="../../alert/1/mail"/>
+            <uol name="mail" value="../../alert/1/mail"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingO2/1/mail" value="../../swingO2/1/mail"/>
+            <uol name="mail" value="../../swingO2/1/mail"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../swingO2/0/mail" value="../../swingO2/0/mail"/>
+            <uol name="mail" value="../../swingO2/0/mail"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

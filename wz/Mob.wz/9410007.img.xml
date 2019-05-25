@@ -187,10 +187,10 @@
             <vector name="rb" x="16" y="0"/>
             <vector name="head" x="-10" y="-33"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
+        <uol name="10" value="../stand/0"/>
+        <uol name="11" value="../stand/1"/>
+        <uol name="12" value="../stand/2"/>
+        <uol name="13" value="../stand/3"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="51" height="78">

@@ -23,7 +23,7 @@
             <string name="id" value="9300008"/>
             <int name="x" value="-640"/>
             <int name="y" value="186"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="46"/>

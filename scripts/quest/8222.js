@@ -9,7 +9,7 @@ function end(mode, type, selection) {
     if (qm.haveItem(4032006, 10)) {
         qm.sendNext("Good job!");
         qm.gainExp(85000);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.gainItem(4032006, -10);
     } else {
         qm.sendNext("Please find 10 Stormbreaker Badges.");

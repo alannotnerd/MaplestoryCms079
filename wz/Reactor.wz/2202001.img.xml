@@ -64,7 +64,7 @@
                 <int name="state" value="3"/>
             </imgdir>
         </imgdir>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="3">
         <canvas name="0" width="68" height="99">

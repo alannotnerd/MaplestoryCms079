@@ -73,8 +73,8 @@
             <vector name="head" x="-21" y="-41"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
     </imgdir>
     <imgdir name="attack1">
         <imgdir name="info">

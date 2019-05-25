@@ -1,21 +1,25 @@
 var status = -1;
 function action(mode, type, selection) {
     if (mode == 1) {
-	status++;
+        status++;
     } else {
-	cm.dispose();
-	return;
+        cm.dispose();
+        return;
     }
     if (status == 0) {
-		if (cm.getPlayer().getLevel() < 40 && cm.haveItem(1452084)) {
-			cm.sendYesNo("你想移动到隐藏地图?");
-		} else {
-			cm.sendOk("你需要小于40级，需要进入要有所罗门之弓.");
-			cm.dispose();
-		}
-} else {
-	cm.spawnMob_map(9400610, 677000003,34,35 );
-	cm.warp(677000002,0);
-	cm.dispose();
+        if (cm.getPlayer().getLevel() < 40) {
+            cm.sendYesNo("Would you like to move to Amdusias's Strolling Place?");
+        } else {
+            cm.sendOk("You need to be less than level 40 and need the Amdusias's Necklace to enter.");
+            cm.dispose();
+        }
+    } else {
+        cm.warp(677000002,0);
+        cm.dispose();
     }
+}
+
+function start()
+{
+  action(1,0,0)
 }

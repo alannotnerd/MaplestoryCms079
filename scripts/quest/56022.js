@@ -1,5 +1,5 @@
 /**
- *	40º∂Ω±¿¯
+ *	40Á∫ßÂ•ñÂä±
  */
 var status = -1;
 
@@ -9,11 +9,11 @@ function start(mode, type, selection) {
         if (qm.isQuestFinished(56022)) {
             qm.dispose();
         } else {
-            qm.sendOk("πßœ≤! ƒ„ªÒµ√¡À#v2022457# x 100£¨#v4006000# x 100£¨#v4006001# x 100°£");
+            qm.sendOk("ÊÅ≠Âñú! ‰Ω†Ëé∑Âæó‰∫Ü#v2022457# x 100Ôºå#v4006000# x 100Ôºå#v4006001# x 100„ÄÇ");
             qm.gainItem(2022457, 100);
             qm.gainItem(4006000, 100);
             qm.gainItem(4006001, 100);
-            qm.forceCompleteQuest();
+            qm.completeQuest();
             qm.dispose();
         }
     }

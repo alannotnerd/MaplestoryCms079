@@ -13,7 +13,7 @@ function action(mode, type, selection) {
 		}
 		if (cm.getPlayer().getMapId() == 193000000) {
 			if (status == 0) {
-				cm.sendSimple("I can lead you to Battle Tower, where you will be pit against other monsters...\r\n\r\n#b#L0# #v03994115##l #L1# #v03994116##l #L2# #v03994117##l #L3# #v03994118##l");
+				cm.sendSimple("I can lead you to Battle Tower, where you will be put against other monsters...\r\n\r\n#b#L0# #v03994115##l #L1# #v03994116##l #L2# #v03994117##l #L3# #v03994118##l");
 			} else if (status == 1) {
 				sel = selection;
 				var num = 0;

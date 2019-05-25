@@ -803,7 +803,7 @@
             <string name="id" value="9300006"/>
             <int name="x" value="588"/>
             <int name="y" value="-3"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="100"/>
@@ -816,7 +816,7 @@
             <string name="id" value="2040044"/>
             <int name="x" value="222"/>
             <int name="y" value="70"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="0"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="97"/>
@@ -1774,7 +1774,7 @@
             <string name="id" value="2201003"/>
             <int name="x" value="599"/>
             <int name="y" value="0"/>
-            <int name="reactorTime" value="20"/>
+            <int name="reactorTime" value="-1"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>

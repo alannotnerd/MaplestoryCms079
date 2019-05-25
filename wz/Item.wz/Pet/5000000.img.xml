@@ -830,8 +830,8 @@
             <vector name="rb" x="16" y="0"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
         <canvas name="5" width="41" height="39">
             <vector name="origin" x="19" y="39"/>
             <vector name="lt" x="-19" y="-39"/>

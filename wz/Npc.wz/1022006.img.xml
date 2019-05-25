@@ -49,17 +49,17 @@
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="47" height="72">
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="500"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="5" value="1"/>
         <canvas name="6" width="47" height="72">
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="500"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="7" value="1"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="47" height="72">
@@ -74,7 +74,7 @@
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="100"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="47" height="72">
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="300"/>
@@ -83,9 +83,9 @@
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="600"/>
         </canvas>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="6" value="2"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
         <canvas name="9" width="47" height="72">
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="700"/>
@@ -94,8 +94,8 @@
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="400"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="2"/>
         <canvas name="13" width="47" height="72">
             <vector name="origin" x="24" y="72"/>
             <int name="delay" value="300"/>

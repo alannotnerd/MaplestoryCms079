@@ -60,7 +60,7 @@
     <imgdir name="Dojang">
         <sound name="clear"/>
         <sound name="start"/>
-        <uol name="clear" value="clear"/>
+        <uol name="timeOver" value="clear"/>
     </imgdir>
     <imgdir name="AranEvent">
         <sound name="wolf"/>

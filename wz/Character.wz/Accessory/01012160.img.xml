@@ -134,10 +134,10 @@
     </imgdir>
     <imgdir name="vomit">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="oops">
@@ -153,12 +153,12 @@
     </imgdir>
     <imgdir name="cheers">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="chu">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="wink">
@@ -185,10 +185,10 @@
     </imgdir>
     <imgdir name="glitter">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="shine">
@@ -204,58 +204,58 @@
     </imgdir>
     <imgdir name="love">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="despair">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="blaze">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="hum">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="bowing">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="hot">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="dam">
         <imgdir name="0">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../angry/0/default" value="../../angry/0/default"/>
+            <uol name="default" value="../../angry/0/default"/>
         </imgdir>
     </imgdir>
 </imgdir>

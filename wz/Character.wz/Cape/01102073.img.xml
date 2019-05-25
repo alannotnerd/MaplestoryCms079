@@ -201,16 +201,16 @@
     </imgdir>
     <imgdir name="stand2">
         <imgdir name="0">
-            <uol name="../../stand1/0/cape" value="../../stand1/0/cape"/>
-            <uol name="../../stand1/0/capeArm" value="../../stand1/0/capeArm"/>
+            <uol name="cape" value="../../stand1/0/cape"/>
+            <uol name="capeArm" value="../../stand1/0/capeArm"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../stand1/1/cape" value="../../stand1/1/cape"/>
-            <uol name="../../stand1/1/capeArm" value="../../stand1/1/capeArm"/>
+            <uol name="cape" value="../../stand1/1/cape"/>
+            <uol name="capeArm" value="../../stand1/1/capeArm"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../stand1/2/cape" value="../../stand1/2/cape"/>
-            <uol name="../../stand1/2/capeArm" value="../../stand1/2/capeArm"/>
+            <uol name="cape" value="../../stand1/2/cape"/>
+            <uol name="capeArm" value="../../stand1/2/capeArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="alert">
@@ -837,12 +837,12 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="../../swingPF/0/cape" value="../../swingPF/0/cape"/>
-            <uol name="../../swingPF/0/capeArm" value="../../swingPF/0/capeArm"/>
+            <uol name="cape" value="../../swingPF/0/cape"/>
+            <uol name="capeArm" value="../../swingPF/0/capeArm"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingPF/1/cape" value="../../swingPF/1/cape"/>
-            <uol name="../../swingPF/1/capeArm" value="../../swingPF/1/capeArm"/>
+            <uol name="cape" value="../../swingPF/1/cape"/>
+            <uol name="capeArm" value="../../swingPF/1/capeArm"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="cape" width="26" height="19">
@@ -911,8 +911,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/cape" value="../1/cape"/>
-            <uol name="../1/capeArm" value="../1/capeArm"/>
+            <uol name="cape" value="../1/cape"/>
+            <uol name="capeArm" value="../1/capeArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -949,7 +949,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../0/cape" value="../0/cape"/>
+            <uol name="cape" value="../0/cape"/>
             <canvas name="capeArm" width="13" height="10">
                 <vector name="origin" x="4" y="3"/>
                 <imgdir name="map">
@@ -1025,8 +1025,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/cape" value="../1/cape"/>
-            <uol name="../1/capeArm" value="../1/capeArm"/>
+            <uol name="cape" value="../1/cape"/>
+            <uol name="capeArm" value="../1/capeArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -1051,19 +1051,19 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/cape" value="../../proneStab/0/cape"/>
+            <uol name="cape" value="../../proneStab/0/cape"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../alert/1/cape" value="../../alert/1/cape"/>
-            <uol name="../../alert/1/capeArm" value="../../alert/1/capeArm"/>
+            <uol name="cape" value="../../alert/1/cape"/>
+            <uol name="capeArm" value="../../alert/1/capeArm"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingO2/1/cape" value="../../swingO2/1/cape"/>
+            <uol name="cape" value="../../swingO2/1/cape"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../swingO2/0/cape" value="../../swingO2/0/cape"/>
+            <uol name="cape" value="../../swingO2/0/cape"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -1084,8 +1084,8 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/cape" value="../0/cape"/>
-            <uol name="../0/capeArm" value="../0/capeArm"/>
+            <uol name="cape" value="../0/cape"/>
+            <uol name="capeArm" value="../0/capeArm"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

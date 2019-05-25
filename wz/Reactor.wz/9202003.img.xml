@@ -49,10 +49,10 @@
             </imgdir>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../../0/hit/0" value="../../0/hit/0"/>
-            <uol name="../../0/hit/1" value="../../0/hit/1"/>
-            <uol name="../../0/hit/2" value="../../0/hit/2"/>
-            <uol name="../../0/hit/3" value="../../0/hit/3"/>
+            <uol name="0" value="../../0/hit/0"/>
+            <uol name="1" value="../../0/hit/1"/>
+            <uol name="2" value="../../0/hit/2"/>
+            <uol name="3" value="../../0/hit/3"/>
         </imgdir>
     </imgdir>
     <imgdir name="2">
@@ -67,10 +67,10 @@
             </imgdir>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../../0/hit/0" value="../../0/hit/0"/>
-            <uol name="../../0/hit/1" value="../../0/hit/1"/>
-            <uol name="../../0/hit/2" value="../../0/hit/2"/>
-            <uol name="../../0/hit/3" value="../../0/hit/3"/>
+            <uol name="0" value="../../0/hit/0"/>
+            <uol name="1" value="../../0/hit/1"/>
+            <uol name="2" value="../../0/hit/2"/>
+            <uol name="3" value="../../0/hit/3"/>
         </imgdir>
     </imgdir>
     <imgdir name="3">

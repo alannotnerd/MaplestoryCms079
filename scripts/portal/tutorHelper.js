@@ -1,8 +1,7 @@
 function enter(pi) {
-    if (pi.getQuestStatus(20021) == 0) {
-        pi.playerSummonHint(true);
-        pi.summonMsg("Welcome to the world of Maple! My name is Koo, and I will be your guide! I will be here to answer your questions and guide you until you reach Level 10 and become a Knight-in-Training. If you have any questions, double-click me!");
-        //pi.forceCompleteQuest(20100);
-        pi.forceCompleteQuest(20021);
-    }
+	pi.spawnTutorialSummon();
+	pi.tutorialSpeechBubble("欢迎来到枫之谷冒险岛世界！我是负责引导的库！在你成为10级的修炼骑士之前，如果有什么不知道的。可以过来问我。如果你有什么疑问，请双击我！");
+	pi.updateCygnusIntroState("helper=clear");
+	pi.blockPortal();
+	return true;
 }

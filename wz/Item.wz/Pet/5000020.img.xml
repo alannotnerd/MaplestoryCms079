@@ -882,7 +882,7 @@
             <vector name="rb" x="24" y="0"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="0" value="0"/>
+        <uol name="3" value="0"/>
     </imgdir>
     <imgdir name="stand1">
         <canvas name="0" width="48" height="50">
@@ -1170,20 +1170,20 @@
             <vector name="rb" x="30" y="0"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="4" value="4"/>
-        <uol name="3" value="3"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
-        <uol name="4" value="4"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
+        <uol name="6" value="4"/>
+        <uol name="7" value="3"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="1"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="2"/>
+        <uol name="13" value="3"/>
+        <uol name="14" value="4"/>
+        <uol name="15" value="5"/>
+        <uol name="16" value="4"/>
+        <uol name="17" value="3"/>
+        <uol name="18" value="4"/>
+        <uol name="19" value="5"/>
     </imgdir>
     <imgdir name="sleep">
         <canvas name="0" width="68" height="35">
@@ -1216,11 +1216,11 @@
             <vector name="rb" x="33" y="0"/>
             <int name="delay" value="1000"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
+        <uol name="5" value="0"/>
+        <uol name="6" value="1"/>
+        <uol name="7" value="2"/>
+        <uol name="8" value="3"/>
+        <uol name="9" value="4"/>
     </imgdir>
     <imgdir name="eat">
         <canvas name="0" width="48" height="48">

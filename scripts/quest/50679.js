@@ -1,32 +1,32 @@
 /*
-	ÈÎÎñ: ±È¹úÍõ»¹¿ÉÅÂµÄÅ®Íõ
-	ÃèÊö: ×ÊÖúÈË#b#p9120219##kËµÓĞÊÂÇéÏë°İÍĞÎÒ¡£
-	»ñµÃ: 4310018*5 - Ê®×Ö½ğ±Ò
-	      1112601*1 - Ê®×ÖÂÃÍÅÊìÁ·½äÖ¸ II
+	ä»»åŠ¡: æ¯”å›½ç‹è¿˜å¯æ€•çš„å¥³ç‹
+	æè¿°: èµ„åŠ©äºº#b#p9120219##kè¯´æœ‰äº‹æƒ…æƒ³æ‹œæ‰˜æˆ‘ã€‚
+	è·å¾—: 4310018*5 - åå­—é‡‘å¸
+	      1112601*1 - åå­—æ—…å›¢ç†Ÿç»ƒæˆ’æŒ‡ II
 */
 var status = -1;
 
 function start(mode, type, selection) {
     if (!qm.canHold(4310018, 5) || !qm.canHold(1112601, 1)) {
-        qm.sendOk("±³°ü¿Õ¼ä²»×ã.");
+        qm.sendOk("èƒŒåŒ…ç©ºé—´ä¸è¶³.");
     } else {
         qm.gainItem(4310018, 5);
         qm.gainItem(1112601, 1);
         qm.forceStartQuest(50682);
         qm.forceStartQuest(50686);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }
 function end(mode, type, selection) {
     if (!qm.canHold(4310018, 5) || !qm.canHold(1112601, 1)) {
-        qm.sendOk("±³°ü¿Õ¼ä²»×ã.");
+        qm.sendOk("èƒŒåŒ…ç©ºé—´ä¸è¶³.");
     } else {
         qm.gainItem(4310018, 5);
         qm.gainItem(1112601, 1);
         qm.forceStartQuest(50682);
         qm.forceStartQuest(50686);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }

@@ -6,12 +6,12 @@
         <int name="maxHP" value="10000"/>
         <int name="maxMP" value="120"/>
         <int name="speed" value="-30"/>
-        <int name="PADamage" value="1999"/>
-        <int name="PDDamage" value="1999"/>
-        <int name="MADamage" value="1999"/>
-        <int name="MDDamage" value="1999"/>
-        <int name="acc" value="599"/>
-        <int name="eva" value="14"/>
+        <int name="PADamage" value="120"/>
+        <int name="PDDamage" value="45"/>
+        <int name="MADamage" value="110"/>
+        <int name="MDDamage" value="50"/>
+        <int name="acc" value="65"/>
+        <int name="eva" value="10"/>
         <int name="exp" value="0"/>
         <int name="undead" value="0"/>
         <int name="pushed" value="300"/>

@@ -19,7 +19,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="1">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -48,7 +48,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="3">
-        <uol name="../2/0" value="../2/0"/>
+        <uol name="0" value="../2/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -77,7 +77,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="5">
-        <uol name="../4/0" value="../4/0"/>
+        <uol name="0" value="../4/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -106,7 +106,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="7">
-        <uol name="../6/0" value="../6/0"/>
+        <uol name="0" value="../6/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -135,7 +135,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="9">
-        <uol name="../8/0" value="../8/0"/>
+        <uol name="0" value="../8/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -164,7 +164,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="11">
-        <uol name="../10/0" value="../10/0"/>
+        <uol name="0" value="../10/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -193,7 +193,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="13">
-        <uol name="../12/0" value="../12/0"/>
+        <uol name="0" value="../12/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>
@@ -222,7 +222,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="15">
-        <uol name="../14/0" value="../14/0"/>
+        <uol name="0" value="../14/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="1"/>

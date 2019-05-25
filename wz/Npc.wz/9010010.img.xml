@@ -75,13 +75,13 @@
             <vector name="origin" x="22" y="66"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
+        <uol name="7" value="5"/>
+        <uol name="8" value="6"/>
+        <uol name="9" value="5"/>
+        <uol name="10" value="6"/>
+        <uol name="11" value="4"/>
+        <uol name="12" value="5"/>
+        <uol name="13" value="6"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

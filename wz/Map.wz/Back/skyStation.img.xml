@@ -217,9 +217,9 @@
                 <int name="z" value="0"/>
                 <int name="delay" value="350"/>
             </canvas>
-            <uol name="3" value="3"/>
-            <uol name="2" value="2"/>
-            <uol name="1" value="1"/>
+            <uol name="5" value="3"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="1"/>
             <canvas name="8" width="146" height="250">
                 <vector name="origin" x="63" y="125"/>
                 <int name="z" value="0"/>

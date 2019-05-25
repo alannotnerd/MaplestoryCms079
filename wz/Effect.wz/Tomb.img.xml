@@ -103,6 +103,6 @@
         </canvas>
     </imgdir>
     <imgdir name="land">
-        <uol name="../fall/19" value="../fall/19"/>
+        <uol name="0" value="../fall/19"/>
     </imgdir>
 </imgdir>

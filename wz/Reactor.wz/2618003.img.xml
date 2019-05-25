@@ -52,14 +52,14 @@
             <int name="z" value="0"/>
         </canvas>
         <imgdir name="hit">
-            <uol name="../../0/hit/7" value="../../0/hit/7"/>
-            <uol name="../../0/hit/6" value="../../0/hit/6"/>
-            <uol name="../../0/hit/5" value="../../0/hit/5"/>
-            <uol name="../../0/hit/4" value="../../0/hit/4"/>
-            <uol name="../../0/hit/3" value="../../0/hit/3"/>
-            <uol name="../../0/hit/2" value="../../0/hit/2"/>
-            <uol name="../../0/hit/1" value="../../0/hit/1"/>
-            <uol name="../../0/hit/0" value="../../0/hit/0"/>
+            <uol name="0" value="../../0/hit/7"/>
+            <uol name="1" value="../../0/hit/6"/>
+            <uol name="2" value="../../0/hit/5"/>
+            <uol name="3" value="../../0/hit/4"/>
+            <uol name="4" value="../../0/hit/3"/>
+            <uol name="5" value="../../0/hit/2"/>
+            <uol name="6" value="../../0/hit/1"/>
+            <uol name="7" value="../../0/hit/0"/>
         </imgdir>
         <imgdir name="event">
             <imgdir name="0">

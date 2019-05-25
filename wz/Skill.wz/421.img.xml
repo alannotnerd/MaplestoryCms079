@@ -343,8 +343,8 @@
                     <int name="a0" value="100"/>
                     <int name="a1" value="255"/>
                 </canvas>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
+                <uol name="2" value="0"/>
+                <uol name="3" value="1"/>
                 <canvas name="4" width="143" height="153">
                     <vector name="origin" x="75" y="116"/>
                     <int name="delay" value="100"/>
@@ -819,7 +819,7 @@
                 </imgdir>
                 <imgdir name="30">
                     <string name="hs" value="h30"/>
-                    <vector name="lt" x="-300" y="-240"/>
+                    <vector name="lt" x="-200" y="-120"/>
                     <vector name="rb" x="0" y="0"/>
                     <int name="mobCount" value="1"/>
                     <int name="mpCon" value="26"/>
@@ -1307,8 +1307,8 @@
                     <int name="damage" value="210"/>
                     <int name="x" value="5"/>
                     <int name="mobCount" value="6"/>
-                    <vector name="rb" x="400" y="250"/>
-                    <vector name="lt" x="-400" y="-350"/>
+                    <vector name="rb" x="150" y="50"/>
+                    <vector name="lt" x="-150" y="-50"/>
                 </imgdir>
             </imgdir>
             <imgdir name="effect">

@@ -1,72 +1,58 @@
+importPackage(net.sf.cherry.client);
+importPackage(net.sf.cherry.scripting.npc);
+
 var status = -1;
 
 function start(mode, type, selection) {
-    if (mode == 1) {
-        status++;
-    } else {
-        if (status == 0) {
-            qm.sendNext("°¡£¡Õ½Éñ´óÈË¾Ü¾øÁË£¡");
-            qm.dispose();
-            return;
-        }
-        status--;
-    }
-    if (status == 0) {
-        qm.askAcceptDecline("ßÀßÀ¡­¡­ÏÅËÀÎÒÁË¡­¡­¿ì£¬¿ì´øµ½ºÕÀöÄÈÄÇ±ßÈ¥£¡");
-    } else if (status == 1) {
-        if (qm.getQuestStatus(21001) == 0) {
-            qm.gainItem(4001271, 1);
-            qm.forceStartQuest(21001, null);
-        }
-        qm.warp(914000300, 0);
+    	if (mode == -1) {
+	qm.sendNext("*Sob* Aran has declined my request!");
         qm.dispose();
-    }
+    } else {
+        if (mode == 1)
+            status++;
+        else
+            status--;
+		if (status == 0)
+			qm.sendAcceptDecline("å—¯å—¯â€¦â€¦å“æ­»æˆ‘äº†â€¦â€¦å¿«ï¼Œå¸¦æˆ‘åˆ°èµ«ä¸½å¨œé‚£è¾¹å»ï¼");
+		else if (status == 1) {
+			qm.startQuest();
+			qm.warp(914000300);
+			qm.dispose();
+		}
+	}
 }
 
 function end(mode, type, selection) {
-    if (mode == 1) {
-        status++;
-    } else {
-        if (status == 0) {
-            qm.sendNext("º¢×ÓÄØ£¿º¢×Ó¾È³öÀ´ÁËµÄ»°£¬¾Í¸Ï½ôÈÃÎÒÃÇ¿´¿´¡£");
-            qm.dispose();
-            return;
-        } else if (status == 8) { // watching the introduction
-            if (qm.haveItem(4001271)) {
-                qm.gainItem(4001271, -1);
-            }
-            qm.MovieClipIntroUI(true);
-            qm.forceCompleteQuest();
-            qm.warp(914090010, 0);
-            qm.dispose();
-            return;
-        }
-        status--;
-    }
-    if (status == 0) {
-        qm.sendYesNo("ºÇºÇ£¬Æ½°²»ØÀ´ÁË£¿º¢×ÓÄØ£¿º¢×ÓÒ²´ø»ØÀ´ÁËÂğ£¿");
-    } else if (status == 1) {
-        qm.sendNext("Ì«ºÃÁË¡­¡­ÕæÊÇÌ«ºÃÁË¡£");
-    } else if (status == 2) {
-        qm.sendNextPrevS("¸Ï¿ìÉÏ´¬£¡ÒÑ¾­Ã»Ê±¼äÁË£¡", 3);
-    } else if (status == 3) {
-        qm.sendNextPrev("°¡£¬Ã»´í¡£ÏÖÔÚ²»ÊÇ¸ĞÉËµÄÊ±ºò¡£ºÚÄ§·¨Ê¦µÄÆøÏ¢Ô½À´Ô½½ü£¡ËÆºõËûÃÇÒÑ¾­²ì¾õ·½ÖÛµÄÎ»ÖÃ£¬µÃ¸Ï½ôÆôº½£¬²»È»¾ÍÀ´²»¼°ÁË£¡");
-    } else if (status == 4) {
-        qm.sendNextPrevS("Á¢¿Ì³ö·¢£¡", 3);
-    } else if (status == 5) {
-        qm.sendNextPrev("Õ½Éñ£¡ÇëÄãÒ²ÉÏ´¬°É£¡ÎÒÃÇÀí½âÄã¿ÊÍûÕ½¶·µÄĞÄÇé¡­¡­²»¹ı£¬ÏÖÔÚÒÑ¾­ÍíÁË£¡Õ½¶·¾Í½»¸øÄãµÄÄÇĞ©Í¬°é°É£¬ºÍÎÒÃÇÒ»ÆğÈ¥½ğÒøµº°É£¡");
-    } else if (status == 6) {
-        qm.sendNextPrevS("²»ĞĞ£¡", 3);
-    } else if (status == 7) {
-        qm.sendNextPrevS("ºÕÀöÄÈ£¬ÄãÏÈ³ö·¢È¥½ğÒøµº¡£Ò»¶¨Òª»î×Å£¬ÎÒÃÇÒ»¶¨»áÔÙ¼ûµÄ¡£ÎÒÒªºÍÍ¬°éÃÇÒ»ÆğÍ¬ºÚÄ§·¨Ê¦Õ½¶·£¡", 3);
-    } else if (status == 8) {
-        qm.sendYesNo("Would you like to skip the video clip?  Even if you skip the scene, game play will not be affected.");
-    } else if (status == 9) { // Not watching
-        if (qm.haveItem(4001271)) {
-            qm.gainItem(4001271, -1);
-        }
-        qm.forceCompleteQuest();
-        qm.warp(140090000, 0);
+	if (mode == -1) {
+	qm.sendNext("å­©å­æ€ä¹ˆæ ·ï¼Ÿè¯·ç»™æˆ‘çš„å­©å­ã€‚");
         qm.dispose();
-    }
+    } else {
+        if (mode == 1)
+            status++;
+        else
+            status--;
+		if (status == 0)
+			qm.sendYesNo("å‘µå‘µï¼Œå¹³å®‰å›æ¥äº†ï¼Ÿå­©å­å‘¢ï¼Ÿå­©å­ä¹Ÿå¸¦å›æ¥äº†å—ï¼Ÿ");
+		else if (status == 1) {
+			qm.gainItem(4001271, -1);
+			qm.completeQuest();
+			qm.sendNext("å¤ªå¥½äº†â€¦â€¦çœŸæ˜¯å¤ªå¥½äº†ã€‚", 9);
+		} else if (status == 2)
+			qm.sendNextPrev("èµ¶å¿«ä¸Šèˆ¹ï¼å·²ç»æ²¡æ—¶é—´äº†ï¼", 3);
+		else if (status == 3)
+			qm.sendNextPrev("æ²¡é”™ã€‚ç°åœ¨ä¸æ˜¯æ„Ÿä¼¤çš„æ—¶å€™ã€‚é»‘é­”æ³•å¸ˆçš„æ°”æ¯è¶Šæ¥è¶Šè¿‘ï¼ä¼¼ä¹ä»–ä»¬å·²ç»å¯Ÿè§‰æ–¹èˆŸçš„ä½ç½®ï¼Œå¾—èµ¶ç´§å¯èˆªï¼Œä¸ç„¶å°±æ¥ä¸åŠäº†ï¼", 9);
+		else if (status == 4)
+			qm.sendNextPrev("ç«‹åˆ»å‡ºå‘ï¼", 3);
+		else if (status == 5)
+			qm.sendNextPrev("æˆ˜ç¥ï¼è¯·ä½ ä¹Ÿä¸Šèˆ¹å§ï¼æˆ‘ä»¬ç†è§£ä½ æ¸´æœ›æˆ˜æ–—çš„å¿ƒæƒ…â€¦â€¦ä¸è¿‡ï¼Œç°åœ¨å·²ç»æ™šäº†ï¼æˆ˜æ–—å°±äº¤ç»™ä½ çš„é‚£äº›åŒä¼´å§ï¼Œå’Œæˆ‘ä»¬ä¸€èµ·å»é‡‘é“¶å²›å§ï¼", 9);
+		else if (status == 6)
+			qm.sendNextPrev("ä¸è¡Œï¼", 3);
+		else if (status == 7) {
+			qm.sendNextPrev("èµ«ä¸½å¨œï¼Œä½ å…ˆå‡ºå‘å»é‡‘é“¶å²›ã€‚ä¸€å®šè¦æ´»ç€ï¼Œæˆ‘ä»¬ä¸€å®šä¼šå†è§çš„ã€‚æˆ‘è¦å’ŒåŒä¼´ä»¬ä¸€èµ·åŒé»‘é­”æ³•å¸ˆæˆ˜æ–—ï¼", 3);
+		} else if (status == 8) {
+			qm.clearAranPolearm();
+			qm.warp(914090010); // Initialize Aran Tutorial Scenes
+			qm.dispose();
+		}
+	}
 }

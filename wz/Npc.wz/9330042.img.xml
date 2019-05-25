@@ -80,13 +80,13 @@
             <int name="z" value="0"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="0" value="0"/>
+        <uol name="6" value="0"/>
         <canvas name="7" width="59" height="66">
             <vector name="origin" x="29" y="66"/>
             <int name="z" value="0"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="0" value="0"/>
+        <uol name="8" value="0"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

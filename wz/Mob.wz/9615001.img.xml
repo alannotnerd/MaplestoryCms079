@@ -166,22 +166,22 @@
             <int name="magic" value="1"/>
             <string name="elemAttr" value="L"/>
         </imgdir>
-        <uol name="../fly/0" value="../fly/0"/>
-        <uol name="../fly/1" value="../fly/1"/>
-        <uol name="../fly/2" value="../fly/2"/>
-        <uol name="../fly/3" value="../fly/3"/>
-        <uol name="../fly/4" value="../fly/4"/>
-        <uol name="../fly/5" value="../fly/5"/>
-        <uol name="../fly/6" value="../fly/6"/>
-        <uol name="../fly/7" value="../fly/7"/>
-        <uol name="../fly/0" value="../fly/0"/>
-        <uol name="../fly/1" value="../fly/1"/>
-        <uol name="../fly/2" value="../fly/2"/>
-        <uol name="../fly/3" value="../fly/3"/>
-        <uol name="../fly/4" value="../fly/4"/>
-        <uol name="../fly/5" value="../fly/5"/>
-        <uol name="../fly/6" value="../fly/6"/>
-        <uol name="../fly/7" value="../fly/7"/>
+        <uol name="0" value="../fly/0"/>
+        <uol name="1" value="../fly/1"/>
+        <uol name="2" value="../fly/2"/>
+        <uol name="3" value="../fly/3"/>
+        <uol name="4" value="../fly/4"/>
+        <uol name="5" value="../fly/5"/>
+        <uol name="6" value="../fly/6"/>
+        <uol name="7" value="../fly/7"/>
+        <uol name="8" value="../fly/0"/>
+        <uol name="9" value="../fly/1"/>
+        <uol name="10" value="../fly/2"/>
+        <uol name="11" value="../fly/3"/>
+        <uol name="12" value="../fly/4"/>
+        <uol name="13" value="../fly/5"/>
+        <uol name="14" value="../fly/6"/>
+        <uol name="15" value="../fly/7"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="179" height="202">

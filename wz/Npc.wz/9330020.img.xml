@@ -48,15 +48,15 @@
             <int name="z" value="0"/>
             <int name="delay" value="160"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="2"/>
         <canvas name="5" width="57" height="69">
             <vector name="origin" x="29" y="69"/>
             <int name="z" value="0"/>
             <int name="delay" value="160"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="5" value="5"/>
+        <uol name="6" value="1"/>
+        <uol name="7" value="5"/>
     </imgdir>
     <imgdir name="action">
         <canvas name="0" width="57" height="69">
@@ -74,7 +74,7 @@
             <int name="z" value="0"/>
             <int name="delay" value="160"/>
         </canvas>
-        <uol name="2" value="2"/>
+        <uol name="3" value="2"/>
         <canvas name="4" width="57" height="69">
             <vector name="origin" x="31" y="69"/>
             <int name="z" value="0"/>
@@ -100,13 +100,13 @@
             <int name="z" value="0"/>
             <int name="delay" value="160"/>
         </canvas>
-        <uol name="4" value="4"/>
+        <uol name="9" value="4"/>
         <canvas name="10" width="57" height="69">
             <vector name="origin" x="31" y="69"/>
             <int name="z" value="0"/>
             <int name="delay" value="160"/>
         </canvas>
-        <uol name="10" value="10"/>
+        <uol name="11" value="10"/>
         <canvas name="12" width="57" height="69">
             <vector name="origin" x="29" y="69"/>
             <int name="z" value="0"/>

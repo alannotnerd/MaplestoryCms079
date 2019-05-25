@@ -1653,13 +1653,13 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="stand">
-                    <uol name="../move/0" value="../move/0"/>
-                    <uol name="../move/1" value="../move/1"/>
-                    <uol name="../move/2" value="../move/2"/>
-                    <uol name="../move/3" value="../move/3"/>
-                    <uol name="../move/4" value="../move/4"/>
-                    <uol name="../move/5" value="../move/5"/>
-                    <uol name="../move/6" value="../move/6"/>
+                    <uol name="0" value="../move/0"/>
+                    <uol name="1" value="../move/1"/>
+                    <uol name="2" value="../move/2"/>
+                    <uol name="3" value="../move/3"/>
+                    <uol name="4" value="../move/4"/>
+                    <uol name="5" value="../move/5"/>
+                    <uol name="6" value="../move/6"/>
                 </imgdir>
                 <imgdir name="say">
                     <canvas name="0" width="41" height="33">
@@ -1704,13 +1704,13 @@
                         <vector name="lt" x="-17" y="-64"/>
                         <vector name="rb" x="21" y="-31"/>
                     </canvas>
-                    <uol name="0" value="0"/>
-                    <uol name="1" value="1"/>
-                    <uol name="2" value="2"/>
-                    <uol name="3" value="3"/>
-                    <uol name="4" value="4"/>
-                    <uol name="5" value="5"/>
-                    <uol name="6" value="6"/>
+                    <uol name="7" value="0"/>
+                    <uol name="8" value="1"/>
+                    <uol name="9" value="2"/>
+                    <uol name="10" value="3"/>
+                    <uol name="11" value="4"/>
+                    <uol name="12" value="5"/>
+                    <uol name="13" value="6"/>
                 </imgdir>
                 <imgdir name="die">
                     <canvas name="0" width="63" height="64">

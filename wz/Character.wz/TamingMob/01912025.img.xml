@@ -9,11 +9,10 @@
         </canvas>
         <string name="islot" value="Sd"/>
         <string name="vslot" value="Sd"/>
+        <int name="pachinko" value="1"/>
+        <int name="timeLimited" value="1"/>
+        <int name="slotMax" value="1"/>
         <int name="tradeBlock" value="1"/>
-        <int name="tuc" value="0"/>
-        <int name="reqLevel" value="0"/>
-        <int name="only" value="0"/>
-        <int name="notSale" value="1"/>
     </imgdir>
     <imgdir name="1902032">
         <imgdir name="stand1">
@@ -38,94 +37,94 @@
                 </canvas>
             </imgdir>
             <imgdir name="2">
-                <uol name="../1/0" value="../1/0"/>
-                <uol name="../1/1" value="../1/1"/>
+                <uol name="0" value="../1/0"/>
+                <uol name="1" value="../1/1"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../1/0" value="../1/0"/>
-                <uol name="../1/1" value="../1/1"/>
+                <uol name="0" value="../1/0"/>
+                <uol name="1" value="../1/1"/>
             </imgdir>
             <imgdir name="4">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="5">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="6">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="7">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="8">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="9">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="10">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="11">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
         </imgdir>
         <imgdir name="stand2">
             <imgdir name="0">
-                <uol name="../../stand1/0/0" value="../../stand1/0/0"/>
-                <uol name="../../stand1/0/1" value="../../stand1/0/1"/>
+                <uol name="0" value="../../stand1/0/0"/>
+                <uol name="1" value="../../stand1/0/1"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../stand1/1/0" value="../../stand1/1/0"/>
-                <uol name="../../stand1/1/1" value="../../stand1/1/1"/>
+                <uol name="0" value="../../stand1/1/0"/>
+                <uol name="1" value="../../stand1/1/1"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../../stand1/2/0" value="../../stand1/2/0"/>
-                <uol name="../../stand1/2/1" value="../../stand1/2/1"/>
+                <uol name="0" value="../../stand1/2/0"/>
+                <uol name="1" value="../../stand1/2/1"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../../stand1/3/0" value="../../stand1/3/0"/>
-                <uol name="../../stand1/3/1" value="../../stand1/3/1"/>
+                <uol name="0" value="../../stand1/3/0"/>
+                <uol name="1" value="../../stand1/3/1"/>
             </imgdir>
             <imgdir name="4">
-                <uol name="../../stand1/4/0" value="../../stand1/4/0"/>
-                <uol name="../../stand1/4/1" value="../../stand1/4/1"/>
+                <uol name="0" value="../../stand1/4/0"/>
+                <uol name="1" value="../../stand1/4/1"/>
             </imgdir>
             <imgdir name="5">
-                <uol name="../../stand1/5/0" value="../../stand1/5/0"/>
-                <uol name="../../stand1/5/1" value="../../stand1/5/1"/>
+                <uol name="0" value="../../stand1/5/0"/>
+                <uol name="1" value="../../stand1/5/1"/>
             </imgdir>
             <imgdir name="6">
-                <uol name="../../stand1/6/0" value="../../stand1/6/0"/>
-                <uol name="../../stand1/6/1" value="../../stand1/6/1"/>
+                <uol name="0" value="../../stand1/6/0"/>
+                <uol name="1" value="../../stand1/6/1"/>
             </imgdir>
             <imgdir name="7">
-                <uol name="../../stand1/7/0" value="../../stand1/7/0"/>
-                <uol name="../../stand1/7/1" value="../../stand1/7/1"/>
+                <uol name="0" value="../../stand1/7/0"/>
+                <uol name="1" value="../../stand1/7/1"/>
             </imgdir>
             <imgdir name="8">
-                <uol name="../../stand1/8/0" value="../../stand1/8/0"/>
-                <uol name="../../stand1/8/1" value="../../stand1/8/1"/>
+                <uol name="0" value="../../stand1/8/0"/>
+                <uol name="1" value="../../stand1/8/1"/>
             </imgdir>
             <imgdir name="9">
-                <uol name="../../stand1/9/0" value="../../stand1/9/0"/>
-                <uol name="../../stand1/9/1" value="../../stand1/9/1"/>
+                <uol name="0" value="../../stand1/9/0"/>
+                <uol name="1" value="../../stand1/9/1"/>
             </imgdir>
             <imgdir name="10">
-                <uol name="../../stand1/10/0" value="../../stand1/10/0"/>
-                <uol name="../../stand1/10/1" value="../../stand1/10/1"/>
+                <uol name="0" value="../../stand1/10/0"/>
+                <uol name="1" value="../../stand1/10/1"/>
             </imgdir>
             <imgdir name="11">
-                <uol name="../../stand1/11/0" value="../../stand1/11/0"/>
-                <uol name="../../stand1/11/1" value="../../stand1/11/1"/>
+                <uol name="0" value="../../stand1/11/0"/>
+                <uol name="1" value="../../stand1/11/1"/>
             </imgdir>
         </imgdir>
         <imgdir name="walk1">
@@ -172,20 +171,20 @@
         </imgdir>
         <imgdir name="walk2">
             <imgdir name="0">
-                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
-                <uol name="../../walk1/0/1" value="../../walk1/0/1"/>
+                <uol name="0" value="../../walk1/0/0"/>
+                <uol name="1" value="../../walk1/0/1"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../walk1/1/0" value="../../walk1/1/0"/>
-                <uol name="../../walk1/1/1" value="../../walk1/1/1"/>
+                <uol name="0" value="../../walk1/1/0"/>
+                <uol name="1" value="../../walk1/1/1"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../../walk1/2/0" value="../../walk1/2/0"/>
-                <uol name="../../walk1/2/1" value="../../walk1/2/1"/>
+                <uol name="0" value="../../walk1/2/0"/>
+                <uol name="1" value="../../walk1/2/1"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../../walk1/3/0" value="../../walk1/3/0"/>
-                <uol name="../../walk1/3/1" value="../../walk1/3/1"/>
+                <uol name="0" value="../../walk1/3/0"/>
+                <uol name="1" value="../../walk1/3/1"/>
             </imgdir>
         </imgdir>
         <imgdir name="tired">
@@ -200,32 +199,32 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="4">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="5">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="6">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="7">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
         </imgdir>
         <imgdir name="jump">
@@ -252,16 +251,16 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../0/0" value="../0/0"/>
-                <uol name="../0/1" value="../0/1"/>
+                <uol name="0" value="../0/0"/>
+                <uol name="1" value="../0/1"/>
             </imgdir>
         </imgdir>
         <imgdir name="ladder">
@@ -280,10 +279,10 @@
         </imgdir>
         <imgdir name="rope">
             <imgdir name="0">
-                <uol name="../../ladder/0/0" value="../../ladder/0/0"/>
+                <uol name="0" value="../../ladder/0/0"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../ladder/1/0" value="../../ladder/1/0"/>
+                <uol name="0" value="../../ladder/1/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="fly">

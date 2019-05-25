@@ -17,7 +17,7 @@ function start(mode, type, selection) {
 	qm.sendNext("I have just molded your body to make it perfect. If you wish to become more powerful, use Stat Window (S) to raise the appropriate stats. If you arn't sure what to raise, just click on #bAuto#k.");
 	if (qm.getJob() == 3211) {
 	    qm.changeJob(3212);
-	    qm.forceCompleteQuest();
+	    qm.completeQuest();
 	}
     } else if (status == 2) {
 	qm.sendNextPrev("Now... I want you to go out there and show the world how the Resistance operate.");
@@ -42,7 +42,7 @@ function end(mode, type, selection) {
 	qm.sendNext("I have just molded your body to make it perfect. If you wish to become more powerful, use Stat Window (S) to raise the appropriate stats. If you arn't sure what to raise, just click on #bAuto#k.");
 	if (qm.getJob() == 3211) {
 	    qm.changeJob(3212);
-	    qm.forceCompleteQuest();
+	    qm.completeQuest();
 	}
     } else if (status == 2) {
 	qm.sendNextPrev("Now... I want you to go out there and show the world how the Resistance operate.");

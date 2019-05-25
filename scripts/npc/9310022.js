@@ -1,166 +1,106 @@
-
-var status = 0;
-var random = java.lang.Math.floor(Math.random() * 4);
-var ca = java.util.Calendar.getInstance();
-var day3 = ca.get(java.util.Calendar.DATE);//��ȡ��
-var day = ca.get(java.util.Calendar.DATE);//��ȡ��
-var day1 = ca.get(java.util.Calendar.YEAR);//��ȡ��
-var day2 = ca.get(java.util.Calendar.MONTH)+1;//��ȡ��
-//var day2 = ca.get(java.util.Calendar.HOUR_OF_DAY);//��ȡ��
-var eff = "#fUI/UIWindowBT.img/WorldMap/BtNext/mouseOver/0#";
-var eff1 = "#fEffect/CharacterEff/1112905/0/1#";
-var eff4 = "#fUI/Basic/BtHide3/mouseOver/0#";
-var bbb = "#fUI/UIWindow.img/Shop/meso#";
-var fff ="#fUI/UIWindow.img/Quest/icon6/0#";
-var aaa ="#fUI/Login.img/WorldNotice/2/0#";
-var ttt ="#fUI/UIWindow.img/Quest/icon7/0#";
-var kkk6 ="#fEffect/ItemEff/1004125/effect/default/0#";
-var kkk5 ="#fEffect/ItemEff/1102672/effect/swingP1/0#";
-var kkk4 ="#fEffect/ItemEff/1102617/effect/shoot2/0#";
-var kkk3 ="#fEffect/Tomb/condition1/land/0#";
-var kkk99 ="#fEffect/ItemEff/2420004/1/0#";
-var kkk2 ="#fEffect/CharacterEff/moveRandomSprayEff/DAShieldChasing/effect/3/0#";
-var kkk1 ="#fEffect/CharacterEff/moveRandomSprayEff/chillingStep/effect/0/0#";
-var kkk ="#fEffect/CharacterEff/1051296/1/0#";
-var zzz ="#fUI/UIWindow.img/Quest/icon5/0#";
-var yyy ="#fUI/UIWindow2.img/QuestAlarm/BtQ/normal/0#";
-var rrr ="#fUI/UIWindow2.img/Quest/list/recommendTitle#";
-var ccc ="#fUI/UIWindowBT.img/WorldMap/BtHome/normal/0#";
-var hhh ="#fUI/UIWindowBT.img/WorldMap/BtQsearch/mouseOver/0#";
-var sz1 ="#fEffect/BasicEff/MainNotice/Content/Number/1/0#";
-var kkk ="#fEffect/CharacterEff/1051294/2/0#";
-var kkk8 ="#fEffect/CharacterEff/farmEnterTuto/mouseClick/3#";
-var uiq ="#fEffect/CharacterEff/1082565/2/0#";
-var uiq1 ="#fEffect/CharacterEff/1082565/1/0#";
-var uiq2 ="#fEffect/CharacterEff/1082565/4/0#";
-var uiq3 ="#fEffect/CharacterEff/1082565/0/0#";
-
-var e1 = "#fUI/Basic/BtHide3/mouseOver/0#";
-var e2 = "#fUI/UIWindow.img/Shop/meso#";
-var e3 ="#fUI/UIWindow.img/Quest/icon6/0#";
-var e4 ="#fUI/Login.img/WorldNotice/2/0#";
-var e5 ="#fUI/UIWindow.img/Quest/icon7/0#";
-var e6 ="#fEffect/ItemEff/1004125/effect/default/0#";
-var e7 ="#fEffect/ItemEff/1102672/effect/swingP1/0#";
-var e8 ="#fEffect/ItemEff/1102617/effect/shoot2/0#";
-var e9 ="#fEffect/Tomb/condition1/land/0#";
-var e10 ="#fEffect/CharacterEff/moveRandomSprayEff/DAShieldChasing/effect/3/0#";
-var e11 ="#fEffect/CharacterEff/moveRandomSprayEff/chillingStep/effect/0/0#";
-//var kkk ="#fEffect/CharacterEff/1051296/1/0#";
-var e12 ="#fUI/UIWindow.img/Quest/icon5/0#";
-var e13 ="#fUI/UIWindow2.img/QuestAlarm/BtQ/normal/0#";
-var e14 ="#fUI/UIWindow2.img/Quest/list/recommendTitle#";
-var e15 ="#fUI/UIWindowBT.img/WorldMap/BtHome/normal/0#";
-var e16 ="#fUI/UIWindowBT.img/WorldMap/BtQsearch/mouseOver/0#";
-var e17 ="#fEffect/BasicEff/MainNotice/Content/Number/1/0#";
-var e18 ="#fEffect/CharacterEff/1051294/2/0#";
-var e19 ="#fEffect/CharacterEff/farmEnterTuto/mouseClick/3#";
-var e20 = "#fUI/UIWindow.img/PvP/Scroll/enabled/next2#";
-var e21 ="#fEffect/ItemEff/1112823/0/2#";
-var e22 ="#fEffect/ItemEff/1004122/effect/default/14#";
-var e23 ="#fEffect/ItemEff/1004122/effect/default/13#";
-
 function start() {
-    status = -1;
-    action(1, 0, 0);
-}
+status = -1;
 
+action(1, 0, 0);
+}
 function action(mode, type, selection) {
-    if (status == 0 && mode == 0) {
-        cm.dispose();
-        return;
-    }
-    if (mode == 1) {
-        status++;
+            if (mode == -1) {
+                cm.dispose();
+            }
+            else {
+                if (status >= 0 && mode == 0) {
+                
+   cm.sendOk("感谢你的光临！");
+   cm.dispose();
+   return;                    
+                }
+                if (mode == 1) {
+   status++;
+  }
+  else {
+   status--;
+  }
+          if (status == 0) {
+   cm.sendSimple("★★★★★★★★★★★★★★★★★★★★★★★★★★★\r\n★您好，欢迎来到冒险岛的世界，我是便民服务员，您有什★★么需要懂可以通过点击界面上的拍卖，来找到我。使用我★★的功能可不是免费的哦，需要象征性的给点小费哦      ★★#n#d剩余:#r" + cm.getzb() + "元宝   #d闯关积分 :#r" + cm.getboss() + " 分                #k★\r\n★★★★★★★★★★★★★★★★★★★★★★★★★★★\r\n#r#L6#进入拉斯维加斯赌场#l")
+    } else if (status == 1) {
+           if (selection == 0) {
+      cm.sendOk("充值网站：www.jqmxd.cn\r\n\r\n即时您不充值，也可在自由市场4洞5洞通过打怪来获得元宝。有了大家支持我们才能把游戏做的更好\r\n#r#b本站唯一管理：亲亲嘴冒险岛\r\n#r希望大家不要使用和管理员类似的名字，否则可能会被删号处理，谢谢合作");
+            cm.dispose();
+    }else if  (selection == 1) {
+           if(cm.getzb() >= 40) {
+            cm.setzb(-40);
+           cm.openNpc(9310057);
+
     } else {
-        status--;
-    }
-    if (status == 0) {
-	var v = getVIP(cm);
-	var selStr = "�𾴵����#r#h ##k����\r\n#k#n\r\n#L12##bս��תְ#L13##b����תְ\r\n";
-	cm.sendSimple(selStr);
-    } else if(status == 1) {
-	switch (selection){
-	case 11:
-		if (cm.getPlayer().getMapId() >= 910000000 && cm.getPlayer().getMapId() <= 910000022)
-			cm.sendOk("�㲻�����������г�����ȥ�Ķ���");
-		else
-			cm.warp(910000000);
-		cm.dispose();
-		break;
-	case 12:
-		cm.dispose();
-		cm.openNpc(9310022, 1);
-		break;
-	case 13:
-		cm.dispose();
-		cm.openNpc(9310022, 2);
-		break;
-	case 14:
-		cm.dispose();
-		cm.openNpc(9310022, 3);
-		break;
-	case 15:
-		cm.dispose();
-		cm.openNpc(9310022, 4);//cm.sendOk("#r��������ʹ�ô˹���...");
-		break;
-	case 16:
-		cm.dispose();
-		cm.openNpc(9310022, 5);
-		break;
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
+}
+    }else if  (selection == 2) {
+           if(cm.getzb() >= 20) {
+           cm.setzb(-20);
+           cm.openNpc(9310059);
 
-	case 17:
-        	cm.dispose();
-        	cm.openNpc(9310022, 6);
-        	break;
-	case 22:
-        	cm.dispose();
-        	cm.openNpc(9201059);
-        	break;
+    } else {
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
+}
+       }else if  (selection == 3) {
+           if(cm.getzb() >= 30) {
+           cm.setzb(-30);
+           cm.openNpc(9000018); 
+    } else {
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
+}
+       }else if  (selection == 4) {
+           if(cm.getzb() >= 40) {
+           cm.setzb(-40);
+           cm.openNpc(9030100); 
+    } else {
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
 
-	case 31:
-        	cm.dispose();
-        	cm.openNpc(1203001);
-        	break;
-	case 32:
-	case 33:
-	case 41:
-        	cm.dispose();
-		cm.openNpc(9900004,selection);
-        	break;
-	case 36:
-		for (var i = -1;i <= 6;i++){
-			//cm.getPlayer().dropMessage(i, "����" + i);
-		}
-		cm.dispose();
-		break;
-	case 46:
-		cm.sendOk(cm.getPlayer().getMapId());
-		cm.dispose();
-		break;
-	default:
-		cm.sendOk("default");
-		cm.dispose();
-		break;
-	}
+}
+       }else if  (selection == 5) {
+           if(cm.getzb() >= 40) {
+           cm.setzb(-40);
+           cm.openNpc(1300005); 
+    } else {
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
 
-    }
+}
+       }else if  (selection == 6) {
+           cm.warp(809030000); 
+           cm.dispose(); 
+
+
+
+       }else if  (selection == 7) {
+           if(cm.getzb() >= 10) {
+           cm.setzb(-10);
+           cm.openNpc(1012105);
+           cm.dispose(); 
+    } else {
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
+
+}
+       }else if  (selection == 8) {
+           if(cm.getzb() >= 10) {
+           cm.setzb(-10);
+           cm.openNpc(1012103);
+           cm.dispose(); 
+    } else {
+           cm.sendOk("#e您的余额已不足！请及时充值！"); 
+           cm.dispose(); 
+
+
+
+}
+}      
+}
+}
 }
 
-//���VIP�ȼ�
-function getVIP(cm){
-	var v_p = 4031331;
-	for (var i = 7;i >= 1;i--){
-		if (cm.itemQuantity(v_p + i)!=0) return i;
-	}
-	return 0;
-}
 
-//�����ȼ�
-function getFSdj(cm){
-	var f_p = 4032516;
-	for (var i = 4;i >= 1;i--){
-		if (cm.itemQuantity(f_p + i)!=0) return i;
-	}
-	return 0;
-}

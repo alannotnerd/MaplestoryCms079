@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Minister of Home Affairs
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  Ô½¹ı³ÇÇ½(2)
+	Description: 	Quest -  è¶Šè¿‡åŸå¢™(2)
 */
 
 importPackage(Packages.client);
@@ -15,15 +15,15 @@ function start(mode, type, selection) {
         if (type == 1 && mode == 0) {
             status -= 2;
         } else {
-            qm.sendNext("ÎÒÃÇĞèÒªÄãµÄ°ïÖú¡£");
+            qm.sendNext("æˆ‘ä»¬éœ€è¦ä½ çš„å¸®åŠ©ã€‚");
             qm.dispose();
             return;
         }
     }
     if (status == 0) {
-        qm.sendYesNo("¾ÍÏñÎÒ¸Õ²Å¸æËßÄãµÄÒ»Ñù£¬¸Õ¸Õ´òÆÆµÄÕÏ°­²»ÖµµÃÇì×££¬ÕâÊÇÒòÎªÆó¶ìÍõ¹ú½ûÖ¹ÈÃËùÓĞÈË½øÈë³Ç±¤£¬àÅ¡£¡£µÃÕÒ³öÁíÍâÒ»ÖÖÇ±Èë·½Ê½¡£");
+        qm.sendYesNo("å°±åƒæˆ‘åˆšæ‰å‘Šè¯‰ä½ çš„ä¸€æ ·ï¼Œåˆšåˆšæ‰“ç ´çš„éšœç¢ä¸å€¼å¾—åº†ç¥ï¼Œè¿™æ˜¯å› ä¸ºä¼é¹…ç‹å›½ç¦æ­¢è®©æ‰€æœ‰äººè¿›å…¥åŸå ¡ï¼Œå—¯ã€‚ã€‚å¾—æ‰¾å‡ºå¦å¤–ä¸€ç§æ½œå…¥æ–¹å¼ã€‚");
     } else if (status == 1) {
-        qm.sendNext("Â·¹ıÄ¢¹½É­ÁÖ£¬µ±Äãµ½ÆÁÕÏµÄÊ±ºò£¬¾Í¿ÉÒÔ×ß½ø³ÇÇ½ÁË£¬×£ÄãºÃÔË¡£");
+        qm.sendNext("è·¯è¿‡è˜‘è‡æ£®æ—ï¼Œå½“ä½ åˆ°å±éšœçš„æ—¶å€™ï¼Œå°±å¯ä»¥èµ°è¿›åŸå¢™äº†ï¼Œç¥ä½ å¥½è¿ã€‚");
     } else if (status == 2) {
         qm.forceStartQuest();
         qm.dispose();
@@ -41,11 +41,11 @@ function end(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendOk("àÅ¡£¡£¿ÉÄÜËûÃÇÒÑ¾­¹Ø±Õ´óÃÅ¡£");
+        qm.sendOk("å—¯ã€‚ã€‚å¯èƒ½ä»–ä»¬å·²ç»å…³é—­å¤§é—¨ã€‚");
     } else if (status == 1) {
         qm.gainExp(11000);
-        qm.sendOk("¸ÉµÃºÃ£¬Ì«Ğ»Ğ»ÄãÁË¡£");
-        qm.forceCompleteQuest();
+        qm.sendOk("å¹²å¾—å¥½ï¼Œå¤ªè°¢è°¢ä½ äº†ã€‚");
+        qm.completeQuest();
         qm.dispose();
     }
 }

@@ -23,7 +23,7 @@
             <string name="id" value="9300014"/>
             <int name="x" value="-669"/>
             <int name="y" value="189"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="46"/>
@@ -36,7 +36,7 @@
             <string name="id" value="9300014"/>
             <int name="x" value="-669"/>
             <int name="y" value="189"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="46"/>

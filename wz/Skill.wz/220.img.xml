@@ -1427,8 +1427,8 @@
                         <vector name="origin" x="36" y="200"/>
                         <int name="delay" value="70"/>
                     </canvas>
-                    <uol name="1" value="1"/>
-                    <uol name="2" value="2"/>
+                    <uol name="7" value="1"/>
+                    <uol name="8" value="2"/>
                 </imgdir>
             </imgdir>
         </imgdir>

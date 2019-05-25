@@ -1,8 +1,19 @@
-//SPECIAL: TODO LEGENDS
+/**
+-- Krypto JavaScript ------------------------------------------------------------------------------
+	Free Market Portal
+-- By ---------------------------------------------------------------------------------------------
+	Xterminator
+-- Description ------------------------------------------------------------------------------------
+	From Nautilus to Free Market
+-- Version Info -----------------------------------------------------------------------------------
+	1.0 - First Version by Xterminator
+-- Additional Comments ----------------------------------------------------------------------------
+	None
+---------------------------------------------------------------------------------------------------
+**/
+
 function enter(pi) {
-    if (pi.getMapId() == 120000200 && pi.getPortal().getName().equals("bi01")) {
-        pi.warp(pi.isQuestFinished(2568) ? 912060500 : 120000202, 0);
-    } else {
-        pi.inFreeMarket();
-    }
+	pi.getPlayer().saveLocation("FREE_MARKET");
+	pi.warp(910000000, "st00");
+	return true;
 }

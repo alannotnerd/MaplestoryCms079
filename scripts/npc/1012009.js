@@ -1,9 +1,8 @@
-/*
-	NPC Name: 		Mr. Lee
-	Map(s): 		Victoria Road : Henesys (100000000)
-	Description: 		Storage
-*/
 function start() {
-	cm.sendStorage();
+	cm.getPlayer().getStorage().sendStorage(cm.getC(), 1012009);
 	cm.dispose();
+}
+
+function action(mode, type, selection) {
+	
 }

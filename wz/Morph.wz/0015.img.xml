@@ -69,10 +69,10 @@
             <vector name="origin" x="22" y="85"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
     </imgdir>
     <imgdir name="prone">
         <canvas name="0" width="47" height="88">
@@ -101,10 +101,10 @@
             <vector name="origin" x="22" y="85"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
     </imgdir>
     <imgdir name="fly">
         <canvas name="0" width="47" height="88">

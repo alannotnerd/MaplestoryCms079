@@ -32,8 +32,8 @@
             <vector name="origin" x="46" y="112"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="3" value="3"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
+        <uol name="5" value="3"/>
+        <uol name="6" value="2"/>
+        <uol name="7" value="1"/>
     </imgdir>
 </imgdir>

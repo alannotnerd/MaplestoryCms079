@@ -179,18 +179,18 @@
                 </imgdir>
             </imgdir>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="3"/>
+        <uol name="10" value="4"/>
+        <uol name="11" value="5"/>
+        <uol name="12" value="0"/>
+        <uol name="13" value="1"/>
+        <uol name="14" value="2"/>
+        <uol name="15" value="0"/>
+        <uol name="16" value="1"/>
+        <uol name="17" value="2"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="77" height="73">
@@ -412,11 +412,11 @@
                 </imgdir>
             </imgdir>
         </canvas>
-        <uol name="../move/0" value="../move/0"/>
-        <uol name="../move/1" value="../move/1"/>
-        <uol name="../move/2" value="../move/2"/>
-        <uol name="../move/3" value="../move/3"/>
-        <uol name="../move/4" value="../move/4"/>
-        <uol name="../move/5" value="../move/5"/>
+        <uol name="11" value="../move/0"/>
+        <uol name="12" value="../move/1"/>
+        <uol name="13" value="../move/2"/>
+        <uol name="14" value="../move/3"/>
+        <uol name="15" value="../move/4"/>
+        <uol name="16" value="../move/5"/>
     </imgdir>
 </imgdir>

@@ -728,8 +728,8 @@
             <vector name="rb" x="18" y="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
     </imgdir>
     <imgdir name="stand1">
         <canvas name="0" width="46" height="35">
@@ -744,9 +744,9 @@
             <vector name="rb" x="18" y="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
     </imgdir>
     <imgdir name="rest0">
         <canvas name="0" width="43" height="37">
@@ -767,7 +767,7 @@
             <vector name="rb" x="20" y="1"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
     </imgdir>
     <imgdir name="move">
         <canvas name="0" width="46" height="35">
@@ -808,7 +808,7 @@
             <vector name="rb" x="20" y="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
     </imgdir>
     <imgdir name="cry">
         <canvas name="0" width="43" height="37">
@@ -857,20 +857,20 @@
             <vector name="rb" x="18" y="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="0"/>
+        <uol name="9" value="1"/>
+        <uol name="10" value="0"/>
+        <uol name="11" value="1"/>
+        <uol name="12" value="0"/>
+        <uol name="13" value="1"/>
+        <uol name="14" value="0"/>
+        <uol name="15" value="1"/>
     </imgdir>
     <imgdir name="eat">
         <canvas name="0" width="43" height="37">
@@ -885,8 +885,8 @@
             <vector name="rb" x="20" y="0"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
     </imgdir>
     <imgdir name="sleep">
         <canvas name="0" width="46" height="38">

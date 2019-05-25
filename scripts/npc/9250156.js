@@ -1,18 +1,10 @@
-var status = -1;
+function start() {
+	cm.sendYesNo("Would you like to get out?");
+}
 
 function action(mode, type, selection) {
     if (mode == 1) {
-	status++;
-    } else {
-	if (status == 0) {
-	    cm.dispose();
-	}
-	status--;
+	cm.warp(682020000,0);
     }
-    if (status == 0) {
-	cm.sendYesNo("Would you like to get out?");
-    } else if (status == 1) {
-	cm.warp(980010000,0);
-	cm.dispose();
-    }
+    cm.dispose();
 }

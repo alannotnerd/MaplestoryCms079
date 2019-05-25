@@ -5,7 +5,7 @@ function start(mode, type, selection) {
         qm.sendNext("Please make some space..");
     } else {
         qm.gainItem(4031894, 1);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }
@@ -14,7 +14,7 @@ function end(mode, type, selection) {
         qm.sendNext("Please make some space..");
     } else {
         qm.gainItem(4031894, 1);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }

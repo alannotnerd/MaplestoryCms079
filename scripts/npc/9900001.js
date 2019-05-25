@@ -1,99 +1,568 @@
-/** Author: nejevoli
- NPC Name: 		NimaKin
- Map(s): 		Victoria Road : Ellinia (180000000)
- Description: 		Maxes out your stats and able to modify your equipment stats
- */
-importPackage(java.lang);
+/*
+	This file is part of the cherry Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
+                       Matthias Butz <matze@cherry.de>
+                       Jan Christian Meyer <vimes@cherry.de>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License version 3
+    as published by the Free Software Foundation. You may not use, modify
+    or distribute this program under any other version of the
+    GNU Affero General Public License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/** Author: Xterminator
+	NPC Name: 		NimaKin
+	Map(s): 		Victoria Road : Ellinia (180000000)
+	Description: 		Maxes out your stats and able to modify your equipment stats
+*/
+importPackage(net.sf.cherry.client);
+importPackage(net.sf.cherry.tools);
 
 var status = 0;
 var slot = Array();
-var stats = Array("Á¦Á¿", "Ãô½Ý", "ÖÇÁ¦", "ÐÒÔË", "HP", "MP", "ÎïÀí¹¥»÷", "Ä§·¨¹¥»÷", "ÎïÀí·ÀÓù", "Ä§·¨·ÀÓù", "ÃüÖÐÂÊ", "»Ø±ÜÂÊ", "ÁéÃô¶È", "ÒÆ¶¯ËÙ¶È", "ÌøÔ¾Á¦", "¾íÖáÊý", "»Æ½ðÌú´¸Ê¹ÓÃÊý", "Ê¹ÓÃ¾íÖáÊý", "ÐÇÐÇÊý", "Ç³ÄÜ 1", "Ç³ÄÜ 2", "Ç³ÄÜ 3", "×°±¸Ãû×Ö");
+var stats = Array("Strength", "Dexterity", "Intellect", "Luck", "HP", "MP", "Weapon Attack", "Magic Attack", "Weapon Defense", "Magic Defense", "Accuracy", "Avoidability", "Hands", "Speed", "Jump");
 var selected;
 var statsSel;
 
 function start() {
-    status = -1;
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (status >= 0 && mode == 0) {
-        cm.dispose();
-        return;
-    }
-    if (mode == 1)
-        status++;
-    else
-        status--;
+	if (mode == -1) {
+		cm.dispose();
+	} else {
+		if (status >= 0 && mode == 0) {
+			cm.dispose();
+			return;
+		}
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			if (cm.getLevel() > 129 ) {  
+				cm.sendSimple("æ‚¨éœ€è¦æ¿€æ´»æœ€å¤§æŠ€èƒ½å—?#b\r\n#L1#æ¿€æ´»æœ€å¤§æŠ€èƒ½!#k");
+			} else {
+				cm.sendOk("å¯¹ä¸èµ·ï¼Œç­‰çº§åº•äºŽ130çº§ä¸ç»™ä½ ä½¿ç”¨è¿™ä¸ªNPC");
+				cm.dispose();
+			}
+		} else if (status == 1) {
+			if (selection == 0) {
+				var statup = new java.util.ArrayList();
+				var p = cm.getPlayer();
+				p.setRemainingAp(0);
+				p.setRemainingSp(0);
+				p.setStr(32767);
+				p.setDex(32767);
+				p.setInt(32767);
+				p.setLuk(32767);
+				p.setHp(30000);
+				p.setMaxHp(30000);
+				p.setMp(30000);
+				p.setMaxMp(30000);
+				statup.add(new Pair(MapleStat.STR, java.lang.Integer.valueOf(32767)));
+				statup.add(new Pair(MapleStat.DEX, java.lang.Integer.valueOf(32767)));
+				statup.add(new Pair(MapleStat.LUK, java.lang.Integer.valueOf(32767)));
+				statup.add(new Pair(MapleStat.INT, java.lang.Integer.valueOf(32767)));
+				statup.add(new Pair(MapleStat.HP, java.lang.Integer.valueOf(30000)));
+				statup.add(new Pair(MapleStat.MAXHP, java.lang.Integer.valueOf(30000)));
+				statup.add(new Pair(MapleStat.MP, java.lang.Integer.valueOf(30000)));
+				statup.add(new Pair(MapleStat.MAXMP, java.lang.Integer.valueOf(30000)));
+				statup.add(new Pair(MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(p.getRemainingAp())));
+				statup.add(new Pair(MapleStat.AVAILABLESP, java.lang.Integer.valueOf(p.getRemainingSp())));
+				cm.getC().getSession().write(MaplePacketCreator.updatePlayerStats(statup));
+				cm.sendOk("I have maxed your stats. Happy Mapling!");
+				cm.dispose();
+			} else if (selection == 1) {
+				cm.teachSkill(1003,1,1);
+				cm.teachSkill(1004,1,1);
+				cm.teachSkill(1005,1,1);
+				cm.teachSkill(1121011,1,1);
+				cm.teachSkill(1221012,1,1);
+				cm.teachSkill(1321010,1,1);
+				cm.teachSkill(2121008,1,1);
+				cm.teachSkill(2221008,1,1);
+				cm.teachSkill(2321009,1,1);
+				cm.teachSkill(3121009,1,1);
+				cm.teachSkill(3221008,1,1);
+				cm.teachSkill(4121009,1,1);
+				cm.teachSkill(4221008,1,1); //End of max-level "1" skills
+				cm.teachSkill(1000002,8,8); //Start of max-level "8" skills
+				cm.teachSkill(3000002,8,8);
+				cm.teachSkill(4000001,8,8); //End of max-level "8" skills
+				cm.teachSkill(1000001,10,10); //Start of max-level "10" skills
+				cm.teachSkill(2000001,10,10); //End of max-level "10" skills
+				cm.teachSkill(1000000,16,16); //Start of max-level "16" skills
+				cm.teachSkill(2000000,16,16);
+				cm.teachSkill(3000000,16,16); //End of max-level "16" skills
+				cm.teachSkill(1001003,20,20); //Start of max-level "20" skills
+				cm.teachSkill(3200001,30,30);
+				cm.teachSkill(1001004,20,20);
+				cm.teachSkill(1001005,20,20);
+				cm.teachSkill(2001002,20,20);
+				cm.teachSkill(2001003,20,20);
+				cm.teachSkill(2001004,20,20);
+				cm.teachSkill(2001005,20,20);
+				cm.teachSkill(3000001,20,20);
+				cm.teachSkill(3001003,20,20);
+				cm.teachSkill(3001004,20,20);
+				cm.teachSkill(3001005,20,20);
+				cm.teachSkill(4000000,20,20);
+				cm.teachSkill(4001344,20,20);
+				cm.teachSkill(4001334,20,20);
+				cm.teachSkill(4001002,20,20);
+				cm.teachSkill(4001003,20,20);
+				cm.teachSkill(1101005,20,20);
+				cm.teachSkill(1100001,20,20); //Start of mastery's
+				cm.teachSkill(1100000,20,20);
+				cm.teachSkill(1200001,20,20);
+				cm.teachSkill(1200000,20,20);
+				cm.teachSkill(1300000,20,20);
+				cm.teachSkill(1300001,20,20);
+				cm.teachSkill(3100000,20,20);
+				cm.teachSkill(3200000,20,20);
+				cm.teachSkill(4100000,20,20);
+				cm.teachSkill(4200000,20,20); //End of mastery's
+				cm.teachSkill(4201002,20,20);
+				cm.teachSkill(4101003,20,20);
+				cm.teachSkill(3201002,20,20);
+				cm.teachSkill(3101002,20,20);
+				cm.teachSkill(1301004,20,20);
+				cm.teachSkill(1301005,20,20);
+				cm.teachSkill(1201004,20,20);
+				cm.teachSkill(1201005,20,20);
+				cm.teachSkill(1101004,20,20); //End of boosters
+				cm.teachSkill(1101006,20,20);
+				cm.teachSkill(1201006,20,20);
+				cm.teachSkill(1301006,20,20);
+				cm.teachSkill(2101001,20,20);
+				cm.teachSkill(2100000,20,20);
+				cm.teachSkill(2101003,20,20);
+				cm.teachSkill(2101002,20,20);
+				cm.teachSkill(2201001,20,20);
+				cm.teachSkill(2200000,20,20);
+				cm.teachSkill(2201003,20,20);
+				cm.teachSkill(2201002,20,20);
+				cm.teachSkill(2301004,20,20);
+				cm.teachSkill(2301003,20,20);
+				cm.teachSkill(2300000,20,20);
+				cm.teachSkill(2301001,20,20);
+				cm.teachSkill(3101003,20,20);
+				cm.teachSkill(3101004,20,20);
+				cm.teachSkill(3201003,20,20);
+				cm.teachSkill(3201004,20,20);
+				cm.teachSkill(4100002,20,20);
+				cm.teachSkill(4101004,20,20);
+				cm.teachSkill(4200001,20,20);
+				cm.teachSkill(4201003,20,20); //End of second-job skills and first-job
+				cm.teachSkill(4211005,20,20);
+				cm.teachSkill(4211003,20,20);
+				cm.teachSkill(4210000,20,20);
+				cm.teachSkill(4110000,20,20);
+				cm.teachSkill(4111001,20,20);
+				cm.teachSkill(4111003,20,20);
+				cm.teachSkill(3210000,20,20);
+				cm.teachSkill(3110000,20,20);
+				cm.teachSkill(3210001,20,20);
+				cm.teachSkill(3110001,20,20);
+				cm.teachSkill(3211002,20,20);
+				cm.teachSkill(3111002,20,20);
+				cm.teachSkill(2210000,20,20);
+				cm.teachSkill(2211004,20,20);
+				cm.teachSkill(2211005,20,20);
+				cm.teachSkill(2111005,20,20);
+				cm.teachSkill(2111004,20,20);
+				cm.teachSkill(2110000,20,20);
+				cm.teachSkill(2311001,20,20);
+				cm.teachSkill(2311005,30,30);
+				cm.teachSkill(2310000,20,20);
+				cm.teachSkill(1311007,20,20);
+				cm.teachSkill(1310000,20,20);
+				cm.teachSkill(1311008,20,20);
+				cm.teachSkill(1210001,20,20);
+				cm.teachSkill(1211009,20,20);
+				cm.teachSkill(1210000,20,20);
+				cm.teachSkill(1110001,20,20);
+				cm.teachSkill(1111007,20,20);
+				cm.teachSkill(1110000,20,20); //End of 3rd job skills
+				cm.teachSkill(1121000,20,20);
+				cm.teachSkill(1221000,20,20);
+				cm.teachSkill(1321000,20,20);
+				cm.teachSkill(2121000,20,20);
+				cm.teachSkill(2221000,20,20);
+				cm.teachSkill(2321000,20,20);
+				cm.teachSkill(3121000,20,20);
+				cm.teachSkill(3221000,20,20);
+				cm.teachSkill(4121000,20,20);
+				cm.teachSkill(4221000,20,20); //End of Maple Warrior // Also end of max-level "20" skills
+				cm.teachSkill(1321007,10,10);
+				cm.teachSkill(1320009,25,25);
+				cm.teachSkill(1320008,25,25);
+				cm.teachSkill(2321006,10,10);
+				cm.teachSkill(1220010,10,10);
+				cm.teachSkill(1221004,25,25);
+				cm.teachSkill(1221003,25,25);
+				cm.teachSkill(1100003,30,30);
+				cm.teachSkill(1100002,30,30);
+				cm.teachSkill(1101007,30,30);
+				cm.teachSkill(1200003,30,30);
+				cm.teachSkill(1200002,30,30);
+				cm.teachSkill(1201007,30,30);
+				cm.teachSkill(1300003,30,30);
+				cm.teachSkill(1300002,30,30);
+				cm.teachSkill(1301007,30,30);
+				cm.teachSkill(2101004,30,30);
+				cm.teachSkill(2101005,30,30);
+				cm.teachSkill(2201004,30,30);
+				cm.teachSkill(2201005,30,30);
+				cm.teachSkill(2301002,30,30);
+				cm.teachSkill(2301005,30,30);
+				cm.teachSkill(3101005,30,30);
+				cm.teachSkill(3201005,30,30);
+				cm.teachSkill(4100001,30,30);
+				cm.teachSkill(4101005,30,30);
+				cm.teachSkill(4201005,30,30);
+				cm.teachSkill(4201004,30,30);
+				cm.teachSkill(1111006,30,30);
+				cm.teachSkill(1111005,30,30);
+				cm.teachSkill(1111002,30,30);
+				cm.teachSkill(1111004,30,30);
+				cm.teachSkill(1111003,30,30);
+				cm.teachSkill(1111008,30,30);
+				cm.teachSkill(1211006,30,30);
+				cm.teachSkill(1211002,30,30);
+				cm.teachSkill(1211004,30,30);
+				cm.teachSkill(1211003,30,30);
+				cm.teachSkill(1211005,30,30);
+				cm.teachSkill(1211008,30,30);
+				cm.teachSkill(1211007,30,30);
+				cm.teachSkill(1311004,30,30);
+				cm.teachSkill(1311003,30,30);
+				cm.teachSkill(1311006,30,30);
+				cm.teachSkill(1311002,30,30);
+				cm.teachSkill(1311005,30,30);
+				cm.teachSkill(1311001,30,30);
+				cm.teachSkill(2110001,30,30);
+				cm.teachSkill(2111006,30,30);
+				cm.teachSkill(2111002,30,30);
+				cm.teachSkill(2111003,30,30);
+				cm.teachSkill(2210001,30,30);
+				cm.teachSkill(2211006,30,30);
+				cm.teachSkill(2211002,30,30);
+				cm.teachSkill(2211003,30,30);
+				cm.teachSkill(2311003,30,30);
+				cm.teachSkill(2311002,30,30);
+				cm.teachSkill(2311004,30,30);
+				cm.teachSkill(2311006,30,30);
+				cm.teachSkill(3111004,30,30);
+				cm.teachSkill(3111003,30,30);
+				cm.teachSkill(3111005,30,30);
+				cm.teachSkill(3111006,30,30);
+				cm.teachSkill(3211004,30,30);
+				cm.teachSkill(3211003,30,30);
+				cm.teachSkill(3211005,30,30);
+				cm.teachSkill(3211006,30,30);
+				cm.teachSkill(4111005,30,30);
+				cm.teachSkill(4111006,20,20);
+				cm.teachSkill(4111004,30,30);
+				cm.teachSkill(4111002,30,30);
+				cm.teachSkill(4211002,30,30);
+				cm.teachSkill(4211004,30,30);
+				cm.teachSkill(4211001,30,30);
+				cm.teachSkill(4211006,30,30);
+				cm.teachSkill(1120004,30,30);
+				cm.teachSkill(1120003,30,30);
+				cm.teachSkill(1120005,30,30);
+				cm.teachSkill(1121008,30,30);
+				cm.teachSkill(1121010,30,30);
+				cm.teachSkill(1121006,30,30);
+				cm.teachSkill(1121002,30,30);
+				cm.teachSkill(1220005,30,30);
+				cm.teachSkill(1221009,30,30);
+				cm.teachSkill(1220006,30,30);
+				cm.teachSkill(1221007,30,30);
+				cm.teachSkill(1221011,30,30);
+				cm.teachSkill(1221002,30,30);
+				cm.teachSkill(1320005,30,30);
+				cm.teachSkill(1320006,30,30);
+				cm.teachSkill(1321003,30,30);
+				cm.teachSkill(1321002,30,30);
+				cm.teachSkill(2121005,30,30);
+				cm.teachSkill(2121003,30,30);
+				cm.teachSkill(2121004,30,30);
+				cm.teachSkill(2121002,30,30);
+				cm.teachSkill(2121007,30,30);
+				cm.teachSkill(2121006,30,30);
+				cm.teachSkill(2221007,30,30);
+				cm.teachSkill(2221006,30,30);
+				cm.teachSkill(2221003,30,30);
+				cm.teachSkill(2221005,30,30);
+				cm.teachSkill(2221004,30,30);
+				cm.teachSkill(2221002,30,30);
+				cm.teachSkill(2321007,30,30);
+				cm.teachSkill(2321003,30,30);
+				cm.teachSkill(2321008,30,30);
+				cm.teachSkill(2321005,30,30);
+				cm.teachSkill(2321004,30,30);
+				cm.teachSkill(2321002,30,30);
+				cm.teachSkill(3120005,30,30);
+				cm.teachSkill(3121008,30,30);
+				cm.teachSkill(3121003,30,30);
+				cm.teachSkill(3121007,30,30);
+				cm.teachSkill(3121006,30,30);
+				cm.teachSkill(3121002,30,30);
+				cm.teachSkill(3121004,30,30);
+				cm.teachSkill(3221006,30,30);
+				cm.teachSkill(3220004,30,30);
+				cm.teachSkill(3221003,30,30);
+				cm.teachSkill(3221005,30,30);
+				cm.teachSkill(3221001,30,30);
+				cm.teachSkill(3221002,30,30);
+				cm.teachSkill(3221007,30,30);
+				cm.teachSkill(4121004,30,30);
+				cm.teachSkill(4121008,30,30);
+				cm.teachSkill(4121003,30,30);
+				cm.teachSkill(4121006,30,30);
+				cm.teachSkill(4121007,30,30);
+				cm.teachSkill(4120005,30,30);
+				cm.teachSkill(4221001,30,30);
+				cm.teachSkill(4221007,30,30);
+				cm.teachSkill(4221004,30,30);
+				cm.teachSkill(4221003,30,30);
+				cm.teachSkill(4221006,30,30);
+				cm.teachSkill(4220005,30,30);
+				cm.teachSkill(1321001,30,30);
+				cm.teachSkill(4120002,30,30);
+				cm.teachSkill(2221001,30,30);
+				cm.teachSkill(3100001,30,30);
+				cm.teachSkill(1121001,30,30);
+				cm.teachSkill(1221001,30,30);
+				cm.teachSkill(2121001,30,30);
+				cm.teachSkill(2221001,30,30);
+				cm.teachSkill(2321001,30,30);
+				cm.teachSkill(4220002,30,30);
+				cm.teachSkill(8,1,1);
+				//Start of Pirate Job Skills
+				cm.teachSkill(5000000,20,20); //Bullet Time
+				cm.teachSkill(5001001,20,20); //Flash Fist
+				cm.teachSkill(5001002,20,20); //Sommersault Kick
+				cm.teachSkill(5001003,20,20); //Double Shot
+				cm.teachSkill(5001005,10,10); //Dash
+				cm.teachSkill(5100000,10,10); //Improve MaxHP
+				cm.teachSkill(5100001,20,20); //Knuckler Mastery
+				cm.teachSkill(5101002,20,20); //Backspin Blow
+				cm.teachSkill(5101003,20,20); //Double Uppercut
+				cm.teachSkill(5101004,20,20); //Corkscrew Blow
+				cm.teachSkill(5101005,10,10); //MP Recovery
+				cm.teachSkill(5101006,20,20); //Knuckler Booster
+				cm.teachSkill(5101007,10,10); //Oak Barrel
+				cm.teachSkill(5200000,20,20); //Gun Mastery
+				cm.teachSkill(5201001,20,20); //Invisible Shot
+				cm.teachSkill(5201002,20,20); //Grenade
+				cm.teachSkill(5201003,20,20); //Gun Booster
+				cm.teachSkill(5201004,20,20); //Blank Shot
+				cm.teachSkill(5201005,10,10); //Wings
+				cm.teachSkill(5201006,20,20); //Recoil Shot
+				cm.teachSkill(5110000,20,20); //Stun Mastery
+				cm.teachSkill(5110001,40,40); //Energy Charge
+				cm.teachSkill(5111002,30,30); //Energy Blast
+				cm.teachSkill(5111004,20,0);  //Energy Drain
+				cm.teachSkill(5111005,20,20); //Transformation
+				cm.teachSkill(5210000,20,20); //Burst Fire
+				cm.teachSkill(5211001,30,30); //Octopus
+				cm.teachSkill(5211002,30,30); //Gaviota
+				cm.teachSkill(5211004,30,30); //FlameThrower
+				cm.teachSkill(5211005,30,30); //Ice Splitter
+				cm.teachSkill(5211006,20,20); //Homing Beacon
+				cm.teachSkill(5121000,20,20); //Maple Warrior
+				cm.teachSkill(5121001,30,30); //Dragon Strike
+				cm.teachSkill(5121002,30,30); //Energy Orb
+				cm.teachSkill(5121003,20,20); //Super Transformation
+				cm.teachSkill(5121004,30,30); //Demolition
+				cm.teachSkill(5121005,30,30); //Snatch
+				cm.teachSkill(5121007,30,30); //Barrage
+				cm.teachSkill(5121008,1,1);   //Pirate's Rage
+				cm.teachSkill(5121009,20,20); //Speed Infusion
+				cm.teachSkill(5121010,30,30); //Time Leap
+				cm.teachSkill(5221000,20,20); //Maple Warrior
+				cm.teachSkill(5220001,30,30); //Elemental Boost
+				cm.teachSkill(5220002,20,20); //Wrath of the Octopi
+				cm.teachSkill(5221003,30,30); //Aerial Strike
+				cm.teachSkill(5221004,30,30); //Rapid Fire
+				cm.teachSkill(5221006,10,10); //BattleShip
+				cm.teachSkill(5221007,30,30); //BattleShip Cannon
+				cm.teachSkill(5221008,30,30); //BattleShop Torpedo
+				cm.teachSkill(5221009,20,20); //Hypnotize
+				cm.teachSkill(5221010,25,25); //Speed Infusion
+				cm.teachSkill(5220011,20,20); //BullsEye
+				//æˆ˜ç«¥
+				//cm.teachSkill(21000000,10,10); //çŸ›è¿žå‡»å¼ºåŒ–
+				//cm.teachSkill(21001001,15,15); //æˆ˜æ–—æ­¥ä¼
+				//cm.teachSkill(21000002,20,20); //åŒé‡é‡å‡»
+				//cm.teachSkill(21001003,20,20); //å¿«é€ŸçŸ›
+				//cm.teachSkill(21100000,20,20); //ç²¾å‡†çŸ›
+				//cm.teachSkill(21100001,20,20); //ä¸‰é‡é‡å‡»
+				//cm.teachSkill(21100002,30,30); //æˆ˜ç¥žçªè¿›
+				//cm.teachSkill(21101003,20,20); //æŠ—åŽ‹
+				//cm.teachSkill(21100004,20,20); //æ–—æ°”çˆ†è£‚
+				//cm.teachSkill(21100005,20,20); //è¿žçŽ¯å¸è¡€
+				//cm.teachSkill(21110000,20,20); //çˆ†å‡»å¼ºåŒ–
+				//cm.teachSkill(21111001,20,20); //çµå·§å‡»é€€
+				//cm.teachSkill(21110002,20,20); //å…¨åŠ›æŒ¥å‡»
+				//cm.teachSkill(21110003,30,30); //ç»ˆæžæŠ•æŽ·
+				//cm.teachSkill(21110004,30,30); //å¹»å½±ç‹¼ç‰™
+				//cm.teachSkill(21111005,20,20); //å†°é›ªçŸ›
+				//cm.teachSkill(21110006,20,20); //æ—‹é£Ž
+				//cm.teachSkill(21110007,20,20); //å…¨åŠ›æŒ¥å‡»
+				//cm.teachSkill(21110008,20,20); //å…¨åŠ›æŒ¥å‡»
+				//cm.teachSkill(21121000,1,1); //å†’é™©å²›å‹‡å£«
+				//cm.teachSkill(21120001,30,30); //æ”»å‡»ç­–ç•¥
+				//cm.teachSkill(21120002,30,30); //æˆ˜ç¥žä¹‹èˆž
+				//cm.teachSkill(21121003,30,30); //æˆ˜ç¥žçš„æ„å¿—
+				//cm.teachSkill(21120004,30,30); //é˜²å®ˆç­–ç•¥
+				//cm.teachSkill(21120005,30,30); //å·¨ç†Šå’†å“®
+				//cm.teachSkill(21120006,30,30); //é’»çŸ³æ˜Ÿè¾°
+				//cm.teachSkill(21120007,30,30); //æˆ˜ç¥žä¹‹ç›¾
+				//cm.teachSkill(21121008,1,1); //å‹‡å£«çš„æ„å¿—
+ //é­‚éª‘å£«
+				cm.teachSkill(11000000,10,10); //ç”Ÿå‘½åŠ å¼º
+				cm.teachSkill(11001001,10,10); //åœ£ç”²æœ¯
+				cm.teachSkill(11001002,20,20); //å¼ºåŠ›æ”»å‡»
+				cm.teachSkill(11001003,20,20); //ç¾¤ä½“æ”»å‡»
+				cm.teachSkill(11001004,20,20); //é­‚ç²¾çµ
+				cm.teachSkill(11100000,20,20); //ç²¾å‡†å‰‘
+				cm.teachSkill(11101001,20,20); //å¿«é€Ÿå‰‘
+				cm.teachSkill(11101002,30,30); //ç»ˆæžå‰‘
+				cm.teachSkill(11101003,20,20); //æ„¤æ€’ä¹‹ç«
+				cm.teachSkill(11101004,30,30); //çµé­‚ä¹‹åˆƒ
+				cm.teachSkill(11101005,10,10); //çµé­‚è¿…ç§»
+				cm.teachSkill(11110000,20,20); //é­”åŠ›æ¢å¤
+				cm.teachSkill(11111001,20,20); //æ–—æ°”é›†ä¸­
+				cm.teachSkill(11111002,20,20); //ææ…Œ
+				cm.teachSkill(11111003,20,20); //æ˜è¿·
+				cm.teachSkill(11111004,30,30); //è½»èˆžé£žæ‰¬
+				cm.teachSkill(11110005,20,20); //è¿›é˜¶æ–—æ°”
+				cm.teachSkill(11111006,30,30); //çµé­‚çªåˆº
+				cm.teachSkill(11111007,20,20); //çµé­‚å±žæ€§
+ //ç‚Žæœ¯å£«
+				cm.teachSkill(12000000,10,10); //é­”åŠ›å¼ºåŒ–
+				cm.teachSkill(12001001,10,10); //é­”æ³•ç›¾
+				cm.teachSkill(12001002,10,10); //é­”æ³•é“ ç”²
+				cm.teachSkill(12001003,20,20); //é­”æ³•åŒå‡»
+				cm.teachSkill(12001004,20,20); //ç‚Žç²¾çµ
+				cm.teachSkill(12101000,20,20); //ç²¾ç¥žåŠ›
+				cm.teachSkill(12101001,20,20); //ç¼“é€Ÿæœ¯
+				cm.teachSkill(12101002,20,20); //ç«ç„°ç®­
+				cm.teachSkill(12101003,20,20); //å¿«é€Ÿç§»åŠ¨
+				cm.teachSkill(12101004,20,20); //é­”æ³•ç‹‚æš´
+				cm.teachSkill(12101005,20,20); //è‡ªç„¶åŠ›é‡ç½®
+				cm.teachSkill(12101006,20,20); //ç«æŸ±
+				cm.teachSkill(12110000,20,20); //é­”æ³•æŠ—æ€§
+				cm.teachSkill(12110001,20,20); //é­”åŠ›æ¿€åŒ–
+				cm.teachSkill(12111002,20,20); //å°å°æœ¯
+				cm.teachSkill(12111003,20,20); //å¤©é™è½æ˜Ÿ
+				cm.teachSkill(12111004,20,20); //ç«é­”å…½
+				cm.teachSkill(12111005,30,30); //ç«ç‰¢æœ¯å±éšœ
+				cm.teachSkill(12111006,30,30); //ç«é£Žæš´
+				cm.teachSkill(13000000,20,20); //å¼ºåŠ›ç®­
+				cm.teachSkill(13000001,8,8); //è¿œç¨‹ç®­
+				cm.teachSkill(13001002,10,10); //é›†ä¸­æœ¯
+				cm.teachSkill(13001003,20,20); //äºŒè¿žå°„
+				cm.teachSkill(13001004,20,20); //é£Žç²¾çµ
+				cm.teachSkill(13100000,20,20); //ç²¾å‡†å¼“
+				cm.teachSkill(13101001,20,20); //å¿«é€Ÿç®­
+				cm.teachSkill(13101002,30,30); //ç»ˆæžå¼“
+				cm.teachSkill(13101003,20,20); //æ— å½¢ç®­
+				cm.teachSkill(13100004,20,20); //ç–¾é£Žæ­¥
+				cm.teachSkill(13101005,20,20); //æš´é£Žå°„å‡»
+				cm.teachSkill(13101006,10,10); //é£Žå½±æ¼«æ­¥
+				cm.teachSkill(13111000,20,20); //ç®­é›¨
+				cm.teachSkill(13111001,30,30); //ç®­æ‰«å°„
+				cm.teachSkill(13111002,20,20); //æš´é£Žç®­é›¨
+				cm.teachSkill(13110003,20,20); //ç¥žç®­æ‰‹
+				cm.teachSkill(13111004,20,20); //æ›¿èº«æœ¯
+				cm.teachSkill(13111005,10,10); //ä¿¡å¤©ç¿
+				cm.teachSkill(13111006,20,20); //é£Žçµç©¿è¶Š
+				cm.teachSkill(13111007,20,20); //ç–¾é£Žæ‰«å°„
+				cm.teachSkill(14000000,10,10); //é›†ä¸­æœ¯
+				cm.teachSkill(14000001,8,8); //è¿œç¨‹æš—å™¨
+				cm.teachSkill(14001002,10,10); //è¯…å’’æœ¯
+				cm.teachSkill(14001003,10,10); //éšèº«æœ¯
+				cm.teachSkill(14001004,20,20); //åŒé£žæ–©
+				cm.teachSkill(14001005,20,20); //å¤œç²¾çµ
+				cm.teachSkill(14100000,20,20); //ç²¾å‡†æš—å™¨
+				cm.teachSkill(14100001,30,30); //å¼ºåŠ›æŠ•æŽ·
+				cm.teachSkill(14101002,20,20); //å¿«é€Ÿæš—å™¨
+				cm.teachSkill(14101003,20,20); //è½»åŠŸ
+				cm.teachSkill(14101004,20,20); //äºŒæ®µè·³
+				cm.teachSkill(14100005,10,10); //é©±é€
+				cm.teachSkill(14101006,20,20); //å¸è¡€
+				cm.teachSkill(14111000,30,30); //å½±åˆ†èº«
+				cm.teachSkill(14111001,20,20); //å½±ç½‘æœ¯
+				cm.teachSkill(14111002,30,30); //å¤šé‡é£žé•–
+				cm.teachSkill(14110003,20,20); //è¯å‰‚ç²¾é€š
+				cm.teachSkill(14110004,20,20); //æ­¦å™¨ç”¨æ¯’æ¶²
+				cm.teachSkill(14111005,20,20); //ä¸‰è¿žçŽ¯å…‰å‡»ç ´
+				cm.teachSkill(14111006,30,30); //æ¯’ç‚¸å¼¹
+				cm.teachSkill(15000000,10,10); //å¿«åŠ¨ä½œ
+				cm.teachSkill(15001001,20,20); //ç™¾è£‚æ‹³
+				cm.teachSkill(15001002,20,20); //åŠæœˆè¸¢
+				cm.teachSkill(15001003,10,10); //ç–¾é©°
+				cm.teachSkill(15001004,20,20); //é›·ç²¾çµ
+				cm.teachSkill(15100000,10,10); //å¼ºä½“æœ¯
+				cm.teachSkill(15100001,20,20); //ç²¾å‡†æ‹³
+				cm.teachSkill(15101002,20,20); //æ€¥é€Ÿæ‹³
+				cm.teachSkill(15101003,20,20); //è´¯éª¨å‡»
+				cm.teachSkill(15100004,20,20); //èƒ½é‡èŽ·å¾—
+				cm.teachSkill(15101005,20,20); //èƒ½é‡çˆ†ç ´
+				cm.teachSkill(15101006,20,20); //é›·é¸£
+				cm.teachSkill(15110000,20,20); //å¿…æ€æ‹³
+				cm.teachSkill(15111001,20,20); //èƒ½é‡è€—è½¬
+				cm.teachSkill(15111002,10,10); //è¶…äººå˜å½¢
+				cm.teachSkill(15111003,20,20); //ç¢ŽçŸ³ä¹±å‡»
+				cm.teachSkill(15111004,20,20); //å…‰é€Ÿæ‹³
+				cm.teachSkill(15111005,20,20); //æžé€Ÿé¢†åŸŸ
+				cm.teachSkill(15111006,20,20); //é—ªå…‰å‡»
+				cm.teachSkill(15111007,30,30); //é²¨é±¼æ³¢
 
-    if (status == 0) {
-        if (cm.getPlayerStat("ADMIN") == 1) {
-            cm.sendSimple("Ç×°®µÄ#h \r\n¹ÜÀíÔ±ÎÒÄÜÎªÄú×öÊ²Ã´ÄØ£¿£¿#b\r\n#L0#°ïÎÒÄÜÁ¦Öµ¼Óµ½È«Âú£¡£¡#l\r\n#L1#°ïÎÒ¼¼ÄÜ¼Óµ½È«Âú£¡£¡#l\r\n#L2#°ïÎÒÐÞ¸Ä×°±¸ÊýÖµ£¡£¡#l\r\n#L4#°ïÎÒ³õÊ¼»¯AP/SP£¡#l#k");
-        } else if (cm.getPlayerStat("GM") == 1) {
-            cm.sendSimple("Ç×°®µÄ#h \r\n¹ÜÀíÔ±ÎÒÄÜÎªÄú×öÊ²Ã´ÄØ£¿£¿#b\r\n#L0#°ïÎÒÄÜÁ¦Öµ¼Óµ½È«Âú£¡£¡#l\r\n#L1#°ïÎÒ¼¼ÄÜ¼Óµ½È«Âú£¡£¡#l\r\n#L2#°ïÎÒÐÞ¸Ä×°±¸ÊýÖµ£¡£¡#l\r\n#L4#°ïÎÒ³õÊ¼»¯AP/SP£¡#l#k");
-        } else {
-            cm.dispose();
-        }
-    } else if (status == 1) {
-        if (selection == 0) {
-            if (cm.getPlayerStat("GM") == 1) {
-                cm.maxStats();
-                cm.sendOk("ÒÑ¾­°ïÄú¼ÓÂúÁË£¡£¡");
-            }
-            cm.dispose();
-        } else if (selection == 1) {
-            //Beginner
-            if (cm.getPlayerStat("GM") == 1) {
-                cm.maxAllSkills();
-            }
-            cm.dispose();
-        } else if (selection == 2 && cm.getPlayerStat("ADMIN") == 1) {
-            var avail = "";
-            for (var i = -1; i > -199; i--) {
-                if (cm.getInventory(-1).getItem(i) != null) {
-                    avail += "#L" + Math.abs(i) + "##t" + cm.getInventory(-1).getItem(i).getItemId() + "##l\r\n";
-                }
-                slot.push(i);
-            }
-            cm.sendSimple("ÏëÒªÐÞ¸ÄÄÄÒ»¼þ×°±¸ÄÜÁ¦ÖµÄØ£¿£¿\r\n#b" + avail);
-        } else if (selection == 3 && cm.getPlayerStat("ADMIN") == 1) {
-            var eek = cm.getAllPotentialInfo();
-            var avail = "";
-            for (var ii = 0; ii < eek.size(); ii++) {
-                avail += "#L" + eek.get(ii) + "#Ç³ÄÜ ID " + eek.get(ii) + "#l\r\n";
-            }
-            cm.sendSimple("ÇëÎÊÏëÁË½â£¿£¿\r\n#b" + avail);
-            status = 9;
-        } else if (selection == 4) {
-            cm.getPlayer().resetAPSP();
-            cm.sendNext("Íê³É£¬Çë»»ÆµµÀorÖØÐÂµÇÈë¡£");
-            cm.dispose();
-        } else {
-            cm.dispose();
-        }
-    } else if (status == 2 && cm.getPlayerStat("ADMIN") == 1) {
-        selected = selection - 1;
-        var text = "";
-        for (var i = 0; i < stats.length; i++) {
-            text += "#L" + i + "#" + stats[i] + "#l\r\n";
-        }
-        cm.sendSimple("ÄãÏëÒªÐÞ¸ÄÄãµÄ #b#t" + cm.getInventory(-1).getItem(slot[selected]).getItemId() + "##k.\r\nÏëÐÞ¸ÄÄÄ¸öÄÜÁ¦Öµ£¿£¿\r\n#b" + text);
-    } else if (status == 3 && cm.getPlayerStat("ADMIN") == 1) {
-        statsSel = selection;
-        if (selection == 22) {
-            cm.sendGetText("ÇëÎÊÄãÏëÉèÖÃ¶àÉÙ #b#t" + cm.getInventory(-1).getItem(slot[selected]).getItemId() + "##k's " + stats[statsSel] + " ÄÜÁ¦Öµ?");
-        } else {
-            cm.sendGetNumber("ÇëÎÊÄãÏëÉèÖÃ #b#t" + cm.getInventory(-1).getItem(slot[selected]).getItemId() + "##k's " + stats[statsSel] + " ¶àÉÙÄÜÁ¦Öµ?", 0, 0, 32767);
-        }
-    } else if (status == 4 && cm.getPlayerStat("ADMIN") == 1) {
-        cm.changeStat(slot[selected], statsSel, selection);
-        cm.sendOk("ÄãµÄ #b#t" + cm.getInventory(-1).getItem(slot[selected]).getItemId() + "##k's " + stats[statsSel] + " ÒÑ±»ÉèÖÃÎª " + selection + ".");
-        cm.dispose();
-        cm.getPlayer().fakeRelog();
-    } else if (status == 10 && cm.getPlayerStat("ADMIN") == 1) {
-        cm.sendSimple("#L3#" + cm.getPotentialInfo(selection) + "#l");
-        status = 0;
-    } else {
-        cm.dispose();
-    }
+
+
+				cm.dispose();
+			} else if (selection == 2) {
+				var avail = "";
+				for (var i = -1; i > -18; i--) {
+					if (cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(i) != null) {
+						avail += "#L" + Math.abs(i) + "##t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(i).getItemId() + "##l\r\n";
+					}
+					slot.push(i);
+				}
+				cm.sendSimple("Which one of your equips would you like to modify?\r\n#b" + avail);
+			}
+		} else if (status == 2) {
+			selected = selection - 1;
+			var text = "";
+			for (var i = 0; i < stats.length; i++) {
+				text += "#L" + i + "#" + stats[i] + "#l\r\n";
+			}
+			cm.sendSimple("You have decided to modify your #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k.\r\nWhich stat would you like to modify?\r\n#b" + text);
+		} else if (status == 3) {
+			statsSel = selection;
+			cm.sendGetNumber("What would you like to set your #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k's " + stats[statsSel] + " to?", 0, 0, 32767);
+		} else if (status == 4) {
+			cm.changeStat(slot[selected], statsSel, selection);
+			cm.sendOk("Your #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k's " + stats[statsSel] + " has been set to " + selection + ".");
+			cm.dispose();
+		}
+	}
 }

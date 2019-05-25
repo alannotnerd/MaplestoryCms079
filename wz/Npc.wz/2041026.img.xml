@@ -100,10 +100,10 @@
             <vector name="origin" x="46" y="71"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="../eye/0" value="../eye/0"/>
-        <uol name="../eye/1" value="../eye/1"/>
-        <uol name="../eye/2" value="../eye/2"/>
-        <uol name="../eye/3" value="../eye/3"/>
+        <uol name="6" value="../eye/0"/>
+        <uol name="7" value="../eye/1"/>
+        <uol name="8" value="../eye/2"/>
+        <uol name="9" value="../eye/3"/>
         <imgdir name="speak">
             <string name="0" value="t0"/>
         </imgdir>

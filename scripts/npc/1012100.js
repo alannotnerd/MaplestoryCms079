@@ -1,109 +1,58 @@
-/* Dances with Balrog
-	Warrior Job Advancement
-	Victoria Road : Warriors' Sanctuary (102000003)
+/*
+	This file is part of the cherry Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
+					   Matthias Butz <matze@cherry.de>
+					   Jan Christian Meyer <vimes@cherry.de>
 
-	Custom Quest 100003, 100005
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation version 3 as published by
+    the Free Software Foundation. You may not use, modify or distribute
+    this program under any other version of the GNU Affero General Public
+    License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var status = 0;
-var jobId;
-var jobName;
+/* Shane
+	who is not the shane who is not the house
+	not that this shane is a house
+	1032004
+*/
 
+importPackage(net.sf.cherry.client);
+
+var status = 0;
+var zones = 0;
+var selectedMap = -1;
 
 function start() {
-    status = -1;
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (mode == 0 && status == 2) {
-        cm.sendOk("ÇëÖØÊÔ.");
-        cm.dispose();
-        return;
-    }
-    if (mode == 1)
-        status++;
-    else
-        status--;
-    if (status == 0) {
-	if (cm.getJob() == 0) {
-		if (cm.getPlayer().getLevel() >= 10) {
-		cm.sendNext("ÄãÒª×ªÖ°³ÉÎªÒ»Î» #r¹­¼ıÊÖ#k ?");
-	    } else {
-		cm.sendOk("Äã»¹²»ÄÜ×ªÖ°³ÉÎª #r¹­¼ıÊÖ#k ²ÌB8.");
+	if (mode == -1) {
 		cm.dispose();
-	    }
 	} else {
-	    if (cm.getPlayer().getLevel() >= 30 && cm.getJob() == 300) { // ¹­¼ıÊÖ
-		if (cm.haveItem(4031012, 1)) {
-		    if (cm.haveItem(4031012, 1)) {
-			status = 20;
-			cm.sendNext("ÎÒ¿´µ½ÄãÍê³ÉÁË²âÊÔ. ÏëÒª¼ÌĞø×ªÖ°ÇëµãÏÂÒ»Ò³!");
-		    } else {
-			if (!cm.haveItem(4031010)) {
-			    cm.gainItem(4031010, 1);
-			}
-			cm.sendOk("ÇëÈ¥ÕÒ #r¹­¼ıÊÖ×ªÖ°½Ì¹Ù#k.")
+		if (status >= 0 && mode == 0) {
 			cm.dispose();
-		    }
-		} else {
-		    status = 10;
-		    cm.sendNext("ÄãÒÑ¾­¿ÉÒÔ×ªÖ°ÁË,Òª×ªÖ°ÇëµãÏÂÒ»Ò³.");
+			return;
 		}
-	    } else if (cm.getPlayer().getLevel() >= 70 && cm.getJob() == 310 || cm.getJob() == 320) {
-		if (cm.haveItem(4031059,1)) {
-			cm.gainItem(4031057,1);
-			cm.gainItem(4031059, -1);
-			cm.warp(211000001, 0);
-		    cm.sendOk("ÄãÍê³ÉÁËÒ»¸ö¿¼Ñé£¬ÏÖÔÚÈ¥ÕÒ #bÀÙÄİ#k.");
-		} else {
-		    cm.sendOk("àË, #b#h0##k! ÎÒĞèÒªÒ»¸ö #bºÚ·û#k. ¿ìÈ¥ÕÒÒì´ÎÔª¿Õ¼äÄÃ¸øÎÒ");
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			cm.sendYesNo("è½¬èŒè¯·å»å„å¤§åŸå¸‚æ‰¾[è˜‘è‡åšå£«]è¿›è¡Œè½¬èŒï¼");
+		} else if (status == 1) {
+			cm.dispose();
 		}
-		cm.dispose();
-	    } else {
-		cm.sendOk("ÄãºÃ,ÎÒÊÇ¹­¼ıÊÖ×ªÖ°¹Ù.");
-		cm.dispose();
-	    }
 	}
-    } else if (status == 1) {
-	cm.sendNextPrev("Ò»µ©×ªÖ°ÁË¾Í²»ÄÜ·´»Ú,Èç¹û²»Ïë×ªÖ°ÇëµãÉÏÒ»Ò³.");
-    } else if (status == 2) {
-	cm.sendYesNo("ÄãÕæµÄÒª³ÉÎªÒ»Î» #r¹­¼ıÊÖ#k ?");
-    } else if (status == 3) {
-	if (cm.getJob() == 0) {
-		cm.changeJob(300); // ¹­¼ıÊÖ
-		cm.resetStats(4, 25, 4, 4);
-	}
-	cm.forceCompleteQuest(6700);
-	cm.gainItem(1452002, 1);
-	cm.gainItem(2060000, 1000);
-	cm.sendOk("×ªÖ°³É¹¦ ! ÇëÈ¥¿ª´´ÌìÏÂ°É.");
-	cm.dispose();
-    } else if (status == 11) {
-	cm.sendNextPrev("Äã¿ÉÒÔÑ¡ÔñÄãÒª×ªÖ°³ÉÎªÒ»Î» #rÁÔÈË#k, #råó¹­ÊÖ#k.")
-    } else if (status == 12) {
-	cm.askAcceptDecline("µ«ÊÇÎÒ±ØĞëÏÈ²âÊÔÄã,Äã×¼±¸ºÃÁËÂğ ?");
-    } else if (status == 13) {
-	cm.gainItem(4031010, 1);
-	cm.warp(106010000);
-	cm.sendOk("ÇëÈ¥ÕÒ #b¹­¼ıÊÖ×ªÖ°½Ì¹Ù#k . Ëû»á°ïÖúÄãµÄ.");
-	cm.dispose();
-    } else if (status == 21) {
-	cm.sendSimple("ÄãÏëÒª³ÉÎªÊ²Ã´ ? #b\r\n#L0#ÁÔÈË#l\r\n#L1#åó¹­ÊÖ#l#k");
-    } else if (status == 22) {
-	var jobName;
-	if (selection == 0) {
-	    jobName = "ÁÔÈË";
-	    job = 310;
-	} else if (selection == 1) {
-	    jobName = "åó¹­ÊÖ";
-	    job = 320;
-	}
-	cm.sendYesNo("ÄãÕæµÄÒª³ÉÎªÒ»Î» #r" + jobName + "#k?");
-    } else if (status == 23) {
-	cm.changeJob(job);
-	cm.gainItem(4031012, -1);
-	cm.sendOk("×ªÖ°³É¹¦ ! ÇëÈ¥¿ª´´ÌìÏÂ°É.");
-	cm.dispose();
-    }
 }	

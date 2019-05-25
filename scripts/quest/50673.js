@@ -1,12 +1,12 @@
 /*
-	ÈÎÎñ: È¥°É£¡Ïò×Å±ù·åÑ©Óò
-	ÃèÊö: ÔÚ#b#p9120206##kÄÇÀï¿ÉÒÔ½ÓÊÜÊ®×ÖÂÃÍÅµÄÖ¸Áî¡£µ½½ğÒøµºµÄ´å×¯ÖĞÈ¥¼û¼ûËû°É¡£
+	ä»»åŠ¡: å»å§ï¼å‘ç€å†°å³°é›ªåŸŸ
+	æè¿°: åœ¨#b#p9120206##ké‚£é‡Œå¯ä»¥æ¥å—åå­—æ—…å›¢çš„æŒ‡ä»¤ã€‚åˆ°é‡‘é“¶å²›çš„æ‘åº„ä¸­å»è§è§ä»–å§ã€‚
 */
 var status = -1;
 
 function start(mode, type, selection) {
     qm.sendNext("Come to El Nath.");
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }
 function end(mode, type, selection) {

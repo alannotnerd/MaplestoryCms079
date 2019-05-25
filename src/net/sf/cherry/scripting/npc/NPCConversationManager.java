@@ -591,6 +591,9 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     getPlayer().getMap().broadcastMessage(MaplePacketCreator.showEffect(effect));
   }
 
+  public void playPortalSE(){
+    getClient().getPlayer().getMap().broadcastMessage(MaplePacketCreator.playPortalSound());
+  }
   public void playSound(String sound) {
     getClient().getPlayer().getMap().broadcastMessage(MaplePacketCreator.playSound(sound));
   }
@@ -625,9 +628,9 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     getPlayer().equipChanged();
   }
 
-  public void 传送(int map) {
-    getPlayer().changeMap(getWarpMap(map), getWarpMap(map).getPortal(0));
-  }
+//  public void 传送(int map) {
+//    getPlayer().changeMap(getWarpMap(map), getWarpMap(map).getPortal(0));
+//  }
 
   public void warpPartyFB(int mapId) {
     try {
@@ -657,15 +660,15 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
   }
 
-  public void 组队传送(int mapId) {
-    MapleMap target = getMap(mapId);
-    for (MaplePartyCharacter chrs : getPlayer().getParty().getMembers()) {
-      MapleCharacter curChar = c.getChannelServer().getPlayerStorage().getCharacterByName(chrs.getName());
-      if ((curChar.getEventInstance() == null && c.getPlayer().getEventInstance() == null) || curChar.getEventInstance() == getPlayer().getEventInstance()) {
-        curChar.changeMap(target, target.getPortal(0));
-      }
-    }
-  }
+//  public void 组队传送(int mapId) {
+//    MapleMap target = getMap(mapId);
+//    for (MaplePartyCharacter chrs : getPlayer().getParty().getMembers()) {
+//      MapleCharacter curChar = c.getChannelServer().getPlayerStorage().getCharacterByName(chrs.getName());
+//      if ((curChar.getEventInstance() == null && c.getPlayer().getEventInstance() == null) || curChar.getEventInstance() == getPlayer().getEventInstance()) {
+//        curChar.changeMap(target, target.getPortal(0));
+//      }
+//    }
+//  }
 
   public void warpPartyWithExp(int mapId, int exp) {
     MapleMap target = getMap(mapId);

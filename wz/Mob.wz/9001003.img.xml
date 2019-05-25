@@ -192,7 +192,7 @@
                 <canvas name="2" width="38" height="13">
                     <vector name="origin" x="18" y="6"/>
                 </canvas>
-                <uol name="1" value="1"/>
+                <uol name="3" value="1"/>
             </imgdir>
             <imgdir name="hit">
                 <canvas name="0" width="44" height="42">

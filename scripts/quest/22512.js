@@ -8,6 +8,6 @@ function start(mode, type, selection) {
 
 function end(mode, type, selection) {
 	qm.gainExp(110);
-	qm.forceCompleteQuest();
+	qm.completeQuest();
 	qm.dispose();
 }

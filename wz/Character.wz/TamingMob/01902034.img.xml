@@ -4,15 +4,13 @@
         <canvas name="icon" width="32" height="32">
             <vector name="origin" x="0" y="32"/>
         </canvas>
-        <uol name="icon" value="icon"/>
+        <uol name="iconRaw" value="icon"/>
         <string name="islot" value="Tm"/>
         <string name="vslot" value="Tm"/>
+        <int name="pachinko" value="1"/>
+        <int name="timeLimited" value="1"/>
+        <int name="slotMax" value="1"/>
         <int name="tradeBlock" value="1"/>
-        <int name="tuc" value="0"/>
-        <int name="tamingMob" value="3"/>
-        <int name="reqLevel" value="0"/>
-        <int name="only" value="1"/>
-        <int name="notSale" value="1"/>
     </imgdir>
     <imgdir name="walk1">
         <imgdir name="0">
@@ -322,84 +320,84 @@
     </imgdir>
     <imgdir name="walk2">
         <imgdir name="0">
-            <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
-            <uol name="../../walk1/0/1" value="../../walk1/0/1"/>
-            <uol name="../../walk1/0/delay" value="../../walk1/0/delay"/>
+            <uol name="0" value="../../walk1/0/0"/>
+            <uol name="1" value="../../walk1/0/1"/>
+            <uol name="delay" value="../../walk1/0/delay"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../walk1/1/0" value="../../walk1/1/0"/>
-            <uol name="../../walk1/1/1" value="../../walk1/1/1"/>
-            <uol name="../../walk1/1/delay" value="../../walk1/1/delay"/>
+            <uol name="0" value="../../walk1/1/0"/>
+            <uol name="1" value="../../walk1/1/1"/>
+            <uol name="delay" value="../../walk1/1/delay"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../walk1/2/0" value="../../walk1/2/0"/>
-            <uol name="../../walk1/2/1" value="../../walk1/2/1"/>
-            <uol name="../../walk1/2/delay" value="../../walk1/2/delay"/>
+            <uol name="0" value="../../walk1/2/0"/>
+            <uol name="1" value="../../walk1/2/1"/>
+            <uol name="delay" value="../../walk1/2/delay"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../walk1/3/0" value="../../walk1/3/0"/>
-            <uol name="../../walk1/3/1" value="../../walk1/3/1"/>
-            <uol name="../../walk1/3/delay" value="../../walk1/3/delay"/>
+            <uol name="0" value="../../walk1/3/0"/>
+            <uol name="1" value="../../walk1/3/1"/>
+            <uol name="delay" value="../../walk1/3/delay"/>
         </imgdir>
         <imgdir name="4">
-            <uol name="../../walk1/4/0" value="../../walk1/4/0"/>
-            <uol name="../../walk1/4/1" value="../../walk1/4/1"/>
-            <uol name="../../walk1/4/delay" value="../../walk1/4/delay"/>
+            <uol name="0" value="../../walk1/4/0"/>
+            <uol name="1" value="../../walk1/4/1"/>
+            <uol name="delay" value="../../walk1/4/delay"/>
         </imgdir>
         <imgdir name="5">
-            <uol name="../../walk1/5/0" value="../../walk1/5/0"/>
-            <uol name="../../walk1/5/1" value="../../walk1/5/1"/>
-            <uol name="../../walk1/5/delay" value="../../walk1/5/delay"/>
+            <uol name="0" value="../../walk1/5/0"/>
+            <uol name="1" value="../../walk1/5/1"/>
+            <uol name="delay" value="../../walk1/5/delay"/>
         </imgdir>
         <imgdir name="6">
-            <uol name="../../walk1/6/0" value="../../walk1/6/0"/>
-            <uol name="../../walk1/6/1" value="../../walk1/6/1"/>
-            <uol name="../../walk1/6/delay" value="../../walk1/6/delay"/>
+            <uol name="0" value="../../walk1/6/0"/>
+            <uol name="1" value="../../walk1/6/1"/>
+            <uol name="delay" value="../../walk1/6/delay"/>
         </imgdir>
         <imgdir name="7">
-            <uol name="../../walk1/7/0" value="../../walk1/7/0"/>
-            <uol name="../../walk1/7/1" value="../../walk1/7/1"/>
-            <uol name="../../walk1/7/delay" value="../../walk1/7/delay"/>
+            <uol name="0" value="../../walk1/7/0"/>
+            <uol name="1" value="../../walk1/7/1"/>
+            <uol name="delay" value="../../walk1/7/delay"/>
         </imgdir>
         <imgdir name="8">
-            <uol name="../../walk1/8/0" value="../../walk1/8/0"/>
-            <uol name="../../walk1/8/1" value="../../walk1/8/1"/>
-            <uol name="../../walk1/8/delay" value="../../walk1/8/delay"/>
+            <uol name="0" value="../../walk1/8/0"/>
+            <uol name="1" value="../../walk1/8/1"/>
+            <uol name="delay" value="../../walk1/8/delay"/>
         </imgdir>
         <imgdir name="9">
-            <uol name="../../walk1/9/0" value="../../walk1/9/0"/>
-            <uol name="../../walk1/9/1" value="../../walk1/9/1"/>
-            <uol name="../../walk1/9/delay" value="../../walk1/9/delay"/>
+            <uol name="0" value="../../walk1/9/0"/>
+            <uol name="1" value="../../walk1/9/1"/>
+            <uol name="delay" value="../../walk1/9/delay"/>
         </imgdir>
         <imgdir name="10">
-            <uol name="../../walk1/10/0" value="../../walk1/10/0"/>
-            <uol name="../../walk1/10/1" value="../../walk1/10/1"/>
-            <uol name="../../walk1/10/delay" value="../../walk1/10/delay"/>
+            <uol name="0" value="../../walk1/10/0"/>
+            <uol name="1" value="../../walk1/10/1"/>
+            <uol name="delay" value="../../walk1/10/delay"/>
         </imgdir>
         <imgdir name="11">
-            <uol name="../../walk1/11/0" value="../../walk1/11/0"/>
-            <uol name="../../walk1/11/1" value="../../walk1/11/1"/>
-            <uol name="../../walk1/11/delay" value="../../walk1/11/delay"/>
+            <uol name="0" value="../../walk1/11/0"/>
+            <uol name="1" value="../../walk1/11/1"/>
+            <uol name="delay" value="../../walk1/11/delay"/>
         </imgdir>
         <imgdir name="12">
-            <uol name="../../walk1/12/0" value="../../walk1/12/0"/>
-            <uol name="../../walk1/12/1" value="../../walk1/12/1"/>
-            <uol name="../../walk1/12/delay" value="../../walk1/12/delay"/>
+            <uol name="0" value="../../walk1/12/0"/>
+            <uol name="1" value="../../walk1/12/1"/>
+            <uol name="delay" value="../../walk1/12/delay"/>
         </imgdir>
         <imgdir name="13">
-            <uol name="../../walk1/13/0" value="../../walk1/13/0"/>
-            <uol name="../../walk1/13/1" value="../../walk1/13/1"/>
-            <uol name="../../walk1/13/delay" value="../../walk1/13/delay"/>
+            <uol name="0" value="../../walk1/13/0"/>
+            <uol name="1" value="../../walk1/13/1"/>
+            <uol name="delay" value="../../walk1/13/delay"/>
         </imgdir>
         <imgdir name="14">
-            <uol name="../../walk1/14/0" value="../../walk1/14/0"/>
-            <uol name="../../walk1/14/1" value="../../walk1/14/1"/>
-            <uol name="../../walk1/14/delay" value="../../walk1/14/delay"/>
+            <uol name="0" value="../../walk1/14/0"/>
+            <uol name="1" value="../../walk1/14/1"/>
+            <uol name="delay" value="../../walk1/14/delay"/>
         </imgdir>
         <imgdir name="15">
-            <uol name="../../walk1/15/0" value="../../walk1/15/0"/>
-            <uol name="../../walk1/15/1" value="../../walk1/15/1"/>
-            <uol name="../../walk1/15/delay" value="../../walk1/15/delay"/>
+            <uol name="0" value="../../walk1/15/0"/>
+            <uol name="1" value="../../walk1/15/1"/>
+            <uol name="delay" value="../../walk1/15/delay"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand1">
@@ -432,7 +430,7 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="100"/>
         </imgdir>
         <imgdir name="2">
@@ -464,17 +462,17 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../2/1" value="../2/1"/>
+            <uol name="1" value="../2/1"/>
             <int name="delay" value="100"/>
         </imgdir>
         <imgdir name="4">
-            <uol name="../0/0" value="../0/0"/>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="0" value="../0/0"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="100"/>
         </imgdir>
         <imgdir name="5">
-            <uol name="../1/0" value="../1/0"/>
-            <uol name="../1/1" value="../1/1"/>
+            <uol name="0" value="../1/0"/>
+            <uol name="1" value="../1/1"/>
             <int name="delay" value="100"/>
         </imgdir>
         <imgdir name="6">
@@ -506,50 +504,50 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../6/1" value="../6/1"/>
+            <uol name="1" value="../6/1"/>
             <int name="delay" value="100"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand2">
         <imgdir name="0">
-            <uol name="../../stand1/0/0" value="../../stand1/0/0"/>
-            <uol name="../../stand1/0/1" value="../../stand1/0/1"/>
-            <uol name="../../stand1/0/delay" value="../../stand1/0/delay"/>
+            <uol name="0" value="../../stand1/0/0"/>
+            <uol name="1" value="../../stand1/0/1"/>
+            <uol name="delay" value="../../stand1/0/delay"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../stand1/1/0" value="../../stand1/1/0"/>
-            <uol name="../../stand1/1/1" value="../../stand1/1/1"/>
-            <uol name="../../stand1/1/delay" value="../../stand1/1/delay"/>
+            <uol name="0" value="../../stand1/1/0"/>
+            <uol name="1" value="../../stand1/1/1"/>
+            <uol name="delay" value="../../stand1/1/delay"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../stand1/2/0" value="../../stand1/2/0"/>
-            <uol name="../../stand1/2/1" value="../../stand1/2/1"/>
-            <uol name="../../stand1/2/delay" value="../../stand1/2/delay"/>
+            <uol name="0" value="../../stand1/2/0"/>
+            <uol name="1" value="../../stand1/2/1"/>
+            <uol name="delay" value="../../stand1/2/delay"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../stand1/3/0" value="../../stand1/3/0"/>
-            <uol name="../../stand1/3/1" value="../../stand1/3/1"/>
-            <uol name="../../stand1/3/delay" value="../../stand1/3/delay"/>
+            <uol name="0" value="../../stand1/3/0"/>
+            <uol name="1" value="../../stand1/3/1"/>
+            <uol name="delay" value="../../stand1/3/delay"/>
         </imgdir>
         <imgdir name="4">
-            <uol name="../../stand1/4/0" value="../../stand1/4/0"/>
-            <uol name="../../stand1/4/1" value="../../stand1/4/1"/>
-            <uol name="../../stand1/4/delay" value="../../stand1/4/delay"/>
+            <uol name="0" value="../../stand1/4/0"/>
+            <uol name="1" value="../../stand1/4/1"/>
+            <uol name="delay" value="../../stand1/4/delay"/>
         </imgdir>
         <imgdir name="5">
-            <uol name="../../stand1/5/0" value="../../stand1/5/0"/>
-            <uol name="../../stand1/5/1" value="../../stand1/5/1"/>
-            <uol name="../../stand1/5/delay" value="../../stand1/5/delay"/>
+            <uol name="0" value="../../stand1/5/0"/>
+            <uol name="1" value="../../stand1/5/1"/>
+            <uol name="delay" value="../../stand1/5/delay"/>
         </imgdir>
         <imgdir name="6">
-            <uol name="../../stand1/6/0" value="../../stand1/6/0"/>
-            <uol name="../../stand1/6/1" value="../../stand1/6/1"/>
-            <uol name="../../stand1/6/delay" value="../../stand1/6/delay"/>
+            <uol name="0" value="../../stand1/6/0"/>
+            <uol name="1" value="../../stand1/6/1"/>
+            <uol name="delay" value="../../stand1/6/delay"/>
         </imgdir>
         <imgdir name="7">
-            <uol name="../../stand1/7/0" value="../../stand1/7/0"/>
-            <uol name="../../stand1/7/1" value="../../stand1/7/1"/>
-            <uol name="../../stand1/7/delay" value="../../stand1/7/delay"/>
+            <uol name="0" value="../../stand1/7/0"/>
+            <uol name="1" value="../../stand1/7/1"/>
+            <uol name="delay" value="../../stand1/7/delay"/>
         </imgdir>
     </imgdir>
     <imgdir name="tired">
@@ -573,8 +571,8 @@
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/0" value="../0/0"/>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="0" value="../0/0"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="2">
@@ -587,7 +585,7 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="3">
@@ -600,7 +598,7 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="4">
@@ -613,7 +611,7 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="5">
@@ -626,7 +624,7 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="6">
@@ -639,12 +637,12 @@
                 </imgdir>
                 <string name="z" value="tamingMobFront"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="7">
-            <uol name="../0/0" value="../0/0"/>
-            <uol name="../0/1" value="../0/1"/>
+            <uol name="0" value="../0/0"/>
+            <uol name="1" value="../0/1"/>
             <int name="delay" value="200"/>
         </imgdir>
     </imgdir>

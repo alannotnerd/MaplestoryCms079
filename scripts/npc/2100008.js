@@ -31,24 +31,28 @@ function action(mode, type, selection) {
 				facenew = Array();
 				if (cm.getChar().getGender() == 0) {
 					for(var i = 0; i < mface.length; i++) {
-						facenew.push(mface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+						facenew.push(mface[i] + cm.getChar().getFace()
+ % 1000 - (cm.getChar().getFace()
+ % 100));
 					}
 				}
 				if (cm.getChar().getGender() == 1) {
 					for(var i = 0; i < fface.length; i++) {
-						facenew.push(fface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+						facenew.push(fface[i] + cm.getChar().getFace()
+ % 1000 - (cm.getChar().getFace()
+ % 100));
 					}
 				}
-				cm.sendStyle("选择一个你想要的。", facenew);
+				cm.sendStyle("Hmmm... Face of beauty glows even under cover and burning desert. With #bAriant face coupon(VIP)#k, I can make your face so much better. Choose the face you want, and I will pull out my outstanding skill for the great make over.", facenew);
 			}
 		else if (status == 1){
 			cm.dispose();
 			if (cm.haveItem(5152030) == true){
 				cm.gainItem(5152030, -1);
 				cm.setFace(facenew[selection]);
-				cm.sendOk("享受！");
+				cm.sendOk("Enjoy your new and improved face!");
 			} else {
-				cm.sendNext("痾.... 貌似没有#t5152030#。");
+				cm.sendNext("Erm... You don't seem to have the exclusive coupon for this hospital. Without the coupon, I'm afraid I can't do it for you.");
 			}
 		}
 	}

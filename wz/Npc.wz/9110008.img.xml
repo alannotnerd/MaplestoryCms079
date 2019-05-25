@@ -25,6 +25,6 @@
             <vector name="origin" x="108" y="229"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
     </imgdir>
 </imgdir>

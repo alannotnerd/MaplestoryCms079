@@ -1,4 +1,7 @@
 function start() {
-	cm.sendNext("你也会来关心你的成绩啊？");
+	cm.getMap().killMonster(5090001);
 	cm.dispose();
 }
+
+function action(mode, type, selection) {
+}	

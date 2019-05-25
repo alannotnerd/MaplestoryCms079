@@ -9,14 +9,10 @@ function action(mode, type, selection) {
 	}
 	status--;
     }
-	if (cm.getPlayer().getMapId() != 551030200) {
-		cm.dispose();
-		return;
-	}
     if (status == 0) {
 	cm.sendYesNo("Would you like to get out?");
     } else if (status == 1) {
-	cm.warp(910000000);
+	cm.warp(682020000,0);
 	cm.dispose();
     }
 }

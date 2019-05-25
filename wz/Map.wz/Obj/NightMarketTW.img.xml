@@ -2249,7 +2249,7 @@
                     <int name="z" value="0"/>
                     <string name="delay" value="110"/>
                 </canvas>
-                <uol name="7" value="7"/>
+                <uol name="9" value="7"/>
                 <canvas name="10" width="193" height="55">
                     <vector name="origin" x="99" y="27"/>
                     <int name="z" value="0"/>
@@ -4049,8 +4049,8 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="200"/>
                 </canvas>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
+                <uol name="4" value="1"/>
+                <uol name="5" value="2"/>
             </imgdir>
             <imgdir name="3">
                 <canvas name="0" width="69" height="80">

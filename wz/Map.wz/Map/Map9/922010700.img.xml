@@ -788,7 +788,7 @@
             <string name="id" value="9300170"/>
             <int name="x" value="224"/>
             <int name="y" value="-1044"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="339"/>
@@ -827,7 +827,7 @@
             <string name="id" value="9300171"/>
             <int name="x" value="228"/>
             <int name="y" value="-1543"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="346"/>
@@ -840,7 +840,7 @@
             <string name="id" value="9300169"/>
             <int name="x" value="219"/>
             <int name="y" value="-1276"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="342"/>
@@ -854,7 +854,7 @@
             <string name="id" value="2201002"/>
             <int name="x" value="228"/>
             <int name="y" value="-1037"/>
-            <int name="reactorTime" value="300"/>
+            <int name="reactorTime" value="-1"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>
@@ -862,7 +862,7 @@
             <string name="id" value="2201002"/>
             <int name="x" value="230"/>
             <int name="y" value="-1263"/>
-            <int name="reactorTime" value="300"/>
+            <int name="reactorTime" value="-1"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>
@@ -870,7 +870,7 @@
             <string name="id" value="2201002"/>
             <int name="x" value="230"/>
             <int name="y" value="-1535"/>
-            <int name="reactorTime" value="300"/>
+            <int name="reactorTime" value="-1"/>
             <int name="f" value="0"/>
             <string name="name" value=""/>
         </imgdir>

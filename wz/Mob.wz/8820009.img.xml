@@ -16,12 +16,16 @@
         <int name="undead" value="0"/>
         <int name="pushed" value="1"/>
         <float name="fs" value="10.0"/>
-        <int name="removeAfter" value="1"/>
+        <int name="removeAfter" value="5"/>
         <int name="summonType" value="12"/>
         <int name="hideName" value="1"/>
         <imgdir name="revive">
-            <int name="0" value="8820010"/>
+            <int name="0" value="8820001"/>
             <int name="1" value="8820003"/>
+            <int name="2" value="8820005"/>
+            <int name="3" value="8820006"/>
+            <int name="4" value="8820004"/>
+            <int name="5" value="8820002"/>
         </imgdir>
         <int name="noFlip" value="1"/>
     </imgdir>

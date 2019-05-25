@@ -1,45 +1,71 @@
 /*
-	Name:  经验转蛋机老头
-	Place: 自由市场
+	This file is part of the cherry Maple Story Server
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
+                       Matthias Butz <matze@cherry.de>
+                       Jan Christian Meyer <vimes@cherry.de>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License version 3
+    as published by the Free Software Foundation. You may not use, modify
+    or distribute this program under any other version of the
+    GNU Affero General Public License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var status = -1;
+/*
+@author xQuasar
+npc: EXP gachapon
+ */
+ 
+var status;
 
-function action(mode, type, selection) {
-    if (mode == 1) {
-		status++;
-    } else {
-	    cm.dispose();
-		return;
-    }
-    if (status == 0) {
-	if (cm.getPlayer().getLevel() >= 51) {
-	    cm.sendOk("我只可以使用到50级。");
-	    cm.dispose();
-	} else if (cm.haveItem(5220000)) {
-	    cm.sendYesNo("你有一些 #b#t5220000##k\r\n你想要尝试运气！？");
-	} else {
-	    cm.sendOk("很抱歉由于你没有#b#t5220000##k所以不能尝试。");
-	    cm.dispose();
-	}
-    } else if (status == 1) {
-	var item;
-	if (Math.floor(Math.random() * 300) == 0) {
-	    var rareList = new Array(2370000, 2370001, 2370002, 2370003, 2370004, 2370005, 2370006, 2370007);
-		
-	    item = cm.gainGachaponItem(rareList[Math.floor(Math.random() * rareList.length)], 1, "兵法书经验转蛋机");
-	} else {
-	    var itemList = new Array(2370008, 2370009, 2370010, 2370011, 2370012);
+var randList = new Array(1,1,13,2,2,2,3,3,3,4,4,4,5,5,6,6,7,7,8,8,9,10,11,12,1);
+var writsList = new Array(2370012,2370011,2370010,2370009,2370008,2370007,2370006,2370005,2370004,2370003,2370002,2370001,2370000);
+var randNum = Math.floor(Math.random() * randList.length);
+var randWritNo = randList[randNum];
+var randWrit = writsList[randWritNo];
 
-	    item = cm.gainGachaponItem(itemList[Math.floor(Math.random() * itemList.length)], 1);
-	}
+function start() {
+	status = -1;
+	action(1,0,0);
+}
 
-	if (item != -1) {
-	    cm.gainItem(5220000, -1);
-	    cm.sendOk("您已获得 #b#t" + item + "##k.");
+function action(mode,type,selection) {
+	if (mode == -1) {
+		cm.dispose();
+	} else if (status == -1) {
+		status = 0;
+		if (cm.haveItem(5220000)) {
+			cm.sendNext("Hello... I am the #rEXP Gachapon#k. By presenting me with a #bGachapon ticket#k, I will reward you with a #rWrit of Solomon#k...");
+		} else {
+			cm.sendOk("Hello... I am the #rEXP Gachapon#k. By presenting me with a #bGachapon ticket#k, I will reward you with a #rWrit of Solomon#k...");
+			cm.dispose();
+		}
+	} else if (status == 0) {
+		status = 1;
+		cm.sendYesNo("You seem to have a #bGachapon Ticket#k there. Would you like to try your luck?!");
+	} else if (status == 1) {
+		if (mode == 1) {
+			if ((!(randWrit >= 2370000 && randWrit <= 2370012)) || randWrit == undefined || randWrit == null) {
+				randWrit = 2370012;
+			}
+			if (cm.canHold(randWrit)) {
+				cm.gainItem(5220000,-1);
+				cm.gainItem(randWrit,1);
+				cm.sendOk("Here's a #rScroll of Solomon#k... use it wisely.");
+			} else {
+				cm.sendNext("Your USE inventory is full. Please check it and try again.");
+			}
+		}
+		cm.dispose();
 	} else {
-	    cm.sendOk("请检查看看您是否有#t5220000##k，或者道具拦已满。");
+		cm.dispose();
 	}
-	cm.dispose();
-    }
 }

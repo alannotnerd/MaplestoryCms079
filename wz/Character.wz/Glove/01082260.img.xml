@@ -65,7 +65,7 @@
                 </imgdir>
                 <string name="z" value="gloveOverBody"/>
             </canvas>
-            <uol name="../0/rGlove" value="../0/rGlove"/>
+            <uol name="rGlove" value="../0/rGlove"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="lGlove" width="14" height="14">
@@ -118,8 +118,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../0/lGlove2" value="../0/lGlove2"/>
-            <uol name="../0/rGlove" value="../0/rGlove"/>
+            <uol name="lGlove2" value="../0/lGlove2"/>
+            <uol name="rGlove" value="../0/rGlove"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="lGlove2" width="13" height="14">
@@ -877,8 +877,8 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../stabT1/2/lGlove2" value="../../stabT1/2/lGlove2"/>
-            <uol name="../../stabT1/2/rGlove2" value="../../stabT1/2/rGlove2"/>
+            <uol name="lGlove2" value="../../stabT1/2/lGlove2"/>
+            <uol name="rGlove2" value="../../stabT1/2/rGlove2"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
@@ -915,8 +915,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/lGlove" value="../1/lGlove"/>
-            <uol name="../1/rGlove3" value="../1/rGlove3"/>
+            <uol name="lGlove" value="../1/lGlove"/>
+            <uol name="rGlove3" value="../1/rGlove3"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
@@ -937,7 +937,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="lGlove" value="../0/lGlove"/>
             <canvas name="rGlove3" width="15" height="13">
                 <vector name="origin" x="13" y="20"/>
                 <imgdir name="map">
@@ -947,7 +947,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="lGlove" value="../0/lGlove"/>
             <canvas name="rGlove3" width="15" height="13">
                 <vector name="origin" x="0" y="19"/>
                 <imgdir name="map">
@@ -957,8 +957,8 @@
             </canvas>
         </imgdir>
         <imgdir name="3">
-            <uol name="../0/lGlove" value="../0/lGlove"/>
-            <uol name="../0/rGlove3" value="../0/rGlove3"/>
+            <uol name="lGlove" value="../0/lGlove"/>
+            <uol name="rGlove3" value="../0/rGlove3"/>
         </imgdir>
         <imgdir name="4">
             <canvas name="lGlove" width="13" height="14">
@@ -1011,8 +1011,8 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/lGlove" value="../1/lGlove"/>
-            <uol name="../1/rGlove3" value="../1/rGlove3"/>
+            <uol name="lGlove" value="../1/lGlove"/>
+            <uol name="rGlove3" value="../1/rGlove3"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
@@ -1033,7 +1033,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/lGlove" value="../0/lGlove"/>
+            <uol name="lGlove" value="../0/lGlove"/>
             <canvas name="rGlove3" width="16" height="13">
                 <vector name="origin" x="28" y="9"/>
                 <imgdir name="map">
@@ -1045,14 +1045,14 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/lGlove" value="../../proneStab/0/lGlove"/>
-            <uol name="../../proneStab/0/rGlove3" value="../../proneStab/0/rGlove3"/>
+            <uol name="lGlove" value="../../proneStab/0/lGlove"/>
+            <uol name="rGlove3" value="../../proneStab/0/rGlove3"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="2">
-            <uol name="../../swingO2/0/lGlove" value="../../swingO2/0/lGlove"/>
-            <uol name="../../swingO2/0/rGlove2" value="../../swingO2/0/rGlove2"/>
+            <uol name="lGlove" value="../../swingO2/0/lGlove"/>
+            <uol name="rGlove2" value="../../swingO2/0/rGlove2"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -1073,8 +1073,8 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/rGlove3" value="../0/rGlove3"/>
-            <uol name="../0/lGlove2" value="../0/lGlove2"/>
+            <uol name="rGlove3" value="../0/rGlove3"/>
+            <uol name="lGlove2" value="../0/lGlove2"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">

@@ -38,7 +38,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="2">
-                <uol name="../0/weapon" value="../0/weapon"/>
+                <uol name="weapon" value="../0/weapon"/>
             </imgdir>
             <imgdir name="3">
                 <canvas name="weapon" width="51" height="26">
@@ -61,10 +61,10 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="../0/weapon" value="../0/weapon"/>
+                <uol name="weapon" value="../0/weapon"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../0/weapon" value="../0/weapon"/>
+                <uol name="weapon" value="../0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="alert">
@@ -243,7 +243,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="2">
-                <uol name="../1/weapon" value="../1/weapon"/>
+                <uol name="weapon" value="../1/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="shootF">
@@ -266,7 +266,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="2">
-                <uol name="../1/weapon" value="../1/weapon"/>
+                <uol name="weapon" value="../1/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="proneStab">
@@ -291,18 +291,18 @@
         </imgdir>
         <imgdir name="prone">
             <imgdir name="0">
-                <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
+                <uol name="weapon" value="../../proneStab/0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="heal">
             <imgdir name="0">
-                <uol name="../../alert/1/weapon" value="../../alert/1/weapon"/>
+                <uol name="weapon" value="../../alert/1/weapon"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../swingO2/1/weapon" value="../../swingO2/1/weapon"/>
+                <uol name="weapon" value="../../swingO2/1/weapon"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../../swingO2/0/weapon" value="../../swingO2/0/weapon"/>
+                <uol name="weapon" value="../../swingO2/0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="fly">
@@ -316,7 +316,7 @@
                 </canvas>
             </imgdir>
             <imgdir name="1">
-                <uol name="../0/weapon" value="../0/weapon"/>
+                <uol name="weapon" value="../0/weapon"/>
             </imgdir>
         </imgdir>
         <imgdir name="jump">
@@ -332,20 +332,20 @@
         </imgdir>
     </imgdir>
     <imgdir name="38">
-        <uol name="../37/walk1" value="../37/walk1"/>
-        <uol name="../37/stand1" value="../37/stand1"/>
-        <uol name="../37/alert" value="../37/alert"/>
-        <uol name="../37/swingO1" value="../37/swingO1"/>
-        <uol name="../37/swingO2" value="../37/swingO2"/>
-        <uol name="../37/swingO3" value="../37/swingO3"/>
-        <uol name="../37/stabO1" value="../37/stabO1"/>
-        <uol name="../37/stabO2" value="../37/stabO2"/>
-        <uol name="../37/shoot1" value="../37/shoot1"/>
-        <uol name="../37/shootF" value="../37/shootF"/>
-        <uol name="../37/proneStab" value="../37/proneStab"/>
-        <uol name="../37/prone" value="../37/prone"/>
-        <uol name="../37/heal" value="../37/heal"/>
-        <uol name="../37/fly" value="../37/fly"/>
-        <uol name="../37/jump" value="../37/jump"/>
+        <uol name="walk1" value="../37/walk1"/>
+        <uol name="stand1" value="../37/stand1"/>
+        <uol name="alert" value="../37/alert"/>
+        <uol name="swingO1" value="../37/swingO1"/>
+        <uol name="swingO2" value="../37/swingO2"/>
+        <uol name="swingO3" value="../37/swingO3"/>
+        <uol name="stabO1" value="../37/stabO1"/>
+        <uol name="stabO2" value="../37/stabO2"/>
+        <uol name="shoot1" value="../37/shoot1"/>
+        <uol name="shootF" value="../37/shootF"/>
+        <uol name="proneStab" value="../37/proneStab"/>
+        <uol name="prone" value="../37/prone"/>
+        <uol name="heal" value="../37/heal"/>
+        <uol name="fly" value="../37/fly"/>
+        <uol name="jump" value="../37/jump"/>
     </imgdir>
 </imgdir>

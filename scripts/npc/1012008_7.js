@@ -9,8 +9,7 @@ function action(mode, type, selection) {
     }
     else {
         if (status >= 0 && mode == 0) {
-
-            cm.sendOk("¸ĞĞ»ÄãµÄ¹âÁÙ£¡");
+            cm.sendOk("æ„Ÿè°¢ä½ çš„å…‰ä¸´ï¼");
             cm.dispose();
             return;
         }
@@ -26,41 +25,20 @@ function action(mode, type, selection) {
             for (i = 0; i < 10; i++) {
                 text += "";
             }
-			//ÏÔÊ¾ÎïÆ·IDÍ¼Æ¬ÓÃµÄ´úÂëÊÇ  #vÕâÀïĞ´ÈëID#
-            text += "#e#dÖÆ×÷#v4080100#ĞèÒª#v4030012#x20.#v4031891#100Íò.ËÑ¼¯ºÃµÀ¾ßÎÒ¾Í¿ÉÒÔÎªÄúÖÆ×÷ÁË.#l\r\n\r\n"//3
-            text += "#L1##rÖÆ×÷¼ÇÒä´ó¿¼Ñé#l\r\n\r\n"//3
+            text += "åˆ¶ä½œ#v4080100#éœ€è¦#v4030012#x20.#v4031891#100ä¸‡.æœé›†å¥½é“å…·æˆ‘å°±å¯ä»¥ä¸ºæ‚¨åˆ¶ä½œäº†.#l\r\n\r\n"
+            text += "#L1##råˆ¶ä½œè®°å¿†å¤§è€ƒéªŒ#l\r\n\r\n"
             cm.sendSimple(text);
         } else if (selection == 1) {
-			//1
-			//2
-			//3
-			//4
-			//5
-			/*if(!cm.beibao(1,3)){
-            cm.sendOk("×°±¸À¸¿ÕÓà²»×ã3¸ö¿Õ¸ñ£¡");
-            cm.dispose();
-			}else if(!cm.beibao(2,2)){
-            cm.sendOk("ÏûºÄÀ¸¿ÕÓà²»×ã2¸ö¿Õ¸ñ£¡");
-            cm.dispose();
-			}else if(!cm.beibao(3,1)){
-            cm.sendOk("ÉèÖÃÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
-            cm.dispose();
-			}else if(!cm.beibao(4,1)){
-            cm.sendOk("ÆäËûÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
-            cm.dispose();
-			}else if(!cm.beibao(5,1)){
-            cm.sendOk("ÏÖ½ğÀ¸¿ÕÓà²»×ã1¸ö¿Õ¸ñ£¡");
-            cm.dispose();
-			}else */if(cm.haveItem(4030012,20) && cm.getMeso() > 1000000){
+			if(cm.haveItem(4030012,20) && cm.getMeso() > 1000000){
 				cm.gainItem(4030012, -20);
 				cm.gainItem(4080100, 1);
 				cm.gainMeso(-1000000);
-            cm.sendOk("ÖÆ×÷³É¹¦£¡");
-			cm.worldMessage(6,"Íæ¼Ò£º["+cm.getName()+"]ÖÆ×÷ÁË[¼ÇÒä´ó¿¼Ñé]£¬¿ì¿ìÏíÊÜÓÎÏ·µÄÀÖÈ¤°É£¡");
-            cm.dispose();
+				cm.sendOk("åˆ¶ä½œæˆåŠŸï¼");
+				cm.worldMessage(6,"ç©å®¶ï¼š["+cm.getPlayer().getName()+"]åˆ¶ä½œäº†[è®°å¿†å¤§è€ƒéªŒ]ï¼Œå¿«å¿«äº«å—æ¸¸æˆçš„ä¹è¶£å§ï¼");
+				cm.dispose();
 			}else{
-            cm.sendOk("ÄúµÄ²ÄÁÏ²»×ã£¡");
-            cm.dispose();
+				cm.sendOk("æ‚¨çš„ææ–™ä¸è¶³ï¼");
+				cm.dispose();
 			}
 		}
     }

@@ -1,17 +1,12 @@
-function enter(pi) {
-    var returnMap = pi.getSavedLocation("MULUNG_TC");
-    pi.clearSavedLocation("MULUNG_TC");
+importPackage(net.sf.cherry.server.maps);
 
-    if (returnMap < 0) {
-	returnMap = 100000000;
-    }
-    var target = pi.getMap(returnMap);
-    var portal = target.getPortal("unityPortal2");
-    if (portal == null) {
-	portal = target.getPortal(0);
-    }
-    if (pi.getMapId() != target) {
-//pi.playPortalSE();
-	pi.getPlayer().changeMap(target, portal);
-    }
+function enter(pi) {
+    var returnMap = pi.getPlayer().getSavedLocation(SavedLocationType.DOJO);
+    if (returnMap == null||returnMap <=-1) {
+        pi.warp(100000000);
+	return true;
+    }else{
+    pi.getPlayer().clearSavedLocation(SavedLocationType.DOJO);
+    pi.warp(returnMap);
+    return true;}
 }

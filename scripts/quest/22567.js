@@ -9,7 +9,7 @@ function start(mode, type, selection) {
 function end(mode, type, selection) {
 	if (qm.isQuestFinished(22568) || qm.haveItem(4032468,10)) {
 		qm.getPlayer().gainSP(2, 3);
-		qm.forceCompleteQuest();
+		qm.completeQuest();
 	} else {
 		qm.sendNext("Make a growth accelerant.");
 		qm.forceStartQuest();

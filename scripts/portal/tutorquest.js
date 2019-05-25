@@ -1,33 +1,15 @@
 function enter(pi) {
-    var mapid = pi.getMapId();
-    var questid;
-    var state = 2;
-
-    switch (mapid) {
-    case 130030001:
-        questid = 20010;
-        state = 1
-        break;
-    case 130030002:
-        questid = 20011;
-        break;
-    case 130030003:
-        questid = 20012;
-        break;
-    case 130030004:
-        questid = 20013;
-        break;
-    default:
-        return;
-    }
-    if (pi.getQuestStatus(questid) == state) {
-//pi.playPortalSE();
-        pi.warp(pi.getMapId() + 1, "sp");
-    } else {
-        if (mapid == 130030001) {
-            pi.playerMessage(5, "����NPC��ȡ����");
-        } else {
-            pi.playerMessage(5, "���������");
-        }
-    }
+	if (pi.getPlayer().getMapId()==130030001) {
+		pi.warp(130030002);
+		return true;
+	} else if (pi.getPlayer().getMapId()==130030002) {
+		pi.warp(130030003);
+		return true;
+        } else if (pi.getPlayer().getMapId()==130030003) {
+		pi.warp(130030004);
+		return true;
+	} else if (pi.getPlayer().getMapId()==130030004) {
+		pi.warp(130030005);
+		return true;
+	}
 }

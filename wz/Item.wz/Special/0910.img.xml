@@ -14,7 +14,7 @@
     </imgdir>
     <imgdir name="9101001">
         <string name="name" value="저승사자 패키지"/>
-        <uol name="../9101000/icon" value="../9101000/icon"/>
+        <uol name="icon" value="../9101000/icon"/>
     </imgdir>
     <imgdir name="9101002">
         <string name="name" value="남자한복 패키지"/>
@@ -24,7 +24,7 @@
     </imgdir>
     <imgdir name="9101003">
         <string name="name" value="여자한복 패키지"/>
-        <uol name="../9101002/icon" value="../9101002/icon"/>
+        <uol name="icon" value="../9101002/icon"/>
     </imgdir>
     <imgdir name="9101004">
         <string name="name" value="骇客套服"/>
@@ -34,7 +34,7 @@
     </imgdir>
     <imgdir name="9101005">
         <string name="name" value="骇客套服"/>
-        <uol name="../9101004/icon" value="../9101004/icon"/>
+        <uol name="icon" value="../9101004/icon"/>
     </imgdir>
     <imgdir name="9101006">
         <string name="name" value="风衣套装"/>
@@ -44,7 +44,7 @@
     </imgdir>
     <imgdir name="9101007">
         <string name="name" value="风衣套装"/>
-        <uol name="../9101006/icon" value="../9101006/icon"/>
+        <uol name="icon" value="../9101006/icon"/>
     </imgdir>
     <imgdir name="9101008">
         <string name="name" value="天使套服"/>
@@ -60,7 +60,7 @@
     </imgdir>
     <imgdir name="9101010">
         <string name="name" value="圣诞套服"/>
-        <uol name="../9101009/icon" value="../9101009/icon"/>
+        <uol name="icon" value="../9101009/icon"/>
     </imgdir>
     <imgdir name="9101011">
         <string name="name" value="루돌프 패키지"/>
@@ -202,27 +202,27 @@
     </imgdir>
     <imgdir name="9101039">
         <string name="name" value="관우 세트"/>
-        <uol name="../9101027/icon" value="../9101027/icon"/>
+        <uol name="icon" value="../9101027/icon"/>
     </imgdir>
     <imgdir name="9101040">
         <string name="name" value="초선 세트"/>
-        <uol name="../9101028/icon" value="../9101028/icon"/>
+        <uol name="icon" value="../9101028/icon"/>
     </imgdir>
     <imgdir name="9101041">
         <string name="name" value="제갈량 세트"/>
-        <uol name="../9101029/icon" value="../9101029/icon"/>
+        <uol name="icon" value="../9101029/icon"/>
     </imgdir>
     <imgdir name="9101042">
         <string name="name" value="유비 세트"/>
-        <uol name="../9101035/icon" value="../9101035/icon"/>
+        <uol name="icon" value="../9101035/icon"/>
     </imgdir>
     <imgdir name="9101043">
         <string name="name" value="조조 세트"/>
-        <uol name="../9101036/icon" value="../9101036/icon"/>
+        <uol name="icon" value="../9101036/icon"/>
     </imgdir>
     <imgdir name="9101044">
         <string name="name" value="손권 세트"/>
-        <uol name="../9101037/icon" value="../9101037/icon"/>
+        <uol name="icon" value="../9101037/icon"/>
     </imgdir>
     <imgdir name="9101077">
         <string name="name" value="水瓶座套装(男)"/>
@@ -1234,107 +1234,107 @@
     </imgdir>
     <imgdir name="9101498">
         <string name="name" value="추천코디 전사(남)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101499">
         <string name="name" value="추천코디 전사(여)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101500">
         <string name="name" value="추천코디 마법사(남)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101501">
         <string name="name" value="추천코디 마법사(여)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101502">
         <string name="name" value="추천코디 궁수(남)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101503">
         <string name="name" value="추천코디 궁수(여)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101504">
         <string name="name" value="추천코디 도적(남)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101505">
         <string name="name" value="추천코디 도적(여)"/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101506">
         <string name="name" value="고스로리 패키지 I"/>
-        <uol name="../9101117/icon" value="../9101117/icon"/>
+        <uol name="icon" value="../9101117/icon"/>
     </imgdir>
     <imgdir name="9101507">
         <string name="name" value="고스로리 패키지 II"/>
-        <uol name="../9101117/icon" value="../9101117/icon"/>
+        <uol name="icon" value="../9101117/icon"/>
     </imgdir>
     <imgdir name="9101508">
         <string name="name" value="프랑켄슈타인 패키지"/>
-        <uol name="../9101286/icon" value="../9101286/icon"/>
+        <uol name="icon" value="../9101286/icon"/>
     </imgdir>
     <imgdir name="9101509">
         <string name="name" value="마녀 패키지"/>
-        <uol name="../9101285/icon" value="../9101285/icon"/>
+        <uol name="icon" value="../9101285/icon"/>
     </imgdir>
     <imgdir name="9101510">
         <string name="name" value="미이라 패키지"/>
-        <uol name="../9101207/icon" value="../9101207/icon"/>
+        <uol name="icon" value="../9101207/icon"/>
     </imgdir>
     <imgdir name="9101511">
         <string name="name" value="해골 패키지"/>
-        <uol name="../9101208/icon" value="../9101208/icon"/>
+        <uol name="icon" value="../9101208/icon"/>
     </imgdir>
     <imgdir name="9101513">
         <string name="name" value="주니어 리퍼 패키지"/>
-        <uol name="../9101287/icon" value="../9101287/icon"/>
+        <uol name="icon" value="../9101287/icon"/>
     </imgdir>
     <imgdir name="9101554">
         <string name="name" value="웹 추천코디 전사 2차(여) "/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101555">
         <string name="name" value="웹 추천코디 마법사 2차(여) "/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101556">
         <string name="name" value="웹 추천코디 도적 2차(남) "/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101557">
         <string name="name" value="웹 추천코디 궁수 2차(남) "/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101558">
         <string name="name" value="웹 추천코디 해적(남) "/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101559">
         <string name="name" value="설날 한복 패키지 (남)"/>
-        <uol name="../9101002/icon" value="../9101002/icon"/>
+        <uol name="icon" value="../9101002/icon"/>
     </imgdir>
     <imgdir name="9101560">
         <string name="name" value="설날 한복 패키지 (여)"/>
-        <uol name="../9101002/icon" value="../9101002/icon"/>
+        <uol name="icon" value="../9101002/icon"/>
     </imgdir>
     <imgdir name="9101561">
         <string name="name" value="설날 스페셜 패키지"/>
-        <uol name="../9101002/icon" value="../9101002/icon"/>
+        <uol name="icon" value="../9101002/icon"/>
     </imgdir>
     <imgdir name="9101562">
         <string name="name" value="설날 건슬링거 패키지"/>
-        <uol name="../9101002/icon" value="../9101002/icon"/>
+        <uol name="icon" value="../9101002/icon"/>
     </imgdir>
     <imgdir name="9101563">
         <string name="name" value="설날 인파이터 패키지"/>
-        <uol name="../9101002/icon" value="../9101002/icon"/>
+        <uol name="icon" value="../9101002/icon"/>
     </imgdir>
     <imgdir name="9101564">
         <string name="name" value="웹 추천코디 해적(여) "/>
-        <uol name="../9100000/icon" value="../9100000/icon"/>
+        <uol name="icon" value="../9100000/icon"/>
     </imgdir>
     <imgdir name="9101565">
         <string name="name" value="愚人节礼包(男)3"/>
@@ -1350,11 +1350,11 @@
     </imgdir>
     <imgdir name="9101578">
         <string name="name" value="만우절 이벤트 II (여)"/>
-        <uol name="../9101382/icon" value="../9101382/icon"/>
+        <uol name="icon" value="../9101382/icon"/>
     </imgdir>
     <imgdir name="9101579">
         <string name="name" value="만우절 이벤트 II (남)"/>
-        <uol name="../9101381/icon" value="../9101381/icon"/>
+        <uol name="icon" value="../9101381/icon"/>
     </imgdir>
     <imgdir name="9101580">
         <string name="name" value="블랙데이 패키지"/>
@@ -1436,7 +1436,7 @@
     </imgdir>
     <imgdir name="9101607">
         <string name="name" value="턱시도 대여 패키지"/>
-        <uol name="../9101442/icon" value="../9101442/icon"/>
+        <uol name="icon" value="../9101442/icon"/>
     </imgdir>
     <imgdir name="9101608">
         <string name="name" value="彩虹套装"/>
@@ -1720,15 +1720,15 @@
     </imgdir>
     <imgdir name="9101722">
         <string name="name" value="크리스마스 선물 2"/>
-        <uol name="../9101721/icon" value="../9101721/icon"/>
+        <uol name="icon" value="../9101721/icon"/>
     </imgdir>
     <imgdir name="9101723">
         <string name="name" value="크리스마스 선물 3"/>
-        <uol name="../9101721/icon" value="../9101721/icon"/>
+        <uol name="icon" value="../9101721/icon"/>
     </imgdir>
     <imgdir name="9101724">
         <string name="name" value="크리스마스 선물 4"/>
-        <uol name="../9101721/icon" value="../9101721/icon"/>
+        <uol name="icon" value="../9101721/icon"/>
     </imgdir>
     <imgdir name="9101725">
         <string name="name" value="반짝눈꽃 패키지"/>
@@ -1926,75 +1926,75 @@
     </imgdir>
     <imgdir name="9101808">
         <string name="name" value="샤키엘 세트 I (남)"/>
-        <uol name="../9101386/icon" value="../9101386/icon"/>
+        <uol name="icon" value="../9101386/icon"/>
     </imgdir>
     <imgdir name="9101809">
         <string name="name" value="샤키엘 세트 II (남)"/>
-        <uol name="../9101386/icon" value="../9101386/icon"/>
+        <uol name="icon" value="../9101386/icon"/>
     </imgdir>
     <imgdir name="9101810">
         <string name="name" value="샤키엘 세트 III (남)"/>
-        <uol name="../9101386/icon" value="../9101386/icon"/>
+        <uol name="icon" value="../9101386/icon"/>
     </imgdir>
     <imgdir name="9101811">
         <string name="name" value="샤키엘 세트 I (여)"/>
-        <uol name="../9101386/icon" value="../9101386/icon"/>
+        <uol name="icon" value="../9101386/icon"/>
     </imgdir>
     <imgdir name="9101812">
         <string name="name" value="샤키엘 세트 II (여)"/>
-        <uol name="../9101386/icon" value="../9101386/icon"/>
+        <uol name="icon" value="../9101386/icon"/>
     </imgdir>
     <imgdir name="9101813">
         <string name="name" value="샤키엘 세트 III (여)"/>
-        <uol name="../9101386/icon" value="../9101386/icon"/>
+        <uol name="icon" value="../9101386/icon"/>
     </imgdir>
     <imgdir name="9101814">
         <string name="name" value="베에모트 세트 I (남)"/>
-        <uol name="../9101387/icon" value="../9101387/icon"/>
+        <uol name="icon" value="../9101387/icon"/>
     </imgdir>
     <imgdir name="9101815">
         <string name="name" value="베에모트 세트 II (남)"/>
-        <uol name="../9101387/icon" value="../9101387/icon"/>
+        <uol name="icon" value="../9101387/icon"/>
     </imgdir>
     <imgdir name="9101816">
         <string name="name" value="베에모트 세트 III (남)"/>
-        <uol name="../9101387/icon" value="../9101387/icon"/>
+        <uol name="icon" value="../9101387/icon"/>
     </imgdir>
     <imgdir name="9101817">
         <string name="name" value="베에모트 세트 I (여)"/>
-        <uol name="../9101387/icon" value="../9101387/icon"/>
+        <uol name="icon" value="../9101387/icon"/>
     </imgdir>
     <imgdir name="9101818">
         <string name="name" value="베에모트 세트 II (여)"/>
-        <uol name="../9101387/icon" value="../9101387/icon"/>
+        <uol name="icon" value="../9101387/icon"/>
     </imgdir>
     <imgdir name="9101819">
         <string name="name" value="베에모트 세트 III (여)"/>
-        <uol name="../9101387/icon" value="../9101387/icon"/>
+        <uol name="icon" value="../9101387/icon"/>
     </imgdir>
     <imgdir name="9101820">
         <string name="name" value="야누스 세트 I (남)"/>
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101821">
         <string name="name" value="야누스 세트 II (남)"/>
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101822">
         <string name="name" value="야누스 세트 (남)"/>
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101823">
         <string name="name" value="야누스 세트 I (여)"/>
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101824">
         <string name="name" value="야누스 세트 II (여)"/>
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101825">
         <string name="name" value="야누스 세트 (여)"/>
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101826">
         <string name="name" value="品克缤宠物套装"/>
@@ -2036,7 +2036,7 @@
         </canvas>
     </imgdir>
     <imgdir name="9101975">
-        <uol name="../9101388/icon" value="../9101388/icon"/>
+        <uol name="icon" value="../9101388/icon"/>
     </imgdir>
     <imgdir name="9101994">
         <string name="name" value="死神套装(男)"/>
@@ -2046,7 +2046,7 @@
     </imgdir>
     <imgdir name="9101995">
         <string name="name" value="死神套装(女)"/>
-        <uol name="../9101994/icon" value="../9101994/icon"/>
+        <uol name="icon" value="../9101994/icon"/>
     </imgdir>
     <imgdir name="9101996">
         <string name="name" value="펭귄 패키지"/>
@@ -2074,7 +2074,7 @@
     </imgdir>
     <imgdir name="9102000">
         <string name="name" value="마린걸 패키지"/>
-        <uol name="../9101806/icon" value="../9101806/icon"/>
+        <uol name="icon" value="../9101806/icon"/>
     </imgdir>
     <imgdir name="9102001">
         <string name="name" value="레인보우 패키지"/>

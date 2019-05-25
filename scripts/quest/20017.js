@@ -23,11 +23,11 @@ function start(mode, type, selection) {
     } else if (status == 2) {
 	qm.sendNextPrev("Oh, and did you know that there are no monsters in Ereve? Not even a smidgeon of evil dare enter Ereve. But don't you worry. You'll be able to train with illusory monsters created by #p1101001# called Mimis.");
     } else if (status == 3) {
-	qm.askAcceptDecline("You seem prepared! Looking at what you've accomplished, I think you should jump right into hunting more advanced Mimis. How about you hunt #b15 #r#o100122#s in #m130010100##k#k? Use the portal on the left to reach the #bTraining Forest II#k.");
+	qm.sendAcceptDecline("You seem prepared! Looking at what you've accomplished, I think you should jump right into hunting more advanced Mimis. How about you hunt #b15 #r#o100122#s in #m130010100##k#k? Use the portal on the left to reach the #bTraining Forest II#k.");
     } else if (status == 4) {
 	qm.summonMsg(12);
 	qm.forceStartQuest(20020);
-	qm.forceCompleteQuest(20100);
+	qm.completeQuest(20100);
 	qm.forceStartQuest();
 	qm.dispose();
     }

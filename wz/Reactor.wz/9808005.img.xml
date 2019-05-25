@@ -68,7 +68,7 @@
             <int name="timeOut" value="56000"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../0" value="../0"/>
+            <uol name="0" value="../0"/>
         </imgdir>
     </imgdir>
     <imgdir name="2">
@@ -121,7 +121,7 @@
             <int name="timeOut" value="56000"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../0" value="../0"/>
+            <uol name="0" value="../0"/>
         </imgdir>
     </imgdir>
     <imgdir name="3">
@@ -174,7 +174,7 @@
             <int name="timeOut" value="56000"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../0" value="../0"/>
+            <uol name="0" value="../0"/>
         </imgdir>
     </imgdir>
     <imgdir name="4">
@@ -227,7 +227,7 @@
             <int name="timeOut" value="56000"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../0" value="../0"/>
+            <uol name="0" value="../0"/>
         </imgdir>
     </imgdir>
     <imgdir name="5">
@@ -280,7 +280,7 @@
             <int name="timeOut" value="56000"/>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../0" value="../0"/>
+            <uol name="0" value="../0"/>
         </imgdir>
     </imgdir>
     <imgdir name="6">
@@ -290,21 +290,21 @@
         </canvas>
     </imgdir>
     <imgdir name="7">
-        <uol name="../1/0" value="../1/0"/>
+        <uol name="0" value="../1/0"/>
     </imgdir>
     <imgdir name="8">
-        <uol name="../2/0" value="../2/0"/>
+        <uol name="0" value="../2/0"/>
     </imgdir>
     <imgdir name="9">
-        <uol name="../3/0" value="../3/0"/>
+        <uol name="0" value="../3/0"/>
     </imgdir>
     <imgdir name="10">
-        <uol name="../4/0" value="../4/0"/>
+        <uol name="0" value="../4/0"/>
     </imgdir>
     <imgdir name="11">
-        <uol name="../5/0" value="../5/0"/>
+        <uol name="0" value="../5/0"/>
     </imgdir>
     <imgdir name="12">
-        <uol name="../6/0" value="../6/0"/>
+        <uol name="0" value="../6/0"/>
     </imgdir>
 </imgdir>

@@ -1,25 +1,12 @@
 /*
 Moose
+...
+Warps to exit
 */
 
-var status = -1;
+function start() {
 
-function action(mode, type, selection) {
-    if (mode == 1) {
-	status++;
-    } else {
-	status--;
-    }
+cm.warp(221000300,"mid00");
+cm.dispose();
 
-    if (status == 0) {
-	if (cm.getQuestStatus(6180) == 1) {
-	    cm.sendOk("不错。我会送你屏蔽训练场。再次跟我说话。" );
-	} else {
-		cm.sendNext("找我有事情吗？？");
-	    cm.dispose();
-	}
-    } else if (status == 1) {
-	cm.warp(924000000, 0);
-	cm.dispose();
-    }
 }

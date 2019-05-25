@@ -44,7 +44,7 @@ function end(mode, type, selection) {
 	    qm.sendOk("You are currently in full inventory, please check.");
 	    qm.dispose();
 	} else {
-	    qm.forceCompleteQuest();
+	    qm.completeQuest();
 	    if (qm.getJob() != 1310) {
 		qm.changeJob(1310); // Wind Breaker
 		qm.gainItem(4032098, -30);

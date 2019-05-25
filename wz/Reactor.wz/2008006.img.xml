@@ -136,7 +136,7 @@
             <int name="delay" value="120"/>
         </canvas>
         <int name="repeat" value="1"/>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="100"/>
@@ -197,20 +197,20 @@
         </imgdir>
     </imgdir>
     <imgdir name="2">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/1" value="../1/1"/>
-        <uol name="../1/2" value="../1/2"/>
-        <uol name="../1/3" value="../1/3"/>
-        <uol name="../1/4" value="../1/4"/>
-        <uol name="../1/5" value="../1/5"/>
-        <uol name="../1/6" value="../1/6"/>
-        <uol name="../1/7" value="../1/7"/>
-        <uol name="../1/8" value="../1/8"/>
-        <uol name="../1/9" value="../1/9"/>
-        <uol name="../1/10" value="../1/10"/>
-        <uol name="../1/11" value="../1/11"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="1" value="../1/1"/>
+        <uol name="2" value="../1/2"/>
+        <uol name="3" value="../1/3"/>
+        <uol name="4" value="../1/4"/>
+        <uol name="5" value="../1/5"/>
+        <uol name="6" value="../1/6"/>
+        <uol name="7" value="../1/7"/>
+        <uol name="8" value="../1/8"/>
+        <uol name="9" value="../1/9"/>
+        <uol name="10" value="../1/10"/>
+        <uol name="11" value="../1/11"/>
         <int name="repeat" value="1"/>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="100"/>
@@ -271,18 +271,18 @@
         </imgdir>
     </imgdir>
     <imgdir name="3">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/1" value="../1/1"/>
-        <uol name="../1/2" value="../1/2"/>
-        <uol name="../1/3" value="../1/3"/>
-        <uol name="../1/4" value="../1/4"/>
-        <uol name="../1/5" value="../1/5"/>
-        <uol name="../1/6" value="../1/6"/>
-        <uol name="../1/7" value="../1/7"/>
-        <uol name="../1/8" value="../1/8"/>
-        <uol name="../1/9" value="../1/9"/>
-        <uol name="../1/10" value="../1/10"/>
-        <uol name="../1/11" value="../1/11"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="1" value="../1/1"/>
+        <uol name="2" value="../1/2"/>
+        <uol name="3" value="../1/3"/>
+        <uol name="4" value="../1/4"/>
+        <uol name="5" value="../1/5"/>
+        <uol name="6" value="../1/6"/>
+        <uol name="7" value="../1/7"/>
+        <uol name="8" value="../1/8"/>
+        <uol name="9" value="../1/9"/>
+        <uol name="10" value="../1/10"/>
+        <uol name="11" value="../1/11"/>
         <int name="repeat" value="1"/>
         <imgdir name="event">
             <imgdir name="0">
@@ -342,23 +342,23 @@
                 <vector name="rb" x="40" y="79"/>
             </imgdir>
         </imgdir>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="4">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/1" value="../1/1"/>
-        <uol name="../1/2" value="../1/2"/>
-        <uol name="../1/3" value="../1/3"/>
-        <uol name="../1/4" value="../1/4"/>
-        <uol name="../1/5" value="../1/5"/>
-        <uol name="../1/6" value="../1/6"/>
-        <uol name="../1/7" value="../1/7"/>
-        <uol name="../1/8" value="../1/8"/>
-        <uol name="../1/9" value="../1/9"/>
-        <uol name="../1/10" value="../1/10"/>
-        <uol name="../1/11" value="../1/11"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="1" value="../1/1"/>
+        <uol name="2" value="../1/2"/>
+        <uol name="3" value="../1/3"/>
+        <uol name="4" value="../1/4"/>
+        <uol name="5" value="../1/5"/>
+        <uol name="6" value="../1/6"/>
+        <uol name="7" value="../1/7"/>
+        <uol name="8" value="../1/8"/>
+        <uol name="9" value="../1/9"/>
+        <uol name="10" value="../1/10"/>
+        <uol name="11" value="../1/11"/>
         <int name="repeat" value="1"/>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="100"/>
@@ -419,20 +419,20 @@
         </imgdir>
     </imgdir>
     <imgdir name="5">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/1" value="../1/1"/>
-        <uol name="../1/2" value="../1/2"/>
-        <uol name="../1/3" value="../1/3"/>
-        <uol name="../1/4" value="../1/4"/>
-        <uol name="../1/5" value="../1/5"/>
-        <uol name="../1/6" value="../1/6"/>
-        <uol name="../1/7" value="../1/7"/>
-        <uol name="../1/8" value="../1/8"/>
-        <uol name="../1/9" value="../1/9"/>
-        <uol name="../1/10" value="../1/10"/>
-        <uol name="../1/11" value="../1/11"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="1" value="../1/1"/>
+        <uol name="2" value="../1/2"/>
+        <uol name="3" value="../1/3"/>
+        <uol name="4" value="../1/4"/>
+        <uol name="5" value="../1/5"/>
+        <uol name="6" value="../1/6"/>
+        <uol name="7" value="../1/7"/>
+        <uol name="8" value="../1/8"/>
+        <uol name="9" value="../1/9"/>
+        <uol name="10" value="../1/10"/>
+        <uol name="11" value="../1/11"/>
         <int name="repeat" value="1"/>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="100"/>
@@ -493,20 +493,20 @@
         </imgdir>
     </imgdir>
     <imgdir name="6">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/1" value="../1/1"/>
-        <uol name="../1/2" value="../1/2"/>
-        <uol name="../1/3" value="../1/3"/>
-        <uol name="../1/4" value="../1/4"/>
-        <uol name="../1/5" value="../1/5"/>
-        <uol name="../1/6" value="../1/6"/>
-        <uol name="../1/7" value="../1/7"/>
-        <uol name="../1/8" value="../1/8"/>
-        <uol name="../1/9" value="../1/9"/>
-        <uol name="../1/10" value="../1/10"/>
-        <uol name="../1/11" value="../1/11"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="1" value="../1/1"/>
+        <uol name="2" value="../1/2"/>
+        <uol name="3" value="../1/3"/>
+        <uol name="4" value="../1/4"/>
+        <uol name="5" value="../1/5"/>
+        <uol name="6" value="../1/6"/>
+        <uol name="7" value="../1/7"/>
+        <uol name="8" value="../1/8"/>
+        <uol name="9" value="../1/9"/>
+        <uol name="10" value="../1/10"/>
+        <uol name="11" value="../1/11"/>
         <int name="repeat" value="1"/>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="100"/>
@@ -567,20 +567,20 @@
         </imgdir>
     </imgdir>
     <imgdir name="7">
-        <uol name="../1/0" value="../1/0"/>
-        <uol name="../1/1" value="../1/1"/>
-        <uol name="../1/2" value="../1/2"/>
-        <uol name="../1/3" value="../1/3"/>
-        <uol name="../1/4" value="../1/4"/>
-        <uol name="../1/5" value="../1/5"/>
-        <uol name="../1/6" value="../1/6"/>
-        <uol name="../1/7" value="../1/7"/>
-        <uol name="../1/8" value="../1/8"/>
-        <uol name="../1/9" value="../1/9"/>
-        <uol name="../1/10" value="../1/10"/>
-        <uol name="../1/11" value="../1/11"/>
+        <uol name="0" value="../1/0"/>
+        <uol name="1" value="../1/1"/>
+        <uol name="2" value="../1/2"/>
+        <uol name="3" value="../1/3"/>
+        <uol name="4" value="../1/4"/>
+        <uol name="5" value="../1/5"/>
+        <uol name="6" value="../1/6"/>
+        <uol name="7" value="../1/7"/>
+        <uol name="8" value="../1/8"/>
+        <uol name="9" value="../1/9"/>
+        <uol name="10" value="../1/10"/>
+        <uol name="11" value="../1/11"/>
         <int name="repeat" value="1"/>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="100"/>

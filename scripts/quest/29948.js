@@ -1,14 +1,14 @@
 /*
-	ÈÎÎñ: ¿ËÀïÈûµÄÕü¾ÈÕß
-	ÃèÊö: »÷°ÜÁËÑ¦Î÷Ë¹£¬Õü¾ÈÁË¿ËÀïÈû¡£
-	ÐèÒª: 1142259 - ¿ËÀïÈûÕü¾ÈÕß
+	ä»»åŠ¡: å…‹é‡Œå¡žçš„æ‹¯æ•‘è€…
+	æè¿°: å‡»è´¥äº†è–›è¥¿æ–¯ï¼Œæ‹¯æ•‘äº†å…‹é‡Œå¡žã€‚
+	éœ€è¦: 1142259 - å…‹é‡Œå¡žæ‹¯æ•‘è€…
 */
 var status = -1;
 
 function start(mode, type, selection) {
     if (qm.haveItem(1142259, 1) && qm.getPlayer().getLevel() >= 10) {
         qm.forceStartQuest();
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }
@@ -16,7 +16,7 @@ function start(mode, type, selection) {
 function end(mode, type, selection) {
     if (qm.haveItem(1142259, 1) && qm.getPlayer().getLevel() >= 10) {
         qm.forceStartQuest();
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }

@@ -17,6 +17,6 @@ function end(mode, type, selection) {
 	qm.gainItem(2000002, 20);
 	qm.getPlayer().gainSP(1, 0);
 	qm.gainExp(520);
-	qm.forceCompleteQuest();
+	qm.completeQuest();
 	qm.dispose();
 }

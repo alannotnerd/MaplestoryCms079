@@ -1,29 +1,30 @@
+importPackage(net.sf.cherry.client);
+
 var status = -1;
 
 function start(mode, type, selection) {
-    if (mode == 1) {
-        status++;
-    } else {
-        if (status == 0) {
-            qm.sendNext("»¹Ã»×öºÃ×¼±¸Âğ£¿ÄÇÃ´×¼±¸ºÃºóÔÙÀ´¸úÎÒËµÒ»Éù¡£");
-            qm.dispose();
-            return;
-        }
-        status--;
-    }
-    if (status == 0) {
-        qm.askAcceptDecline("¿ªÊ¼»ù´¡ÌåÁ¦¶ÍÁ¶°É£¿×¼±¸ºÃÁË£¿ÔÙÈ·ÈÏÒ»ÏÂ½£ÊÇ·ñ×°±¸ºÃÁË£¿¼¼ÄÜºÍÒ©Ë®ÊÇ·ñÒÑ¾­ÍĞµ½ÁË¿ì½İÀ¸ÖĞ£¿");
-    } else if (status == 1) {
-        if (!qm.isQuestActive(21016)) {
-            qm.forceStartQuest();
-        }
-        qm.sendNextS("ºÜºÃ¡£ÏÂÃæÒªÈ¥´òÁÔµÄ#r#o0100132#s#k£¬ÊÇ±È#o0100131#s¸üÀ÷º¦Ò»Ğ©µÄ¹ÖÊŞ¡£È¥#b#m140020100##k×¥#r15Ö»#k£¬Õâ½«ÓĞÖúÓÚÄãµÄÌåÁ¦Ìá¸ß¡£ÌåÁ¦¾ÍÊÇÃ°ÏÕ¶¯Á¦µÄÀ´Ô´£¡¿ì³öÈ¥°É£¡", 1);
-    } else if (status == 2) {
-        qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3");
-        qm.dispose();
-    }
+	if (mode == -1) {
+		qm.sendNext("è¿˜æ²¡åšå¥½å‡†å¤‡å—ï¼Ÿé‚£ä¹ˆå‡†å¤‡å¥½åå†æ¥è·Ÿæˆ‘è¯´ä¸€å£°ã€‚");
+        	qm.dispose();
+    	} else {
+        	if (mode > 0)
+            		status++;
+        	else
+            		status--;
+		if (status == 0) {
+			qm.sendAcceptDecline("å¼€å§‹åŸºç¡€ä½“åŠ›é”»ç‚¼å§ï¼Ÿå‡†å¤‡å¥½äº†ï¼Ÿå†ç¡®è®¤ä¸€ä¸‹å‰‘æ˜¯å¦è£…å¤‡å¥½äº†ï¼ŸæŠ€èƒ½å’Œè¯æ°´æ˜¯å¦å·²ç»æ‰˜åˆ°äº†å¿«æ·æ ä¸­ï¼Ÿ");
+		} else if (status == 1) {
+			if (!qm.isQuestActive(21016)) {
+				qm.startQuest();
+			}
+			qm.sendNext("å¾ˆå¥½ã€‚ä¸‹é¢è¦å»æ‰“çŒçš„#r#o0100132#s#kï¼Œæ˜¯æ¯”#o0100131#sæ›´å‰å®³ä¸€äº›çš„æ€ªå…½ã€‚å»#b#m140020100##kæŠ“#r15åª#kï¼Œè¿™å°†æœ‰åŠ©äºä½ çš„ä½“åŠ›æé«˜ã€‚ä½“åŠ›å°±æ˜¯å†’é™©åŠ¨åŠ›çš„æ¥æºï¼å¿«å‡ºå»å§ï¼", 1);
+		} else if (status == 2) {
+			qm.showWZEffect("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3", 1);
+			qm.dispose();
+		}
+	}
 }
 
 function end(mode, type, selection) {
-    qm.dispose();
+
 }

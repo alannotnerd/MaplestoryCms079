@@ -788,7 +788,7 @@
             <string name="id" value="9300013"/>
             <int name="x" value="162"/>
             <int name="y" value="54"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="418"/>
@@ -801,7 +801,7 @@
             <string name="id" value="9300013"/>
             <int name="x" value="26"/>
             <int name="y" value="55"/>
-            <int name="mobTime" value="20"/>
+            <int name="mobTime" value="-1"/>
             <int name="f" value="0"/>
             <int name="hide" value="0"/>
             <int name="fh" value="418"/>

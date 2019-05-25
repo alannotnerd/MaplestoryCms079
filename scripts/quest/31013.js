@@ -1,17 +1,17 @@
 /*
-	ÈÎÎñ: ÏûÃğÑ¦Î÷Ë¹
-	ÃèÊö: ËùÓĞµÄ×¼±¸²î²»¶à¶¼Íê³ÉÁË¡£È¥ºÍÃ×¿¨°£¶ûÌ¸Ì¸°É¡£
-	»ñµÃ: ¾­ÑéÖµ48,000
+	ä»»åŠ¡: æ¶ˆç­è–›è¥¿æ–¯
+	æè¿°: æ‰€æœ‰çš„å‡†å¤‡å·®ä¸å¤šéƒ½å®Œæˆäº†ã€‚å»å’Œç±³å¡åŸƒå°”è°ˆè°ˆå§ã€‚
+	è·å¾—: ç»éªŒå€¼48,000
 */
 var status = -1;
 
 function start(mode, type, selection) {
     qm.sendNext("Thank you so much.");
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }
 function end(mode, type, selection) {
     qm.sendNext("Thank you so much.");
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }

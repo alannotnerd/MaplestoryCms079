@@ -1,40 +1,32 @@
-/*
-	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@odinms.de>
-                       Jan Christian Meyer <vimes@odinms.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/* Magician Job Instructor (INSIDE)
+	Magician 2nd Job Advancement
+	Magician's tree dungeon: 108000200
 */
 
+/** Made by xQuasar **/
+
+var status = 0;
 
 function start() {
-    if (cm.haveItem(4031013,30)) {
-        cm.sendNext("wow 果然是个大侠恭喜通过这次个考验 你已经是个强大的法师了所以我将颁赠给你神秘的小礼物.");
-    } else {
-        cm.sendOk("你还没有 #b30 #t4031013##k. 请收集完毕再来找我,祝你好运.");
-        cm.dispose();
-    }
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (mode == 1) {
-        cm.warp(101000003, 0);
-		cm.removeAll(4031013);
-		cm.gainItem(4031009, -1);
-		cm.gainItem(4031012, 1);
+	if (mode == -1) {
+		cm.dispose();
+	} else if (status == -1) {
+		if (cm.haveItem(4031013,30)) {
+			status = 0;
+			cm.sendOk("Great, you passed the test! Here you go, take this Proof of a Hero to Grendel the Really Old to become your second job.");
+		} else {
+			cm.sendOk("You will need to collect 30 Dark Marbles for me.");
+			cm.dispose();
+		}
+	} else if (status == 0) {
+		cm.gainItem(4031012,1);
+		cm.gainItem(4031013,-30);
+		cm.warp(101020000,27);
+		cm.dispose();
 	}
-	cm.dispose();
 }

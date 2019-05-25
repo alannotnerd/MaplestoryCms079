@@ -1,12 +1,12 @@
 /*
-	ÈÎÎñ: Ê®×ÖÂÃÍÅ
-	ÃèÊö: ´ÓÒ»¸öÃû½ĞÊ®×ÖÂÃÍÅµÄÆæ¹ÖÍÅÌåÄÇÀï½Óµ½ÁËÌáÒé¡£µ½½ğÒøµºµÄ´å×¯ÖĞÑ°ÕÒÊ®×ÖÂÃÍÅµÄ#b#p9120206##k£¬²¢ÓëÆä¶Ô»°°É¡£
+	ä»»åŠ¡: åå­—æ—…å›¢
+	æè¿°: ä»ä¸€ä¸ªåå«åå­—æ—…å›¢çš„å¥‡æ€ªå›¢ä½“é‚£é‡Œæ¥åˆ°äº†æè®®ã€‚åˆ°é‡‘é“¶å²›çš„æ‘åº„ä¸­å¯»æ‰¾åå­—æ—…å›¢çš„#b#p9120206##kï¼Œå¹¶ä¸å…¶å¯¹è¯å§ã€‚
 */
 var status = -1;
 
 function start(mode, type, selection) {
     qm.sendNext("Join the Silent Crusade...");
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }
 function end(mode, type, selection) {

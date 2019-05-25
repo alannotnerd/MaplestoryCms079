@@ -1,22 +1,18 @@
-/*
- * Cygnus Skill - Training Never ends
- */
-
 var status = -1;
 
 function start(mode, type, selection) {
-    status++;
-
-    if (status == 0) {
-	qm.askAcceptDecline("#h0#. Have you been slacking off on training since reaching Level 100? We all know how powerful you are, but the training is not complete. Take a look at these Knight Commanders. They train day and night, preparing themselves for the possible encounter with the Black Wizard.");
-    } else {
-	if (mode == 1) {
-	    qm.forceStartQuest();
+	if (mode == -1) {
+		qm.dispose();
+	} else {
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			qm.sendAcceptDecline("恭喜你已到达#b100级#k，但这并不表示修炼的结束，如果继续努力，偶尔可以去骑士团长那里听听他们的建议。说不定，可以学到什么#b新技能#k……");
+		} else if (status == 1) {
+			qm.completeQuest();
+			qm.dispose();
+		}
 	}
-	qm.dispose();
-    }
-}
-
-function end(mode, type, selection) {
-    qm.dispose();
 }

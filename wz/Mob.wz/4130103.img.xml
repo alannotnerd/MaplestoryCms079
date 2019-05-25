@@ -395,7 +395,7 @@
             <vector name="head" x="-47" y="-97"/>
             <int name="delay" value="90"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
+        <uol name="8" value="1"/>
+        <uol name="9" value="0"/>
     </imgdir>
 </imgdir>

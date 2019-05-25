@@ -1,5 +1,5 @@
 function enter(pi) {
-//pi.playPortalSE();
-	pi.saveLocation("FREE_MARKET");
+	pi.getPlayer().saveLocation(net.sf.cherry.server.maps.SavedLocationType.FREE_MARKET);
 	pi.warp(749030000, "st00");
+	return true;
 }

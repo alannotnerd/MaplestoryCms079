@@ -12,7 +12,7 @@ function start(mode, type, selection) {
             status++;
         }
         if (status == 0) {
-            qm.sendNext("你确定你要离开这里吗？挑战贝尔加莫特是很不容易的，这些需要你和伙伴们的努力奋斗，才能打败他！如果你准备好了，我将送你到贝尔加莫特的基地，准备好了吗？");
+            qm.sendNext("浣犵‘瀹氫綘瑕佺寮�杩欓噷鍚楋紵鎸戞垬璐濆皵鍔犺帿鐗规槸寰堜笉瀹规槗鐨勶紝杩欎簺闇�瑕佷綘鍜屼紮浼翠滑鐨勫姫鍔涘鏂楋紝鎵嶈兘鎵撹触浠栵紒濡傛灉浣犲噯澶囧ソ浜嗭紝鎴戝皢閫佷綘鍒拌礉灏斿姞鑾壒鐨勫熀鍦帮紝鍑嗗濂戒簡鍚楋紵");
         } else if (status == 1) {
             qm.warp(802000209, 0);
             //qm.forceStartQuest();

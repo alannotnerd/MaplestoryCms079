@@ -101,9 +101,9 @@
             <vector name="head" x="-1" y="-34"/>
             <int name="delay" value="180"/>
         </canvas>
-        <uol name="6" value="6"/>
-        <uol name="7" value="7"/>
-        <uol name="4" value="4"/>
+        <uol name="8" value="6"/>
+        <uol name="9" value="7"/>
+        <uol name="10" value="4"/>
     </imgdir>
     <imgdir name="jump">
         <canvas name="0" width="46" height="50">

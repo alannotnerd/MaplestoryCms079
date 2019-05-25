@@ -24,14 +24,14 @@
             <vector name="origin" x="34" y="57"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
+        <uol name="4" value="2"/>
+        <uol name="5" value="3"/>
+        <uol name="6" value="2"/>
+        <uol name="7" value="3"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="3"/>
+        <uol name="10" value="2"/>
+        <uol name="11" value="1"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="56" height="57">
@@ -42,9 +42,9 @@
             <vector name="origin" x="34" y="57"/>
             <int name="delay" value="240"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
         <canvas name="5" width="56" height="57">
             <vector name="origin" x="34" y="57"/>
             <int name="delay" value="500"/>
@@ -53,12 +53,12 @@
             <vector name="origin" x="34" y="57"/>
             <int name="delay" value="1000"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
+        <uol name="8" value="1"/>
+        <uol name="9" value="0"/>
+        <uol name="10" value="1"/>
+        <uol name="11" value="0"/>
+        <uol name="12" value="5"/>
+        <uol name="13" value="6"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>
@@ -97,17 +97,17 @@
             <vector name="origin" x="34" y="57"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
-        <uol name="7" value="7"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
-        <uol name="7" value="7"/>
-        <uol name="6" value="6"/>
-        <uol name="5" value="5"/>
-        <uol name="4" value="4"/>
-        <uol name="3" value="3"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
+        <uol name="8" value="5"/>
+        <uol name="9" value="6"/>
+        <uol name="10" value="7"/>
+        <uol name="11" value="5"/>
+        <uol name="12" value="6"/>
+        <uol name="13" value="7"/>
+        <uol name="14" value="6"/>
+        <uol name="15" value="5"/>
+        <uol name="16" value="4"/>
+        <uol name="17" value="3"/>
+        <uol name="18" value="2"/>
+        <uol name="19" value="1"/>
     </imgdir>
 </imgdir>

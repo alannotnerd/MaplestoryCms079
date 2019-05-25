@@ -919,18 +919,18 @@
     </imgdir>
     <imgdir name="ladder">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="default" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="rope">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="default" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="default" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
 </imgdir>

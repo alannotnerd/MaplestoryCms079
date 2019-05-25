@@ -115,9 +115,9 @@
                 <int name="z" value="0"/>
                 <int name="delay" value="200"/>
             </canvas>
-            <uol name="3" value="3"/>
-            <uol name="2" value="2"/>
-            <uol name="1" value="1"/>
+            <uol name="5" value="3"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="1"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="0" width="33" height="11">
@@ -145,9 +145,9 @@
                 <int name="z" value="0"/>
                 <int name="delay" value="300"/>
             </canvas>
-            <uol name="3" value="3"/>
-            <uol name="2" value="2"/>
-            <uol name="1" value="1"/>
+            <uol name="5" value="3"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="1"/>
         </imgdir>
         <imgdir name="4">
             <canvas name="0" width="242" height="218">

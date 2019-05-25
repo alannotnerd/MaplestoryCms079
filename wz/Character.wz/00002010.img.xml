@@ -1670,16 +1670,16 @@
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="../../swingPF/0/body" value="../../swingPF/0/body"/>
-            <uol name="../../swingPF/0/arm" value="../../swingPF/0/arm"/>
-            <uol name="../../swingPF/0/hand" value="../../swingPF/0/hand"/>
+            <uol name="body" value="../../swingPF/0/body"/>
+            <uol name="arm" value="../../swingPF/0/arm"/>
+            <uol name="hand" value="../../swingPF/0/hand"/>
             <short name="face" value="1"/>
             <int name="delay" value="100"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingPF/1/body" value="../../swingPF/1/body"/>
-            <uol name="../../swingPF/1/arm" value="../../swingPF/1/arm"/>
-            <uol name="../../swingPF/1/hand" value="../../swingPF/1/hand"/>
+            <uol name="body" value="../../swingPF/1/body"/>
+            <uol name="arm" value="../../swingPF/1/arm"/>
+            <uol name="hand" value="../../swingPF/1/hand"/>
             <short name="face" value="1"/>
             <int name="delay" value="200"/>
         </imgdir>
@@ -1714,9 +1714,9 @@
             <int name="delay" value="200"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../stabT1/2/body" value="../../stabT1/2/body"/>
-            <uol name="../../stabT1/2/arm" value="../../stabT1/2/arm"/>
-            <uol name="../../stabT1/2/hand" value="../../stabT1/2/hand"/>
+            <uol name="body" value="../../stabT1/2/body"/>
+            <uol name="arm" value="../../stabT1/2/arm"/>
+            <uol name="hand" value="../../stabT1/2/hand"/>
             <short name="face" value="1"/>
             <int name="delay" value="200"/>
         </imgdir>
@@ -1767,8 +1767,8 @@
             <int name="delay" value="150"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/body" value="../1/body"/>
-            <uol name="../1/arm" value="../1/arm"/>
+            <uol name="body" value="../1/body"/>
+            <uol name="arm" value="../1/arm"/>
             <short name="face" value="1"/>
             <int name="delay" value="350"/>
         </imgdir>
@@ -1931,8 +1931,8 @@
             <int name="delay" value="150"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../1/body" value="../1/body"/>
-            <uol name="../1/arm" value="../1/arm"/>
+            <uol name="body" value="../1/body"/>
+            <uol name="arm" value="../1/arm"/>
             <short name="face" value="1"/>
             <int name="delay" value="250"/>
         </imgdir>
@@ -1985,17 +1985,17 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/body" value="../../proneStab/0/body"/>
-            <uol name="../../proneStab/0/arm" value="../../proneStab/0/arm"/>
+            <uol name="body" value="../../proneStab/0/body"/>
+            <uol name="arm" value="../../proneStab/0/arm"/>
             <short name="face" value="1"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../alert/1/body" value="../../alert/1/body"/>
-            <uol name="../../alert/1/arm" value="../../alert/1/arm"/>
-            <uol name="../../alert/1/lHand" value="../../alert/1/lHand"/>
-            <uol name="../../alert/1/rHand" value="../../alert/1/rHand"/>
+            <uol name="body" value="../../alert/1/body"/>
+            <uol name="arm" value="../../alert/1/arm"/>
+            <uol name="lHand" value="../../alert/1/lHand"/>
+            <uol name="rHand" value="../../alert/1/rHand"/>
             <short name="face" value="1"/>
             <int name="delay" value="300"/>
         </imgdir>
@@ -2022,8 +2022,8 @@
             <int name="delay" value="150"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../swingO2/0/body" value="../../swingO2/0/body"/>
-            <uol name="../../swingO2/0/arm" value="../../swingO2/0/arm"/>
+            <uol name="body" value="../../swingO2/0/body"/>
+            <uol name="arm" value="../../swingO2/0/arm"/>
             <short name="face" value="1"/>
             <int name="delay" value="350"/>
         </imgdir>

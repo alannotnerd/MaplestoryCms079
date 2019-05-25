@@ -157,11 +157,11 @@
         </canvas>
     </imgdir>
     <imgdir name="hit1">
-        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="0" value="../stand/0"/>
     </imgdir>
     <imgdir name="die1">
-        <uol name="../attack1/4" value="../attack1/4"/>
-        <uol name="../attack1/5" value="../attack1/5"/>
-        <uol name="../attack1/6" value="../attack1/6"/>
+        <uol name="0" value="../attack1/4"/>
+        <uol name="1" value="../attack1/5"/>
+        <uol name="2" value="../attack1/6"/>
     </imgdir>
 </imgdir>

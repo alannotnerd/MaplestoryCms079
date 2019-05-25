@@ -8,13 +8,10 @@ function action(mode, type, selection) {
     }
     switch(cm.getPlayer().getMapId()) {
 	case 930000500:
-            if (!cm.canHold(4001163, 1)) {
-	    	cm.sendNext("背包满了无法获取！.");
+	    if (!cm.haveItem(4001163)) {
+	    	cm.sendNext("Get me the Purple Stone of Magic from here.");
 	    } else {
-		cm.givePartyExp(100000);
 		cm.warpParty(930000600);
-                cm.gainItem(4001163,+1);//
-cm.喇叭(2, "[" + cm.getPlayer().getName() + "]带领队伍进入【毒雾副本】BOSS地图，让我们祝福他们吧！！");
 	    }
 	    break;
     }

@@ -1,9 +1,14 @@
 function enter(pi) {
-    var returnMap = pi.getSavedLocation("MULUNG_TC");
-    if (returnMap < 0) {
-        returnMap = 102000000; // to fix people who entered the fm trough an unconventional way
-    }
-    pi.clearSavedLocation("MULUNG_TC");
-    pi.warp(returnMap, 0);
-    return true;
+	var returnMap = pi.getPlayer().getSavedLocation(net.sf.cherry.server.maps.SavedLocationType.Pachinko_port);
+	if (returnMap < 0) {
+		returnMap = 102000000;
+	}
+	var target = pi.getPlayer().getClient().getChannelServer().getMapFactory().getMap(returnMap);
+	var portal = target.getPortal("pachinkoDoor");
+	if (portal == null) {
+		portal = target.getPortal(0);
+	}
+	pi.getPlayer().clearSavedLocation(net.sf.cherry.server.maps.SavedLocationType.Pachinko_port);
+	pi.getPlayer().changeMap(target, portal);
+	return true;
 }

@@ -1,24 +1,24 @@
-var status = 0;
-
 function start() {
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (status == 0) {
-        cm.sendYesNo("ÇëÎÊÄãÏëÒªÀë¿ª´¬ÉÏ?");
-        status++;
-    } else {
-        if (mode < 1) {
-            cm.dispose();
-        } else {
-            if (status == 1) {
-                cm.sendNext ("ºÃ°É.ÏÂ´ÎÔÙ¼û.");
-                status++;
-            } else if (status == 2) {
-                cm.warp(101000300, 0);// back to orbis
-                cm.dispose();
-            }
-        }
-    }
+	if(mode == -1) {
+		cm.dispose();
+		return;
+	} else {
+		status++;
+		if(mode == 0) {
+			cm.sendOk("æ—…é€”è¿˜å¾ˆæ¼«é•¿...");
+			cm.dispose();
+			return;
+		}
+		if(status == 0) {
+			cm.sendYesNo("ä½ æƒ³ä¸‹èˆ¹å—ï¼Ÿç¦»å¼€é£èˆ¹åä¼šå›åˆ°åŸæ¥çš„åœ°æ–¹ï¼");
+		} else if(status == 1) {
+			cm.warp(101000300);
+			cm.dispose();
+		}
+	}
 }

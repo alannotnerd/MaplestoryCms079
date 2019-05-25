@@ -1,53 +1,60 @@
-status = -1;
+/* ç»ç‰ˆæŠµç”¨å·å•†åº— è„¸é¥°*/
+
+var status = -1;
 var itemList = Array(
-//-------¶ú»·-------
-Array(2340000, 50, 1, 1), //×£¸£¾íÖá
-Array(2040801, 400, 1, 1), //ÊÖÌ×Ãô½İ¾íÖá60%
-Array(2040802, 600, 1, 1), //ÊÖÌ×Ãô½İ¾íÖá10%
-Array(2040804, 400, 1, 1), //ÊÖÌ×¹¥»÷¾íÖá60%
-Array(2040805, 200, 1, 1), //ÊÖÌ×¹¥»÷¾íÖá10%
-Array(2040808, 500, 1, 1), //ÊÖÌ×Ãô½İ×çÖä¾íÖá70%
-Array(2040809, 500, 1, 1), //ÊÖÌ×Ãô½İ×çÖä¾íÖá30%
-Array(2040810, 100, 1, 1), //ÊÖÌ×¹¥»÷×çÖä¾íÖá70%
-Array(2040811, 100, 1, 1), //ÊÖÌ×¹¥»÷×çÖä¾íÖá30%
-Array(2040814, 500, 1, 1), //ÊÖÌ×Ä§Á¦×çÖä¾íÖá70%
-Array(2040815, 500, 1, 1), //ÊÖÌ×Ä§Á¦×çÖä¾íÖá30%
-Array(2040816, 500, 1, 1), //ÊÖÌ×Ä§Á¦¾íÖá10%
-Array(2040817, 500, 1, 1), //ÊÖÌ×Ä§Á¦¾íÖá60%
-Array(2040819, 500, 1, 1), //ÊÖÌ×Ãô½İ¾íÖá65%
-Array(2040820, 500, 1, 1), //ÊÖÌ×Ãô½İ¾íÖá15%
-Array(2040821, 600, 1, 1), //ÊÖÌ×¹¥»÷¾íÖá65%
-Array(2040822, 600, 1, 1), //ÊÖÌ×¹¥»÷¾íÖá15%
-Array(2040906, 500, 1, 1), //¶ÜÅÆÔËÆø¾íÖá70%
-Array(2040907, 500, 1, 1), //¶ÜÅÆÔËÆø¾íÖá30%
-Array(2040914, 600, 1, 1), //¶ÜÅÆ¹¥»÷¾íÖá60%
-Array(2040915, 600, 1, 1), //¶ÜÅÆ¹¥»÷¾íÖá10%
-Array(2040916, 400, 1, 1), //¶ÜÅÆ¹¥»÷×çÖä¾íÖá70%
-Array(2040917, 200, 1, 1), //¶ÜÅÆ¹¥»÷×çÖä¾íÖá30%
-Array(2040919, 200, 1, 1), //¶ÜÅÆÄ§Á¦¾íÖá60%
-Array(2040920, 600, 1, 1), //¶ÜÅÆÄ§Á¦¾íÖá10%
-Array(2040921, 600, 1, 1), //¶ÜÅÆÄ§Á¦×çÖä¾íÖá70%
-Array(2040922, 400, 1, 1), //¶ÜÅÆÄ§Á¦×çÖä¾íÖá30%
-Array(2040924, 600, 1, 1), //¶ÜÅÆÔËÆø¾íÖá60%
-Array(2040925, 400, 1, 1), //¶ÜÅÆÔËÆø¾íÖá10%
-Array(2040930, 600, 1, 1), //¶ÜÅÆÁ¦Á¿¾íÖá70%
-Array(2040931, 200, 1, 1), //¶ÜÅÆÁ¦Á¿¾íÖá60%
-Array(2040932, 100, 1, 1), //¶ÜÅÆÁ¦Á¿¾íÖá30%
-Array(2040933, 600, 1, 1), //¶ÜÅÆÁ¦Á¿¾íÖá10%
-Array(2041201, 600, 1, 1), //ÏîÁ´ÔËÆø¾íÖá10%
-Array(2041202, 600, 1, 1), //ÏîÁ´ÔËÆø¾íÖá60%
-Array(2041204, 600, 1, 1), //ÏîÁ´ÔËÆø×çÖä¾íÖá30%
-Array(2041205, 600, 1, 1), //ÏîÁ´ÔËÆø×çÖä¾íÖá70%
-Array(2041206, 600, 1, 1), //ÏîÁ´Á¦Á¿¾íÖá10%
-Array(2041207, 600, 1, 1), //ÏîÁ´Á¦Á¿¾íÖá60%
-Array(2041209, 600, 1, 1), //ÏîÁ´Á¦Á¿×çÖä¾íÖá30%
-Array(2041210, 600, 1, 1), //ÏîÁ´Á¦Á¿×çÖä¾íÖá70%
-Array(2041301, 600, 1, 1), //Ñü´øÁ¦Á¿¾íÖá60%
-Array(2041304, 600, 1, 1), //Ñü´øÖÇÁ¦¾íÖá60%
-Array(2041307, 600, 1, 1), //Ñü´øÃô½İ¾íÖá60%
-Array(2041310, 600, 1, 1), //Ñü´øÔËÆø¾íÖá60%
-Array(2049100, 100, 1, 1)//»ìãç¾íÖá60%
+Array(1042164, 50000),
+Array(1062126, 70000),
+Array(1002355, 50000),
+Array(1042347, 70000),
+Array(1062229, 50000),
+Array(1042329, 70000),
+Array(1062216, 50000),
+Array(1042290, 70000),
+Array(1062209, 50000),
+Array(1062179, 70000),
+Array(1062219, 50000),
+Array(1062137, 70000),
+Array(1012511, 50000),
+Array(1012468, 70000),
+Array(1702583, 50000),
+Array(1702529, 70000),
+Array(1702455, 50000),
+Array(1073014, 70000),
+Array(1073013, 50000),
+Array(1072943, 70000),
+Array(1072951, 50000),
+Array(1702535, 70000), 
+Array(1004213, 50000),
+Array(1072531, 70000),
+Array(1072529, 50000),
+Array(1051367, 90000),
+Array(1050300, 90000),
+Array(1051350, 70000),
+Array(1050284, 90000),
+Array(1004268, 70000),
+Array(1004038, 60000),
+Array(1012472, 80000),
+Array(1022229, 50000),
+Array(1102778, 120000),
+Array(1102712, 60000),
+Array(1102707, 60000),
+Array(1102708, 60000),
+Array(1102665, 70000),
+Array(1102274, 50000),
+Array(1082503, 80000),
+Array(1004050, 50000),
+Array(1702456, 70000),
+Array(1702570, 90000),
+Array(1112183, 200000),
+Array(1112296, 200000),
+Array(1004472, 70000),
+Array(1001099, 60000),
+Array(1051411, 80000),
+Array(1012384, 50000),
+Array(1702453, 80000)
 );
+var selectedItem = -1;
+var selectedCost = -1;
 
 function start() {
     action(1, 0, 0);
@@ -57,47 +64,45 @@ function action(mode, type, selection) {
     if (mode == 1) {
         status++;
     } else {
-        if (status == 0) {
-            cm.sendOk("²»ÏëÊ¹ÓÃÂğ£¿¡­ÎÒµÄ¶Ç×ÓÀïÓĞ¸÷Àà#bÆæÌØ×ùÒÎ»ò¾íÖá¡¢×°±¸¡¢ĞÂÆæµÀ¾ß#kÅ¶£¡");
+        if (status >= 0) {
             cm.dispose();
+            return;
         }
         status--;
     }
     if (status == 0) {
-        if (cm.getHyPay(4) >= 5) {
-            cm.sendYesNo("Ã°ÏÕµº»ı·ÖÖĞÓĞ¸÷Àà#b×°±¸¡¢¾íÖá»òÏ¡ÓĞĞÂÆæµÄµÀ¾ß#kàŞ£¡Ê¹ÓÃ¡°#b5»ı·Ö#k¡±¾Í¿ÉÒÔ½»»». ÓÎÏ·ÉÌ³ÇÖĞµÄ¡°ÆäËû¡±£­¡°ÓÎÏ·¡±ÇøÀïÓĞàŞ¡£ÏÖÔÚÒªÍæ×ªµ°»úÃ´? ");
-        } else {
-            cm.sendOk("ÄãÓĞ5µãÏû·Ñ»ı·ÖÂğ?");
-            cm.safeDispose();
-        }
-    } else if (status == 1) {
-        var chance = Math.floor(Math.random() * 1000);
-        var finalitem = Array();
+        var selStr = "#fUI/UIWindow2.img/QuestAlarm/BtQ/normal/0#äº²çˆ±çš„#r#h ##kæ‚¨å¥½ï¼Œè¯·é€‰æ‹©æ‚¨å¸Œæœ›è´­ä¹°çš„é“å…·ï¼š";
         for (var i = 0; i < itemList.length; i++) {
-            if (itemList[i][1] >= chance) {
-                finalitem.push(itemList[i]);
-            }
+            selStr += "\r\n#L" + i + "##i" + itemList[i][0] + ":# #b#t" + itemList[i][0] + "##k   #r" + itemList[i][1]  + "#kæŠµç”¨å·#l";
         }
-        if (finalitem.length != 0) {
-            var item;
-            var random = new java.util.Random();
-            var finalchance = random.nextInt(finalitem.length);
-            var itemId = finalitem[finalchance][0];
-            var quantity = finalitem[finalchance][2];
-            var notice = finalitem[finalchance][3];
-            item = cm.gainGachaponItem(itemId, quantity, "5µãÏû·Ñ»ı·ÖÕûºÏĞÍ×ªµ°»ú", notice);
-            if (item != -1) {
-                cm.delPayReward(5);
-                cm.sendOk("Äã»ñµÃÁË #b#t" + item + "##k " + quantity + "¸ö¡£");
-            } else {
-                cm.sendOk("ÄãÈ·ÊµÓĞ#b#5µãÏû·Ñ»ı·Ö#kÂğ£¿Èç¹ûÊÇ£¬ÇëÄãÈ·ÈÏÔÚ±³°üµÄ×°±¸£¬ÏûºÄ£¬ÆäËû´°¿ÚÖĞÊÇ·ñÓĞÒ»¸ñÒÔÉÏµÄ¿Õ¼ä¡£");
-            }
-            cm.safeDispose();
+        cm.sendSimple(selStr);
+    } else if (status == 1) {
+        var item = itemList[selection];
+        if (item != null) {
+            selectedItem = item[0];
+            selectedCost = item[1];
+            cm.sendYesNo("æ‚¨æ˜¯å¦è´­ä¹°#i" + selectedItem + ":# #b#t" + selectedItem + "##k éœ€è¦ #r" + selectedCost + "#k æŠµç”¨å·ï¼Ÿ");
         } else {
-            cm.sendOk("½ñÌìµÄÔËÆø¿ÉÕæ²î£¬Ê²Ã´¶¼Ã»ÓĞÄÃµ½¡£");
-                cm.delPayReward(5);
-            cm.gainItem(5220040, 1);
-            cm.safeDispose();
+            cm.sendOk("å‡ºç°é”™è¯¯...");
+            cm.dispose();
         }
+    } else if (status == 2) {
+        if (selectedCost <= 0 || selectedItem <= 0) {
+            cm.sendOk("è´­ä¹°é“å…·å‡ºç°é”™è¯¯...");
+            cm.dispose();
+            return;
+        }
+        if (cm.getPlayer().getCSPoints(2) >= selectedCost) {
+            var gachaponItem = cm.gainGachaponItem(selectedItem, 1, "æŠµç”¨å·å•†åº—", 3, true);
+            if (gachaponItem != -1) {
+                cm.gainNX(2, - selectedCost );
+                cm.sendOk("æ­å–œæ‚¨æˆåŠŸè´­ä¹°#i" + selectedItem + ":# #b#t" + selectedItem + "##kã€‚");
+            } else {
+                cm.sendOk("è´­ä¹°å¤±è´¥ï¼Œè¯·æ‚¨ç¡®è®¤åœ¨èƒŒåŒ…æ‰€æœ‰æ ç›®çª—å£ä¸­æ˜¯å¦æœ‰ä¸€æ ¼ä»¥ä¸Šçš„ç©ºé—´ã€‚");
+            }
+        } else {
+            cm.sendOk("æ‚¨æ²¡æœ‰é‚£ä¹ˆå¤šæŠµç”¨å·ã€‚\r\n\r\nè´­ä¹°#i" + selectedItem + ":# #b#t" + selectedItem + "##k éœ€è¦ #r" + selectedCost + "#k æŠµç”¨å·ã€‚");
+        }
+        cm.dispose();
     }
 }

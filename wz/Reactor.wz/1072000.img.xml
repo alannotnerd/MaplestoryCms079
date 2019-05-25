@@ -43,17 +43,17 @@
         </imgdir>
     </imgdir>
     <imgdir name="1">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="2"/>
                 <int name="state" value="2"/>
             </imgdir>
         </imgdir>
-        <uol name="../0/hit" value="../0/hit"/>
+        <uol name="hit" value="../0/hit"/>
     </imgdir>
     <imgdir name="2">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="2"/>
@@ -61,11 +61,11 @@
             </imgdir>
         </imgdir>
         <imgdir name="hit">
-            <uol name="../../0/hit/0" value="../../0/hit/0"/>
-            <uol name="../../0/hit/1" value="../../0/hit/1"/>
-            <uol name="../../0/hit/2" value="../../0/hit/2"/>
-            <uol name="../../0/hit/3" value="../../0/hit/3"/>
-            <uol name="../../0/hit/4" value="../../0/hit/4"/>
+            <uol name="0" value="../../0/hit/0"/>
+            <uol name="1" value="../../0/hit/1"/>
+            <uol name="2" value="../../0/hit/2"/>
+            <uol name="3" value="../../0/hit/3"/>
+            <uol name="4" value="../../0/hit/4"/>
             <canvas name="5" width="61" height="68">
                 <vector name="origin" x="30" y="34"/>
                 <int name="z" value="0"/>

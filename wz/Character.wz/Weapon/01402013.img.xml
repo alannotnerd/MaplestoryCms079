@@ -24,7 +24,7 @@
         <int name="incDEX" value="2"/>
         <int name="incSTR" value="2"/>
         <int name="tuc" value="7"/>
-        <int name="price" value="2200"/>
+        <int name="price" value="120000"/>
         <int name="attackSpeed" value="4"/>
         <int name="cash" value="0"/>
     </imgdir>
@@ -48,7 +48,7 @@
             </canvas>
         </imgdir>
         <imgdir name="2">
-            <uol name="../0/weapon" value="../0/weapon"/>
+            <uol name="weapon" value="../0/weapon"/>
         </imgdir>
         <imgdir name="3">
             <canvas name="weapon" width="82" height="35">
@@ -337,7 +337,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
+            <uol name="weapon" value="../../proneStab/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -351,7 +351,7 @@
             </canvas>
         </imgdir>
         <imgdir name="1">
-            <uol name="../0/weapon" value="../0/weapon"/>
+            <uol name="weapon" value="../0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">
@@ -367,13 +367,13 @@
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../alert/1/weapon" value="../../alert/1/weapon"/>
+            <uol name="weapon" value="../../alert/1/weapon"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../swingO2/1/weapon" value="../../swingO2/1/weapon"/>
+            <uol name="weapon" value="../../swingO2/1/weapon"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../swingO2/0/weapon" value="../../swingO2/0/weapon"/>
+            <uol name="weapon" value="../../swingO2/0/weapon"/>
         </imgdir>
     </imgdir>
 </imgdir>

@@ -1,5 +1,8 @@
+/*@author Jvlaple
+ *2002001.js
+ *Drops Cloud Piece...
+ */
+ 
 function act() {
-    var r = rm.getMap().getReactorByName("eak");
-    r.forceHitReactor(r.getState() + 1);
-    rm.dropItems();
+	rm.dropItems();
 }

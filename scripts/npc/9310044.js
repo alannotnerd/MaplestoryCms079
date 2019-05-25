@@ -1,35 +1,55 @@
 /*
-	ÉÙÁÖÑýÉ® -- ³ö¿ÚNPC
+	äº²äº²å˜´å†’é™©ä¸“ç”¨è„šæœ¬
+
+	å°‘æž—å¦–åƒ§ -- å‡ºå£NPC
+	
+	by-- èŠ¯ç¢ŽçŽ‹å­
+		
+	QQ:7851103
+
 */
 var status = 0;
 
-function start() {
+function start() 
+	{
 	status = -1;
 	action(1, 0, 0);
+
+
 	}
 
-function action(mode, type, selection) {
-	if (mode == -1) {
+function action(mode, type, selection)
+{
+	if (mode == -1)
+	{
 		cm.dispose();
-	} else if (mode == 0) {
-		cm.sendOk("ºÃµÄÈç¹ûÒª³öÈ¥ËæÊ±À´ÕÒÎÒ.");
+	}
+	else if (mode == 0)
+	{
+		cm.sendOk("å¥½çš„å¦‚æžœè¦å‡ºåŽ»éšæ—¶æ¥æ‰¾æˆ‘.");
 		cm.dispose();
-	} else {
+	}else 
+	{
 		if (mode == 1)
 			status++;
 		else
 			status--;		
-	if (status == 0) {		
-		cm.sendYesNo("ÄúÊÇ·ñÒª³öÈ¥ÄØ?" );	
-	} else if (status == 1)  {
-		if (!cm.isLeader()) {
-	cm.sendOk("Çë½ÐÄãµÄ¶Ó³¤À´ÕÒÎÒ!");
-		cm.dispose();
-		} else {
-		cm.warpParty(702070400,0);
-		cm.resetReactors();
+	if (status == 0)
+	{		
+		cm.sendYesNo("æ‚¨æ˜¯å¦è¦å‡ºåŽ»å‘¢?" );	
+	}
+	else if (status == 1) 
+        {
+		var m = cm.getPlayer().getMap()
+		if(m.playerCount() > 1){
+			m.clearMapTimer();
+			m.killAllMonsters();
+			m.resetReactors();
+			m.setOnUserEnter("");
+		}
+		cm.warp(702070400,0);
 		cm.dispose();	
 	}
 }
 }
-}
+	

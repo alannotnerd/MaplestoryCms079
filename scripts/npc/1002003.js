@@ -1,60 +1,47 @@
-/*
-	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
-		       Matthias Butz <matze@odinms.de>
-		       Jan Christian Meyer <vimes@odinms.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation version 3 as published by
-    the Free Software Foundation. You may not use, modify or distribute
-    this program under any other version of the GNU Affero General Public
-    License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 /* Author: Xterminator
 	NPC Name: 		Mr. Goldstein
 	Map(s): 		Victoria Road : Lith Harbour (104000000)
 	Description:		Extends Buddy List
 */
-var status = -1;
+var status = 0;
+
+function start() {
+	status = -1;
+	action(1, 0, 0);	
+}
 
 function action(mode, type, selection) {
-    if (mode == 1) {
-	status++;
-    } else {
-	if (status == 0) {
-	    cm.sendNext("ÎÒÏëÄãÊÇ±ßÔµÈËËùÒÔ²Å²»ÐèÒªºÃÓÑ¶Ô°É??\r\n¿ªÍæÐ¦¼ÙÈçÄãÕæµÄÐèÒª¿ÉÒÔÀ´ÕÒÎÒµÄà¡!");
-	    cm.dispose();
-	    return;
-	} else if (status >= 1) {
-	    cm.sendNext("ÎÒ²»ÈÏÎªÄãÃ»ÓÐÅóÓÑ£¬ÄãÖ»ÊÇ²»Ïë»¨25Íò·ã±ÒÀ´À©³ä×Ô¼ºµÄºÃÓÑÀ¸!");
-	    cm.dispose();
-	    return;
-	}
-	status--;
-    }
-    if (status == 0) {
-	cm.sendYesNo("ÎÒÏ£ÍûÎÒÄÜ¾¡¿ÉÄÜ×òÌì...àÅ£¬ÄãºÃ£¡ÄÑµÀÄã²»Ï£ÍûÑÓ³¤ÄãµÄºÃÓÑÁÐ±í£¿Äã¿´ÆðÀ´ÏñÓÐÈËË­¾Í»áÓÐÒ»´ó¶ÑµÄÅóÓÑ......ºÃÁË£¬ÄãÓÐÊ²Ã´¸ÐÏë£¿Ëæ×ÅÒ»Ð©Ç®£¬ÎÒ¿ÉÒÔ×öµ½ÕâÒ»µãÄã¡£µ«Òª¼Ç×¡£¬Ëü½öÊÊÓÃÓÚÒ»¸ö×Ö·ûµÄÊ±¼ä£¬ËùÒÔ²»»áÓ°ÏìÄúµÄÈÎºÎÆäËû×Ö·ûÔÚÄúµÄÕÊ»§¡£ÄãÏëÀ©Õ¹ÄúµÄºÃÓÑÁÐ±í£¿");
-    } else if (status == 1) {
-	cm.sendYesNo("ºÃ°É£¬Á¼ºÃµÄÍ¨»°£¡Õâ²¢²»ÊÇËµ¹óÊµ¼Ê¡£ #b250,000 ·ã±Ò£¬ÎÒ»áÌí¼Ó5¸ö²å²Ûµ½ÄãµÄºÃÓÑÁÐ±í#kÖÐ¡£²»£¬ÎÒ²»»áµ¥¶À³öÊÛ¡£Ò»µ©Äã¹ºÂòËü£¬Õâ½«ÊÇÓÀ¾ÃÄãµÄºÃÓÑÁÐ±íÉÏ¡£ËùÒÔ£¬Èç¹ûÄãÊÇÄÇÐ©ÐèÒª¸ü¶àµÄ¿Õ¼äÓÐÒ»¸ö£¬ÄÇÃ´Äã»¹²»ÈçÈ¥×ö¡£ÄãÔõÃ´¿´£¿Äã»á»¨25Íò·ã±ÒÂð£¿");
-    } else if (status == 2) {
-	var capacity = cm.getBuddyCapacity();
-	if (capacity >= 100 || cm.getMeso() < 250000) {
-	    cm.sendNext("ºÙ ÄãÈ·¶¨ÄãÓÐ #b250,000 ·ã±Ò#k? Èç¹û×ã¹»È·ÈÏÊÇ²»ÊÇÄãµÄºÃÓÑÀ¸ÒÑ¾­ #b100#k ¸ñÁË..");
+	if (mode == -1) {
+		cm.dispose();
 	} else {
-	    var newcapacity = capacity + 5;
-	    cm.gainMeso(-250000);
-	    cm.updateBuddyCapacity(newcapacity);
-	    cm.sendOk("ºÃÁËÒÑ¾­¶àÔö¼Ó5¸öºÃÓÑÀ¸ÁË..Èç¹ûÄã»¹ÐèÒª¿ÉÒÔÔÙÀ´ÕÒÎÒ..µ±È»Ëû²¢²»ÊÇÃâ·ÑµÄ!");
+		if (status == 0 && mode == 0) {
+			cm.sendNext("æ˜¯å—â€¦â€¦çœ‹æ¥æˆ‘çš„é¢„æ„Ÿæ˜¯é”™çš„ï¼Œä½ å¥½åƒæ²¡ä»€ä¹ˆæœ‹å‹å•Šï¼Ÿå“ˆå“ˆå“ˆ~çŽ©ç¬‘ï¼ŒçŽ©ç¬‘~å¦‚æžœä½ æ”¹å˜äº†ä¸»æ„ï¼Œå¯ä»¥å†æ¥æ‰¾æˆ‘ã€‚ç­‰æœ‹å‹å¤šä¸€ç‚¹çš„æ—¶å€™â€¦â€¦å‘µå‘µâ€¦â€¦");
+			cm.dispose();
+			return;
+		} else if (status >= 1 && mode == 0) {
+			cm.sendNext("æ˜¯å—â€¦â€¦çœ‹æ¥æˆ‘çš„é¢„æ„Ÿæ˜¯é”™çš„ï¼Œä½ å¥½åƒæ²¡ä»€ä¹ˆæœ‹å‹å•Šï¼Ÿæˆ–è€…èº«ä¸Šæ²¡æœ‰5ä¸‡é‡‘å¸ï¼Ÿå¦‚æžœä½ æ”¹å˜äº†ä¸»æ„ï¼Œå¯ä»¥å†æ¥æ‰¾æˆ‘ã€‚ç­‰ä½ æœ‰äº†é’±çš„æ—¶å€™â€¦â€¦å‘µå‘µâ€¦â€¦");
+			cm.dispose();
+			return;
+		}
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			cm.sendYesNo("å¸Œæœ›ä»Šå¤©å®¢äººèƒ½å¤šä¸€ç‚¹â€¦â€¦å•Šï¼ç­‰ä¸€ä¸‹ï¼ä½ æƒ³å¢žåŠ å¥½å‹ç›®å½•å—ï¼Ÿæˆ‘ä¸€çœ‹ä½ ï¼Œå°±è§‰å¾—ä½ æœ‰å¾ˆå¤šæœ‹å‹ã€‚æ€Žä¹ˆæ ·â€¦â€¦åªè¦èŠ±ä¸€ç‚¹é’±ï¼Œæˆ‘å°±å¯ä»¥ä¸ºä½ å¢žåŠ å¥½å‹ç›®å½•ã€‚ä½†æ˜¯ä¸ä¼šåº”ç”¨äºŽç›¸åŒè´¦å·çš„å…¶ä»–è§’è‰²ï¼Œæ‰€ä»¥ä¸€å®šè¦æ…Žé‡ã€‚ä½ æƒ³å¢žåŠ å—ï¼Ÿ");
+		} else if (status == 1) {
+			cm.sendYesNo("å¥½çš„ï¼æ˜Žæ™ºçš„å†³å®šã€‚ä»·æ ¼ä¸è´µï¼Œå› ä¸ºæˆ‘ä¸‹å®šå†³å¿ƒï¼Œç»™ä½ æ‰“äº†ä¸ª#rå¤§æŠ˜æ‰£#k.#bå¥½å‹ç›®å½•æ·»åŠ 5åä¸€å…±æ˜¯5ä¸‡é‡‘å¸#kã€‚å½“ç„¶ï¼Œç»ä¸é›¶å”®ã€‚åªè¦è´­ä¹°ä¸€æ¬¡ï¼Œç›®å½•å°±å¯ä»¥æ°¸ä¹…å¢žåŠ ã€‚å¯¹å¥½å‹ç›®å½•ä¸è¶³çš„äººæ¥è¯´ï¼Œè¿™ä¸ªä¹°å–åº”è¯¥ä¸åã€‚æ€Žä¹ˆæ ·ï¼Ÿä½ æ„¿æ„æ”¯ä»˜5ä¸‡é‡‘å¸å—ï¼Ÿ");
+		} else if (status == 2) {
+			var capacity = cm.getPlayer().getBuddylist().getCapacity();
+			if (capacity >= 100 || cm.getMeso() < 250000) {
+				cm.sendNext("ä½ â€¦â€¦ç¡®å®šè‡ªå·±æœ‰#b25ä¸‡é‡‘å¸#kå—ï¼Ÿå¦‚æžœæœ‰çš„è¯ï¼Œè¯·ä½ ç¡®è®¤ä¸€ä¸‹å¥½å‹ç›®å½•æ˜¯å¦å·²ç»å¢žåŠ åˆ°æœ€å¤§äº†ã€‚å³ä½¿é’±å†å¤šï¼Œå¥½å‹ç›®å½•çš„äººæ•°ä¹Ÿæ— æ³•å¢žåŠ åˆ°#b100ä¸ªä»¥ä¸Š#kã€‚");
+			} else {
+				var newcapacity = capacity + 5;
+				cm.gainMeso(-250000);
+				cm.updateBuddyCapacity(newcapacity);
+				cm.sendOk("å¥½çš„ï¼ä½ çš„å¥½å‹ç›®å½•å·²ç»å¢žåŠ äº†5ä¸ªã€‚ä½ å¯ä»¥ç¡®è®¤ä¸€ä¸‹ã€‚å¦‚æžœå¥½å‹ç›®å½•è¿˜æ˜¯ä¸å¤Ÿçš„è¯ï¼Œå¯ä»¥éšæ—¶æ¥æ‰¾æˆ‘ã€‚æˆ‘å¯ä»¥éšæ—¶å¸®ä½ å¢žåŠ ï¼Œä¸ç®¡å¤šå°‘æ¬¡éƒ½è¡Œã€‚å½“ç„¶ä¸æ˜¯å…è´¹çš„â€¦â€¦é‚£ä¹ˆå†è§~");
+			}
+			cm.dispose();
+		}
 	}
-	cm.dispose();
-    }
 }

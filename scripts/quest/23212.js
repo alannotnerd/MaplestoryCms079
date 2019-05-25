@@ -22,7 +22,7 @@ function end(mode, type, selection) {
 		qm.teachSkill(31100007, 1, 1);
 	    qm.changeJob(3110);
 	}
-	qm.forceCompleteQuest();
+	qm.completeQuest();
     } else if (status == 2) {
 	qm.sendNextPrev("I have also expanded your inventory slot counts for your equipment and etc. inventory. Use those slots wisely and fill them up with items required for Resistance to carry.");
     } else if (status == 3) {

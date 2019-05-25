@@ -1,6 +1,6 @@
-var baseid = 105020400;
-var dungeonid = 105020500;
-var dungeons = 100;
+var baseid = 105090311;
+var dungeonid = 105090320;
+var dungeons = 20;
 
 function enter(pi) {
     if (pi.getMapId() == baseid) {
@@ -25,7 +25,6 @@ function enter(pi) {
         }
         pi.playerMessage(5, "All of the Mini-Dungeons are in use right now, please try again later.");
     } else {
-//pi.playPortalSE();
         pi.warp(baseid, "MD00");
     }
 }

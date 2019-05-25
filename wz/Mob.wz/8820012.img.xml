@@ -38,7 +38,7 @@
         </canvas>
     </imgdir>
     <imgdir name="hit1">
-        <uol name="../stand/0" value="../stand/0"/>
+        <uol name="0" value="../stand/0"/>
     </imgdir>
     <imgdir name="die1">
         <canvas name="0" width="1194" height="550">

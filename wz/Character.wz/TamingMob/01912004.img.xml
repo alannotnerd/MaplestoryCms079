@@ -52,16 +52,16 @@
         </imgdir>
         <imgdir name="stand2">
             <imgdir name="0">
-                <uol name="../../stand1/0/0" value="../../stand1/0/0"/>
+                <uol name="0" value="../../stand1/0/0"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../stand1/1/0" value="../../stand1/1/0"/>
+                <uol name="0" value="../../stand1/1/0"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../../stand1/2/0" value="../../stand1/2/0"/>
+                <uol name="0" value="../../stand1/2/0"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../../stand1/3/0" value="../../stand1/3/0"/>
+                <uol name="0" value="../../stand1/3/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="stand1">
@@ -104,16 +104,16 @@
         </imgdir>
         <imgdir name="walk2">
             <imgdir name="0">
-                <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
+                <uol name="0" value="../../walk1/0/0"/>
             </imgdir>
             <imgdir name="1">
-                <uol name="../../walk1/1/0" value="../../walk1/1/0"/>
+                <uol name="0" value="../../walk1/1/0"/>
             </imgdir>
             <imgdir name="2">
-                <uol name="../../walk1/2/0" value="../../walk1/2/0"/>
+                <uol name="0" value="../../walk1/2/0"/>
             </imgdir>
             <imgdir name="3">
-                <uol name="../../walk1/3/0" value="../../walk1/3/0"/>
+                <uol name="0" value="../../walk1/3/0"/>
             </imgdir>
         </imgdir>
         <imgdir name="tired">

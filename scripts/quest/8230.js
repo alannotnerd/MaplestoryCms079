@@ -12,7 +12,7 @@ function end(mode, type, selection) {
     if (!qm.isQuestFinished(8223)) {
         qm.sendNext("Please, find it!");
     } else {
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.sendNext("Good job. Now we can proceed.");
     }
     qm.dispose();

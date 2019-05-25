@@ -1,5 +1,5 @@
 /**
- *	5¼¶½±Àø
+ *	5çº§å¥–åŠ±
  */
 var status = -1;
 
@@ -9,9 +9,9 @@ function start(mode, type, selection) {
         if (qm.isQuestFinished(56016)) {
             qm.dispose();
         } else {
-            qm.sendOk("¹§Ï²! Äã»ñµÃÁË#v2022457# x 100¡£");
+            qm.sendOk("æ­å–œ! ä½ è·å¾—äº†#v2022457# x 100ã€‚");
             qm.gainItem(2022457, 100);
-            qm.forceCompleteQuest();
+            qm.completeQuest();
             qm.dispose();
         }
     }

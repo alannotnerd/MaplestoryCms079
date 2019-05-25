@@ -2259,12 +2259,12 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="stabTF">
-                    <uol name="../swingPF/0" value="../swingPF/0"/>
-                    <uol name="../swingPF/1" value="../swingPF/1"/>
+                    <uol name="0" value="../swingPF/0"/>
+                    <uol name="1" value="../swingPF/1"/>
                     <canvas name="2" width="66" height="82">
                         <vector name="origin" x="45" y="98"/>
                     </canvas>
-                    <uol name="../stabT1/2" value="../stabT1/2"/>
+                    <uol name="3" value="../stabT1/2"/>
                 </imgdir>
                 <imgdir name="shoot1">
                     <canvas name="0" width="63" height="78">
@@ -2273,7 +2273,7 @@
                     <canvas name="1" width="63" height="78">
                         <vector name="origin" x="35" y="72"/>
                     </canvas>
-                    <uol name="1" value="1"/>
+                    <uol name="2" value="1"/>
                 </imgdir>
                 <imgdir name="shoot2">
                     <canvas name="0" width="55" height="77">
@@ -2285,7 +2285,7 @@
                     <canvas name="2" width="55" height="77">
                         <vector name="origin" x="29" y="71"/>
                     </canvas>
-                    <uol name="0" value="0"/>
+                    <uol name="3" value="0"/>
                     <canvas name="4" width="55" height="77">
                         <vector name="origin" x="28" y="71"/>
                     </canvas>
@@ -2297,7 +2297,7 @@
                     <canvas name="1" width="67" height="77">
                         <vector name="origin" x="38" y="71"/>
                     </canvas>
-                    <uol name="1" value="1"/>
+                    <uol name="2" value="1"/>
                 </imgdir>
                 <imgdir name="proneStab">
                     <canvas name="0" width="76" height="51">
@@ -2308,14 +2308,14 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="prone">
-                    <uol name="../proneStab/0" value="../proneStab/0"/>
+                    <uol name="0" value="../proneStab/0"/>
                 </imgdir>
                 <imgdir name="heal">
-                    <uol name="../alert/1" value="../alert/1"/>
+                    <uol name="0" value="../alert/1"/>
                     <canvas name="1" width="61" height="77">
                         <vector name="origin" x="35" y="70"/>
                     </canvas>
-                    <uol name="../swingO2/0" value="../swingO2/0"/>
+                    <uol name="2" value="../swingO2/0"/>
                 </imgdir>
                 <imgdir name="fly">
                     <canvas name="0" width="55" height="82">

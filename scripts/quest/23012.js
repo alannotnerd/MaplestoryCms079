@@ -1,6 +1,6 @@
 var status = -1;
 
-function end(mode, type, selection) {
+function start(mode, type, selection) {
     if (mode == 0) {
 	if (status == 0) {
 	    qm.sendNext("This is an important decision to make.");
@@ -25,7 +25,7 @@ function end(mode, type, selection) {
 	    qm.teachSkill(30001062, 1, 0);
 	    qm.getPlayer().fakeRelog();
 	}
-	qm.forceCompleteQuest();
+	qm.completeQuest();
     } else if (status == 2) {
 	qm.sendNextPrev("I have also expanded your inventory slot counts for your equipment and etc. inventory. Use those slots wisely and fill them up with items required for Resistance to carry.");
     } else if (status == 3) {

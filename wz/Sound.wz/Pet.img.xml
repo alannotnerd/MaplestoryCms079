@@ -48,25 +48,25 @@
         <sound name="yes"/>
     </imgdir>
     <imgdir name="5000004">
-        <uol name="../5000000/alert" value="../5000000/alert"/>
-        <uol name="../5000000/angry" value="../5000000/angry"/>
-        <uol name="../5000000/chat" value="../5000000/chat"/>
-        <uol name="../5000000/cry" value="../5000000/cry"/>
-        <uol name="../5000000/dung" value="../5000000/dung"/>
-        <uol name="../5000000/eat" value="../5000000/eat"/>
-        <uol name="../5000000/levelup" value="../5000000/levelup"/>
-        <uol name="../5000000/rise" value="../5000000/rise"/>
-        <uol name="../5000000/poor" value="../5000000/poor"/>
-        <uol name="../5000000/prone" value="../5000000/prone"/>
+        <uol name="alert" value="../5000000/alert"/>
+        <uol name="angry" value="../5000000/angry"/>
+        <uol name="chat" value="../5000000/chat"/>
+        <uol name="cry" value="../5000000/cry"/>
+        <uol name="dung" value="../5000000/dung"/>
+        <uol name="eat" value="../5000000/eat"/>
+        <uol name="levelup" value="../5000000/levelup"/>
+        <uol name="rise" value="../5000000/rise"/>
+        <uol name="poor" value="../5000000/poor"/>
+        <uol name="prone" value="../5000000/prone"/>
     </imgdir>
     <imgdir name="5000005">
-        <uol name="../5000002/chat" value="../5000002/chat"/>
-        <uol name="../5000002/angry" value="../5000002/angry"/>
-        <uol name="../5000002/hug" value="../5000002/hug"/>
-        <uol name="../5000002/rise" value="../5000002/rise"/>
-        <uol name="../5000002/cry" value="../5000002/cry"/>
-        <uol name="../5000002/complain" value="../5000002/complain"/>
-        <uol name="../5000002/donno" value="../5000002/donno"/>
+        <uol name="chat" value="../5000002/chat"/>
+        <uol name="angry" value="../5000002/angry"/>
+        <uol name="hug" value="../5000002/hug"/>
+        <uol name="rise" value="../5000002/rise"/>
+        <uol name="cry" value="../5000002/cry"/>
+        <uol name="complain" value="../5000002/complain"/>
+        <uol name="donno" value="../5000002/donno"/>
     </imgdir>
     <imgdir name="5000006">
         <sound name="angry"/>
@@ -117,15 +117,15 @@
         <sound name="stunned"/>
     </imgdir>
     <imgdir name="5000010">
-        <uol name="../5000009/chat" value="../5000009/chat"/>
-        <uol name="../5000009/angry" value="../5000009/angry"/>
-        <uol name="../5000009/belch" value="../5000009/belch"/>
-        <uol name="../5000009/cry" value="../5000009/cry"/>
-        <uol name="../5000009/deride" value="../5000009/deride"/>
-        <uol name="../5000009/dung" value="../5000009/dung"/>
-        <uol name="../5000009/sleep" value="../5000009/sleep"/>
-        <uol name="../5000009/smile" value="../5000009/smile"/>
-        <uol name="../5000009/stunned" value="../5000009/stunned"/>
+        <uol name="chat" value="../5000009/chat"/>
+        <uol name="angry" value="../5000009/angry"/>
+        <uol name="belch" value="../5000009/belch"/>
+        <uol name="cry" value="../5000009/cry"/>
+        <uol name="deride" value="../5000009/deride"/>
+        <uol name="dung" value="../5000009/dung"/>
+        <uol name="sleep" value="../5000009/sleep"/>
+        <uol name="smile" value="../5000009/smile"/>
+        <uol name="stunned" value="../5000009/stunned"/>
     </imgdir>
     <imgdir name="5000011">
         <sound name="angry"/>
@@ -230,16 +230,16 @@
         <sound name="stunned"/>
     </imgdir>
     <imgdir name="5000018">
-        <uol name="../5000006/angry" value="../5000006/angry"/>
-        <uol name="../5000006/chat" value="../5000006/chat"/>
-        <uol name="../5000006/cry" value="../5000006/cry"/>
-        <uol name="../5000006/dung" value="../5000006/dung"/>
-        <uol name="../5000006/eat" value="../5000006/eat"/>
-        <uol name="../5000006/nap" value="../5000006/nap"/>
-        <uol name="../5000006/prone" value="../5000006/prone"/>
-        <uol name="../5000006/rise" value="../5000006/rise"/>
-        <uol name="../5000006/tedious" value="../5000006/tedious"/>
-        <uol name="../5000006/hand" value="../5000006/hand"/>
+        <uol name="angry" value="../5000006/angry"/>
+        <uol name="chat" value="../5000006/chat"/>
+        <uol name="cry" value="../5000006/cry"/>
+        <uol name="dung" value="../5000006/dung"/>
+        <uol name="eat" value="../5000006/eat"/>
+        <uol name="nap" value="../5000006/nap"/>
+        <uol name="prone" value="../5000006/prone"/>
+        <uol name="rise" value="../5000006/rise"/>
+        <uol name="tedious" value="../5000006/tedious"/>
+        <uol name="hand" value="../5000006/hand"/>
     </imgdir>
     <imgdir name="5000020">
         <sound name="angry"/>
@@ -351,7 +351,7 @@
         <sound name="ignore"/>
         <sound name="love"/>
         <sound name="sleep"/>
-        <uol name="../5000006/dung" value="../5000006/dung"/>
+        <uol name="dung" value="../5000006/dung"/>
     </imgdir>
     <imgdir name="5000030">
         <sound name="love"/>
@@ -366,40 +366,40 @@
         <sound name="sleep"/>
     </imgdir>
     <imgdir name="5000031">
-        <uol name="../5000030/sleep" value="../5000030/sleep"/>
-        <uol name="../5000030/cry" value="../5000030/cry"/>
-        <uol name="../5000030/chat" value="../5000030/chat"/>
-        <uol name="../5000030/angry" value="../5000030/angry"/>
-        <uol name="../5000030/bewildered" value="../5000030/bewildered"/>
-        <uol name="../5000030/change" value="../5000030/change"/>
-        <uol name="../5000030/dung" value="../5000030/dung"/>
-        <uol name="../5000030/eat" value="../5000030/eat"/>
-        <uol name="../5000030/hungry" value="../5000030/hungry"/>
-        <uol name="../5000030/love" value="../5000030/love"/>
+        <uol name="sleep" value="../5000030/sleep"/>
+        <uol name="cry" value="../5000030/cry"/>
+        <uol name="chat" value="../5000030/chat"/>
+        <uol name="angry" value="../5000030/angry"/>
+        <uol name="bewildered" value="../5000030/bewildered"/>
+        <uol name="change" value="../5000030/change"/>
+        <uol name="dung" value="../5000030/dung"/>
+        <uol name="eat" value="../5000030/eat"/>
+        <uol name="hungry" value="../5000030/hungry"/>
+        <uol name="love" value="../5000030/love"/>
     </imgdir>
     <imgdir name="5000032">
-        <uol name="../5000030/sleep" value="../5000030/sleep"/>
-        <uol name="../5000030/cry" value="../5000030/cry"/>
-        <uol name="../5000030/chat" value="../5000030/chat"/>
-        <uol name="../5000030/angry" value="../5000030/angry"/>
-        <uol name="../5000030/bewildered" value="../5000030/bewildered"/>
-        <uol name="../5000030/change" value="../5000030/change"/>
-        <uol name="../5000030/dung" value="../5000030/dung"/>
-        <uol name="../5000030/eat" value="../5000030/eat"/>
-        <uol name="../5000030/hungry" value="../5000030/hungry"/>
-        <uol name="../5000030/love" value="../5000030/love"/>
+        <uol name="sleep" value="../5000030/sleep"/>
+        <uol name="cry" value="../5000030/cry"/>
+        <uol name="chat" value="../5000030/chat"/>
+        <uol name="angry" value="../5000030/angry"/>
+        <uol name="bewildered" value="../5000030/bewildered"/>
+        <uol name="change" value="../5000030/change"/>
+        <uol name="dung" value="../5000030/dung"/>
+        <uol name="eat" value="../5000030/eat"/>
+        <uol name="hungry" value="../5000030/hungry"/>
+        <uol name="love" value="../5000030/love"/>
     </imgdir>
     <imgdir name="5000033">
-        <uol name="../5000030/sleep" value="../5000030/sleep"/>
-        <uol name="../5000030/cry" value="../5000030/cry"/>
-        <uol name="../5000030/chat" value="../5000030/chat"/>
-        <uol name="../5000030/angry" value="../5000030/angry"/>
-        <uol name="../5000030/bewildered" value="../5000030/bewildered"/>
-        <uol name="../5000030/change" value="../5000030/change"/>
-        <uol name="../5000030/dung" value="../5000030/dung"/>
-        <uol name="../5000030/eat" value="../5000030/eat"/>
-        <uol name="../5000030/hungry" value="../5000030/hungry"/>
-        <uol name="../5000030/love" value="../5000030/love"/>
+        <uol name="sleep" value="../5000030/sleep"/>
+        <uol name="cry" value="../5000030/cry"/>
+        <uol name="chat" value="../5000030/chat"/>
+        <uol name="angry" value="../5000030/angry"/>
+        <uol name="bewildered" value="../5000030/bewildered"/>
+        <uol name="change" value="../5000030/change"/>
+        <uol name="dung" value="../5000030/dung"/>
+        <uol name="eat" value="../5000030/eat"/>
+        <uol name="hungry" value="../5000030/hungry"/>
+        <uol name="love" value="../5000030/love"/>
     </imgdir>
     <imgdir name="5000036">
         <sound name="angry"/>
@@ -451,7 +451,7 @@
         <sound name="hungry"/>
         <sound name="ignore"/>
         <sound name="love"/>
-        <uol name="love" value="love"/>
+        <uol name="love2" value="love"/>
         <sound name="sleep"/>
     </imgdir>
     <imgdir name="5000046">
@@ -490,40 +490,40 @@
         <sound name="stunned"/>
     </imgdir>
     <imgdir name="5000050">
-        <uol name="../5000049/angry" value="../5000049/angry"/>
-        <uol name="../5000049/chat" value="../5000049/chat"/>
-        <uol name="../5000049/cry" value="../5000049/cry"/>
-        <uol name="../5000049/eat" value="../5000049/eat"/>
-        <uol name="../5000049/hand" value="../5000049/hand"/>
-        <uol name="../5000049/love" value="../5000049/love"/>
-        <uol name="../5000049/rise" value="../5000049/rise"/>
-        <uol name="../5000049/sit" value="../5000049/sit"/>
-        <uol name="../5000049/sleep" value="../5000049/sleep"/>
-        <uol name="../5000049/stunned" value="../5000049/stunned"/>
+        <uol name="angry" value="../5000049/angry"/>
+        <uol name="chat" value="../5000049/chat"/>
+        <uol name="cry" value="../5000049/cry"/>
+        <uol name="eat" value="../5000049/eat"/>
+        <uol name="hand" value="../5000049/hand"/>
+        <uol name="love" value="../5000049/love"/>
+        <uol name="rise" value="../5000049/rise"/>
+        <uol name="sit" value="../5000049/sit"/>
+        <uol name="sleep" value="../5000049/sleep"/>
+        <uol name="stunned" value="../5000049/stunned"/>
     </imgdir>
     <imgdir name="5000051">
-        <uol name="../5000049/angry" value="../5000049/angry"/>
-        <uol name="../5000049/chat" value="../5000049/chat"/>
-        <uol name="../5000049/cry" value="../5000049/cry"/>
-        <uol name="../5000049/eat" value="../5000049/eat"/>
-        <uol name="../5000049/hand" value="../5000049/hand"/>
-        <uol name="../5000049/love" value="../5000049/love"/>
-        <uol name="../5000049/rise" value="../5000049/rise"/>
-        <uol name="../5000049/sit" value="../5000049/sit"/>
-        <uol name="../5000049/sleep" value="../5000049/sleep"/>
-        <uol name="../5000049/stunned" value="../5000049/stunned"/>
+        <uol name="angry" value="../5000049/angry"/>
+        <uol name="chat" value="../5000049/chat"/>
+        <uol name="cry" value="../5000049/cry"/>
+        <uol name="eat" value="../5000049/eat"/>
+        <uol name="hand" value="../5000049/hand"/>
+        <uol name="love" value="../5000049/love"/>
+        <uol name="rise" value="../5000049/rise"/>
+        <uol name="sit" value="../5000049/sit"/>
+        <uol name="sleep" value="../5000049/sleep"/>
+        <uol name="stunned" value="../5000049/stunned"/>
     </imgdir>
     <imgdir name="5000052">
-        <uol name="../5000049/angry" value="../5000049/angry"/>
-        <uol name="../5000049/chat" value="../5000049/chat"/>
-        <uol name="../5000049/cry" value="../5000049/cry"/>
-        <uol name="../5000049/eat" value="../5000049/eat"/>
-        <uol name="../5000049/hand" value="../5000049/hand"/>
-        <uol name="../5000049/love" value="../5000049/love"/>
-        <uol name="../5000049/rise" value="../5000049/rise"/>
-        <uol name="../5000049/sit" value="../5000049/sit"/>
-        <uol name="../5000049/sleep" value="../5000049/sleep"/>
-        <uol name="../5000049/stunned" value="../5000049/stunned"/>
+        <uol name="angry" value="../5000049/angry"/>
+        <uol name="chat" value="../5000049/chat"/>
+        <uol name="cry" value="../5000049/cry"/>
+        <uol name="eat" value="../5000049/eat"/>
+        <uol name="hand" value="../5000049/hand"/>
+        <uol name="love" value="../5000049/love"/>
+        <uol name="rise" value="../5000049/rise"/>
+        <uol name="sit" value="../5000049/sit"/>
+        <uol name="sleep" value="../5000049/sleep"/>
+        <uol name="stunned" value="../5000049/stunned"/>
     </imgdir>
     <imgdir name="5000053">
         <sound name="angry"/>
@@ -537,7 +537,7 @@
         <sound name="stunned"/>
     </imgdir>
     <imgdir name="5000054">
-        <uol name="../5000046/hungry" value="../5000046/hungry"/>
+        <uol name="hungry" value="../5000046/hungry"/>
     </imgdir>
     <imgdir name="5000056">
         <sound name="angry"/>

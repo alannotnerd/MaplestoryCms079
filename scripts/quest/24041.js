@@ -22,6 +22,6 @@ function start(mode, type, selection) {
 	}
 }
 function end(mode, type, selection) {
-	qm.forceCompleteQuest(29952);
+	qm.completeQuest(29952);
 	qm.dispose();
 }

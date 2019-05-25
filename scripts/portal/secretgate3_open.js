@@ -18,17 +18,22 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+importPackage(net.sf.cherry.server.maps);
+
 /*
-    Stage 4: Mark of Evil Door - Guild Quest
-    @Author Lerk
+Stage 4: Mark of Evil Door - Guild Quest
+
+@Author Lerk
 */
 
 function enter(pi) {
-    if (pi.getPlayer().getMap().getReactorByName("secretgate3").getState() == 1) {
-        pi.warp(990000641,1);
-        return true;
-    } else {
-        pi.getPlayer().dropMessage(5, "This door is closed.");
-        return false;
-    }
+        if (pi.getPlayer().getMap().getReactorByName("secretgate3").getState() == 1) {
+                pi.warp(990000641,1);
+                return true;
+        }
+        else {
+                pi.playerMessage("这个门是关闭的。");
+                return false;
+        }
 }

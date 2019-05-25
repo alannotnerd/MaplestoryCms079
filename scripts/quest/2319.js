@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Scarrs
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  ∆Ê¿≠ƒ¢πΩÊﬂ◊”(3)
+	Description: 	Quest -  Â•áÊãâËòëËèáÂ≠¢Â≠ê(3)
 */
 
 importPackage(Packages.client);
@@ -21,7 +21,7 @@ function start(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendAcceptDecline("Oh, I almost forgot! What was I thinking? I need you to hand this #bSample of Killer Mushroom Spores#k to #bMinister of Magic#k and report the results.");
+        qm.sendYesNo("Oh, I almost forgot! What was I thinking? I need you to hand this #bSample of Killer Mushroom Spores#k to #bMinister of Magic#k and report the results.");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.gainItem(4032389, 1);
@@ -46,7 +46,7 @@ function end(mode, type, selection) {
         qm.gainExp(4200);
         qm.gainItem(4032389, -1);
         qm.sendOk("Okay, so this is the #bKiller Mushroom Spores.#k Thank you, thank you, and please tell #bScarrs#k the same.");
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.dispose();
     }
 }

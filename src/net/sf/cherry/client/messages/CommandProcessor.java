@@ -211,7 +211,7 @@ public class CommandProcessor implements CommandProcessorMBean {
   public void dropHelp(MapleCharacter chr, MessageCallback mc, int page) {
     List allCommands = new ArrayList(this.commands.values());
     int startEntry = (page - 1) * 20;
-    mc.dropMessage("Command Help Page: --------" + page + "---------");
+    mc.dropMessage("Command Help Page: --------" + page + "---------" + allCommands.size()+ "-------");
     for (int i = startEntry; (i < startEntry + 20) && (i < allCommands.size()); i++) {
       CommandDefinition commandDefinition = ((DefinitionCommandPair) allCommands.get(i)).getDefinition();
       if (chr.hasGMLevel(commandDefinition.getRequiredLevel()))

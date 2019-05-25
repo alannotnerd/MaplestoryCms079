@@ -32,7 +32,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="1">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="5"/>
@@ -48,13 +48,13 @@
                 <int name="type" value="0"/>
                 <int name="state" value="2"/>
                 <imgdir name="hit">
-                    <uol name="../../../../0/event/1/hit/0" value="../../../../0/event/1/hit/0"/>
+                    <uol name="0" value="../../../../0/event/1/hit/0"/>
                 </imgdir>
             </imgdir>
         </imgdir>
     </imgdir>
     <imgdir name="2">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="5"/>
@@ -70,13 +70,13 @@
                 <int name="type" value="0"/>
                 <int name="state" value="3"/>
                 <imgdir name="hit">
-                    <uol name="../../../../0/event/1/hit/0" value="../../../../0/event/1/hit/0"/>
+                    <uol name="0" value="../../../../0/event/1/hit/0"/>
                 </imgdir>
             </imgdir>
         </imgdir>
     </imgdir>
     <imgdir name="3">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="5"/>
@@ -92,13 +92,13 @@
                 <int name="type" value="0"/>
                 <int name="state" value="4"/>
                 <imgdir name="hit">
-                    <uol name="../../../../0/event/1/hit/0" value="../../../../0/event/1/hit/0"/>
+                    <uol name="0" value="../../../../0/event/1/hit/0"/>
                 </imgdir>
             </imgdir>
         </imgdir>
     </imgdir>
     <imgdir name="4">
-        <uol name="../0/0" value="../0/0"/>
+        <uol name="0" value="../0/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="5"/>
@@ -177,13 +177,13 @@
         </imgdir>
     </imgdir>
     <imgdir name="7">
-        <uol name="../6/0" value="../6/0"/>
+        <uol name="0" value="../6/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
                 <int name="state" value="8"/>
                 <imgdir name="hit">
-                    <uol name="../../../../6/event/0/hit/0" value="../../../../6/event/0/hit/0"/>
+                    <uol name="0" value="../../../../6/event/0/hit/0"/>
                 </imgdir>
             </imgdir>
             <imgdir name="1">
@@ -194,13 +194,13 @@
         </imgdir>
     </imgdir>
     <imgdir name="8">
-        <uol name="../6/0" value="../6/0"/>
+        <uol name="0" value="../6/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>
                 <int name="state" value="9"/>
                 <imgdir name="hit">
-                    <uol name="../../../../6/event/0/hit/0" value="../../../../6/event/0/hit/0"/>
+                    <uol name="0" value="../../../../6/event/0/hit/0"/>
                 </imgdir>
             </imgdir>
             <imgdir name="1">
@@ -211,7 +211,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="9">
-        <uol name="../6/0" value="../6/0"/>
+        <uol name="0" value="../6/0"/>
         <imgdir name="event">
             <imgdir name="0">
                 <int name="type" value="0"/>

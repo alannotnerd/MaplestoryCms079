@@ -10,18 +10,18 @@ function start(mode, type, selection) {
         status++;
     } else {
         if (status == 2) {
-            qm.sendNext("��ͨ������������Ĺ������ܡ�");
+            qm.sendNext("普通攻击是最基础的攻击技能。");
             qm.safeDispose();
             return;
         }
         status--;
     }
     if (status == 0) {
-        qm.sendNext("��һֱ�ڵ��㣬h0#�� �ҵ������� #p1102006# �� �š������������Ѿ�ѧ������ͨ�����ˣ�����ѧ�������ͨ�����������������ѧ����Щ���ܽ����ڷ�Ҷ�������к��а���Ŷ��");
+        qm.sendNext("我一直在等你，h0#。 我的名字是 #p1102006# 。 嗯……。看来你已经学过了普通攻击了？你想学会除了普通攻击外的其它技能吗？学会这些技能将会在枫叶谷世界中很有帮助哦。");
     } else if (status == 1) {
-        qm.sendNextPrev("ÿһ��������������Ӧ��#b���ܵ�#k�����԰�#bk#k���鿴��ļ��ܡ��Ѽ��ܵ��������Ҫ�ӵļ������棬�����ˡ����õļ��ܿ����ü������÷����Լ�ϲ���ļ������档");
+        qm.sendNextPrev("每一次升级，都有相应的#b技能点#k。可以按#bk#k键查看你的技能。把技能点加在你想要加的技能上面，别忘了。常用的技能可以用键盘设置放在自己喜欢的键盘上面。");
     } else if (status == 2) {
-        qm.askAcceptDecline("�������㻹û���ǣ���ᷢ���������кܶ���ʹ�������ţ�Ǽ��ܣ�������ǣ��ɹ����������Ұɡ��Ҿ���������㡣");
+        qm.sendAcceptDecline("趁现在你还没忘记，你会发现在这里有很多怪物，使用你的蜗牛壳技能，打败他们！成功后，再来找我吧。我就在这里等你。");
     } else if (status == 3) {
         qm.forceStartQuest();
         qm.summonMsg(8);
@@ -36,10 +36,10 @@ function end(mode, type, selection) {
         status--;
     }
     if (status == 0) {
-        qm.sendNext("������ţͶ���������кܶ���Ȥ�ļ��ܡ��ðɣ�����Լ�����ҽ�����һЩ������\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#fUI/UIWindow.img/QuestIcon/8/0# 40 exp");
+        qm.sendNext("除了蜗牛投掷术，还有很多有趣的技能。好吧，按照约定，我将送你一些东西。\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#fUI/UIWindow.img/QuestIcon/8/0# 40 exp");
     } else if (status == 1) {
         qm.gainItem(4000483, -1);
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.gainExp(40);
         qm.dispose();
     }

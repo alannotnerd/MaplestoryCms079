@@ -249,18 +249,18 @@
             <vector name="head" x="2" y="-74"/>
             <int name="delay" value="120"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
-        <uol name="../stand/6" value="../stand/6"/>
-        <uol name="../stand/7" value="../stand/7"/>
-        <uol name="../stand/8" value="../stand/8"/>
-        <uol name="../stand/9" value="../stand/9"/>
-        <uol name="../stand/10" value="../stand/10"/>
-        <uol name="../stand/11" value="../stand/11"/>
+        <uol name="8" value="../stand/0"/>
+        <uol name="9" value="../stand/1"/>
+        <uol name="10" value="../stand/2"/>
+        <uol name="11" value="../stand/3"/>
+        <uol name="12" value="../stand/4"/>
+        <uol name="13" value="../stand/5"/>
+        <uol name="14" value="../stand/6"/>
+        <uol name="15" value="../stand/7"/>
+        <uol name="16" value="../stand/8"/>
+        <uol name="17" value="../stand/9"/>
+        <uol name="18" value="../stand/10"/>
+        <uol name="19" value="../stand/11"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="109" height="98">

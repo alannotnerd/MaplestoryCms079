@@ -5,12 +5,12 @@
  */
 
 function start() {
-    cm.askAcceptDecline("你想离开？？");
+    cm.askAcceptDecline("Have you found all proof of test? Do you want to get out of here?");
 }
 
 function action(mode, type, selection) {
     if (mode == 0) {
-	cm.sendNext("你可能需要一些时间。.");
+	cm.sendNext("You might need some more time.");
     } else {
 	cm.warp(130020000, 0);
     }

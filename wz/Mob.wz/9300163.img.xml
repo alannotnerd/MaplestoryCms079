@@ -155,12 +155,12 @@
             <int name="PADamage" value="290"/>
             <int name="attackAfter" value="1260"/>
         </imgdir>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
+        <uol name="0" value="../stand/0"/>
+        <uol name="1" value="../stand/1"/>
+        <uol name="2" value="../stand/2"/>
+        <uol name="3" value="../stand/3"/>
+        <uol name="4" value="../stand/4"/>
+        <uol name="5" value="../stand/5"/>
         <canvas name="6" width="74" height="97">
             <vector name="origin" x="41" y="97"/>
             <vector name="lt" x="-31" y="-97"/>
@@ -275,12 +275,12 @@
             <vector name="head" x="-12" y="-94"/>
             <int name="delay" value="110"/>
         </canvas>
-        <uol name="../stand/0" value="../stand/0"/>
-        <uol name="../stand/1" value="../stand/1"/>
-        <uol name="../stand/2" value="../stand/2"/>
-        <uol name="../stand/3" value="../stand/3"/>
-        <uol name="../stand/4" value="../stand/4"/>
-        <uol name="../stand/5" value="../stand/5"/>
+        <uol name="9" value="../stand/0"/>
+        <uol name="10" value="../stand/1"/>
+        <uol name="11" value="../stand/2"/>
+        <uol name="12" value="../stand/3"/>
+        <uol name="13" value="../stand/4"/>
+        <uol name="14" value="../stand/5"/>
     </imgdir>
     <imgdir name="hit1">
         <canvas name="0" width="77" height="106">

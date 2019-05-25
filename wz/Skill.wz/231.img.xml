@@ -1014,17 +1014,17 @@
                     <vector name="origin" x="21" y="115"/>
                     <int name="delay" value="80"/>
                 </canvas>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
+                <uol name="4" value="2"/>
+                <uol name="5" value="1"/>
+                <uol name="6" value="0"/>
+                <uol name="7" value="1"/>
+                <uol name="8" value="2"/>
+                <uol name="9" value="3"/>
+                <uol name="10" value="2"/>
+                <uol name="11" value="1"/>
+                <uol name="12" value="0"/>
+                <uol name="13" value="1"/>
+                <uol name="14" value="2"/>
                 <canvas name="15" width="35" height="40">
                     <vector name="origin" x="21" y="115"/>
                     <int name="delay" value="200"/>

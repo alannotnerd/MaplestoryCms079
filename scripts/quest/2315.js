@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Minister of Home Affairs
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  ÃΩÀ˜ƒ¢πΩ…≠¡÷(2)
+	Description: 	Quest -  Êé¢Á¥¢ËòëËèáÊ£ÆÊûó(2)
 */
 
 importPackage(Packages.client);
@@ -21,7 +21,7 @@ function start(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendAcceptDecline("A powerful barrier of magic, huh? Then what should we do...? If we can't find a way to break that barrier, then we can't save the princess. If it's impossible to physically break through, as you mentioned, then how about requesting help from our #bMinister of Magic#k?");
+        qm.sendYesNo("A powerful barrier of magic, huh? Then what should we do...? If we can't find a way to break that barrier, then we can't save the princess. If it's impossible to physically break through, as you mentioned, then how about requesting help from our #bMinister of Magic#k?");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.sendOk("Please go see him immediately. The #bMinister of Magic#k may seem a bit on the edge, but he's very knowledgeable, and I'm sure he'll know what to do.");
@@ -44,7 +44,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.gainExp(4000);
         qm.sendOk("Hmmm...this is interesting. It's a barrier set up by someone with a powerful force of magic, which means there's no way we can manually break through it.");
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.dispose();
     }
 }

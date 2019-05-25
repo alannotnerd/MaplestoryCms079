@@ -29,7 +29,7 @@
         <int name="tradeBlock" value="1"/>
         <int name="only" value="1"/>
         <int name="tuc" value="7"/>
-        <int name="price" value="300"/>
+        <int name="price" value="10000"/>
         <int name="attackSpeed" value="5"/>
         <int name="cash" value="0"/>
     </imgdir>
@@ -345,7 +345,7 @@
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../proneStab/0/weapon" value="../../proneStab/0/weapon"/>
+            <uol name="weapon" value="../../proneStab/0/weapon"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">

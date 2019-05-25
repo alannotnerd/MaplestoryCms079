@@ -1,91 +1,103 @@
-/*  NPC : 瑞吉尔
-	弓箭手 4转 任务脚本
-	地图代码 (240010501)
+/* Author: Xterminator
+	NPC Name: 		Legor
+	Map(s): 		Leafre: Forest of the Priest (240010501)
+	Description: 		Bowman 4th Job Advancement
 */
 
-var status = -1;
-
 function start() {
-    action(1, 0, 0);
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    if (mode == 0 && status == 0) {
-	cm.dispose();
-	return;
-    }
-    if (mode == 1)
-	status++;
-    else
-	status--;
-
-    if (status == 0) {
-	if (!(cm.getJob() == 311 || cm.getJob() == 321)) {
-	    cm.sendOk("为什么你要见我??还有你想要问我关于什么事情??");
-	    cm.dispose();
-	    return;
-	} else if (cm.getPlayer().getLevel() < 120) {
-	    cm.sendOk("你等级尚未到达120级.");
-	    cm.dispose();
-	    return;
-	} else {
-		if (cm.getJob() == 311){
-		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为箭神.#l\r\n#b#L1#像我想一下...#l");
-		} else if(cm.getJob() == 321){
-		    cm.sendSimple("恭喜你有资格4转. \r\n请问你想4转吗??\r\n#b#L0#我想成为神射手.#l\r\n#b#L1#像我想一下...#l");
-	    } else {
-		cm.sendOk("好吧假如你想要4转麻烦再来找我");
+	if (mode == -1) {
 		cm.dispose();
-		return;
-	    }
-	}
-    } else if (status == 1) {
-	if (selection == 1) {
-		cm.sendOk("好吧假如你想要4转麻烦再来找我");
-	    cm.dispose();
-	    return;
-	}
-	if (cm.getPlayerStat("RSP") > (cm.getPlayerStat("LVL") - 120) * 3) {
-	    cm.sendOk("你的技能点数还没点完..");
-	    cm.dispose();
-	    return;
-	} else if (!cm.haveItem(4031348, 1)){
-		cm.sendOk("我需要#t4031348# 1张。");
-		cm.dispose();
-		return;
 	} else {
-	    if (cm.canHold(2280003)) {
-		cm.gainItem(2280003, 1);
-
-		if (cm.getJob() == 311) {
-		    cm.changeJob(312);
-		    cm.teachSkill(3120005,0,10);
-		    cm.teachSkill(3121007,0,10);
-		    cm.teachSkill(3121002,0,10);
-			cm.gainItem(4031348, -1);
-		    cm.sendNext("恭喜你转职为 #b箭神#k.我送你一些神秘小礼物^^");
-		} else {
-		    cm.changeJob(322);
-		    cm.teachSkill(3221006,0,10);
-		    cm.teachSkill(3220004,0,10);
-		    cm.teachSkill(3221002,0,10);
-			cm.gainItem(4031348, -1);
-		    cm.sendNext("恭喜你转职为 #b神射手#k.我送你一些神秘小礼物^^");
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			if (cm.getJob().getId() == 311 || cm.getJob().getId() == 321) {
+				if (cm.getPlayer().getLevel() >= 120) {
+					if (cm.getQuestStatus(6924).equals(net.sf.cherry.client.MapleQuestStatus.Status.COMPLETED)) {
+						if (cm.getJob().getId() == 311) {
+							cm.sendSimple("You're qualified to be a true bowman. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Bow Master.#l\r\n#b#L1# Let me think for a while.#l");
+						} else if (cm.getJob().getId() == 321) {
+							cm.sendSimple("You're qualified to be a true bowman. \r\nDo you wish to make your job advancement now?\r\n#b#L0# I want to advance into a Marksman.#l\r\n#b#L1# Let me think for a while.#l");
+						}
+					} else {
+						cm.sendOk("You're not ready to make the 4th job advancement. When you're ready, talk to me.");
+						cm.dispose();
+					}
+				} else {
+					cm.sendOk("You're still weak to go to the bowman extreme road. If you get stronger, come back to me.");
+					cm.dispose();
+				}
+			} else if (cm.getJob().getId() == 312 || cm.getJob().getId() == 322) {
+				if (cm.getJob().getId() == 312) {
+					cm.sendOk("You became the best bowman, the position of #bBow Master#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
+				} else if (cm.getJob().getId() == 322) {
+					cm.sendOk("You became the best bowman, the position of #bMarksman#k. Stronger power means more responsibility. Hope you get over all the tests you will have in future.");
+				}
+				cm.dispose();
+			} else {
+				cm.sendOk("Why do you want to see me? There is nothing you want to ask me.");
+				cm.dispose();
+			}
+		} else if (status == 1) {
+			if (selection == 0) {
+				nPSP = (cm.getPlayer().getLevel() - 120) * 3;
+				if (cm.getPlayer().getRemainingSp() > nPSP) {
+					cm.sendNext("Hmm...You have too many #bSP#k. You can't make the 4th job advancement with too many SP left.");
+					cm.dispose();
+				} else {
+					if (!cm.canHold(2280003)) {
+						cm.sendNext("You can't proceed as you don't have an empty slot in your inventory. Please clear your inventory and try again.");
+						cm.dispose();
+					} else {
+						cm.gainItem(2280003, 1);
+						var statup = new java.util.ArrayList();
+						cm.getPlayer().setRemainingAp(cm.getPlayer().getRemainingAp() + 5);
+						statup.add(new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(cm.getPlayer().getRemainingAp())));
+						cm.getC().getSession().write(net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
+						if (cm.getJob().getId() == 311) {
+							cm.changeJob(net.sf.cherry.client.MapleJob.BOWMASTER);
+							cm.teachSkill(3121002, 0, 10);
+							cm.teachSkill(3121007, 0, 10);
+							cm.teachSkill(3120005, 0, 10);
+							status = 2;
+							cm.sendNext("You became the best bowman, #bBowmaster#k. Bow Master can use #bSharp Eyes#k which can increase the fighting power of colleagues so that it became such an important job.");
+						} else if (cm.getJob().getId() == 321) {
+							cm.changeJob(net.sf.cherry.client.MapleJob.CROSSBOWMASTER);
+							cm.teachSkill(3221002, 0, 10);
+							cm.teachSkill(3220004, 0, 10);
+							cm.teachSkill(3221006, 0, 10);
+							status = 2;
+							cm.sendNext("You became the best bowman #bMarksman#k. Marksman can use #bSharp Eyes#k which can increase the fighting power of colleagues so that it became such an important job.");
+						}
+					}
+				}
+			} else {
+				cm.sendNext("You don't have to hesitate....You passed all tests. Whenever you decide, talk to me. If you're ready, I'll let you make the 4th job advancement.");
+				cm.dispose();
+			}
+		} else if (status == 2) {
+			if (cm.getJob().getId() == 312) {
+				cm.sendNext("You became the best bowman, #bBowmaster#k. Bow Master can use #bSharp Eyes#k which can increase the fighting power of colleagues so that it became such an important job.");
+			} else if (cm.getJob().getId() == 322) {
+				cm.sendNext("You became the best bowman #bMarksman#k. Marksman can use #bSharp Eyes#k which can increase the fighting power of colleagues so that it became such an important job.");
+			}
+		} else if (status == 3) {
+			if (cm.getJob().getId() == 312) {
+				cm.sendNextPrev("This is not all about Bow Master. Bow Master is good at a fast battle. It can attack enemies with enormously fast speed and even have great attack power.");
+			} else if (cm.getJob().getId() == 322) {
+				cm.sendNextPrev("This is not all about Marksman. Each shot of Marksman is very strong. It can attack many enemies with strong power and may beat off them at once.");
+			}
+		} else if (status == 4) {
+			cm.sendPrev("Don't forget that it all depends on how much you train.");
+		} else if (status == 5) {
+			cm.dispose();
 		}
-	    } else {
-		cm.sendOk("你没有多的栏位请清空再来尝试一次!");
-		cm.dispose();
-		return;
-	    }
 	}
-    } else if (status == 2) {
-	if (cm.getJob() == 312) {
-	    cm.sendNext("不要忘记了这一切都取决于你练了多少.");
-	} else {
-	    cm.sendNext("不要忘记了这一切都取决于你练了多少.");
-	}
-    } else if (status == 3) {
-	cm.sendNextPrev("我已你为荣.");
-	cm.dispose();
-    }
 }

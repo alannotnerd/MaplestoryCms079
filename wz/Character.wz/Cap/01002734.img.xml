@@ -37,10 +37,10 @@
     </imgdir>
     <imgdir name="walk1">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="default" value="../../default/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
+            <uol name="default" value="../../default/default"/>
         </imgdir>
         <imgdir name="2">
             <canvas name="default" width="58" height="75">
@@ -400,7 +400,7 @@
     </imgdir>
     <imgdir name="swingTF">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
             <canvas name="default" width="58" height="75">
@@ -820,16 +820,16 @@
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defalutAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defalutAc" value="../../default/defaultAc"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../default/defaultAc" value="../../default/defaultAc"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defalutAc" value="../../default/defaultAc"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
@@ -876,18 +876,18 @@
     </imgdir>
     <imgdir name="ladder">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="rope">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
 </imgdir>

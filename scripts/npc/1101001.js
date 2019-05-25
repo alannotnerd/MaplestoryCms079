@@ -1,14 +1,30 @@
- /* 
-	NPC Name: 		Divine Bird
-	Map(s): 		Erev
-	Description: 		Buff
-*/
+importPackage(net.sf.cherry.client);
+
+var status = 0;
+var zones = 0;
+var selectedMap = -1;
 
 function start() {
-    cm.useItem(2022458);
-    cm.sendOk("²»ÒªÍ£Ö¹ÑµÁ·£¬Õâ¸öÊÀ½çĞèÒªÄãÀ´ÊØ»¤¡£");
+	status = -1;
+	action(1, 0, 0);
 }
 
 function action(mode, type, selection) {
-    cm.dispose();
-}
+	if (mode == -1) {
+		cm.dispose();
+	} else {
+		if (status >= 0 && mode == 0) {
+			cm.dispose();
+			return;
+		}
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0) {
+			cm.sendOk("æ¬¢è¿æ¥åˆ°åœ£åœ°ï¼");
+		} else if (status == 1) {
+			cm.dispose();
+		}
+	}
+}	

@@ -1,16 +1,14 @@
 /*
-/*
 	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
-		       Matthias Butz <matze@odinms.de>
-		       Jan Christian Meyer <vimes@odinms.de>
+    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
+                       Matthias Butz <matze@odinms.de>
+                       Jan Christian Meyer <vimes@odinms.de>
 
     This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation version 3 as published by
-    the Free Software Foundation. You may not use, modify or distribute
-    this program under any other version of the GNU Affero General Public
-    License.
+    it under the terms of the GNU Affero General Public License version 3
+    as published by the Free Software Foundation. You may not use, modify
+    or distribute this program under any other version of the
+    GNU Affero General Public License.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -20,18 +18,29 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+importPackage(net.sf.cherry.server.maps);
+importPackage(net.sf.cherry.net.channel);
+importPackage(net.sf.cherry.tools);
+
 /*
 Kerning PQ: 3rd stage to 4th stage portal
 */
 
 function enter(pi) {
-    var eim = pi.getPlayer().getEventInstance();
-    var target = eim.getMapInstance(103000804);
-    if (eim.getProperty("4stageclear") != null) {
-        pi.getPlayer().changeMap(target, target.getPortal("st00"));
-        return true;
-    } else {
-        pi.playerMessage("The warp is currently unavailable.");
-        return false;
-    }
+	var nextMap = 103000803;
+	var eim = pi.getPlayer().getEventInstance()
+	var target = eim.getMapInstance(nextMap);
+	var targetPortal = target.getPortal("st00");
+	// only let people through if the eim is ready
+	var avail = eim.getProperty("3stageclear");
+	if (avail == null) {
+		// do nothing; send message to player
+		pi.getPlayer().getClient().getSession().write(MaplePacketCreator.serverNotice(6, "The warp is currently unavailable."));
+		return false;
+	}
+	else {
+		pi.getPlayer().changeMap(target, targetPortal);
+		return true;
+	}
 }

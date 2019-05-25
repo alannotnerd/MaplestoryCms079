@@ -1,3 +1,5 @@
 function enter(pi) {
-    pi.openNpc(2007);
+	pi.warp(0, "sp");
+	pi.blockPortal();
+	return true;
 }

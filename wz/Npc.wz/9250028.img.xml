@@ -22,11 +22,11 @@
             <int name="z" value="0"/>
             <int name="delay" value="180"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="2"/>
+        <uol name="7" value="1"/>
         <canvas name="8" width="53" height="61">
             <vector name="origin" x="24" y="60"/>
             <int name="z" value="0"/>

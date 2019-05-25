@@ -1,7 +1,18 @@
-function start() {
-    cm.sendOk("嗨，我是#p1002101# 很高兴认识你=)");
-}
+var status = -1;
 
 function action(mode, type, selection) {
-    cm.dispose();
-}	
+    if (mode == 1) {
+	status++;
+    } else {
+	if (status == 0) {
+	    cm.dispose();
+	}
+	status--;
+    }
+    if (status == 0) {
+	cm.sendYesNo("浣犳兂鍓嶅線榫欐矇鐫＄殑宀涘悧?");
+    } else if (status == 1) {
+	cm.warp(914100000);
+	cm.dispose();
+    }
+}

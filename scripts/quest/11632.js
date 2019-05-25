@@ -1,5 +1,5 @@
 /**
- *	传说格拉泰斯戒指
+ *	浼犺鏍兼媺娉版柉鎴掓寚
  */
 
 var status = -1;
@@ -10,6 +10,6 @@ function start(mode, type, selection) {
 }
 
 function end(mode, type, selection) {
-    qm.forceCompleteQuest();
+    qm.completeQuest();
     qm.dispose();
 }

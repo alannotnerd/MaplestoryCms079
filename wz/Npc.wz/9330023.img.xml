@@ -49,10 +49,10 @@
             <int name="z" value="0"/>
             <string name="delay" value="220"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
+        <uol name="6" value="1"/>
+        <uol name="7" value="2"/>
     </imgdir>
     <imgdir name="action">
         <canvas name="0" width="41" height="70">

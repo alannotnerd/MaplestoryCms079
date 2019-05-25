@@ -398,17 +398,17 @@
                     <vector name="origin" x="16" y="115"/>
                     <int name="delay" value="100"/>
                 </canvas>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
-                <uol name="3" value="3"/>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
-                <uol name="3" value="3"/>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
+                <uol name="4" value="0"/>
+                <uol name="5" value="1"/>
+                <uol name="6" value="2"/>
+                <uol name="7" value="3"/>
+                <uol name="8" value="0"/>
+                <uol name="9" value="1"/>
+                <uol name="10" value="2"/>
+                <uol name="11" value="3"/>
+                <uol name="12" value="0"/>
+                <uol name="13" value="1"/>
+                <uol name="14" value="2"/>
                 <canvas name="15" width="33" height="32">
                     <vector name="origin" x="16" y="115"/>
                     <int name="delay" value="200"/>
@@ -697,7 +697,7 @@
                     <int name="mpCon" value="55"/>
                     <int name="time" value="180"/>
                     <int name="x" value="80"/>
-                    <int name="y" value="90"/>
+                    <int name="y" value="50"/>
                     <int name="itemCon" value="4006001"/>
                     <int name="itemConNo" value="1"/>
                 </imgdir>
@@ -1060,12 +1060,12 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="stabTF">
-                    <uol name="../swingPF/0" value="../swingPF/0"/>
-                    <uol name="../swingPF/1" value="../swingPF/1"/>
+                    <uol name="0" value="../swingPF/0"/>
+                    <uol name="1" value="../swingPF/1"/>
                     <canvas name="2" width="61" height="75">
                         <vector name="origin" x="45" y="95"/>
                     </canvas>
-                    <uol name="../stabT1/2" value="../stabT1/2"/>
+                    <uol name="3" value="../stabT1/2"/>
                 </imgdir>
                 <imgdir name="shoot1">
                     <canvas name="0" width="56" height="65">
@@ -1074,7 +1074,7 @@
                     <canvas name="1" width="56" height="65">
                         <vector name="origin" x="35" y="69"/>
                     </canvas>
-                    <uol name="1" value="1"/>
+                    <uol name="2" value="1"/>
                 </imgdir>
                 <imgdir name="shoot2">
                     <canvas name="0" width="49" height="63">
@@ -1086,7 +1086,7 @@
                     <canvas name="2" width="49" height="63">
                         <vector name="origin" x="29" y="68"/>
                     </canvas>
-                    <uol name="0" value="0"/>
+                    <uol name="3" value="0"/>
                     <canvas name="4" width="49" height="63">
                         <vector name="origin" x="28" y="68"/>
                     </canvas>
@@ -1098,7 +1098,7 @@
                     <canvas name="1" width="60" height="64">
                         <vector name="origin" x="38" y="68"/>
                     </canvas>
-                    <uol name="1" value="1"/>
+                    <uol name="2" value="1"/>
                 </imgdir>
                 <imgdir name="proneStab">
                     <canvas name="0" width="65" height="37">
@@ -1109,14 +1109,14 @@
                     </canvas>
                 </imgdir>
                 <imgdir name="prone">
-                    <uol name="../proneStab/0" value="../proneStab/0"/>
+                    <uol name="0" value="../proneStab/0"/>
                 </imgdir>
                 <imgdir name="heal">
-                    <uol name="../alert/1" value="../alert/1"/>
+                    <uol name="0" value="../alert/1"/>
                     <canvas name="1" width="49" height="63">
                         <vector name="origin" x="35" y="67"/>
                     </canvas>
-                    <uol name="../swingO2/0" value="../swingO2/0"/>
+                    <uol name="2" value="../swingO2/0"/>
                 </imgdir>
                 <imgdir name="fly">
                     <canvas name="0" width="49" height="70">
@@ -1459,9 +1459,9 @@
                     <int name="moneyCon" value="135"/>
                     <int name="prop" value="1"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="2">
@@ -1469,9 +1469,9 @@
                     <int name="moneyCon" value="150"/>
                     <int name="prop" value="1"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="3">
@@ -1479,9 +1479,9 @@
                     <int name="moneyCon" value="165"/>
                     <int name="prop" value="1"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="4">
@@ -1489,9 +1489,9 @@
                     <int name="moneyCon" value="180"/>
                     <int name="prop" value="2"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="5">
@@ -1499,9 +1499,9 @@
                     <int name="moneyCon" value="195"/>
                     <int name="prop" value="2"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="6">
@@ -1509,9 +1509,9 @@
                     <int name="moneyCon" value="210"/>
                     <int name="prop" value="2"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="7">
@@ -1519,9 +1519,9 @@
                     <int name="moneyCon" value="225"/>
                     <int name="prop" value="3"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="8">
@@ -1529,9 +1529,9 @@
                     <int name="moneyCon" value="240"/>
                     <int name="prop" value="3"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="9">
@@ -1539,9 +1539,9 @@
                     <int name="moneyCon" value="255"/>
                     <int name="prop" value="3"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="10">
@@ -1549,9 +1549,9 @@
                     <int name="moneyCon" value="270"/>
                     <int name="prop" value="4"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball" value="../../ball"/>
+                    <uol name="ball" value="../../ball"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/0" value="../../../hit/0"/>
+                        <uol name="0" value="../../../hit/0"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="11">
@@ -1559,9 +1559,9 @@
                     <int name="moneyCon" value="285"/>
                     <int name="prop" value="4"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="12">
@@ -1569,9 +1569,9 @@
                     <int name="moneyCon" value="300"/>
                     <int name="prop" value="4"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="13">
@@ -1579,9 +1579,9 @@
                     <int name="moneyCon" value="315"/>
                     <int name="prop" value="5"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="14">
@@ -1589,9 +1589,9 @@
                     <int name="moneyCon" value="330"/>
                     <int name="prop" value="5"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="15">
@@ -1599,9 +1599,9 @@
                     <int name="moneyCon" value="345"/>
                     <int name="prop" value="5"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="16">
@@ -1609,9 +1609,9 @@
                     <int name="moneyCon" value="360"/>
                     <int name="prop" value="6"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="17">
@@ -1619,9 +1619,9 @@
                     <int name="moneyCon" value="375"/>
                     <int name="prop" value="6"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="18">
@@ -1629,9 +1629,9 @@
                     <int name="moneyCon" value="390"/>
                     <int name="prop" value="6"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="19">
@@ -1639,9 +1639,9 @@
                     <int name="moneyCon" value="405"/>
                     <int name="prop" value="7"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="20">
@@ -1649,9 +1649,9 @@
                     <int name="moneyCon" value="420"/>
                     <int name="prop" value="7"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball0" value="../../ball0"/>
+                    <uol name="ball" value="../../ball0"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/1" value="../../../hit/1"/>
+                        <uol name="0" value="../../../hit/1"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="21">
@@ -1659,9 +1659,9 @@
                     <int name="moneyCon" value="435"/>
                     <int name="prop" value="7"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="22">
@@ -1669,9 +1669,9 @@
                     <int name="moneyCon" value="450"/>
                     <int name="prop" value="8"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="23">
@@ -1679,9 +1679,9 @@
                     <int name="moneyCon" value="465"/>
                     <int name="prop" value="8"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="24">
@@ -1689,9 +1689,9 @@
                     <int name="moneyCon" value="480"/>
                     <int name="prop" value="8"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="25">
@@ -1699,9 +1699,9 @@
                     <int name="moneyCon" value="495"/>
                     <int name="prop" value="9"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="26">
@@ -1709,9 +1709,9 @@
                     <int name="moneyCon" value="510"/>
                     <int name="prop" value="9"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="27">
@@ -1719,9 +1719,9 @@
                     <int name="moneyCon" value="525"/>
                     <int name="prop" value="9"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="28">
@@ -1729,9 +1729,9 @@
                     <int name="moneyCon" value="540"/>
                     <int name="prop" value="10"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="29">
@@ -1739,9 +1739,9 @@
                     <int name="moneyCon" value="555"/>
                     <int name="prop" value="10"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
                 <imgdir name="30">
@@ -1749,9 +1749,9 @@
                     <int name="moneyCon" value="570"/>
                     <int name="prop" value="10"/>
                     <int name="x" value="50"/>
-                    <uol name="../../ball1" value="../../ball1"/>
+                    <uol name="ball" value="../../ball1"/>
                     <imgdir name="hit">
-                        <uol name="../../../hit/2" value="../../../hit/2"/>
+                        <uol name="0" value="../../../hit/2"/>
                     </imgdir>
                 </imgdir>
             </imgdir>

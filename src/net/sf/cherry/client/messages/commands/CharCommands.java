@@ -438,6 +438,15 @@ public class CharCommands implements Command {
       } else {
         c.getSession().write(MaplePacketCreator.updateAriantPQRanking(splitted[1], 5, false));
       }
+    } else {
+      switch (splitted[0]){
+        case "!mapcode":
+          mc.dropMessage("Current Map Id is " + player.getMapId());
+          break;
+
+        default:
+          break;
+      }
     }
   }
 
@@ -483,7 +492,7 @@ public class CharCommands implements Command {
         new CommandDefinition("clearinvent", "<all, equip, use, etc, setup, cash>", "清空背包", 50),
         new CommandDefinition("刷新地图", "", "", 50),
         new CommandDefinition("满技能", "", "", 50),
-        new CommandDefinition("地图代码", "", "", 50),
+        new CommandDefinition("mapcode", "", "", 50),
         new CommandDefinition("全掉处理", "", "", 50),
         new CommandDefinition("踢人处理", "", "", 50),
         new CommandDefinition("eventlevel", "<minlevel> <maxlevel> <mapid> <minutes>", "Spawns NPC to warp to an event", 50),

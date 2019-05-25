@@ -2,7 +2,7 @@
 			Resonance
 	NPC Name: 	Minister of Magic
 	Map(s): 	Mushroom Castle: Corner of Mushroom Forest(106020000)
-	Description: 	Quest -  Ô½¹ý³ÇÇ½(1)
+	Description: 	Quest -  è¶Šè¿‡åŸŽå¢™(1)
 */
 
 importPackage(Packages.client);
@@ -21,7 +21,7 @@ function start(mode, type, selection) {
         }
     }
     if (status == 0) {
-        qm.sendAcceptDecline("Now you'll be able to penetrate the spiny vine barrier of Mushroom Forest, but before that, #bMinister of Home Affairs#k wants to have a word with you. Please go see him immediately.");
+        qm.sendYesNo("Now you'll be able to penetrate the spiny vine barrier of Mushroom Forest, but before that, #bMinister of Home Affairs#k wants to have a word with you. Please go see him immediately.");
     } else if (status == 1) {
         qm.forceStartQuest();
         qm.sendOk("Good luck.");
@@ -44,7 +44,7 @@ function end(mode, type, selection) {
     } else if (status == 1) {
         qm.gainExp(2500);
         qm.sendOk("The problem now is to figure out how to enter the castle.");
-        qm.forceCompleteQuest();
+        qm.completeQuest();
         qm.dispose();
     }
 }

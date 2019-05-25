@@ -1,14 +1,11 @@
 function enter(pi) {
-    if (pi.getQuestStatus(21701) == 1) {
-//pi.playPortalSE();
-        pi.warp(914010000, 1);
-    } else if (pi.getQuestStatus(21702) == 1) {
-//pi.playPortalSE();
-        pi.warp(914010100, 1);
-    } else if (pi.getQuestStatus(21703) == 1) {
-//pi.playPortalSE();
-        pi.warp(914010200, 1);
-    } else {
-        pi.playerMessage(5, "Only if you are recieving a lesson from Puo, you will be allowed to enter the Pengiun Training Ground.");
-    }
+	if (pi.isQuestActive(21701))
+		pi.warp(914010000);
+	else if (pi.isQuestActive(21702))
+		pi.warp(914010100);
+	else if (pi.isQuestActive(21703))
+		pi.warp(914010200);
+	else
+		pi.playerMessage("You can only enter the Penguin Training Center if you are getting trained by Puo.");
+	return true;
 }

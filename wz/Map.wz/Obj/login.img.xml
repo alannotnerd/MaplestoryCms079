@@ -805,7 +805,7 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="300"/>
                 </canvas>
-                <uol name="1" value="1"/>
+                <uol name="3" value="1"/>
             </imgdir>
             <imgdir name="3">
                 <canvas name="0" width="27" height="19">
@@ -840,9 +840,9 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="300"/>
                 </canvas>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="4" value="3"/>
+                <uol name="5" value="2"/>
+                <uol name="6" value="1"/>
             </imgdir>
             <imgdir name="5">
                 <canvas name="0" width="62" height="70">
@@ -860,7 +860,7 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="300"/>
                 </canvas>
-                <uol name="1" value="1"/>
+                <uol name="3" value="1"/>
             </imgdir>
             <imgdir name="7">
                 <canvas name="0" width="64" height="79">
@@ -878,9 +878,9 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="300"/>
                 </canvas>
-                <uol name="1" value="1"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="3" value="1"/>
+                <uol name="4" value="2"/>
+                <uol name="5" value="1"/>
             </imgdir>
             <imgdir name="6">
                 <canvas name="0" width="50" height="65">
@@ -970,7 +970,7 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="300"/>
                 </canvas>
-                <uol name="1" value="1"/>
+                <uol name="3" value="1"/>
             </imgdir>
             <imgdir name="12">
                 <canvas name="0" width="86" height="27">
@@ -1030,7 +1030,7 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="500"/>
                 </canvas>
-                <uol name="1" value="1"/>
+                <uol name="3" value="1"/>
             </imgdir>
             <imgdir name="14">
                 <canvas name="0" width="62" height="72">
@@ -1043,8 +1043,8 @@
                     <int name="z" value="0"/>
                     <int name="delay" value="300"/>
                 </canvas>
-                <uol name="0" value="0"/>
-                <uol name="1" value="1"/>
+                <uol name="2" value="0"/>
+                <uol name="3" value="1"/>
             </imgdir>
             <imgdir name="15">
                 <canvas name="0" width="43" height="98">

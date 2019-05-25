@@ -6,7 +6,7 @@ function end(mode, type, selection) {
     if (qm.getPlayer().getLevel() >= 200 && qm.getPlayer().getJob() / 100 == 2) {
         qm.gainItem(1902002, 1);
         qm.forceStartQuest();
-        qm.forceCompleteQuest();
+        qm.completeQuest();
     }
     qm.dispose();
 }

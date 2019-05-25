@@ -63,24 +63,24 @@
     </imgdir>
     <imgdir name="walk2">
         <imgdir name="0">
-            <uol name="../../walk1/0/0" value="../../walk1/0/0"/>
-            <uol name="../../walk1/0/1" value="../../walk1/0/1"/>
-            <uol name="../../walk1/0/delay" value="../../walk1/0/delay"/>
+            <uol name="0" value="../../walk1/0/0"/>
+            <uol name="1" value="../../walk1/0/1"/>
+            <uol name="delay" value="../../walk1/0/delay"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../walk1/1/0" value="../../walk1/1/0"/>
-            <uol name="../../walk1/1/1" value="../../walk1/1/1"/>
-            <uol name="../../walk1/1/delay" value="../../walk1/1/delay"/>
+            <uol name="0" value="../../walk1/1/0"/>
+            <uol name="1" value="../../walk1/1/1"/>
+            <uol name="delay" value="../../walk1/1/delay"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../walk1/2/0" value="../../walk1/2/0"/>
-            <uol name="../../walk1/2/1" value="../../walk1/2/1"/>
-            <uol name="../../walk1/1/delay" value="../../walk1/1/delay"/>
+            <uol name="0" value="../../walk1/2/0"/>
+            <uol name="1" value="../../walk1/2/1"/>
+            <uol name="delay" value="../../walk1/1/delay"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../walk1/3/0" value="../../walk1/3/0"/>
-            <uol name="../../walk1/3/1" value="../../walk1/3/1"/>
-            <uol name="../../walk1/1/delay" value="../../walk1/1/delay"/>
+            <uol name="0" value="../../walk1/3/0"/>
+            <uol name="1" value="../../walk1/3/1"/>
+            <uol name="delay" value="../../walk1/1/delay"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand1">

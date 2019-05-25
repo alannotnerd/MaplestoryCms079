@@ -173,16 +173,16 @@
                 <int name="delay" value="150"/>
             </canvas>
         </imgdir>
-        <uol name="../0/0" value="../0/0"/>
-        <uol name="../0/1" value="../0/1"/>
-        <uol name="../0/2" value="../0/2"/>
-        <uol name="../0/3" value="../0/3"/>
-        <uol name="../0/4" value="../0/4"/>
-        <uol name="../0/5" value="../0/5"/>
-        <uol name="../0/6" value="../0/6"/>
-        <uol name="../0/7" value="../0/7"/>
-        <uol name="../0/8" value="../0/8"/>
-        <uol name="../0/9" value="../0/9"/>
+        <uol name="0" value="../0/0"/>
+        <uol name="1" value="../0/1"/>
+        <uol name="2" value="../0/2"/>
+        <uol name="3" value="../0/3"/>
+        <uol name="4" value="../0/4"/>
+        <uol name="5" value="../0/5"/>
+        <uol name="6" value="../0/6"/>
+        <uol name="7" value="../0/7"/>
+        <uol name="8" value="../0/8"/>
+        <uol name="9" value="../0/9"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="2">
@@ -244,16 +244,16 @@
                 <int name="delay" value="150"/>
             </canvas>
         </imgdir>
-        <uol name="../0/0" value="../0/0"/>
-        <uol name="../0/1" value="../0/1"/>
-        <uol name="../0/2" value="../0/2"/>
-        <uol name="../0/3" value="../0/3"/>
-        <uol name="../0/4" value="../0/4"/>
-        <uol name="../0/5" value="../0/5"/>
-        <uol name="../0/6" value="../0/6"/>
-        <uol name="../0/7" value="../0/7"/>
-        <uol name="../0/8" value="../0/8"/>
-        <uol name="../0/9" value="../0/9"/>
+        <uol name="0" value="../0/0"/>
+        <uol name="1" value="../0/1"/>
+        <uol name="2" value="../0/2"/>
+        <uol name="3" value="../0/3"/>
+        <uol name="4" value="../0/4"/>
+        <uol name="5" value="../0/5"/>
+        <uol name="6" value="../0/6"/>
+        <uol name="7" value="../0/7"/>
+        <uol name="8" value="../0/8"/>
+        <uol name="9" value="../0/9"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="3">
@@ -315,16 +315,16 @@
                 <int name="delay" value="150"/>
             </canvas>
         </imgdir>
-        <uol name="../0/0" value="../0/0"/>
-        <uol name="../0/1" value="../0/1"/>
-        <uol name="../0/2" value="../0/2"/>
-        <uol name="../0/3" value="../0/3"/>
-        <uol name="../0/4" value="../0/4"/>
-        <uol name="../0/5" value="../0/5"/>
-        <uol name="../0/6" value="../0/6"/>
-        <uol name="../0/7" value="../0/7"/>
-        <uol name="../0/8" value="../0/8"/>
-        <uol name="../0/9" value="../0/9"/>
+        <uol name="0" value="../0/0"/>
+        <uol name="1" value="../0/1"/>
+        <uol name="2" value="../0/2"/>
+        <uol name="3" value="../0/3"/>
+        <uol name="4" value="../0/4"/>
+        <uol name="5" value="../0/5"/>
+        <uol name="6" value="../0/6"/>
+        <uol name="7" value="../0/7"/>
+        <uol name="8" value="../0/8"/>
+        <uol name="9" value="../0/9"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="4">
@@ -386,16 +386,16 @@
                 <int name="delay" value="150"/>
             </canvas>
         </imgdir>
-        <uol name="../0/0" value="../0/0"/>
-        <uol name="../0/1" value="../0/1"/>
-        <uol name="../0/2" value="../0/2"/>
-        <uol name="../0/3" value="../0/3"/>
-        <uol name="../0/4" value="../0/4"/>
-        <uol name="../0/5" value="../0/5"/>
-        <uol name="../0/6" value="../0/6"/>
-        <uol name="../0/7" value="../0/7"/>
-        <uol name="../0/8" value="../0/8"/>
-        <uol name="../0/9" value="../0/9"/>
+        <uol name="0" value="../0/0"/>
+        <uol name="1" value="../0/1"/>
+        <uol name="2" value="../0/2"/>
+        <uol name="3" value="../0/3"/>
+        <uol name="4" value="../0/4"/>
+        <uol name="5" value="../0/5"/>
+        <uol name="6" value="../0/6"/>
+        <uol name="7" value="../0/7"/>
+        <uol name="8" value="../0/8"/>
+        <uol name="9" value="../0/9"/>
         <int name="repeat" value="1"/>
     </imgdir>
     <imgdir name="5">

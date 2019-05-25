@@ -41,14 +41,14 @@
                     <vector name="lt" x="-17" y="-237"/>
                     <int name="delay" value="100"/>
                 </canvas>
-                <uol name="7" value="7"/>
-                <uol name="8" value="8"/>
-                <uol name="7" value="7"/>
-                <uol name="6" value="6"/>
-                <uol name="4" value="4"/>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="9" value="7"/>
+                <uol name="10" value="8"/>
+                <uol name="11" value="7"/>
+                <uol name="12" value="6"/>
+                <uol name="13" value="4"/>
+                <uol name="14" value="3"/>
+                <uol name="15" value="2"/>
+                <uol name="16" value="1"/>
                 <int name="damage" value="300"/>
                 <int name="dir" value="9"/>
                 <int name="obstacle" value="1"/>
@@ -92,14 +92,14 @@
                     <vector name="lt" x="-17" y="-237"/>
                     <int name="delay" value="100"/>
                 </canvas>
-                <uol name="7" value="7"/>
-                <uol name="8" value="8"/>
-                <uol name="7" value="7"/>
-                <uol name="6" value="6"/>
-                <uol name="4" value="4"/>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="9" value="7"/>
+                <uol name="10" value="8"/>
+                <uol name="11" value="7"/>
+                <uol name="12" value="6"/>
+                <uol name="13" value="4"/>
+                <uol name="14" value="3"/>
+                <uol name="15" value="2"/>
+                <uol name="16" value="1"/>
                 <int name="damage" value="300"/>
                 <int name="dir" value="9"/>
                 <int name="obstacle" value="1"/>
@@ -143,14 +143,14 @@
                     <vector name="lt" x="-17" y="-237"/>
                     <int name="delay" value="100"/>
                 </canvas>
-                <uol name="7" value="7"/>
-                <uol name="8" value="8"/>
-                <uol name="7" value="7"/>
-                <uol name="6" value="6"/>
-                <uol name="4" value="4"/>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="9" value="7"/>
+                <uol name="10" value="8"/>
+                <uol name="11" value="7"/>
+                <uol name="12" value="6"/>
+                <uol name="13" value="4"/>
+                <uol name="14" value="3"/>
+                <uol name="15" value="2"/>
+                <uol name="16" value="1"/>
                 <int name="damage" value="300"/>
                 <int name="dir" value="9"/>
                 <int name="obstacle" value="1"/>
@@ -194,14 +194,14 @@
                     <vector name="lt" x="-17" y="-237"/>
                     <int name="delay" value="100"/>
                 </canvas>
-                <uol name="7" value="7"/>
-                <uol name="8" value="8"/>
-                <uol name="7" value="7"/>
-                <uol name="6" value="6"/>
-                <uol name="4" value="4"/>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="9" value="7"/>
+                <uol name="10" value="8"/>
+                <uol name="11" value="7"/>
+                <uol name="12" value="6"/>
+                <uol name="13" value="4"/>
+                <uol name="14" value="3"/>
+                <uol name="15" value="2"/>
+                <uol name="16" value="1"/>
                 <int name="damage" value="300"/>
                 <int name="dir" value="9"/>
                 <int name="obstacle" value="1"/>
@@ -245,14 +245,14 @@
                     <vector name="lt" x="-17" y="-237"/>
                     <int name="delay" value="100"/>
                 </canvas>
-                <uol name="7" value="7"/>
-                <uol name="8" value="8"/>
-                <uol name="7" value="7"/>
-                <uol name="6" value="6"/>
-                <uol name="4" value="4"/>
-                <uol name="3" value="3"/>
-                <uol name="2" value="2"/>
-                <uol name="1" value="1"/>
+                <uol name="9" value="7"/>
+                <uol name="10" value="8"/>
+                <uol name="11" value="7"/>
+                <uol name="12" value="6"/>
+                <uol name="13" value="4"/>
+                <uol name="14" value="3"/>
+                <uol name="15" value="2"/>
+                <uol name="16" value="1"/>
                 <int name="damage" value="300"/>
                 <int name="dir" value="9"/>
                 <int name="obstacle" value="1"/>

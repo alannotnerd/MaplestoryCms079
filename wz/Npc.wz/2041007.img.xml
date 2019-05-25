@@ -28,8 +28,8 @@
             <vector name="origin" x="37" y="68"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="4" value="1"/>
+        <uol name="5" value="2"/>
     </imgdir>
     <imgdir name="say">
         <canvas name="0" width="74" height="68">
@@ -40,9 +40,9 @@
             <vector name="origin" x="37" y="68"/>
             <int name="delay" value="200"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="0"/>
         <canvas name="5" width="74" height="68">
             <vector name="origin" x="37" y="68"/>
             <int name="delay" value="500"/>
@@ -51,12 +51,12 @@
             <vector name="origin" x="37" y="68"/>
             <int name="delay" value="1000"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="0" value="0"/>
-        <uol name="5" value="5"/>
-        <uol name="6" value="6"/>
+        <uol name="8" value="1"/>
+        <uol name="9" value="0"/>
+        <uol name="10" value="1"/>
+        <uol name="11" value="0"/>
+        <uol name="12" value="5"/>
+        <uol name="13" value="6"/>
         <imgdir name="speak">
             <string name="0" value="n0"/>
             <string name="1" value="n1"/>

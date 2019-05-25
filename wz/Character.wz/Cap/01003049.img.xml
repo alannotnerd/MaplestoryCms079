@@ -291,442 +291,442 @@
     </imgdir>
     <imgdir name="walk1">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default1" value="../../defaultAC/default1"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default1"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default2" value="../../defaultAC/default2"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default2"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default1" value="../../defaultAC/default1"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default1"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default3" value="../../defaultAC/default3"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default3"/>
         </imgdir>
     </imgdir>
     <imgdir name="walk2">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default1" value="../../defaultAC/default1"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default1"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default2" value="../../defaultAC/default2"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default2"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default1" value="../../defaultAC/default1"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default1"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default3" value="../../defaultAC/default3"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default3"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand1">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default4" value="../../defaultAC/default4"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default4"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default5" value="../../defaultAC/default5"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default5"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default6" value="../../defaultAC/default6"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default6"/>
         </imgdir>
     </imgdir>
     <imgdir name="stand2">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default4" value="../../defaultAC/default4"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default4"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default5" value="../../defaultAC/default5"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default5"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default6" value="../../defaultAC/default6"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default6"/>
         </imgdir>
     </imgdir>
     <imgdir name="alert">
         <imgdir name="0">
-            <uol name="../../default/default1" value="../../default/default1"/>
-            <uol name="../../defaultAC/default7" value="../../defaultAC/default7"/>
+            <uol name="default" value="../../default/default1"/>
+            <uol name="defaultAC" value="../../defaultAC/default7"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default2" value="../../default/default2"/>
-            <uol name="../../defaultAC/default8" value="../../defaultAC/default8"/>
+            <uol name="default" value="../../default/default2"/>
+            <uol name="defaultAC" value="../../defaultAC/default8"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default3" value="../../default/default3"/>
-            <uol name="../../defaultAC/default9" value="../../defaultAC/default9"/>
+            <uol name="default" value="../../default/default3"/>
+            <uol name="defaultAC" value="../../defaultAC/default9"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO1">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default6" value="../../default/default6"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default6"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO2">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default6" value="../../default/default6"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default6"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingO3">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default7" value="../../default/default7"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default7"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingOF">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default13" value="../../defaultAC/default13"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default13"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default1" value="../../backDefault/default1"/>
+            <uol name="backDefault" value="../../backDefault/default1"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default14" value="../../defaultAC/default14"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default14"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default15" value="../../defaultAC/default15"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default15"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT1">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default6" value="../../default/default6"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default6"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT2">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default6" value="../../default/default6"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default6"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingT3">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default7" value="../../default/default7"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default7"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingTF">
         <imgdir name="0">
-            <uol name="../../backDefault/default2" value="../../backDefault/default2"/>
+            <uol name="backDefault" value="../../backDefault/default2"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default7" value="../../default/default7"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default7"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default8" value="../../default/default8"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default8"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingP1">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default6" value="../../default/default6"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default6"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingP2">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default7" value="../../default/default7"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default7"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="swingPF">
         <imgdir name="0">
-            <uol name="../../default/default10" value="../../default/default10"/>
-            <uol name="../../defaultAC/default22" value="../../defaultAC/default22"/>
+            <uol name="default" value="../../default/default10"/>
+            <uol name="defaultAC" value="../../defaultAC/default22"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default5" value="../../default/default5"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default5"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default7" value="../../default/default7"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default7"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabO1">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default9" value="../../default/default9"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default9"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabO2">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default9" value="../../default/default9"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default9"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabOF">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default9" value="../../default/default9"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default9"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabT1">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default9" value="../../default/default9"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default9"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabT2">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default9" value="../../default/default9"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default9"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="stabTF">
         <imgdir name="0">
-            <uol name="../../default/default10" value="../../default/default10"/>
-            <uol name="../../defaultAC/default22" value="../../defaultAC/default22"/>
+            <uol name="default" value="../../default/default10"/>
+            <uol name="defaultAC" value="../../defaultAC/default22"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default10" value="../../defaultAC/default10"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default10"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default10" value="../../default/default10"/>
-            <uol name="../../defaultAC/default11" value="../../defaultAC/default11"/>
+            <uol name="default" value="../../default/default10"/>
+            <uol name="defaultAC" value="../../defaultAC/default11"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default9" value="../../default/default9"/>
-            <uol name="../../defaultAC/default12" value="../../defaultAC/default12"/>
+            <uol name="default" value="../../default/default9"/>
+            <uol name="defaultAC" value="../../defaultAC/default12"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot1">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default22" value="../../defaultAC/default22"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default22"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default20" value="../../defaultAC/default20"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default20"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default21" value="../../defaultAC/default21"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default21"/>
         </imgdir>
     </imgdir>
     <imgdir name="shoot2">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default23" value="../../defaultAC/default23"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default23"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default22" value="../../defaultAC/default22"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default22"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default20" value="../../defaultAC/default20"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default20"/>
         </imgdir>
         <imgdir name="3">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default21" value="../../defaultAC/default21"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default21"/>
         </imgdir>
         <imgdir name="4">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default24" value="../../defaultAC/default24"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default24"/>
         </imgdir>
     </imgdir>
     <imgdir name="shootF">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default22" value="../../defaultAC/default22"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default22"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default20" value="../../defaultAC/default20"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default20"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default21" value="../../defaultAC/default21"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default21"/>
         </imgdir>
     </imgdir>
     <imgdir name="proneStab">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default16" value="../../defaultAC/default16"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default16"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default17" value="../../defaultAC/default17"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default17"/>
         </imgdir>
     </imgdir>
     <imgdir name="prone">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default16" value="../../defaultAC/default16"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default16"/>
         </imgdir>
     </imgdir>
     <imgdir name="heal">
         <imgdir name="0">
-            <uol name="../../default/default1" value="../../default/default1"/>
-            <uol name="../../defaultAC/default23" value="../../defaultAC/default23"/>
+            <uol name="default" value="../../default/default1"/>
+            <uol name="defaultAC" value="../../defaultAC/default23"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default2" value="../../default/default2"/>
-            <uol name="../../defaultAC/default22" value="../../defaultAC/default22"/>
+            <uol name="default" value="../../default/default2"/>
+            <uol name="defaultAC" value="../../defaultAC/default22"/>
         </imgdir>
         <imgdir name="2">
-            <uol name="../../default/default3" value="../../default/default3"/>
-            <uol name="../../defaultAC/default24" value="../../defaultAC/default24"/>
+            <uol name="default" value="../../default/default3"/>
+            <uol name="defaultAC" value="../../defaultAC/default24"/>
         </imgdir>
     </imgdir>
     <imgdir name="fly">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default18" value="../../defaultAC/default18"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default18"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default19" value="../../defaultAC/default19"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default19"/>
         </imgdir>
     </imgdir>
     <imgdir name="jump">
         <imgdir name="0">
-            <uol name="../../default/default" value="../../default/default"/>
-            <uol name="../../defaultAC/default19" value="../../defaultAC/default19"/>
+            <uol name="default" value="../../default/default"/>
+            <uol name="defaultAC" value="../../defaultAC/default19"/>
         </imgdir>
     </imgdir>
     <imgdir name="sit">
         <imgdir name="0">
-            <uol name="../../default/default4" value="../../default/default4"/>
-            <uol name="../../defaultAC/default3" value="../../defaultAC/default3"/>
+            <uol name="default" value="../../default/default4"/>
+            <uol name="defaultAC" value="../../defaultAC/default3"/>
         </imgdir>
     </imgdir>
     <imgdir name="ladder">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
     <imgdir name="rope">
         <imgdir name="0">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
         <imgdir name="1">
-            <uol name="../../backDefault/default" value="../../backDefault/default"/>
+            <uol name="backDefault" value="../../backDefault/default"/>
         </imgdir>
     </imgdir>
 </imgdir>

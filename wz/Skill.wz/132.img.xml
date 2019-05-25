@@ -360,7 +360,7 @@
                 </imgdir>
                 <imgdir name="30">
                     <string name="hs" value="h30"/>
-                    <int name="x" value="100"/>
+                    <int name="x" value="50"/>
                     <int name="damage" value="100"/>
                 </imgdir>
             </imgdir>

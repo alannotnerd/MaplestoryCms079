@@ -241,10 +241,10 @@
             <vector name="head" x="-1" y="-104"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="../fly/0" value="../fly/0"/>
-        <uol name="../fly/1" value="../fly/1"/>
-        <uol name="../fly/2" value="../fly/2"/>
-        <uol name="../fly/3" value="../fly/3"/>
+        <uol name="11" value="../fly/0"/>
+        <uol name="12" value="../fly/1"/>
+        <uol name="13" value="../fly/2"/>
+        <uol name="14" value="../fly/3"/>
     </imgdir>
     <imgdir name="attack2">
         <imgdir name="info">
@@ -385,10 +385,10 @@
             <vector name="head" x="0" y="-92"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="../fly/0" value="../fly/0"/>
-        <uol name="../fly/1" value="../fly/1"/>
-        <uol name="../fly/2" value="../fly/2"/>
-        <uol name="../fly/3" value="../fly/3"/>
+        <uol name="15" value="../fly/0"/>
+        <uol name="16" value="../fly/1"/>
+        <uol name="17" value="../fly/2"/>
+        <uol name="18" value="../fly/3"/>
     </imgdir>
     <imgdir name="skill1">
         <canvas name="0" width="55" height="79">

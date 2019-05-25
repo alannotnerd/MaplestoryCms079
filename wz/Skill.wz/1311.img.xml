@@ -1116,8 +1116,8 @@
                         <vector name="lt" x="-32" y="-94"/>
                         <vector name="rb" x="32" y="0"/>
                     </canvas>
-                    <uol name="1" value="1"/>
-                    <uol name="0" value="0"/>
+                    <uol name="3" value="1"/>
+                    <uol name="4" value="0"/>
                     <canvas name="5" width="81" height="96">
                         <vector name="origin" x="35" y="96"/>
                         <int name="delay" value="150"/>

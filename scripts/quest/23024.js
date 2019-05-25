@@ -18,7 +18,7 @@ function end(mode, type, selection) {
 	if (qm.getJob() == 3300) {
 	    qm.changeJob(3310);
 	}
-	qm.forceCompleteQuest();
+	qm.completeQuest();
     } else if (status == 2) {
 	qm.sendNextPrev("Now... I want you to go out there and show the world how the Resistance operate.");
 	qm.safeDispose();

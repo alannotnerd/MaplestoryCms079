@@ -94,10 +94,10 @@
             <vector name="head" x="-47" y="-144"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
+        <uol name="3" value="1"/>
+        <uol name="4" value="2"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="2"/>
     </imgdir>
     <imgdir name="attack1">
         <imgdir name="info">
@@ -237,8 +237,8 @@
             <vector name="head" x="-55" y="-129"/>
             <int name="delay" value="150"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
+        <uol name="2" value="0"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="155" height="156">
             <vector name="origin" x="79" y="156"/>
             <vector name="lt" x="-79" y="-154"/>

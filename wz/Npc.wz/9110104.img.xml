@@ -69,12 +69,12 @@
             <vector name="origin" x="33" y="59"/>
             <int name="delay" value="130"/>
         </canvas>
-        <uol name="0" value="0"/>
-        <uol name="1" value="1"/>
-        <uol name="2" value="2"/>
-        <uol name="3" value="3"/>
-        <uol name="4" value="4"/>
-        <uol name="5" value="5"/>
+        <uol name="6" value="0"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="2"/>
+        <uol name="9" value="3"/>
+        <uol name="10" value="4"/>
+        <uol name="11" value="5"/>
     </imgdir>
     <imgdir name="sweat">
         <canvas name="0" width="58" height="58">
@@ -89,15 +89,15 @@
             <vector name="origin" x="33" y="58"/>
             <int name="delay" value="500"/>
         </canvas>
-        <uol name="1" value="1"/>
+        <uol name="3" value="1"/>
         <canvas name="4" width="70" height="58">
             <vector name="origin" x="41" y="58"/>
             <int name="delay" value="130"/>
         </canvas>
-        <uol name="1" value="1"/>
-        <uol name="4" value="4"/>
-        <uol name="1" value="1"/>
-        <uol name="4" value="4"/>
-        <uol name="1" value="1"/>
+        <uol name="5" value="1"/>
+        <uol name="6" value="4"/>
+        <uol name="7" value="1"/>
+        <uol name="8" value="4"/>
+        <uol name="9" value="1"/>
     </imgdir>
 </imgdir>

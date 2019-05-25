@@ -213,10 +213,10 @@
                 <int name="a1" value="255"/>
                 <int name="delay" value="3000"/>
             </canvas>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
-            <uol name="4" value="4"/>
+            <uol name="8" value="1"/>
+            <uol name="9" value="2"/>
+            <uol name="10" value="3"/>
+            <uol name="11" value="4"/>
             <canvas name="12" width="809" height="362">
                 <vector name="origin" x="410" y="172"/>
                 <int name="z" value="0"/>
@@ -280,19 +280,19 @@
                 <int name="a1" value="255"/>
                 <int name="delay" value="4000"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
-            <uol name="../0/2" value="../0/2"/>
-            <uol name="../0/3" value="../0/3"/>
-            <uol name="../0/4" value="../0/4"/>
+            <uol name="1" value="../0/1"/>
+            <uol name="2" value="../0/2"/>
+            <uol name="3" value="../0/3"/>
+            <uol name="4" value="../0/4"/>
             <canvas name="5" width="796" height="358">
                 <vector name="origin" x="397" y="168"/>
                 <int name="z" value="0"/>
                 <int name="delay" value="1"/>
             </canvas>
-            <uol name="../0/1" value="../0/1"/>
-            <uol name="../0/2" value="../0/2"/>
-            <uol name="../0/3" value="../0/3"/>
-            <uol name="../0/4" value="../0/4"/>
+            <uol name="6" value="../0/1"/>
+            <uol name="7" value="../0/2"/>
+            <uol name="8" value="../0/3"/>
+            <uol name="9" value="../0/4"/>
             <canvas name="10" width="796" height="358">
                 <vector name="origin" x="397" y="168"/>
                 <int name="z" value="0"/>
@@ -334,7 +334,7 @@
                 <int name="z" value="0"/>
                 <int name="delay" value="6240"/>
             </canvas>
-            <uol name="2" value="2"/>
+            <uol name="5" value="2"/>
             <canvas name="6" width="715" height="529">
                 <vector name="origin" x="357" y="264"/>
                 <int name="z" value="0"/>
@@ -407,7 +407,7 @@
                 <int name="z" value="0"/>
                 <int name="delay" value="6240"/>
             </canvas>
-            <uol name="2" value="2"/>
+            <uol name="5" value="2"/>
             <canvas name="6" width="402" height="261">
                 <vector name="origin" x="201" y="130"/>
                 <int name="z" value="0"/>
@@ -455,18 +455,18 @@
             </canvas>
         </imgdir>
         <imgdir name="4">
-            <uol name="../2/0" value="../2/0"/>
-            <uol name="../2/1" value="../2/1"/>
-            <uol name="../2/2" value="../2/2"/>
-            <uol name="../2/3" value="../2/3"/>
+            <uol name="0" value="../2/0"/>
+            <uol name="1" value="../2/1"/>
+            <uol name="2" value="../2/2"/>
+            <uol name="3" value="../2/3"/>
             <canvas name="4" width="715" height="529">
                 <vector name="origin" x="357" y="264"/>
                 <int name="z" value="0"/>
                 <int name="delay" value="161"/>
             </canvas>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
             <canvas name="8" width="715" height="529">
                 <vector name="origin" x="357" y="264"/>
                 <int name="z" value="0"/>
@@ -474,18 +474,18 @@
             </canvas>
         </imgdir>
         <imgdir name="5">
-            <uol name="../3/0" value="../3/0"/>
-            <uol name="../3/1" value="../3/1"/>
-            <uol name="../3/2" value="../3/2"/>
-            <uol name="../3/3" value="../3/3"/>
+            <uol name="0" value="../3/0"/>
+            <uol name="1" value="../3/1"/>
+            <uol name="2" value="../3/2"/>
+            <uol name="3" value="../3/3"/>
             <canvas name="4" width="402" height="258">
                 <vector name="origin" x="201" y="127"/>
                 <int name="z" value="0"/>
                 <int name="delay" value="161"/>
             </canvas>
-            <uol name="1" value="1"/>
-            <uol name="2" value="2"/>
-            <uol name="3" value="3"/>
+            <uol name="5" value="1"/>
+            <uol name="6" value="2"/>
+            <uol name="7" value="3"/>
             <canvas name="8" width="402" height="258">
                 <vector name="origin" x="201" y="127"/>
                 <int name="z" value="0"/>

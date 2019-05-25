@@ -1,84 +1,137 @@
-/* 
- * ��ͨ����
- */
+var exitMap;
+var minPlayers = 1;
+ 
+importPackage(net.sf.cherry.world);
+importPackage(net.sf.cherry.client);
+importPackage(net.sf.cherry.server.maps);
+importPackage(java.lang);
+
+var exitMap;
+var minPlayers = 1;
 
 function init() {
-    em.setProperty("state", "0");
-    em.setProperty("leader", "true");
+        em.setProperty("shuffleReactors","false");
 }
 
-function setup(eim, leaderid) {
-    em.setProperty("state", "1");
-    em.setProperty("leader", "true");
-    var eim = em.newInstance("ZakumBattle" + leaderid);
-    eim.setProperty("zakSummoned", "0");
-    var map = eim.setInstanceMap(280030000); //���û�ű��ĵ�ͼ
-    map.resetFully(); //���õ�ͼ
-    //var mob = em.getMonster(9999999); //�ƽ�
-    //map.spawnMonsterOnGroundBelow(mob, new java.awt.Point(-329, -215)); //ˢ���������
-    eim.startEventTimer(3000000); //50����
-    return eim;
+function setup(eim) {
+	exitMap = em.getChannelServer().getMapFactory().getMap(211042300);
+	if (exitMap == null) 
+		debug(eim,"The exit map was not properly linked.");
+	eim.setProperty("canEnter","true");
+	// not currently used; could display total duration taken to kill?
+        eim.setProperty("entryTimestamp",System.currentTimeMillis());
 }
 
-function playerEntry(eim, player) {
-    var map = eim.getMapInstance(0);
-    player.changeMap(map, map.getPortal(0));
+function playerEntry(eim,player) {
+	var map = eim.getMapInstance(280030000); // Last Mission: Zakum's Altar
+	player.changeMap(map,map.getPortal(0));
+	if (exitMap == null)
+		debug(eim,"The exit map was not properly linked.");
 }
 
-function playerRevive(eim, player) {
-    return false;
+function playerRevive(eim,player) {
+	player.setHp(500);
+	player.setStance(0);
+	eim.unregisterPlayer(player);
+	player.changeMap(exitMap, exitMap.getPortal(0));
+	var party = eim.getPlayers();
+	if (party.size() < minPlayers) {
+		end(eim,"没有足够的成员。任务将稍后被中断。");
+	}
+	return false;
 }
 
-function changedMap(eim, player, mapid) {
-    if (mapid != 280030000) {
-        eim.unregisterPlayer(player);
-        if (eim.disposeIfPlayerBelow(0, 0)) {
-            em.setProperty("leader", "true");
-            em.setProperty("state", "0");
+function playerDead(eim,player) {
+}
+
+function playerDisconnected(eim,player) {
+	var party = eim.getPlayers();
+	if (player.getName().equals(eim.getProperty("leader"))) {
+		// tell members
+		var iter = party.iterator();
+		while (iter.hasNext()) {
+			var pl = iter.next();
+			pl.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.serverNotice(6,"此队伍队长已经离开，任务将会被中断。"));
+		}
+	}
+	// and, if the party is too small
+	if (party.size() < minPlayers) {
+		end(eim,"没有足够的成员。任务将稍后被中断。");
+	}
+}
+
+function monsterValue(eim,mobId) { // potentially display time of death? does not seem to work
+	if (mobId == 8800002) { // 3rd body
+		var party = eim.getPlayers();
+		var iter = party.iterator();
+		while (iter.hasNext()) {
+			var pl = iter.next();
+			pl.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.serverNotice(6,"恭喜成功打败大怪物：扎昆"));
+		}
+	}
+	return -1;
+}
+
+function leftParty(eim,player) { // do nothing in Zakum
+}
+function disbandParty(eim) { // do nothing in Zakum
+}
+
+function playerExit(eim,player) {
+	eim.unregisterPlayer(player);
+	player.changeMap(exitMap,exitMap.getPortal(0));
+        var party = eim.getPlayers();
+        if (party.size() < minPlayers) { //not enough after someone left
+                end(eim,"没有足够的成员。任务将稍后被中断。");
         }
-    }
 }
 
-function playerDisconnected(eim, player) {
-    return 0;
+function end(eim,msg) {
+        var iter = eim.getPlayers().iterator();
+        while (iter.hasNext()) {
+                var player = iter.next();
+                player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.serverNotice(6,msg));
+		eim.unregisterPlayer(player);
+		if (player != null)
+                	player.changeMap(exitMap, exitMap.getPortal(0));
+	}
+	eim.dispose();
 }
 
-function scheduledTimeout(eim) {
-    end(eim);
+// for offline folk
+function removePlayer(eim,player) {
+	eim.unregisterPlayer(player);
+	player.getMap().removePlayer(player);
+	player.setMap(exitMap);
 }
 
-function monsterValue(eim, mobId) {
-    return 1;
+function clearPQ(eim) { // kinda a hack, this is used as the exit routine
+	end(eim,"As the sound of battle fades away, you feel strangely unsatisfied.");
 }
 
-function playerExit(eim, player) {
-    eim.unregisterPlayer(player);
-    if (eim.disposeIfPlayerBelow(0, 0)) {
-        em.setProperty("leader", "true");
-        em.setProperty("state", "0");
-    }
+function finish(eim) {
+        var iter = eim.getPlayers().iterator();
+        while (iter.hasNext()) {
+		var player = iter.next();
+		eim.unregisterPlayer(player);
+                player.changeMap(exitMap, exitMap.getPortal(0));
+	}
+	eim.dispose();
 }
 
-function end(eim) {
-    eim.disposeIfPlayerBelow(100, 211042300);
-    em.setProperty("state", "0");
-    em.setProperty("leader", "true");
-    em.setProperty("zakSummoned", "0");
+function allMonstersDead(eim) { // nothing normally done with altar here
 }
 
-function clearPQ(eim) {
-    end(eim);
+function cancelSchedule() { // no
 }
 
-function allMonstersDead(eim) {
-    if (em.getProperty("state").equals("1")) {
-        em.setProperty("state", "2");
-    } else if (em.getProperty("state").equals("2")) {
-        em.setProperty("state", "3");
-    }
+function timeOut() { // possibly useful
 }
 
-function leftParty(eim, player) {}
-function disbandParty(eim) {}
-function playerDead(eim, player) {}
-function cancelSchedule() {}
+function debug(eim,msg) {
+        var iter = eim.getPlayers().iterator();
+        while (iter.hasNext()) {
+ 		var player = iter.next();
+ 		player.getClient().getSession().write(net.sf.cherry.tools.MaplePacketCreator.serverNotice(6,msg));
+	}
+}

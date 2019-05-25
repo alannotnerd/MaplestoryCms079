@@ -21,7 +21,7 @@ function end(mode, type, selection) {
 	if (qm.getJob() == 2310) {
 	    qm.changeJob(2311);
 	}
-	qm.forceCompleteQuest();
+	qm.completeQuest();
     } else if (status == 2) {
 	qm.sendNextPrev("I have also expanded your inventory slot counts for your equipment and etc. inventory. Use those slots wisely and fill them up with items required for Resistance to carry.");
     } else if (status == 3) {
